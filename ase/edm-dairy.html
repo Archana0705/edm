@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html class="no-js  page-77 app-E-DISTRICT-MANAGER-APPLICATION" lang="en" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Time Sheet Entry Form</title>
+  
+ 
+ <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
+    <link rel="icon" href="../assets/img/app-icon-32.png">
+    <style type="text/css">
+      @font-face {
+      font-family: 'FontApex';
+      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
+      url('../font/apex-5-icon-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;  
+      } 
+      @font-face { 
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Small.woff') format('woff'),
+      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      } 
+      .t-fht-thead {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      visibility: visible !important;
+      position: static !important;
+      }
+      .a-IRR-table tbody th {
+      position: static !important;
+      }
+      /* Disable APEX's fixed/sticky header */
+      .a-IRR-tableContainer .a-IRR-table tbody th {
+      position: static !important;
+      top: auto !important;
+      z-index: 0 !important;
+      }
+      /* Ensure whole table scrolls together */
+      .a-IRR-tableContainer {
+      overflow-x: auto !important;
+      overflow-y: auto !important;
+      max-height: 500px; /* Adjust height as needed */
+      }
+      .a-IRR-table {
+      table-layout: auto !important;
+      width: max-content !important;
+      display: table !important;
+      white-space: nowrap !important;
+      }
+    </style>
+    <style>
+      .t-fht-thead.js-stickyTableHeader {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      position: static !important;
+      visibility: visible !important;
+      }
+    </style>
+  
+  <style nonce="g5w6_0arWp4gjZqiy0su7w" >
+.t-Region-body{
+  /* background-color: #C7E3F8;  */
+  background-color: #ffffff; 
+}
+#save
+{
+ margin-top: 110px; 
+}
+
+
+.a-IRR-header,.a-IRR-header:hover {
+    background-color: #974f9045;
+    
+}
+#popup{
+   
+    background-image:URL('r/edmdev/1111/files/static/v1087/alert.jpg') !important;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.apex-item-display-only {
+    font-weight: bolder;
+    font-size: 17.5px;
+    color: #3d8064;
+    margin-top: 150px;
+    margin-left: -50px;
+}
+/* #P77_TS_MINS
+{
+    margin-left: -70px !important;
+    max-width: 65px;
+} */
+ #P77_TS_NOTES
+{
+    min-width:145%;
+}
+
+.twh 
+{
+   margin-left:70px !important;
+} 
+#P77_INSPECTION_COUNT
+{
+    font-size: 20px;
+    color: #177DAE;
+    background-color: #C7E3F8;
+}
+#P77_NOTIFICATION, #P77_INSPECTION_COUNT
+{
+    font-size: 20px;
+    color: red;
+    background-color: #C7E3F8;
+}
+
+#P77_NOTIFICATION, #P77_INSPECTION_COUNT{
+    border: none;
+}
+/* 
+#P77_TOTAL_WORKING_HRS
+{
+    margin-top: inherit;
+} */
+</style>
+
+  <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" /><link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+</head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+<form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/time-sheet-entry-form/113837303316044" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  enctype="multipart/form-data" autocomplete="off">
+<input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="77" id="pFlowStepId" /><input type="hidden" name="p_instance" value="113837303316044" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="NjQwODU5NzI4Mzc3OTU1NTMxODc4NjQ3NzA1OTMxMTg3ODQ1OA&#x2F;6SRin6zMK7bzYtk_yT3CS55UWeURiLdTcL_kpLx14N0tlmovqHnczkjEZVwBzvrSxgZeVSm_rWrQRKNB5Xr0gQ" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="e-district-manager-application&#x2F;time-sheet-entry-form&#x2F;113837303316044" id="pContext" /><input type="hidden" value="6408597283779555318786477059311878458" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+     <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=113837303316044" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=113837303316044" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+     <P  class="t-Header-logo-link">TNEGA</P>
+      
+    </div>
+    <div class="t-Header-navBar">
+      <div class="t-Header-navBar--start"></div>
+      <div class="t-Header-navBar--center" style='color:black'><ul class="t-NavigationBar " id="8792244222964376"><li class="t-NavigationBar-item ">
+  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
+      <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" ></span><span class="t-Button-label">Hello Gerhara Gowri R !
+</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414"><ul><li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=1111&p_session_id=113837303316044" title="" target="">Sign Out</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D113837303316044%26dialogCs%3DF1L3RY0S4O6DfNPtoFM3jH1MlTV1nFUPsDEK0KVMRODiA6YW48jOljOhPEbr8Z9NG9KQ4KKOXJlWvLpyq3umEQ&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">Change Password</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D113837303316044%26dialogCs%3DWqcEe-KgpyLl3rpBU2CHWWuqRi7o26doysXQe7xYd3Nn1gMw7p8qN_F-kQDJ_1Ste6fDTWlhqdexrF1lbCDCtw&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">My Profile</a></li></ul></div></li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+    <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label">Last Logged in: 03-05-2025 10:58 AM</span><span class="t-Button-badge"></span>
+  </a>
+</li></ul></div>
+      <div class="t-Header-navBar--end" ></div>
+    </div>
+  </div>
+  <div class="t-Header-nav"></div>
+</header>
+  <div class="t-Body">
+<div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+  <div class="a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA js-navCollapsed--hidden" id="t_TreeNav" data-id="77_tree" aria-label="Main Navigation">
+    <ul>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=113837303316044&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w" title="" style="display: none" target="">Home</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-home"></span>
+      <span class="a-TreeView-label">Home</span>
+    </div>
+  </div>
+</li>    </ul>
+  </div>
+</div>
+<script>
+(() => {
+  const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
+        nav  = document.getElementById('t_TreeNav').classList,
+        body = document.getElementById('t_PageBody');
+  if ( !sessionStorage.getItem( pref ) ) { sessionStorage.setItem( pref, !nav.contains('js-defaultCollapsed') ); }
+  if ( nav.contains('js-navCollapsed--default') ) {
+      body?.classList.add('js-navCollapsed--icons');
+      if ( sessionStorage.getItem( pref ) === "false" ) { body?.classList.add('js-navCollapsed'); }
+  }
+  if ( sessionStorage.getItem( pref ) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
+  for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
+      label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+  }
+})();
+</script>
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"></div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main id="main" class="t-Body-mainContent">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div class="container">
+<div class="row ">
+<div class="col col-1  col-start" ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-10  " ><div class="t-Region t-Region--removeHeader js-removeLandmark t-Region--scrollBody" id="R18821557568346906"  role="region" aria-label="Notification" >
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+    <h2 class="t-Region-title" id="R18821557568346906_heading" data-apex-heading>Notification</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="t-Region-orderBy"></div>
+     <html>
+
+   <head>
+      <title>HTML marquee Tag</title>
+   </head>
+
+   <body>
+      <marquee onmouseover="this.stop()" onmouseleave="this.start()"  >
+        <h4 class="note_color">Note : At least 10 inspections need to be completed in a week.</h4></marquee>
+   </body>
+
+</html>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+</div>
+</div><div class="row ">
+<div class="col col-1  col-start" ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-10  " ><div class="t-Region t-Region--scrollBody" id="R15051746631936616"  role="region" aria-label="Time&#x20;Sheet&#x20;Entry&#x20;Form" >
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+    <h2 class="t-Region-title" id="R15051746631936616_heading" data-apex-heading>Time Sheet Entry Form</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="t-Region-orderBy"></div>
+     <input type="hidden" name="P77_TS_NO" id="P77_TS_NO" value=""><input type="hidden" name="P77_TS_EDM_ID" id="P77_TS_EDM_ID" value=""><div class="container">
+<div class="row ">
+<div class="col col-2  col-start" ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-3 apex-col-auto " ><div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--date-picker-apex apex-item-wrapper--date-picker-apex-popup" id="P77_TS_DATE_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P77_TS_DATE" id="P77_TS_DATE_LABEL" class="t-Form-label">Date</label> 
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><a-date-picker id="P77_TS_DATE"  change-month="true" change-year="true" display-as="popup" display-weeks="none" format="dd&#x2F;mm&#x2F;yyyy" maxlength="255" previous-next-distance="one-month" show-days-outside-month="visible" show-on="focus" show-time="false" size="32" time-increment-minute="15" today-button="true" valid-example="03&#x2F;05&#x2F;2025" year-selection-range="5"><input  aria-haspopup="dialog" class="apex-item-text&#x20;apex-item-datepicker" name="P77_TS_DATE" size="32" type="text"><button  aria-haspopup="dialog" aria-label="Select&#x20;Date" class="a-Button&#x20;a-Button--calendar" tabindex="-1" title="Select&#x20;Date" type="button"><span class="a-Icon icon-calendar"></span></button></a-date-picker></div><span id="P77_TS_DATE_error_placeholder" class="a-Form-error" data-template-id="8676716703964195_ET"></span></div></div></div><div class="col col-3 apex-col-auto " ><div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--select-list" id="P77_TS_ACTIVITY_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P77_TS_ACTIVITY" id="P77_TS_ACTIVITY_LABEL" class="t-Form-label">Task</label> 
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><select  id="P77_TS_ACTIVITY" name="P77_TS_ACTIVITY" required class="selectlist&#x20;apex-item-select" data-native-menu="false"  size="1" ><option value="" selected="selected" >Select Activity</option>
+<option value="E-office">E-office</option>
+<option value="Field&#x20;Visit">Field Visit</option>
+<option value="Inspection">Inspection</option>
+<option value="Meeting">Meeting</option>
+<option value="Others">Others</option>
+<option value="Reporting">Reporting</option>
+</select></div><span id="P77_TS_ACTIVITY_error_placeholder" class="a-Form-error" data-template-id="8676716703964195_ET"></span></div></div></div><div class="col col-1 apex-col-auto " ><div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--select-list" id="P77_TS_HRS_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P77_TS_HRS" id="P77_TS_HRS_LABEL" class="t-Form-label">Time Spend </label> 
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><select  id="P77_TS_HRS" name="P77_TS_HRS" class="selectlist&#x20;apex-item-select" data-native-menu="false"  size="1" ><option value="" selected="selected" >Hrs</option>
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></div><span id="P77_TS_HRS_error_placeholder" class="a-Form-error" data-template-id="8676716703964195_ET"></span></div></div></div><div class="col col-3 apex-col-auto col-end" ><div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--select-list" id="P77_TS_MINS_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P77_TS_MINS" id="P77_TS_MINS_LABEL" class="t-Form-label"></label> 
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><select  id="P77_TS_MINS" name="P77_TS_MINS" class="selectlist&#x20;apex-item-select" data-native-menu="false"  size="1" ><option value="" selected="selected" >Mins</option>
+<option value="00">00</option>
+<option value="05">05</option>
+<option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="25">25</option>
+<option value="30">30</option>
+<option value="35">35</option>
+<option value="40">40</option>
+<option value="45">45</option>
+<option value="50">50</option>
+<option value="55">55</option>
+</select></div><span id="P77_TS_MINS_error_placeholder" class="a-Form-error" data-template-id="8676716703964195_ET"></span></div></div></div>
+</div><div class="row ">
+<div class="col col-6 apex-col-auto col-start" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--textarea" id="P77_TS_NOTES_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P77_TS_NOTES" id="P77_TS_NOTES_LABEL" class="t-Form-label">Description Notes</label>
+</div>
+<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><div class="apex-item-group apex-item-group--textarea"><textarea name="P77_TS_NOTES" rows="5" cols="60" maxlength="4000"  id="P77_TS_NOTES" required class="textarea&#x20;apex-item-textarea"  data-resizable="true" ></textarea></div></div><span id="P77_TS_NOTES_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P77_TS_STATUS" id="P77_TS_STATUS" value=""><input type="hidden" name="P77_TS_CREATED_DATE" id="P77_TS_CREATED_DATE" value=""><input type="hidden" name="P77_TS_CREATED_BY" id="P77_TS_CREATED_BY" value=""><input type="hidden" name="P77_TS_UPDATE_DATE" id="P77_TS_UPDATE_DATE" value=""><input type="hidden" name="P77_TS_UPDATED_BY" id="P77_TS_UPDATED_BY" value=""><input type="hidden" name="P77_TS_CURRENT_USER" id="P77_TS_CURRENT_USER" value=""><input type="hidden" name="P77_TS_ID" id="P77_TS_ID" value=""><input type="hidden" name="P77_S_ID" id="P77_S_ID" value=""></div><div class="col col-6 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--text-field" id="P77_TOTAL_WORKING_HRS_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P77_TOTAL_WORKING_HRS" id="P77_TOTAL_WORKING_HRS_LABEL" class="t-Form-label">Total Working Hrs</label>
+</div>
+<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><input type="text"  id="P77_TOTAL_WORKING_HRS" name="P77_TOTAL_WORKING_HRS" class="text_field&#x20;apex-item-text" value="" size="30" maxlength="500" data-enter-submit="false" data-is-page-item-type="true"  /></div><span id="P77_TOTAL_WORKING_HRS_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
+</div><div class="row ">
+<div class="col col-3 apex-col-auto col-start" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file" id="P77_INSPECTION_REPORT_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P77_INSPECTION_REPORT" id="P77_INSPECTION_REPORT_LABEL" class="t-Form-label">Inspection Report</label>
+</div>
+<div class="t-Form-inputContainer col col-1"><div class="t-Form-itemWrapper"><a-file-upload  id="P77_INSPECTION_REPORT" name="P77_INSPECTION_REPORT"  upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File" description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here." max-file-size="1024" download-link="true"><input type="file"  id="P77_INSPECTION_REPORT_input"  aria-labelledby="P77_INSPECTION_REPORT_LABEL"  class="u-vh"  /><div  class="a-FileDrop&#x20;a-FileDrop--inline" >
+                    <div class="a-FileDrop-icon">
+                        <span  class="a-Icon&#x20;icon-file-browse"  aria-hidden="true">
+                        </span>
+                    </div> <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose File</span><span class="a-FileDrop-description">Select a file or drop one here.</span></div><div class="a-FileDrop-action"><span class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span></div></div></a-file-upload></div><span id="P77_INSPECTION_REPORT_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P77_FILE_NAME5" id="P77_FILE_NAME5" value=""><input type="hidden" data-for="P77_FILE_NAME5" value="kYWG3uLyko6NIxWltGw7N-d8whzBQpyPDtKkR4WncZedYDkh8L_iezGg3TGCGL-RVFy_yhapy069Uso5PRs7sw"><input type="hidden" name="P77_MIME_TYPE5" id="P77_MIME_TYPE5" value=""><input type="hidden" data-for="P77_MIME_TYPE5" value="6kPZYZe7Q8QUJsbsOQ0W-j9WuOqmn6v8KI437QOBH-lcAEnC_uv9ORyGIQgnfApjWQjwP7xrD18YHdiwmD5buQ"></div><div class="col col-9 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file" id="P77_IMAGE_ATTACHMENT1_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P77_IMAGE_ATTACHMENT1" id="P77_IMAGE_ATTACHMENT1_LABEL" class="t-Form-label">Rate card Image</label>
+</div>
+<div class="t-Form-inputContainer col col-7"><div class="t-Form-itemWrapper"><a-file-upload  id="P77_IMAGE_ATTACHMENT1" name="P77_IMAGE_ATTACHMENT1"  upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File" description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here." max-file-size="1024" download-link="true"><input type="file"  id="P77_IMAGE_ATTACHMENT1_input"  aria-labelledby="P77_IMAGE_ATTACHMENT1_LABEL"  class="u-vh"  /><div  class="a-FileDrop&#x20;a-FileDrop--inline" >
+                    <div class="a-FileDrop-icon">
+                        <span  class="a-Icon&#x20;icon-file-browse"  aria-hidden="true">
+                        </span>
+                    </div> <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose File</span><span class="a-FileDrop-description">Select a file or drop one here.</span></div><div class="a-FileDrop-action"><span class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span></div></div></a-file-upload></div><span id="P77_IMAGE_ATTACHMENT1_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P77_FILE_NAME1" id="P77_FILE_NAME1" value=""><input type="hidden" data-for="P77_FILE_NAME1" value="HpUGhpgwqLEd454VcSpSd3TH4z0Qv43bogANErV8Z1atlNLVxoG3Y6LR6KZ9LcQyJ2B-U51ISXYw5OqaltVNDQ"><input type="hidden" name="P77_MIME_TYPE1" id="P77_MIME_TYPE1" value=""><input type="hidden" data-for="P77_MIME_TYPE1" value="Lx3aeIRlpMBrAQTcRNCn683TXNqGrgDuODPaVbDpzAD0ZUYC6y3oK0pjDlnnhbE7rrug9J4XSPeED6G27uyLmg"></div>
+</div><div class="row ">
+<div class="col col-3 apex-col-auto col-start" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file" id="P77_IMAGE_ATTACHMENT2_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P77_IMAGE_ATTACHMENT2" id="P77_IMAGE_ATTACHMENT2_LABEL" class="t-Form-label">Inspection Image 1</label>
+</div>
+<div class="t-Form-inputContainer col col-1"><div class="t-Form-itemWrapper"><a-file-upload  id="P77_IMAGE_ATTACHMENT2" name="P77_IMAGE_ATTACHMENT2"  upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File" description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here." max-file-size="1024" download-link="true"><input type="file"  id="P77_IMAGE_ATTACHMENT2_input"  aria-labelledby="P77_IMAGE_ATTACHMENT2_LABEL"  class="u-vh"  /><div  class="a-FileDrop&#x20;a-FileDrop--inline" >
+                    <div class="a-FileDrop-icon">
+                        <span  class="a-Icon&#x20;icon-file-browse"  aria-hidden="true">
+                        </span>
+                    </div> <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose File</span><span class="a-FileDrop-description">Select a file or drop one here.</span></div><div class="a-FileDrop-action"><span class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span></div></div></a-file-upload></div><span id="P77_IMAGE_ATTACHMENT2_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P77_FILE_NAME2" id="P77_FILE_NAME2" value=""><input type="hidden" data-for="P77_FILE_NAME2" value="gbjeXLG_J5eynN9p5DQwnq0LeVetl4ia08cY-zXqGSpjKEBH0B-H9NYOIwrfR47uVU6AMHoeJ1luSLCdlKbgvA"><input type="hidden" name="P77_MIME_TYPE2" id="P77_MIME_TYPE2" value=""><input type="hidden" data-for="P77_MIME_TYPE2" value="_8HUoz3skP5Lmq9pLBBaQsJPiUCqMgnYGhbcdqZ8fOuwdKjTe1hKNEDbn9Hdcmt5sHEe1NYOBdb71PeD4IIawQ"></div><div class="col col-3 apex-col-auto " ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file" id="P77_IMAGE_ATTACHMENT3_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P77_IMAGE_ATTACHMENT3" id="P77_IMAGE_ATTACHMENT3_LABEL" class="t-Form-label">Inspection Image 2</label>
+</div>
+<div class="t-Form-inputContainer col col-1"><div class="t-Form-itemWrapper"><a-file-upload  id="P77_IMAGE_ATTACHMENT3" name="P77_IMAGE_ATTACHMENT3"  upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File" description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here." max-file-size="1024" download-link="true"><input type="file"  id="P77_IMAGE_ATTACHMENT3_input"  aria-labelledby="P77_IMAGE_ATTACHMENT3_LABEL"  class="u-vh"  /><div  class="a-FileDrop&#x20;a-FileDrop--inline" >
+                    <div class="a-FileDrop-icon">
+                        <span  class="a-Icon&#x20;icon-file-browse"  aria-hidden="true">
+                        </span>
+                    </div> <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose File</span><span class="a-FileDrop-description">Select a file or drop one here.</span></div><div class="a-FileDrop-action"><span class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span></div></div></a-file-upload></div><span id="P77_IMAGE_ATTACHMENT3_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P77_FILE_NAME3" id="P77_FILE_NAME3" value=""><input type="hidden" data-for="P77_FILE_NAME3" value="A8cDSDuyuH9vs_OcJScIsStbuOhJhEbj9G2LASPkxT1Sp7XKi14ROuNclyVx8lpuP0pQDTbQcrKOO3RsTYqQLw"><input type="hidden" name="P77_MIME_TYPE3" id="P77_MIME_TYPE3" value=""><input type="hidden" data-for="P77_MIME_TYPE3" value="F7SWC98x_sWalfR3nK57ftaJPqTOlkAWQ2FQm2ie9iEMWti5HTD9KCECANAvsL3Laha1K60MyKQwHStmucGSTw"></div><div class="col col-6 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file" id="P77_IMAGE_ATTACHMENT4_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P77_IMAGE_ATTACHMENT4" id="P77_IMAGE_ATTACHMENT4_LABEL" class="t-Form-label">Inspection Image 3</label>
+</div>
+<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><a-file-upload  id="P77_IMAGE_ATTACHMENT4" name="P77_IMAGE_ATTACHMENT4"  upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File" description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here." max-file-size="1024" download-link="true"><input type="file"  id="P77_IMAGE_ATTACHMENT4_input"  aria-labelledby="P77_IMAGE_ATTACHMENT4_LABEL"  class="u-vh"  /><div  class="a-FileDrop&#x20;a-FileDrop--inline" >
+                    <div class="a-FileDrop-icon">
+                        <span  class="a-Icon&#x20;icon-file-browse"  aria-hidden="true">
+                        </span>
+                    </div> <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose File</span><span class="a-FileDrop-description">Select a file or drop one here.</span></div><div class="a-FileDrop-action"><span class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span></div></div></a-file-upload></div><span id="P77_IMAGE_ATTACHMENT4_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P77_FILE_NAME4" id="P77_FILE_NAME4" value=""><input type="hidden" data-for="P77_FILE_NAME4" value="DTAn02JjJrGVRyB8D3H-MxbuLJGeuF8Y-9XyDunGup6mv87hAHecyfSu2mP4ExON7EZ03n0w18bPYJNEw-w1bQ"><input type="hidden" name="P77_MIME_TYPE4" id="P77_MIME_TYPE4" value=""><input type="hidden" data-for="P77_MIME_TYPE4" value="2rL9B-dIK9vDC8i_dcsLp1iFk1uX_xXEyBuBmFA8hFPYB59BU3_6Eq8qamwnwY96sSKwo93ftH7V_RJhNkyZvw"></div>
+</div>
+</div>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"><button class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--large&#x20;t-Button--primary&#x20;t-Button--iconLeft&#x20;t-Button--hoverIconPush t-Button--hot"  onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome?session=113837303316044&#x27;);" type="button" id="B15065433632936607"><span class="t-Icon t-Icon--left fa&#x20;fa-window-close-o" aria-hidden="true"></span><span class="t-Button-label">Cancel</span><span class="t-Icon t-Icon--right fa&#x20;fa-window-close-o" aria-hidden="true"></span></button></div>
+    <div class="t-Region-buttons-right"><button class="t-Button t-Button--icon t-Button--large&#x20;t-Button--success&#x20;t-Button--iconLeft&#x20;t-Button--hoverIconPush t-Button--hot"  onclick="apex.submit({request:&#x27;CREATE&#x27;,validate:true});" type="button" id="B15066844013936606"><span class="t-Icon t-Icon--left fa&#x20;fa-save-as" aria-hidden="true"></span><span class="t-Button-label">Save</span><span class="t-Icon t-Icon--right fa&#x20;fa-save-as" aria-hidden="true"></span></button><button class="t-Button t-Button--icon t-Button--large&#x20;t-Button--warning&#x20;t-Button--iconLeft&#x20;t-Button--hoverIconPush t-Button--hot"  onclick="void(0);" type="button" id="B18824395708346934"><span class="t-Icon t-Icon--left fa&#x20;fa-repeat" aria-hidden="true"></span><span class="t-Button-label">Clear</span><span class="t-Icon t-Icon--right fa&#x20;fa-repeat" aria-hidden="true"></span></button></div>
+   </div>
+ </div>
+</div>
+</div>
+</div><div class="row ">
+<div class="col col-1  col-start" ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-10  " ><div id="DOWNLOAD-BLOB"  role="region" aria-label="Report"  class="t-IRR-region ">
+    <div class="t-Region-orderBy"></div>
+    
+    <div id="DOWNLOAD-BLOB_ir" class="a-IRR-container"><div id="DOWNLOAD-BLOB_worksheet_region" class="a-IRR" aria-live="polite"><div id="DOWNLOAD-BLOB_single_row_view" class="a-IRR-singleRowView"></div><div id="DOWNLOAD-BLOB_full_view" class="a-IRR-fullView"><div id="DOWNLOAD-BLOB_actions_menu"></div><div id="DOWNLOAD-BLOB_toolbar" class="a-IRR-toolbar"><div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;Report" id="DOWNLOAD-BLOB_toolbar_controls" class="a-IRR-controls"><div class="a-IRR-controlGroup a-IRR-controlGroup--search a-IRR-controlGroup--hidden"><div class="a-IRR-search"><input type="hidden" id="DOWNLOAD-BLOB_column_search_current_column" /><input type="hidden" id="DOWNLOAD-BLOB_search_field" value="" /></div></div><div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div><div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden" id="DOWNLOAD-BLOB_row_select" value="50" /><div class="a-IRR-actions"><button id="DOWNLOAD-BLOB_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="DOWNLOAD-BLOB_actions_menu">Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div></div></div></div><div id="DOWNLOAD-BLOB_content" class="a-IRR-content "><div id="DOWNLOAD-BLOB_dialog_js" class="a-IRR-dialogBody" style="display:none;"></div><input type="hidden" id="DOWNLOAD-BLOB_worksheet_id" value="15042171234973006" />
+<input type="hidden" id="DOWNLOAD-BLOB_app_user" value="7010451136" />
+<input type="hidden" id="DOWNLOAD-BLOB_report_id" value="15107707022697185" />
+<input type="hidden" id="DOWNLOAD-BLOB_view_mode" value="REPORT" />
+<style nonce="g5w6_0arWp4gjZqiy0su7w" id="DOWNLOAD-BLOB_worksheet_css">
+</style>
+<div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Report" id="DOWNLOAD-BLOB_chart" class="a-IRR-chartView"></div><div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Report" id="DOWNLOAD-BLOB_group_by" class="a-IRR-groupByView"></div><div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Report" id="DOWNLOAD-BLOB_pivot" class="a-IRR-pivotView"></div><div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Report" id="DOWNLOAD-BLOB_data_panel" class="a-IRR-reportView"><div role="region" aria-label="Message" class="a-IRR-noDataMsg"><div class="a-IRR-noDataMsg-icon"><span class="a-Icon icon-irr-no-results" aria-hidden="true"></span></div><span class="a-IRR-noDataMsg-text"></span></div></div></div></div></div><div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget" id="DOWNLOAD-BLOB_sort_widget" style="display:none;"><h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column Actions</h1><ul role="toolbar" class="a-IRR-sortWidget-actions" id="DOWNLOAD-BLOB_sort_widget_actions"><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_up"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_down"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_hide"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_break"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_help"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help" aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true" class="a-Icon icon-irr-help"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_computation"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute" aria-label="Compute" data-option="computation"><span aria-hidden="true" class="a-Icon icon-irr-calculator"></span></button></li></ul><div role="region" aria-label="Help" class="a-IRR-sortWidget-help" id="DOWNLOAD-BLOB_sort_widget_help"></div><div role="search" class="a-IRR-sortWidget-search" id="DOWNLOAD-BLOB_sort_widget_search"><label for="DOWNLOAD-BLOB_sort_widget_search_field"><span aria-hidden="true" class="a-IRR-sortWidget-searchLabel"></span><span class="u-vh">Search</span></label><input id="DOWNLOAD-BLOB_sort_widget_search_field" class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." /><div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows" id="DOWNLOAD-BLOB_sort_widget_rows"></div></div></div></div>
+    
+    
+</div>
+</div>
+</div><div class="row ">
+<div class="col col-4  col-start" ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-8 apex-col-auto col-end" ><div class="t-Form-fieldContainer t-Form-fieldContainer--floatingLabel  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field" id="P77_INSPECTION_COUNT_CONTAINER"><div class="t-Form-labelContainer">
+<label for="P77_INSPECTION_COUNT" id="P77_INSPECTION_COUNT_LABEL" class="t-Form-label"></label>
+</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><input type="text"  id="P77_INSPECTION_COUNT" name="P77_INSPECTION_COUNT" class="text_field&#x20;apex-item-text" value="In this week you have completed 0 Inspections." size="30" data-enter-submit="false" data-is-page-item-type="true"  /></div><span id="P77_INSPECTION_COUNT_error_placeholder" class="a-Form-error" data-template-id="8676899378964195_ET"></span></div></div></div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer" id="t_Footer" role="contentinfo">
+        <div class="t-Footer-body">
+          <div class="t-Footer-content"></div>
+          <div class="t-Footer-apex">
+            <div class="t-Footer-version"> </div>
+            <div class="t-Footer-customize"></div>
+            
+          </div>
+        </div>
+        <div class="t-Footer-top">
+          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDc3X0ZJTEVfTkFNRTU6UDc3X01JTUVfVFlQRTU6UDc3X0ZJTEVfTkFNRTE6UDc3.,X01JTUVfVFlQRTE6UDc3X0ZJTEVfTkFNRTI6UDc3X01JTUVfVFlQRTI6UDc3X0ZJ.,TEVfTkFNRTM6UDc3X01JTUVfVFlQRTM6UDc3X0ZJTEVfTkFNRTQ6UDc3X01JTUVf.,VFlQRTQ&#x2F;heM_0O-JppB0cQcNvlefHAZF4O1PsnhJmr3I286N4NmpIuuMS1FtDQrDTgOLG3wyNfba8BA6FoOCq5NvVd-osQ" /></form>
+
+ <script>
+      var apex_img_dir = "\u002Fi\u002F24.1.7\u002F";
+      var apex = {env: {APP_USER: "7010451136",APP_ID: "1111",APP_PAGE_ID: "29",APP_SESSION: "102163240390811",APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F",WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.1.7",APEX_BASE_VERSION: "24.1"},
+      libVersions:{cropperJs:"1.6.1",domPurify:"3.1.6",fontapex:"2.3",fullcalendar:"6.1.11",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.0.1",markedJs:"12.0.1",prismJs:"1.29.0",oraclejet:"16.0.10",tinymce:"6.8.4",turndown:"7.1.3",monacoEditor:"0.47.0",lessJs:"4.2.0"}};
+    </script>
+    <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/desktop_all.min.js?v=24.1.7"></script>
+
+    <script type="text/javascript">
+      apex.da.initDaEventList = function(){
+      apex.da.gEventList = [
+      {"triggeringElementType":"REGION","triggeringRegionId":"R53337887249653684","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"apexafterclosedialog","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"R53337887249653684",javascriptFunction:apex.da.refresh,"action":"NATIVE_REFRESH"}]},
+      {"triggeringElementType":"BUTTON","triggeringButtonId":"B26486092224200880","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"apexpress","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"R40964975687648032",javascriptFunction:apex.da.clear,"action":"NATIVE_CLEAR"}]}];
+      }
+    </script>
+
+    <script src="../assets/js/desktop_all.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/add.min.js"></script>
+    <script src="../assets/js/widget.treeView.min.js"></script>
+    <script src="../assets/js/widget.interactiveReport.min.js"></script>
+    <script src="../assets/js/widget.iconList.min.js"></script>
+    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+    <script src="../assets/js/widget.stickyWidget.min.js"></script>
+    <script src="../assets/js/item.Colorpicker.min.js"></script>
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+    <script src="../assets/js/jetCommonBundle.min.js"></script>
+    <script src="../assets/js/chartBundle.min.js"></script>
+
+
+    <script type="text/javascript">
+      apex.session.initTimeouts(180,{"idle_time_ms":3594000,"life_time_ms":28757000,"max_idle_time_ms":3600000},'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome','\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+      apex.jQuery( function() {
+      apex.page.init( this, function() {
+      try {
+      (function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+      (function(){apex.widget.selectList("#P29_STATUS",{"nullValue":"","ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-NTM0MTkyMzY1NjgxNDc3OTI\u002FkvkqUmmn87QEF3rF7332WH5RpHIAbbnV8Rr1CWTXFc85y3L7Hmc6jMfW2oHh1bjUHSJK1IHLnDKGfh9EaDH5fg"});})();
+      (function(){apex.jQuery('#R53337887249653684_ir').interactiveReport({"regionId":"R53337887249653684","columnSearch":false,"currentRowsPerPage":15,"helpLink":"wwv_flow_utilities.show_ir_help?p_app_id=1111\u0026p_worksheet_id=53338015490653684\u0026p_lang=en","pageItems":"#P29_STATUS","lazyLoading":false,"ajaxIdentifier":"UkVHSU9OIFRZUEV-fjUzMzM3ODg3MjQ5NjUzNjg0\u002Fv0CsOUB7Lc8jS_TtVqUlILWLlSmWsqr_CgxWbk8ePoJczuxlGihDoF-3O_qlwiX3Z1mv-F8ACYRu0EXQSxklwg"});})();
+      } catch(e) {apex.debug.error(e)};
+      apex.item.waitForDelayLoadItems().done(function() {
+      try {
+      (function(){apex.da.initDaEventList();
+      apex.da.init();})();
+      apex.theme42.initializePage.noSideCol();
+          var anchorElements=document.querySelectorAll('td.u-tC[headers=DOWNLOAD-BLOB] a');
+      
+          Array.from(anchorElements).forEach(function(elem){
+              elem.setAttribute('target','_blank');
+          })
+      apex.page.warnOnUnsavedChanges();
+      } finally {
+      apex.event.trigger(apex.gPageContext$,'apexreadyend');
+      };
+      });
+      });
+      });apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.1.7-39525918403426\u0026lang=en' } );
+    </script>
+    <script>
+      AOS.init();
+    </script>
+    
+</body>
+</html>

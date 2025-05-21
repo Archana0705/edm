@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html class="no-js  page-8 app-E-DISTRICT-MANAGER-APPLICATION" lang="en" >
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <title>Service Request</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
+    <link rel="icon" href="../assets/img/app-icon-32.png">
+    <style type="text/css">
+      @font-face {
+      font-family: 'FontApex';
+      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
+      url('../font/apex-5-icon-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;  
+      } 
+      @font-face { 
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Small.woff') format('woff'),
+      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      } 
+      .t-fht-thead {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      visibility: visible !important;
+      position: static !important;
+      }
+      .a-IRR-table tbody th {
+      position: static !important;
+      }
+      /* Disable APEX's fixed/sticky header */
+      .a-IRR-tableContainer .a-IRR-table tbody th {
+      position: static !important;
+      top: auto !important;
+      z-index: 0 !important;
+      }
+      /* Ensure whole table scrolls together */
+      .a-IRR-tableContainer {
+      overflow-x: auto !important;
+      overflow-y: auto !important;
+      max-height: 500px; /* Adjust height as needed */
+      }
+      .a-IRR-table {
+      table-layout: auto !important;
+      width: max-content !important;
+      display: table !important;
+      white-space: nowrap !important;
+      }
+    </style>
+    <style>
+      .t-fht-thead.js-stickyTableHeader {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      position: static !important;
+      visibility: visible !important;
+      }
+    </style>
+    <style nonce="U9552TB4HhJOQG_iPhVa1w" >
+      #upload
+      {
+      margin-top:8px;
+      }
+      #form
+      {
+      background: transparent;
+      }
+      #attach
+      {
+      margin-top: -10px;
+      margin-left: 100px;
+      }
+      #P8_SHORT
+      {
+      min-height:0rem !important;
+      }
+      .t-Region-title {
+      margin-left: -200px;
+      margin-top:30px;
+      /* margin: 0; */
+      font-size: 12px;
+      line-height: inherit;
+      font-weight: normal;
+      }
+      /*.t-Report--stretch .t-Report-report, .t-Report--stretch .t-Report-wrap {
+      width: 100%;
+      margin-top: -15px;
+      position: fixed;
+      }*/
+      #worknotes
+      {
+      width:50%;   
+      }
+      #History
+      {
+      width:50%; 
+      }
+      .t-MediaList-itemWrap--showDesc {
+      align-items: flex-start;
+      background-color: #7aabd4cc;
+      }
+      #button
+      {
+      background:transparent!important;
+      height:50%
+      }
+      #P8_FILENAME
+      {
+      margin-top:-45px;
+      }
+      #P8_FILENAME_error
+      {
+      margin-top:-45px;
+      }
+      .t-Report-colHead {
+      line-height: var(--ut-report-header-cell-line-height, var(--ut-report-cell-line-height, 0rem));
+      }
+      #P8_ADDITIONAL_INFORMATION_CONTAINER
+      {
+      margin-top:-20px;
+      }
+    </style>
+    <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
+    <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+  </head>
+  <body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
+    <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+    <form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/service-request1/113837303316044" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  enctype="multipart/form-data" autocomplete="off">
+      <input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="8" id="pFlowStepId" /><input type="hidden" name="p_instance" value="113837303316044" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="MzA5ODU5NTAyNjY5OTAyMzk2OTM1OTU0NDU2Mzk3MzQ5NDQ2MDcw&#x2F;g8oeyp-EcmUrD4eA0L55x0Q4Pa9T4GKj78xFygcJYgwBCsNiQg9GMECJ3tf3s3lTrJJWl_Qan2LKpqDGepO-_w" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="e-district-manager-application&#x2F;service-request1&#x2F;113837303316044" id="pContext" /><input type="hidden" value="309859502669902396935954456397349446070" id="pSalt" />
+      <header class="t-Header" id="t_Header" role="banner">
+        <div class="t-Header-branding">
+          <div class="t-Header-controls">
+            <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+          </div>
+          <div class="t-Header-logo">
+            <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=113837303316044" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+            <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=113837303316044" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+            <P  class="t-Header-logo-link">TNEGA</P>
+          </div>
+          <div class="t-Header-navBar">
+            <div class="t-Header-navBar--start"></div>
+            <div class="t-Header-navBar--center" style='color:black'>
+              <ul class="t-NavigationBar " id="8792244222964376">
+                <li class="t-NavigationBar-item ">
+                  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
+                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" ></span><span class="t-Button-label">Hello Gerhara Gowri R !
+                  </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
+                    <ul>
+                      <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
+                      <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=1111&p_session_id=113837303316044" title="" target="">Sign Out</a></li>
+                      <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D113837303316044%26dialogCs%3DF1L3RY0S4O6DfNPtoFM3jH1MlTV1nFUPsDEK0KVMRODiA6YW48jOljOhPEbr8Z9NG9KQ4KKOXJlWvLpyq3umEQ&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">Change Password</a></li>
+                      <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D113837303316044%26dialogCs%3DWqcEe-KgpyLl3rpBU2CHWWuqRi7o26doysXQe7xYd3Nn1gMw7p8qN_F-kQDJ_1Ste6fDTWlhqdexrF1lbCDCtw&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">My Profile</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="t-NavigationBar-item ">
+                  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+                  <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label">Last Logged in: 03-05-2025 10:58 AM</span><span class="t-Button-badge"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="t-Header-navBar--end" ></div>
+          </div>
+        </div>
+        <div class="t-Header-nav"></div>
+      </header>
+      <div class="t-Body">
+        <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+          <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic" id="t_TreeNav" data-id="8_tree" aria-label="Main Navigation">
+            <ul>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=113837303316044&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w" title="" style="display: none" target="">Home</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-home"></span>
+                    <span class="a-TreeView-label">Home</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/all-request5?session=113837303316044" title="" style="display: none" target="">All Request</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o "></span>
+                    <span class="a-TreeView-label">All Request</span>
+                  </div>
+                </div>
+                <ul style="display:none">
+                  <li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/all-requests-with-re-assaign-option?session=113837303316044" title="" target="">All requests with Re-assaign Option</a></li>
+                </ul>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-user-headset" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/new-request?p7_new=0&session=113837303316044&cs=110BX6RMm3yB5UIdQpCi-G5IFDb-mDxd9KP8m4AyaGhFOf22_34EnYHcmZZSc8xWEf4_d5vM9pqBG-FOCQqxuNA" title="" style="display: none" target="">New Request [ 0 ]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-user-headset"></span>
+                    <span class="a-TreeView-label">New Request [ 0 ]</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-clock" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/progress-request?session=113837303316044" title="" style="display: none" target="">In-Progress Request [ 0 ]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-folder-clock"></span>
+                    <span class="a-TreeView-label">In-Progress Request [ 0 ]</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-bookmark" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/resolved-request2?session=113837303316044" title="" style="display: none" target="">Resolved Request [ 107 ]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-folder-bookmark"></span>
+                    <span class="a-TreeView-label">Resolved Request [ 107 ]</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/reopened-request?session=113837303316044" title="" style="display: none" target="">Reopened Request [ 0 ]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o "></span>
+                    <span class="a-TreeView-label">Reopened Request [ 0 ]</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-check" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/closed-request?session=113837303316044" title="" style="display: none" target="">Closed Request [ 35]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-folder-check"></span>
+                    <span class="a-TreeView-label">Closed Request [ 35]</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-exchange" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/reassigned-requests?session=113837303316044" title="" style="display: none" target="">Reassigned Requests</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-exchange"></span>
+                    <span class="a-TreeView-label">Reassigned Requests</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-server-user" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/operators-details?session=113837303316044" title="" style="display: none" target="">Operators Details</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-server-user"></span>
+                    <span class="a-TreeView-label">Operators Details</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/dairy-for-edm-inspection-report?session=113837303316044" title="" style="display: none" target="">Dairy for EDM Inspection Report</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg"></span>
+                    <span class="a-TreeView-label">Dairy for EDM Inspection Report</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-forms" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/edm-instruction-request?session=113837303316044" title="" style="display: none" target="">EDM Instruction Request</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-forms"></span>
+                    <span class="a-TreeView-label">EDM Instruction Request</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/ticket-updates?session=113837303316044" title="" style="display: none" target="">Ticket Updates</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o "></span>
+                    <span class="a-TreeView-label">Ticket Updates</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-updates?session=113837303316044" title="" style="display: none" target="">Helpdesk Ticket Updates</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o "></span>
+                    <span class="a-TreeView-label">Helpdesk Ticket Updates</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+                <a href="" title="" style="display: none" target="">Helpdesk Ticket Report [ 0 ]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o "></span>
+                    <span class="a-TreeView-label">Helpdesk Ticket Report [ 0 ]</span>
+                  </div>
+                </div>
+                <ul style="display:none">
+                  <li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-report?session=113837303316044" title="" target="">Helpdesk Instruction Open Report [ 0 ]</a></li>
+                  <li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-in-progress-report?session=113837303316044" title="" target="">Helpdesk Instructions In-Progress Report [ 0 ]</a></li>
+                  <li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-closed-report?session=113837303316044" title="" target="">Helpdesk Instructions Closed Report [ 0 ]</a></li>
+                </ul>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-form?session=113837303316044" title="" style="display: none" target="">eSevai Operator Change Request Form</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-file"></span>
+                    <span class="a-TreeView-label">eSevai Operator Change Request Form</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-report?session=113837303316044" title="" style="display: none" target="">eSevai Operator Change Request Report</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-table"></span>
+                    <span class="a-TreeView-label">eSevai Operator Change Request Report</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/closed-operator-change-report?session=113837303316044" title="" style="display: none" target="">Approved&#x2F;Rejected Operator Change Report [ 620]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-table"></span>
+                    <span class="a-TreeView-label">Approved&#x2F;Rejected Operator Change Report [ 620]</span>
+                  </div>
+                </div>
+              </li>
+              <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+                <a href="/ords/r/edmdev/e-district-manager-application/public-petitions-report?session=113837303316044" title="" style="display: none" target="">Public Petitions [ 55]</a>
+                <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+                  <div role="none" class="a-TreeView-row"></div>
+                  <div role="none" class="a-TreeView-content">
+                    <span class="fa fa-file-o fa&#x20;fa-table"></span>
+                    <span class="a-TreeView-label">Public Petitions [ 55]</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <script>
+          (() => {
+            const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
+                  nav  = document.getElementById('t_TreeNav').classList,
+                  body = document.getElementById('t_PageBody');
+            if ( !sessionStorage.getItem( pref ) ) { sessionStorage.setItem( pref, !nav.contains('js-defaultCollapsed') ); }
+            if ( nav.contains('js-navCollapsed--default') ) {
+                body?.classList.add('js-navCollapsed--icons');
+                if ( sessionStorage.getItem( pref ) === "false" ) { body?.classList.add('js-navCollapsed'); }
+            }
+            if ( sessionStorage.getItem( pref ) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
+            for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
+                label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+            }
+          })();
+        </script>
+        <div class="t-Body-main">
+          <div class="t-Body-title" id="t_Body_title"></div>
+          <div class="t-Body-content" id="t_Body_content">
+            <main id="main" class="t-Body-mainContent">
+              <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+              <div class="t-Body-fullContent">
+                <div class="container-fluid">
+                  <div class="row ">
+                    <div class="col col-12 apex-col-auto col-start col-end" >
+                      <div class="t-TabsRegion t-TabsRegion-mod--simple apex-tabs-region"   id="R49394375791669631">
+                        <div class="t-TabsRegion-items">
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Closed Operator change Report</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Rejected Operator change Report</button>
+                            </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                              <div data-label="Closed Operator change Report" id="SR_R44695426182782981" role="tabpanel" class="a-Tabs-panel a-Tabs-element-selected" aria-labelledby="SR_R44695426182782981_tab" style="display: block;" aria-hidden="false">
+                                <div class="t-TabsRegion t-TabsRegion-mod--simple apex-tabs-region js-apex-region" id="R44695426182782981">
+                                  <div id="R44695426182782981_ir" class="a-IRR-container">
+                                    <div id="R44695426182782981_worksheet_region" class="a-IRR" aria-live="polite">
+                                      <div id="R44695426182782981_single_row_view" class="a-IRR-singleRowView"></div>
+                                      <div id="R44695426182782981_full_view" class="a-IRR-fullView">
+                                        <div id="R44695426182782981_toolbar" class="a-IRR-toolbar">
+                                          <div role="search" aria-label="Search bar of Closed Operator change Report" id="R44695426182782981_toolbar_controls" class="a-IRR-controls">
+                                            <div class="a-IRR-controlGroup a-IRR-controlGroup--search">
+                                              <div class="a-IRR-search">
+                                                <input type="hidden" id="R44695426182782981_column_search_current_column">
+                                                <div class="a-IRR-colSelector"><button id="R44695426182782981_column_search_root" data-menu="R44695426182782981_column_search_drop" class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel" title="Select columns to search" aria-label="Select columns to search" type="button" aria-haspopup="menu"><span class="a-Icon icon-search" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div>
+                                                <div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field" id="R44695426182782981_search_field" title="Search Report" type="search" size="30" maxlength="4000" value=""></div>
+                                                <div class="a-IRR-searchButtonContainer"><button id="R44695426182782981_search_button" class="a-Button a-IRR-button a-IRR-button--search" type="button"><span>Go</span></button></div>
+                                              </div>
+                                            </div>
+                                            <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
+                                            <div class="a-IRR-controlGroup a-IRR-controlGroup--options">
+                                              <input type="hidden" id="R44695426182782981_row_select" value="50">
+                                              <div class="a-IRR-actions"><button id="R44695426182782981_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="R44695426182782981_actions_menu" aria-haspopup="menu">Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div id="R44695426182782981_content" class="a-IRR-content ">
+                                          <div id="R44695426182782981_dialog_js" class="a-IRR-dialogBody" style="display:none;"></div>
+                                          <input type="hidden" id="R44695426182782981_worksheet_id" value="44695553931782981">
+                                          <input type="hidden" id="R44695426182782981_app_user" value="9840815850">
+                                          <input type="hidden" id="R44695426182782981_report_id" value="44709326965795917">
+                                          <input type="hidden" id="R44695426182782981_view_mode" value="REPORT">
+                                          <style nonce="tBQ75oJN77qesALQdPeY1g" id="R44695426182782981_worksheet_css"></style>
+                                          <div role="region" aria-label="Chart view of Closed Operator change Report" id="R44695426182782981_chart" class="a-IRR-chartView"></div>
+                                          <div role="region" aria-label="Group by view of Closed Operator change Report" id="R44695426182782981_group_by" class="a-IRR-groupByView"></div>
+                                          <div role="region" aria-label="Pivot view of Closed Operator change Report" id="R44695426182782981_pivot" class="a-IRR-pivotView"></div>
+                                          <div role="region" aria-label="Data view of Closed Operator change Report" id="R44695426182782981_data_panel" class="a-IRR-reportView">
+                                            <div class="a-IRR-tableContainer">
+                                              <div class="t-fht-wrapper">
+                                                <div class="t-fht-thead js-stickyTableHeader js-stickyWidget-toggle" id="stickyTableHeader_1" style="z-index: 300; position: absolute; width: 1487.2px;">
+                                                  <table aria-label="Closed Operator change Report, Report = Primary Default, View = Report" class="a-IRR-table" id="44695553931782981" aria-hidden="true">
+                                                    <tr>
+                                                      <th class="a-IRR-header u-tC" id="C44674932605341305">
+                                                        <span class="a-IRR-headerLabel">Sl No</span>
+                                                        <div class="t-fht-cell" style="width: 36.9375px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44696667458782988">
+                                                        <span class="a-IRR-headerLabel">Created Date</span>
+                                                        <div class="t-fht-cell" style="width: 85.1125px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44697093912782989">
+                                                        <span class="a-IRR-headerLabel">District</span>
+                                                        <div class="t-fht-cell" style="width: 118.05px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44697487632782989">
+                                                        <span class="a-IRR-headerLabel">Esevai Id</span>
+                                                        <div class="t-fht-cell" style="width: 113.287px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44697879566782989">
+                                                        <span class="a-IRR-headerLabel">Current Operator Name</span>
+                                                        <div class="t-fht-cell" style="width: 123.6px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44698298288782990">
+                                                        <span class="a-IRR-headerLabel">Current Operator Mobile Number</span>
+                                                        <div class="t-fht-cell" style="width: 88.6875px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44698681393782990">
+                                                        <span class="a-IRR-headerLabel">Current Mail Id</span>
+                                                        <div class="t-fht-cell" style="width: 232.45px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44699077757782990">
+                                                        <span class="a-IRR-headerLabel">Reason For Operator Change</span>
+                                                        <div class="t-fht-cell" style="width: 166.938px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44699489003782990">
+                                                        <span class="a-IRR-headerLabel">New Operator Name</span>
+                                                        <div class="t-fht-cell" style="width: 134.25px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44699895108782991">
+                                                        <span class="a-IRR-headerLabel">New Operator Aadhar Number</span>
+                                                        <div class="t-fht-cell" style="width: 101.625px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44700243496782991">
+                                                        <span class="a-IRR-headerLabel">New Operator Phone Number</span>
+                                                        <div class="t-fht-cell" style="width: 88.6875px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="C44700680023782991">
+                                                        <span class="a-IRR-headerLabel">New Mail Id</span>
+                                                        <div class="t-fht-cell" style="width: 232.45px;"></div>
+                                                      </th>
+                                                      <th class="a-IRR-header u-tC" id="DOWNLOAD-BLOB">
+                                                        <span class="a-IRR-headerLabel">Photo Attachment</span>
+                                                        <div class="t-fht-cell" style="width: 82.3875px;"></div>
+                                                      </th>
+                                                    </tr>
+                                                  </table>
+                                                </div>
+                                                <div class="js-stickyWidget-placeholder" style="width: 1487.2px; height: 72px;"></div>
+                                                <div class="t-fht-tbody" style="width: auto;">
+                                                  <table aria-label="Closed Operator change Report, Report = Primary Default, View = Report" class="a-IRR-table" id="44695553931782981_orig" style="margin-top: -72.4px;">
+                                                    <tbody>
+                                                      <tr style="">
+                                                        <th class="a-IRR-header u-tC" id="C44674932605341305">
+                                                          <span class="a-IRR-headerLabel">Sl No</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44696667458782988">
+                                                          <span class="a-IRR-headerLabel">Created Date</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44697093912782989">
+                                                          <span class="a-IRR-headerLabel">District</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44697487632782989">
+                                                          <span class="a-IRR-headerLabel">Esevai Id</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44697879566782989">
+                                                          <span class="a-IRR-headerLabel">Current Operator Name</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44698298288782990">
+                                                          <span class="a-IRR-headerLabel">Current Operator Mobile Number</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44698681393782990">
+                                                          <span class="a-IRR-headerLabel">Current Mail Id</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44699077757782990">
+                                                          <span class="a-IRR-headerLabel">Reason For Operator Change</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44699489003782990">
+                                                          <span class="a-IRR-headerLabel">New Operator Name</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44699895108782991">
+                                                          <span class="a-IRR-headerLabel">New Operator Aadhar Number</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44700243496782991">
+                                                          <span class="a-IRR-headerLabel">New Operator Phone Number</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="C44700680023782991">
+                                                          <span class="a-IRR-headerLabel">New Mail Id</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                        <th class="a-IRR-header u-tC" id="DOWNLOAD-BLOB">
+                                                          <span class="a-IRR-headerLabel">Photo Attachment</span>
+                                                          <div class="t-fht-cell"></div>
+                                                        </th>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">1</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/2/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Dindigul</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACDGL117-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Gayathri V</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7708508416</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">dd532narikkalpattipacs@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Health issue for old operator</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Suganthi S</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">251956378021</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8925176532</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">dd532narikkalpattipacs@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0081&amp;k2=&amp;ck=CuQaL8bugNd9dk456_JFLg-yBk_Pw_Y9w8PzS-M3o_aGucQ8UhpOfzSA8VPxLNzYUqOE2ihaqTPMCdrmijTysw&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 956KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">2</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/2/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Namakkal</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACNKL015-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">V Valaramathi</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7708182239</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">valarmathivsa@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">The old operator was relieved due to personal reasons</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Ashma S</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">498312216474</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9791607151</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">3</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/3/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Perambalur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAPMB0239-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Thiruselvan T</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9003997257</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">thiruvijay1234@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">The old operator got a new job, Due to this, his mother would like to become an Operator</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Chandra T</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">835074542211</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9786419571</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">saamyxerox2020@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0121&amp;k2=&amp;ck=Fmb62cgNu4TqXGTId0smOTEjdYouLQ1lGrdUAspvpKAEmrnEMeLTvdacGNpiQdTLifwLeOaUTVwLXknnxCUpVA&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 143KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">4</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/3/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Dindigul</td>
+                                                        <td class=" u-tC" headers="C44697487632782989"></td>
+                                                        <td class=" u-tC" headers="C44697879566782989"></td>
+                                                        <td class=" u-tC" headers="C44698298288782990"></td>
+                                                        <td class=" u-tC" headers="C44698681393782990"></td>
+                                                        <td class=" u-tC" headers="C44699077757782990"></td>
+                                                        <td class=" u-tC" headers="C44699489003782990"></td>
+                                                        <td class=" u-tC" headers="C44699895108782991"></td>
+                                                        <td class=" u-tC" headers="C44700243496782991"></td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">5</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Dindigul</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACDGL046-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Vinothini</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9843318214</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">dd553nochiodaipattypaccs@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Old operator relieved</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Iswarya samiyappan</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">964284529459</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9677271283</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">dd553nochiodaipattypaccs@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0144&amp;k2=&amp;ck=AX1_z77BKIH0KjNdtJV6EfutOVZOVhYXNgmehcVbZjlMsswGBexpP_BPCSDrP9-Qde2tUwvLSJdjAzTsYWEPYA&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 268KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">6</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Sivagangai</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACSVG121-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">vigneshkumar M</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8675052261</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">nn626paccs@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">old operator resign the job</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Nagavalli</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">831756103811</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9786699250</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">nn626paccs@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0161&amp;k2=&amp;ck=6HNhslKSixEtNDcuNMfoW94LKPpcYqmFd_bwVTtedGmrihZn8mKRHMHLDaBNStuS9RS4jO8_3kj1EpO-WraKWw&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 95KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">7</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Perambalur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNVLEPMB012-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Shankar Kamaraj</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9994480366</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">abarnastore@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Old operator Having some health issues- Medical Emergency</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Maheswari R</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">676268970432</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">7868947330</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">abarnastorepan2@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0163&amp;k2=&amp;ck=WqBqB38287NC353djYb13ur-ou3xaXj4L21wAWxHgi3uZUgbW8rfDcw1I7M_8csCVR5iZBIkqPbehS-e0FtDMw&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 424KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">8</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Namakkal</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFANKL044-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Gowtham U</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8608009935</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">newudhayam40@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">brother as a operator</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Kathiresan Udhayakumar</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">583554930523</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">6385667751</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">newudhayam40@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">9</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/6/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Kancheepuram</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAKPM137-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Selvaraj</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7010682298</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">selvabahai@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Due to my work i have to travel frequently because of which i am requesting you to change my biometric to my operator,</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Divyagowri M</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">714415867175</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">6381360757</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">divyagowri0711@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0223&amp;k2=&amp;ck=ZfZ76AmIQUw0eqJOe-WQ3vf-bDouk2ROz-jGp_7OX0yBGBvb4T2P4Jmsj2780Uk7IMZsp04lEuezL8MAlvpN2A&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 5MB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">10</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/6/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Namakkal</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACNKL080-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">S NaveenKumar</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9944988710</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">sa42avinayagarpaccs@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">old operator got a new job</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Lalitha Ramanathan</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">770976445217</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">6382390621</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">sa42avinayagarpaccs@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">11</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/7/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thiruchirappalli</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACTRI129-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Nagaveni Balasubramanian</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7010004135</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">koohurcoop@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Existing operator relieved so wants to change operator in this PACCS ESevai ID</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Lakshmi S</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">507454085977</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">7418824486</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">koohurcoop@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0241&amp;k2=&amp;ck=XTXXsGincIZ101-GmAyy1VoYDF1NzAK55mJfsdwjAolWe8q19PR1d-t7V4SKGDGul2wCFp6gAfLLeJ3H2FNy9g&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 145KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">12</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/9/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Dindigul</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFADGL038-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">MOUNIKA J</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7402067645</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">csckulathur.dgl@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">The existing operator went for her higher studies.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">GABRIEL S</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">571389339783</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8344538523</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">dsgabdass@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0262&amp;k2=&amp;ck=4Yvp98WuZtZEN7SeMA3WRUlkfF4VqHJv7G9NV2_jS_r8GUJ78z26bYKUlihac7Jh8nBHrm_ZmgAMDhe9FIS9uQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 976KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">13</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/10/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Sivagangai</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNTACSVG006-02</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Kanmani</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8610846685</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">a.kanmani28@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">DEO TRANSFER TACTV</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">G Raja</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">210452739067</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9787390612</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">rajagct1988@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0304&amp;k2=&amp;ck=x4-UNMEO04bEc3d34xwOGT6orcuBuXsERJFIQiR6K6uBhbDh6ZsAG1V_fAVCwWXbPwlUh-OdHo7q5clvbq_03g&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 141KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">14</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/10/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Sivagangai</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFASVG0436-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Juliet M</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7339583111</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">pjuliet0601@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Getting an error "Invalid error" . Same Operator only</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Juliet M</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">876457284198</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">7339583111</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">15</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/11/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tiruvallur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACTLR126-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Ramanathan</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8525998593</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">jj611pacs@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Old operator left the job for family circumstances.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Ramanathan</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">359250100031</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8525998593</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">16</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/16/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tirunelveli</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATNV097-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">VALLI T</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9366759900</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">rayalcomputer@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Valli is operator. Now he want to change to Owner Husband Name.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Dhanushkodi Venkatasubramanian</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">31000880939</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9366759900</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0501&amp;k2=&amp;ck=LEbgf2adRqj2z8g6UutbOD6sKqPchIdBqBNAcSvo07-LN4LORlX35PMN9XbMV_TEctCjsKKKvMDUxZsw7L6twA&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 420KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">17</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/17/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Virudhunagar</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAVNR280-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">VAIJAYANTHI K</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8682902432</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">marimuthuacc1989@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Appoint new staff</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">POOMARIMUTHU</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">442849361918</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8608192610</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0521&amp;k2=&amp;ck=JP6vszM4p84zKbJh7IDSgd-Yxqyrs2uLH724EAT0_nkLRVm77_N8OCzCdi9Bhx_Ht2QokfHHSQOn7jucPWbfbQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 396KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">18</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/17/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Mayiladuthurai</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAMYD164-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">MANIVANNAN</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9942662633</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">manims9787@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Husband to Wife Operator change request.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">SARANYA MNIVANNAN</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">555716155941</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9942662633</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0523&amp;k2=&amp;ck=SdZ2wqfwFN3MDEmJECvBCF1ZkoxoYiHQQieqw6UYS5tKB_FFZAJCgaiUFMFTXyDpxU-5HKGa-7c-tsGQGu-nGQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 601KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">19</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/17/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thirupathur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACVEL055-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">G Anitha</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">915048134</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">abc@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">old operator relieved</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">K Abitha</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">342968166101</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">7603921539</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0541&amp;k2=&amp;ck=Dq1_twxGwcqPW_zr96cPw2OCRMB2WRyEOIkbgYd2U8ye3497joMQgZ9dLBvVASuDWL8uilF8Gch--vTPX64Muw&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 295KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">20</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/20/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thiruvarur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATVR0496-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Seetha Muruganantam</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9943986035</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">seethavivek27@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Current operator has some health issue, so her sibling going to be a new operator.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Tamilarasan Balasubramaniyan</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">363076494086</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8220068808</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">pirathishesevai@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0642&amp;k2=&amp;ck=ml-3MBdm1ErJwerEZz9htaACMP3_ODIOlbPuCiGRwgpxcZzElZoV6m3DXYbepVvE8OQsr4p0JLHtHFPWtxTX3Q&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 125KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">21</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/20/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thiruvarur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATVR105-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Karthika Manikandan</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8675292917</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">ezhlilstudiovpm@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Current operator's husband as new operator</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Manikandan Balasubramaniyan</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">294482675156</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9600720312</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">manik4813@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0661&amp;k2=&amp;ck=bI9PRjh4Vun78msRQgBYd_ARKXT4-iW5212AqmRWtNmBMWpD0B5pOqW1gE2kE2M8k1N-otobiVvhO2wm_M5Y8w&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 108KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">22</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/20/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Coimbatore</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFACBE572-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">A Karthikkumar</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9843059600</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">cbecbestar@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Change provision to the father for biometric authentication because of going to another job</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Aruchamy S A</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">515669062705</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9500608710</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0662&amp;k2=&amp;ck=9x4Hf_omTBlL7Zhlv5w7JNyqRBL1JlTLiCG7t1FXg5jv1-jCtzSurlkk47wmul0LgKnB7Y8oO5S3NVqEwuV2lg&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 2MB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">23</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/21/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Karur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAKAR077-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">balamurugan</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">6383379779</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">bbkxerox3@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">medical issue.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Ganeshkumar</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">241870474945</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">6383379779</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">gk068986@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0681&amp;k2=&amp;ck=PQOQWhqVw97LwSg4XWXrKEoZP2OTMspoLLePGpK6saXtHuGaz9poyn6p1oe0ClkJgCMGOIrbEP5_C4TJbetiUQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 718KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">24</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/21/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tenkasi</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATKS015-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">maria john joseph A</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9994379007</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">mjjoseph99@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">I am going to other country.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">baby A</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">939528376647</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9443295129</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">baby.feb86@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0682&amp;k2=&amp;ck=HHw2if6jn2vP7A7aXdYWQvJTqA-EkjnXpV2fd3ootVJHAF4ln7pyLsBvo7i_gGfYheTQcL5wKPliHPRI1436fw&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 262KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">25</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/21/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thirupathur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATPT410-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Anjali C</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9944139885</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">mariaanj239@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">pregnancy and child caring.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">anandditto.C</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">288088292368</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9751366097</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">anandditto@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0685&amp;k2=&amp;ck=rXjCMBmWaPy_BJSQhfG8kSarlwWc0JGKWBluUgrod0_jqUap71x7pQHCtWSETtSr7KXq8z3Wl-ooMWdMnjNneQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 444KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">26</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/21/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Chengalpattu</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFACPT0520-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Akila vairmani</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9500086201</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">avmgroups.sa@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Health problem</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Vairamani arumugam</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">387255893613</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9500086231</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">thechennaisuperstores@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0686&amp;k2=&amp;ck=mlK93hVXumdseoJC56hJtwdCByxubquA-Tdr2Hqef_fHKTN_G4NMtI7XR-kG93Vbm2lP_aYkxjrD1GXnhoic7g&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 2MB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">27</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">11/29/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Ariyalur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAARI0385-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">NAVEEN K</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9600413166</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">suthakumar84@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Operator went to other place for higher education. Hence operator wants to change ID to mother name</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Sudha</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">234349151880</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9865641809</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0064&amp;k2=&amp;ck=bJbwPJ7irTZ8iD6vplD66WI7s38hUIHyRBXd0tt8-GvHHWegzVZlnX3N_J-mArmRaGIUoQlsr9Tg2xYKtGhNnQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 816KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">28</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/2/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Namakkal</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACNKL065-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Nandhini Balasubramaniyam</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8220206380</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">s778rpattanam@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">need to change phone number.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Nandhini Balasubramaniyam</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">708592463849</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">6381743220</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">29</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/2/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Namakkal</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFANKL019-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Divya Arivalagan</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8760214262</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">divyacse6@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Divya Arivalagan is currently on maternity leave. her husband would like to take over her duties as an operator.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Praveenkumar Kathiresan</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">242159212235</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9788626262</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">30</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/3/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Theni</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACTHN029-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Devirani N</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8220512342</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">nsdevirani@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Maternity Leave</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Vishnupriya R</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">955030550163</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8825701161</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">rameshvishnu333@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0123&amp;k2=&amp;ck=D_aujQmmQLQ5GSjFdYa46rBp-r0rkSVVbCIa6IOQOD-AicaXYKWz4JHX8sR3YuEvNxpEEMZHtanWfEn4EhV5qQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 120KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">31</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/3/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Dindigul</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFADGL436-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Sandhiya S</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">6369118202</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">harinyasekar2004@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Operator got married</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">N Sekar</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">857163810477</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9442758216</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">balusekar2011@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0126&amp;k2=&amp;ck=l_bBK6YDutN4NnIyGMMjjRmURyMjTJ0N369Z5Q5foGQo-et9F6uwwAyZIPh1lPPqpSzMWcuQT28I3Ru5yHVVcg&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 2MB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">32</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tirunelveli</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATNV097-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Valli</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9366759900</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">rayalcomputer@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Current operator went for operator change. so the owner is requesting to change the finger impression to himeself.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Dhanushkodi Venkatasubramanian</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">310008809395</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9366759900</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">rayalcomputer@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0142&amp;k2=&amp;ck=gb5ACVU0MdYz-72jI7jJlfvLhDS7pDvg8JfIQtxwzAQh4yjx3jB34u4M0j5VV_cB08Tb0-dLWWDPssCDcWq56A&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 482KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">33</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Sivagangai</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNTACSVG006-02</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Kanmani</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8610846685</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">a.kanmani28@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">DEO transfer</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">G. Raja</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">210452739067</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9787390612</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">rajagct1988@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0169&amp;k2=&amp;ck=StzePzo8Hx-TDUomaYsg8YjKWbliFQhQh4Twu3ndcmzOb9QdKCw06nbeXMZojbZa-iMc2vNpIolfrzvFZEVKdA&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 716KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">34</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Sivagangai</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNTACSVG008-02</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">G.Raja</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9787390612</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">rajagct1988@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">DEO Transfer</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Sivalalila</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">702963829624</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8110962898</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">www.sivalalila6@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0170&amp;k2=&amp;ck=SyAfIQ7b2QTIqPuw8OMJxhYDkkKV537GV-nvVplnVwUzIVXqrEuXCiGQEy-VN5GF31TYj5c0TV4rWdiqrmlu9w&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 728KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">35</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/9/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Ramanathapuram</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNTAFRMD039-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Rajeshwari R</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9976526878</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">saravanaesevai@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Health  Issue</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Karthickraja G</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">284062075007</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8754320444</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">karthickraja1496@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0281&amp;k2=&amp;ck=mHas8G8cNdGJ4dzsVIfIGuD-2H9cm6TyLMwSGocb5TegViJv2S8DYFsGIGmTyqNYnS74zKTW5DkDEhORDv4eoA&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 147KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">36</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/11/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Vellore</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAVEL0444-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">ANUPRIYA</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8883394632</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">premkumar839@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Operator is in Maternity Leave</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Prem Kumar R</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">996379742311</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8883394632</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">premkumar839@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0344&amp;k2=&amp;ck=uOaDZ0NRVmrnGC2T4VjtQuOido2nY4n1BRe2IgFDaRQK7ZvSFLgWa6xlrYarvpbsp0PpDnZWWv1Lb2-7oVZb2w&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 974KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">37</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/12/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tirunelveli</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATNV139-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">JOTHILAKSHMI</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9003891981</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">jothimanur@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Pregnant - so doctor advice rest in House</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">CHANDRASEKAR</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">451404503191</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9003891981</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0381&amp;k2=&amp;ck=7dvTPRtTWXOLmqLm2i1utjsb49TuCZg7qKXMLmQVXX0GH5We2DjLmvHM_NVRKQPLhvOm3dRB0IsBzkbmQ7129g&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 397KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">38</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/12/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Cuddalore</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFACUD533-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">VIJAYASHANTHI RAMESHKUMAR</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9095957502</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">nagulchathu91@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">operator  going to continue higher education. so need to change operator as her husband</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">RAMESHKUMAR K</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">879746504734</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9095957502</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0421&amp;k2=&amp;ck=etWqo3NztrFSRnoJTLP590Oj18GIzfJ4lr2ztFnCJUpccPpGceQrPjO6FRseXylDnLtuDGfBKWQm_UlqvU7-lw&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 2MB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">39</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/12/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Namakkal</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACNKL064-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Kanaka Rasu</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">6383517049</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">s8805kakkaveri@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Please change our e-sevai operator, as the old operator got a new job.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Jayanthi S</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">6383517049</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">6383517049</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">s8805kakkaveri@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">40</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/14/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Erode</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACERD002-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Sugunaveni M</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9965102070</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">aa539avalpoondurai@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">due to maternity leave</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Premkumar V</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">259542477222</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9524765855</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">aa539avalpoondurai@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0482&amp;k2=&amp;ck=6F1MvvQWXMWVNovNegzuZT5GfIM2niFtTaVneeHodpLTyaa4uxRMan1UjHeGFm7Iug5Lby9us-J1jf9jHm9KLA&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 346KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">41</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/17/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Mayiladuthurai</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">tnefamyd0345-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Kalyani Muthaiyan</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9894406301</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">skynetpyr@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Operator Relieved. Request to change into owner husband name</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">S Shankar</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">618739782604</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9894406301</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">skynetpyr@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0522&amp;k2=&amp;ck=U5Be8UPvMIyC1jFKQh9Y2e6ELhmAww9iNEAx45oYa8RwjH1cY-FhaWq-3khtEiIy2t2fqOjzLtrbk3IZA1Q0YQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 172KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">42</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/19/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thanjavur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATNJ863-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">MANIKANDAN GOVINDARAJ</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9080901631</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">manigcivil@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">கடை உரிமையாளர் ஆகிய நான் தற்சமயம் என்னால் கடையில் பணிபுரிய இயலவில்லை ஆகையால்  எனது லாகினை எனது மனைவியின் பெயருக்கு மாற்றுத் தருமாறு கேட்டுக்கொள்கிறேன்</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">NITHYA MANIKANDAN</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">913373310627</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9047436154</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">thangamtech2723@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0601&amp;k2=&amp;ck=7B0PVNMtjYBP3WodK5cTWl8nusQ1v3U-cuK_zVQfnzxDtC3K9sL_ju7R9Vqr2iwjul2zXkBlFQG39GjG3px7QQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 763KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">43</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/19/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thanjavur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATNJ623-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">DURGADEVI RATHINARAJ</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7010204170</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">durgarathinaraj@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">கடை உரிமையாளர் ஆகிய நான் தற்சமயம் என்னால் கடையில் பணிபுரிய இயலவில்லை ஆகையால்  எனது லாகினை எனது கணவர் பெயருக்கு மாற்றுத் தருமாறு கேட்டுக்கொள்கிறேன்</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Rathinaraj Govindaraj</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">320037645964</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9952321979</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">csc612401@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0602&amp;k2=&amp;ck=tNA1KnFKar1t9ZImBgE0rJy9b1YOLoSk_aS-18B0Tfzd8gMU1lPGoqtpqLafJs_AoVGqEbLPpNPJ-OBDrqOxWg&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 625KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">44</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/19/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tirunelveli</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNTACTNV034-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">JOHNSI</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8883780622</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">srisaimj7@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">OPERATOR CHANGED BY TACTV TAHSILDAR</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">KAMALAVENI</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">654117095403</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9629105857</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">kamalavenicbe2018@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0606&amp;k2=&amp;ck=tmBCDehnPyaFlzFVnOm3mOV4TaWr4H7nNhMED5jyIQ3YMNZZXH4WxiaUmpIrii14tlmB3JUeYmMLiqm3P-ZHog&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 322KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">45</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/21/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tiruppur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATPR0780-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Bhuvaneshwari</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">9489916716</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">sktnesevai@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">going to maternity leave.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">gnana sekar</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">504118730063</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9489916716</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">sktnesevai@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0687&amp;k2=&amp;ck=lRewATdMxof0U6tK_vpS81lUHRT7O50EqfiNHlX9VAHRKBvfQjJOoiWGUj1SnPjhhjbfWJwYPwswyAXI6QUuvQ&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 504KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">46</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/2/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tiruvallur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACTLR119-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Saraswathi</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7845221662</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">hemasathish1507@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Old operator got married</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Hemalatha T S</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">863145538051</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">7845221662</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">47</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/2/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tirunelveli</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATNV190-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">PERIYASAMY</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7667633891</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">rspsamy91@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">Old operator resigning his job</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">RAMKUMAR RAMACHANDRAN</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">374448657934</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">7667633891</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">r.ramkumar@hotmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0110&amp;k2=&amp;ck=qfBH610xmMpnsaBK42a5gwOErk3GEMB2-3yHVIpb-wpGJMAIdsv8y1Tjnxr3Hee2KWfY9PxLDI1D903Cqc-FFg&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 809KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">48</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/3/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Viluppuram</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFAVPM0644-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">KALAIARASY</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7708869010</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">subbustudiovnr@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">He bought this id for her sister kalaiarasy's name. and now she is migrated to pondicherry for her son's education. So he request to change the operator finger print details as soon as possible.</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Mohan</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">931150359049</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">7708869010</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0124&amp;k2=&amp;ck=H5Gh4DvbYEFmJfCFQBGmWUCszDV3Y-FqRmqvErmhl3bXnFOuZUDsmOEMe1_feHFbDHnxL0kXzMAq1mmH0K_Qdw&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 855KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">49</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/3/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Thanjavur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNEFATNJ712-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Ananthajothi</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">8940405666</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">gowsik2006@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">நான் குடும்பத் தலைவியாக இருப்பதாலும் எனது பெயரில் ஐடி உள்ளதாலும் எனது கணவர் பெயருக்கு ஆபரேட்டர் மாற்றி தருமாறு தாழ்மையுடன்  கேட்டுக்கொள்கிறேன்</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Karuppaiyan Periyasamy</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">203644929248</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">8825970255</td>
+                                                        <td class=" u-tC" headers="C44700680023782991">gowsik2006@gmail.com</td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0127&amp;k2=&amp;ck=lmdwwFUDlFwPsArDsMMFIxR82ue1ZPgiVLPpJLomhqBw70X6V7QSZGxK5TCDbgh4vlCXVB97BBVuTYzu7xUw6w&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 389KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class=" u-tC" headers="C44674932605341305">50</td>
+                                                        <td class=" u-tC" headers="C44696667458782988">12/4/2024</td>
+                                                        <td class=" u-tC" headers="C44697093912782989">Tiruppur</td>
+                                                        <td class=" u-tC" headers="C44697487632782989">TNPACTPR164-01</td>
+                                                        <td class=" u-tC" headers="C44697879566782989">Anandhi Aaruchammy</td>
+                                                        <td class=" u-tC" headers="C44698298288782990">7373495878</td>
+                                                        <td class=" u-tC" headers="C44698681393782990">k.ananthkumar1979@gmail.com</td>
+                                                        <td class=" u-tC" headers="C44699077757782990">BIO METRIC ISSUE IN CURRENT OPERATOR</td>
+                                                        <td class=" u-tC" headers="C44699489003782990">Mothilal Sankari K</td>
+                                                        <td class=" u-tC" headers="C44699895108782991">366272370855</td>
+                                                        <td class=" u-tC" headers="C44700243496782991">9487436835</td>
+                                                        <td class=" u-tC" headers="C44700680023782991"></td>
+                                                        <td class=" u-tC" headers="DOWNLOAD-BLOB"><a href="apex_util.get_blob?s=116639350395160&amp;a=1111&amp;c=44675794796341313&amp;p=91&amp;k1=OPCNG0143&amp;k2=&amp;ck=IIi1PAPwdmrmkQum_5lYPW2IiGphhgzA3GSh682xzz3nLM9NvO68N0OK9JW0atSzmICPnc3WehodVzfqYQGVOA&amp;rt=IR" alt="<i class=&quot;fa fa-eye&quot;></i>" title="<i class=&quot;fa fa-eye&quot;></i> 222KB" target="_blank"><i class="fa fa-eye"></i></a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div role="region" aria-label="Pagination of Closed Operator change Report" class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
+                                              <ul class="a-IRR-pagination">
+                                                <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                                <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label">                   1 -                   50</span></li>
+                                                <li class="a-IRR-pagination-item"><button type="button" class="a-Button a-IRR-button a-IRR-button--pagination" aria-controls="R44695426182782981" title="Next" aria-label="Next" data-pagination="pgR_min_row=51max_rows=50rows_fetched=50"><span class="a-Icon icon-right-chevron" aria-hidden="true"></span></button></li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="t-TabsRegion-items" style="min-height: 0px;">
+                                    <div class="apex-rds-slider">
+                                      <div class="apex-rds-hover left" style="display: none;"><a> <span class="a-Icon icon-left-chevron"></span> </a></div>
+                                      <div class="apex-rds-hover right" style="display: none;"><a> <span class="a-Icon icon-right-chevron"></span> </a></div>
+                                    </div>
+                                    <ul class="t-Tabs t-Tabs--simple a-Tabs" role="tablist" style="white-space: nowrap; overflow-x: hidden;"></ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                              <div data-label="Rejected Operator change Report" id="SR_R80603461384295204" role="tabpanel" class="a-Tabs-panel a-Tabs-after a-Tabs-element-selected" aria-labelledby="SR_R80603461384295204_tab" style="display: block;" aria-hidden="false">
+                                <div class="t-TabsRegion t-TabsRegion-mod--simple apex-tabs-region js-apex-region" id="R80603461384295204">
+                                  <div id="R80603461384295204_ir" class="a-IRR-container">
+                                    <div id="R80603461384295204_worksheet_region" class="a-IRR" aria-live="polite">
+                                      <div id="R80603461384295204_single_row_view" class="a-IRR-singleRowView"></div>
+                                      <div id="R80603461384295204_full_view" class="a-IRR-fullView">
+                                        <div id="R80603461384295204_toolbar" class="a-IRR-toolbar">
+                                          <div role="search" aria-label="Search bar of Rejected Operator change Report" id="R80603461384295204_toolbar_controls" class="a-IRR-controls">
+                                            <div class="a-IRR-controlGroup a-IRR-controlGroup--search">
+                                              <div class="a-IRR-search">
+                                                <input type="hidden" id="R80603461384295204_column_search_current_column">
+                                                <div class="a-IRR-colSelector"><button id="R80603461384295204_column_search_root" data-menu="R80603461384295204_column_search_drop" class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel" title="Select columns to search" aria-label="Select columns to search" type="button" aria-haspopup="menu"><span class="a-Icon icon-search" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div>
+                                                <div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field" id="R80603461384295204_search_field" title="Search Report" type="search" size="30" maxlength="4000" value=""></div>
+                                                <div class="a-IRR-searchButtonContainer"><button id="R80603461384295204_search_button" class="a-Button a-IRR-button a-IRR-button--search" type="button"><span>Go</span></button></div>
+                                              </div>
+                                            </div>
+                                            <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
+                                            <div class="a-IRR-controlGroup a-IRR-controlGroup--options">
+                                              <input type="hidden" id="R80603461384295204_row_select" value="50">
+                                              <div class="a-IRR-actions"><button id="R80603461384295204_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="R80603461384295204_actions_menu" aria-haspopup="menu">Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div id="R80603461384295204_content" class="a-IRR-content ">
+                                          <div id="R80603461384295204_dialog_js" class="a-IRR-dialogBody" style="display:none;"></div>
+                                          <input type="hidden" id="R80603461384295204_worksheet_id" value="80603588382295205">
+                                          <input type="hidden" id="R80603461384295204_app_user" value="9840815850">
+                                          <input type="hidden" id="R80603461384295204_report_id" value="80617641733336313">
+                                          <input type="hidden" id="R80603461384295204_view_mode" value="REPORT">
+                                          <style nonce="tBQ75oJN77qesALQdPeY1g" id="R80603461384295204_worksheet_css"></style>
+                                          <div role="region" aria-label="Chart view of Rejected Operator change Report" id="R80603461384295204_chart" class="a-IRR-chartView"></div>
+                                          <div role="region" aria-label="Group by view of Rejected Operator change Report" id="R80603461384295204_group_by" class="a-IRR-groupByView"></div>
+                                          <div role="region" aria-label="Pivot view of Rejected Operator change Report" id="R80603461384295204_pivot" class="a-IRR-pivotView"></div>
+                                          <div role="region" aria-label="Data view of Rejected Operator change Report" id="R80603461384295204_data_panel" class="a-IRR-reportView">
+                                            <div role="region" aria-label="Message" class="a-IRR-noDataMsg">
+                                              <div class="a-IRR-noDataMsg-icon"><span class="a-Icon icon-irr-no-results" aria-hidden="true"></span></div>
+                                              <span class="a-IRR-noDataMsg-text">No data found.</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="t-TabsRegion-items" style="min-height: 0px;">
+                                    <div class="apex-rds-slider">
+                                      <div class="apex-rds-hover left" style="display: none;"><a> <span class="a-Icon icon-left-chevron"></span> </a></div>
+                                      <div class="apex-rds-hover right" style="display: none;"><a> <span class="a-Icon icon-right-chevron"></span> </a></div>
+                                    </div>
+                                    <ul class="t-Tabs t-Tabs--simple a-Tabs" role="tablist" style="white-space: nowrap; overflow-x: hidden;"></ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col col-12 apex-col-auto col-start col-end" >
+                      <div id="button" class=""  >
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td align="left"><button onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fall-request2?clear=13\u0026session=113837303316044\u0026cs=3tW1tAVkci0rbJs5TfHRvXdV3kaw2nwUqBTtG0AmxjGNSZKFliFk6pAcx1EMv6cjrY2w4VKv7PGkIVM1FnsZGgg&#x27;);" class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning&#x20;t-Button--padLeft" type="button"  id="B13296050075424502"><span class="t-Button-label">Exit</span></button></td>
+                            <td align="right"><button onclick="apex.submit({request:&#x27;Send_Back&#x27;,validate:true});" class="t-Button t-Button--large&#x20;t-Button--warning" type="button"  id="B54923214743050317"><span class="t-Button-label">Send Back</span></button><button onclick="apex.submit({request:&#x27;Reassign_helpdesk&#x27;,validate:true});" class="t-Button t-Button--hot t-Button--large" type="button"  id="B77707461176006430"><span class="t-Button-label">Reassign</span></button><button onclick="" class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--primary&#x20;t-Button--padRight&#x20;t-Button--gapTop" type="button"  id="inprogress"><span class="t-Button-label">In-Progress</span></button><button onclick="" class="t-Button t-Button--large&#x20;t-Button--success&#x20;t-Button--padRight" type="button"  id="B13790750297651913"><span class="t-Button-label">Resolved</span></button></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="t-Body-contentInner"></div>
+            </main>
+            <footer class="t-Footer" id="t_Footer" role="contentinfo">
+              <div class="t-Footer-body">
+                <div class="t-Footer-content"></div>
+                <div class="t-Footer-apex">
+                  <div class="t-Footer-version"> </div>
+                  <div class="t-Footer-customize"></div>
+                </div>
+              </div>
+              <div class="t-Footer-top">
+                <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div>
+      <input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x7B;&#x22;r&#x22;&#x3A;&#x22;26395036630353245&#x22;,&#x22;c&#x22;&#x3A;&#x22;jc_drQuLCSD7OQ4SoCYvCDg3gmi0saNrAxNVcaIYhK4kUGzGXRSZCbnUHYKvKKFM7nh4lScFeBIQYcexfPhtFQ&#x22;&#x7D;&#x5D;">
+      <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDhfUkVRVUVTVF9OVU1CRVI6UDhfUkVRX1NUQVRVUzpQOF9SRVFVRVNUX0NSRUFU.,RUQ6UDhfUkVRVUVTVEVEX0JZOlA4X1JFUVVFU1RFRF9ESVNUUklDVDpQOF9SRVFV.,RVNURURfR1JPVVA6UDhfUFJJT1JJVFk6UDhfSEVMUERFU0tfVVBMT0FEXzE&#x2F;cSJ1ArMm-nut7TI5BBAN_quH7ZUrg5XWSLGTs8zRd4SWBs1gsgGQlWWzHjlL5L5AOt4RfMahv0kmF1CsWpyLUQ" />
+    </form>
+    <script src="../assets/js/jquery.min.js"></script> 
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script nonce="U9552TB4HhJOQG_iPhVa1w">
+      var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
+      var apex = {env: {APP_USER: "7010451136",APP_ID: "1111",APP_PAGE_ID: "8",APP_SESSION: "113837303316044",APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F",WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.2.0",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 21.2,NONCE: "U9552TB4HhJOQG_iPhVa1w"},
+      libVersions:{cropperJs:"1.6.2",domPurify:"3.1.6",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.29.0",oraclejet:"17.0.2",turndown:"7.2.0",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
+    </script>
+    <script nonce="U9552TB4HhJOQG_iPhVa1w">
+      apex.da.initDaEventList = function(){
+      apex.da.gEventList = [
+      {"triggeringElementType":"ITEM","triggeringElement":"P8_ATTACH_ID","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"REEgVFlQRX5-NDAxODY3ODU5Njc3NzIzMzc\u002FICT_kH9XOgp30SlDcBpAGyOBgakB9wws0ZQgGMn2C5KGb1EeK8u2zbeFtk962hhaqfuE9A79E2gqGFXpSuVk8Q","attribute01":"#P8_FILE_NAME,#P8_ATTACH_ID","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"attach",javascriptFunction:apex.da.refresh,"attribute01":"N","action":"NATIVE_REFRESH"}]},
+      {"bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $x('P8_LOCATION').readOnly = true;
+      $x('P8_OPERATOR').readOnly = true;
+      $x('P8_ISSUE_TYPE').readOnly = true;
+      $x('P8_LOCATION').readOnly = true;
+      $x('P8_SHORT_DESCRIPTION').readOnly = true;
+      $x('P8_IMPACTED_APPLICATION').readOnly = true;
+      $x('P8_SHORT').readOnly = true;
+      $x('P8_FULL_DESCRIPTION').readOnly = true;
+      $x('P8_CONTACT_TYPE').readOnly = true;
+      $x('P8_ASSIGNMENT_GROUP').readOnly = true;
+      $x('P8_ASSIGNED_TO_1').readOnly = true;
+      $x('P8_PRIORITY').readOnly = true;
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      },"action":"NATIVE_JAVASCRIPT_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P8_ADDITIONAL_INFORMATION",javascriptFunction:apex.da.clear,"action":"NATIVE_CLEAR"}]},
+      {"bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ var statuss = apex.item('P8_REQ_STATUS').getValue();// $v('P8_REQ_STATUS');
+      
+      if (statuss == "In-Progress")
+      { 
+          document.getElementById('inprogress').style.display = 'none';
+      }
+      else if (statuss == 'On-Hold')
+      {
+          
+            document.getElementById('onhold').style.display = 'none';
+          document.getElementById('inprogress').style.display = 'none';
+      
+      }
+      
+      },"action":"NATIVE_JAVASCRIPT_CODE"}]},
+      {"triggeringElementType":"ITEM","triggeringElement":"P8_ASSIGNED_TO","conditionElement":"P8_ASSIGNED_TO","triggeringConditionType":"NOT_NULL","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":true,actionList:[{"eventResult":false,"executeOnPageInit":true,"stopExecutionOnError":true,"waitForResult":true,"affectedElementsType":"ITEM","affectedElements":"P8_ASSIGN",javascriptFunction:apex.da.setValue,"ajaxIdentifier":"REEgVFlQRX5-Nzc3MDczNDE4MzEwMDY0Mjk\u002Fcm0SzXOXF5Ot2Bs2B8SBk3mC9TjqMLQKldYkJJ0FHfF6g9-wTdbu9XfaxbZ7y5Oi16D97q1jBm00v7tS4YhnVA","attribute01":"STATIC_ASSIGNMENT","attribute02":"0","attribute09":"N","action":"NATIVE_SET_VALUE"},{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"waitForResult":true,"affectedElementsType":"ITEM","affectedElements":"P8_ASSIGN",javascriptFunction:apex.da.setValue,"ajaxIdentifier":"REEgVFlQRX5-Nzc3MDcyNzI1OTgwMDY0Mjg\u002Fi5ldciBncQuHJkf63INaioXPL6GeQBPAJh4cbNMnpGdxvft3EGdGD1z20P63fUqnJZvUoDAE8AkGPoxDb0MjfA","attribute01":"STATIC_ASSIGNMENT","attribute02":"1","attribute09":"N","action":"NATIVE_SET_VALUE"},{"eventResult":false,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"BUTTON","affectedButtonId":"B77707461176006430",javascriptFunction:apex.da.disable,"action":"NATIVE_DISABLE"},{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"BUTTON","affectedButtonId":"B77707461176006430",javascriptFunction:apex.da.enable,"action":"NATIVE_ENABLE"}]}];
+      }
+    </script>
+    <script src="../assets/js/desktop_all.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/add.min.js"></script>
+    <script src="../assets/js/widget.treeView.min.js"></script>
+    <script src="../assets/js/widget.interactiveReport.min.js"></script>
+    <script src="../assets/js/widget.iconList.min.js"></script>
+    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+    <script src="../assets/js/widget.stickyWidget.min.js"></script>
+    <script src="../assets/js/item.Colorpicker.min.js"></script>
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+    <script src="../assets/js/jetCommonBundle.min.js"></script>
+    <script src="../assets/js/chartBundle.min.js"></script>
+    <!-- <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/themes/theme_42/23.2/js/theme42.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/ords/r/edmdev/1111/files/static/v1087/aos.min.js"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/ords/r/edmdev/1111/files/static/v1087/chart.js"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/ords/r/edmdev/1111/files/static/v1087/add.min.js"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/widget.treeView.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/widget.interactiveReport.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/widget.iconList.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/widget.stickyTableHeader.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/widget.stickyWidget.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/item.Colorpicker.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/oraclejet/16.0.10/js/libs/require/require.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/requirejs.jetConfig.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/jetCommonBundle.min.js?v=24.1.7"></script>
+      <script src="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/i/24.1.7/libraries/apex/minified/chartBundle.min.js?v=24.1.7"></script> -->
+    <script nonce="U9552TB4HhJOQG_iPhVa1w">
+      apex.session.initTimeouts(180,{"idle_time_ms":3596000,"life_time_ms":27997000,"max_idle_time_ms":3600000},'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome','\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+      apex.jQuery( function() {
+      apex.page.init( this, function() {
+      try {
+      (function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+      (function(){
+            $("#P8_ASSIGNED_TO").select2({"placeholder":"--Select Assigned To--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},"width":"300px"});
+              $("#P8_ASSIGNED_TO").on(
+                "select2:select",
+                function(){ $(this).focus(); }
+              );
+            beCtbSelect2.events.bind("#P8_ASSIGNED_TO");})();
+      (function(){apex.widget.report.init("attach","UkVHSU9OIFRZUEV-fjQwMTg1NTYxMTg4NzcyMzI1\u002FZDOyK4-6OgjHadN6Zv2Ty07iZ27b7TUFKc5MHkIRsywNjf1Wdc--5FEwNG-jF-vg4IqyjnDJvV6qSd7HcjeaTA",{"lazyLoading":false,"internalRegionId":"40185561188772325"});})();
+      (function(){apex.util.defineTemplates([{"name":"APEX$TMPL_RPT_49394505266669633","template":"{if !APEX$HAS_MESSAGE\u002F}\u003Cul class=\u0022t-MediaList t-MediaList--showIcons{if ?LAYOUT\u002F} #LAYOUT!ATTR#{endif\u002F}{if ?SIZE\u002F} #SIZE!ATTR#{endif\u002F}{if APPLY_THEME_COLORS\u002F} u-colors{endif\u002F} #APEX$COMPONENT_CSS_CLASSES#\u0022\u003E#APEX$ROWS#\u003C\u002Ful\u003E{else\u002F}\u003Cdiv class=\u0022a-TMV-noDataMsg a-TMV-altMessage\u0022\u003E\u003Cdiv class=\u0022a-TMV-altMessage-icon\u0022\u003E\u003Cspan aria-hidden=\u0022true\u0022 class=\u0022a-Icon #APEX$MESSAGE_ICON#\u0022\u003E\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003Cspan class=\u0022a-TMV-altMessage-text\u0022\u003E#APEX$MESSAGE#\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E{endif\u002F}","args":[{"name":"APEX$COMPONENT_CSS_CLASSES","escape":"ATTR"},{"name":"APEX$DOM_ID","escape":"ATTR"},{"name":"APEX$HAS_MESSAGE","escape":"RAW"},{"name":"APEX$IS_LAZY_LOADING","escape":"RAW"},{"name":"APEX$MESSAGE","escape":"RAW"},{"name":"APEX$MESSAGE_ICON","escape":"ATTR"},{"name":"APEX$ROWS","escape":"RAW"},{"name":"APPLY_THEME_COLORS","escape":"ATTR"},{"name":"LAYOUT","escape":"ATTR"},{"name":"SIZE","escape":"ATTR"}]}]);apex.widget.templateReportRegionInit({"regionId":"49394505266669633","regionStaticId":"History","regionType":"TemplateComponent","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjQ5Mzk0NTA1MjY2NjY5NjMz\u002Fa0tTGNsM5M1gU1EeUAhZOrh9buDmxcP3ozpzVfmBH_k3kYg22GeUIIO4iTZnl5asvp3ROMRfwJ3LEujL1Yb3sQ","itemsToSubmit":"#P8_REQUEST_NUMBER","itemNavigationMode":"none","itemSelector":"[data-id]","modelName":"History","modelOptions":{"regionId":49394505266669633,"paginationType":"progressive","pageSize":3},"columns":[{"APEX$ROW_CONTENT":{"index":0}}],"ajaxColumns":"NDkzOTQ2OTY1NDI2Njk2MzQ6NDkzOTQ3MjA2NTY2Njk2MzU6NDkzOTQ4MDk4NjM2.,Njk2MzY\u002F6LikislHKsmQaY6Dq158TshOzShv5oFf49jUjgb94xu0YjYhAgHAyP1bnEd4tqUpVSKKVsynqVsoVvrwOhhIOg","ajaxActions":"\u002FtEd53LrICFaSNYMPfE6Lnd1zIsGzpyE6ibcBSE5CCs9fDe6JuVQ7dmr_sTmMp-Wk6cAUtU1g8r6oD-E3OFA8qw","ajaxActionMenus":"\u002FXYUC9DIPoh_YzymbgYf9uDrEHh1i0ruwRWob8pdenbJX13_AZ_dkG-FvJwz8UMKH3z9f1DZVB2clT5zFWVQZxg","pagination":{"savePaginationToServer":true,"showRange":true,"firstAndLastButtons":false,"hideSinglePage":true},"hideEmptyFooter":true,"footer":true,"noDataIcon":"icon-irr-no-results","noDataMessage":"No data found","cssClassPrefix":"a-TMV","hasSize":false,"rowsPerPage":3,"recordTemplate":"\u0026APEX$ROW_CONTENT!RAW.","bodyTemplate":"{with\u002F}\u000AAPEX$IS_LAZY_LOADING:=F\u000AAPEX$HAS_MESSAGE:=#APEX$HAS_MESSAGE#\u000AAPEX$MESSAGE:=#APEX$MESSAGE#\u000AAPEX$MESSAGE_ICON:=#APEX$MESSAGE_ICON#\u000AAPEX$COMPONENT_CSS_CLASSES:=#APEX$COMPONENT_CSS_CLASSES#\u000AAPEX$ROWS:=#APEX$ROWS#\u000AAPPLY_THEME_COLORS:=Y\u000ALAYOUT:=\u000ASIZE:=\u000A{apply APEX$TMPL_RPT_49394505266669633\u002F}","_isTemplateReport":true},gTemplateReport49394505266669633data);})();
+      (function(){apex.page.configureButtonForConfirmation({"buttonId":"inprogress","okLabel":"In-Progress","message":"Want to change the action as In-Progress?","style":"information","callback": () => {apex.navigation.redirect('#action$a-dialog-open?url=\u00252Fords\u00252Fr\u00252Fedmdev\u00252Fe-district-manager-application\u00252Finprogress-comments\u00253Fp100_request_number\u00253DEDM\u0025252F2024-05-29\u0025252F0251\u002526session\u00253D113837303316044\u002526cs\u00253D3-WdVhcxdIz4voDXhsfYVfZQsgfzA309htE8kktJSmH7cvOfxEr_SatNcI4UWI7AcpB5e-WAR_6C7WWqYdMuCpg\u002526dialogCs\u00253DAp-s9ORqCYUgLcb3EzgA7GWWK73RjVQGuYtAzFiiZ_U7svCoHBTxliwnDoFVaaI9abNb53K3X2t7djclg1_mgw\u0026appId=1111\u0026pageId=100\u0026tmpl=MODAL_DIALOG\u0026title=Inprogress\u002520Comments\u0026h=auto\u0026w=720\u0026mxw=960\u0026isModal=true\u0026dlgCls=\u0026pageCls=\u0026trgEl=\u002523inprogress');}});})();
+      (function(){apex.page.configureButtonForConfirmation({"buttonId":"B13790750297651913","okLabel":"Resolved","message":"Want to resolve the request?","style":"information","callback": () => {apex.submit({request:'Resolved',validate:true});}});})();
+      } catch(e) {apex.debug.error(e)};
+      apex.item.waitForDelayLoadItems().done(function() {
+      try {
+      (function(){apex.da.initDaEventList();
+      apex.da.init();})();
+      apex.theme42.initializePage.noSideCol();
+      
+      apex.page.warnOnUnsavedChanges();
+      } finally {
+      apex.event.trigger(apex.gPageContext$,'apexreadyend');
+      };
+      });
+      });
+      });apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' } );
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

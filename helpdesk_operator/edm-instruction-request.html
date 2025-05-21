@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html class="no-js  page-80 app-E-DISTRICT-MANAGER-APPLICATION" lang="en" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>EDM Instruction Request</title>
+ 
+     <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
+    <link rel="icon" href="../assets/img/app-icon-32.png">
+    <style type="text/css">
+      @font-face {
+      font-family: 'FontApex';
+      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
+      url('../font/apex-5-icon-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;  
+      } 
+      @font-face { 
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Small.woff') format('woff'),
+      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      } 
+     
+    </style>
+
+  
+  <style nonce="d0_rywjlvqjN5z_pr6muqg" >
+#P80_DISTRICT, #P80_ASSIGNED_TO, #P80_INSTRUCTION_TYPE{
+      width: 85%;
+    margin-top: 0px;
+    margin-left: 50px;
+    position: relative
+}
+
+#P80_CREATED_DTTM, #P80_REQUESTED_BY , #P80_ATTACHMENT, #P80_FULL_DESCRIPTION
+{
+width: 85%;
+    margin-top: 0px;
+    margin-right: 50px;
+    position: relative
+
+}
+
+#P80_SHORT_DESCRIPTION
+{
+    /* width: 25%; */
+     margin-left: 50px;
+}
+</style>
+
+  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" /><link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+</head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+<form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/edm-instruction-request/114048261149373" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  enctype="multipart/form-data" autocomplete="off">
+<input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="80" id="pFlowStepId" /><input type="hidden" name="p_instance" value="114048261149373" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="MTk3Mzc0ODkzMTY1ODY1MjE0NzgwMTQ3ODE4MjY4NDQ4NzIzOTMx&#x2F;YjztdmlgkTYTtwNmDyW3q2-jimyjEM8asLDBg7kaTxvxCzrmCm56QS51KK7sUrXHpIdje__lno5VFGoKNswWPw" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="e-district-manager-application&#x2F;edm-instruction-request&#x2F;114048261149373" id="pContext" /><input type="hidden" value="197374893165865214780147818268448723931" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+     <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114048261149373" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114048261149373" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+     <P  class="t-Header-logo-link">TNEGA</P>
+      
+    </div>
+    <div class="t-Header-navBar">
+      <div class="t-Header-navBar--start"></div>
+      <div class="t-Header-navBar--center" style='color:black'><ul class="t-NavigationBar " id="8792244222964376"><li class="t-NavigationBar-item ">
+  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
+      <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" ></span><span class="t-Button-label">Hello Manju !
+</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414"><ul><li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=1111&p_session_id=114048261149373" title="" target="">Sign Out</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D114048261149373%26dialogCs%3D8IijKNdS-dqefY0lI0oxSqCzWJFFGPvy00Z-lEUf8oqRQNE0BzdWu_eeelVTtj9gQa6l4kaiI0Pv3HMWlze8mQ&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">Change Password</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D114048261149373%26dialogCs%3Dt4Es6-6kRjTpSet6FSa-l8DTsruP3UV5A8XRu6pibYVXc_DCM3dsDZ18J58bltMk-ndvJ5XgSchVRS3AxymJHw&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">My Profile</a></li></ul></div></li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+    <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label">Last Logged in: 04-05-2025 07:44 PM</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fnotification%3Fsession%3D114048261149373%26dialogCs%3DsGfh5YtHarVjpffn0JCXIJUd13z9LPjVkgharzkiLiB4mURqFrFzC2eM9Ao09WCKB2ybI38TeP3FxWuii1JT2g&appId=1111&pageId=45&tmpl=DRAWER&title=Notification&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=%20js-dialog-class-t-Drawer--pullOutEnd&trgEl=apex.gPageContext%24" title="" target="">
+    <span class="t-Icon fa&#x20;fa-bell&#x20;fa-anim-horizontal-shake" aria-hidden="true" ></span><span class="t-Button-label"> </span><span class="t-Button-badge">12</span>
+  </a>
+</li></ul></div>
+      <div class="t-Header-navBar--end" ></div>
+    </div>
+  </div>
+  <div class="t-Header-nav"></div>
+</header>
+  <div class="t-Body">
+<div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+  <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic" id="t_TreeNav" data-id="80_tree" aria-label="Main Navigation">
+    <ul>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=114048261149373&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w" title="" style="display: none" target="">Home</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-home"></span>
+      <span class="a-TreeView-label">Home</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/all-request5?session=114048261149373" title="" style="display: none" target="">All Request</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">All Request</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/all-requests-with-re-assaign-option?session=114048261149373" title="" target="">All requests with Re-assaign Option</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-user-headset" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/new-request?p7_new=0&session=114048261149373&cs=110BX6RMm3yB5UIdQpCi-G5IFDb-mDxd9KP8m4AyaGhFOf22_34EnYHcmZZSc8xWEf4_d5vM9pqBG-FOCQqxuNA" title="" style="display: none" target="">New Request [ 83 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-user-headset"></span>
+      <span class="a-TreeView-label">New Request [ 83 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-clock" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/progress-request?session=114048261149373" title="" style="display: none" target="">In-Progress Request [ 2 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-folder-clock"></span>
+      <span class="a-TreeView-label">In-Progress Request [ 2 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-bookmark" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/resolved-request2?session=114048261149373" title="" style="display: none" target="">Resolved Request [ 710 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-folder-bookmark"></span>
+      <span class="a-TreeView-label">Resolved Request [ 710 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/reopened-request?session=114048261149373" title="" style="display: none" target="">Reopened Request [ 7 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Reopened Request [ 7 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-check" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/closed-request?session=114048261149373" title="" style="display: none" target="">Closed Request [ 213]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-folder-check"></span>
+      <span class="a-TreeView-label">Closed Request [ 213]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-exchange" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/reassigned-requests?session=114048261149373" title="" style="display: none" target="">Reassigned Requests</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-exchange"></span>
+      <span class="a-TreeView-label">Reassigned Requests</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-server-user" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/operators-details?session=114048261149373" title="" style="display: none" target="">Operators Details</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-server-user"></span>
+      <span class="a-TreeView-label">Operators Details</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/dairy-for-edm-inspection-report?session=114048261149373" title="" style="display: none" target="">Dairy for EDM Inspection Report</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg"></span>
+      <span class="a-TreeView-label">Dairy for EDM Inspection Report</span>
+    </div>
+  </div>
+</li><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-forms" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/edm-instruction-request?session=114048261149373" title="" style="display: none" target="">EDM Instruction Request</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-forms"></span>
+      <span class="a-TreeView-label">EDM Instruction Request</span>
+    </div>
+  </div>
+</li>
+<li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/ticket-updates?session=114048261149373" title="" style="display: none" target="">Ticket Updates</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Ticket Updates</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-updates?session=114048261149373" title="" style="display: none" target="">Helpdesk Ticket Updates</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Helpdesk Ticket Updates</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="" title="" style="display: none" target="">Helpdesk Ticket Report [ 18 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Helpdesk Ticket Report [ 18 ]</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-report?session=114048261149373" title="" target="">Helpdesk Instruction Open Report [ 0 ]</a></li><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-in-progress-report?session=114048261149373" title="" target="">Helpdesk Instructions In-Progress Report [ 0 ]</a></li><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-closed-report?session=114048261149373" title="" target="">Helpdesk Instructions Closed Report [ 18 ]</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-form?session=114048261149373" title="" style="display: none" target="">eSevai Operator Change Request Form</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-file"></span>
+      <span class="a-TreeView-label">eSevai Operator Change Request Form</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-report?session=114048261149373" title="" style="display: none" target="">eSevai Operator Change Request Report</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">eSevai Operator Change Request Report</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/closed-operator-change-report?session=114048261149373" title="" style="display: none" target="">Approved&#x2F;Rejected Operator Change Report [ 620]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">Approved&#x2F;Rejected Operator Change Report [ 620]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/public-petitions-report?session=114048261149373" title="" style="display: none" target="">Public Petitions [ 55]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">Public Petitions [ 55]</span>
+    </div>
+  </div>
+</li>    </ul>
+  </div>
+</div>
+<script>
+(() => {
+  const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
+        nav  = document.getElementById('t_TreeNav').classList,
+        body = document.getElementById('t_PageBody');
+  if ( !sessionStorage.getItem( pref ) ) { sessionStorage.setItem( pref, !nav.contains('js-defaultCollapsed') ); }
+  if ( nav.contains('js-navCollapsed--default') ) {
+      body?.classList.add('js-navCollapsed--icons');
+      if ( sessionStorage.getItem( pref ) === "false" ) { body?.classList.add('js-navCollapsed'); }
+  }
+  if ( sessionStorage.getItem( pref ) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
+  for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
+      label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+  }
+})();
+</script>
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"></div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main id="main" class="t-Body-mainContent">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div class="container">
+<div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-Region t-Region--scrollBody" id="R25932740219548146"  role="region" aria-label="EDM&#x20;Instruction&#x20;Request" >
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+    <h2 class="t-Region-title" id="R25932740219548146_heading" data-apex-heading>EDM Instruction Request</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="t-Region-orderBy"></div>
+     <input type="hidden" name="P80_REQUEST_NUMBER" id="P80_REQUEST_NUMBER" value=""><div class="container">
+<div class="row ">
+<div class="col col-5  col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--select-list" id="P80_DISTRICT_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_DISTRICT" id="P80_DISTRICT_LABEL" class="t-Form-label">District</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><select  id="P80_DISTRICT" name="P80_DISTRICT" class="selectlist&#x20;apex-item-select" data-native-menu="false"  size="1" ><option value="" selected="selected" ></option>
+<option value="Ariyalur">Ariyalur</option>
+<option value="Chengalpattu">Chengalpattu</option>
+<option value="Chennai">Chennai</option>
+<option value="Coimbatore">Coimbatore</option>
+<option value="Cuddalore">Cuddalore</option>
+<option value="Dharmapuri">Dharmapuri</option>
+<option value="Dindigul">Dindigul</option>
+<option value="Erode">Erode</option>
+<option value="General">General</option>
+<option value="Kallakurichi">Kallakurichi</option>
+<option value="Kancheepuram">Kancheepuram</option>
+<option value="Kanyakumari">Kanyakumari</option>
+<option value="Karur">Karur</option>
+<option value="Krishnagiri">Krishnagiri</option>
+<option value="Madurai">Madurai</option>
+<option value="Mayiladuthurai">Mayiladuthurai</option>
+<option value="Nagapattinam">Nagapattinam</option>
+<option value="Namakkal">Namakkal</option>
+<option value="Nilgiris">Nilgiris</option>
+<option value="Perambalur">Perambalur</option>
+<option value="Pudukkottai">Pudukkottai</option>
+<option value="Ramanathapuram">Ramanathapuram</option>
+<option value="Ranipet">Ranipet</option>
+<option value="Salem">Salem</option>
+<option value="Sivagangai">Sivagangai</option>
+<option value="Tenkasi">Tenkasi</option>
+<option value="Thanjavur">Thanjavur</option>
+<option value="Theni">Theni</option>
+<option value="Thiruchirappalli">Thiruchirappalli</option>
+<option value="Thirupathur">Thirupathur</option>
+<option value="Thiruvarur">Thiruvarur</option>
+<option value="Thoothukudi">Thoothukudi</option>
+<option value="Tirunelveli">Tirunelveli</option>
+<option value="Tiruppur">Tiruppur</option>
+<option value="Tiruvallur">Tiruvallur</option>
+<option value="Tiruvannamalai">Tiruvannamalai</option>
+<option value="Vellore">Vellore</option>
+<option value="Viluppuram">Viluppuram</option>
+<option value="Virudhunagar">Virudhunagar</option>
+</select></div><span id="P80_DISTRICT_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-5  " ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only" id="P80_REQUEST_CREATED_DTTM_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_REQUEST_CREATED_DTTM" id="P80_REQUEST_CREATED_DTTM_LABEL" class="t-Form-label">Request Created Dttm</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><input type="hidden" id="P80_REQUEST_CREATED_DTTM" name="P80_REQUEST_CREATED_DTTM" value="04-05-2025 08:17 PM"><input type="hidden" data-for="P80_REQUEST_CREATED_DTTM" value="MmtWdF0VVSETFqJbljzKUgg3INJTxJMHS4vbYKjbNBCQOnKv2lNCydrLTKoayu_vTo-I3zakZqWEhqEFU-ulcA"><span id="P80_REQUEST_CREATED_DTTM_DISPLAY"  class="display_only&#x20;apex-item-display-only"  data-escape="true">04-05-2025 08:17 PM</span></div><span id="P80_REQUEST_CREATED_DTTM_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
+</div><div class="row ">
+<div class="col col-5  col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--select-list" id="P80_ASSIGNED_TO_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_ASSIGNED_TO" id="P80_ASSIGNED_TO_LABEL" class="t-Form-label">Assigned To</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><select  id="P80_ASSIGNED_TO" name="P80_ASSIGNED_TO" class="selectlist&#x20;apex-item-select" data-native-menu="false"  size="1" ><option value="" selected="selected" ></option>
+</select></div><span id="P80_ASSIGNED_TO_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-5  " ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only" id="P80_REQUESTED_BY_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_REQUESTED_BY" id="P80_REQUESTED_BY_LABEL" class="t-Form-label">Requested By</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><input type="hidden" id="P80_REQUESTED_BY" name="P80_REQUESTED_BY" value="Manju"><input type="hidden" data-for="P80_REQUESTED_BY" value="WGDyVGT58il2yQ5Kq9rsSEEbgTbn5EEff8u1qdqdBVhC4n2eIVKHGeQE20XUhgc6LjqH96179gdE-xe4DNHKyg"><span id="P80_REQUESTED_BY_DISPLAY"  class="display_only&#x20;apex-item-display-only"  data-escape="true">Manju</span></div><span id="P80_REQUESTED_BY_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P80_EDM_ID" id="P80_EDM_ID" value=""></div>
+</div><div class="row ">
+<div class="col col-5  col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--select-list" id="P80_INSTRUCTION_TYPE_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_INSTRUCTION_TYPE" id="P80_INSTRUCTION_TYPE_LABEL" class="t-Form-label">Instruction Type</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><select  id="P80_INSTRUCTION_TYPE" name="P80_INSTRUCTION_TYPE" class="selectlist&#x20;apex-item-select" data-native-menu="false"  size="1" ><option value="" selected="selected" ></option>
+<option value="Overcharging&#x20;issues&#x20;-&#x20;Inspection&#x20;request">Overcharging issues - Inspection request</option>
+<option value="Id&#x20;activation&#x20;request&#x20;-&#x20;Inspection">Id activation request - Inspection</option>
+<option value="Others">Others</option>
+</select></div><span id="P80_INSTRUCTION_TYPE_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-5  " ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--file" id="P80_ATTACHMENT_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_ATTACHMENT" id="P80_ATTACHMENT_LABEL" class="t-Form-label">Attachment</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><a-file-upload  id="P80_ATTACHMENT" name="P80_ATTACHMENT"  upload-type="FILE" display-style="INLINE" size="60" label="Choose&#x20;File" description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here." max-file-size="1024" download-link="true"><input type="file"  id="P80_ATTACHMENT_input"  aria-labelledby="P80_ATTACHMENT_LABEL"  class="u-vh"  /><div  class="a-FileDrop&#x20;a-FileDrop--inline" >
+                    <div class="a-FileDrop-icon">
+                        <span  class="a-Icon&#x20;icon-file-browse"  aria-hidden="true">
+                        </span>
+                    </div> <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose File</span><span class="a-FileDrop-description">Select a file or drop one here.</span></div><div class="a-FileDrop-action"><span class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span></div></div></a-file-upload></div><span id="P80_ATTACHMENT_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P80_PRIORITY" id="P80_PRIORITY" value=""></div>
+</div><div class="row ">
+<div class="col col-5  col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--textarea" id="P80_SHORT_DESCRIPTION_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_SHORT_DESCRIPTION" id="P80_SHORT_DESCRIPTION_LABEL" class="t-Form-label">Short Description</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><div class="apex-item-group apex-item-group--textarea"><textarea name="P80_SHORT_DESCRIPTION" rows="4" cols="60" maxlength="100"  id="P80_SHORT_DESCRIPTION" class="textarea&#x20;apex-item-textarea"  data-resizable="true" ></textarea></div></div><span id="P80_SHORT_DESCRIPTION_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-5  " ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--textarea" id="P80_FULL_DESCRIPTION_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P80_FULL_DESCRIPTION" id="P80_FULL_DESCRIPTION_LABEL" class="t-Form-label">Full Description</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><div class="apex-item-group apex-item-group--textarea"><textarea name="P80_FULL_DESCRIPTION" rows="4" cols="60" maxlength="5000"  id="P80_FULL_DESCRIPTION" class="textarea&#x20;apex-item-textarea"  data-resizable="true" ></textarea></div></div><span id="P80_FULL_DESCRIPTION_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P80_EDM_NOTES" id="P80_EDM_NOTES" value=""><input type="hidden" name="P80_MIME_TYPE" id="P80_MIME_TYPE" value=""><input type="hidden" name="P80_FILE_NAME" id="P80_FILE_NAME" value=""><input type="hidden" name="P80_LAST_UPDATE" id="P80_LAST_UPDATE" value=""><input type="hidden" name="P80_CHARSET" id="P80_CHARSET" value=""><input type="hidden" name="P80_STATUS" id="P80_STATUS" value=""><input type="hidden" name="P80_CREATED_BY" id="P80_CREATED_BY" value=""><input type="hidden" name="P80_CREATED_DTTM" id="P80_CREATED_DTTM" value=""><input type="hidden" name="P80_UPDATED_BY" id="P80_UPDATED_BY" value=""><input type="hidden" name="P80_UPDATED_DTTM" id="P80_UPDATED_DTTM" value=""><input type="hidden" name="P80_REQUEST_STATUS" id="P80_REQUEST_STATUS" value=""><input type="hidden" name="P80_EDM_UPLOAD" id="P80_EDM_UPLOAD" value=""><input type="hidden" name="P80_EDM_FILE_NAME" id="P80_EDM_FILE_NAME" value=""><input type="hidden" name="P80_EDM_MIME_TYPE" id="P80_EDM_MIME_TYPE" value=""><input type="hidden" name="P80_EDM_LAST_UPDATE" id="P80_EDM_LAST_UPDATE" value=""><input type="hidden" name="P80_EDM_CHARSET" id="P80_EDM_CHARSET" value=""><input type="hidden" name="P80_PRODUCT_RATING" id="P80_PRODUCT_RATING" value=""><input type="hidden" name="P80_SHORT" id="P80_SHORT" value=""><input type="hidden" name="P80_EDM_SEC_COMMENTS" id="P80_EDM_SEC_COMMENTS" value=""></div>
+</div>
+</div>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"><button class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--warning&#x20;t-Button--iconLeft t-Button--hot"  onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome?session=114048261149373&#x27;);" type="button" id="B25954735732548119"><span class="t-Icon t-Icon--left fa&#x20;fa-ban&#x20;fa-anim-horizontal-shake" aria-hidden="true"></span><span class="t-Button-label">Cancel</span><span class="t-Icon t-Icon--right fa&#x20;fa-ban&#x20;fa-anim-horizontal-shake" aria-hidden="true"></span></button></div>
+    <div class="t-Region-buttons-right"><button class="t-Button t-Button--icon t-Button--success&#x20;t-Button--iconLeft t-Button--hot"  onclick="apex.submit({request:&#x27;CREATE&#x27;,validate:true});" type="button" id="B25956142863548116"><span class="t-Icon t-Icon--left fa&#x20;fa-save&#x20;fa-anim-flash" aria-hidden="true"></span><span class="t-Button-label">Save</span><span class="t-Icon t-Icon--right fa&#x20;fa-save&#x20;fa-anim-flash" aria-hidden="true"></span></button></div>
+   </div>
+ </div>
+</div>
+</div>
+</div><div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-TabsRegion t-TabsRegion-mod--simple apex-tabs-region"   id="R26023285989911836">
+  
+  <div class="t-TabsRegion-items"><div data-label="Open&#x20;Requests" id="SR_DOWNLOAD-BLOB"><div id="DOWNLOAD-BLOB"  role="region" aria-label="Open&#x20;Requests"  class="t-IRR-region ">
+    <div class="t-Region-orderBy"></div>
+    
+    <div id="DOWNLOAD-BLOB_ir" class="a-IRR-container"><div id="DOWNLOAD-BLOB_worksheet_region" class="a-IRR" aria-live="polite"><div id="DOWNLOAD-BLOB_single_row_view" class="a-IRR-singleRowView"></div><div id="DOWNLOAD-BLOB_full_view" class="a-IRR-fullView"><div id="DOWNLOAD-BLOB_actions_menu"></div><div id="DOWNLOAD-BLOB_column_search_drop" class="a-IRR-colSearch"></div><div id="DOWNLOAD-BLOB_toolbar" class="a-IRR-toolbar"><div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;Open&#x20;Requests" id="DOWNLOAD-BLOB_toolbar_controls" class="a-IRR-controls"><div class="a-IRR-controlGroup a-IRR-controlGroup--search"><div class="a-IRR-search"><input type="hidden" id="DOWNLOAD-BLOB_column_search_current_column" /><div class="a-IRR-colSelector"><button id="DOWNLOAD-BLOB_column_search_root" data-menu="DOWNLOAD-BLOB_column_search_drop" class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel" title="Select&#x20;columns&#x20;to&#x20;search" aria-label="Select&#x20;columns&#x20;to&#x20;search" type="button"><span class="a-Icon icon-search" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div><div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field" id="DOWNLOAD-BLOB_search_field" title="Search Report" type="search" size="30" maxlength="4000" value="" /></div><div class="a-IRR-searchButtonContainer"><button id="DOWNLOAD-BLOB_search_button" class="a-Button a-IRR-button a-IRR-button--search" type="button"  ><span>Go</span></button></div></div></div><div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div><div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden" id="DOWNLOAD-BLOB_row_select" value="50" /><div class="a-IRR-actions"><button id="DOWNLOAD-BLOB_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="DOWNLOAD-BLOB_actions_menu">Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div></div></div></div><div id="DOWNLOAD-BLOB_content" class="a-IRR-content "><div id="DOWNLOAD-BLOB_dialog_js" class="a-IRR-dialogBody" style="display:none;"></div><input type="hidden" id="DOWNLOAD-BLOB_worksheet_id" value="26019850264911802" />
+<input type="hidden" id="DOWNLOAD-BLOB_app_user" value="6380988375" />
+<input type="hidden" id="DOWNLOAD-BLOB_report_id" value="26044779516878910" />
+<input type="hidden" id="DOWNLOAD-BLOB_view_mode" value="REPORT" />
+<style nonce="d0_rywjlvqjN5z_pr6muqg" id="DOWNLOAD-BLOB_worksheet_css">
+</style>
+<div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Open&#x20;Requests" id="DOWNLOAD-BLOB_chart" class="a-IRR-chartView"></div><div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Open&#x20;Requests" id="DOWNLOAD-BLOB_group_by" class="a-IRR-groupByView"></div><div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Open&#x20;Requests" id="DOWNLOAD-BLOB_pivot" class="a-IRR-pivotView"></div><div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Open&#x20;Requests" id="DOWNLOAD-BLOB_data_panel" class="a-IRR-reportView"><div class="a-IRR-tableContainer"><table aria-label="Open&#x20;Requests,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report" class="a-IRR-table" id="26019850264911802">
+<tr><th class="a-IRR-header u-tC" id="C26019935702911803" ><span class="a-IRR-headerLabel">Request Number</span></th><th class="a-IRR-header u-tC" id="C26020030343911804" ><span class="a-IRR-headerLabel">District</span></th><th class="a-IRR-header u-tC" id="C26020166896911805" ><span class="a-IRR-headerLabel">Assigned To</span></th><th class="a-IRR-header u-tC" id="C26020323505911807" ><span class="a-IRR-headerLabel">Instruction Type</span></th><th class="a-IRR-header u-tC" id="C26020557749911809" ><span class="a-IRR-headerLabel">Short Description</span></th><th class="a-IRR-header u-tC" id="C26020639369911810" ><span class="a-IRR-headerLabel">Full Description</span></th><th class="a-IRR-header u-tC" id="C26020751248911811" ><span class="a-IRR-headerLabel">Edm Notes</span></th><th class="a-IRR-header u-tC" id="C26021340419911817" ><span class="a-IRR-headerLabel">Request Created Dttm</span></th><th class="a-IRR-header u-tC" id="C26021427740911818" ><span class="a-IRR-headerLabel">Requested By</span></th><th class="a-IRR-header u-tC" id="C26022038415911824" ><span class="a-IRR-headerLabel">Request Status</span></th><th class="a-IRR-header u-tC" id="DOWNLOAD-BLOB" ><span class="a-IRR-headerLabel">Attachment</span></th></tr>
+<tr ><td class=" u-tC" headers="C26019935702911803" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Tiruvannamalai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F6&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFATVM1037&#x5C;u002D01&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x5C;u003B.&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATVM1037&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-06&#x2F;0201</a></td><td class=" u-tC" headers="C26020030343911804" >Tiruvannamalai</td><td class=" u-tC" headers="C26020166896911805" >eDistrict Manager 1</td><td class=" u-tC" headers="C26020323505911807" >Id activation request - Inspection</td><td class=" u-tC" headers="C26020557749911809" >TNEFATVM1037-01</td><td class=" u-tC" headers="C26020639369911810" >TNEFATVM1037-01- ID activation request;. Kindly inspect the centre and share the report.</td><td class=" u-tC" headers="C26020751248911811" ></td><td class=" u-tC" headers="C26021340419911817" >06-12-2024 06:22 PM</td><td class=" u-tC" headers="C26021427740911818" >Mohan Raj</td><td class=" u-tC" headers="C26022038415911824" >New</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26019935702911803" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Tenkasi&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00202&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F10&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;ID&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Overcharging&#x5C;u0020issues&#x5C;u0020.&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020inspection&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATKS175&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-10&#x2F;0241</a></td><td class=" u-tC" headers="C26020030343911804" >Tenkasi</td><td class=" u-tC" headers="C26020166896911805" >eDistrict Manager 2</td><td class=" u-tC" headers="C26020323505911807" >Id activation request - Inspection</td><td class=" u-tC" headers="C26020557749911809" >TNEFATKS175-01</td><td class=" u-tC" headers="C26020639369911810" >ID activation request - Overcharging issues . Kindly inspect the centre and share the inspection report.</td><td class=" u-tC" headers="C26020751248911811" ></td><td class=" u-tC" headers="C26021340419911817" >10-12-2024 03:32 PM</td><td class=" u-tC" headers="C26021427740911818" >Mohan Raj</td><td class=" u-tC" headers="C26022038415911824" >New</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26019935702911803" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Tiruvannamalai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;4&#x5C;u002F17&#x5C;u002F2025&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;Zero&#x5C;u0020transaction&#x5C;u0020hence&#x5C;u0020ID&#x5C;u0020blocked,&#x5C;u0020user&#x5C;u0020requested&#x5C;u0020to&#x5C;u0020unblock&#x5C;u0020it.&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020report&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATVM1119&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2025-04-17&#x2F;0342</a></td><td class=" u-tC" headers="C26020030343911804" >Tiruvannamalai</td><td class=" u-tC" headers="C26020166896911805" >eDistrict Manager 1</td><td class=" u-tC" headers="C26020323505911807" >Id activation request - Inspection</td><td class=" u-tC" headers="C26020557749911809" >TNEFATVM1119-01</td><td class=" u-tC" headers="C26020639369911810" >Zero transaction hence ID blocked, user requested to unblock it. Kindly inspect and share the report</td><td class=" u-tC" headers="C26020751248911811" ></td><td class=" u-tC" headers="C26021340419911817" >17-04-2025 12:59 PM</td><td class=" u-tC" headers="C26021427740911818" >Mohan Raj</td><td class=" u-tC" headers="C26022038415911824" >New</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26019935702911803" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Nagapattinam&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F2&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFANGP123&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020Kindly&#x5C;u0020&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020center&#x5C;u0020and&#x5C;u0020share&#x5C;u0020report.&#x5C;u0020Operator&#x5C;u0020raised&#x5C;u0020an&#x5C;u0020request&#x5C;u0020to&#x5C;u0020activate&#x5C;u0020the&#x5C;u0020zero&#x5C;u0020transaction&#x5C;u0020IDs.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFANGP123&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020Kindly&#x5C;u0020&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020center&#x5C;u0020and&#x5C;u0020share&#x5C;u0020report.&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-02&#x2F;0101</a></td><td class=" u-tC" headers="C26020030343911804" >Nagapattinam</td><td class=" u-tC" headers="C26020166896911805" >eDistrict Manager 1</td><td class=" u-tC" headers="C26020323505911807" >Id activation request - Inspection</td><td class=" u-tC" headers="C26020557749911809" >TNEFANGP123-01  - Kindly  inspect the center and share report.</td><td class=" u-tC" headers="C26020639369911810" >TNEFANGP123-01  - Kindly  inspect the center and share report. Operator raised an request to activate the zero transaction IDs.</td><td class=" u-tC" headers="C26020751248911811" ></td><td class=" u-tC" headers="C26021340419911817" >02-12-2024 12:27 PM</td><td class=" u-tC" headers="C26021427740911818" >Mohan Raj</td><td class=" u-tC" headers="C26022038415911824" >New</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26019935702911803" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Tiruvannamalai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F6&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;ID&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020report.&#x5C;u0020ID&#x5C;u0020blocked&#x5C;u0020due&#x5C;u0020to&#x5C;u0020zero&#x5C;u0020transactions&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATVM1037&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-06&#x2F;0181</a></td><td class=" u-tC" headers="C26020030343911804" >Tiruvannamalai</td><td class=" u-tC" headers="C26020166896911805" >eDistrict Manager 1</td><td class=" u-tC" headers="C26020323505911807" >Id activation request - Inspection</td><td class=" u-tC" headers="C26020557749911809" >TNEFATVM1037-01</td><td class=" u-tC" headers="C26020639369911810" >ID activation request - Kindly inspect the centre and share report. ID blocked due to zero transactions</td><td class=" u-tC" headers="C26020751248911811" ></td><td class=" u-tC" headers="C26021340419911817" >06-12-2024 12:43 PM</td><td class=" u-tC" headers="C26021427740911818" >Mohan Raj</td><td class=" u-tC" headers="C26022038415911824" >New</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26019935702911803" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Tiruvannamalai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;2&#x5C;u002F12&#x5C;u002F2025&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFATVM1035&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u0020,&#x5C;u0020Kindly&#x5C;u0020Inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020inspection&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATVM1035&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x27;&#x29;&#x3B;" >INS&#x2F;2025-02-12&#x2F;0301</a></td><td class=" u-tC" headers="C26020030343911804" >Tiruvannamalai</td><td class=" u-tC" headers="C26020166896911805" >eDistrict Manager 1</td><td class=" u-tC" headers="C26020323505911807" >Id activation request - Inspection</td><td class=" u-tC" headers="C26020557749911809" >TNEFATVM1035-01   - ID activation request</td><td class=" u-tC" headers="C26020639369911810" >TNEFATVM1035-01   - ID activation request  , Kindly Inspect the centre and share inspection report.</td><td class=" u-tC" headers="C26020751248911811" ></td><td class=" u-tC" headers="C26021340419911817" >12-02-2025 04:49 PM</td><td class=" u-tC" headers="C26021427740911818" >Mohan Raj</td><td class=" u-tC" headers="C26022038415911824" >New</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26019935702911803" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Pudukkottai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F9&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFAPDK660&#x5C;u002D01&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020.&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020inspection&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFAPDK660&#x5C;u002D01&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-09&#x2F;0221</a></td><td class=" u-tC" headers="C26020030343911804" >Pudukkottai</td><td class=" u-tC" headers="C26020166896911805" >eDistrict Manager 1</td><td class=" u-tC" headers="C26020323505911807" >Id activation request - Inspection</td><td class=" u-tC" headers="C26020557749911809" >TNEFAPDK660-01 - ID activation request</td><td class=" u-tC" headers="C26020639369911810" >TNEFAPDK660-01 - ID activation request . Kindly inspect and share the inspection report.</td><td class=" u-tC" headers="C26020751248911811" ></td><td class=" u-tC" headers="C26021340419911817" >09-12-2024 01:16 PM</td><td class=" u-tC" headers="C26021427740911818" >Mohan Raj</td><td class=" u-tC" headers="C26022038415911824" >New</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr></table></div><div role="region" aria-label="Pagination&#x20;of&#x20;Open&#x20;Requests" class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom"><ul class="a-IRR-pagination"><li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li><li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label">                   1 -                    7</span></li><li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li></ul></div></div></div></div></div><div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget" id="DOWNLOAD-BLOB_sort_widget" style="display:none;"><h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column Actions</h1><ul role="toolbar" class="a-IRR-sortWidget-actions" id="DOWNLOAD-BLOB_sort_widget_actions"><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_up"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_down"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_hide"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_break"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_help"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help" aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true" class="a-Icon icon-irr-help"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="DOWNLOAD-BLOB_sort_widget_action_computation"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute" aria-label="Compute" data-option="computation"><span aria-hidden="true" class="a-Icon icon-irr-calculator"></span></button></li></ul><div role="region" aria-label="Help" class="a-IRR-sortWidget-help" id="DOWNLOAD-BLOB_sort_widget_help"></div><div role="search" class="a-IRR-sortWidget-search" id="DOWNLOAD-BLOB_sort_widget_search"><label for="DOWNLOAD-BLOB_sort_widget_search_field"><span aria-hidden="true" class="a-IRR-sortWidget-searchLabel"></span><span class="u-vh">Search</span></label><input id="DOWNLOAD-BLOB_sort_widget_search_field" class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." /><div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows" id="DOWNLOAD-BLOB_sort_widget_rows"></div></div></div></div>
+    
+    
+</div>
+</div><div data-label="Closed&#x20;Requests" id="SR_R26023382305911837"><div id="R26023382305911837"  role="region" aria-label="Closed&#x20;Requests"  class="t-IRR-region ">
+    <div class="t-Region-orderBy"></div>
+    
+    <div id="R26023382305911837_ir" class="a-IRR-container"><div id="R26023382305911837_worksheet_region" class="a-IRR" aria-live="polite"><div id="R26023382305911837_single_row_view" class="a-IRR-singleRowView"></div><div id="R26023382305911837_full_view" class="a-IRR-fullView"><div id="R26023382305911837_actions_menu"></div><div id="R26023382305911837_column_search_drop" class="a-IRR-colSearch"></div><div id="R26023382305911837_toolbar" class="a-IRR-toolbar"><div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;Closed&#x20;Requests" id="R26023382305911837_toolbar_controls" class="a-IRR-controls"><div class="a-IRR-controlGroup a-IRR-controlGroup--search"><div class="a-IRR-search"><input type="hidden" id="R26023382305911837_column_search_current_column" /><div class="a-IRR-colSelector"><button id="R26023382305911837_column_search_root" data-menu="R26023382305911837_column_search_drop" class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel" title="Select&#x20;columns&#x20;to&#x20;search" aria-label="Select&#x20;columns&#x20;to&#x20;search" type="button"><span class="a-Icon icon-search" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div><div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field" id="R26023382305911837_search_field" title="Search Report" type="search" size="30" maxlength="4000" value="" /></div><div class="a-IRR-searchButtonContainer"><button id="R26023382305911837_search_button" class="a-Button a-IRR-button a-IRR-button--search" type="button"  ><span>Go</span></button></div></div></div><div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div><div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden" id="R26023382305911837_row_select" value="50" /><div class="a-IRR-actions"><button id="R26023382305911837_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="R26023382305911837_actions_menu">Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div></div></div></div><div id="R26023382305911837_content" class="a-IRR-content "><div id="R26023382305911837_dialog_js" class="a-IRR-dialogBody" style="display:none;"></div><input type="hidden" id="R26023382305911837_worksheet_id" value="26023441474911838" />
+<input type="hidden" id="R26023382305911837_app_user" value="6380988375" />
+<input type="hidden" id="R26023382305911837_report_id" value="26266052790497752" />
+<input type="hidden" id="R26023382305911837_view_mode" value="REPORT" />
+<style nonce="d0_rywjlvqjN5z_pr6muqg" id="R26023382305911837_worksheet_css">
+</style>
+<div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Closed&#x20;Requests" id="R26023382305911837_chart" class="a-IRR-chartView"></div><div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Closed&#x20;Requests" id="R26023382305911837_group_by" class="a-IRR-groupByView"></div><div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Closed&#x20;Requests" id="R26023382305911837_pivot" class="a-IRR-pivotView"></div><div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Closed&#x20;Requests" id="R26023382305911837_data_panel" class="a-IRR-reportView"><div class="a-IRR-tableContainer"><table aria-label="Closed&#x20;Requests,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report" class="a-IRR-table" id="26023441474911838">
+<tr><th class="a-IRR-header u-tC" id="C26023551636911839" ><span class="a-IRR-headerLabel">Request Number</span></th><th class="a-IRR-header u-tC" id="C26023657750911840" ><span class="a-IRR-headerLabel">District</span></th><th class="a-IRR-header u-tC" id="C26023753214911841" ><span class="a-IRR-headerLabel">Assigned To</span></th><th class="a-IRR-header u-tC" id="C26023933130911843" ><span class="a-IRR-headerLabel">Instruction Type</span></th><th class="a-IRR-header u-tC" id="C26024131668911845" ><span class="a-IRR-headerLabel">Short Description</span></th><th class="a-IRR-header u-tC" id="C26024215709911846" ><span class="a-IRR-headerLabel">Full Description</span></th><th class="a-IRR-header u-tC" id="C26024347660911847" ><span class="a-IRR-headerLabel">Edm Notes</span></th><th class="a-IRR-header u-tC" id="C26250954301503702" ><span class="a-IRR-headerLabel">Request Created Dttm</span></th><th class="a-IRR-header u-tC" id="C26251033425503703" ><span class="a-IRR-headerLabel">Requested By</span></th><th class="a-IRR-header u-tC" id="C26251692531503709" ><span class="a-IRR-headerLabel">Request Status</span></th><th class="a-IRR-header u-tC" id="DOWNLOAD-BLOB" ><span class="a-IRR-headerLabel">Attachment</span></th></tr>
+<tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Ariyalur&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;1&#x5C;u002F25&#x5C;u002F2025&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFAARI0364&#x5C;u002D01&#x5C;u0020and&#x5C;u0020TNEFAARI173&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020Requested&#x5C;u0020to&#x5C;u0020activate&#x5C;u0020the&#x5C;u0020IDs.&#x5C;u0020Inspect&#x5C;u0020the&#x5C;u0020centers&#x5C;u0020and&#x5C;u0020share&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFAARI0364&#x5C;u002D01&#x5C;u0020and&#x5C;u0020TNEFAARI173&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2025-01-25&#x2F;0281</a></td><td class=" u-tC" headers="C26023657750911840" >Ariyalur</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNEFAARI0364-01 and TNEFAARI173-01</td><td class=" u-tC" headers="C26024215709911846" >TNEFAARI0364-01 and TNEFAARI173-01  - Requested to activate the IDs. Inspect the centers and share report.</td><td class=" u-tC" headers="C26024347660911847" >TNEFAARI173-01 eSevai center is inspected. It is having required IT infra. Kindly activate. 
+TNEFAARI0364-01 eSevai center is closed during 2 visits Dont activate it.</td><td class=" u-tC" headers="C26250954301503702" >25-01-2025 03:46 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Chennai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00202&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;2&#x5C;u002F13&#x5C;u002F2025&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;Kindly&#x5C;u0020Inspect&#x5C;u0020the&#x5C;u0020center&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020inspection&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNTAFCHN290&#x5C;u002D01&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x27;&#x29;&#x3B;" >INS&#x2F;2025-02-13&#x2F;0321</a></td><td class=" u-tC" headers="C26023657750911840" >Chennai</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 2</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNTAFCHN290-01 - ID activation request</td><td class=" u-tC" headers="C26024215709911846" >Kindly Inspect the center and share the inspection report.</td><td class=" u-tC" headers="C26024347660911847" >Centre inspected and may be activated. Report attached for your reference.</td><td class=" u-tC" headers="C26250954301503702" >13-02-2025 12:53 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Viluppuram&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;4&#x5C;u002F17&#x5C;u002F2025&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;Zero&#x5C;u0020transaction&#x5C;u0020hence&#x5C;u0020ID&#x5C;u0020blocked,&#x5C;u0020user&#x5C;u0020requested&#x5C;u0020to&#x5C;u0020unblock&#x5C;u0020it.&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020report&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATVM1119&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2025-04-17&#x2F;0341</a></td><td class=" u-tC" headers="C26023657750911840" >Viluppuram</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNEFATVM1119-01</td><td class=" u-tC" headers="C26024215709911846" >Zero transaction hence ID blocked, user requested to unblock it. Kindly inspect and share the report</td><td class=" u-tC" headers="C26024347660911847" >This is belongs to Thiruvanamalai District. Pls transfer to concerned district</td><td class=" u-tC" headers="C26250954301503702" >17-04-2025 12:16 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Tiruppur&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F4&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFATPR660&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request.&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020us&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATPR660&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-04&#x2F;0161</a></td><td class=" u-tC" headers="C26023657750911840" >Tiruppur</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNEFATPR660-01</td><td class=" u-tC" headers="C26024215709911846" >TNEFATPR660-01  - ID activation request. Kindly inspect the centre and share us report.</td><td class=" u-tC" headers="C26024347660911847" >SBI KIOSK BANKING ESEVAI HAS ALL NECESSARY INFRASTRUCTER TO RUN eSevai center. Hence Recommended</td><td class=" u-tC" headers="C26250954301503702" >04-12-2024 07:27 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Mayiladuthurai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F4&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFAMYD061&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020blocked&#x5C;u0020due&#x5C;u0020to&#x5C;u0020zero&#x5C;u0020transactions&#x5C;u0020issues,&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFAMYD061&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-04&#x2F;0141</a></td><td class=" u-tC" headers="C26023657750911840" >Mayiladuthurai</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNEFAMYD061-01</td><td class=" u-tC" headers="C26024215709911846" >TNEFAMYD061-01  - ID blocked due to zero transactions issues, Kindly inspect the centre and share report.</td><td class=" u-tC" headers="C26024347660911847" >Please find attached photos of the eSevai center. The center is fully equipped and operator to provide eSevai services. It is recommended to unlock your eSevai ID.</td><td class=" u-tC" headers="C26250954301503702" >04-12-2024 03:03 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Mayiladuthurai&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F9&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFAMYD0373&#x5C;u002D01&#x5C;u0020&#x5C;u002D&#x5C;u0020SIVARANJANI&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020&#x5C;u0020and&#x5C;u0020share&#x5C;u0020&#x5C;u0020us&#x5C;u0020the&#x5C;u0020inspection&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFAMYD0373&#x5C;u002D01&#x5C;u0020&#x5C;u002D&#x5C;u0020SIVARANJANI&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-09&#x2F;0222</a></td><td class=" u-tC" headers="C26023657750911840" >Mayiladuthurai</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNEFAMYD0373-01 - SIVARANJANI - ID activation request</td><td class=" u-tC" headers="C26024215709911846" >TNEFAMYD0373-01 - SIVARANJANI - ID activation request  - Kindly inspect the centre  and share  us the inspection report.</td><td class=" u-tC" headers="C26024347660911847" >Please find attached photos of the eSevai center. The center is fully equipped and operator to provide eSevai services. It is recommended to unlock your eSevai ID.</td><td class=" u-tC" headers="C26250954301503702" >09-12-2024 01:21 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Salem&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F13&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNVLESLM090&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020ID&#x5C;u0020activation&#x5C;u0020request.&#x5C;u0020We&#x5C;u0020kindly&#x5C;u0020request&#x5C;u0020&#x5C;u0020you&#x5C;u0020to&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020report.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNVLESLM090&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-13&#x2F;0261</a></td><td class=" u-tC" headers="C26023657750911840" >Salem</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNVLESLM090-01</td><td class=" u-tC" headers="C26024215709911846" >TNVLESLM090-01  - ID activation request. We kindly request  you to inspect the centre and share the report.</td><td class=" u-tC" headers="C26024347660911847" ></td><td class=" u-tC" headers="C26250954301503702" >13-12-2024 04:48 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Tiruvallur&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;11&#x5C;u002F27&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;TNEFATLR294&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x5C;u0020request&#x5C;u0020&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020Kindly&#x5C;u0020share&#x5C;u0020INSPection&#x5C;u0020report&#x5C;u0020for&#x5C;u0020the&#x5C;u0020below&#x5C;u0020ID&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFATLR294&#x5C;u002D01&#x5C;u0020&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x5C;u0020request&#x27;&#x29;&#x3B;" >INS&#x2F;2024-11-27&#x2F;0081</a></td><td class=" u-tC" headers="C26023657750911840" >Tiruvallur</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNEFATLR294-01  - Inspection request</td><td class=" u-tC" headers="C26024215709911846" >TNEFATLR294-01  - Inspection request   - Kindly share INSPection report for the below ID</td><td class=" u-tC" headers="C26024347660911847" >After Wallet recharge problem, the ID has been blocked.Currently they doing DTP and Xerox works.center is interior to the street and space was very congested, they want to move forward to the front side of the building which is easier to public reach out.Recommended for Activation of eSevai works.</td><td class=" u-tC" headers="C26250954301503702" >27-11-2024 03:05 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr><tr ><td class=" u-tC" headers="C26023551636911839" ><a href="javascript&#x3A;&#x24;s&#x28;&#x27;P80_DISTRICT&#x27;,&#x27;Viluppuram&#x27;&#x29;,&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_ASSIGNED_TO&#x27;,&#x27;eDistrict&#x5C;u0020Manager&#x5C;u00201&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_INSTRUCTION_TYPE&#x27;,&#x27;Id&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020&#x5C;u002D&#x5C;u0020Inspection&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_CREATED_DTTM&#x27;,&#x27;12&#x5C;u002F3&#x5C;u002F2024&#x27;&#x29;,&#x20;&#x9;&#x9;&#x20;&#x20;&#x20;&#x24;s&#x28;&#x27;P80_REQUESTED_BY&#x27;,&#x27;Mohan&#x5C;u0020Raj&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_ATTACHMENT&#x27;,&#x27;&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_FULL_DESCRIPTION&#x27;,&#x27;ID&#x5C;u0020&#x5C;u0020activation&#x5C;u0020request&#x5C;u0020from&#x5C;u0020user&#x5C;u0020.&#x5C;u0020Kindly&#x5C;u0020inspect&#x5C;u0020the&#x5C;u0020centre&#x5C;u0020and&#x5C;u0020share&#x5C;u0020the&#x5C;u0020report&#x5C;u0020as&#x5C;u0020soon&#x5C;u0020as&#x5C;u0020possible.&#x27;&#x29;,&#x20;&#x24;s&#x28;&#x27;P80_SHORT_DESCRIPTION&#x27;,&#x27;TNEFAVPM0681&#x5C;u002D01&#x27;&#x29;&#x3B;" >INS&#x2F;2024-12-03&#x2F;0121</a></td><td class=" u-tC" headers="C26023657750911840" >Viluppuram</td><td class=" u-tC" headers="C26023753214911841" >eDistrict Manager 1</td><td class=" u-tC" headers="C26023933130911843" >Id activation request - Inspection</td><td class=" u-tC" headers="C26024131668911845" >TNEFAVPM0681-01</td><td class=" u-tC" headers="C26024215709911846" >ID  activation request from user . Kindly inspect the centre and share the report as soon as possible.</td><td class=" u-tC" headers="C26024347660911847" >Inspection Report attached. No issues CSC is active sir. Pls unblock.</td><td class=" u-tC" headers="C26250954301503702" >03-12-2024 05:01 PM</td><td class=" u-tC" headers="C26251033425503703" >Mohan Raj</td><td class=" u-tC" headers="C26251692531503709" >Closed</td><td class=" u-tC" headers="DOWNLOAD-BLOB" ></td></tr></table></div><div role="region" aria-label="Pagination&#x20;of&#x20;Closed&#x20;Requests" class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom"><ul class="a-IRR-pagination"><li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li><li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label">                   1 -                    9</span></li><li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li></ul></div></div></div></div></div><div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget" id="R26023382305911837_sort_widget" style="display:none;"><h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column Actions</h1><ul role="toolbar" class="a-IRR-sortWidget-actions" id="R26023382305911837_sort_widget_actions"><li role="none" class="a-IRR-sortWidget-actions-item" id="R26023382305911837_sort_widget_action_up"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R26023382305911837_sort_widget_action_down"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R26023382305911837_sort_widget_action_hide"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R26023382305911837_sort_widget_action_break"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R26023382305911837_sort_widget_action_help"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help" aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true" class="a-Icon icon-irr-help"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R26023382305911837_sort_widget_action_computation"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute" aria-label="Compute" data-option="computation"><span aria-hidden="true" class="a-Icon icon-irr-calculator"></span></button></li></ul><div role="region" aria-label="Help" class="a-IRR-sortWidget-help" id="R26023382305911837_sort_widget_help"></div><div role="search" class="a-IRR-sortWidget-search" id="R26023382305911837_sort_widget_search"><label for="R26023382305911837_sort_widget_search_field"><span aria-hidden="true" class="a-IRR-sortWidget-searchLabel"></span><span class="u-vh">Search</span></label><input id="R26023382305911837_sort_widget_search_field" class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." /><div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows" id="R26023382305911837_sort_widget_rows"></div></div></div></div>
+    
+    
+</div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer" id="t_Footer" role="contentinfo">
+        <div class="t-Footer-body">
+          <div class="t-Footer-content"></div>
+          <div class="t-Footer-apex">
+            <div class="t-Footer-version"> </div>
+            <div class="t-Footer-customize"></div>
+            
+          </div>
+        </div>
+        <div class="t-Footer-top">
+          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDgwX1JFUVVFU1RfQ1JFQVRFRF9EVFRNOlA4MF9SRVFVRVNURURfQlk&#x2F;RNuVDuivwigBV0eQxVPW9hd6VNG9LYUalpc_4mM_AdFtTWxh7sz3kLlI4QsPxISC1q7yt6Mh5w7wXluRRe0tPg" /></form>
+
+
+<script nonce="d0_rywjlvqjN5z_pr6muqg">
+var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
+var apex = {env: {APP_USER: "6380988375",APP_ID: "1111",APP_PAGE_ID: "80",APP_SESSION: "114048261149373",APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F",WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.2.0",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 21.2,NONCE: "d0_rywjlvqjN5z_pr6muqg"},
+libVersions:{cropperJs:"1.6.2",domPurify:"3.1.6",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.29.0",oraclejet:"17.0.2",turndown:"7.2.0",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
+</script>
+
+ <script src="../assets/js/desktop_all.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/add.min.js"></script>
+    <script src="../assets/js/widget.treeView.min.js"></script>
+    <script src="../assets/js/widget.interactiveReport.min.js"></script>
+    <script src="../assets/js/widget.iconList.min.js"></script>
+    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+    <script src="../assets/js/widget.stickyWidget.min.js"></script>
+    <script src="../assets/js/item.Colorpicker.min.js"></script>
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+    <script src="../assets/js/jetCommonBundle.min.js"></script>
+    <script src="../assets/js/chartBundle.min.js"></script>
+
+
+<script nonce="d0_rywjlvqjN5z_pr6muqg">
+apex.session.initTimeouts(180,{"idle_time_ms":3596000,"life_time_ms":26786000,"max_idle_time_ms":3600000},'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome','\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+apex.jQuery( function() {
+apex.page.init( this, function() {
+try {
+(function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+(function(){apex.widget.selectList("#P80_DISTRICT",{"nullValue":"","ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MjU5MzMzNTU5NDY1NDgxMzc\u002FClfptyEO6sT43PQW9zR8fdfr00zMQUYyH8hp1QTMsux0XzNtfEB6moDOoY2__TZbgLpYqETKUJJzzPNfD1TLFw"});})();
+(function(){apex.widget.selectList("#P80_ASSIGNED_TO",{"nullValue":"","dependingOnSelector":"#P80_DISTRICT","optimizeRefresh":true,"pageItemsToSubmit":"#P80_DISTRICT","ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MjU5MzM3MDgzNTM1NDgxMzU\u002FiOq-FIRNXFmXP-rm--M1LhpY__FnMOEs27F64_BMEqxE-jfunq1zggo8No_KogMz057722V-hweRvH41m4Y7lg"});})();
+(function(){apex.widget.selectList("#P80_INSTRUCTION_TYPE",{"nullValue":"","ajaxIdentifier":"SVRFTSBUWVBFfjUxMjB-MjU5MzQ1NDA4MjM1NDgxMzU\u002FkVcFQD6K-0WJC6ReeY7kmVoYmHVeoyBeiuC0BEFWYMBnY_-qxUDZO915sJMyKNQR8M-HTsYQawufhTqecYvTNg"});})();
+(function(){apex.jQuery('#DOWNLOAD\u002DBLOB_ir').interactiveReport({"regionId":"DOWNLOAD-BLOB","maxRowCount":"1000000","helpLink":"wwv_flow_utilities.show_ir_help?p_app_id=1111\u0026p_worksheet_id=26019850264911802\u0026p_lang=en","downloadContentDisposition":"ATTACHMENT","lazyLoading":false,"ajaxIdentifier":"UkVHSU9OIFRZUEV-fjI2MDE5NzU2MDU5OTExODAx\u002FuqkNUvyIKMk-POdJPNAmrJlIMy-vgc6j3RG3UM0bPlZg3dd28hT8xWr501kr92I027YTYXp_TAfHHmnHMBaC1w"});})();
+(function(){apex.jQuery('#R26023382305911837_ir').interactiveReport({"regionId":"R26023382305911837","maxRowCount":"1000000","helpLink":"wwv_flow_utilities.show_ir_help?p_app_id=1111\u0026p_worksheet_id=26023441474911838\u0026p_lang=en","downloadContentDisposition":"ATTACHMENT","lazyLoading":false,"ajaxIdentifier":"UkVHSU9OIFRZUEV-fjI2MDIzMzgyMzA1OTExODM3\u002FgOWhk8RYrEb1csJzjogK31mDJvPMqyg3dldcO9f1XVuavjj2gjcfzzsIKMM_-yPP0R-RlZwwUZlBa8h1kTcK0w"});})();
+} catch(e) {apex.debug.error(e)};
+apex.item.waitForDelayLoadItems().done(function() {
+try {
+apex.theme42.initializePage.noSideCol();
+var anchorElements=document.querySelectorAll('td.u-tC[headers=DOWNLOAD-BLOB] a');
+
+    Array.from(anchorElements).forEach(function(elem){
+        elem.setAttribute('target','_blank');
+    })
+	    
+apex.page.warnOnUnsavedChanges();
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+};
+});
+});
+});apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' } );
+</script>
+
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

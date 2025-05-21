@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+<html class="no-js  page-86 app-E-DISTRICT-MANAGER-APPLICATION" lang="en" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Helpdesk Ticket Report</title>
+ <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
+    <link rel="icon" href="../assets/img/app-icon-32.png">
+    <style type="text/css">
+      @font-face {
+      font-family: 'FontApex';
+      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
+      url('../font/apex-5-icon-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;  
+      } 
+      @font-face { 
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Small.woff') format('woff'),
+      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      } 
+      .t-fht-thead {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      visibility: visible !important;
+      position: static !important;
+      }
+      .a-IRR-table tbody th {
+      position: static !important;
+      }
+      /* Disable APEX's fixed/sticky header */
+      .a-IRR-tableContainer .a-IRR-table tbody th {
+      position: static !important;
+      top: auto !important;
+      z-index: 0 !important;
+      }
+      /* Ensure whole table scrolls together */
+      .a-IRR-tableContainer {
+      overflow-x: auto !important;
+      overflow-y: auto !important;
+      max-height: 500px; /* Adjust height as needed */
+      }
+      .a-IRR-table {
+      table-layout: auto !important;
+      width: max-content !important;
+      display: table !important;
+      white-space: nowrap !important;
+      }
+    </style>
+    <style>
+      .t-fht-thead.js-stickyTableHeader {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      position: static !important;
+      visibility: visible !important;
+      }
+    </style>
+</head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+<form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/helpdesk-ticket-report/116639350395160" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  autocomplete="off">
+<input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="86" id="pFlowStepId" /><input type="hidden" name="p_instance" value="116639350395160" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="MjE0NTgwNzQyMDAyMDc4NTE5Mzg3NTA1NTQ3NzQ0OTE3MDc0Nzk0&#x2F;LcfA-YUEHmeubcjXDjq59kD3KdkX3kQFk1VM35SxGQkg0X4U78jvjbcTULYWdmBMq5IkNXiQrm8KrJI2p0RSUw" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="e-district-manager-application&#x2F;helpdesk-ticket-report&#x2F;116639350395160" id="pContext" /><input type="hidden" value="214580742002078519387505547744917074794" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+     <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+     <P  class="t-Header-logo-link">TNEGA</P>
+      
+    </div>
+    <div class="t-Header-navBar">
+      <div class="t-Header-navBar--start"></div>
+      <div class="t-Header-navBar--center" style='color:black'><ul class="t-NavigationBar " id="8792244222964376"><li class="t-NavigationBar-item ">
+  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
+      <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" ></span><span class="t-Button-label">Hello Ashwin !
+</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414"><ul><li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=1111&p_session_id=116639350395160" title="" target="">Sign Out</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D116639350395160%26dialogCs%3DXw9EasBbPRAs5LrBzjMX1Tpb4rE0BN6JjNq4eikJi95U9Jw5IdRHvDzvfQa-ct90R_RtsolO9guLKwZTmjuSBA&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">Change Password</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="/ords/r/edmdev/e-district-manager-application/user_admin?session=116639350395160" title="" target="">User Admin</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D116639350395160%26dialogCs%3D-H9J6ftvJgxAxeAlQfJzoMAWsfH4tTA9OILkur9ucXeUrsa8GLQcI3aMLaEI9favO5A_3RhrooCZxpplXrsS2g&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">My Profile</a></li></ul></div></li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+    <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label">Last Logged in: 04-05-2025 04:04 PM</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item is-active " aria-current="page">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="/ords/r/edmdev/e-district-manager-application/home?session=116639350395160" title="" target="">
+    <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true" ></span><span class="t-Button-label"> </span><span class="t-Button-badge">0</span>
+  </a>
+</li></ul></div>
+      <div class="t-Header-navBar--end" ></div>
+    </div>
+  </div>
+  <div class="t-Header-nav"></div>
+</header>
+  <div class="t-Body">
+<div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+  <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic" id="t_TreeNav" data-id="86_tree" aria-label="Main Navigation">
+    <ul>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=116639350395160&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w" title="" style="display: none" target="">Home</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-home"></span>
+      <span class="a-TreeView-label">Home</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/all-request5?session=116639350395160" title="" style="display: none" target="">All Request</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">All Request</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/all-requests-with-re-assaign-option?session=116639350395160" title="" target="">All requests with Re-assaign Option</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-user-headset" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/new-request?p7_new=0&session=116639350395160&cs=110BX6RMm3yB5UIdQpCi-G5IFDb-mDxd9KP8m4AyaGhFOf22_34EnYHcmZZSc8xWEf4_d5vM9pqBG-FOCQqxuNA" title="" style="display: none" target="">New Request [ 218 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-user-headset"></span>
+      <span class="a-TreeView-label">New Request [ 218 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-clock" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/progress-request?session=116639350395160" title="" style="display: none" target="">In-Progress Request [ 79 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-folder-clock"></span>
+      <span class="a-TreeView-label">In-Progress Request [ 79 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-bookmark" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/resolved-request2?session=116639350395160" title="" style="display: none" target="">Resolved Request [ 4089 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-folder-bookmark"></span>
+      <span class="a-TreeView-label">Resolved Request [ 4089 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/reopened-request?session=116639350395160" title="" style="display: none" target="">Reopened Request [ 56 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Reopened Request [ 56 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-check" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/closed-request?session=116639350395160" title="" style="display: none" target="">Closed Request [ 1143]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-folder-check"></span>
+      <span class="a-TreeView-label">Closed Request [ 1143]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-exchange" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/reassigned-requests?session=116639350395160" title="" style="display: none" target="">Reassigned Requests</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-exchange"></span>
+      <span class="a-TreeView-label">Reassigned Requests</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-server-user" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/operators-details?session=116639350395160" title="" style="display: none" target="">Operators Details</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-server-user"></span>
+      <span class="a-TreeView-label">Operators Details</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/dairy-for-edm-inspection-report?session=116639350395160" title="" style="display: none" target="">Dairy for EDM Inspection Report</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg"></span>
+      <span class="a-TreeView-label">Dairy for EDM Inspection Report</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-forms" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/edm-instruction-request?session=116639350395160" title="" style="display: none" target="">EDM Instruction Request</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-forms"></span>
+      <span class="a-TreeView-label">EDM Instruction Request</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/ticket-updates?session=116639350395160" title="" style="display: none" target="">Ticket Updates</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Ticket Updates</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-updates?session=116639350395160" title="" style="display: none" target="">Helpdesk Ticket Updates</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Helpdesk Ticket Updates</span>
+    </div>
+  </div>
+</li><li data-current="true" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="" title="" style="display: none" target="">Helpdesk Ticket Report [ 2060 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Helpdesk Ticket Report [ 2060 ]</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-report?session=116639350395160" title="" target="">Helpdesk Instruction Open Report [ 1246 ]</a></li><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-in-progress-report?session=116639350395160" title="" target="">Helpdesk Instructions In-Progress Report [ 18 ]</a></li><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-closed-report?session=116639350395160" title="" target="">Helpdesk Instructions Closed Report [ 796 ]</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-form?session=116639350395160" title="" style="display: none" target="">eSevai Operator Change Request Form</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-file"></span>
+      <span class="a-TreeView-label">eSevai Operator Change Request Form</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-report?session=116639350395160" title="" style="display: none" target="">eSevai Operator Change Request Report</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">eSevai Operator Change Request Report</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/closed-operator-change-report?session=116639350395160" title="" style="display: none" target="">Approved&#x2F;Rejected Operator Change Report [ 620]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">Approved&#x2F;Rejected Operator Change Report [ 620]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/public-petitions-report?session=116639350395160" title="" style="display: none" target="">Public Petitions [ 55]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">Public Petitions [ 55]</span>
+    </div>
+  </div>
+</li>    </ul>
+  </div>
+</div>
+<script>
+(() => {
+  const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
+        nav  = document.getElementById('t_TreeNav').classList,
+        body = document.getElementById('t_PageBody');
+  if ( !sessionStorage.getItem( pref ) ) { sessionStorage.setItem( pref, !nav.contains('js-defaultCollapsed') ); }
+  if ( nav.contains('js-navCollapsed--default') ) {
+      body?.classList.add('js-navCollapsed--icons');
+      if ( sessionStorage.getItem( pref ) === "false" ) { body?.classList.add('js-navCollapsed'); }
+  }
+  if ( sessionStorage.getItem( pref ) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
+  for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
+      label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+  }
+})();
+</script>
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"></div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main id="main" class="t-Body-mainContent">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div class="container">
+<div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-TabsRegion t-TabsRegion-mod--simple apex-tabs-region"   id="R68688021707316315">
+  
+  <div class="t-TabsRegion-items"><div data-label="Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" id="SR_R68688140851316316"><div id="R68688140851316316"  role="region" aria-label="Helpdesk&#x20;Instructions&#x20;Open&#x20;Report"  class="t-IRR-region ">
+    <div class="t-Region-orderBy"></div>
+    
+    <div id="R68688140851316316_ir" class="a-IRR-container"><div id="R68688140851316316_worksheet_region" class="a-IRR" aria-live="polite"><div id="R68688140851316316_single_row_view" class="a-IRR-singleRowView"></div><div id="R68688140851316316_full_view" class="a-IRR-fullView"><div id="R68688140851316316_actions_menu"></div><div id="R68688140851316316_column_search_drop" class="a-IRR-colSearch"></div><div id="R68688140851316316_toolbar" class="a-IRR-toolbar"><div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" id="R68688140851316316_toolbar_controls" class="a-IRR-controls"><div class="a-IRR-controlGroup a-IRR-controlGroup--search"><div class="a-IRR-search"><input type="hidden" id="R68688140851316316_column_search_current_column" /><div class="a-IRR-colSelector"><button id="R68688140851316316_column_search_root" data-menu="R68688140851316316_column_search_drop" class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel" title="Select&#x20;columns&#x20;to&#x20;search" aria-label="Select&#x20;columns&#x20;to&#x20;search" type="button"><span class="a-Icon icon-search" aria-hidden="true"></span><span class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div><div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field" id="R68688140851316316_search_field" title="Search Report" type="search" size="30" maxlength="4000" value="" /></div><div class="a-IRR-searchButtonContainer"><button id="R68688140851316316_search_button" class="a-Button a-IRR-button a-IRR-button--search" type="button"  ><span>Go</span></button></div></div></div><div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div><div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden" id="R68688140851316316_row_select" value="50" /><div class="a-IRR-actions"><button id="R68688140851316316_actions_button" class="a-Button a-IRR-button a-IRR-button--actions" type="button" data-menu="R68688140851316316_actions_menu">Actions<span aria-hidden="true" class="a-Icon icon-menu-drop-down"></span></button></div></div></div></div><div id="R68688140851316316_content" class="a-IRR-content "><div id="R68688140851316316_dialog_js" class="a-IRR-dialogBody" style="display:none;"></div><input type="hidden" id="R68688140851316316_worksheet_id" value="68688224416316317" />
+<input type="hidden" id="R68688140851316316_app_user" value="9840815850" />
+<input type="hidden" id="R68688140851316316_report_id" value="68758475983557299" />
+<input type="hidden" id="R68688140851316316_view_mode" value="REPORT" />
+<div role="region" aria-label="Report&#x20;settings&#x20;of&#x20;Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" class="a-MediaBlock a-IRR-controlsContainer" id="R68688140851316316_control_panel"><div class="a-MediaBlock-graphic"><h3 aria-hidden="true" class="u-vh">Report Settings</h3>
+<span role="heading" aria-level="3"><button type="button" class="a-Button a-IRR-button a-IRR-button--controls"><span class="a-Icon a-Collapsible-icon icon-down-arrow" aria-hidden="true"></span></button></span>
+</div>
+<div class="a-MediaBlock-content">
+<ul role="none" class="a-IRR-controls">
+
+
+
+<li class="a-IRR-controls-item a-IRR-controls-item--highlight" aria-labelledby="control_text_10991670065953229" role="region"><span class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox" data-setting="highlight" data-highlight-id="10991670065953229" aria-label="Highlight" aria-describedby="control_text_10991670065953229" type="checkbox" id="control_10991670065953229" checked="checked" /><label for="control_10991670065953229" aria-hidden="true" class="a-IRR-controlsCheckboxLabel"></label></span><span class="a-IRR-controls-cell"><span class="a-Icon a-IRR-controlsIcon icon-irr-highlight" aria-hidden="true"></span></span><span class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button" aria-describedby="control_text_10991670065953229" aria-controls="control_10991670065953229" class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight" data-highlight-id="10991670065953229"  data-bgcol="#fca3b0" data-ftcol="#000000" ><span aria-hidden="true">Hours Since Creation &gt; 48</span><span aria-hidden="true" class="u-vh" id="control_text_10991670065953229">Highlight&#x20;Row,&#x20;&#x23;000000&#x20;on&#x20;&#x23;fca3b0: Hours Since Creation &gt; 48</span><span class="u-vh">Edit Highlight</span></button></span><span class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove" aria-label="Remove&#x20;Highlight" aria-describedby="control_text_10991670065953229" aria-controls="control_10991670065953229" type="button" data-setting="highlight" data-highlight-id="10991670065953229"><span aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"  data-bgcol="#fca3b0" data-ftcol="#000000">Remove Highlight</span></button></span></li>
+
+</ul>
+</div><div class="a-IRR-reportSummaryContainer" id="R68688140851316316_control_panel_summary" style="display:none;"><ul class="a-IRR-reportSummary"><li class="a-IRR-reportSummary-item a-IRR-reportSummary-item--highlight"><a href="#" class="a-IRR-reportSummary-label" data-setting="highlight" data-highlight-id="10991670065953229"><span class="a-IRR-reportSummary-icon" aria-label="Highlight" role="img"><span class="a-Icon icon-irr-highlight"></span></span><span class="a-IRR-reportSummary-value">Hours Since Creation...</span></a></li></ul></div></div><style nonce="7-3k5x9qpa0yNfoAsdIDLQ" id="R68688140851316316_worksheet_css">
+.rule_10991670065953229 td {background-color:#fca3b0 !important;}
+</style>
+<div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" id="R68688140851316316_chart" class="a-IRR-chartView"></div><div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" id="R68688140851316316_group_by" class="a-IRR-groupByView"></div><div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" id="R68688140851316316_pivot" class="a-IRR-pivotView"></div><div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" id="R68688140851316316_data_panel" class="a-IRR-reportView"><div class="a-IRR-tableContainer"><table aria-label="Helpdesk&#x20;Instructions&#x20;Open&#x20;Report,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report" class="a-IRR-table" id="68688224416316317">
+<tr><th class="a-IRR-header u-tC" id="C68688328224316318" ><span class="a-IRR-headerLabel">Request Number</span></th><th class="a-IRR-header u-tC" id="C68688549792316320" ><span class="a-IRR-headerLabel">Assigned To</span></th><th class="a-IRR-header u-tC" id="C68688741921316322" ><span class="a-IRR-headerLabel">Instruction Type</span></th><th class="a-IRR-header u-tC" id="C68688953195316324" ><span class="a-IRR-headerLabel">Short Description</span></th><th class="a-IRR-header u-tC" id="C68689017942316325" ><span class="a-IRR-headerLabel">Full Description</span></th><th class="a-IRR-header u-tC" id="C68689114029316326" ><span class="a-IRR-headerLabel">Attachment</span></th><th class="a-IRR-header u-tC" id="C68689286753316327" ><span class="a-IRR-headerLabel">Helpdesk Notes</span></th><th class="a-IRR-header u-tC" id="C68689733626316332" ><span class="a-IRR-headerLabel">Request Created Dttm</span></th><th class="a-IRR-header u-tC" id="C68689807555316333" ><span class="a-IRR-headerLabel">Requested By</span></th><th class="a-IRR-header u-tC" id="C68690494626316339" ><span class="a-IRR-headerLabel">Request Status</span></th></tr>
+<tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5085&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1Jw81TofS1UDmtcUC-QQM8l8WlewWPJ1jb-8V26Z3UWJNFcpgLxmYYtSSF6MKzSJyTDWkQAuGUQvqdYkzo1FIiQ" >HDINS&#x2F;2025-05-03&#x2F;5085</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >payment debit the wallet not generated acknowledgement cscvelampatti@gmail.com</td><td class=" u-tC" headers="C68689017942316325" >Dear Sir 
+               Iam using tnega id TNTAFKGI017-01 E DIST ID :tct_fch_kgi_26 using tamilnilam line payment done not generate application attached screen short below  amount :860 payment statement also attached below  Contact no :9003347857</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5085&k2=&ck=cPDgYzmfkng4ZJ_NnAx39tGofFQtCEJdd-6hYIQd-NQXTwVNuLylwWABhc7JAddwPJ_BBcBy-sKQg0KmIKEcew&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 954KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 05:32 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5084&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1vTMkLd9uGyqsCRbKTUClxdDPsDc3zAv6uFRxsZFA3prSBpVZ2nvF7_oqVkoydkQWXaqIP1u7RjfhKpk4bfavsQ" >HDINS&#x2F;2025-05-03&#x2F;5084</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >MY edistrict id blocked- TNEFADGL089-01</td><td class=" u-tC" headers="C68689017942316325" >Dear sir&#x2F;Madam
+MY edistrict id blocked- TNEFADGL089-01
+My edistrict id has blocked kindly release the block
+ I have attached screenshot</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5084&k2=&ck=Gk7npDlGkjI6NrtHmkVjbvasUSzUXOWlgXwaroMkYLJC_yue3TB3o_JeH03rkfGDPLCSNplTJH_Nb7ZAxLBd9w&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 34KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 05:09 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5083&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;10EqFN5KK_LVBpGDg72lHxAi0wlPianvjxj0AUGd1agWZ33M6zTEE_W6f6YUrt-Q4oAA2Brt0pw-Cqs2AEXP-AA" >HDINS&#x2F;2025-05-03&#x2F;5083</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >புல எல்லை அளக்கக் கோரும் மனு இரண்டு நபருக்கு மனு அளித்தபோது recipte not generate</td><td class=" u-tC" headers="C68689017942316325" >aruncsc1766@gmail.com வணக்கம், 
+                    என் பெயர் அருண்  நான் தருமபுரி மாவட்டம் பென்னாகரம் வட்டம் பாப்பாரப்பட்டி கிராமத்தில் இ-சேவை மையம் வைத்துளேன் , 01-05-2025 மற்றும் 02-05-2025 அன்றும்  https:&#x2F;&#x2F;tamilnilam.tn.gov.in&#x2F;CSC&#x2F;OtherServices.html  புல எல்லை அளக்கக் கோரும் மனு இரண்டு நபருக்கு  மனு அளித்தபோது இ -சேவை wallet இருந்து பணம் குறைந்துவிட்டது Transaction Id -TNF202505000000389 மனுதாரர் பெயர் இளம்பரிதி  .தொகை -860 &#x2F;-.மற்றும்   Transaction Id -TNF202505000001050 மனுதாரர் பெயர் ராமலிங்கம் தொகை 1660 &#x2F;-  Payment is pending  Recipt not Generate , Plz kind process this application .   Document are attached  .
+
+E-SEVAI ID -TNTAFDPI003-01
+PATTA TRANSFER ID - tct_fch_dpi_57  
+Mobil number -7373881766  ,
+E -sevai Address  , Kasthuri Theater Street  ,
+                                Papparapatti  ,
+                                Pennagaram tk</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5083&k2=&ck=1GKJ9TnKJx8OYGgb9EST0XkWp-5Ziq7vFLOuQLoUtqIZ3TznJSOzDbcU5BdfLPImzGTECzlc0AoAvbyJPaJKiQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 61KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 03:08 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5082&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1bNGyepz8hjvJ8Caz8WK6snersqyN_cKMhxoOdTmoyt1TCSlrpNRuXhbO_2_x-ENDV7c2HhXziu-LAipqDOyJwg" >HDINS&#x2F;2025-05-03&#x2F;5082</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >My e dist id not open TNEFADPI562-01 computer635301@gmail.com</td><td class=" u-tC" headers="C68689017942316325" >Dear sir&#x2F;mam,
+ Kindly send the error screen shot for our Verification.
+
+On 2025-05-03 11:56, Mubarak A wrote:
+
+CELL: 6383946869</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5082&k2=&ck=PVVEkwjlqh5S4ioX_Z4sANYtxT2-AxId8I9TYNFHG5B-4ES3KmZQ3SMCkDOU1w5ArHd2IJVd7PppqllvEIMeng&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 349KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 03:07 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5081&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;156vckXsqyTQ1gqekvSGoPXxyIMa7DeBKFs9agSf84dh1OCe57QZJ6FcX26LnKt_IYLgEQ42YZYgqi1vCpZyvaA" >HDINS&#x2F;2025-05-03&#x2F;5081</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >My e dist id not open TNEFADPI562-01</td><td class=" u-tC" headers="C68689017942316325" >CELL: 6383946869 My E Dist Id TNEFADPI562-01 Not Open</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5081&k2=&ck=JCx6rzh4qP89quY_K15-jFe1qNmeMYqMofWAYvjV5ZUE3JbuXOsPewdJ5Eqw-cy9GkSENmmk74j89DSTXqBu6g&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 34KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 03:06 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5079&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1MxJnvdBFuSssAd6dX8SbKb_n45zNOoVT6tbcKfr8ioAUHon0i9qFlAUFl6T9rego7UHbKHm62eIOP1k8vx2Wug" >HDINS&#x2F;2025-05-03&#x2F;5079</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >YOU ARE NOT ALLOW TO MORE THAN TWO CAN</td><td class=" u-tC" headers="C68689017942316325" >When I tried to create a new CAN number because my daughter needs to get a community certificate, it said that the CAN is already registered on the specified mobile number 9498205823. But we have not created any can on the above mobile number.</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5079&k2=&ck=F5BiEdC9jE2BAyvHf5lvC9eDMF7P5qbvbyDDu_5JOvoqC4munJ5wdxe-hv7c8J3BC3P6qvH0m3ZzBAUglPq0gw&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 435KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 12:48 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5078&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1wLrv1uft5CIFCauqmwPC4GoFCykv2xINpkV4CTfrxvr5-1RAj-S2_W6UQGFEGoWr6PrOIOyNnYSIW5xlcYZviw" >HDINS&#x2F;2025-05-03&#x2F;5078</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Patta Tranfer pannaum Name correction sir (01.04.2025 ) sent pannen sir clear agula.pls Urgent</td><td class=" u-tC" headers="C68689017942316325" >Respected Sir,
+CAN NUMBER : 133160629244098
+ 
+APPLICANT NAME ENGLISH :Shanmugam
+ 
+APPLICANT NAME IN TAMIL : சண்முகம்
+ 
+DATE OF BIRTH: 05&#x2F;04&#x2F;1980
+ 
+APPLICANT FATHER NAME:  Kannusamy
+ 
+APPLICANT FATHER NAME IN TAMIL:கண்ணுசாமி
+
+perambalurpcardb@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5078&k2=&ck=DS1EfQ4dYDvcWtyd6yHvimJB_1vX36lTFyFkbcbDwT2inQ5LiaPqDzBG16FcMLdsfRRaIY9E4M1pNA5uCTmrCA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 19KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 12:13 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5077&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;16lndKPQGLCGDvlaSlzX1jVeCBAaYVO08MFasd0sL2g_y-qIDKHAdVj74R_GV4bB7Ey3BzNZou-r3YIqNY1s4PQ" >HDINS&#x2F;2025-05-03&#x2F;5077</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >E district tamilnilam id not working</td><td class=" u-tC" headers="C68689017942316325" >Respected Sir &#x2F; Madam.....
+
+Kindly request for Activate my edistrict tamilnilam id .....
+
+My Esevai Id - TNEFATNJ0917-01
+
+Login to the page Either User Account is Not Available &#x2F; User Account is Locked.
+Please sove the problem and id is activated.
+
+laravinthan2004@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5077&k2=&ck=WjgArQXrQS_K4E1hcPr8AqF-4POv8zBlN50ckMpqApFY007ORp6Uvj47NCNMpVmdm2s-bopCb9LoqdBWgSh4Gg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 111KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 12:04 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5076&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1LGJ_m9oamCl05GTg2Trz1623-xY8JkTF3zQhYj7G4QBm2igygZWhWHmO226CuV0x2z59mV9baOZh18tYaD8Bnw" >HDINS&#x2F;2025-05-03&#x2F;5076</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >TNEGA EDISTRICT FLINE AMOUNT IS DEBITED PLS REFUND INTIATED</td><td class=" u-tC" headers="C68689017942316325" >CSC TNEGA ID-TNEFAVNR057-01
+MOBILE NO-9342423087
+
+DATE-02-05-2025
+
+மகாலட்சுமி பொது இசேவை மையம் 4&#x2F;626,பேராபட்டி பேருந்து நிலையம் அருகில், பேராபட்டி, அனுப்பன்குளம் வருவாய் கிராமம், சிவகாசி தாலுகா-626189
+
+HI SIR I AM ESEVAI OPERATOR OUR ISSUE ON APPLY FOR FLINE SERVICE IN CUSTOMER BUT TRANSACTION FAILED BUT AMOUNT IS DEDUCTED OUR WALLET BALANCE KINDLY REFUND THIS AMOUNT I ATTACHED ALL THE PROOF IN BELOW 
+
+THANKS</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5076&k2=&ck=Lm5YzU6ys3TPXhhzKqD7VXA_QzNkTSaco6ieH3mgLyYUsBCQ8_fXjecUZXbY0pSQZr_SSBu67wD5pYmvQLuorA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 379KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 11:45 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5075&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;17AN-mrcm_nYPlizSFWMERRlw4nMCQgKzu4s_-6zt-BPOLxEPF3ZyFQHcJV6r194F0IRtXv-blBkuAWX3_NAssg" >HDINS&#x2F;2025-05-03&#x2F;5075</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >payment method error in PSTM</td><td class=" u-tC" headers="C68689017942316325" >Good morning sir&#x2F;mam, 
+         
+              When applying for the PSTM certificate on the first mobile, the required details are entered and then the debit card details are entered and submited. when click submit  showed &#x27;your request not process&#x27;. Then, i applying to the service center(e sevai maiyam) ,required details entered and submitted, then next step payment page not showing but showing only an &#x27;invalid payment method selection&#x27;. so please guide me and rectify the issue
+santhini1071@gmail.com
+TNCIT000000011743034</td><td class=" u-tC" headers="C68689114029316326" ></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 11:44 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5074&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;18WSvaK9MOjAda5EV71cB2UGKjnzUO_ZMa0x74WnagxirFhKW9WVHmDS0RZo1f6sAZbcIFEdBJEoSDxGHrt9ffw" >HDINS&#x2F;2025-05-03&#x2F;5074</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Esevai wallet amount reduced but applied fmb service payment not sent and acknowledgement not genera</td><td class=" u-tC" headers="C68689017942316325" >Respected sir iam an esevai operator. I applied fmb service to mr. Balu son of athiyappan. Edistrict My I&#x27;d TNEFASLM821-01. 1.05.2025  WALLET ADDED AMOUNT 2000. But the service fmb applied in edistrict others (service)in my I&#x27;d TNEFASLM821-01. Payt showing pending or not received.
+sir it is the party amount. They are making urgent. Sir I have the esevai income only no other income. So iam not able to pay the amount to them. So please I requesting you to please solve my problem as soon as possible and acknowledge the fmb or add the amount to my bank account. Please sir do the needful. Thanking you. Yours faithfully N.jayanthi  TNEFASLM821-01.
+
+sjntradersalem@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5074&k2=&ck=sXIhQa7VzjCthqVjo-25VS_vtCtM_wbZcQzeSi6Q1FIyYr7clF4-5MEQfSTG5DSeRCr4X5B2dIJ4Z8NknHSKzA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 974KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 10:55 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5073&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1O3h4kLaCNjJX7McNkPmdPIAAvm5b9Isms0gF3T-kmbsZraigiWNsx6qyDtBetr7avUO9GBonZ3ZlZJlXTsf-2w" >HDINS&#x2F;2025-05-03&#x2F;5073</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >RECEIPT NOT GENERATED FOR THE APPLICATION REF NO :2025&#x2F;0402&#x2F;05&#x2F;000036</td><td class=" u-tC" headers="C68689017942316325" >Dear Sir,
+ 
+I have applied for Chief Ministers girl child protection scheme II.
+ 
+Application ref no generated 2025&#x2F;0402&#x2F;05&#x2F;000036.
+ 
+But receipt not generated yet.Transaction reference no also not generated.
+ 
+Kindly share the Receipt for the subjected application no.
+ 
+Await for your response.
+ 
+Regards.
+PRASATH.M
+9751504402
+
+CAN NO: 133050329839558
+
+ramprasath.mech69@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 10:54 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5072&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1qWiu4M-8MbIVXdFmg1nisuNY9QTWs7O5J_FQcWb1YYzHRlbHCK4U417vvnkXuir6PE9MJXlVMLtOV5YaTdQt0Q" >HDINS&#x2F;2025-05-03&#x2F;5072</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Can number invalid error</td><td class=" u-tC" headers="C68689017942316325" >Can number- 133020417408452
+Name : Nalini
+Dob:20&#x2F;09&#x2F;1966
+Aadhar number :734272492351
+Address:
+85,srinivasa nagar 2nd main  road kolathur tiruvallur kolathur tamil nadu pin code 600099</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5072&k2=&ck=uMbXIvzAlr9SFyu73v0IPSYcIyw8pz-tubH8sT5py_bjGH6dkg2sdMhacwfEjDDKze14wgEFYIgiTbl5kg0jQg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 5KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 10:54 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5071&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1GQcnP7sYcjeBi_b65AbkvCBkjLEcvWqEKzUzaUMnaIOHoiqe4wc0rtDOxFnlNKFyu6m__2Khdieelyvtyx9ZAA" >HDINS&#x2F;2025-05-03&#x2F;5071</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >F -LINE PAYMNET IS DEBIT RECIPT NOT GENERATE</td><td class=" u-tC" headers="C68689017942316325" >MY NAME IS ARUN  ,DHARMAPURI DT ,PENNAGARAM TK ,PAPPARAPATTI VILLAGE ,01-05-2025 , 02-05-2025 DATE F- LINE PAYMENT  E-SEVAI WALLET IS DEBIT BUT RECIPT NOT GENERATE  .PLZ KIND PROCESS THE APPLCATION . TRANSECTION ID IS ATTACHED .
+                                   THANKING YOU .
+
+E-SEVAI ID -TNTAFDPI003-01
+PATTA TRANSFER ID - tct_fch_dpi_57
+
+aruncsc1766@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5071&k2=&ck=aiQvObwl_QlrOU_v5ngXPIyUw3eVq89IZIBoF35e56H5dUHXS4RXoP8TCakb_ULFB92-3lj5M-XqFKLdm54hEg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 61KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 10:28 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5070&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1coXk1dQszcXHW98hGG65capl3Z1LD4YnANxrCa_OJigbsNpykryRPXl3qx5g5JaB-qnX0aDrzyAyPC9hkQ5a2A" >HDINS&#x2F;2025-05-03&#x2F;5070</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >Nagapattinam District - Thalainayar Block - E-Contractor Registration BDO Login is Locked Please Rec</td><td class=" u-tC" headers="C68689017942316325" >Nagapattinam District - Thalainayar Block
+
+Sub: E-Contractor Registration BDO Login is Locked Please Rectify the Error
+
+User Name:RDBBDO_THALAINAYAR
+Default Password :Password@1
+New Password : Password#1
+
+
+Block Development Officer,
+Thalanayar.</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5070&k2=&ck=CqcauWjfFQii9WQrle8lxayPOXJbT7GFjEoRyHRwRhVEdTk4NbDgZvP0iM3q15pc-jfIIrLWDJn4DEfHTH4F5Q&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 77KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 10:19 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5069&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1fq746wB9HEStLIoo1tGPNepwxcVzi1zIO9SezgM9HP4I-3i559XPnSpg0qDFCd_DobHy38QLE_gbBMSgmkL-Yg" >HDINS&#x2F;2025-05-03&#x2F;5069</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Namakkal District - Rasipuram taluk e Sevai Centre - F Line- Rural Application failed Issue Reg.</td><td class=" u-tC" headers="C68689017942316325" >Dear Sir&#x2F;Madam,
+ In namakkal district, Tamil Nadu Arasu Cable TV Corporation e Sevai Centre at rasipuram taluk for the one customer the Fline rural application service request was failed before receipt generation. The TN e SEvai wallet amount was also deducted for the failed service. Due to this issue we couldn&#x27;t collect service charges from the customer. Kindly view the attachments of failed transactions screenshots. Kindly do the needful to rectify the issue early as soon as possible. 
+
+Note : Needs to refund TN e Sevai wallet amount and also remove failed service transaction entry in transaction reports.
+
+Centre Name : Rasipuram Taluk TACTV e Sevai Centre
+TN e Sevai Id : TNTACNKL003-01
+e District Id : nkl_tct_t145_01
+e Sevai Operator Name : B.Siva Priya
+e Sevai Operator Contact No. : 9965904287</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5069&k2=&ck=9C2GVQ3SwX_XH1UKfl0inQ5UxnIdkUP8-YL3aijgOKSkNKtT1r64pdZv2kcDzIittLTWAH2NNEHtjTJ336mGQQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 46KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 10:22 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5068&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1rVcYkt868So04lNKby9yu6BSgu35TAnfEi58lsNHCj6vB_g7iLw2OeB7K6sZrQmYPCGqWM9fHfy6CcT-sEAuww" >HDINS&#x2F;2025-05-03&#x2F;5068</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >F line natham application no not generated amount debited isuues</td><td class=" u-tC" headers="C68689017942316325" >Respected Sir&#x2F;Madam,
+  
+      Good evening sir, my e seva id ;  TNEFATVM294-01  today morning i applied RDM 103 FLINE NATHAM SERVICE in tamil nilam website application not generated but amount debited so please resolve the problem sir
+APPLIED DATE:  02.05.2025
+SERVICE NAME:  RDM 103 F LINE NATHAM
+USER NAME E SEVA ID :  TNEFATVM294-01
+CAN NO:  133060231681862
+APPLICANT NAME:  KUMAR S&#x2F;O BALU
+MOBILE NO:  6382961837
+TRANSACTION NO :  TNEFA294TVM000008292
+DEPARTMENT RECEIPT NO :   TNF202505000001444
+
+
+Kindly view the attachment file sir here attached transaction receipt</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5068&k2=&ck=YM6HaFh8MWHTIpuC9DA3fHNWqQ859n87K9JZWVM3CUjNwBVninxxK15wYfS5S03kKX931yVqnBDgAeiJS139Zg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 83KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 10:17 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5067&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1vpMXk_X2sRDUO9cAmeBpavrKlnK8Ex6C2okhfk6hwhgrL3kCcCvKRH_L3Yvta9E09wZd_sHOx95PEdblmspcCQ" >HDINS&#x2F;2025-05-03&#x2F;5067</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >pstm not digitally signed</td><td class=" u-tC" headers="C68689017942316325" >Department Reference No: 1401470089
+Transaction No : TNCIT000000011801592
+Application date : 30042025
+11:30:53
+Applied for Service : DSE101
+Issuance of
+PSTM Certificate for Govt Schools
+Receipt No: TN25720254303338882
+Applicant Name: K JANANI
+ph:no:7502184801
+Department Name: Commissionerate of School
+Education
+
+ஐயா&#x2F; அம்மா,
+  வணக்கம். நான் pstm 4-ஆம் வகுப்பிற்கு  apply செய்தேன். நான் pstm certificate download செய்தேன். ஆனால் அந்த  certificate-ல் தலைமை ஆசிரியரால் digital signature செய்யப்படவில்லை. எனக்கு தலைமை ஆசிரியரால் கையொப்பமிடப்பட்ட சான்றிதழை வழங்குமாறு தங்களை தாழ்மையுடன் கேட்டுக்கொள்கிறேன். இத்துடன் கையொப்பமிடப்படாத pstm  சான்றிதழை இணைத்துள்ளேன். நன்றி</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5067&k2=&ck=VyRxub0--RqJTMwDimOi9__b8zmKowWv-D3Bp0m7lS7yIC0DXguOGhjERQd3JOKYn2pYlm9VQL06j82Xptg5cA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 108KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 08:06 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5066&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;16AESlKgJBd9GGZmjHp0dCYmN6kLgGmG5GUvmsYh_a3syeffVzm3Sf6SzalBh2xC-wV0SbACIL7PPhIS9aEhKdA" >HDINS&#x2F;2025-05-03&#x2F;5066</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >New CAN create issue</td><td class=" u-tC" headers="C68689017942316325" >Dear sir&#x2F;mam
+
+new  CAN Create issue please clear this issue
+error Below Atteched 
+
+NAME: K biraimadhi
+Phone no ; 9943435646
+Aadhar no : 271972371652</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5066&k2=&ck=tQPDOcdcDLEajCZP4CpyOAxnAzyiNJBneR1MrvGgMnKctFsTTkxKG0IOKMwqH7O0pEChbb2ZS1-TMvTelUvfFg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 167KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 08:06 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5065&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1FdXZMEW7eaMkT-00fXzT3bArLgNEPhtV0VWWRZd5guHwuzSyqGCkd1Ho8PKarA4PnzFcbVrkCI3WNmxEbBQQRQ" >HDINS&#x2F;2025-05-03&#x2F;5065</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >E-District CAN correction - Regarding</td><td class=" u-tC" headers="C68689017942316325" >I submit my representation for  E-District CAN correction on the
+Date of Birth ..
+My CAN No.0331509087227.
+I am enclosing a scanned copy of Aadhaar Card Card.
+Please see the attachment:
+With regards,
+S. SIVAKUMAR
+Cell No.9442253925
+ssk981982@gmail.co</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5065&k2=&ck=1dfx5ZAgmzaHSOy0bDssl3LBO2nTNNEZQTrAkpqVFD4a80_rfmbfLOsgovJ7SwjkXel_vWoNfYrYdteK0GCpIQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 1,016KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 07:14 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5064&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1wZhxHsYNMNfTtaeLrUbpCtXdzs1W8lW17NfGkyesU5kenW07cyIrt9d6G19fBipoXyY7GhsMC5r4iI81TBHMvg" >HDINS&#x2F;2025-05-03&#x2F;5064</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >FLine Service - Shown Error but Amount Rs.860&#x2F;- Reduced</td><td class=" u-tC" headers="C68689017942316325" >TACTV - Tiruvannamalai District - Polur Taluk - eSEVA (TNTACTVM004-02) - FLine Service - Shown Error but Amount Rs.860&#x2F;- Reduced from login - Request to check and clear issues - Reg
+
+tnactv2@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5064&k2=&ck=3dCi0Y3l6hk5HsTY7_eNKazoFRA7Arksvzvs0-yyktA6-ogP49VzM3_jhF-Z3QwDAPrIXLc1Fb-YuyqTS4RR6w&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 123KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 06:55 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5063&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1aOxtDyP9Cd8Vc8kHvkWoZevh1UMd_0coHdcBamwYtyLAUvcKm1K7gp33StpvyGC9luLmJOsQbr1jdjOB2nvt6g" >HDINS&#x2F;2025-05-03&#x2F;5063</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Payment Issue
+நில அளவை பெற விண்ணப்பிக்கும் போது
+TNPACKPM011-01</td><td class=" u-tC" headers="C68689017942316325" >Dear mam&#x2F; Sir,
+   நில அளவை பெற விண்ணப்பிக்கும் போது அளவைக்கான தொகை Ewallet ல் இருந்து கழிக்கப்பட்டு விட்டது. ஆனால் நில அளவைக்கான Application ID வரவில்லை.  தயவு செய்து ரூ860.00 தை மீண்டும் Ewallet க்கு Return செலுத்தவும். இதற்கான ID details இணைக்கப்பட்டுள்ளது.
+
+
+Edistricts User ID: kpm_pac_g2242
+Tnesevai  User ID : TNPACKPM011-01
+
+g2242nellikuppampaccs@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5063&k2=&ck=MrqtpMV2Wz9K8VUbygGIMbuT3vMMA49GEPUpJITh4QFTQ0UCFVWNZXtcy_0NT9VntjqrvuuHK60RwGiFnnyXYQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 101KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 06:50 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5062&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1uJisj0rPYDL25PeuKKZsbOqYyKjj7JXkiWc33k6VkEu8DvOLe72bJAdwyJI_SZWgVBADW4BAaXydC8adTy9UPg" >HDINS&#x2F;2025-05-03&#x2F;5062</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >ERROR ON MY E SEVAI ID
+E SEVAI ID : TNEFATVM910-01</td><td class=" u-tC" headers="C68689017942316325" >Sir,Madam 
+ 
+E SEVAI ID : TNEFATVM910-01  
+NAME        : SUNDAR S
+MOBILE NUMBER : 9944378294
+TOTAL CERTIFICATE COUNT : 1000 
+  
+My E sevai id could not be working. So Kindly recover the E Sevai ID.
+Below attached  the screenshot.
+ 
+ 
+Thank you</td><td class=" u-tC" headers="C68689114029316326" ></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 06:30 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr ><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-03&#x25;2F5061&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1-ZhBWjmZtwP1yLU2Nvx0x4rRYhb-7zwfNzD2arf-vXJ3GjxQjY_U6Zq0wOq7jyLOaa-EcqFZJ-Q57Njg-m9ecg" >HDINS&#x2F;2025-05-03&#x2F;5061</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >ஒப்புகை சீட்டு வேண்டி</td><td class=" u-tC" headers="C68689017942316325" >முதலமைச்சரின் பெண் குழந்தைகள் பாதுகாப்பு திட்டத்தில் காயத்ரி என்பவர்  CAN NO. 133121413651740 மூலம் விண்ணப்பித்து உள்ளார். ஆனால் அதற்கான ஒப்புகை சீட்டு வரவில்லை. 
+CAN NO. 133121413651740 மூலம் முயற்சித்தால் நீங்கள் ஏற்கனவே விண்ணப்பித்து விட்டீர்கள் என்று வருகிறது. இதனை சரி செய்து கிடைக்க செய்யுமாறு கேட்டுக்கொள்கிறேன்.
+
+THANK YOU
+
+CAN NO. 133121413651740
+AADHAR NO. 9157 8021 9277
+NAME: GAYATHRI - காயத்ரி
+
+இணைப்பு: ஆதார்
+SCREENSHOT FOR CHIEF MINISTER&#x27;S GIRL&#x27;S PROTECTION SCHEME
+
+smartesevai7@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-03%2F5061&k2=&ck=XELef4Ox84Ww0P_1Dzeu18wYMjZhKurQsXVVIJk70O7MPXTCm1RDQ78xv6vl9Zp9ExLjHtoDwDm9WQMzteHiKQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 163KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >03-05-2025 06:29 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5041&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1__PsRuMad58aC3viqZf9LSl8361phhEQAmueLROGnsfU3bAZpW3svqnZ_IaTgH2jQ4pesRVgWqDhurIj7gV6kg" >HDINS&#x2F;2025-05-02&#x2F;5041</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >E-District CAN correction - Regarding</td><td class=" u-tC" headers="C68689017942316325" >I submit my representation for  E-District CAN correction on the
+Date of Birth ..
+My CAN No.0331509087227.
+I am enclosing a scanned copy of Aadhaar Card Card.
+Please see the attachment:
+With regards,
+S. SIVAKUMAR
+Cell No.9442253925
+ssk981982@gmail.co</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5041&k2=&ck=fzRmcXM03MZxYBwWWd4sDqJAhrnU8n_kpey0FrIbFWKRBeIDAmksB63uDQAkHiYPkBJ8Gk8frGDP6obJygCeLA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 1,016KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 04:20 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5029&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1iKZ6d_wWcaNyDDv_2h1qKdwX5_FXHG-BEiR1z792pp69I1G_So_KFZu731F6rl-D9seTvMjQK1RrZSNV17Iglg" >HDINS&#x2F;2025-05-02&#x2F;5029</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Dr. Muthulakshmi Reddy
+Already Applied Services Error - clear this problem</td><td class=" u-tC" headers="C68689017942316325" >PFA
+
+Scheme Name: Dr. Muthulakshmi Reddy Ammaiyar Ninaivu Intercaste Marriage Assistance Scheme
+
+Bride Name: NITHYA
+Bridegroom&#x27;s Name: KRISHNAKUMAR
+
+Bride CAN NO: 133070130959217
+Bridegroom&#x27;s CAN No: 133070130958530
+
+Bride Aadhar No: 907207986991
+Bridegroom&#x27;s Aadhar No:763874978955
+
+Issue:   Dear Applicant,You are not eligible to avail benefit under this scheme as you have already availed benefits under                       Moovalur Ramamirtham Ammaiyar Ninaivu Marriage Assistance Scheme.
+
+edm.vpm@tn.gov.in</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5029&k2=&ck=fgiVRESOblHT4AMCFeNvYAWUf6ZO5LtTLM9vdzwvmUPY2eqVv9JvCVjDhG-rcRWD_yLITfef9RW6NdoHdGheCQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 52KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 01:12 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5028&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;14jIs7KtWBNvQ0_WaRxJ9fGM3H5_yKP--UtVYb71qZCN1q0BrdhdSC2y_Q7XnISL7f7eu18S8KSpM0D6NPD4eKA" >HDINS&#x2F;2025-05-02&#x2F;5028</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >RECEIPT NOT GENERATED FOR THE APPLICATION REF NO :2025&#x2F;0402&#x2F;05&#x2F;000036</td><td class=" u-tC" headers="C68689017942316325" >Dear Sir,
+
+I have applied for Chief Ministers girl child protection scheme II.
+
+Application ref no generated 2025&#x2F;0402&#x2F;05&#x2F;000036.
+
+But receipt not generated yet.Transaction reference no also not generated.
+
+Kindly share the Receipt for the subjected application no.
+
+Await for your response.
+
+Regards.
+PRASATH.M
+9751504402
+
+ramprasath.mech69@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5028&k2=&ck=wVNsVz10TC9otUjHM0MtCKPRgdaP9_4cW1L1TP2u_vBRMAKq1pXJ2AKF9AvJLpJkEVSRT_U6VoOCAp-uRaRUrw&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 322KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 01:11 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5027&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1wL2WPme34rqky1QScmt1ZavLnuHw8obnfSyN_wCoWu7Z4ImtTXjrxIb3cbfaOysQ2wiarwayTWAaBvixI-Yhkw" >HDINS&#x2F;2025-05-02&#x2F;5027</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Dr Muthulakshmi Reddy intercaste marriage assistance scheme</td><td class=" u-tC" headers="C68689017942316325" >I have applied for Dr Muthulakshmi Reddy intercaste marriage assistance scheme.i can&#x27;t make the payment for the application but the transaction number and application receipt number generated. attached the screenshots below here.
+
+Bride can no :  133020130217970
+Bridegroom can no : 133020129530524
+
+transaction no : TNCIT000000011809912
+receipt no    :      20250200000660
+
+contact no : 8220173756 &#x2F; 9566084549
+
+sundar04rajan@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5027&k2=&ck=whWl887pyreMlnq6RF0PIcYCiGjyy0oXE3qACMaeJxqsxizsHTZZjQ2iKr3El-9iv_oqV9nwYFcOjkdj5LUVxg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 139KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 11:51 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5026&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;11Q_cwRL6TSSptlNevoNVo36DgEzOsyhB78IDYCpqRm_9sMNI0y7JkIusK9D4jXifMem1tm6U2ld_0V0NH0lYtw" >HDINS&#x2F;2025-05-02&#x2F;5026</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Dr.muthulakshmi Reddy inter caste marriage
+Didn&#x27;t receive Receipt</td><td class=" u-tC" headers="C68689017942316325" >Dear sir&#x2F;madam,
+ 
+I have applied for Dr.muthulakshmi Reddy inter caste marriage scheme... But I didn&#x27;t receive any receipt. Kindly look into it and do the needful.
+ 
+Thanks &amp; Regards
+Karthik keyan
+I will send you the details as below
+
+Bride - 133330625516381
+Groom - 133031425516233
+
+Kindly do the needful
+
+hamsapriya51@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 09:48 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5025&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1YxfiwKAZ-yajK8kgqbH7tzwXJZN1nMpDjcqa0RzGeQTwhNkZtTyGXPyuvZgHpYtFOb1Za8nc3uRZJIue2Ad9Qw" >HDINS&#x2F;2025-05-02&#x2F;5025</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >PATTA TRANSFER NOT WORKING.
+TNEFAPDK258</td><td class=" u-tC" headers="C68689017942316325" >MY ID  PATTA TRANSFER NOT WORKING.
+TNEFAPDK258
+NAME : SIVARAMAN
+ARANTHANGI   TK
+arusiva1@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5025&k2=&ck=mlVQSyCq6RGminI-3nM3lu-W-mk4Lr1Y2qrL5Ga03LdFWW1uUBF94fkgCpJQ4yIZ4RDwljaIaRVQe0RQ5FUSmA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 145KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 09:47 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5024&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1KysP9vfz9nBzPCdJ0Nvvv5u3AJRIr4ackpLeQuzAnok790Zl58i2yLwscZOJDq_VM_erTDtCf3ug5VCY2dZLyw" >HDINS&#x2F;2025-05-02&#x2F;5024</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >Request for e-Sevai ID Activation (TACTV Center)
+TNTAFDPI009-01</td><td class=" u-tC" headers="C68689017942316325" >Respected Sir&#x2F;Madam,
+I am writing to follow up regarding a letter I submitted to the Directorate of e-Governance &#x2F; Tamil Nadu e-Governance Agency on 17&#x2F;04&#x2F;2025 regarding the activation of e-Sevai ID for my TACTV center.
+I was informed that I would receive a response via email, but I have not yet received any update. I kindly request you to let me know the current status of my application and whether any further documents or action are required from my side.
+Below are the details for your reference:
+• Date of Submission: 17&#x2F;04&#x2F;2025
+• Subject of the Letter: Request for Activation of e-Sevai ID for TACTV Center
+• Applicant Name: THANIGAIVELU MURUGASEN
+• Contact Number: 9976584656
+• Email ID: veluammanstk@gmail.com
+• Reference&#x2F;Application ID (if any): TNTAFDPI009-01
+I have also attached a scanned copy of the original letter submitted.
+I would be grateful for your assistance and look forward to your response.
+Sincerely,
+THANIGAIVELU MURUGASEN
+9976584656
+veluammanstk@gmail.com
+Attachment:
+veluammanstk@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 07:58 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5023&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1StF0Qp6QYOCbjmVXVds2G_gKrTJ8kArY4oOZR-wiMpKZgcnE2wp-ja577eoqFRJE8tWaPqcBs4Qz97f7xvFZmg" >HDINS&#x2F;2025-05-02&#x2F;5023</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >New can number not generate</td><td class=" u-tC" headers="C68689017942316325" >Hai 
+    I have new can number create but not. Create for my id  error showing for only 2 can number generat erooro showing why
+That error 
+ My id:martin9524
+
+martin9524@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5023&k2=&ck=DC9zsTX6GkJXJ3S2FY0LtT5a1a20vArMXxPtbwNusLfWWWkdhKuM6ynx06KVMoA0lus7aArq9LTnKixvDd-bOQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 428KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 07:44 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5022&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1odoGWNAU65kZjQBmfp40DVWjbBiZq-NKh2027lBsCgW3hQZKZ47ZdfZutQVjVS40b0vMMNNOm7sbEo8wnwfJwQ" >HDINS&#x2F;2025-05-02&#x2F;5022</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >ERROR Error : Incorrect Details. Please contact Helpdesk,Error Message:527 :Invalid â€œmcâ€ code und</td><td class=" u-tC" headers="C68689017942316325" >DEAR SIR 
+MY ID TNEFACPT012-01 THIS ERROR : Incorrect Details. Please contact Helpdesk,Error Message:527 :Invalid â€œmcâ€ code under Meta tag.: PLS CLEAR THIS EEROR 
+THANKING YOU
+
+grg21fernandez@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5022&k2=&ck=NeLH7l3jiQ4-LWLVUAbCIHhuT5lpdyzqVZZKMbqt0-Qpsjze0LJ5x36Ym8Td4NFl-ZkkDphnZeNCpRiGPrRlGQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 184KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 07:42 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-02&#x25;2F5021&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1lQCOhZbwVHRr-FMwcQD5rn65vJJye5YTGmktPKi9sLaUY5xk5HjFPrfFA18kumw5Se9i0y11lrl7FHJZXqVw7Q" >HDINS&#x2F;2025-05-02&#x2F;5021</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >தமிழ் நிலம் சிட்டிசன் போர்ட்டலில் நிலத்தை அளக்க பணம் கட்டி ஒப்புகை சீட்டு அச்சிட முடிய வில்லை தொடர்ப</td><td class=" u-tC" headers="C68689017942316325" >ஐயா,
+               வணக்கம் எனது இ சேவை மையத்திற்கு 30.04.2025 அன்று ஜெயபால் என்பவர் நிலத்தை அளப்பதற்கு (3 புல எண்கள்) பணம் Rs.2470&#x2F;- கட்டினார் ஆனால் எனது வங்கி கணக்கில் இருந்து பணம் சென்று விட்டது ஒப்புகை சீட்டு எண்ணும் வந்துவிட்டது ஆனால் ஒப்புகை சீட்டை பிரிண்ட் (டவுன்லோட்) ஆகவில்லை எனவே எனக்கு  ஒப்புகை சீட்டை டவுன்லோட் செய்து தரும்படி தாழ்மையுடன் கேட்டு கொள்கிறேன்.
+பெயர் : ஜெயபால் த&#x2F;பெ.பேச்சிமுத்து
+முகவரி : 87A, காளியம்மன் கோயில் தெரு, துக்காச்சி, கும்பகோணம் தாலுக்கா, தஞ்சாவூர் மாவட்டம்.
+ஆதார் எண்.6436 8881 0685
+செல் எண்: 7538821823
+ ஒப்புகை சீட்டு எண் : 2025&#x2F;N123&#x2F;21&#x2F;007851
+Transaction Id : TNF202504000033160
+இணைப்பு:
+1. ஆதார் கார்டு
+2. ஒப்புகை சீட்டு ஸ்க்ரீன் சார்ட்
+3.Transaction Id  ஸ்க்ரீன் சார்ட்
+இப்படிக்கு,
+சுதர்சனா இசேவை மையம், கும்பகோணம்
+நன்றி
+susjob2021@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-02%2F5021&k2=&ck=JTDOHEmyhaaJ08ogbCF6S52s1K5iDqkPWm7Dpps9-DcjbgEExqzSdfMin8fGnUcj6IqGjS9jVTmB09P1KMGSDw&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 86KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >02-05-2025 06:30 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5014&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1gOon-WCXlDDErvvvXNgzR1X9nhiEXt3WogHuwIDwVmDzngWTkyMlRvk-QvUKbKTpij-VMVF6_gTaHsAaSmVt-A" >HDINS&#x2F;2025-05-01&#x2F;5014</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >rrk.raj85@gmail.com  19.04.2025 - today error till same problem last 1 year 4 month sir</td><td class=" u-tC" headers="C68689017942316325" >R.Rajkumar 
+Sri Lakshmi Computer 
+CSC ID - 545455920011
+E SAVI ID - TNEFATVM508
+No: 6, Anna Business  Complex, 
+Arni Road,
+Chetpet Taluk,
+Tiruvannamalai District - 606801
+Cell :9894735855
+        9025535855</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5014&k2=&ck=ixW6GojRfjOrI3txIpWiJO2XPWMf30KdQOB_pcGAPULBdm1QE0nhLTUVm_4sCWcI1bQnLvCAmh9LlBms8yZ7-A&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 689KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 04:02 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5013&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1uJtgDx-g1vgSsJ5Nn2BTPX1YXJ4ef-dTVjIkRYRBoUxlKJK_q2QODFy5P71Wz8c6qJve-BWhM0QYlnRl98gGzg" >HDINS&#x2F;2025-05-01&#x2F;5013</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >Either User Account is Not Available &#x2F; User Account is Locked. murugan.wbd@gmail.com</td><td class=" u-tC" headers="C68689017942316325" >Dear  TNEGA  &amp; EDM
+ 
+Name : Balasubramani Nagarajan,
+LOGIN ID : TNEFAKPM215-01
+Register No : 8682803651
+   Walajabad TK,
+   Kanchipuram Dt - 631605 
+    
+Please release the Account is locked page,</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5013&k2=&ck=1JeLTJtIHOoM2t-wvvQ7zGxoBiDx_dr-g0j1neQy-cYNTiGVQVjXKkExoeGVhO2DT4Tjn28awxl-oGGKQGyC5g&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 72KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 03:28 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5012&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1KLIagGtLS4YX_vEIbDyeViIxDHMjF7xjxL9VAm4mKt6lKUtFVBX2TeGkVu-mk8a1Gv6Xy57-DPCnSTb_Bqr9AA" >HDINS&#x2F;2025-05-01&#x2F;5012</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >You are not allow to register more than 2can phone No : 9787812256 murugandinesh4016@gmail.com</td><td class=" u-tC" headers="C68689017942316325" >You are not allow to register more than 2can phone No : 9787812256</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5012&k2=&ck=sOtV6BEauavlQ4281zwdju9oKQcAeInXEERnfRkPXhn_F8ffzul_KFy0xWrXJJYrjASvCpHtFGi1PSRIgsVjeA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 585KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 02:19 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5011&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1XzHaMac7zxZJyp_df8njdfWdqJl6CFqCHTgDDPBjXDkHhnp7QkcJWdb9-Z3nME1Dc4plnGW9J2s17QBGc_poVA" >HDINS&#x2F;2025-05-01&#x2F;5011</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >ID Login Problem TNTAFMDU066-01</td><td class=" u-tC" headers="C68689017942316325" >I am Maheswaran, Madurai. 
+I have been working ESerive with this ID for the past 6 years. Now. Today I am facing when login biometric details error occurred. Please rectify this error and to continue the work. I have been enclosing the Screen Shot and my Adhar also.
+Regards
+Maheswaran
+
+citinetcsc@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5011&k2=&ck=3K6L6mjfdM57L5KYTghj-pJ9wF8E9bo9204MsqTXXtpxOT6VCxnCkkxx6ZwfF42-F5QSexMge716zwu4VZkSFw&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 146KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 01:24 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5010&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1Y-z-ARE7lC4mnhk8lQaldHVaj6zUQlEGRjNk_lEH0tpWN1Hc3gwjog63K7rGO9B6N3iTeA_-a535V1LcWuXMAQ" >HDINS&#x2F;2025-05-01&#x2F;5010</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >Helpdesk,Error Message:524 
+TNeGa ID : TNEFATVM895-01</td><td class=" u-tC" headers="C68689017942316325" >Error : Incorrect Details. Please contact Helpdesk,Error Message:524 :Invalid â€œmiâ€ code under Meta tag.:
+
+TNeGa ID : TNEFATVM895-01
+
+oviyamotors@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5010&k2=&ck=8v9xP5J5Hd8fpoic0DUoavzVkkxeOXtnZbuC08Dc1gOv00XMmpawEhPc022n5Ubf9ML8Jme8Kjl0QmSCAqAAcg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 314KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 01:23 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5009&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1_BVAXO-uRHfJ3nELEQLE_WPX0G3uoL__lI-h2KW-DFTZZJFeQUbdRwzg1H01WQGY6JFroZ2nOtrSzQ_ZTtuKog" >HDINS&#x2F;2025-05-01&#x2F;5009</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >My Name is RAJENDRAN T
+My id : TNEFAVNR0546-01
+MY PASSWORD REST PLS gomathimobiles2015@gmail.com</td><td class=" u-tC" headers="C68689017942316325" >My Name is RAJENDRAN T
+My id : TNEFAVNR0546-01
+MY PASSWORD REST PLS</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5009&k2=&ck=few6RncQoZB9YELwfHJFTyQZQlnQW3zFAkPALV3RwPUvZqYT7kYNeuZOWdROY6MOx8XZ43A5LoKqmMVAPvNGgw&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 146KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 12:49 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5008&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1zmKugRLYC142I71qcB3BXrkvhBQVPddIMgxzXm1GfL13bTXQoVGyJrr74I9vmAkF70V5KKEp_LeUlhkHeVpwKg" >HDINS&#x2F;2025-05-01&#x2F;5008</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Invalid CAN ID</td><td class=" u-tC" headers="C68689017942316325" >Hello Sir
+
+I try to do Patta transfer from my operator id (TNEFATRI217-01) It Showing Invalid CAN ID. Please clear this issue as soon as possible.
+
+Addhar Number: 634003042640
+CAN No: 133200625068556
+Name: Jeevarathinam
+Mobile Number: 9442277477
+
+Here i attached Screenshot. Please Check it sir</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5008&k2=&ck=4XWT2ZZo5pKTOoedPI9TVf8RvKzT15sR44XafBqZuwE4TBvaffhSX06GYSVRCCmvO84k1JN4zmsYpnkeedN7fQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 4KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 11:56 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5007&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1E8c9kixk7RASxTa8m63r0rSemiUoxfHHVKX319qhbe6uAlMqzjAk0Y0ApabCkEe8eMV3jnTywftDhwMxccaZsQ" >HDINS&#x2F;2025-05-01&#x2F;5007</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >TAMILNILAM PATTA TNANSFR NOT WORKING LOCKED arasireghoraja@gmail.com</td><td class=" u-tC" headers="C68689017942316325" >DEAR SIR,
+TAMIL NILAM PATTA TRANSFER NOT WORKED LOCKED SO AGAIN REOPEN SIR
+NAME K.RAJA
+USER ID TNEFARMD412-01
+MOBIL E NO.6374740453
+
+PLEASE FIND THE ATTACHED FILE
+
+THANK YOU
+REGARDS
+K.RAJA</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5007&k2=&ck=IliQvHernY0xi_Rrg3IniB1WszBBxEbSuT7VHG0Ph89Y0-5OPtK4JQ3qN5_yhQjeco_2BK5HzXlFlUGtv1eiYA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 115KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 11:22 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5006&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1vFy3HsKXR-Hsuq0dJdvwcCcQIvvFjoOMR3cEcIvPRoUmQxAPwSeqzJsCprSObU1-TaMsVr0aW_Mf7PcE6aJbkQ" >HDINS&#x2F;2025-05-01&#x2F;5006</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Regarding the transaction failed.</td><td class=" u-tC" headers="C68689017942316325" >Dear Sir&#x2F;Madam, Thi is Ganapathy Annamathesi from Thirukkoilur.  I sent many emails with all necessary information regarding the refund request. Kindly refer trial mail. Because its too late that you didn&#x27;t response to me more than two weeks.
+
+I  applied for PWD Contractor Licence  Through esevai login    vide application No: TN-432025032800720  and paid by using my IOB credit card , the fee Rs.5900&#x2F;- and after  successfully enter OTP on 31st March 2025  and finally shown as &#x27;Sorry unable to process your request&quot; but the amount debited from my account.same thing happened two times and debited amount Rs.11800&#x2F;-, I already raised an  complaint with tnesevai customer on 31st March2025 and called many times and the customer care executives said that wait wait but not yet resolved.  So kIndly do the needful.
+Thanks and Regards
+Ganapathy Annamathesi
+9865307170
+
+imperiallexports@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5006&k2=&ck=7hWArSoCAUpC7RDpPVbnYna-rFFr_gCFQANUYI9Eshul25WG_MJlEbCvqnmH_cvUUveAny-UhMDTpViLH3MhMQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 167KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 10:33 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5005&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1JhwJK-xWwkCY1Km7caxMn7fUyvwFD6RZ8-YnuVtPonmoNqOKIaBfoVHcd-aolWGbMG8tCO9I36l-wmD4FbOkJw" >HDINS&#x2F;2025-05-01&#x2F;5005</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >CAN NO NOT UPDATING IN THE CAN REGISTER</td><td class=" u-tC" headers="C68689017942316325" >Dear Sir,
+While applying for a Disability Maintenance support in TNEGA portal the client particulars are not able to update in the CAN register and it shows the clients adhaar number already registered in the CAN number issued. But I tried to take out the CAN number but the portal was not opening. Kindly do the needful to know the clients CAN Number the particulars of the client details as given below,
+     Name  : P Neelraghav 
+    Father&#x27;s Name : Prem Kumar R
+   Client&#x27;s  Adhaar No : 621198850101
+   Date of Birth  :  23 AUg 2015
+
+Screenshot attached for your reference please.
+
+THANKING yOU
+
+Ravi A
+TNEFASLM012-01
+9944940811
+ravi.ardhanari143@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5005&k2=&ck=sDq4b5xxI4kUeg6_grWRcfOQx-sSgPtf1t2GOdkTyD-Fsf90UD-EBoaUpAQab94T3NTc91vg5StrruDHFFuLeg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 345KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 08:42 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5004&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;125Q01rpirc-pROd6U04O-mVzDaSWkYshpRSt8Pm70ulPRFRq7DmnsElTLVXaG_9tY5r4HXd5VqtbuqjmR-PveQ" >HDINS&#x2F;2025-05-01&#x2F;5004</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >இ-சேவை ஐடி மீட்பது தொடர்பாக !!!
+  TNEFASLM1132-01</td><td class=" u-tC" headers="C68689017942316325" >Sathis Sathis &lt;sathisitc@gmail.com&gt;
+Attachments
+Apr 25, 2025, 10:44 AM (5 days ago)
+
+to tnega
+
+பெரு மதிப்பிற்குரிய அய்யா &#x2F; அம்மா அவர்களே ! 
+நாங்கள் சேலம் ஓமலூர் , கருப்பூர் பகுதியை சேர்ந்த  இ-சேவை மைய ஆபரேட்டர் ஆவோம்  . உங்களுடைய இ-சேவை ஐடி கடந்த ஒரு மாத காலமாக தற்காலிகமாக முடக்கப்பட்டுள்ளது( LOCKED ). நாங்கள் பல முறை முயற்சி செய்தும் எங்களுக்கு தொலைபேசி வாயிலாக ஒரு முறை கடவுச்சொல் (OTP) தங்களிடமிருந்து  பெறப்படவில்லை.  ஒரு முறை கடவுச்சொல் (OTP) பெற அனுகிய போது எங்களுக்கு &quot; NOT VALID RECIPIENT&quot;  என்ற சிறு அறிவிப்பு மட்டுமே தோன்றுகிறது. ஆகையால் உங்களால் ஐடி யை அன்- லாக்  செய்ய முடியவில்லை . எனவே  ஒரு முறை கடவுச்சொல் (OTP)  பெறவும் , ஐடி திரும்ப பெறவும் வழிவகை செய்திட உதவுமாறு மிகவும் தாழ்மையுடன் வேண்டி கேட்டுக்கொள்கிறேன். மேலும் இத்துடன் எங்களுடைய ஐடி விவரங்களையும் , பிரச்சனைக்கான புகைப்பட ஆதாரத்தையும் இணைத்துள்ளோம் . கிடப்பில் நிறைய விண்ணப்பங்கள் உள்ளதால் மிகவும் சிரமத்திற்கு ஆளாகி உள்ளோம். தாங்கள் விரைந்து இ-சேவை ஐடி  மீட்டு தருமாறு கேட்டுக்கொள்கிறோம். 
+
+E-SEVA OPERATOR ID -  TNEFASLM1132-01 
+E-SEVA LINKED OPERATOR NAME  : SATHISKUMAR THANGARAJ
+E-SEVA LINKED MOBILE NUMBER : 99948-73488
+MAIL ID - sathisitc@gmail.com
+
+sathisitc@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5004&k2=&ck=FVAmcTUSXizq6JKPNhqrqczl_4PkFNXW9tLrvrBByZ7oSsAtkJrRyh_vrRyE18bw-rY0c-4ujti1GUEcwURQzA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 63KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 08:27 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5003&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1rVo6z5WhpvLmV-vqGkN3SgSvMZy9JNE0LcTzyj0LGlyNDtVia2U8kVWXrK0ZaJTodJAts2z1dAZnyjr9SeCoNQ" >HDINS&#x2F;2025-05-01&#x2F;5003</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >TNEFAVEL0398-01 E District Id Was Locked</td><td class=" u-tC" headers="C68689017942316325" >TNEFAVEL0398-01 E District Id Was Locked today afternoon unlocked but evening i am checked id was Locked TNEFAVEL0398-01 Already I Informed Officially Griviance Madhavarin Mugavari and Official Efa Telegram Group Vellore in multiple times But Not Clear this Issue and Continuously found so this problem not solved so take action properly district level officially enable or not any other solution properly this Griviance contact person officially please considered proper solution</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5003&k2=&ck=xHJPN7EtnHNwNpCnqX0wgG53d6ViBHFThf8fIDgYDaelR3qW86Vy33bTqN-N9YQRLHuy6ge-cGAcNQji2otJYQ&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 42KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 08:20 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5002&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1kIiTTnIpXjOy4HRtuUGye6KNRSzIs4-R-N3iaViR4_erGGAN2d9aXR4VBhUmLCLWY6ly6LPSmI8YorNq5cr03g" >HDINS&#x2F;2025-05-01&#x2F;5002</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer2</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >PATTA WEB SITE IS NOT OPEN&#x27;
+
+MY ID TNEFATUT223-01</td><td class=" u-tC" headers="C68689017942316325" >SIR
+MY ID TNEFATUT223-01
+PATTA SITE IS NOT OPEN WHEN I OPEN THIS MESSAGE IS COMMINT
+Either User Account is Not Available &#x2F; User Account is Locked.
+
+Please contact e-District Administrator.
+
+tharanimarketing@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5002&k2=&ck=jlCBWOWKR7SoqCsKJclRZBN7h58izx_do_yEGQBhGo5zlWfBudXafizoWUSLBf7DaktnXOmiD331hg4TNFt3Lw&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 147KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 08:00 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-05-01&#x25;2F5001&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1PbFmybBczsu5x9l7NDoRw-QEEddATfkGCkbsTCpP-1MhHkREfy5uex9e_pGqGPzv3RLCQsmQCQN_XOkXPg0ipA" >HDINS&#x2F;2025-05-01&#x2F;5001</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >EDISTRICT ID LOCKED
+ID:TNEFACUD651-01</td><td class=" u-tC" headers="C68689017942316325" >HI MAM,
+
+ID:TNEFACUD651-01
+PSWD:cscari123
+DISTRICT :CUDDALORE
+TALUK :CUDDALORE
+ERROR MSESSAGE:
+Either User Account is Not Available &#x2F; User Account is Locked.
+
+Please contact e-District Administrator.
+
+PLESE UNLOCK MY ID AS SOON AS POSSIBLE MAM.
+
+sarumathi.gmca@gmail.com</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-05-01%2F5001&k2=&ck=_IYre40fHOeO43lyjCvPsiqCqifKu2pw4cR_IrMns9wzZNyMZGwCgWdlmDaIXHmtV5_vKYfbIoIUbYkKogtcPA&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 261KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >01-05-2025 07:44 AM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-04-30&#x25;2F4996&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1AZxoEBtkmNHHJmaJHVkH0KWKOlLxo99E1E6OQmEXtlqgRTUVS_rbsczOs_3cx8ktXUUBoEqnfvw8fni8YRYflQ" >HDINS&#x2F;2025-04-30&#x2F;4996</a></td><td class=" u-tC" headers="C68688549792316320" >Helpdesk_Operator7</td><td class=" u-tC" headers="C68688741921316322" >Others</td><td class=" u-tC" headers="C68688953195316324" >Already Applied Services Error - clear this problem edm.vpm@tn.gov.in</td><td class=" u-tC" headers="C68689017942316325" >PFA
+
+Scheme Name: Dr. Muthulakshmi Reddy Ammaiyar Ninaivu Intercaste Marriage Assistance Scheme
+
+Bride Name: NITHYA
+Bridegroom&#x27;s Name: KRISHNAKUMAR
+
+Bride CAN NO: 133070130959217
+Bridegroom&#x27;s CAN No: 133070130958530
+
+Bride Aadhar No: 907207986991
+Bridegroom&#x27;s Aadhar No:763874978955
+
+Issue:   Dear Applicant,You are not eligible to avail benefit under this scheme as you have already availed benefits under                       Moovalur Ramamirtham Ammaiyar Ninaivu Marriage Assistance Scheme.</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-04-30%2F4996&k2=&ck=DPj2qcuDTGmu2zDQvQzQO4vclAj8HLusplHKzHuHE9_fMadlo4VtEicdZvpxj0Uxh0LUOJyvj1IEGBa483OI6Q&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 52KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >30-04-2025 05:19 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr><tr class="rule_10991670065953229"><td class=" u-tC" headers="C68688328224316318" ><a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;ticket-received-form&#x3F;p87_request_number&#x3D;HDINS&#x25;2F2025-04-30&#x25;2F4995&#x26;session&#x3D;116639350395160&#x26;cs&#x3D;1tx4mSZOWh1cuzg_OdjyW9oyEB-InIKgd0nFMIkEHUA24ZqKen7f005f8iAS1E2gZHPPWMjMlCZ5g248vrA2siw" >HDINS&#x2F;2025-04-30&#x2F;4995</a></td><td class=" u-tC" headers="C68688549792316320" >Assistant System Engineer1</td><td class=" u-tC" headers="C68688741921316322" >Id activation request - Inspection</td><td class=" u-tC" headers="C68688953195316324" >PATTA TRANSFER ID UNLOCK kayalcsc2019@gmail.com</td><td class=" u-tC" headers="C68689017942316325" >SIR &#x2F; MADAM,
+                       MY PATTA TRANSFER ID : TNEFATKS402-01, 
+                      MY ID LOCKED PAST 2MONTHS KINDLY REQUEST MY ID UNLOCK
+                      MOBILE NUMBER : 9488614010</td><td class=" u-tC" headers="C68689114029316326" ><a href="apex_util.get_blob?s=116639350395160&a=1111&c=68689114029316326&p=86&k1=HDINS%2F2025-04-30%2F4995&k2=&ck=m6H41sXf3RSn5pTBEhVxIELG80IyA39TqTRXr6v-E-NnlFLVFKSdKgT__ALglvHxGkHrUJXCLZYewFIpPLiBeg&rt=IR" alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;" title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 260KB"><i class="fa fa-eye"></i></a></td><td class=" u-tC" headers="C68689286753316327" ></td><td class=" u-tC" headers="C68689733626316332" >30-04-2025 03:59 PM</td><td class=" u-tC" headers="C68689807555316333" >General Helpdesk Operator</td><td class=" u-tC" headers="C68690494626316339" >New</td></tr></table></div><div role="region" aria-label="Pagination&#x20;of&#x20;Helpdesk&#x20;Instructions&#x20;Open&#x20;Report" class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom"><ul class="a-IRR-pagination"><li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li><li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label">                   1 -                   50 of                1,246</span></li><li class="a-IRR-pagination-item"><button type="button" class="a-Button a-IRR-button a-IRR-button--pagination" aria-controls="R68688140851316316" title="Next" aria-label="Next" data-pagination="pgR_min_row=51max_rows=50rows_fetched=50"><span class="a-Icon icon-right-chevron" aria-hidden="true"></span></button></li></ul></div></div></div></div></div><div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget" id="R68688140851316316_sort_widget" style="display:none;"><h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column Actions</h1><ul role="toolbar" class="a-IRR-sortWidget-actions" id="R68688140851316316_sort_widget_actions"><li role="none" class="a-IRR-sortWidget-actions-item" id="R68688140851316316_sort_widget_action_up"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R68688140851316316_sort_widget_action_down"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R68688140851316316_sort_widget_action_hide"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R68688140851316316_sort_widget_action_break"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R68688140851316316_sort_widget_action_help"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help" aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true" class="a-Icon icon-irr-help"></span></button></li><li role="none" class="a-IRR-sortWidget-actions-item" id="R68688140851316316_sort_widget_action_computation"><button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute" aria-label="Compute" data-option="computation"><span aria-hidden="true" class="a-Icon icon-irr-calculator"></span></button></li></ul><div role="region" aria-label="Help" class="a-IRR-sortWidget-help" id="R68688140851316316_sort_widget_help"></div><div role="search" class="a-IRR-sortWidget-search" id="R68688140851316316_sort_widget_search"><label for="R68688140851316316_sort_widget_search_field"><span aria-hidden="true" class="a-IRR-sortWidget-searchLabel"></span><span class="u-vh">Search</span></label><input id="R68688140851316316_sort_widget_search_field" class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." /><div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows" id="R68688140851316316_sort_widget_rows"></div></div></div></div>
+    
+    
+</div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer" id="t_Footer" role="contentinfo">
+        <div class="t-Footer-body">
+          <div class="t-Footer-content"></div>
+          <div class="t-Footer-apex">
+            <div class="t-Footer-version"> </div>
+            <div class="t-Footer-customize"></div>
+            
+          </div>
+        </div>
+        <div class="t-Footer-top">
+          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="&#x2F;unD_jbwv6aBzhaNrw2hKToPI1ZKrj16bmsYjfX7bcck-0DIvEh_eqG-x-yRdhEPFxngLdhGEdpEVE7CcUUCm8w" /></form>
+
+
+<script nonce="7-3k5x9qpa0yNfoAsdIDLQ">
+var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
+var apex = {env: {APP_USER: "9840815850",APP_ID: "1111",APP_PAGE_ID: "86",APP_SESSION: "116639350395160",APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F",WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.2.0",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 21.2,NONCE: "7-3k5x9qpa0yNfoAsdIDLQ"},
+libVersions:{cropperJs:"1.6.2",domPurify:"3.1.6",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.29.0",oraclejet:"17.0.2",turndown:"7.2.0",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
+</script>
+<script nonce="7-3k5x9qpa0yNfoAsdIDLQ">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"triggeringElementType":"REGION","triggeringRegionId":"R60303254755331254","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"apexafterclosedialog","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"R60303254755331254",javascriptFunction:apex.da.refresh,"attribute01":"N","action":"NATIVE_REFRESH"}]},
+{"bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $( "#all_request" ).change(function() {
+ $ ('#P86_COM_ID').val('');
+    if($(this).is(":checked")){
+       
+         $("input:checkbox.emp_leave_request").prop('checked', true);
+         $("input:checkbox.emp_leave_request").each(function(){
+            var $this = $(this);
+             if($this.val())
+                        $ ('#P86_COM_ID').val($ ('#P86_COM_ID').val()+$this.val()+'|');
+        });
+    }
+    else{
+                
+
+          $("input:checkbox.emp_leave_request").prop('checked', false);
+          
+    }
+});
+
+$( "input:checkbox.emp_leave_request" ).change(function() {
+    var select_val = $ ('#P86_COM_ID').val();
+     if($(this).is(":checked")){
+                 
+
+         $ ('#P86_COM_ID').val(select_val+$(this).val()+'|');
+     }
+    else{
+                
+
+        $ ('#P86_COM_ID').val(select_val.replace($(this).val()+'|',''));
+        $("input:checkbox#all_request").prop('checked', false);
+    }
+});
+
+$( document ).ready(function() {
+    if ($('input:checkbox.emp_leave_request').not(':checked').length == 0) {
+         $("input:checkbox#all_request").prop('checked', true);
+    }
+});
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P86_ASSIGNED_TO","conditionElement":"P86_ASSIGNED_TO","triggeringConditionType":"NOT_NULL","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":true,actionList:[{"eventResult":false,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"BUTTON","affectedButtonId":"B80606160330295231",javascriptFunction:apex.da.disable,"action":"NATIVE_DISABLE"},{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"BUTTON","affectedButtonId":"B80606160330295231",javascriptFunction:apex.da.enable,"action":"NATIVE_ENABLE"}]},
+{"triggeringElementType":"REGION","triggeringRegionId":"R68688140851316316","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"apexafterrefresh","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $( "#all_request" ).change(function() {
+ $ ('#P86_COM_ID').val('');
+    if($(this).is(":checked")){
+       
+         $("input:checkbox.emp_leave_request").prop('checked', true);
+         $("input:checkbox.emp_leave_request").each(function(){
+            var $this = $(this);
+             $ ('#P86_COM_ID').val($ ('#P86_COM_ID').val().replace($this.val()+'|',''));
+            $ ('#P86_COM_ID').val($ ('#P86_COM_ID').val()+$this.val()+'|');
+        });
+    }
+    else{
+                
+
+          $("input:checkbox.emp_leave_request").prop('checked', false);
+          $("input:checkbox.emp_leave_request").each(function(){
+            var $this = $(this);
+            $ ('#P86_COM_ID').val($ ('#P86_COM_ID').val().replace($this.val()+'|',''));
+        });
+    }
+});
+
+$( "input:checkbox.emp_leave_request" ).change(function() {
+    var select_val = $ ('#P86_COM_ID').val();
+     if($(this).is(":checked")){
+                 
+
+         $ ('#P86_COM_ID').val(select_val+$(this).val()+'|');
+     }
+    else{
+                
+
+        $ ('#P86_COM_ID').val(select_val.replace($(this).val()+'|',''));
+        $("input:checkbox#all_request").prop('checked', false);
+    }
+});
+
+$( document ).ready(function() {
+    if ($('input:checkbox.emp_leave_request').not(':checked').length == 0) {
+         $("input:checkbox#all_request").prop('checked', true);
+    }
+});
+
+},"action":"NATIVE_JAVASCRIPT_CODE"}]}];
+}
+</script>
+
+  <script src="../assets/js/desktop_all.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/add.min.js"></script>
+    <script src="../assets/js/widget.treeView.min.js"></script>
+    <script src="../assets/js/widget.interactiveReport.min.js"></script>
+    <script src="../assets/js/widget.iconList.min.js"></script>
+    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+    <script src="../assets/js/widget.stickyWidget.min.js"></script>
+    <script src="../assets/js/item.Colorpicker.min.js"></script>
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+    <script src="../assets/js/jetCommonBundle.min.js"></script>
+    <script src="../assets/js/chartBundle.min.js"></script>
+
+<script nonce="7-3k5x9qpa0yNfoAsdIDLQ">
+apex.session.initTimeouts(180,{"idle_time_ms":3592000,"life_time_ms":26189000,"max_idle_time_ms":3600000},'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome','\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+apex.jQuery( function() {
+apex.page.init( this, function() {
+try {
+(function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+(function(){apex.jQuery('#R68688140851316316_ir').interactiveReport({"regionId":"R68688140851316316","helpLink":"wwv_flow_utilities.show_ir_help?p_app_id=1111\u0026p_worksheet_id=68688224416316317\u0026p_lang=en","downloadContentDisposition":"ATTACHMENT","lazyLoading":false,"ajaxIdentifier":"UkVHSU9OIFRZUEV-fjY4Njg4MTQwODUxMzE2MzE2\u002Fuvdk7HFPkPZUoRk1FTHE88xGMOdKyUmjE5Y1yrP-OcgrxTIBkg9pxmczqGUY6kQGc-6B5dxsDKqlg2dm6tAY_A"});})();
+} catch(e) {apex.debug.error(e)};
+apex.item.waitForDelayLoadItems().done(function() {
+try {
+(function(){apex.da.initDaEventList();
+apex.da.init();})();
+apex.theme42.initializePage.noSideCol();
+var anchorElements=document.querySelectorAll('td.u-tC[headers=DOWNLOAD-BLOB] a');
+
+    Array.from(anchorElements).forEach(function(elem){
+        elem.setAttribute('target','_blank');
+    })
+	    
+apex.page.warnOnUnsavedChanges();
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+};
+});
+});
+});apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' } );
+</script>
+
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

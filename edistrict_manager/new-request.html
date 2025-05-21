@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+<html class="no-js  page-7 app-E-DISTRICT-MANAGER-APPLICATION" lang="en" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Service Request</title>
+    <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
+    <link rel="icon" href="../assets/img/app-icon-32.png">
+    <style type="text/css">
+      @font-face {
+      font-family: 'FontApex';
+      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
+      url('../font/apex-5-icon-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;  
+      } 
+      @font-face { 
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Small.woff') format('woff'),
+      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      } 
+      .t-fht-thead {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      visibility: visible !important;
+      position: static !important;
+      }
+      .a-IRR-table tbody th {
+      position: static !important;
+      }
+      /* Disable APEX's fixed/sticky header */
+      .a-IRR-tableContainer .a-IRR-table tbody th {
+      position: static !important;
+      top: auto !important;
+      z-index: 0 !important;
+      }
+      /* Ensure whole table scrolls together */
+      .a-IRR-tableContainer {
+      overflow-x: auto !important;
+      overflow-y: auto !important;
+      max-height: 500px; /* Adjust height as needed */
+      }
+      .a-IRR-table {
+      table-layout: auto !important;
+      width: max-content !important;
+      display: table !important;
+      white-space: nowrap !important;
+      }
+    </style>
+    <style>
+      .t-fht-thead.js-stickyTableHeader {
+      display: none !important;
+      }
+      .a-IRR-table thead {
+      position: static !important;
+      visibility: visible !important;
+      }
+    </style>
+  <style nonce="boMERolZCauDDjQGgXz7Bg" >
+#attachment
+{
+    margin-top: -50px;
+    margin-left: 100px;
+    
+}
+.t-Report--stretch .t-Report-report, .t-Report--stretch .t-Report-wrap {
+
+    width: 85%;
+    margin-top: 0px;
+    margin-left: 50px;
+    position: relative
+   
+}
+#upload
+{
+   margin-left:20px; 
+}
+.t-Alert--page.t-Alert--success {
+    margin-top: 85px;
+    margin-right: 350px;
+}
+#P7_REQUIRED_MSG_DISPLAY{
+
+margin-top:-35px;
+color:red;
+}
+#P7_FILENAME
+{
+    margin-top:-15px;
+}
+#P7_FULL_DESCRIPTION
+{
+     margin-top:-10px;
+}
+#P7_SHORT
+{
+    min-height:0rem !important;
+}
+#P7_FILENAME_error
+{
+    margin-top:-15px;
+}
+#buttons
+{
+   margin-top: 150px;
+    background: transparent;
+    border: none;
+}
+#P7_DECLARATION_LABEL
+{
+    margin-left:-200px;
+    font-size:12px;
+}
+</style>
+
+  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" /><link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+</head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+<form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/service-request/114230090361743" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  enctype="multipart/form-data" autocomplete="off">
+<input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="7" id="pFlowStepId" /><input type="hidden" name="p_instance" value="114230090361743" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="NDQ2NDE0MzM5ODcwNDE2NzA1MDg4MjkwMDE0MTI4NjYwMzIwOTg&#x2F;yq9LfeWIqqxqNE50eVHloRQ0xPllEtbGMcKU2ySI5suf6JctODZwMSXRTpKug2pB4wOyX-X8S21IqwH_S4rWkA" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="e-district-manager-application&#x2F;service-request&#x2F;114230090361743" id="pContext" /><input type="hidden" value="44641433987041670508829001412866032098" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+     <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+     <P  class="t-Header-logo-link">TNEGA</P>
+      
+    </div>
+    <div class="t-Header-navBar">
+      <div class="t-Header-navBar--start"></div>
+      <div class="t-Header-navBar--center" style='color:black'><ul class="t-NavigationBar " id="8792244222964376"><li class="t-NavigationBar-item ">
+  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
+      <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" ></span><span class="t-Button-label">Hello Bakiyalakshmi V !
+</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414"><ul><li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=1111&p_session_id=114230090361743" title="" target="">Sign Out</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D114230090361743%26dialogCs%3D7pXDxNJV74dLDdk1vSN5xl9U9UuGW5WLOCT7GSIHCbJtmuHOVrUMrrZGZJ5SQFMdbY-DDp4Ia_X8b6xNCkq_Xg&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">Change Password</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D114230090361743%26dialogCs%3DrMGdIR7vr0hwAnI4-d6IuDb5NG0cwcroqOlyAGE_uHcT7Bi5tB-6YrmJBSNe4vNW4z-EVLOmeIZSsvip7t50vA&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">My Profile</a></li></ul></div></li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+    <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label">Last Logged in: 04-05-2025 09:58 PM</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item is-active " aria-current="page">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="/ords/r/edmdev/e-district-manager-application/home?session=114230090361743" title="" target="">
+    <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true" ></span><span class="t-Button-label"> </span><span class="t-Button-badge">0</span>
+  </a>
+</li></ul></div>
+      <div class="t-Header-navBar--end" ></div>
+    </div>
+  </div>
+  <div class="t-Header-nav"></div>
+</header>
+  <div class="t-Body">
+<div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+  <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic" id="t_TreeNav" data-id="7_tree" aria-label="Main Navigation">
+    <ul>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=114230090361743&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w" title="" style="display: none" target="">Home</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-home"></span>
+      <span class="a-TreeView-label">Home</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/all-request4?session=114230090361743" title="" style="display: none" target="">All Request</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">All Request</span>
+    </div>
+  </div>
+</li><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-file-edit" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/service-request?p7_new=0&session=114230090361743&cs=110BX6RMm3yB5UIdQpCi-G5IFDb-mDxd9KP8m4AyaGhFOf22_34EnYHcmZZSc8xWEf4_d5vM9pqBG-FOCQqxuNA" title="" style="display: none" target="">New Request</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-file-edit"></span>
+      <span class="a-TreeView-label">New Request</span>
+    </div>
+  </div>
+</li>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-clock" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/progress-request1?session=114230090361743" title="" style="display: none" target="">In-Progress Request [ 2 ]
+
+
+
+
+
+
+
+
+</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-clipboard-clock"></span>
+      <span class="a-TreeView-label">In-Progress Request [ 2 ]
+
+
+
+
+
+
+
+
+</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-user" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/on-hold-request?session=114230090361743" title="" style="display: none" target="">On-Hold Request [ 0 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-clipboard-user"></span>
+      <span class="a-TreeView-label">On-Hold Request [ 0 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-check" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/resolved-request1?session=114230090361743" title="" style="display: none" target="">Resolved Request [ 51 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-clipboard-check"></span>
+      <span class="a-TreeView-label">Resolved Request [ 51 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-check-alt" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/closed-request1?session=114230090361743" title="" style="display: none" target="">Closed Request [ 0]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-clipboard-check-alt"></span>
+      <span class="a-TreeView-label">Closed Request [ 0]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/reopned-request?session=114230090361743" title="" style="display: none" target="">Reopened Request [ 1 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Reopened Request [ 1 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-server-user" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/operators-details?session=114230090361743" title="" style="display: none" target="">Operators Details</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-server-user"></span>
+      <span class="a-TreeView-label">Operators Details</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/instructions-received-report?session=114230090361743" title="" style="display: none" target="">Instructions Received Report [ 1 ]</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">Instructions Received Report [ 1 ]</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/instructions-received-tickets?session=114230090361743" title="" style="display: none" target="">Helpdesk Tickets</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o "></span>
+      <span class="a-TreeView-label">Helpdesk Tickets</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-form?session=114230090361743" title="" style="display: none" target="">eSevai Operator Change Request Form</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-file"></span>
+      <span class="a-TreeView-label">eSevai Operator Change Request Form</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
+  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-report?session=114230090361743" title="" style="display: none" target="">eSevai Operator Change Request Report</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-table"></span>
+      <span class="a-TreeView-label">eSevai Operator Change Request Report</span>
+    </div>
+  </div>
+</li>    </ul>
+  </div>
+</div>
+<script>
+(() => {
+  const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
+        nav  = document.getElementById('t_TreeNav').classList,
+        body = document.getElementById('t_PageBody');
+  if ( !sessionStorage.getItem( pref ) ) { sessionStorage.setItem( pref, !nav.contains('js-defaultCollapsed') ); }
+  if ( nav.contains('js-navCollapsed--default') ) {
+      body?.classList.add('js-navCollapsed--icons');
+      if ( sessionStorage.getItem( pref ) === "false" ) { body?.classList.add('js-navCollapsed'); }
+  }
+  if ( sessionStorage.getItem( pref ) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
+  for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
+      label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+  }
+})();
+</script>
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"></div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main id="main" class="t-Body-mainContent">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div class="container">
+<div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div id="R13099627714928773" class="t-Form--leftLabels"  ><div class="container">
+<div class="row ">
+<div class="col col-4  col-start" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2" id="P7_LOCATION_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_LOCATION" id="P7_LOCATION_LABEL" class="t-Form-label">Taluk  </label>
+</div><div class="t-Form-inputContainer col col-2">
+  <div class="t-Form-itemWrapper">
+    <select 
+      id="P7_LOCATION"
+      name="P7_LOCATION"
+      class="selectlist ">
+<option value="">--Select Taluk--</option>
+</select>
+
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_LOCATION_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div></div><div class="col col-3  " ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-5 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only" id="P7_REQUEST_CREATED_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P7_REQUEST_CREATED" id="P7_REQUEST_CREATED_LABEL" class="t-Form-label">Requested Created</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><input type="hidden" id="P7_REQUEST_CREATED" name="P7_REQUEST_CREATED" value="04-05-2025 11:04 PM"><input type="hidden" data-for="P7_REQUEST_CREATED" value="sEtl44hyAMjPy8WA8Heqhaj3ygR1Zt838uC1pY7-RYEObauksNZbRaew2kwiBKYYw3DYAVg1AKUTcIpezHHrZw"><span id="P7_REQUEST_CREATED_DISPLAY"  class="display_only&#x20;apex-item-display-only"  data-escape="true">04-05-2025 11:04 PM</span></div><span id="P7_REQUEST_CREATED_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
+</div><div class="row ">
+<div class="col col-5  col-start" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2" id="P7_OPERATOR_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_OPERATOR" id="P7_OPERATOR_LABEL" class="t-Form-label">Operator  </label>
+</div><div class="t-Form-inputContainer col col-3">
+  <div class="t-Form-itemWrapper">
+    <select 
+      id="P7_OPERATOR"
+      name="P7_OPERATOR"
+      class="selectlist ">
+<option value="">--Select Operator--</option>
+</select>
+
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_OPERATOR_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div></div><div class="col col-2  " ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-5 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only" id="P7_REQUESTED_BY_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P7_REQUESTED_BY" id="P7_REQUESTED_BY_LABEL" class="t-Form-label">Requested By</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><input type="hidden" id="P7_REQUESTED_BY" name="P7_REQUESTED_BY" value="Bakiyalakshmi V"><input type="hidden" data-for="P7_REQUESTED_BY" value="sIiaCAkw3OrlfoIuLOWNxyrhtuO_9Kmm178YBmGtqV0R-oUGYDuoa3FWic7Dgm22cgPw_rQqpZrV_D88fVgWJw"><span id="P7_REQUESTED_BY_DISPLAY"  class="display_only&#x20;apex-item-display-only"  data-escape="true">Bakiyalakshmi V</span></div><span id="P7_REQUESTED_BY_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P7_OPERATOR_MOBILE" id="P7_OPERATOR_MOBILE" value=""><input type="hidden" data-for="P7_OPERATOR_MOBILE" value="_OMN3QcNVJaHxQLzOnWO2QGXbTeD5AlgO9quIdP8V7O3ZSgfiIm7XhCu-tdcTJzJV1WZ0VKOXpNUdk3QmDyERQ"></div>
+</div><div class="row ">
+<div class="col col-5  col-start" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2" id="P7_ISSUE_TYPE_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_ISSUE_TYPE" id="P7_ISSUE_TYPE_LABEL" class="t-Form-label">Issue Type  </label>
+</div><div class="t-Form-inputContainer col col-3">
+  <div class="t-Form-itemWrapper">
+    <select 
+      id="P7_ISSUE_TYPE"
+      name="P7_ISSUE_TYPE"
+      class="selectlist ">
+<option value="">--Select Issue Type--</option>
+</select>
+
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_ISSUE_TYPE_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div></div><div class="col col-2  " ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-5 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only" id="P7_REQUESTED_DISTRICT_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P7_REQUESTED_DISTRICT" id="P7_REQUESTED_DISTRICT_LABEL" class="t-Form-label">Requested District</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><input type="hidden" id="P7_REQUESTED_DISTRICT" name="P7_REQUESTED_DISTRICT" value="Chengalpattu"><input type="hidden" data-for="P7_REQUESTED_DISTRICT" value="eJJRTgaX1_Hdk6_yOAYJYcCWsXMTju4ZUXW82jWLXsArCOfM3BV_oq_HtmuoxsFShtOrgMxE994j3xXiRpzw3Q"><span id="P7_REQUESTED_DISTRICT_DISPLAY"  class="display_only&#x20;apex-item-display-only"  data-escape="true">Chengalpattu</span></div><span id="P7_REQUESTED_DISTRICT_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
+</div><div class="row ">
+<div class="col col-5  col-start" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2" id="P7_SHORT_DESCRIPTION_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_SHORT_DESCRIPTION" id="P7_SHORT_DESCRIPTION_LABEL" class="t-Form-label">Sub-category  </label>
+</div><div class="t-Form-inputContainer col col-3">
+  <div class="t-Form-itemWrapper">
+    <select 
+      id="P7_SHORT_DESCRIPTION"
+      name="P7_SHORT_DESCRIPTION"
+      class="selectlist ">
+<option value="">--Select Sub Category--</option>
+</select>
+
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_SHORT_DESCRIPTION_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div></div><div class="col col-2  " ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-5 apex-col-auto col-end" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2" id="P7_REQUESTED_GROUP_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_REQUESTED_GROUP" id="P7_REQUESTED_GROUP_LABEL" class="t-Form-label">Requested Group  </label>
+</div><div class="t-Form-inputContainer col col-3">
+  <div class="t-Form-itemWrapper">
+    <select multiple="multiple"
+      id="P7_REQUESTED_GROUP"
+      name="P7_REQUESTED_GROUP"
+      class="selectlist ">
+</select>
+
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_REQUESTED_GROUP_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div></div>
+</div><div class="row ">
+<div class="col col-6  col-start" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2" id="P7_IMPACTED_APPLICATION_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_IMPACTED_APPLICATION" id="P7_IMPACTED_APPLICATION_LABEL" class="t-Form-label">Impacted Services  </label>
+</div><div class="t-Form-inputContainer col col-4">
+  <div class="t-Form-itemWrapper">
+    <select 
+      id="P7_IMPACTED_APPLICATION"
+      name="P7_IMPACTED_APPLICATION"
+      class="selectlist ">
+<option value="">--Select Impacted Services--</option>
+</select>
+
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_IMPACTED_APPLICATION_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div><input type="hidden" name="P7_REQUEST_NUMBER" id="P7_REQUEST_NUMBER" value=""><input type="hidden" data-for="P7_REQUEST_NUMBER" value="9J-Ei34yKijNJnJqG6iptb8gEk0j2XohNttg1V8ptSihkdbUmNkJQq9x8R2itFV6pZgj_wSzXcauaH6eUvWhHw"></div><div class="col col-1  " ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-4  " ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value plugin-be.ctb.select2" id="P7_CONTACT_TYPE_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P7_CONTACT_TYPE" id="P7_CONTACT_TYPE_LABEL" class="t-Form-label">Contact Type</label>
+</div>
+<div class="t-Form-inputContainer col col-2"><div class="t-Form-itemWrapper">
+    <select 
+      id="P7_CONTACT_TYPE"
+      name="P7_CONTACT_TYPE"
+      class="selectlist ">
+<option value="">--Select Contact Type--</option>
+<option value="Phone" selected="selected" >Phone</option>
+<option value="Email">Email</option>
+<option value="In&#x20;Person">In Person</option>
+</select>
+</div><span id="P7_CONTACT_TYPE_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
+</div><div class="row ">
+<div class="col col-7  col-start" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper apex-item-wrapper--textarea" id="P7_SHORT_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_SHORT" id="P7_SHORT_LABEL" class="t-Form-label">Short Description  </label>
+</div><div class="t-Form-inputContainer col col-5">
+  <div class="t-Form-itemWrapper"><div class="apex-item-group apex-item-group--textarea"><textarea name="P7_SHORT" rows=".5" cols="70" maxlength="50"  id="P7_SHORT" class="textarea&#x20;apex-item-textarea"  data-counter="true" data-max-char="50" ></textarea><div id="P7_SHORT_CHAR_COUNT" style="display:none;" class="apex-item-textarea-counter"><span id="P7_SHORT_CHAR_COUNTER" class="apex-item-textarea-counter--length">0</span> of <span class="apex-item-textarea-counter--size">50</span>
+</div></div>
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_SHORT_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div></div><div class="col col-4  " ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--file" id="P7_UPLOAD_CONTAINER"><div class="t-Form-labelContainer col col-2">
+<label for="P7_UPLOAD" id="P7_UPLOAD_LABEL" class="t-Form-label">Attachment</label>
+</div>
+<div class="t-Form-inputContainer col col-2"><div class="t-Form-itemWrapper"><a-file-upload  id="P7_UPLOAD" name="P7_UPLOAD"  upload-type="FILE" display-style="INLINE" size="100" label="Choose&#x20;Files" description="Select&#x20;or&#x20;drop&#x20;files&#x20;here." max-file-size="3072" download-link="true" multiple="true"><input type="file"  id="P7_UPLOAD_input"  aria-labelledby="P7_UPLOAD_LABEL"  class="u-vh"  /><div  class="a-FileDrop&#x20;a-FileDrop--inline" >
+                    <div class="a-FileDrop-icon">
+                        <span  class="a-Icon&#x20;icon-file-browse"  aria-hidden="true">
+                        </span>
+                    </div> <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose Files</span><span class="a-FileDrop-description">Select or drop files here.</span></div><div class="a-FileDrop-action"><span class="a-Button a-FileDrop-action-choose a-Button--hot">Choose Files</span></div></div></a-file-upload></div><span id="P7_UPLOAD_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-1  col-end" ><button onclick="apex.submit({request:&#x27;Upload&#x27;,validate:true});" class="t-Button t-Button--small&#x20;t-Button--primary&#x20;t-Button--padTop" type="button"  id="upload"><span class="t-Button-label">Upload</span></button></div>
+</div><div class="row ">
+<div class="col col-7  col-start" ><div class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper apex-item-wrapper--textarea" id="P7_FULL_DESCRIPTION_CONTAINER"><div class="t-Form-labelContainer col col-2">
+  <label for="P7_FULL_DESCRIPTION" id="P7_FULL_DESCRIPTION_LABEL" class="t-Form-label">Full Description  </label>
+</div><div class="t-Form-inputContainer col col-5">
+  <div class="t-Form-itemWrapper"><div class="apex-item-group apex-item-group--textarea"><textarea name="P7_FULL_DESCRIPTION" rows="5" cols="70" maxlength="5000"  id="P7_FULL_DESCRIPTION" class="textarea&#x20;apex-item-textarea"  data-counter="true" data-max-char="5000" ></textarea><div id="P7_FULL_DESCRIPTION_CHAR_COUNT" style="display:none;" class="apex-item-textarea-counter"><span id="P7_FULL_DESCRIPTION_CHAR_COUNTER" class="apex-item-textarea-counter--length">0</span> of <span class="apex-item-textarea-counter--size">5000</span>
+</div></div>
+  </div>
+  <div class="t-Form-itemAssistance">
+    <span id="P7_FULL_DESCRIPTION_error_placeholder" class="a-Form-error" data-template-id="8676937166964195_ET"></span>
+    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+  </div>
+  
+</div></div></div><div class="col col-2  " ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-3 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-placeholder apex-item-wrapper--text-field" id="P7_FILENAME_CONTAINER"><div class="t-Form-labelContainer col col-0">
+<label for="P7_FILENAME" id="P7_FILENAME_LABEL" class="t-Form-label">File Name</label>
+</div>
+<div class="t-Form-inputContainer col col-3"><div class="t-Form-itemWrapper"><input type="text"  id="P7_FILENAME" name="P7_FILENAME" placeholder="FileName" class="text_field&#x20;apex-item-text" value="" size="30" data-enter-submit="false" data-is-page-item-type="true"  /></div><span id="P7_FILENAME_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div><input type="hidden" name="P7_ASSIGNMENT_GROUP" id="P7_ASSIGNMENT_GROUP" value=""></div>
+</div><div class="row ">
+<div class="col col-7  col-start" ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-5 apex-col-auto col-end" ><div class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noUI t-Region--scrollBody" id="attachment"  role="banner" aria-label="New" >
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+    <h2 class="t-Region-title" id="attachment_heading" data-apex-heading>New</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="t-Region-orderBy"></div>
+     <div id="report_37316341060994133_catch"><span class="nodatafound"></span>
+</div>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+<input type="hidden" name="P7_ASSIGNED_TO" id="P7_ASSIGNED_TO" value=""><input type="hidden" data-for="P7_ASSIGNED_TO" value="430JRz-bpu1jw6_usAIh5t5GfLuVVzypGkxuiXelekOiXklPzSh0mfMqdwsQtzopi0gotFOnR27Sy6W4M655WQ"><input type="hidden" name="P7_ADDITIONAL_INFORMATION" id="P7_ADDITIONAL_INFORMATION" value=""><input type="hidden" data-for="P7_ADDITIONAL_INFORMATION" value="az9hMz1ASn-uwIvOSRpPGt0sFrV3W6IptbElooWWaKo-Yng1Cq4q_RRQh3OTS4VWrbCujzXHE2vu9rzSHmN6AA"><input type="hidden" name="P7_FILE_NAME" id="P7_FILE_NAME" value=""><input type="hidden" name="P7_ATTACH_ID" id="P7_ATTACH_ID" value=""><input type="hidden" name="P7_NEW" id="P7_NEW" value="0"><input type="hidden" name="P7_HELPDESK_NOTES" id="P7_HELPDESK_NOTES" value=""><input type="hidden" name="P7_HISTORY" id="P7_HISTORY" value=""><input type="hidden" name="P7_ATTACH_CHARSET" id="P7_ATTACH_CHARSET" value=""><input type="hidden" name="P7_STATUS" id="P7_STATUS" value=""><input type="hidden" name="P7_CREATED_BY" id="P7_CREATED_BY" value=""><input type="hidden" name="P7_CREATED_DATE" id="P7_CREATED_DATE" value=""><input type="hidden" name="P7_UPDATED_BY" id="P7_UPDATED_BY" value=""><input type="hidden" name="P7_UPDATED_DATE" id="P7_UPDATED_DATE" value=""><input type="hidden" name="P7_REQUEST_STATUS" id="P7_REQUEST_STATUS" value=""><input type="hidden" name="P7_PRODUCT_RATING" id="P7_PRODUCT_RATING" value="file"></div>
+</div>
+</div></div></div>
+</div><div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-ButtonRegion t-Form--floatLeft " id="buttons"  role="region" aria-label="Buttons" >
+  <div class="t-ButtonRegion-wrap">
+    <div class="t-ButtonRegion-col t-ButtonRegion-col--left"><div class="t-ButtonRegion-buttons"></div></div>
+    <div class="t-ButtonRegion-col t-ButtonRegion-col--content">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><button onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome?clear=1\u0026session=114230090361743\u0026cs=3U35kyjnxzCsykdgvbwtMvovRQW5atafNCKbCDwGwVJg7GiKDGMWB1JOVNAyfh2VV1ugphjmOcsAYEUR-FSauUw&#x27;);" class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--warning" type="button"  id="B13120778616928803"><span class="t-Button-label">Exit</span></button></td><td align="right"><button onclick="apex.submit({request:&#x27;CREATE&#x27;,validate:true});" class="t-Button t-Button--success" type="button"  id="B13122934980928808"><span class="t-Button-label">Submit</span></button></td></tr></table>
+      <div class="t-ButtonRegion-buttons"></div>
+      
+    </div>
+    <div class="t-ButtonRegion-col t-ButtonRegion-col--right"><div class="t-ButtonRegion-buttons"></div></div>
+  </div>
+</div></div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer" id="t_Footer" role="contentinfo">
+        <div class="t-Footer-body">
+          <div class="t-Footer-content"></div>
+          <div class="t-Footer-apex">
+            <div class="t-Footer-version"> </div>
+            <div class="t-Footer-customize"></div>
+            
+          </div>
+        </div>
+        <div class="t-Footer-top">
+          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDdfUkVRVUVTVF9DUkVBVEVEOlA3X1JFUVVFU1RFRF9CWTpQN19PUEVSQVRPUl9N.,T0JJTEU6UDdfUkVRVUVTVEVEX0RJU1RSSUNUOlA3X1JFUVVFU1RfTlVNQkVSOlA3.,X0FTU0lHTkVEX1RPOlA3X0FERElUSU9OQUxfSU5GT1JNQVRJT04&#x2F;Hsr2i1MDqZnbZxXPtytrapZqY48TcSPipCubKx0BPYbbUk5aqP4DbH-Oqg44OHrXSwG8h-NAE_2t9XDaRYw2nQ" /></form>
+
+
+<script nonce="boMERolZCauDDjQGgXz7Bg">
+var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
+var apex = {env: {APP_USER: "9344712827",APP_ID: "1111",APP_PAGE_ID: "7",APP_SESSION: "114230090361743",APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F",WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.2.0",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 21.2,NONCE: "boMERolZCauDDjQGgXz7Bg"},
+libVersions:{cropperJs:"1.6.2",domPurify:"3.1.6",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.29.0",oraclejet:"17.0.2",turndown:"7.2.0",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
+</script>
+<script nonce="boMERolZCauDDjQGgXz7Bg" src="/i/24.2.0/libraries/apex/minified/desktop_all.min.js?v=24.2.0"></script>
+<script nonce="boMERolZCauDDjQGgXz7Bg" src="wwv_flow.js_messages?p_app_id=1111&p_lang=en&p_version=24.2.0-39529515031887&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
+<script nonce="boMERolZCauDDjQGgXz7Bg" src="wwv_flow.js_dialogs?p_app_id=1111&p_version=24.2.0-39529515031887"></script>
+
+<script nonce="boMERolZCauDDjQGgXz7Bg">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"triggeringElementType":"ITEM","triggeringElement":"P7_FILE_NAME","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"REEgVFlQRX5-MzczMTc0ODMxODI5OTQxNDQ\u002FGPFwXnTey02wt3QoGDqLnqjiwVhbZL4tsgejl3sOqw7lnryp7Eok_MERbd5IvtA7QWjTJdZ-4pYKj9RmyQ_6Mg","attribute01":"#P7_FILE_NAME,#P7_ATTACH_ID,#P7_REQUEST_NUMBER","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"attachment",javascriptFunction:apex.da.refresh,"attribute01":"N","action":"NATIVE_REFRESH"}]},
+{"conditionElement":"P7_NEW","triggeringConditionType":"EQUALS","triggeringConditionExpression":"0","bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P7_LOCATION,P7_OPERATOR,P7_ISSUE_TYPE,P7_SHORT_DESCRIPTION,P7_IMPACTED_APPLICATION,P7_REQUESTED_GROUP,P7_CONTACT_TYPE,P7_PRIORITY,P7_ASSIGNMENT_GROUP,P7_SHORT,P7_FULL_DESCRIPTION,P7_ASSIGNED_TO",javascriptFunction:apex.da.clear,"action":"NATIVE_CLEAR"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P7_ISSUE_TYPE","conditionElement":"P7_ISSUE_TYPE","triggeringConditionType":"NOT_EQUALS","triggeringConditionExpression":"CSC Password Reset Issue","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":true,actionList:[{"eventResult":false,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P7_IMPACTED_APPLICATION",javascriptFunction:apex.da.hide,"action":"NATIVE_HIDE"},{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P7_IMPACTED_APPLICATION",javascriptFunction:apex.da.show,"action":"NATIVE_SHOW"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P7_DECLARATION","conditionElement":"P7_DECLARATION","triggeringConditionType":"EQUALS","triggeringConditionExpression":"N","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":false,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"BUTTON","affectedButtonId":"B13122934980928808",javascriptFunction:apex.da.enable,"action":"NATIVE_ENABLE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"BUTTON","affectedButtonId":"B13122934980928808",javascriptFunction:apex.da.disable,"action":"NATIVE_DISABLE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P7_REQUESTED_GROUP","conditionElement":"P7_REQUESTED_GROUP","triggeringConditionType":"IN_LIST","triggeringConditionExpression":"From Citizen,From Department,From EDM","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":true,actionList:[{"eventResult":false,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P7_OPERATOR",javascriptFunction:apex.da.enable,"action":"NATIVE_ENABLE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P7_OPERATOR",javascriptFunction:apex.da.clear,"action":"NATIVE_CLEAR"},{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,"affectedElementsType":"ITEM","affectedElements":"P7_OPERATOR",javascriptFunction:apex.da.disable,"action":"NATIVE_DISABLE"}]}];
+}
+</script>
+
+<script src="../assets/js/desktop_all.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/add.min.js"></script>
+    <script src="../assets/js/widget.treeView.min.js"></script>
+    <script src="../assets/js/widget.interactiveReport.min.js"></script>
+    <script src="../assets/js/widget.iconList.min.js"></script>
+    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+    <script src="../assets/js/widget.stickyWidget.min.js"></script>
+    <script src="../assets/js/item.Colorpicker.min.js"></script>
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+    <script src="../assets/js/jetCommonBundle.min.js"></script>
+    <script src="../assets/js/chartBundle.min.js"></script>
+
+
+<script nonce="boMERolZCauDDjQGgXz7Bg">
+apex.session.initTimeouts(180,{"idle_time_ms":3588000,"life_time_ms":24848000,"max_idle_time_ms":3600000},'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome','\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+apex.jQuery( function() {
+apex.page.init( this, function() {
+try {
+(function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+(function(){
+      $("#P7_LOCATION").select2({"placeholder":"--Select Taluk--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},
+        ajax: {
+          url: "wwv_flow.show",
+          type: "POST",
+          dataType: "json",
+          delay: 400,
+          data: function(params) {
+                  return {
+                    p_flow_id: $("#pFlowId").val(),
+                    p_flow_step_id: $("#pFlowStepId").val(),
+                    p_instance: $("#pInstance").val(),
+                    x01: params.term,
+                    x02: params.page,
+                    x03: "LAZY_LOAD",
+                    p_request: "PLUGIN=SVRFTSBUWVBFfjUxMjB-MTMxMDA3NzA1NDg5Mjg3ODY/UdbWy9W9eDNI7r3a_hNJRNjivg9rGKAzkL-Itld86HatVJ8LA7UbJE3TUBBV4driMnjsZsNyEXyOaE8foEk_cQ"
+                  };
+                },
+          processResults: function(data, params) {
+                            var select2Data = $.map(data.row, function(obj) {
+                              obj.id = obj.R;
+                              obj.text = obj.D;
+                              return obj;
+                            });
+
+                            return {
+                              results: select2Data,
+                              pagination: { more: data.more }
+                            };
+                          },
+          cache: true
+        },
+        escapeMarkup: function(markup) { return markup; },"width":"200px"});
+        $("#P7_LOCATION").on(
+          "select2:select",
+          function(){ $(this).focus(); }
+        );
+      beCtbSelect2.events.bind("#P7_LOCATION");})();
+(function(){
+      $("#P7_OPERATOR").select2({"placeholder":"--Select Operator--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},"width":"300"});
+        $("#P7_OPERATOR").on(
+          "select2:select",
+          function(){ $(this).focus(); }
+        );
+      $("#P7_LOCATION").on("change", function(e) {
+        var item = $("#P7_OPERATOR");
+        if ($("#P7_LOCATION").val() === "") {
+          item.val("").trigger("change");
+        } else {
+          apex.server.plugin(
+            "SVRFTSBUWVBFfjUxMjB-MTMxMDAzMTE0NzE5Mjg3ODQ/ILCz8TwNt79DO-MWuw4gGqcML1xH6UeuQqgKotPzjE_tjSqvOc2A34BZAtfwBR_e2IkDmpeVDqnZPdXPZsbFkQ",
+            { pageItems: "#P7_LOCATION,#P7_LOCATION" },
+            { refreshObject: "#P7_OPERATOR",
+              loadingIndicator: "#P7_OPERATOR",
+              loadingIndicatorPosition: "after",
+              dataType: "text",
+              success: function(pData) {
+                         var item = $("#P7_OPERATOR");
+                         item.html(pData);
+                         item.val("").trigger("change");
+                       }
+            });}});
+      beCtbSelect2.events.bind("#P7_OPERATOR");})();
+(function(){
+      $("#P7_ISSUE_TYPE").select2({"placeholder":"--Select Issue Type--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},
+        ajax: {
+          url: "wwv_flow.show",
+          type: "POST",
+          dataType: "json",
+          delay: 400,
+          data: function(params) {
+                  return {
+                    p_flow_id: $("#pFlowId").val(),
+                    p_flow_step_id: $("#pFlowStepId").val(),
+                    p_instance: $("#pInstance").val(),
+                    x01: params.term,
+                    x02: params.page,
+                    x03: "LAZY_LOAD",
+                    p_request: "PLUGIN=SVRFTSBUWVBFfjUxMjB-MTMxMDExOTA5MTQ5Mjg3ODY/OshWKwBAYwfD1xIcEvugdNWz5YTtAaytNMp3d38g36_oQA9v8GarY8hJgYbgZgsMQPjVuweMhcK6ZgrDyfFWCg"
+                  };
+                },
+          processResults: function(data, params) {
+                            var select2Data = $.map(data.row, function(obj) {
+                              obj.id = obj.R;
+                              obj.text = obj.D;
+                              return obj;
+                            });
+
+                            return {
+                              results: select2Data,
+                              pagination: { more: data.more }
+                            };
+                          },
+          cache: true
+        },
+        escapeMarkup: function(markup) { return markup; },"width":"250"});
+        $("#P7_ISSUE_TYPE").on(
+          "select2:select",
+          function(){ $(this).focus(); }
+        );
+      beCtbSelect2.events.bind("#P7_ISSUE_TYPE");})();
+(function(){
+      $("#P7_SHORT_DESCRIPTION").select2({"placeholder":"--Select Sub Category--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},
+        ajax: {
+          url: "wwv_flow.show",
+          type: "POST",
+          dataType: "json",
+          delay: 400,
+          data: function(params) {
+                  return {
+                    p_flow_id: $("#pFlowId").val(),
+                    p_flow_step_id: $("#pFlowStepId").val(),
+                    p_instance: $("#pInstance").val(),
+                    x01: params.term,
+                    x02: params.page,
+                    x03: "LAZY_LOAD",
+                    p_request: "PLUGIN=SVRFTSBUWVBFfjUxMjB-MTMxMDIzOTA4MTg5Mjg3ODY/rnXhrsPhC_XQVaLHQXNWXXYDDmGZr2lG3KA8PEsBimYcXK5lS7cu6ahlqXBvdRo-zEqcPGmAzW24T8wi9OQ7WQ"
+                  };
+                },
+          processResults: function(data, params) {
+                            var select2Data = $.map(data.row, function(obj) {
+                              obj.id = obj.R;
+                              obj.text = obj.D;
+                              return obj;
+                            });
+
+                            return {
+                              results: select2Data,
+                              pagination: { more: data.more }
+                            };
+                          },
+          cache: true
+        },
+        escapeMarkup: function(markup) { return markup; },"width":"250px"});
+        $("#P7_SHORT_DESCRIPTION").on(
+          "select2:select",
+          function(){ $(this).focus(); }
+        );
+      $("#P7_ISSUE_TYPE").on("change", function(e) {
+        var item = $("#P7_SHORT_DESCRIPTION");
+        if ($("#P7_ISSUE_TYPE").val() === "") {
+          item.val("").trigger("change");
+        } else {
+          apex.server.plugin(
+            "SVRFTSBUWVBFfjUxMjB-MTMxMDIzOTA4MTg5Mjg3ODY/rnXhrsPhC_XQVaLHQXNWXXYDDmGZr2lG3KA8PEsBimYcXK5lS7cu6ahlqXBvdRo-zEqcPGmAzW24T8wi9OQ7WQ",
+            { pageItems: "#P7_ISSUE_TYPE,#P7_ISSUE_TYPE" },
+            { refreshObject: "#P7_SHORT_DESCRIPTION",
+              loadingIndicator: "#P7_SHORT_DESCRIPTION",
+              loadingIndicatorPosition: "after",
+              dataType: "text",
+              success: function(pData) {
+                         var item = $("#P7_SHORT_DESCRIPTION");
+                         item.html(pData);
+                         item.val("").trigger("change");
+                       }
+            });}});
+      beCtbSelect2.events.bind("#P7_SHORT_DESCRIPTION");})();
+(function(){
+      $("#P7_REQUESTED_GROUP").select2({"placeholder":"--Select  Requested Group--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},
+        ajax: {
+          url: "wwv_flow.show",
+          type: "POST",
+          dataType: "json",
+          delay: 400,
+          data: function(params) {
+                  return {
+                    p_flow_id: $("#pFlowId").val(),
+                    p_flow_step_id: $("#pFlowStepId").val(),
+                    p_instance: $("#pInstance").val(),
+                    x01: params.term,
+                    x02: params.page,
+                    x03: "LAZY_LOAD",
+                    p_request: "PLUGIN=SVRFTSBUWVBFfjUxMjB-MTMxMDc1NDg0NTE5Mjg3OTI/Y0HifCOaOojphagCeG-YS9_LahZIWzrtpkTa_AZ7jYWkZaPr_8F8hLtD2xLd9k41whiAP0WVs3nCuSgohAORcw"
+                  };
+                },
+          processResults: function(data, params) {
+                            var select2Data = $.map(data.row, function(obj) {
+                              obj.id = obj.R;
+                              obj.text = obj.D;
+                              return obj;
+                            });
+
+                            return {
+                              results: select2Data,
+                              pagination: { more: data.more }
+                            };
+                          },
+          cache: true
+        },
+        escapeMarkup: function(markup) { return markup; },"width":"300px"});
+      beCtbSelect2.events.bind("#P7_REQUESTED_GROUP");})();
+(function(){
+      $("#P7_IMPACTED_APPLICATION").select2({"placeholder":"--Select Impacted Services--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},
+        ajax: {
+          url: "wwv_flow.show",
+          type: "POST",
+          dataType: "json",
+          delay: 400,
+          data: function(params) {
+                  return {
+                    p_flow_id: $("#pFlowId").val(),
+                    p_flow_step_id: $("#pFlowStepId").val(),
+                    p_instance: $("#pInstance").val(),
+                    x01: params.term,
+                    x02: params.page,
+                    x03: "LAZY_LOAD",
+                    p_request: "PLUGIN=SVRFTSBUWVBFfjUxMjB-MTMxMDE1Njg0Mzc5Mjg3ODY/loVIYy7xEIdW9HFNNKjePRp11Kcxko0toCkUHmC2oqwtUYzcJ9NrqTJxjP46oGU_8i6urv_wZmo90WP-CmSjXg"
+                  };
+                },
+          processResults: function(data, params) {
+                            var select2Data = $.map(data.row, function(obj) {
+                              obj.id = obj.R;
+                              obj.text = obj.D;
+                              return obj;
+                            });
+
+                            return {
+                              results: select2Data,
+                              pagination: { more: data.more }
+                            };
+                          },
+          cache: true
+        },
+        escapeMarkup: function(markup) { return markup; },"width":"400px"});
+        $("#P7_IMPACTED_APPLICATION").on(
+          "select2:select",
+          function(){ $(this).focus(); }
+        );
+      beCtbSelect2.events.bind("#P7_IMPACTED_APPLICATION");})();
+(function(){
+      $("#P7_CONTACT_TYPE").select2({"placeholder":"--Select Contact Type--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},"width":"155px"});
+        $("#P7_CONTACT_TYPE").on(
+          "select2:select",
+          function(){ $(this).focus(); }
+        );
+      beCtbSelect2.events.bind("#P7_CONTACT_TYPE");})();
+(function(){apex.widget.report.init("attachment","UkVHSU9OIFRZUEV-fjM3MzE2MzQxMDYwOTk0MTMz\u002FxQ-feuSUgOqmWqx2epcoDjxFh-rBLImOc8e1dVwptWNoarB7O6cIDZN_S9OUiTNX3lEr5cliMMJ4SsB86g2qHQ",{"lazyLoading":false,"internalRegionId":"37316341060994133"});})();
+} catch(e) {apex.debug.error(e)};
+apex.item.waitForDelayLoadItems().done(function() {
+try {
+(function(){apex.da.initDaEventList();
+apex.da.init();})();
+apex.theme42.initializePage.noSideCol();
+
+apex.page.warnOnUnsavedChanges();
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+};
+});
+});
+});apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' } );
+</script>
+
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
