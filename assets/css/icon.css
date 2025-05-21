@@ -1,0 +1,3 @@
+.status-bar div:nth-child(1) span.fa::before {
+    background-color: #f56;
+}

@@ -5,7 +5,6 @@
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta charset="utf-8">
   <title>E - District Manager Portal</title>
-
   <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
@@ -15,6 +14,8 @@
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
   <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
   <link rel="icon" href="../assets/img/app-icon-32.png">
+  <link rel="stylesheet" href="../assets/css/icon.css">
+
   <style type="text/css">
     @font-face {
       font-family: 'FontApex';
@@ -454,35 +455,7 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
                               class="t-Button-label">Contacts</span></button></div>
                       </div>
                     </div><!--<h3 data-aos="fade-right">Today's status</h3>-->
-                    <div class="status-bar">
-                      <!-- <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Service Request</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>My Queue</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Reference Documents</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>EDM Dairy</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Training</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Reports & Dashboards</h4>
-    </div>
-     <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Contacts</h4>
-    </div> -->
+                    <!-- <div class="status-bar">
                       <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                         <span class="fa fa fa-file-edit" aria-hidden="true"></span>
                         <h4>Service Request</h4>
@@ -512,7 +485,8 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
                         <h4>Contacts</h4>
                       </div>
 
-                    </div>
+                    </div> -->
+                    <div id="status-bar-container"></div>
                   </div>
                   <div class="col col-2 app-link-container col-end">
                     <h2>My application links</h2>
@@ -582,7 +556,7 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
         { "conditionElement": "P1_PASSWORD", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Edm@1234", "bindEventType": "ready", "anyActionsFireOnInit": false, actionList: [] }];
     }
   </script>
-
+  <script type="module" src="../assets/js/statusbar.js"></script>
   <script src="../assets/js/desktop_all.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/aos.js"></script>
@@ -598,9 +572,6 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
   <script src="../assets/js/requirejs.jetConfig.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script>
-
-
-
 
 
   <script nonce="-FfiJlVjxcJ0HaMyagpvKQ">

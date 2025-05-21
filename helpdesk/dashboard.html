@@ -1,261 +1,347 @@
-
 <!DOCTYPE html>
-<html class="no-js  page-1 app-E-DISTRICT-MANAGER-APPLICATION" lang="en" >
+<html class="no-js  page-1 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
 <head>
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta charset="utf-8">
   <title>E - District Manager Portal</title>
-  
   <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
-    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
-    <link rel="icon" href="../assets/img/app-icon-32.png">
-    <style type="text/css">
-      @font-face {
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
+  <link rel="icon" href="../assets/img/app-icon-32.png">
+  <link rel="stylesheet" href="../assets/css/icon.css">
+
+  <style type="text/css">
+    @font-face {
       font-family: 'FontApex';
       src: url('../font/apex-5-icon-font.woff2') format('woff2'),
-      url('../font/apex-5-icon-font.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;  
-      } 
-      @font-face { 
-      font-family: 'Font-APEX';
-      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
-      url('../fonts/Font-APEX-Small.woff') format('woff'),
-      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
-      url('../fonts/Font-APEX-Large.woff') format('woff');
+        url('../font/apex-5-icon-font.woff') format('woff');
       font-weight: normal;
       font-style: normal;
-      } 
-      .t-fht-thead {
+    }
+
+    @font-face {
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+        url('../fonts/Font-APEX-Small.woff') format('woff'),
+        url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+        url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .t-fht-thead {
       display: none !important;
-      }
-      .a-IRR-table thead {
+    }
+
+    .a-IRR-table thead {
       visibility: visible !important;
       position: static !important;
-      }
-      .a-IRR-table tbody th {
+    }
+
+    .a-IRR-table tbody th {
       position: static !important;
-      }
-      /* Disable APEX's fixed/sticky header */
-      .a-IRR-tableContainer .a-IRR-table tbody th {
+    }
+
+    /* Disable APEX's fixed/sticky header */
+    .a-IRR-tableContainer .a-IRR-table tbody th {
       position: static !important;
       top: auto !important;
       z-index: 0 !important;
-      }
-      /* Ensure whole table scrolls together */
-      .a-IRR-tableContainer {
+    }
+
+    /* Ensure whole table scrolls together */
+    .a-IRR-tableContainer {
       overflow-x: auto !important;
       overflow-y: auto !important;
-      max-height: 500px; /* Adjust height as needed */
-      }
-      .a-IRR-table {
+      max-height: 500px;
+      /* Adjust height as needed */
+    }
+
+    .a-IRR-table {
       table-layout: auto !important;
       width: max-content !important;
       display: table !important;
       white-space: nowrap !important;
-      }
-    </style>
-    <style>
-      .t-fht-thead.js-stickyTableHeader {
+    }
+  </style>
+  <style>
+    .t-fht-thead.js-stickyTableHeader {
       display: none !important;
-      }
-      .a-IRR-table thead {
+    }
+
+    .a-IRR-table thead {
       position: static !important;
       visibility: visible !important;
-      }
-    </style>
-  
-  <style nonce="Y_bX_TV-FD25tS9IyVOZXw" >
-.t-Region-body{
-/* display:none; */
-background-color: #C7E3F8;
-}
-#P1_INSPECTION_COUNT , #P0_INSPECTION_COUNT
-{
-    font-size: 20px;
-    color: #177DAE;
-    background-color: #C7E3F8;
-}
-#profile_img
-{
-    margin-left:-300px!important;
-}
-#change_password
-{
-    margin-top:60px;
-}
-#popup{
-   
-    background-image:URL('r/edmdev/1111/files/static/v1087/alert.jpg') !important;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.note_color{
-    color: rgba(255, 0, 0, 0.596);
-}
-.apex-item-display-only {
-    font-weight: bolder;
-    font-size: 17.5px;
-    color: #3d8064;
-    margin-top: 150px;
-    margin-left: 50px;
-}
-.has-media--background {
-    max-width: 100px;
-    border-radius: 50%;
-    margin-left: -10px;
-   
-}
-.a-CardView-media--square .a-CardView-mediaImg, .a-CardView-media--square iframe, .a-CardView-media--widescreen .a-CardView-mediaImg, .a-CardView-media--widescreen iframe {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    border-radius: 50%;
-}
+    }
+  </style>
 
-.a-CardView-items--float .a-CardView-item {
-    float: left;
-    min-width: 160px;
-    margin-top: 0px;
-    position: absolute;
-    margin-top: -45px;
-    margin-left: 100px;
-}
-/*.a-CardView-items--float .a-CardView-item:hover {
+  <style nonce="Y_bX_TV-FD25tS9IyVOZXw">
+    .t-Region-body {
+      /* display:none; */
+      background-color: #C7E3F8;
+    }
+
+    #P1_INSPECTION_COUNT,
+    #P0_INSPECTION_COUNT {
+      font-size: 20px;
+      color: #177DAE;
+      background-color: #C7E3F8;
+    }
+
+    #profile_img {
+      margin-left: -300px !important;
+    }
+
+    #change_password {
+      margin-top: 60px;
+    }
+
+    #popup {
+
+      background-image: URL('r/edmdev/1111/files/static/v1087/alert.jpg') !important;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .note_color {
+      color: rgba(255, 0, 0, 0.596);
+    }
+
+    .apex-item-display-only {
+      font-weight: bolder;
+      font-size: 17.5px;
+      color: #3d8064;
+      margin-top: 150px;
+      margin-left: 50px;
+    }
+
+    .has-media--background {
+      max-width: 100px;
+      border-radius: 50%;
+      margin-left: -10px;
+
+    }
+
+    .a-CardView-media--square .a-CardView-mediaImg,
+    .a-CardView-media--square iframe,
+    .a-CardView-media--widescreen .a-CardView-mediaImg,
+    .a-CardView-media--widescreen iframe {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .a-CardView-items--float .a-CardView-item {
+      float: left;
+      min-width: 160px;
+      margin-top: 0px;
+      position: absolute;
+      margin-top: -45px;
+      margin-left: 100px;
+    }
+
+    /*.a-CardView-items--float .a-CardView-item:hover {
 transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) 
 }*/
-.a-StarRating-stars {
-    position: absolute;
-    margin-top: 160px;
-    margin-left: 100px;
-    border-radius: 2px;
-    flex-basis: auto;
-    flex-grow: 1;
-    flex-shrink: 0;
-    padding: var(--a-starrating-stars-padding-y, 4px) var(--a-starrating-stars-padding-x, 4px);
-}
-.a-StarRating-stars-fg .a-StarRating-star {
-    color: #d09b4c;
-}
-a-StarRating-star fa fa-star {
-    
-    color: #b1b8b8;
-}
-/*#edm-logo {
+    .a-StarRating-stars {
+      position: absolute;
+      margin-top: 160px;
+      margin-left: 100px;
+      border-radius: 2px;
+      flex-basis: auto;
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding: var(--a-starrating-stars-padding-y, 4px) var(--a-starrating-stars-padding-x, 4px);
+    }
+
+    .a-StarRating-stars-fg .a-StarRating-star {
+      color: #d09b4c;
+    }
+
+    a-StarRating-star fa fa-star {
+
+      color: #b1b8b8;
+    }
+
+    /*#edm-logo {
     width: 109px;
     margin-left: -100px;
     margin-right: 0px;
 }*/
-#t_Body_title {
-    display: flex;
-    padding: 0.5% 15%;
-    justify-content: space-between;
-    height: 125px;
-}
-.apex_disabled{
-   
-    opacity: 100%!important;
+    #t_Body_title {
+      display: flex;
+      padding: 0.5% 15%;
+      justify-content: space-between;
+      height: 125px;
+    }
 
-}
-.app-links {
-    font-size: 13px;
-    padding: 3px 3px;
-    background-color: rgb(219, 219, 219);
-    border-radius: 20px;
-    margin: 5px 10px;
-    /* width: 80%; */
-    transition: all 0.1s ease-in-out;
-}
-</style>
+    .apex_disabled {
 
-  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" /><link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
-  
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" />
+      opacity: 100% !important;
+
+    }
+
+    .app-links {
+      font-size: 13px;
+      padding: 3px 3px;
+      background-color: rgb(219, 219, 219);
+      border-radius: 20px;
+      margin: 5px 10px;
+      /* width: 80%; */
+      transition: all 0.1s ease-in-out;
+    }
+  </style>
+
+  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
+  <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+  <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
 </head>
-<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
-<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
-<form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/home/116639350395160" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  autocomplete="off">
-<input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="116639350395160" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="MTQ1OTI1NDM5Nzc1MTYxMDU0NjExODEzMzEwMjI3MzM3MzQ0ODgy&#x2F;1LM9veDc-HHuFlF5M8R577dKkU-y1iubxuW0KwytgOKxhBgCfT1MtpExA7IlwOsA-kIsbsuvBU0yAe-rdyDFbQ" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="e-district-manager-application&#x2F;home&#x2F;116639350395160" id="pContext" /><input type="hidden" value="145925439775161054611813310227337344882" id="pSalt" />
-<header class="t-Header" id="t_Header" role="banner">
-  
-  <div class="t-Header-branding">
-    <div class="t-Header-controls">
-      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
-    </div>
-    <div class="t-Header-logo">
-     <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
-    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
-     <P  class="t-Header-logo-link">TNEGA</P>
-      
-    </div>
-    <div class="t-Header-navBar">
-      <div class="t-Header-navBar--start"></div>
-      <div class="t-Header-navBar--center" style='color:black'><ul class="t-NavigationBar " id="8792244222964376"><li class="t-NavigationBar-item ">
-  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
-      <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" ></span><span class="t-Button-label">Hello Ashwin !
-</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
-  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414"><ul><li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=1111&p_session_id=116639350395160" title="" target="">Sign Out</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D116639350395160%26dialogCs%3DXw9EasBbPRAs5LrBzjMX1Tpb4rE0BN6JjNq4eikJi95U9Jw5IdRHvDzvfQa-ct90R_RtsolO9guLKwZTmjuSBA&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">Change Password</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="/ords/r/edmdev/e-district-manager-application/user_admin?session=116639350395160" title="" target="">User Admin</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D116639350395160%26dialogCs%3D-H9J6ftvJgxAxeAlQfJzoMAWsfH4tTA9OILkur9ucXeUrsa8GLQcI3aMLaEI9favO5A_3RhrooCZxpplXrsS2g&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">My Profile</a></li></ul></div></li><li class="t-NavigationBar-item ">
-  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-    <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label">Last Logged in: 04-05-2025 04:04 PM</span><span class="t-Button-badge"></span>
-  </a>
-</li><li class="t-NavigationBar-item is-active " aria-current="page">
-  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="/ords/r/edmdev/e-district-manager-application/home?session=116639350395160" title="" target="">
-    <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true" ></span><span class="t-Button-label"> </span><span class="t-Button-badge">0</span>
-  </a>
-</li></ul></div>
-      <div class="t-Header-navBar--end" ></div>
-    </div>
-  </div>
-  <div class="t-Header-nav"></div>
-</header>
-  <div class="t-Body">
 
-  <div class="t-Body-main">
-    <div class="t-Body-title" id="t_Body_title"><input type="hidden" name="P1_EDM_DAIRY_TARGET_PAGE_NO" id="P1_EDM_DAIRY_TARGET_PAGE_NO" value="77"><input type="hidden" name="P1_SERVICE_REQUEST_PAGE_NO" id="P1_SERVICE_REQUEST_PAGE_NO" value="29"><input type="hidden" name="P1_OPEN_POPUP" id="P1_OPEN_POPUP" value="0"><input type="hidden" name="P1_DISTRICT" id="P1_DISTRICT" value="Chennai"><input type="hidden" name="P1_TIME_MSG" id="P1_TIME_MSG" value="Good Evening"><input type="hidden" data-for="P1_TIME_MSG" value="3xKNQcCcUITr33ReEBEv0O54J-G71Bljj2BdbEaoRIY8Non6nHMam3sEDjFBhOSlBbk22T8PDTHj3GRrru14Bw"><input type="hidden" name="P1_DATE" id="P1_DATE" value="04&#x2F;05&#x2F;2025"><input type="hidden" data-for="P1_DATE" value="SLgbnS6KmsED-EQIrpYVYzY_OQaoj5Wgmn3upvAkGVRrstzQh2tn-6lGWFgVxKl6N1G0X2KFSeKPZPNPPNSr2Q"><input type="hidden" name="P1_PAGE_NO" id="P1_PAGE_NO" value=""><input type="hidden" data-for="P1_PAGE_NO" value="5Q7GjRV17j2qat2RpnpH_NI_-QzMpnbUtWHM9R_M-4_rRnEnnpwMWQaaJLk6574kAjz00xmSgA6IRjMekgkeyw"><input type="hidden" name="P1_PASSWORD" id="P1_PASSWORD" value="Admin@123"><input type="hidden" name="P1_PASSWORD_1" id="P1_PASSWORD_1" value="0"><html>
-<div class="edm-row">
-    <div>
-    <img src="../assets/img/gov_logo.png" id="edm-logo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100" >
-    </div>
-    
-    <div id ="logoname">
-      <img src=" ../assets/img/gov.PNG"   style='margin-left:300px'>
-       
-    <!--<h1 content="width=device-width, initial-scale=1.0"><center>Government of Tamil Nadu </center></h1>
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/home/116639350395160" method="post"
+    name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
+    <input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
+      value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="116639350395160"
+      id="pInstance" /><input type="hidden" name="p_page_submission_id"
+      value="MTQ1OTI1NDM5Nzc1MTYxMDU0NjExODEzMzEwMjI3MzM3MzQ0ODgy&#x2F;1LM9veDc-HHuFlF5M8R577dKkU-y1iubxuW0KwytgOKxhBgCfT1MtpExA7IlwOsA-kIsbsuvBU0yAe-rdyDFbQ"
+      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
+      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
+      value="e-district-manager-application&#x2F;home&#x2F;116639350395160" id="pContext" /><input type="hidden"
+      value="145925439775161054611813310227337344882" id="pSalt" />
+    <header class="t-Header" id="t_Header" role="banner">
+
+      <div class="t-Header-branding">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+          <P class="t-Header-logo-link">TNEGA</P>
+
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div class="t-Header-navBar--center" style='color:black'>
+            <ul class="t-NavigationBar " id="8792244222964376">
+              <li class="t-NavigationBar-item ">
+                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
+                  id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
+                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true"></span><span class="t-Button-label">Hello
+                    Ashwin !
+                  </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow"
+                    aria-hidden="true"></span>
+                </button>
+                <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
+                  <ul>
+                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
+                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
+                        href="apex_authentication.logout?p_app_id=1111&p_session_id=116639350395160" title=""
+                        target="">Sign Out</a></li>
+                    <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a
+                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D116639350395160%26dialogCs%3DXw9EasBbPRAs5LrBzjMX1Tpb4rE0BN6JjNq4eikJi95U9Jw5IdRHvDzvfQa-ct90R_RtsolO9guLKwZTmjuSBA&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
+                        title="" target="">Change Password</a></li>
+                    <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
+                        href="/ords/r/edmdev/e-district-manager-application/user_admin?session=116639350395160" title=""
+                        target="">User Admin</a></li>
+                    <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
+                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D116639350395160%26dialogCs%3D-H9J6ftvJgxAxeAlQfJzoMAWsfH4tTA9OILkur9ucXeUrsa8GLQcI3aMLaEI9favO5A_3RhrooCZxpplXrsS2g&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
+                        title="" target="">My Profile</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="t-NavigationBar-item ">
+                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+                  <span class="t-Icon " aria-hidden="true"></span><span class="t-Button-label">Last Logged in:
+                    04-05-2025 04:04 PM</span><span class="t-Button-badge"></span>
+                </a>
+              </li>
+              <li class="t-NavigationBar-item is-active " aria-current="page">
+                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar"
+                  href="/ords/r/edmdev/e-district-manager-application/home?session=116639350395160" title="" target="">
+                  <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true"></span><span class="t-Button-label">
+                  </span><span class="t-Button-badge">0</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav"></div>
+    </header>
+    <div class="t-Body">
+
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"><input type="hidden" name="P1_EDM_DAIRY_TARGET_PAGE_NO"
+            id="P1_EDM_DAIRY_TARGET_PAGE_NO" value="77"><input type="hidden" name="P1_SERVICE_REQUEST_PAGE_NO"
+            id="P1_SERVICE_REQUEST_PAGE_NO" value="29"><input type="hidden" name="P1_OPEN_POPUP" id="P1_OPEN_POPUP"
+            value="0"><input type="hidden" name="P1_DISTRICT" id="P1_DISTRICT" value="Chennai"><input type="hidden"
+            name="P1_TIME_MSG" id="P1_TIME_MSG" value="Good Evening"><input type="hidden" data-for="P1_TIME_MSG"
+            value="3xKNQcCcUITr33ReEBEv0O54J-G71Bljj2BdbEaoRIY8Non6nHMam3sEDjFBhOSlBbk22T8PDTHj3GRrru14Bw"><input
+            type="hidden" name="P1_DATE" id="P1_DATE" value="04&#x2F;05&#x2F;2025"><input type="hidden"
+            data-for="P1_DATE"
+            value="SLgbnS6KmsED-EQIrpYVYzY_OQaoj5Wgmn3upvAkGVRrstzQh2tn-6lGWFgVxKl6N1G0X2KFSeKPZPNPPNSr2Q"><input
+            type="hidden" name="P1_PAGE_NO" id="P1_PAGE_NO" value=""><input type="hidden" data-for="P1_PAGE_NO"
+            value="5Q7GjRV17j2qat2RpnpH_NI_-QzMpnbUtWHM9R_M-4_rRnEnnpwMWQaaJLk6574kAjz00xmSgA6IRjMekgkeyw"><input
+            type="hidden" name="P1_PASSWORD" id="P1_PASSWORD" value="Admin@123"><input type="hidden"
+            name="P1_PASSWORD_1" id="P1_PASSWORD_1" value="0">
+          <html>
+          <div class="edm-row">
+            <div>
+              <img src="../assets/img/gov_logo.png" id="edm-logo" data-aos="flip-left" data-aos-duration="800"
+                data-aos-delay="100">
+            </div>
+
+            <div id="logoname">
+              <img src=" ../assets/img/gov.PNG" style='margin-left:300px'>
+
+              <!--<h1 content="width=device-width, initial-scale=1.0"><center>Government of Tamil Nadu </center></h1>
     </n>
      <h1 content="width=device-width, initial-scale=1.0"><center>e-District Manager Portal</center></h1>-->
-    </div>
+            </div>
 
-    <div>
-    <img src="../assets/img/logo_new.jpeg" id="gov-logo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100" >
-    </div>
-   <!-- <div>
+            <div>
+              <img src="../assets/img/logo_new.jpeg" id="gov-logo" data-aos="flip-left" data-aos-duration="800"
+                data-aos-delay="100">
+            </div>
+            <!-- <div>
     <div id = "user"  data-aos="fade-right" data-aos-duration="800" data-aos-delay="200" style = "font-size:15px;color:#8d8924;margin-top:30px">
         Ashwin , Good Evening</div>
     <div  id ="distirct" data-aos="flip-right" data-aos-duration="800" data-aos-delay="500" style = "font-size:15px;color:#8d8924">District : Chennai
         </br>Date : 04&#x2F;05&#x2F;2025
     </div>
     </div>-->
- 
-</div>
-<div>
-<div id="pro-pic" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="800" class="text-middle">
-</div>
-      <div class="rate">
-  <!--  <input  type="radio" id="star5" name="rate" value="5" />
+
+          </div>
+          <div>
+            <div id="pro-pic" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="800" class="text-middle">
+            </div>
+            <div class="rate">
+              <!--  <input  type="radio" id="star5" name="rate" value="5" />
     <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" for="star5" title="text">5 stars</label>
     <input type="radio" id="star4" name="rate" value="4" />
     <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="300" for="star4" title="text">4 stars</label>
@@ -265,225 +351,260 @@ a-StarRating-star fa fa-star {
     <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="500" for="star2" title="text">2 stars</label>
     <input type="radio" id="star1" name="rate" value="1" />
     <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="600" for="star1" title="text">1 star</label> -->
-  </div>
-  </div> 
-</html><div class="t-CardsRegion u-colors" id="profile_img"  role="region" aria-label="New" >
-  <div class="t-Region-orderBy"><div class="t-Form-fieldContainer t-Form-fieldContainer--floatingLabel apex_disabled  t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--star-rating" id="P1_NEW_CONTAINER"><div class="t-Form-labelContainer">
-<label for="P1_NEW" id="P1_NEW_LABEL" class="t-Form-label"></label>
-</div><div class="t-Form-inputContainer"><div class="t-Form-itemWrapper"><div id="P1_NEW" class="a-StarRating apex-item-starrating"><input type="text" inputmode=none  aria-labelledby="P1_NEW_LABEL"  id="P1_NEW_INPUT" value="" name="P1_NEW" /></div></div><span id="P1_NEW_error_placeholder" class="a-Form-error" data-template-id="8676899378964195_ET"></span></div></div></div>
-  <div id="profile_img_Cards" class="a-TMV--cards">
-<ul class="a-CardView-items a-CardView-items--float is-placeholder" aria-hidden="true"><li class="a-CardView-item">
-<div class="a-CardView has-media has-media--background has-media--square has-media--cover">
-<div class="a-CardView-media a-CardView-media--background"></div>
-</div>
-</li>
-<li class="a-CardView-item">
-<div class="a-CardView has-media has-media--background has-media--square has-media--cover">
-<div class="a-CardView-media a-CardView-media--background"></div>
-</div>
-</li>
-<li class="a-CardView-item">
-<div class="a-CardView has-media has-media--background has-media--square has-media--cover">
-<div class="a-CardView-media a-CardView-media--background"></div>
-</div>
-</li>
-</ul>
-</div>
-<script nonce="Y_bX_TV-FD25tS9IyVOZXw">
-var gCard8825038167996114data = {
-"values":[
-[
-"EDM0186"
-,null
-,"\/ords\/r\/edmdev\/e-district-manager-application\/home?request=NATIVE%3DUkVHSU9OIFRZUEV-fjg4MjUwMzgxNjc5OTYxMTQ%2F45Y9lNfv_Ibd-ltfceWry2IHa44ByrRQQUuL0WEuhhqCiz2LzzMWnrVbDLatUb4DWh4ws5FB4hY_bmMrr8CWag\u0026session=116639350395160\u0026x01=eyJVU0VSX0lEIjoiRURNMDE4NiIsImFwZXgkYXR0ciRpbWFnZSR0eXBlIjoiTUVE.,SUEifQ%2Fij4b17u_NzAVbeFigh9ki3ftMB6QdXbfOOyQJZ7PF-sOvxsi1Ho1X8M6C0yx1IonV7ExhHH1mavtfxDYILzPEA\u0026cs=311gyadN65qNu3b0CSMMwpGTm5avx0bARiWLcMN-EhfRX1PGZ6ktuEoBYS0hnqc_7wMWAiCd2YkusN8ACGTZD0Q"
-,"N"
-,"N"
-,"N"
-]
-]
-,"firstRow":1
-,"moreData":false
-}
-;
-</script>
+            </div>
+          </div>
 
-  
-</div></div>
-    <div class="t-Body-content" id="t_Body_content">
-      <main id="main" class="t-Body-mainContent">
-        <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
-        <div class="t-Body-fullContent"><div class="container">
-<div class="row minpad">
-<div class="col col-10 apex-col-auto col-start" ><div class="container">
-<div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><button onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fall-request5?session=116639350395160&#x27;);" class="t-Button js-ignoreChange&#x20;hidden-btns" type="button"  id="b1"><span class="t-Button-label">Service Reqest</span></button></div>
-</div><div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><button onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome?session=116639350395160&#x27;);" class="t-Button js-ignoreChange&#x20;hidden-btns" type="button"  id="b2"><span class="t-Button-label">My Queue</span></button></div>
-</div><div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><button onclick="apex.submit({request:&#x27;Reference_Documents&#x27;,validate:true});" class="t-Button hidden-btns" type="button"  id="b3"><span class="t-Button-label">Reference Documents</span></button></div>
-</div><div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><button onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Ftime-sheet-entry-form?session=116639350395160&#x27;);" class="t-Button js-ignoreChange&#x20;hidden-btns" type="button"  id="b4"><span class="t-Button-label">EDM Diary</span></button></div>
-</div><div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><button onclick="apex.submit({request:&#x27;Training&#x27;,validate:true});" class="t-Button hidden-btns" type="button"  id="b5"><span class="t-Button-label">Training</span></button></div>
-</div><div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><button onclick="apex.submit({request:&#x27;Reports_Dashboards&#x27;,validate:true});" class="t-Button hidden-btns" type="button"  id="b6"><span class="t-Button-label">Reports Dashboards</span></button></div>
-</div><div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><button onclick="apex.navigation.redirect(&#x27;#action$a-dialog-open?url=\u00252Fords\u00252Fr\u00252Fedmdev\u00252Fe-district-manager-application\u00252Fcontact-details\u00253Fsession\u00253D116639350395160\u002526dialogCs\u00253DeV7KrzNNLajPFmTAE6IlNEQMHsVEiSYEEtYidZNDT0qKJ0Wg_b6SnH1gjVYfvWlupJo5AoUouS8YJ1mSURTZSg\u0026appId=1111\u0026pageId=49\u0026tmpl=MODAL_DIALOG\u0026title=Contact\u002520Details\u0026h=auto\u0026w=720\u0026mxw=960\u0026isModal=true\u0026dlgCls=\u0026pageCls=\u0026trgEl=\u002523b7&#x27;);" class="t-Button js-ignoreChange&#x20;hidden-btns" type="button"  id="b7"><span class="t-Button-label">Contacts</span></button></div>
-</div>
-</div><!--<h3 data-aos="fade-right">Today's status</h3>-->
-<div class="status-bar">
-    <!-- <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Service Request</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>My Queue</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Reference Documents</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>EDM Dairy</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Training</h4>
-    </div>
-        <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Reports & Dashboards</h4>
-    </div>
-     <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
-        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-        <h4>Contacts</h4>
-    </div> -->
-    <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" onclick="const button = document.getElementById('b1'); if (button) { button.click(); }">
-    <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-    <h4>Service Request</h4>
-</div>
-<div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" onclick="const button = document.getElementById('b2'); if (button) { button.click(); }">
-    <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-    <h4>My Queue</h4>
-</div>
-<div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" onclick="const button = document.getElementById('b3'); if (button) { button.click(); }">
-    <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-    <h4>Reference Documents</h4>
-</div>
-<div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" onclick="const button = document.getElementById('b4'); if (button) { button.click(); }">
-    <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-    <h4>EDM Diary</h4>
-</div>
-<div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500" onclick="const button = document.getElementById('b5'); if (button) { button.click(); }">
-    <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-    <h4>Training</h4>
-</div>
-<div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600" onclick="const button = document.getElementById('b6'); if (button) { button.click(); }">
-    <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-    <h4>Reports & Dashboards</h4>
-</div>
-<div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700" onclick="const button = document.getElementById('b7'); if (button) { button.click(); }">
-    <span class="fa fa fa-file-edit" aria-hidden="true"></span>
-    <h4>Contacts</h4>
-</div>
+          </html>
+          <div class="t-CardsRegion u-colors" id="profile_img" role="region" aria-label="New">
+            <div class="t-Region-orderBy">
+              <div
+                class="t-Form-fieldContainer t-Form-fieldContainer--floatingLabel apex_disabled  t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--star-rating"
+                id="P1_NEW_CONTAINER">
+                <div class="t-Form-labelContainer">
+                  <label for="P1_NEW" id="P1_NEW_LABEL" class="t-Form-label"></label>
+                </div>
+                <div class="t-Form-inputContainer">
+                  <div class="t-Form-itemWrapper">
+                    <div id="P1_NEW" class="a-StarRating apex-item-starrating"><input type="text" inputmode=none
+                        aria-labelledby="P1_NEW_LABEL" id="P1_NEW_INPUT" value="" name="P1_NEW" /></div>
+                  </div><span id="P1_NEW_error_placeholder" class="a-Form-error"
+                    data-template-id="8676899378964195_ET"></span>
+                </div>
+              </div>
+            </div>
+            <div id="profile_img_Cards" class="a-TMV--cards">
+              <ul class="a-CardView-items a-CardView-items--float is-placeholder" aria-hidden="true">
+                <li class="a-CardView-item">
+                  <div class="a-CardView has-media has-media--background has-media--square has-media--cover">
+                    <div class="a-CardView-media a-CardView-media--background"></div>
+                  </div>
+                </li>
+                <li class="a-CardView-item">
+                  <div class="a-CardView has-media has-media--background has-media--square has-media--cover">
+                    <div class="a-CardView-media a-CardView-media--background"></div>
+                  </div>
+                </li>
+                <li class="a-CardView-item">
+                  <div class="a-CardView has-media has-media--background has-media--square has-media--cover">
+                    <div class="a-CardView-media a-CardView-media--background"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <script nonce="Y_bX_TV-FD25tS9IyVOZXw">
+              var gCard8825038167996114data = {
+                "values": [
+                  [
+                    "EDM0186"
+                    , null
+                    , "\/ords\/r\/edmdev\/e-district-manager-application\/home?request=NATIVE%3DUkVHSU9OIFRZUEV-fjg4MjUwMzgxNjc5OTYxMTQ%2F45Y9lNfv_Ibd-ltfceWry2IHa44ByrRQQUuL0WEuhhqCiz2LzzMWnrVbDLatUb4DWh4ws5FB4hY_bmMrr8CWag\u0026session=116639350395160\u0026x01=eyJVU0VSX0lEIjoiRURNMDE4NiIsImFwZXgkYXR0ciRpbWFnZSR0eXBlIjoiTUVE.,SUEifQ%2Fij4b17u_NzAVbeFigh9ki3ftMB6QdXbfOOyQJZ7PF-sOvxsi1Ho1X8M6C0yx1IonV7ExhHH1mavtfxDYILzPEA\u0026cs=311gyadN65qNu3b0CSMMwpGTm5avx0bARiWLcMN-EhfRX1PGZ6ktuEoBYS0hnqc_7wMWAiCd2YkusN8ACGTZD0Q"
+                    , "N"
+                    , "N"
+                    , "N"
+                  ]
+                ]
+                , "firstRow": 1
+                , "moreData": false
+              }
+                ;
+            </script>
 
-</div>
-</div><div class="col col-2 app-link-container col-end" ><h2>My application links</h2>
-<br>
-<a class="app-links" href="https://tnedistrict.tn.gov.in/eda/" target="_blank">e-District</a>
-<a class="app-links" href="https://www.tnesevai.tn.gov.in/" target="_blank" >e-Sevai</a>
-<a class="app-links" href="https://tamilnilam.tn.gov.in/Revenue/login.html"  target="_blank">Tamil Nilam</a>
-<a class="app-links" href="https://eservices.tn.gov.in/eservicesnew/home.html" target="_blank">e-Services</a>
-<a class="app-links" href="https://tndistricts.nic.in/" target="_blank">Tamilnadu District</a>
-<a class="app-links" href="https://www.tn.gov.in/" target="_blank">Tamilnadu Goverment</a>
-<a class="app-links" href="https://edistricts.tn.gov.in/revenue/login.jsp" target="_blank">TN Edistrict Portal(NIC)</a>
-<a class="app-links" href="https://tnsocialwelfare.tn.gov.in/en" target="_blank">Social Welfare Poratl</a>
-<a class="app-links" href="https://eoffice1.tn.gov.in/" target="_blank">E-office</a>
-<a class="app-links" href="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/ords/r/tpadev/tpa/login?" target="_blank">Third Party Audit</a></div>
-</div>
-</div></div>
-        <div class="t-Body-contentInner"></div>
-      </main>
-      <footer class="t-Footer" id="t_Footer" role="contentinfo">
-        <div class="t-Footer-body">
-          <div class="t-Footer-content"></div>
-          <div class="t-Footer-apex">
-            <div class="t-Footer-version"> </div>
-            <div class="t-Footer-customize"></div>
-            
+
           </div>
         </div>
-        <div class="t-Footer-top">
-          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent">
+              <div class="container">
+                <div class="row minpad">
+                  <div class="col col-10 apex-col-auto col-start">
+                    <div class="container">
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b1"><span
+                              class="t-Button-label">Service Reqest</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b2"><span
+                              class="t-Button-label">My Queue</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button class="t-Button hidden-btns"
+                            type="button" id="b3"><span class="t-Button-label">Reference
+                              Documents</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b4"><span
+                              class="t-Button-label">EDM Diary</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button class="t-Button hidden-btns"
+                            type="button" id="b5"><span class="t-Button-label">Training</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button class="t-Button hidden-btns"
+                            type="button" id="b6"><span class="t-Button-label">Reports
+                              Dashboards</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b7"><span
+                              class="t-Button-label">Contacts</span></button></div>
+                      </div>
+                    </div><!--<h3 data-aos="fade-right">Today's status</h3>-->
+                    <!-- <div class="status-bar">
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Service Request</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>My Queue</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Reference Documents</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>EDM Diary</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Training</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Reports & Dashboards</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700"
+                        onclick="const button = document.getElementById('b7'); if (button) { button.click(); }">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Contacts</h4>
+                      </div>
+
+                    </div> -->
+                    <div id="status-bar-container"></div>
+                  </div>
+                  <div class="col col-2 app-link-container col-end">
+                    <h2>My application links</h2>
+                    <br>
+                    <a class="app-links" href="https://tnedistrict.tn.gov.in/eda/" target="_blank">e-District</a>
+                    <a class="app-links" href="https://www.tnesevai.tn.gov.in/" target="_blank">e-Sevai</a>
+                    <a class="app-links" href="https://tamilnilam.tn.gov.in/Revenue/login.html" target="_blank">Tamil
+                      Nilam</a>
+                    <a class="app-links" href="https://eservices.tn.gov.in/eservicesnew/home.html"
+                      target="_blank">e-Services</a>
+                    <a class="app-links" href="https://tndistricts.nic.in/" target="_blank">Tamilnadu District</a>
+                    <a class="app-links" href="https://www.tn.gov.in/" target="_blank">Tamilnadu Goverment</a>
+                    <a class="app-links" href="https://edistricts.tn.gov.in/revenue/login.jsp" target="_blank">TN
+                      Edistrict Portal(NIC)</a>
+                    <a class="app-links" href="https://tnsocialwelfare.tn.gov.in/en" target="_blank">Social Welfare
+                      Poratl</a>
+                    <a class="app-links" href="https://eoffice1.tn.gov.in/" target="_blank">E-office</a>
+                    <a class="app-links"
+                      href="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/ords/r/tpadev/tpa/login?"
+                      target="_blank">Third Party Audit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="t-Body-contentInner"></div>
+          </main>
+          <footer class="t-Footer" id="t_Footer" role="contentinfo">
+            <div class="t-Footer-body">
+              <div class="t-Footer-content"></div>
+              <div class="t-Footer-apex">
+                <div class="t-Footer-version"> </div>
+                <div class="t-Footer-customize"></div>
+
+              </div>
+            </div>
+            <div class="t-Footer-top">
+              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+            </div>
+          </footer>
         </div>
-      </footer>
+      </div>
     </div>
-  </div>
-</div>
-<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
-<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDFfVElNRV9NU0c6UDFfREFURTpQMV9QQUdFX05P&#x2F;G0IFSVkmhIZwZryZsFcDA7uqg9HQuGTuvPDSXPiuxiydWYnIHf6Gj4FkqXHVOaLiix5TzgjOmBN8KwG0roilJQ" /></form>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
+      value="&#x5B;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="UDFfVElNRV9NU0c6UDFfREFURTpQMV9QQUdFX05P&#x2F;G0IFSVkmhIZwZryZsFcDA7uqg9HQuGTuvPDSXPiuxiydWYnIHf6Gj4FkqXHVOaLiix5TzgjOmBN8KwG0roilJQ" />
+  </form>
 
 
-<script nonce="Y_bX_TV-FD25tS9IyVOZXw">
-var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
-var apex = {env: {APP_USER: "9840815850",APP_ID: "1111",APP_PAGE_ID: "1",APP_SESSION: "116639350395160",APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F",WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.2.0",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 21.2,NONCE: "Y_bX_TV-FD25tS9IyVOZXw"},
-libVersions:{cropperJs:"1.6.2",domPurify:"3.1.6",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.29.0",oraclejet:"17.0.2",turndown:"7.2.0",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
-</script>
-<script nonce="Y_bX_TV-FD25tS9IyVOZXw" src="/i/24.2.0/libraries/apex/minified/desktop_all.min.js?v=24.2.0"></script>
-<script nonce="Y_bX_TV-FD25tS9IyVOZXw" src="wwv_flow.js_messages?p_app_id=1111&p_lang=en&p_version=24.2.0-39529515031887&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
-<script nonce="Y_bX_TV-FD25tS9IyVOZXw" src="wwv_flow.js_dialogs?p_app_id=1111&p_version=24.2.0-39529515031887"></script>
+  <script nonce="Y_bX_TV-FD25tS9IyVOZXw">
+    var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
+    var apex = {
+      env: { APP_USER: "9840815850", APP_ID: "1111", APP_PAGE_ID: "1", APP_SESSION: "116639350395160", APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F", WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "24.2.0", APEX_BASE_VERSION: "24.2", COMPATIBILITY_MODE: 21.2, NONCE: "Y_bX_TV-FD25tS9IyVOZXw" },
+      libVersions: { cropperJs: "1.6.2", domPurify: "3.1.6", fontapex: "2.4", fullcalendar: "6.1.15", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "4.6.0", mapboxGlRtlText: "0.3.0", markedJs: "14.1.2", prismJs: "1.29.0", oraclejet: "17.0.2", turndown: "7.2.0", monacoEditor: "0.51.0", lessJs: "4.2.0" }
+    };
+  </script>
+  <script nonce="Y_bX_TV-FD25tS9IyVOZXw" src="/i/24.2.0/libraries/apex/minified/desktop_all.min.js?v=24.2.0"></script>
+  <script nonce="Y_bX_TV-FD25tS9IyVOZXw"
+    src="wwv_flow.js_messages?p_app_id=1111&p_lang=en&p_version=24.2.0-39529515031887&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
+  <script nonce="Y_bX_TV-FD25tS9IyVOZXw"
+    src="wwv_flow.js_dialogs?p_app_id=1111&p_version=24.2.0-39529515031887"></script>
 
-<script nonce="Y_bX_TV-FD25tS9IyVOZXw">
-apex.da.initDaEventList = function(){
-apex.da.gEventList = [
-{"conditionElement":"P1_PASSWORD","triggeringConditionType":"EQUALS","triggeringConditionExpression":"Edm@1234","bindEventType":"ready","anyActionsFireOnInit":false,actionList:[]}];
-}
-</script>
+  <script nonce="Y_bX_TV-FD25tS9IyVOZXw">
+    apex.da.initDaEventList = function () {
+      apex.da.gEventList = [
+        { "conditionElement": "P1_PASSWORD", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Edm@1234", "bindEventType": "ready", "anyActionsFireOnInit": false, actionList: [] }];
+    }
+  </script>
 
+  <script type="module" src="../assets/js/statusbar.js"></script>
+  <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/chart.js"></script>
+  <script src="../assets/js/add.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/require.js"></script>
+  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
 
-    <script src="../assets/js/desktop_all.min.js"></script>
-    <script src="../assets/js/theme42.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/chart.js"></script>
-    <script src="../assets/js/add.min.js"></script>
-    <script src="../assets/js/widget.treeView.min.js"></script>
-    <script src="../assets/js/widget.interactiveReport.min.js"></script>
-    <script src="../assets/js/widget.iconList.min.js"></script>
-    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
-    <script src="../assets/js/widget.stickyWidget.min.js"></script>
-    <script src="../assets/js/item.Colorpicker.min.js"></script>
-    <script src="../assets/js/require.js"></script>
-    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
-    <script src="../assets/js/jetCommonBundle.min.js"></script>
-    <script src="../assets/js/chartBundle.min.js"></script>
+  <script nonce="Y_bX_TV-FD25tS9IyVOZXw">
+    apex.session.initTimeouts(180, { "idle_time_ms": 3588000, "life_time_ms": 28693000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+    apex.jQuery(function () {
+      apex.page.init(this, function () {
+        try {
+          (function () { apex.widget.starRating("P1_NEW", { "readOnly": false, "isRequired": false, "showClearButton": false, "numStars": 5, "clearToolip": "Clear Rating", "iconClass": "fa-star", "iconTooltip": "#VALUE#", "activeColor": "", "inactiveColor": "", "showValue": false, "readOnlyDisplay": "STARS" }); })();
+          (function () { apex.util.defineTemplates([{ "name": "APEX_CARDS_BEFORE", "template": "\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A", "args": [{ "name": "CARD_LAYOUT", "escape": "ATTR" }, { "name": "COMPONENT_CLASSES", "escape": "ATTR" }] }, { "name": "APEX_CARDS_CARD_8825038167996114", "template": "\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--background has-media--square has-media--cover{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=\u0022#MEDIA#\u0022 alt=\u0022\u0022 loading=\u0022lazy\u0022 \u002F\u003E\u003C\u002Fdiv\u003E\u000A{endif\u002F}\u000A\u003C\u002Fdiv\u003E\u000A\u003C\u002Fli\u003E\u000A", "args": [{ "name": "CARD_CLASSES", "escape": "ATTR" }, { "name": "MEDIA_POSITION", "escape": "ATTR" }, { "name": "MEDIA_APPEARANCE", "escape": "ATTR" }, { "name": "MEDIA_SIZING", "escape": "ATTR" }, { "name": "MEDIA_CLASSES", "escape": "ATTR" }, { "name": "MEDIA", "escape": "ATTR" }] }, { "name": "APEX_CARDS_AFTER", "template": "\u003C\u002Ful\u003E" }]); apex.widget.templateReportRegionInit({ "regionId": "8825038167996114", "regionStaticId": "profile_img", "regionType": "Cards", "ajaxIdentifier": "UkVHSU9OIFRZUEV-fjg4MjUwMzgxNjc5OTYxMTQ\u002F45Y9lNfv_Ibd-ltfceWry2IHa44ByrRQQUuL0WEuhhqCiz2LzzMWnrVbDLatUb4DWh4ws5FB4hY_bmMrr8CWag", "modelName": "profile_img", "modelOptions": { "regionId": 8825038167996114, "paginationType": "progressive", "pageSize": 100, "identityField": "USER_ID" }, "pagination": { "scroll": true, "showRange": false, "firstAndLastButtons": false, "hideSinglePage": true }, "footer": false, "hideEmptyFooter": true, "hasSize": false, "beforeTemplate": "{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--float\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}", "recordTemplate": "{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--background\u000AMEDIA_APPEARANCE:=a-CardView-media--square\u000AMEDIA_SIZING:=a-CardView-media--cover\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PHOTO_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_8825038167996114\u002F}", "afterTemplate": "{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}", "columns": [{ "USER_ID": { "index": 0 }, "PHOTO": { "index": 1 }, "APEX$PHOTO_BLOB": { "index": 2 }, "APEX$BUTTON_ACTION_EXISTS": { "index": 3 }, "APEX$FULL_ACTION_EXISTS": { "index": 4 }, "APEX$ACTION_EXISTS": { "index": 5 } }] }, gCard8825038167996114data); })();
+        } catch (e) { apex.debug.error(e) };
+        apex.item.waitForDelayLoadItems().done(function () {
+          try {
+            (function () {
+              apex.da.initDaEventList();
+              apex.da.init();
+            })();
+            apex.theme42.initializePage.noSideCol();
 
-<script nonce="Y_bX_TV-FD25tS9IyVOZXw">
-apex.session.initTimeouts(180,{"idle_time_ms":3588000,"life_time_ms":28693000,"max_idle_time_ms":3600000},'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome','\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
-apex.jQuery( function() {
-apex.page.init( this, function() {
-try {
-(function(){apex.widget.starRating("P1_NEW",{"readOnly":false,"isRequired":false,"showClearButton":false,"numStars":5,"clearToolip":"Clear Rating","iconClass":"fa-star","iconTooltip":"#VALUE#","activeColor":"","inactiveColor":"","showValue":false,"readOnlyDisplay":"STARS"});})();
-(function(){apex.util.defineTemplates([{"name":"APEX_CARDS_BEFORE","template":"\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A","args":[{"name":"CARD_LAYOUT","escape":"ATTR"},{"name":"COMPONENT_CLASSES","escape":"ATTR"}]},{"name":"APEX_CARDS_CARD_8825038167996114","template":"\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--background has-media--square has-media--cover{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=\u0022#MEDIA#\u0022 alt=\u0022\u0022 loading=\u0022lazy\u0022 \u002F\u003E\u003C\u002Fdiv\u003E\u000A{endif\u002F}\u000A\u003C\u002Fdiv\u003E\u000A\u003C\u002Fli\u003E\u000A","args":[{"name":"CARD_CLASSES","escape":"ATTR"},{"name":"MEDIA_POSITION","escape":"ATTR"},{"name":"MEDIA_APPEARANCE","escape":"ATTR"},{"name":"MEDIA_SIZING","escape":"ATTR"},{"name":"MEDIA_CLASSES","escape":"ATTR"},{"name":"MEDIA","escape":"ATTR"}]},{"name":"APEX_CARDS_AFTER","template":"\u003C\u002Ful\u003E"}]);apex.widget.templateReportRegionInit({"regionId":"8825038167996114","regionStaticId":"profile_img","regionType":"Cards","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjg4MjUwMzgxNjc5OTYxMTQ\u002F45Y9lNfv_Ibd-ltfceWry2IHa44ByrRQQUuL0WEuhhqCiz2LzzMWnrVbDLatUb4DWh4ws5FB4hY_bmMrr8CWag","modelName":"profile_img","modelOptions":{"regionId":8825038167996114,"paginationType":"progressive","pageSize":100,"identityField":"USER_ID"},"pagination":{"scroll":true,"showRange":false,"firstAndLastButtons":false,"hideSinglePage":true},"footer":false,"hideEmptyFooter":true,"hasSize":false,"beforeTemplate":"{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--float\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}","recordTemplate":"{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--background\u000AMEDIA_APPEARANCE:=a-CardView-media--square\u000AMEDIA_SIZING:=a-CardView-media--cover\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PHOTO_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_8825038167996114\u002F}","afterTemplate":"{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}","columns":[{"USER_ID":{"index":0},"PHOTO":{"index":1},"APEX$PHOTO_BLOB":{"index":2},"APEX$BUTTON_ACTION_EXISTS":{"index":3},"APEX$FULL_ACTION_EXISTS":{"index":4},"APEX$ACTION_EXISTS":{"index":5}}]},gCard8825038167996114data);})();
-} catch(e) {apex.debug.error(e)};
-apex.item.waitForDelayLoadItems().done(function() {
-try {
-(function(){apex.da.initDaEventList();
-apex.da.init();})();
-apex.theme42.initializePage.noSideCol();
+            apex.page.warnOnUnsavedChanges();
+          } finally {
+            apex.event.trigger(apex.gPageContext$, 'apexreadyend');
+          };
+        });
+      });
+    }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
+  </script>
 
-apex.page.warnOnUnsavedChanges();
-} finally {
-apex.event.trigger(apex.gPageContext$,'apexreadyend');
-};
-});
-});
-});apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' } );
-</script>
-
-<script>
+  <script>
     AOS.init();
-</script>
+  </script>
 </body>
+
 </html>
