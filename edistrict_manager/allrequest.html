@@ -12,55 +12,12 @@
   <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
-  <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
-  <link rel="icon" href="../assets/img/app-icon-32.png">
-  <style type="text/css">
-    @font-face {
-      font-family: 'FontApex';
-      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
-        url('../font/apex-5-icon-font.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Font-APEX';
-      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
-        url('../fonts/Font-APEX-Small.woff') format('woff'),
-        url('../fonts/Font-APEX-Large.woff2') format('woff2'),
-        url('../fonts/Font-APEX-Large.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-  </style>
-
-
-  <style nonce="3LvgEVni8AP-QAvCYx16JA">
-    .a-IRR-message {
-      padding: var(--a-gv-nodata-message-padding-y, 16px) var(--a-gv-nodata-message-padding-x, 16px);
-      display: none;
-    }
-
-    .a-IRR-controlsContainer {
-      display: none;
-    }
-
-    .a-IRR-header,
-    .a-IRR-header:hover {
-      background-color: #974f9045;
-
-    }
-  </style>
-
-  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
-  <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="-1" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
 </head>
 
 <body
@@ -142,7 +99,7 @@
       <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
         <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
           id="t_TreeNav" data-id="19_tree" aria-label="Main Navigation">
-          <ul>
+          <!-- <ul>
             <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
               <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=114230090361743&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w"
                 title="" style="display: none" target="">Home</a>
@@ -291,7 +248,8 @@
                 </div>
               </div>
             </li>
-          </ul>
+          </ul> -->
+          <ul id="commonMenuContainer"></ul>
         </div>
       </div>
       <script>
@@ -525,7 +483,7 @@
                                       </ul>
                                     </div>
                                   </div>
-                                  <style nonce="3LvgEVni8AP-QAvCYx16JA" id="td.u-tC_worksheet_css">
+                                  <!-- <style nonce="3LvgEVni8AP-QAvCYx16JA" id="td.u-tC_worksheet_css">
                                     tr td.rule_11009370567205292_td {
                                       background-color: #f91033 !important;
                                     }
@@ -533,7 +491,7 @@
                                     tr td.rule_11009479755205292_td {
                                       background-color: #fb810f !important;
                                     }
-                                  </style>
+                                  </style> -->
                                   <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
                                     id="td.u-tC_chart" class="a-IRR-chartView"></div>
                                   <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
@@ -824,7 +782,10 @@
         { "triggeringElementType": "REGION", "triggeringRegionId": "td.u-tC", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "apexafterclosedialog", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "REGION", "affectedRegionId": "td.u-tC", javascriptFunction: apex.da.refresh, "attribute01": "N", "action": "NATIVE_REFRESH" }] }];
     }
   </script>
-
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
   <script src="../assets/js/desktop_all.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/aos.js"></script>
