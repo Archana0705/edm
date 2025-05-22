@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
-
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="-1" />
@@ -784,9 +786,10 @@
   </script>
   <script src="../assets/js/crypto-js.min.js"></script>
   <script type="module" src="../assets/js/commonMenu.js"></script>
-  <script src="assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/toastUtil.js"></script>
   <script src="../assets/js/desktop_all.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/aos.js"></script>
@@ -802,7 +805,14 @@
   <script src="../assets/js/requirejs.jetConfig.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script>
-
+  <!-- <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      debugger
+      loadToastLayout(() => {
+        showSuccessToast("Hello! Toast is working!");
+      });
+    });
+  </script> -->
   <script nonce="3LvgEVni8AP-QAvCYx16JA">
     apex.session.initTimeouts(180, { "idle_time_ms": 3586000, "life_time_ms": 24899000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
     apex.jQuery(function () {

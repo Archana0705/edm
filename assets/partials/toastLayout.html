@@ -1,0 +1,43 @@
+<!-- toastLayout.html -->
+<link href="../vendor/toastr/toastr.min.js" rel="stylesheet">
+<div class="toast-container position-fixed p-3 custom_toast">
+    <!-- Add this inside toastLayout.html for debugging -->
+    <div>Toast layout loaded</div>
+
+    <div id="errorToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive"
+        aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <p id="errorMessage" class="mb-0"></p>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+
+    <div id="successToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive"
+        aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <p style="position:fixed; top:0; left:0; background:red; color:white; z-index:99999;"
+                    id="successMessage" class="mb-0"></p>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .toast-container {
+        right: 0.5%;
+    }
+
+    #successToast {
+        background: #198754 !important;
+    }
+
+    #errorToast {
+        background: #ff0000 !important;
+    }
+</style>

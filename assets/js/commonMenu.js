@@ -1,22 +1,22 @@
 // assets/js/commonMenu.js
 import { initializeUserSession } from "./auth.js";
-const userRole = initializeUserSession() || "helpdesk";
+const userRole = "edistrict_manager";
 
 const menuItems = [
-    { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "New Requests", file: "new-request.html", folder: "", icon: "fa fa-plus-circle", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "In Progress Requests", file: "inprogress-request.html", folder: "", icon: "fa fa-spinner", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "On-Hold Requests", file: "onhold-request.html", folder: "", icon: "fa fa-pause-circle", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "Resolved Requests", file: "resolved-request.html", folder: "", icon: "fa fa-check-circle", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "Closed Requests", file: "closed-request.html", folder: "", icon: "fa fa-times-circle", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "Reopened Requests", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "Operator Details", file: "operator-details.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "Overall EDM Report", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-list", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "eSevai Operator Change Request Form", file: "esevai-request-form.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
-    { label: "eSevai Operator Change Request Report", file: "esevai-request-report.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_mananger", "helpdesk", "helpdesk_operator"] },
+    { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "New Requests", file: "new-request.html", folder: "", icon: "fa fa-plus-circle", roles: ["helpdesk_operator"] },
+    { label: "In Progress Requests", file: "inprogress-request.html", folder: "", icon: "fa fa-spinner", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "On-Hold Requests", file: "onhold-request.html", folder: "", icon: "fa fa-pause-circle", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Resolved Requests", file: "resolved-request.html", folder: "", icon: "fa fa-check-circle", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Closed Requests", file: "closed-request.html", folder: "", icon: "fa fa-times-circle", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Reopened Requests", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Operator Details", file: "operator-details.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Overall EDM Report", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-list", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "eSevai Operator Change Request Form", file: "esevai-request-form.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "eSevai Operator Change Request Report", file: "esevai-request-report.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
 
 ];
 
@@ -117,11 +117,16 @@ function renderDynamicMenu(containerId) {
     const ul = document.getElementById(containerId);
     if (!ul) return;
 
-    const currentPath = window.location.pathname;
-    const currentFolder = currentPath.split("/").slice(-2, -1)[0];
-
-    const filteredMenu = menuItems.filter(item => item.roles.includes(userRole));
-
+    // const currentPath = window.location.pathname;
+    // const currentFolder = currentPath.split("/").slice(-2, -1)[0];
+    const pathParts = window.location.pathname.split('/');
+    const currentFile = pathParts.pop();
+    const currentFolder = pathParts.pop();
+    const filteredMenu = menuItems.filter(item => {
+        console.log('Checking item:', item);
+        console.log("userRole value and type:", userRole, typeof userRole);
+        return item.roles.includes(userRole);
+    });
     filteredMenu.forEach(item => {
         const li = document.createElement("li");
 
@@ -136,9 +141,20 @@ function renderDynamicMenu(containerId) {
         a.href = href;
         a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
 
+        const isCurrent = item.file === currentFile && (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
+
+        // if (item.file === currentFile) {
+        //     a.setAttribute("data-current", "true");
+        //     // Optional: add a class to style active link
+        //     a.classList.add("active");
+        // }
+
         li.appendChild(a);
+
+        li.setAttribute('data-current', isCurrent ? 'true' : 'false');
         ul.appendChild(li);
     });
+
 }
 
 renderDynamicMenu("commonMenuContainer");
