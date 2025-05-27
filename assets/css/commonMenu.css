@@ -1,0 +1,16 @@
+#commonMenuContainer a {
+    text-decoration: none;
+    color: #000;
+}
+
+#commonMenuContainer li {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: 10px;
+}
+
+#commonMenuContainer li:hover {
+
+    background-color: #177dae;
+
+}

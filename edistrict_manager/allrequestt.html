@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>All Request</title>
+    <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+    <!-- jQuery (must be first) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header class="t-Header" id="t_Header" role="banner">
+
+        <div class="t-Header-branding">
+            <div class="t-Header-controls">
+                <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree"
+                    aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span
+                        class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+            </div>
+            <div class="t-Header-logo">
+                <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+                <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+                <P class="t-Header-logo-link">TNEGA</P>
+
+            </div>
+            <div class="t-Header-navBar">
+                <div class="t-Header-navBar--start"></div>
+                <div class="t-Header-navBar--center" style='color:black'>
+                    <ul class="t-NavigationBar " id="8792244222964376">
+                        <li class="t-NavigationBar-item ">
+                            <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar"
+                                type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
+                                <span class="t-Icon fa&#x20;fa-user" aria-hidden="true"></span><span
+                                    class="t-Button-label">Hello
+                                    Bakiyalakshmi V !
+                                </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow"
+                                    aria-hidden="true"></span>
+                            </button>
+                            <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
+                                <ul>
+                                    <li class="" data-current="false" data-icon=""><a href="separator" title=""
+                                            target="">---</a></li>
+                                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
+                                            href="apex_authentication.logout?p_app_id=1111&p_session_id=114230090361743"
+                                            title="" target="">Sign Out</a></li>
+                                    <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a
+                                            href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D114230090361743%26dialogCs%3D7pXDxNJV74dLDdk1vSN5xl9U9UuGW5WLOCT7GSIHCbJtmuHOVrUMrrZGZJ5SQFMdbY-DDp4Ia_X8b6xNCkq_Xg&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
+                                            title="" target="">Change Password</a></li>
+                                    <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
+                                            href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D114230090361743%26dialogCs%3DrMGdIR7vr0hwAnI4-d6IuDb5NG0cwcroqOlyAGE_uHcT7Bi5tB-6YrmJBSNe4vNW4z-EVLOmeIZSsvip7t50vA&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
+                                            title="" target="">My Profile</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="t-NavigationBar-item ">
+                            <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title=""
+                                target="">
+                                <span class="t-Icon " aria-hidden="true"></span><span class="t-Button-label">Last Logged
+                                    in:
+                                    04-05-2025 09:58 PM</span><span class="t-Button-badge"></span>
+                            </a>
+                        </li>
+                        <li class="t-NavigationBar-item is-active " aria-current="page">
+                            <a class="t-Button t-Button--icon t-Button--header t-Button--navBar"
+                                href="/ords/r/edmdev/e-district-manager-application/home?session=114230090361743"
+                                title="" target="">
+                                <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true"></span><span
+                                    class="t-Button-label">
+                                </span><span class="t-Button-badge">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="t-Header-navBar--end"></div>
+            </div>
+        </div>
+        <div class="t-Header-nav"></div>
+    </header>
+    <div class="container mt-4">
+        <h2>All Request</h2>
+
+        <!-- Filter -->
+        <div class="row mb-3">
+            <div class="col-3">
+                <label for="P19_STATUS" class="form-label">Status</label>
+                <select id="P19_STATUS" name="P19_STATUS" class="form-select">
+                    <option value="" selected></option>
+                    <option value="New">New</option>
+                    <option value="Open">Open</option>
+                    <option value="In-Progress">In-Progress</option>
+                    <option value="On-Hold">On-Hold</option>
+                    <option value="Resolved">Resolved</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+            <div class="col-1 d-flex align-items-end">
+                <button id="searchBtn" class="btn btn-success w-100">
+                    <i class="fa fa-search"></i> Search
+                </button>
+            </div>
+            <div class="col-1 d-flex align-items-end">
+                <button id="clearBtn" class="btn btn-warning w-100" type="button">
+                    <i class="fa fa-refresh"></i> Clear
+                </button>
+            </div>
+        </div>
+
+        <!-- DataTable -->
+        <table id="pressReleaseTable" class="display table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample data, you can load dynamically -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>New</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                    <td>Open</td>
+                </tr>
+                <tr>
+                    <td>Mike Johnson</td>
+                    <td>mike@example.com</td>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FontAwesome CDN for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            // Check if DataTable plugin loaded
+            if (typeof $.fn.DataTable === "undefined") {
+                console.error("DataTables plugin is not loaded!");
+                return;
+            }
+
+            // Initialize DataTable
+            var table = $("#pressReleaseTable").DataTable({
+                pageLength: 5,
+            });
+
+            // Search button filters by status
+            $("#searchBtn").on("click", function () {
+                var status = $("#P19_STATUS").val();
+                if (status) {
+                    // Search only in the Status column (index 2)
+                    table.column(2).search("^" + status + "$", true, false).draw();
+                } else {
+                    table.column(2).search("").draw(); // clear filter
+                }
+            });
+
+            // Clear button resets the filter and select box
+            $("#clearBtn").on("click", function () {
+                $("#P19_STATUS").val("");
+                table.column(2).search("").draw();
+            });
+        });
+    </script>
+</body>
+
+</html>

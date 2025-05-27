@@ -12,8 +12,11 @@
   <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
   <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -101,156 +104,6 @@
       <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
         <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
           id="t_TreeNav" data-id="19_tree" aria-label="Main Navigation">
-          <!-- <ul>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=114230090361743&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w"
-                title="" style="display: none" target="">Home</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-home"></span>
-                  <span class="a-TreeView-label">Home</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="true" data-id="" data-disabled="" data-icon="" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/all-request4?session=114230090361743" title=""
-                style="display: none" target="">All Request</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o "></span>
-                  <span class="a-TreeView-label">All Request</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file-edit" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/service-request?p7_new=0&session=114230090361743&cs=110BX6RMm3yB5UIdQpCi-G5IFDb-mDxd9KP8m4AyaGhFOf22_34EnYHcmZZSc8xWEf4_d5vM9pqBG-FOCQqxuNA"
-                title="" style="display: none" target="">New Request</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-file-edit"></span>
-                  <span class="a-TreeView-label">New Request</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-clock"
-              data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/progress-request1?session=114230090361743" title=""
-                style="display: none" target="">In-Progress Request [ 2 ]
-              </a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-clock"></span>
-                  <span class="a-TreeView-label">In-Progress Request [ 2 ]
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-user" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/on-hold-request?session=114230090361743" title=""
-                style="display: none" target="">On-Hold Request [ 0 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-user"></span>
-                  <span class="a-TreeView-label">On-Hold Request [ 0 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-check"
-              data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/resolved-request1?session=114230090361743" title=""
-                style="display: none" target="">Resolved Request [ 51 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-check"></span>
-                  <span class="a-TreeView-label">Resolved Request [ 51 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-check-alt"
-              data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/closed-request1?session=114230090361743" title=""
-                style="display: none" target="">Closed Request [ 0]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-check-alt"></span>
-                  <span class="a-TreeView-label">Closed Request [ 0]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/reopned-request?session=114230090361743" title=""
-                style="display: none" target="">Reopened Request [ 1 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o "></span>
-                  <span class="a-TreeView-label">Reopened Request [ 1 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-server-user" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/operators-details?session=114230090361743" title=""
-                style="display: none" target="">Operators Details</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-server-user"></span>
-                  <span class="a-TreeView-label">Operators Details</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/instructions-received-report?session=114230090361743"
-                title="" style="display: none" target="">Instructions Received Report [ 1 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-table"></span>
-                  <span class="a-TreeView-label">Instructions Received Report [ 1 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/instructions-received-tickets?session=114230090361743"
-                title="" style="display: none" target="">Helpdesk Tickets</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o "></span>
-                  <span class="a-TreeView-label">Helpdesk Tickets</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-form?session=114230090361743"
-                title="" style="display: none" target="">eSevai Operator Change Request Form</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-file"></span>
-                  <span class="a-TreeView-label">eSevai Operator Change Request Form</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-report?session=114230090361743"
-                title="" style="display: none" target="">eSevai Operator Change Request Report</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-table"></span>
-                  <span class="a-TreeView-label">eSevai Operator Change Request Report</span>
-                </div>
-              </div>
-            </li>
-          </ul> -->
           <ul id="commonMenuContainer"></ul>
         </div>
       </div>
@@ -503,163 +356,18 @@
                                   <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
                                     id="td.u-tC_data_panel" class="a-IRR-reportView">
                                     <div class="a-IRR-tableContainer">
-                                      <table
-                                        aria-label="All&#x20;Request,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
-                                        class="a-IRR-table" id="58247929271860066">
-                                        <tr>
-                                          <th class="a-IRR-header u-tC" id="C31574886900326141"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="31574886900326141" href="#"><span style='width:150px'>Request
-                                                Number</span></a></th>
-                                          <th class="a-IRR-header u-tC" id="C58249499840860077"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="58249499840860077" href="#"><span style="width:150px">Issue
-                                                Type</span></a></th>
-                                          <th class="a-IRR-header u-tC" id="C58250742019860078"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="58250742019860078" href="#"><span style="width :400px">Short
-                                                Description</span></a></th>
-                                          <th class="a-IRR-header u-tC" id="C54730706433728260"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="54730706433728260" href="#"><span
-                                                style="width:80px">Status</span></a></th>
-                                          <th class="a-IRR-header u-tC" id="C58254770402860081"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="58254770402860081" href="#"><span style="width:130px">Created
-                                                On</span></a></th>
-                                          <th class="a-IRR-header u-tC" id="C58255131996860081"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="58255131996860081" href="#"><span
-                                                style="width:100px">Requested By</span></a></th>
-                                          <th class="a-IRR-header u-tL" id="C58255921890860082"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="58255921890860082" href="#"><span
-                                                style="width:130px">Requested Group</span></a></th>
-                                          <th class="a-IRR-header u-tC" id="C58257101601860083"><a
-                                              aria-haspopup="dialog" class="a-IRR-headerLink"
-                                              data-column="58257101601860083" href="#"><span
-                                                style="width:130px">Assigned To</span></a></th>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-06-03/0286">EDM/2024-06-03/0286</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Others</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">03-06-2024 11:44 AM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Department</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Mohan Raj</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-06-03/0287">EDM/2024-06-03/0287</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Others</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Others</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">03-06-2024 01:01 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From EDM</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Mohan Ravikumar</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-08-27/0767">EDM/2024-08-27/0767</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Others</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">27-08-2024 04:29 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Citizen</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Kabalishwaran</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-09-25/1148">EDM/2024-09-25/1148</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Others</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">25-09-2024 12:36 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Operator</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Mohan Raj</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-09-26/1196">EDM/2024-09-26/1196</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Others</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">26-09-2024 04:15 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Department</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Mohan Raj</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-09-26/1201">EDM/2024-09-26/1201</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Others</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Others</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">26-09-2024 06:08 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Citizen</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Mohan Raj</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-10-03/1291">EDM/2024-10-03/1291</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Application Cancellation</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">03-10-2024 12:19 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Citizen</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Neelukiran S</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-10-03/1309">EDM/2024-10-03/1309</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Application Cancellation</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">03-10-2024 04:22 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From EDM</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Neelukiran S</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-10-03/1311">EDM/2024-10-03/1311</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Application Cancellation</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">03-10-2024 04:35 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Citizen</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Neelukiran S</td>
-                                        </tr>
-                                        <tr>
-                                          <td class=" u-tC" headers="C31574886900326141"><a
-                                              HREF="f?P=1111:16:114230090361743::NO:RP,16:P16_REQUEST_NUMBER:EDM/2024-10-03/1313">EDM/2024-10-03/1313</a>
-                                          </td>
-                                          <td class=" u-tL" headers="C58249499840860077">Application Related Issue</td>
-                                          <td class=" u-tL" headers="C58250742019860078">Application Cancellation</td>
-                                          <td class=" u-tL" headers="C54730706433728260">Resolved</td>
-                                          <td class=" u-tL" headers="C58254770402860081">03-10-2024 05:09 PM</td>
-                                          <td class=" u-tL" headers="C58255131996860081">Bakiyalakshmi V</td>
-                                          <td class=" u-tL" headers="C58255921890860082">From Citizen</td>
-                                          <td class=" u-tL" headers="C58257101601860083">Neelukiran S</td>
-                                        </tr>
+                                      <table id="pressReleaseTable" class="display" style="width:100%">
+                                        <thead>
+                                          <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th>Status</th>
+                                            <th>Status</th>
+                                            <th>Status</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody></tbody>
                                       </table>
                                     </div>
                                     <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
@@ -765,46 +473,28 @@
   </form>
 
 
-  <script nonce="3LvgEVni8AP-QAvCYx16JA">
-    var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
-    var apex = {
-      env: { APP_USER: "9344712827", APP_ID: "1111", APP_PAGE_ID: "19", APP_SESSION: "114230090361743", APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F", WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "24.2.0", APEX_BASE_VERSION: "24.2", COMPATIBILITY_MODE: 21.2, NONCE: "3LvgEVni8AP-QAvCYx16JA" },
-      libVersions: { cropperJs: "1.6.2", domPurify: "3.1.6", fontapex: "2.4", fullcalendar: "6.1.15", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "4.6.0", mapboxGlRtlText: "0.3.0", markedJs: "14.1.2", prismJs: "1.29.0", oraclejet: "17.0.2", turndown: "7.2.0", monacoEditor: "0.51.0", lessJs: "4.2.0" }
-    };
-  </script>
-  <script nonce="3LvgEVni8AP-QAvCYx16JA" src="/i/24.2.0/libraries/apex/minified/desktop_all.min.js?v=24.2.0"></script>
-  <script nonce="3LvgEVni8AP-QAvCYx16JA"
-    src="wwv_flow.js_messages?p_app_id=1111&p_lang=en&p_version=24.2.0-39529515031887&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
-  <script nonce="3LvgEVni8AP-QAvCYx16JA"
-    src="wwv_flow.js_dialogs?p_app_id=1111&p_version=24.2.0-39529515031887"></script>
 
-  <script nonce="3LvgEVni8AP-QAvCYx16JA">
-    apex.da.initDaEventList = function () {
-      apex.da.gEventList = [
-        { "triggeringElementType": "REGION", "triggeringRegionId": "td.u-tC", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "apexafterclosedialog", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "REGION", "affectedRegionId": "td.u-tC", javascriptFunction: apex.da.refresh, "attribute01": "N", "action": "NATIVE_REFRESH" }] }];
-    }
-  </script>
-  <script src="../assets/js/crypto-js.min.js"></script>
-  <script type="module" src="../assets/js/commonMenu.js"></script>
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/toastUtil.js"></script>
+  <script src="../assets/js/dataTableUtil.js"></script>
   <script src="../assets/js/desktop_all.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/aos.js"></script>
-  <script src="../assets/js/chart.js"></script>
-  <script src="../assets/js/add.min.js"></script>
+
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
   <script src="../assets/js/widget.treeView.min.js"></script>
   <script src="../assets/js/widget.interactiveReport.min.js"></script>
   <script src="../assets/js/widget.iconList.min.js"></script>
   <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
   <script src="../assets/js/widget.stickyWidget.min.js"></script>
   <script src="../assets/js/item.Colorpicker.min.js"></script>
-  <script src="../assets/js/require.js"></script>
-  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/global.js"></script> -->
+
   <!-- <script>
     window.addEventListener('DOMContentLoaded', function () {
       debugger
@@ -813,7 +503,7 @@
       });
     });
   </script> -->
-  <script nonce="3LvgEVni8AP-QAvCYx16JA">
+  <!-- <script nonce="3LvgEVni8AP-QAvCYx16JA">
     apex.session.initTimeouts(180, { "idle_time_ms": 3586000, "life_time_ms": 24899000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
     apex.jQuery(function () {
       apex.page.init(this, function () {
@@ -841,11 +531,112 @@
         });
       });
     }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
+  </script> -->
+
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+
+  <script src="../assets/js/toastUtil.js"></script>
+  <script src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+
+
+
+  <!-- <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script> -->
+  <!-- <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script> -->
+  <script src="../assets/js/global.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
+
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
   </script>
 
   <script>
     AOS.init();
   </script>
+
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      debugger
+
+      const langSwitch = 'en';
+      const apiUrl = "https://tngis.tnega.org/lcap_api/dipr-lcap-api/v1/general/governmentOrders/viewReport";
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      const payload = {
+        "action": "fetch",
+        "table": "edm_service_request_t",
+        "columns": "user_id, district, name, designation, mobile, email, status, created_by, created_dttm, updated_by, updated_dttm,photo, mime_type, file_name, reporting_id, personal_email, personal_mobile,personal_address, emrgency_contact",
+        "filters": {
+          "mobile": "9876543210",
+          "district": "Chennai"
+        }
+      }
+      const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();
+
+      loadDataToTable({
+        tableId: 'pressReleaseTable',
+        apiUrl,
+        httpMethod: 'POST',
+        payload: { data: encryptedPayload },
+        rowBuilder: (item) => `
+      <tr>
+        <td class="u-tL">
+          <a data-id="${item.id}" data-file="${item.order_name}" id="open-modal-btn" href="javascript:void(0);">
+            <i class="bi bi-pencil-square"></i>
+          </a>
+        </td>
+        <td class="u-tC">${item.go_date || 'N/A'}</td>
+        <td class="u-tC">${item.language || 'N/A'}</td>
+        <td class="u-tC">${item.order_name || 'N/A'}</td>
+        <td class="u-tC">${item.uploaded_by || 'N/A'}</td>
+        <td class="u-tC">${item.uploaded_date || 'N/A'}</td>
+      </tr>
+    `
+      });
+    });
+
+  </script>
+
+
+
 </body>
 
 </html>
