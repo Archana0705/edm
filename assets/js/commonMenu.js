@@ -1,6 +1,5 @@
 // assets/js/commonMenu.js
 import { initializeUserSession } from "./auth.js";
-
 const userRole = "edistrict_manager";
 
 const menuItems = [
@@ -144,17 +143,16 @@ function renderDynamicMenu(containerId) {
 
         const isCurrent = item.file === currentFile && (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
 
-        if (isCurrent) {
-            a.setAttribute('data-current', "true");
-            a.classList.add("active");
-            li.style.backgroundColor = "#177dae";
-            a.style.color = "white";
-        }
+        // if (item.file === currentFile) {
+        //     a.setAttribute("data-current", "true");
+        //     // Optional: add a class to style active link
+        //     a.classList.add("active");
+        // }
 
         li.appendChild(a);
-        ul.appendChild(li);
 
-        // li.setAttribute('data-current', isCurrent ? 'true' : 'false');
+        li.setAttribute('data-current', isCurrent ? 'true' : 'false');
+        ul.appendChild(li);
     });
 
 }
