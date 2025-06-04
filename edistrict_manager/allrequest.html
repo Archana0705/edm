@@ -609,7 +609,7 @@
           "district": "Chennai"
         }
       }
-      const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();
+      const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
       loadDataToTable({
         tableId: 'pressReleaseTable',
