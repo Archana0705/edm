@@ -13,8 +13,18 @@
   <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
-  <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
-  <link rel="icon" href="../assets/img/app-icon-32.png">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style type="text/css">
     @font-face {
       font-family: 'FontApex';
@@ -98,15 +108,7 @@
     }
   </style>
 
-  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
-  <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
-
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="-1" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+  
 </head>
 
 <body
@@ -191,7 +193,7 @@
       <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
         <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
           id="t_TreeNav" data-id="29_tree" aria-label="Main Navigation">
-          <ul>
+          <!-- <ul>
             <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
               <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=116639350395160&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w"
                 title="" style="display: none" target="">Home</a>
@@ -407,7 +409,8 @@
                 </div>
               </div>
             </li>
-          </ul>
+          </ul> -->
+          <ul id="commonMenuContainer"></ul> 
         </div>
       </div>
       <script>
@@ -547,763 +550,22 @@
                                       <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
                                         id="R73722999256512309_data_panel" class="a-IRR-reportView">
                                         <div class="a-IRR-tableContainer">
-                                          <table
-                                            aria-label="All&#x20;Request,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
-                                            class="a-IRR-table" id="73723055292512310">
-                                            <tr>
-                                              <th class="a-IRR-header u-tC" id="C73726516189512345"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73726516189512345" href="#"><span
-                                                    style='width:200px'>Request Number</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73723212828512312"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73723212828512312" href="#"><span
-                                                    style='width:200px'>Issue Type</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73724041154512320"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73724041154512320" href="#"><span
-                                                    style='width:100px'>Issue Type</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73723458137512314"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73723458137512314" href="#"><span
-                                                    style='width:300px'>Short Description</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73723559375512315"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73723559375512315" href="#"><span
-                                                    style='width:150px'>Created On</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73723625849512316"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73723625849512316" href="#"><span
-                                                    style='width:200px'>Requested By</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73723976834512319"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73723976834512319" href="#"><span
-                                                    style='width:200px'>Requested District</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73723747783512317"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73723747783512317" href="#"><span
-                                                    style='width:150px'>Requested Group</span></a></th>
-                                              <th class="a-IRR-header u-tC" id="C73724113801512321"><a
-                                                  aria-haspopup="dialog" class="a-IRR-headerLink"
-                                                  data-column="73724113801512321" href="#"><span
-                                                    style='width:200px'>Assigned To</span></a></th>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-04/6238,29, ">EDM/2025-05-04/6238</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-2120241029710. pls move
-                                                to pending</td>
-                                              <td class=" u-tL" headers="C73723559375512315">04-05-2025 10:24 AM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Anjali T</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Tirunelveli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6237,29, ">EDM/2025-05-03/6237</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Certificate Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-6202504191056 unable to
-                                                sign it-move to pending</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 07:57 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">T.Rameshkumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thiruchirappalli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6236,29, ">EDM/2025-05-03/6236</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">CSC Password Reset Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">edistrict password reset -
-                                                Regarding</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 07:06 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Ramachandran A</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thanjavur</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6235,29, ">EDM/2025-05-03/6235</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">OBC Certificate
-                                                cancellation request</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 07:04 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Ramachandran A</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thanjavur</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Citizen</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6234,29, ">EDM/2025-05-03/6234</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Already approved appln
-                                                showing in pending</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 04:49 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Kadhar Basha R</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Chennai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6233,29, ">EDM/2025-05-03/6233</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">13329091391787. patta page
-                                                can edit</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 03:31 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Anjali T</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Tirunelveli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6232,29, ">EDM/2025-05-03/6232</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-5202305122169. pls
-                                                cancel the appln</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 03:17 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Anjali T</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Tirunelveli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6231,29, ">EDM/2025-05-03/6231</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Login Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Operator change request in
-                                                MLA Esevai ID TNMLA-142</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 01:16 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">T.Rameshkumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thiruchirappalli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6230,29, ">EDM/2025-05-03/6230</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Application num not
-                                                generated</td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 11:16 AM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">K.Suganya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Sivagangai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-03/6229,29, ">EDM/2025-05-03/6229</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Login Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">in tahsildar login not open
-                                              </td>
-                                              <td class=" u-tL" headers="C73723559375512315">03-05-2025 11:11 AM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">K.Suganya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Sivagangai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6228,29, ">EDM/2025-05-02/6228</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">F-Line issues</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 11:10 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S.Kavitha</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Perambalur</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6227,29, ">EDM/2025-05-02/6227</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">F-Line issues</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 11:04 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S.Kavitha</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Perambalur</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6226,29, ">EDM/2025-05-02/6226</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Fline service - payment
-                                                issues</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 06:38 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Sundarraj</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Namakkal</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6225,29, ">EDM/2025-05-02/6225</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Application not submitted
-                                                but amount deducted</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 06:15 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Suga Rajkumar G</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Dindigul</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6224,29, ">EDM/2025-05-02/6224</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Application not submitted
-                                                but amount deducted</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 06:10 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Suga Rajkumar G</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Dindigul</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6223,29, ">EDM/2025-05-02/6223</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Others</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">CAN EDIT SERVICE&#x2F;new
-                                                esevai - Suspicious account</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 06:00 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Durgadevi M</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Madurai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From EDM</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6222,29, ">EDM/2025-05-02/6222</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">CSC Password Reset Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TNEFAPDK595-01</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 06:06 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">M.Vigneswaran</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Pudukkottai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6221,29, ">EDM/2025-05-02/6221</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Login Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">request for unblock e-sevai
-                                                id TNEFAKPM320-01</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 05:37 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S.SATHISH</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Kancheepuram</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6220,29, ">EDM/2025-05-02/6220</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Others</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TNF202504000033463</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 05:33 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S.SATHISH</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Kancheepuram</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6219,29, ">EDM/2025-05-02/6219</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Esevai Application Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Asking MMID</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 05:32 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S.Surya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Salem</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6218,29, ">EDM/2025-05-02/6218</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Others</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TNF202505000001218 waiting
-                                                for payment status</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 05:24 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S.SATHISH</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Kancheepuram</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6217,29, ">EDM/2025-05-02/6217</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-52021071214335. PLS
-                                                CANCEL THE APPLN</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 05:16 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Anjali T</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Tirunelveli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6216,29, ">EDM/2025-05-02/6216</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">E-District Application
-                                                Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">No record found for
-                                                eDistrict ID TNEFAARI0355-01</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 04:32 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S. Shanmuga Priya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Ariyalur</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6215,29, ">EDM/2025-05-02/6215</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-7202302241908</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 04:21 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">M.Vigneswaran</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Pudukkottai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6214,29, ">EDM/2025-05-02/6214</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-52021100410477</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 03:59 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">K P Prabakaran</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Karur</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Citizen</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:44:116639350395160::NO:RP,44:P44_REQUEST_NUMBER,P44_PAGENO,P44_NEW:EDM/2025-05-02/6213,29,0">EDM/2025-05-02/6213</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Certificate Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">Resolved</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Certificate cancellation
-                                                Can No-133341225498225</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 03:41 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Elakkiya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Tenkasi</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Citizen</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6212,29, ">EDM/2025-05-02/6212</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Certificate Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-5202504126136 delete
-                                                saved application -reapply</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 03:18 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">T.Rameshkumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thiruchirappalli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6211,29, ">EDM/2025-05-02/6211</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Cancel the returned
-                                                certificate</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 03:16 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">A.Ambika</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Namakkal</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6210,29, ">EDM/2025-05-02/6210</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">CSC center Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Location change and mobile
-                                                number change</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 03:09 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">UMADEVI A</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Viluppuram</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From EDM</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6209,29, ">EDM/2025-05-02/6209</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Others</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Changing Mobile Number and
-                                                Mail id :</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 02:56 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">A.Ambika</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Namakkal</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6208,29, ">EDM/2025-05-02/6208</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">FLINE _ PAYMENT Issues</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 02:58 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Sundarraj</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Namakkal</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6207,29, ">EDM/2025-05-02/6207</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Fline Service - Payment
-                                                issues</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 02:55 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Sundarraj</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Namakkal</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6206,29, ">EDM/2025-05-02/6206</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Payment Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Fline Payment Related
-                                                Issues</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 02:52 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Sundarraj</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Namakkal</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6205,29, ">EDM/2025-05-02/6205</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">E-District Application
-                                                Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Update the Community in
-                                                eDistrict CAN</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 02:13 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S Vinoth Kumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Krishnagiri</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Citizen</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6204,29, ">EDM/2025-05-02/6204</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-720250415572 - move to
-                                                pending</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 01:26 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Durgadevi M</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Madurai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6203,29, ">EDM/2025-05-02/6203</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Login Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">ID BLOCKED</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 01:22 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">T.Praveena</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Viluppuram</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6202,29, ">EDM/2025-05-02/6202</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Kindly Cancel the
-                                                application
-                                                TN-520180624265</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 01:22 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S Vinoth Kumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Krishnagiri</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From EDM</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6201,29, ">EDM/2025-05-02/6201</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">CSC center Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Relocation of Center</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 01:18 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">S Vinoth Kumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Krishnagiri</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6200,29, ">EDM/2025-05-02/6200</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Login Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">ID Blocked issue</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 01:17 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">T.Praveena</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Viluppuram</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6199,29, ">EDM/2025-05-02/6199</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">TN-5202504131152 kindly
-                                                move back to pending</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 01:14 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Leo Christopher</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Kancheepuram</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6198,29, ">EDM/2025-05-02/6198</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Applicant wants to cancel
-                                                the application</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 01:09 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">B Harikaran</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Krishnagiri</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Vishva VR</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6197,29, ">EDM/2025-05-02/6197</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">CAN Correction Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">CAN Delection
-                                                request-Regarding</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:55 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Ramachandran A</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thanjavur</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Citizen</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6196,29, ">EDM/2025-05-02/6196</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">move to pending for
-                                                signature to penidng appln</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:53 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">K.Suganya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Sivagangai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Kabalishwaran</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6195,29, ">EDM/2025-05-02/6195</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">CAN Correction Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">can number delete req</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:52 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">K.Suganya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Sivagangai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6194,29, ">EDM/2025-05-02/6194</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Esevai Application Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Unable to get receipt and
-                                                not submitted</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:22 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Kalpana k</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Dindigul</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:44:116639350395160::NO:RP,44:P44_REQUEST_NUMBER,P44_PAGENO,P44_NEW:EDM/2025-05-02/6193,29,0">EDM/2025-05-02/6193</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">Resolved</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Kindly move the application
-                                              </td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:27 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">MUTHURAMAN R</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Virudhunagar</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Neelukiran S</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6192,29, ">EDM/2025-05-02/6192</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Can Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">133150126883556 EDIT CAN in
-                                                eDistrict</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:23 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">T.Rameshkumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thiruchirappalli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6191,29, ">EDM/2025-05-02/6191</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Certificate Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Need to cancel approved
-                                                income certificate</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:23 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">V.Sandhiya</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Ranipet</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From EDM</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Manju</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:44:116639350395160::NO:RP,44:P44_REQUEST_NUMBER,P44_PAGENO,P44_NEW:EDM/2025-05-02/6190,29,0">EDM/2025-05-02/6190</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Application Related Issue
-                                              </td>
-                                              <td class=" u-tL" headers="C73724041154512320">Resolved</td>
-                                              <td class=" u-tL" headers="C73723458137512314">Application approved but
-                                                unable to sign reg</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:20 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">Kadhar Basha R</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Chennai</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Department</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Muthulakshmi</td>
-                                            </tr>
-                                            <tr>
-                                              <td class=" u-tC" headers="C73726516189512345"><a
-                                                  HREF="f?P=1111:46:116639350395160::NO:RP,46:P46_REQUEST_NUMBER,P46_PAGENO,P46_NEW:EDM/2025-05-02/6189,29, ">EDM/2025-05-02/6189</a>
-                                              </td>
-                                              <td class=" u-tL" headers="C73723212828512312">Can Related Issue</td>
-                                              <td class=" u-tL" headers="C73724041154512320">New</td>
-                                              <td class=" u-tL" headers="C73723458137512314">13302081266018 EDIT CAN in
-                                                eDistrict</td>
-                                              <td class=" u-tL" headers="C73723559375512315">02-05-2025 12:20 PM</td>
-                                              <td class=" u-tL" headers="C73723625849512316">T.Rameshkumar</td>
-                                              <td class=" u-tL" headers="C73723976834512319">Thiruchirappalli</td>
-                                              <td class=" u-tL" headers="C73723747783512317">From Operator</td>
-                                              <td class=" u-tL" headers="C73724113801512321">Mohan Ravikumar</td>
-                                            </tr>
-                                          </table>
+                                          
+                                          <table id="pressReleaseTable" class="display" style="width:100%">
+                                        <thead>
+                                          <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th>Status</th>
+                                            <th>Status</th>
+                                            <th>Status</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                      </table>
+
+
                                         </div>
                                         <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
                                           class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
@@ -1413,78 +675,93 @@
   </form>
 
 
-  <script nonce="KISm5FQW6X79OzTL4UdCRQ">
-    var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
-    var apex = {
-      env: { APP_USER: "9840815850", APP_ID: "1111", APP_PAGE_ID: "29", APP_SESSION: "116639350395160", APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F", WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "24.2.0", APEX_BASE_VERSION: "24.2", COMPATIBILITY_MODE: 21.2, NONCE: "KISm5FQW6X79OzTL4UdCRQ" },
-      libVersions: { cropperJs: "1.6.2", domPurify: "3.1.6", fontapex: "2.4", fullcalendar: "6.1.15", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "4.6.0", mapboxGlRtlText: "0.3.0", markedJs: "14.1.2", prismJs: "1.29.0", oraclejet: "17.0.2", turndown: "7.2.0", monacoEditor: "0.51.0", lessJs: "4.2.0" }
-    };
-  </script>
-  <script nonce="KISm5FQW6X79OzTL4UdCRQ" src="/i/24.2.0/libraries/apex/minified/desktop_all.min.js?v=24.2.0"></script>
-  <script nonce="KISm5FQW6X79OzTL4UdCRQ"
-    src="wwv_flow.js_messages?p_app_id=1111&p_lang=en&p_version=24.2.0-39529515031887&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
-  <script nonce="KISm5FQW6X79OzTL4UdCRQ"
-    src="wwv_flow.js_dialogs?p_app_id=1111&p_version=24.2.0-39529515031887"></script>
+<!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
-  <script nonce="KISm5FQW6X79OzTL4UdCRQ">
-    apex.da.initDaEventList = function () {
-      apex.da.gEventList = [
-        { "triggeringElementType": "REGION", "triggeringRegionId": "R53337887249653684", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "apexafterclosedialog", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "REGION", "affectedRegionId": "R53337887249653684", javascriptFunction: apex.da.refresh, "attribute01": "N", "action": "NATIVE_REFRESH" }] },
-        { "triggeringElementType": "BUTTON", "triggeringButtonId": "B26486092224200880", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "apexpress", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "REGION", "affectedRegionId": "R40964975687648032", javascriptFunction: apex.da.clear, "action": "NATIVE_CLEAR" }] }];
-    }
-  </script>
-
-  <script src="../assets/js/desktop_all.min.js"></script>
-  <script src="../assets/js/theme42.min.js"></script>
-  <script src="../assets/js/aos.js"></script>
-  <script src="../assets/js/chart.js"></script>
-  <script src="../assets/js/add.min.js"></script>
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
   <script src="../assets/js/widget.interactiveReport.min.js"></script>
   <script src="../assets/js/widget.iconList.min.js"></script>
   <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
   <script src="../assets/js/widget.stickyWidget.min.js"></script>
   <script src="../assets/js/item.Colorpicker.min.js"></script>
-  <script src="../assets/js/require.js"></script>
-  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script>
 
+  <script src="../assets/js/toastUtil.js"></script>
+  <script src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/global.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
 
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
 
-  <script nonce="KISm5FQW6X79OzTL4UdCRQ">
-    apex.session.initTimeouts(180, { "idle_time_ms": 3600000, "life_time_ms": 28510000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
-    apex.jQuery(function () {
-      apex.page.init(this, function () {
-        try {
-          (function () { apex.jQuery('body').addClass('t-PageBody--leftNav'); })();
-          (function () { apex.widget.selectList("#P29_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-NTM0MTkyMzY1NjgxNDc3OTI\u002FOawb_XgMV9czr-FGFajL5F1mEo_8JG6RfAhQhtAcxlq5T4_3o7fEubZRErKY0ZqzTNePLKAAN_qKhzgdWS5P8Q" }); })();
-          (function () { apex.jQuery('#R73722999256512309_ir').interactiveReport({ "regionId": "R73722999256512309", "helpLink": "wwv_flow_utilities.show_ir_help?p_app_id=1111\u0026p_worksheet_id=73723055292512310\u0026p_lang=en", "downloadContentDisposition": "ATTACHMENT", "lazyLoading": false, "ajaxIdentifier": "UkVHSU9OIFRZUEV-fjczNzIyOTk5MjU2NTEyMzA5\u002FM2-tgE4K-IaZhaF4ANZzKm762aNadub76lX_peDew5Axu5jp5bQHCZSmcIFKXHl1LTjYV4sp07BMwPLqYR7JOw" }); })();
-        } catch (e) { apex.debug.error(e) };
-        apex.item.waitForDelayLoadItems().done(function () {
-          try {
-            (function () {
-              apex.da.initDaEventList();
-              apex.da.init();
-            })();
-            apex.theme42.initializePage.noSideCol();
-            var anchorElements = document.querySelectorAll('td.u-tC[headers=DOWNLOAD-BLOB] a');
-
-            Array.from(anchorElements).forEach(function (elem) {
-              elem.setAttribute('target', '_blank');
-            })
-            apex.page.warnOnUnsavedChanges();
-          } finally {
-            apex.event.trigger(apex.gPageContext$, 'apexreadyend');
-          };
-        });
-      });
-    }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
   </script>
 
   <script>
     AOS.init();
   </script>
+
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      debugger
+
+      const langSwitch = 'en';
+      const apiUrl = "https://tngis.tnega.org/lcap_api/dipr-lcap-api/v1/general/governmentOrders/viewReport";
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      const payload = {
+        "action": "fetch",
+        "table": "edm_service_request_t",
+        "columns": "user_id, district, name, designation, mobile, email, status, created_by, created_dttm, updated_by, updated_dttm,photo, mime_type, file_name, reporting_id, personal_email, personal_mobile,personal_address, emrgency_contact",
+        "filters": {
+          "mobile": "9876543210",
+          "district": "Chennai"
+        }
+      }
+      const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();
+
+      loadDataToTable({
+        tableId: 'pressReleaseTable',
+        apiUrl,
+        httpMethod: 'POST',
+        payload: { data: encryptedPayload },
+        rowBuilder: (item) => `
+      <tr>
+        <td class="u-tL">
+          <a data-id="${item.id}" data-file="${item.order_name}" id="open-modal-btn" href="javascript:void(0);">
+            <i class="bi bi-pencil-square"></i>
+          </a>
+        </td>
+        <td class="u-tC">${item.go_date || 'N/A'}</td>
+        <td class="u-tC">${item.language || 'N/A'}</td>
+        <td class="u-tC">${item.order_name || 'N/A'}</td>
+        <td class="u-tC">${item.uploaded_by || 'N/A'}</td>
+        <td class="u-tC">${item.uploaded_date || 'N/A'}</td>
+      </tr>
+    `
+      });
+    });
+
+  </script>
+
+
 </body>
 
 </html>
