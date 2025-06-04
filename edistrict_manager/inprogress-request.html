@@ -12,8 +12,11 @@
   <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
   <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -247,7 +250,7 @@
                 </div>
               </div>
             </li>
-          </ul> -->
+          </ul>  -->
           <ul id="commonMenuContainer"></ul>
         </div>
       </div>
@@ -435,7 +438,7 @@
                               <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
                                 id="R109615596173071518_data_panel" class="a-IRR-reportView">
                                 <div class="a-IRR-tableContainer">
-                                  <table
+                                  <!-- <table
                                     aria-label="All&#x20;Request,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
                                     class="a-IRR-table" id="109615724414071518">
                                     <tr>
@@ -488,6 +491,20 @@
                                       <td class=" u-tL" headers="C109623717033071534">From Citizen</td>
                                       <td class=" u-tL" headers="C109624896744071535">Vishva VR</td>
                                     </tr>
+                                  </table> -->
+
+                                  <table id="pressReleaseTable" class="display" style="width:100%">
+                                    <thead>
+                                      <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>Status</th>
+                                        <th>Status</th>
+                                        <th>Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody></tbody>
                                   </table>
                                 </div>
                                 <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
@@ -586,7 +603,7 @@
   </form>
 
 
-  <script nonce="3R9GgFKjhfWNNSqHEpV2xQ">
+  <!-- <script nonce="3R9GgFKjhfWNNSqHEpV2xQ">
     var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
     var apex = {
       env: { APP_USER: "9344712827", APP_ID: "1111", APP_PAGE_ID: "25", APP_SESSION: "114230090361743", APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F", WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "24.2.0", APEX_BASE_VERSION: "24.2", COMPATIBILITY_MODE: 21.2, NONCE: "3R9GgFKjhfWNNSqHEpV2xQ" },
@@ -607,9 +624,10 @@
   </script>
   <script src="../assets/js/crypto-js.min.js"></script>
   <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
   <script src="assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../assets/js/toastUtil.js"></script>
   <script src="../assets/js/desktop_all.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/aos.js"></script>
@@ -653,7 +671,94 @@
 
   <script>
     AOS.init();
+  </script> -->
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+
+  <script src="../assets/js/toastUtil.js"></script>
+  <script src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+
+  <script src="../assets/js/global.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
   </script>
+
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+  </script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      debugger
+
+      const langSwitch = 'en';
+      const apiUrl = "https://tngis.tnega.org/lcap_api/dipr-lcap-api/v1/general/governmentOrders/viewReport";
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      const payload = {
+        "action": "fetch",
+        "table": "edm_service_request_t",
+        "columns": "user_id, district, name, designation, mobile, email, status, created_by, created_dttm, updated_by, updated_dttm,photo, mime_type, file_name, reporting_id, personal_email, personal_mobile,personal_address, emrgency_contact",
+        "filters": {
+          "mobile": "9876543210",
+          "district": "Chennai"
+        }
+      }
+      const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();
+
+      loadDataToTable({
+        tableId: 'pressReleaseTable',
+        apiUrl,
+        httpMethod: 'POST',
+        payload: { data: encryptedPayload },
+        rowBuilder: (item) => `
+      <tr>
+        <td class="u-tL">
+          <a data-id="${item.id}" data-file="${item.order_name}" id="open-modal-btn" href="javascript:void(0);">
+            <i class="bi bi-pencil-square"></i>
+          </a>
+        </td>
+        <td class="u-tC">${item.go_date || 'N/A'}</td>
+        <td class="u-tC">${item.language || 'N/A'}</td>
+        <td class="u-tC">${item.order_name || 'N/A'}</td>
+        <td class="u-tC">${item.uploaded_by || 'N/A'}</td>
+        <td class="u-tC">${item.uploaded_date || 'N/A'}</td>
+      </tr>
+    `
+      });
+    });
+
+  </script>
+
 </body>
 
 </html>
