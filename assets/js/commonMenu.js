@@ -1,6 +1,8 @@
 // assets/js/commonMenu.js
 import { initializeUserSession } from "./auth.js";
-const userRole = "edistrict_manager";
+// const userRole = "edistrict_manager";
+const userRole = localStorage.getItem('userRole');
+console.log("userRole", userRole)
 
 const menuItems = [
     { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
@@ -112,21 +114,88 @@ const menuItems = [
 //         ul.appendChild(li);
 //     });
 // }
+
+
+
+
+
+// function renderDynamicMenu(containerId) {
+//     debugger
+//     const ul = document.getElementById(containerId);
+//     if (!ul) return;
+
+//     // const currentPath = window.location.pathname;
+//     // const currentFolder = currentPath.split("/").slice(-2, -1)[0];
+//     const pathParts = window.location.pathname.split('/');
+//     const currentFile = pathParts.pop();
+//     const currentFolder = pathParts.pop();
+//     const filteredMenu = menuItems.filter(item => {
+//         console.log('Checking item:', item);
+//         console.log("userRole value and type:", userRole, typeof userRole);
+//         return item.roles.includes(userRole);
+//     });
+//     filteredMenu.forEach(item => {
+//         const li = document.createElement("li");
+
+//         let href = "";
+//         if (item.folder === currentFolder || item.folder === "") {
+//             href = item.file;
+//         } else {
+//             href = `../${item.folder}/${item.file}`;
+//         }
+
+//         const a = document.createElement("a");
+//         a.href = href;
+//         a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
+
+//         const isCurrent = item.file === currentFile && (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
+
+//         // if (item.file === currentFile) {
+//         //     a.setAttribute("data-current", "true");
+//         //     // Optional: add a class to style active link
+//         //     a.classList.add("active");
+//         // }
+
+//         li.appendChild(a);
+
+//         li.setAttribute('data-current', isCurrent ? 'true' : 'false');
+//         ul.appendChild(li);
+//     });
+
+// }
+
+function normalizeRole(role) {
+    if (!role) return null;
+    const lowerRole = role.toLowerCase();
+
+    if (lowerRole.includes("helpdesk_operator")) {
+        return "helpdesk_operator";
+    } else if (lowerRole.includes("edistrict manager")) {
+        return "edistrict_manager";
+    } else if (lowerRole.includes("helpdesk")) {
+        return "helpdesk";
+    }
+    return null; // or handle unknown roles
+}
+
 function renderDynamicMenu(containerId) {
-    debugger
+    debugger;
     const ul = document.getElementById(containerId);
     if (!ul) return;
 
-    // const currentPath = window.location.pathname;
-    // const currentFolder = currentPath.split("/").slice(-2, -1)[0];
+    const rawUserRole = localStorage.getItem('userRole');
+    console.log("userRole", rawUserRole);
+    const userRole = normalizeRole(rawUserRole);
+    console.log("Normalized Role:", userRole);
+
     const pathParts = window.location.pathname.split('/');
     const currentFile = pathParts.pop();
     const currentFolder = pathParts.pop();
+
     const filteredMenu = menuItems.filter(item => {
-        console.log('Checking item:', item);
-        console.log("userRole value and type:", userRole, typeof userRole);
         return item.roles.includes(userRole);
     });
+
     filteredMenu.forEach(item => {
         const li = document.createElement("li");
 
@@ -141,20 +210,16 @@ function renderDynamicMenu(containerId) {
         a.href = href;
         a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
 
-        const isCurrent = item.file === currentFile && (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
-
-        // if (item.file === currentFile) {
-        //     a.setAttribute("data-current", "true");
-        //     // Optional: add a class to style active link
-        //     a.classList.add("active");
-        // }
+        const isCurrent = item.file === currentFile &&
+            (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
 
         li.appendChild(a);
-
         li.setAttribute('data-current', isCurrent ? 'true' : 'false');
         ul.appendChild(li);
     });
-
 }
+
+renderDynamicMenu("commonMenuContainer");
+
 
 renderDynamicMenu("commonMenuContainer");

@@ -5,16 +5,25 @@
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta charset="utf-8">
   <title>e-District Manager Application - Log In</title>
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="assets/css/oj-redwood-notag-min.css" type="text/css"> -->
-  <link rel="stylesheet" href="assets/css/Core.min.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/Theme-Standard.min.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/font-apex.min.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/Core-theme.min.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/custom.min.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/theme.css" type="text/css">
-  <link rel="apple-touch-icon" href="assets/img/app-icon-192.png">
-  <link rel="icon" href="assets/img/app-icon-32.png">
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
 
 <!-- Hello -->
@@ -236,9 +245,10 @@
       libVersions: { cropperJs: "1.6.1", domPurify: "3.1.2", fontapex: "2.3", fullcalendar: "6.1.11", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "4.0.1", markedJs: "12.0.1", prismJs: "1.29.0", oraclejet: "16.0.10", tinymce: "6.8.4", turndown: "7.1.3", monacoEditor: "0.47.0", lessJs: "4.2.0" }
     };
   </script>
-  <script src="assets/js/crypto-js.min.js"></script>
+  <!-- <script src="assets/js/crypto-js.min.js"></script>
   <script src="assets/js/auth.js"></script>
-  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/global.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/desktop_all.min.js"></script>
   <script src="assets/js/theme42.min.js"></script>
@@ -254,14 +264,132 @@
   <script src="assets/js/require.js"></script>
   <script src="assets/js/requirejs.jetConfig.min.js"></script>
   <script src="assets/js/jetCommonBundle.min.js"></script>
-  <script src="assets/js/chartBundle.min.js"></script>
+  <script src="assets/js/chartBundle.min.js"></script> -->
+  <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
+    value="&#x5B;&#x5D;">
+  <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+    value="&#x2F;9EQChVRgJR6e4yj2ry-mxwnLeN9TV-kHySzPtwpEcIDCApdsbgtxdXlYJ2QdqQWhgYFXF8wZXHwXgwLUlvUpLw" />
+
+  </form>
+
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/toastUtil.js"></script>
+  <script src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/global.js"></script> -->
+
+  <!-- <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      debugger
+      loadToastLayout(() => {
+        showSuccessToast("Hello! Toast is working!");
+      });
+    });
+  </script> -->
+  <!-- <script nonce="3LvgEVni8AP-QAvCYx16JA">
+    apex.session.initTimeouts(180, { "idle_time_ms": 3586000, "life_time_ms": 24899000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+    apex.jQuery(function () {
+      apex.page.init(this, function () {
+        try {
+          (function () { apex.jQuery('body').addClass('t-PageBody--leftNav'); })();
+          (function () { apex.widget.selectList("#P19_STATUS", { "nullValue": "", "ajaxIdentifier": "SVRFTSBUWVBFfjUxMjB-NTgzNDEzMzQ2ODEzNTQ1MzY\u002FBSFdthAX6LWf_lbC8sSetgYxaKa13aEQ1StbOqHB6Cwqj_R3CRJ0wEU0ou3GbM7uU4DgN65BNob00NqzNkKPWQ" }); })();
+          (function () { apex.jQuery('#td\u005C.u\u002DtC_ir').interactiveReport({ "regionId": "td.u-tC", "rowsPerPage": false, "currentRowsPerPage": 10, "reset": false, "help": false, "subscription": false, "lazyLoading": false, "ajaxIdentifier": "UkVHSU9OIFRZUEV-fjU4MjQ3ODAxMDMwODYwMDY2\u002FVREcsf6iSVDC_CQ5Qw98h0WEtZ3ooirrYX8k3QC8MUhVMr5wAiiJwcXpAZTgPfxx-BPqu4H2qh3qXuRzmsxvSQ" }); })();
+        } catch (e) { apex.debug.error(e) };
+        apex.item.waitForDelayLoadItems().done(function () {
+          try {
+            (function () {
+              apex.da.initDaEventList();
+              apex.da.init();
+            })();
+            apex.theme42.initializePage.noSideCol();
+            var anchorElements = document.querySelectorAll('td.u-tC[headers=DOWNLOAD-BLOB] a');
+
+            Array.from(anchorElements).forEach(function (elem) {
+              elem.setAttribute('target', '_blank');
+            })
+            apex.page.warnOnUnsavedChanges();
+          } finally {
+            apex.event.trigger(apex.gPageContext$, 'apexreadyend');
+          };
+        });
+      });
+    }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
+  </script> -->
+
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+
+  <script src="../assets/js/toastUtil.js"></script>
+  <script src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+
+
+
+  <!-- <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script> -->
+  <!-- <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script> -->
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
+
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+  </script>
 
   <script>
     AOS.init();
   </script>
+
 </body>
 
-<script type="module">
+<!-- <script type="module">
   import { initializeUserSession } from './assets/js/auth.js';
   document.addEventListener('DOMContentLoaded', function () {
     debugger
@@ -269,9 +397,25 @@
     const signInButton = document.querySelector('.t-Button--success');
 
     if (signInButton) {
-      signInButton.addEventListener('click', function () {
-        // Call auth logic
-        initializeUserSession();
+      signInButton.addEventListener('click', async function () {
+        const mobInput = document.getElementById('P9999_USERNAME');
+        const passInput = document.getElementById('P9999_PASSWORD');
+
+        const mobnumber = mobInput?.value?.trim();
+        const password = passInput?.value?.trim();
+
+        console.log("mobnumber", mobnumber)
+
+        if (!mobnumber || mobnumber.length !== 10 || isNaN(mobnumber)) {
+          alert("Please enter a valid 10-digit mobile number.");
+          return;
+        }
+        if (!password) {
+          alert("Please enter your password.");
+          return;
+        }
+
+        await initializeUserSession(mobnumber, password);
 
         // Optional: Redirect to role-based dashboard
         const role = window.userSession?.role || 'edistrict_manager';
@@ -279,7 +423,68 @@
       });
     }
   });
-</script>
+</script> -->
+<script type="module">
+  import { initializeUserSession } from './assets/js/auth.js';
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const signInButton = document.querySelector('.t-Button--success');
+    const debugConsole = document.getElementById('debug-console'); // Add this <div>
+
+    if (!signInButton) {
+      console.error("Sign-in button not found!");
+      return;
+    }
+
+    signInButton.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      const mobInput = document.getElementById('P9999_USERNAME');
+      const passInput = document.getElementById('P9999_PASSWORD');
+      const mobnumber = mobInput?.value?.trim();
+      const password = passInput?.value?.trim();
+
+      // Validation
+      if (!mobnumber || mobnumber.length !== 10 || isNaN(mobnumber)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+      }
+      if (!password) {
+        alert("Please enter your password.");
+        return;
+      }
+
+      // UI Feedback
+      signInButton.disabled = true;
+      signInButton.innerHTML = '<span class="fa fa-spinner fa-spin"></span> Signing in...';
+
+      try {
+        await initializeUserSession(mobnumber, password);
+        const role = localStorage.getItem('userRole');
+        console.log("roleeeee", role);
+
+        let folder = '';
+
+        if (role.toLowerCase().includes('helpdesk_operator')) {
+          folder = 'helpdesk_operator';
+        } else if (role.toLowerCase().includes('edistrict manager')) {
+          folder = 'edistrict_manager';
+        } else if (role.toLowerCase().includes('helpdesk')) {
+          folder = 'helpdesk';
+        } else {
+          throw new Error('Unknown role: ' + role);
+        }
+
+        window.location.href = `${folder}/dashboard.html`;
+      } catch (error) {
+        console.error("Login Error:", error);
+        alert("Login failed. Check console for details.");
+      } finally {
+        signInButton.disabled = false;
+        signInButton.innerHTML = 'Sign In';
+      }
+    });
+  });
+</script>
 
 </html>

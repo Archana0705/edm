@@ -23,6 +23,11 @@
   <meta http-equiv="Expires" content="-1" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #t_Body_nav {
+      width: 100% !important;
+    }
+  </style>
 </head>
 
 <body
@@ -569,6 +574,7 @@
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script> -->
   <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -581,11 +587,6 @@
   <script>
     console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
   </script>
-
-  <script>
-    AOS.init();
-  </script>
-
   <script>
     $('#t_Button_navControl').on('click', function () {
       $('#t_Body_nav').toggle();
@@ -593,29 +594,30 @@
 
   </script>
 
-  <script>
+
+
+  <script type="module">
+    import { encryptData } from '../assets/js/encrypt_decrypt.js';
     $(document).ready(function () {
       debugger
-
+      var userId = localStorage.getItem('userId');
       const langSwitch = 'en';
-      const apiUrl = "https://tngis.tnega.org/lcap_api/dipr-lcap-api/v1/general/governmentOrders/viewReport";
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
       const payload = {
-        "action": "fetch",
-        "table": "edm_service_request_t",
-        "columns": "user_id, district, name, designation, mobile, email, status, created_by, created_dttm, updated_by, updated_dttm,photo, mime_type, file_name, reporting_id, personal_email, personal_mobile,personal_address, emrgency_contact",
-        "filters": {
-          "mobile": "9876543210",
-          "district": "Chennai"
+        action: "function_call",
+        function_name: "edm_service_request_edmall_fn",
+        params: {
+          userid: userId,
         }
       }
-      const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
+      // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
       loadDataToTable({
         tableId: 'pressReleaseTable',
         apiUrl,
         httpMethod: 'POST',
-        payload: { data: encryptedPayload },
+        payload: encryptData(payload),
         rowBuilder: (item) => `
       <tr>
         <td class="u-tL">
@@ -634,9 +636,6 @@
     });
 
   </script>
-
-
-
 </body>
 
 </html>
