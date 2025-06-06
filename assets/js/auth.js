@@ -40,6 +40,7 @@ function initializeUserSession(mobnumber, password) {
         }
     };
 
+    //check
     const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
 
     $.ajax({
