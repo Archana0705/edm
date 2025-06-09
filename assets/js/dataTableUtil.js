@@ -1,3 +1,5 @@
+
+import { decryptData } from './encrypt_decrypt.js';
 window.loadDataToTable = function ({
     tableId,
     apiUrl,
@@ -5,6 +7,7 @@ window.loadDataToTable = function ({
     payload,
     rowBuilder
 }) {
+
     debugger
     const tableSelector = `#${tableId}`;
     const tableBody = $(`${tableSelector} tbody`);
@@ -23,7 +26,9 @@ window.loadDataToTable = function ({
         dataType: 'json',
         cache: false,
         success(response) {
-            const data = response.data || [];
+            // const response = response.data || [];
+            var data = decryptData(response.data);
+
             tableBody.empty();
 
             if (data.length === 0) {

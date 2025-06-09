@@ -167,9 +167,11 @@
                           </div>
                           <div class="col col-1  "><button
                               class="t-Button t-Button--icon t-Button--success&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
-                              id="B17058814752100723"><span class="t-Icon t-Icon--left fa&#x20;fa-search"
-                                aria-hidden="true"></span><span class="t-Button-label">Search</span><span
-                                class="t-Icon t-Icon--right fa&#x20;fa-search" aria-hidden="true"></span></button></div>
+                              id="B17058814752100723">
+                              <span class="t-Icon t-Icon--left fa&#x20;fa-search" aria-hidden="true"></span><span
+                                class="t-Button-label" id="statusSearchBtn">Search</span>
+                              <span class="t-Icon t-Icon--right fa&#x20;fa-search" aria-hidden="true"></span></button>
+                          </div>
                           <div class="col col-1  "><button
                               class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--warning&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
                               type="button" id="B17059272424100729"><span class="t-Icon t-Icon--left fa&#x20;fa-refresh"
@@ -364,12 +366,15 @@
                                       <table id="pressReleaseTable" class="display" style="width:100%">
                                         <thead>
                                           <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Status</th>
-                                            <th>Status</th>
-                                            <th>Status</th>
-                                            <th>Status</th>
+                                            <th>Actions</th>
+                                            <th>Request Number</th>
+                                            <th>Issue Type</th>
+                                            <th>Short Description</th>
+                                            <th>Request Status</th>
+                                            <th>Created On</th>
+                                            <th>Requested By</th>
+                                            <th>Requested Group</th>
+                                            <th>Assigned To</th>
                                           </tr>
                                         </thead>
                                         <tbody></tbody>
@@ -554,7 +559,7 @@
   <script src="../assets/js/chartBundle.min.js"></script>
 
   <script src="../assets/js/toastUtil.js"></script>
-  <script src="../assets/js/dataTableUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableUtil.js"></script>
   <script src="../assets/js/crypto-js.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
 
@@ -600,14 +605,22 @@
     import { encryptData } from '../assets/js/encrypt_decrypt.js';
     $(document).ready(function () {
       debugger
+
       var userId = localStorage.getItem('userId');
       const langSwitch = 'en';
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
+      $('#statusSearchBtn').on('click', function () {
+        const selectedStatus = $('#P19_STATUS').val();
+        alert(selectedStatus)
+        dataTableRef.column(4).search(selectedStatus).draw(); // column index 4 = Request Status
+      });
+
       const payload = {
         action: "function_call",
         function_name: "edm_service_request_edmall_fn",
         params: {
+          status: null,
           userid: userId,
         }
       }
@@ -621,17 +634,24 @@
         rowBuilder: (item) => `
       <tr>
         <td class="u-tL">
-          <a data-id="${item.id}" data-file="${item.order_name}" id="open-modal-btn" href="javascript:void(0);">
+          <a data-id="${item.id}" id="open-modal-btn" href="javascript:void(0);">
             <i class="bi bi-pencil-square"></i>
           </a>
         </td>
-        <td class="u-tC">${item.go_date || 'N/A'}</td>
-        <td class="u-tC">${item.language || 'N/A'}</td>
-        <td class="u-tC">${item.order_name || 'N/A'}</td>
-        <td class="u-tC">${item.uploaded_by || 'N/A'}</td>
-        <td class="u-tC">${item.uploaded_date || 'N/A'}</td>
+        <td class="u-tC">${item.request_number || 'N/A'}</td>
+        <td class="u-tC">${item.issue_type || 'N/A'}</td>
+        <td class="u-tC">${item.short_description || 'N/A'}</td>
+        <td class="u-tC">${item.request_status || 'N/A'}</td>
+        <td class="u-tC">${item.created_date || 'N/A'}</td>
+        <td class="u-tC">${item.requested_by || 'N/A'}</td>
+        <td class="u-tC">${item.requested_group || 'N/A'}</td>
+        <td class="u-tC">${item.assigned_to || 'N/A'}</td>
       </tr>
     `
+      });
+      $('#statusSearchBtn').off('click').on('click', function () {
+        const selectedStatus = $('#P19_STATUS').val();
+        dataTableRef.column(4).search(selectedStatus).draw();
       });
     });
 
