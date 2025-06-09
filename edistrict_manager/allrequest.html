@@ -529,25 +529,12 @@
       });
 
       $('#clearStatusBtn').on('click', function (event) {
-        event.preventDefault(); // Prevent form reload
-
-        console.log('[Clear Button Clicked]');
-
-        // Reset the dropdown
+        event.preventDefault(); 
         $('#P19_STATUS').val('');
-
-        if (!dataTableRef) {
-          console.warn('❌ DataTable not initialized yet');
-          return;
-        }
-
-        // Clear the search on the Request Status column
         dataTableRef
-          .column(4) // "Request Status" column
+          .column(4) 
           .search('')
           .draw();
-
-        console.log('✅ Filter cleared and dropdown reset');
       });
 
 

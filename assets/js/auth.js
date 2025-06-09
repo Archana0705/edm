@@ -77,6 +77,7 @@ function initializeUserSession(mobnumber, password) {
                     };
 
                     localStorage.setItem('userRole', decrypted.designation || '');
+                    localStorage.setItem('userDistrict', decrypted.district);
                     localStorage.setItem('userId', decrypted.user_id || '');
                     const userNameElement = document.querySelector('.t-Button-label');
                     if (userNameElement) userNameElement.textContent = decrypted.name;
