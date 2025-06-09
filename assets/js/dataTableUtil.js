@@ -1,14 +1,13 @@
-
 import { decryptData } from './encrypt_decrypt.js';
+
 window.loadDataToTable = function ({
     tableId,
     apiUrl,
     httpMethod = 'POST',
     payload,
-    rowBuilder
+    rowBuilder,
+    onTableInit = () => { } // callback to return DataTable instance
 }) {
-
-    debugger
     const tableSelector = `#${tableId}`;
     const tableBody = $(`${tableSelector} tbody`);
     tableBody.html('<tr><td colspan="10" class="text-center">Loading...</td></tr>');
@@ -20,15 +19,11 @@ window.loadDataToTable = function ({
             'X-APP-Key': "edm",
             'X-APP-Name': "edm"
         },
-        data: {
-            data: payload
-        },
+        data: { data: payload },
         dataType: 'json',
         cache: false,
         success(response) {
-            // const response = response.data || [];
-            var data = decryptData(response.data);
-
+            const data = decryptData(response.data);
             tableBody.empty();
 
             if (data.length === 0) {
@@ -43,12 +38,15 @@ window.loadDataToTable = function ({
             const rows = data.map(rowBuilder).join('');
             tableBody.html(rows);
 
-            $(tableSelector).DataTable({
+            const dtRef = $(tableSelector).DataTable({
                 paging: true,
                 searching: true,
                 ordering: true,
                 responsive: true,
             });
+
+            // Send reference back to main script
+            onTableInit(dtRef);
         },
         error(xhr, status, error) {
             console.error("API Error:", error);

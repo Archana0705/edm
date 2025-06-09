@@ -34,16 +34,8 @@
   class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
   id="t_PageBody">
   <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
-  <form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/all-request4/114230090361743"
-    method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
-    <input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
-      value="19" id="pFlowStepId" /><input type="hidden" name="p_instance" value="114230090361743"
-      id="pInstance" /><input type="hidden" name="p_page_submission_id"
-      value="MjM3Mjc1NTM3MTQ4NzMzNDUzMzQzOTYzNzAxMTI0ODU5NzI5MTk1&#x2F;wEYHMROwIPD0WnD6kH5Qp6-WKOHLxHbyvmAaqibQMMMGLCWp26VoSc5dLnVEGOjLhBWQgyeMpoFG5OyMc3oMOA"
-      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
-      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
-      value="e-district-manager-application&#x2F;all-request4&#x2F;114230090361743" id="pContext" /><input type="hidden"
-      value="237275537148733453343963701124859729195" id="pSalt" />
+  <form>
+
     <header class="t-Header" id="t_Header" role="banner">
 
       <div class="t-Header-branding">
@@ -165,18 +157,11 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col col-1  "><button
-                              class="t-Button t-Button--icon t-Button--success&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
-                              id="B17058814752100723">
-                              <span class="t-Icon t-Icon--left fa&#x20;fa-search" aria-hidden="true"></span><span
-                                class="t-Button-label" id="statusSearchBtn">Search</span>
-                              <span class="t-Icon t-Icon--right fa&#x20;fa-search" aria-hidden="true"></span></button>
+                          <div class="col col-1  ">
+                            <button id="statusSearchBtn">Search</button>
                           </div>
-                          <div class="col col-1  "><button
-                              class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--warning&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
-                              type="button" id="B17059272424100729"><span class="t-Icon t-Icon--left fa&#x20;fa-refresh"
-                                aria-hidden="true"></span><span class="t-Button-label">Clear</span><span
-                                class="t-Icon t-Icon--right fa&#x20;fa-refresh" aria-hidden="true"></span></button>
+                          <div class="col col-1  ">
+                            <button id="clearStatusBtn" type="button">Clear</button>
                           </div>
                         </div>
                       </div>
@@ -210,142 +195,20 @@
                                 <div id="td.u-tC_actions_menu"></div>
                                 <div id="td.u-tC_column_search_drop" class="a-IRR-colSearch"></div>
                                 <div id="td.u-tC_toolbar" class="a-IRR-toolbar">
-                                  <div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;All&#x20;Request"
-                                    id="td.u-tC_toolbar_controls" class="a-IRR-controls">
-                                    <div class="a-IRR-controlGroup a-IRR-controlGroup--search">
-                                      <div class="a-IRR-search"><input type="hidden"
-                                          id="td.u-tC_column_search_current_column" />
-                                        <div class="a-IRR-colSelector"><button id="td.u-tC_column_search_root"
-                                            data-menu="td.u-tC_column_search_drop"
-                                            class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel"
-                                            title="Select&#x20;columns&#x20;to&#x20;search"
-                                            aria-label="Select&#x20;columns&#x20;to&#x20;search" type="button"><span
-                                              class="a-Icon icon-search" aria-hidden="true"></span><span
-                                              class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button>
-                                        </div>
-                                        <div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field"
-                                            id="td.u-tC_search_field" title="Search Report" type="search" size="30"
-                                            maxlength="4000" value="" /></div>
-                                        <div class="a-IRR-searchButtonContainer"><button id="td.u-tC_search_button"
-                                            class="a-Button a-IRR-button a-IRR-button--search"
-                                            type="button"><span>Go</span></button></div>
-                                      </div>
-                                    </div>
-                                    <div class="a-IRR-controlGroup a-IRR-controlGroup--views">
-                                      <div class="a-IRR-savedReports"><select class="a-IRR-selectList" size="1"
-                                          id="td.u-tC_saved_reports" name="p_accept_processing" title="Reports">
-                                          <optgroup label="Default">
-                                            <option selected="selected" value="58287556141003365">1. Primary Report
-                                            </option>
-                                          </optgroup>
-                                          <optgroup label="Public">
-                                            <option value="45144470081246078">1. PEND</option>
-                                          </optgroup>
-                                        </select></div>
-                                    </div>
-                                    <div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden"
-                                        id="td.u-tC_row_select" value="10" />
-                                      <div class="a-IRR-actions"><button id="td.u-tC_actions_button"
-                                          class="a-Button a-IRR-button a-IRR-button--actions" type="button"
-                                          data-menu="td.u-tC_actions_menu">Actions<span aria-hidden="true"
-                                            class="a-Icon icon-menu-drop-down"></span></button></div>
-                                    </div>
+
+
+                                  <div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden"
+                                      id="td.u-tC_row_select" value="10" />
+                                    <div class="a-IRR-actions"><button id="td.u-tC_actions_button"
+                                        class="a-Button a-IRR-button a-IRR-button--actions" type="button"
+                                        data-menu="td.u-tC_actions_menu">Actions<span aria-hidden="true"
+                                          class="a-Icon icon-menu-drop-down"></span></button></div>
                                   </div>
                                 </div>
-                                <div id="td.u-tC_content" class="a-IRR-content ">
-                                  <div id="td.u-tC_dialog_js" class="a-IRR-dialogBody" style="display:none;"></div>
-                                  <input type="hidden" id="td.u-tC_worksheet_id" value="58247929271860066" />
-                                  <input type="hidden" id="td.u-tC_app_user" value="9344712827" />
-                                  <input type="hidden" id="td.u-tC_report_id" value="58287556141003365" />
-                                  <input type="hidden" id="td.u-tC_view_mode" value="REPORT" />
-                                  <div role="region" aria-label="Report&#x20;settings&#x20;of&#x20;All&#x20;Request"
-                                    class="a-MediaBlock a-IRR-controlsContainer" id="td.u-tC_control_panel">
-                                    <div class="a-MediaBlock-graphic">
-                                      <h3 aria-hidden="true" class="u-vh">Report Settings</h3>
-                                      <span role="heading" aria-level="3"><button type="button"
-                                          class="a-Button a-IRR-button a-IRR-button--controls"><span
-                                            class="a-Icon a-Collapsible-icon icon-down-arrow"
-                                            aria-hidden="true"></span></button></span>
-                                    </div>
-                                    <div class="a-MediaBlock-content">
-                                      <ul role="none" class="a-IRR-controls">
-                                        <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                          aria-labelledby="control_text_11009370567205292" role="region"><span
-                                            class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                              data-setting="highlight" data-highlight-id="11009370567205292"
-                                              aria-label="Highlight" aria-describedby="control_text_11009370567205292"
-                                              type="checkbox" id="control_11009370567205292" checked="checked" /><label
-                                              for="control_11009370567205292" aria-hidden="true"
-                                              class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                            class="a-IRR-controls-cell"><span
-                                              class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                              aria-hidden="true"></span></span><span
-                                            class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                              aria-describedby="control_text_11009370567205292"
-                                              aria-controls="control_11009370567205292"
-                                              class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                              data-highlight-id="11009370567205292" data-bgcol="#f91033"
-                                              data-ftcol="#000000"><span aria-hidden="true">Priority =
-                                                &#x27;Critical&#x27;</span><span aria-hidden="true" class="u-vh"
-                                                id="control_text_11009370567205292">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;f91033:
-                                                Priority = &#x27;Critical&#x27;</span><span class="u-vh">Edit
-                                                Highlight</span></button></span><span
-                                            class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                              class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                              aria-label="Remove&#x20;Highlight"
-                                              aria-describedby="control_text_11009370567205292"
-                                              aria-controls="control_11009370567205292" type="button"
-                                              data-setting="highlight" data-highlight-id="11009370567205292"><span
-                                                aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                                data-bgcol="#f91033" data-ftcol="#000000">Remove
-                                                Highlight</span></button></span></li>
-                                        <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                          aria-labelledby="control_text_11009479755205292" role="region"><span
-                                            class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                              data-setting="highlight" data-highlight-id="11009479755205292"
-                                              aria-label="Highlight" aria-describedby="control_text_11009479755205292"
-                                              type="checkbox" id="control_11009479755205292" checked="checked" /><label
-                                              for="control_11009479755205292" aria-hidden="true"
-                                              class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                            class="a-IRR-controls-cell"><span
-                                              class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                              aria-hidden="true"></span></span><span
-                                            class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                              aria-describedby="control_text_11009479755205292"
-                                              aria-controls="control_11009479755205292"
-                                              class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                              data-highlight-id="11009479755205292" data-bgcol="#fb810f"
-                                              data-ftcol="#000000"><span aria-hidden="true">Priority =
-                                                &#x27;High&#x27;</span><span aria-hidden="true" class="u-vh"
-                                                id="control_text_11009479755205292">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;fb810f:
-                                                Priority = &#x27;High&#x27;</span><span class="u-vh">Edit
-                                                Highlight</span></button></span><span
-                                            class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                              class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                              aria-label="Remove&#x20;Highlight"
-                                              aria-describedby="control_text_11009479755205292"
-                                              aria-controls="control_11009479755205292" type="button"
-                                              data-setting="highlight" data-highlight-id="11009479755205292"><span
-                                                aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                                data-bgcol="#fb810f" data-ftcol="#000000">Remove
-                                                Highlight</span></button></span></li>
+                              </div>
+                              <div id="td.u-tC_content" class="a-IRR-content ">
 
-                                      </ul>
-                                    </div>
-                                    <div class="a-IRR-reportSummaryContainer" id="td.u-tC_control_panel_summary"
-                                      style="display:none;">
-                                      <ul class="a-IRR-reportSummary">
-                                        <li class="a-IRR-reportSummary-item a-IRR-reportSummary-item--highlight"><a
-                                            href="#" class="a-IRR-reportSummary-label"><span
-                                              class="a-IRR-reportSummary-icon" aria-label="Highlight,&#x20;2"
-                                              role="img"><span class="a-Icon icon-irr-highlight"></span><span
-                                                class="a-IRR-reportSummary-count">2</span></span><span
-                                              class="a-IRR-reportSummary-value">Priority = &#x27;Cri..., Priority =
-                                              &#x27;Hig...</span></a></li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <!-- <style nonce="3LvgEVni8AP-QAvCYx16JA" id="td.u-tC_worksheet_css">
+                                <!-- <style nonce="3LvgEVni8AP-QAvCYx16JA" id="td.u-tC_worksheet_css">
                                     tr td.rule_11009370567205292_td {
                                       background-color: #f91033 !important;
                                     }
@@ -354,127 +217,127 @@
                                       background-color: #fb810f !important;
                                     }
                                   </style> -->
-                                  <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                    id="td.u-tC_chart" class="a-IRR-chartView"></div>
-                                  <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                    id="td.u-tC_group_by" class="a-IRR-groupByView"></div>
-                                  <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                    id="td.u-tC_pivot" class="a-IRR-pivotView"></div>
-                                  <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                    id="td.u-tC_data_panel" class="a-IRR-reportView">
-                                    <div class="a-IRR-tableContainer">
-                                      <table id="pressReleaseTable" class="display" style="width:100%">
-                                        <thead>
-                                          <tr>
-                                            <th>Actions</th>
-                                            <th>Request Number</th>
-                                            <th>Issue Type</th>
-                                            <th>Short Description</th>
-                                            <th>Request Status</th>
-                                            <th>Created On</th>
-                                            <th>Requested By</th>
-                                            <th>Requested Group</th>
-                                            <th>Assigned To</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                      </table>
-                                    </div>
-                                    <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
-                                      class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
-                                      <ul class="a-IRR-pagination">
-                                        <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
-                                        <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label"> 1 - 10
-                                            of 60</span></li>
-                                        <li class="a-IRR-pagination-item"><button type="button"
-                                            class="a-Button a-IRR-button a-IRR-button--pagination"
-                                            aria-controls="td.u-tC" title="Next" aria-label="Next"
-                                            data-pagination="pgR_min_row=11max_rows=10rows_fetched=10"><span
-                                              class="a-Icon icon-right-chevron" aria-hidden="true"></span></button></li>
-                                      </ul>
-                                    </div>
+                                <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_chart" class="a-IRR-chartView"></div>
+                                <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_group_by" class="a-IRR-groupByView"></div>
+                                <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_pivot" class="a-IRR-pivotView"></div>
+                                <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_data_panel" class="a-IRR-reportView">
+                                  <div class="a-IRR-tableContainer">
+                                    <table id="pressReleaseTable" class="display" style="width:100%">
+                                      <thead>
+                                        <tr>
+                                          <th>Actions</th>
+                                          <th>Request Number</th>
+                                          <th>Issue Type</th>
+                                          <th>Short Description</th>
+                                          <th>Request Status</th>
+                                          <th>Created On</th>
+                                          <th>Requested By</th>
+                                          <th>Requested Group</th>
+                                          <th>Assigned To</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody></tbody>
+                                    </table>
+                                  </div>
+                                  <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
+                                    class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
+                                    <ul class="a-IRR-pagination">
+                                      <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                      <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label"> 1 - 10
+                                          of 60</span></li>
+                                      <li class="a-IRR-pagination-item"><button type="button"
+                                          class="a-Button a-IRR-button a-IRR-button--pagination" aria-controls="td.u-tC"
+                                          title="Next" aria-label="Next"
+                                          data-pagination="pgR_min_row=11max_rows=10rows_fetched=10"><span
+                                            class="a-Icon icon-right-chevron" aria-hidden="true"></span></button></li>
+                                    </ul>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true"
-                              class="a-IRR-sortWidget" id="td.u-tC_sort_widget" style="display:none;">
-                              <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column
-                                Actions</h1>
-                              <ul role="toolbar" class="a-IRR-sortWidget-actions" id="td.u-tC_sort_widget_actions">
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                  id="td.u-tC_sort_widget_action_up"><button
-                                    class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                    title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
-                                      aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                  id="td.u-tC_sort_widget_action_down"><button
-                                    class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                    title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending"
-                                    data-option="down"><span aria-hidden="true"
-                                      class="a-Icon icon-irr-sort-desc"></span></button></li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                  id="td.u-tC_sort_widget_action_hide"><button
-                                    class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                    title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
-                                      aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                  id="td.u-tC_sort_widget_action_break"><button
-                                    class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                    title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
-                                      aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                  id="td.u-tC_sort_widget_action_help"><button
-                                    class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
-                                    aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
-                                      class="a-Icon icon-irr-help"></span></button></li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                  id="td.u-tC_sort_widget_action_computation"><button
-                                    class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
-                                    aria-label="Compute" data-option="computation"><span aria-hidden="true"
-                                      class="a-Icon icon-irr-calculator"></span></button></li>
-                              </ul>
-                              <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
-                                id="td.u-tC_sort_widget_help"></div>
-                              <div role="search" class="a-IRR-sortWidget-search" id="td.u-tC_sort_widget_search"><label
-                                  for="td.u-tC_sort_widget_search_field"><span aria-hidden="true"
-                                    class="a-IRR-sortWidget-searchLabel"></span><span
-                                    class="u-vh">Search</span></label><input id="td.u-tC_sort_widget_search_field"
-                                  class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." />
-                                <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
-                                  id="td.u-tC_sort_widget_rows"></div>
-                              </div>
+                          </div>
+                          <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
+                            id="td.u-tC_sort_widget" style="display:none;">
+                            <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column
+                              Actions</h1>
+                            <ul role="toolbar" class="a-IRR-sortWidget-actions" id="td.u-tC_sort_widget_actions">
+                              <li role="none" class="a-IRR-sortWidget-actions-item" id="td.u-tC_sort_widget_action_up">
+                                <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button>
+                              </li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_down"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending"
+                                  data-option="down"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-sort-desc"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_hide"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_break"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_help"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
+                                  aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-help"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_computation"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
+                                  aria-label="Compute" data-option="computation"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-calculator"></span></button></li>
+                            </ul>
+                            <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
+                              id="td.u-tC_sort_widget_help"></div>
+                            <div role="search" class="a-IRR-sortWidget-search" id="td.u-tC_sort_widget_search"><label
+                                for="td.u-tC_sort_widget_search_field"><span aria-hidden="true"
+                                  class="a-IRR-sortWidget-searchLabel"></span><span
+                                  class="u-vh">Search</span></label><input id="td.u-tC_sort_widget_search_field"
+                                class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." />
+                              <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
+                                id="td.u-tC_sort_widget_rows"></div>
                             </div>
                           </div>
+                        </div>
 
-                        </div>
-                        <div class="t-Region-buttons t-Region-buttons--bottom">
-                          <div class="t-Region-buttons-left"></div>
-                          <div class="t-Region-buttons-right"></div>
-                        </div>
+                      </div>
+                      <div class="t-Region-buttons t-Region-buttons--bottom">
+                        <div class="t-Region-buttons-left"></div>
+                        <div class="t-Region-buttons-right"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </main>
-          <footer class="t-Footer" id="t_Footer" role="contentinfo">
-            <div class="t-Footer-body">
-              <div class="t-Footer-content"></div>
-              <div class="t-Footer-apex">
-                <div class="t-Footer-version"> </div>
-                <div class="t-Footer-customize"></div>
-
-              </div>
-            </div>
-            <div class="t-Footer-top">
-              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
-                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
-            </div>
-          </footer>
         </div>
+        </main>
+        <footer class="t-Footer" id="t_Footer" role="contentinfo">
+          <div class="t-Footer-body">
+            <div class="t-Footer-content"></div>
+            <div class="t-Footer-apex">
+              <div class="t-Footer-version"> </div>
+              <div class="t-Footer-customize"></div>
+
+            </div>
+          </div>
+          <div class="t-Footer-top">
+            <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+              aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+          </div>
+        </footer>
       </div>
+    </div>
     </div>
     <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
       value="&#x5B;&#x5D;">
@@ -603,6 +466,7 @@
 
   <script type="module">
     import { encryptData } from '../assets/js/encrypt_decrypt.js';
+    let dataTableRef;
     $(document).ready(function () {
       debugger
 
@@ -610,11 +474,7 @@
       const langSwitch = 'en';
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
-      $('#statusSearchBtn').on('click', function () {
-        const selectedStatus = $('#P19_STATUS').val();
-        alert(selectedStatus)
-        dataTableRef.column(4).search(selectedStatus).draw(); // column index 4 = Request Status
-      });
+
 
       const payload = {
         action: "function_call",
@@ -647,12 +507,50 @@
         <td class="u-tC">${item.requested_group || 'N/A'}</td>
         <td class="u-tC">${item.assigned_to || 'N/A'}</td>
       </tr>
-    `
+    `,
+        onTableInit: function (dtRef) {
+          dataTableRef = dtRef;
+        }
       });
-      $('#statusSearchBtn').off('click').on('click', function () {
-        const selectedStatus = $('#P19_STATUS').val();
-        dataTableRef.column(4).search(selectedStatus).draw();
+
+      $('#statusSearchBtn').on('click', function () {
+        event.preventDefault();
+        const selectedStatus = $('#P19_STATUS').val().trim();
+
+
+        if (dataTableRef) {
+          dataTableRef
+            .column(4) // Request Status
+            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
+            .draw();
+        } else {
+          console.warn('Table not initialized yet');
+        }
       });
+
+      $('#clearStatusBtn').on('click', function (event) {
+        event.preventDefault(); // Prevent form reload
+
+        console.log('[Clear Button Clicked]');
+
+        // Reset the dropdown
+        $('#P19_STATUS').val('');
+
+        if (!dataTableRef) {
+          console.warn('❌ DataTable not initialized yet');
+          return;
+        }
+
+        // Clear the search on the Request Status column
+        dataTableRef
+          .column(4) // "Request Status" column
+          .search('')
+          .draw();
+
+        console.log('✅ Filter cleared and dropdown reset');
+      });
+
+
     });
 
   </script>
