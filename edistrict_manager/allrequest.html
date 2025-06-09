@@ -34,16 +34,8 @@
   class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
   id="t_PageBody">
   <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
-  <form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/all-request4/114230090361743"
-    method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
-    <input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
-      value="19" id="pFlowStepId" /><input type="hidden" name="p_instance" value="114230090361743"
-      id="pInstance" /><input type="hidden" name="p_page_submission_id"
-      value="MjM3Mjc1NTM3MTQ4NzMzNDUzMzQzOTYzNzAxMTI0ODU5NzI5MTk1&#x2F;wEYHMROwIPD0WnD6kH5Qp6-WKOHLxHbyvmAaqibQMMMGLCWp26VoSc5dLnVEGOjLhBWQgyeMpoFG5OyMc3oMOA"
-      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
-      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
-      value="e-district-manager-application&#x2F;all-request4&#x2F;114230090361743" id="pContext" /><input type="hidden"
-      value="237275537148733453343963701124859729195" id="pSalt" />
+  <form>
+
     <header class="t-Header" id="t_Header" role="banner">
 
       <div class="t-Header-branding">
@@ -165,18 +157,11 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col col-1  "><button
-                              class="t-Button t-Button--icon t-Button--success&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
-                              id="B17058814752100723">
-                              <span class="t-Icon t-Icon--left fa&#x20;fa-search" aria-hidden="true"></span><span
-                                class="t-Button-label" id="statusSearchBtn">Search</span>
-                              <span class="t-Icon t-Icon--right fa&#x20;fa-search" aria-hidden="true"></span></button>
+                          <div class="col col-1  ">
+                            <button id="statusSearchBtn">Search</button>
                           </div>
-                          <div class="col col-1  "><button
-                              class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--warning&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
-                              type="button" id="B17059272424100729"><span class="t-Icon t-Icon--left fa&#x20;fa-refresh"
-                                aria-hidden="true"></span><span class="t-Button-label">Clear</span><span
-                                class="t-Icon t-Icon--right fa&#x20;fa-refresh" aria-hidden="true"></span></button>
+                          <div class="col col-1  ">
+                            <button id="clearStatusBtn" type="button">Clear</button>
                           </div>
                         </div>
                       </div>
@@ -603,6 +588,7 @@
 
   <script type="module">
     import { encryptData } from '../assets/js/encrypt_decrypt.js';
+    let dataTableRef;
     $(document).ready(function () {
       debugger
 
@@ -610,11 +596,7 @@
       const langSwitch = 'en';
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
-      $('#statusSearchBtn').on('click', function () {
-        const selectedStatus = $('#P19_STATUS').val();
-        alert(selectedStatus)
-        dataTableRef.column(4).search(selectedStatus).draw(); // column index 4 = Request Status
-      });
+
 
       const payload = {
         action: "function_call",
@@ -647,12 +629,50 @@
         <td class="u-tC">${item.requested_group || 'N/A'}</td>
         <td class="u-tC">${item.assigned_to || 'N/A'}</td>
       </tr>
-    `
+    `,
+        onTableInit: function (dtRef) {
+          dataTableRef = dtRef;
+        }
       });
-      $('#statusSearchBtn').off('click').on('click', function () {
-        const selectedStatus = $('#P19_STATUS').val();
-        dataTableRef.column(4).search(selectedStatus).draw();
+
+      $('#statusSearchBtn').on('click', function () {
+        event.preventDefault();
+        const selectedStatus = $('#P19_STATUS').val().trim();
+
+
+        if (dataTableRef) {
+          dataTableRef
+            .column(4) // Request Status
+            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
+            .draw();
+        } else {
+          console.warn('Table not initialized yet');
+        }
       });
+
+      $('#clearStatusBtn').on('click', function (event) {
+        event.preventDefault(); // Prevent form reload
+
+        console.log('[Clear Button Clicked]');
+
+        // Reset the dropdown
+        $('#P19_STATUS').val('');
+
+        if (!dataTableRef) {
+          console.warn('❌ DataTable not initialized yet');
+          return;
+        }
+
+        // Clear the search on the Request Status column
+        dataTableRef
+          .column(4) // "Request Status" column
+          .search('')
+          .draw();
+
+        console.log('✅ Filter cleared and dropdown reset');
+      });
+
+
     });
 
   </script>
