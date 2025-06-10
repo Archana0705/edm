@@ -179,7 +179,6 @@ function normalizeRole(role) {
 }
 
 function renderDynamicMenu(containerId) {
-    debugger;
     const ul = document.getElementById(containerId);
     if (!ul) return;
 
