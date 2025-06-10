@@ -529,10 +529,10 @@
       });
 
       $('#clearStatusBtn').on('click', function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
         $('#P19_STATUS').val('');
         dataTableRef
-          .column(4) 
+          .column(4)
           .search('')
           .draw();
       });
