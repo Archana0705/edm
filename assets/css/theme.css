@@ -2,23 +2,37 @@
   width: 100% !important;
 }
 
-button#exitBtn {
+button.exitbtn {
   background: #ffd45b;
   border: none;
   padding-right: 10px;
   padding-left: 10px;
 }
 
-button#closeRequestButton {
+button.closeRequestbutton {
   background: #fe1500;
   color: white;
   border: none;
 }
 
-button#reOpenBtn {
+button.reOpenbtn {
   background: #9ccefd;
   border: none;
 }
+
+button.resolvedbtn {
+  background-color: #278701;
+  border: none;
+  color: #fcfcfc;
+}
+
+button.reassign {
+  background-color: #056ac8;
+  border: none;
+  color: #fcfcfc;
+}
+
+
 
 a#resolvedRequestTable_previous {
   cursor: pointer;
