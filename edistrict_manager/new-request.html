@@ -38,8 +38,7 @@
   class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
   id="t_PageBody">
   <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
-  <form role="none">
-
+  <form>
     <header class="t-Header" id="t_Header" role="banner">
       <div class="t-Header-branding">
         <div class="t-Header-controls">
@@ -419,26 +418,18 @@
                                 <label for="P7_UPLOAD" id="P7_UPLOAD_LABEL" class="t-Form-label">Attachment</label>
                               </div>
                               <div class="t-Form-inputContainer col col-2">
-                                <div class="t-Form-itemWrapper"><a-file-upload id="P7_UPLOAD" name="P7_UPLOAD"
-                                    upload-type="FILE" display-style="INLINE" size="100" label="Choose&#x20;Files"
-                                    description="Select&#x20;or&#x20;drop&#x20;files&#x20;here." max-file-size="3072"
-                                    download-link="true" multiple="true"><input type="file" id="P7_UPLOAD_input"
-                                      aria-labelledby="P7_UPLOAD_LABEL" class="u-vh" />
-                                    <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                      <div class="a-FileDrop-icon">
-                                        <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                        </span>
-                                      </div>
-                                      <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                          Files</span><span class="a-FileDrop-description">Select or drop files
-                                          here.</span></div>
-                                      <div class="a-FileDrop-action"><span
-                                          class="a-Button a-FileDrop-action-choose a-Button--hot">Choose Files</span>
-                                      </div>
-                                    </div>
-                                  </a-file-upload></div><span id="P7_UPLOAD_error_placeholder" class="a-Form-error"
-                                  data-template-id="8676686131964195_ET"></span>
+                                <div class="t-Form-itemWrapper">
+                                  <a-file-upload id="P7_UPLOAD_DROPZONE" name="P7_UPLOAD_DROPZONE" upload-type="FILE"
+                                    display-style="NATIVE" size="30" download-link="true">
+                                    <input type="file" id="P7_UPLOAD_DROPZONE_input"
+                                      aria-labelledby="P7_UPLOAD_DROPZONE_LABEL" />
+                                    <div class="a-FileDrop&#x20;a-FileDrop--native"></div>
+                                  </a-file-upload>
+                                </div>
+                                <span id="P7_UPLOAD_DROPZONE_error_placeholder" class="a-Form-error"
+                                  data-template-id="333363771109036567_ET"></span>
                               </div>
+
                             </div>
                           </div>
                           <div class="col col-1  col-end"><button
@@ -567,6 +558,12 @@
                 </div>
               </div>
             </div>
+            <div class="col col-1">
+              <button id="exitBtn" type="button">Exit</button>
+            </div>
+            <div class="col col-1 float-end">
+              <button id="submitBtn">Submit</button>
+            </div>
           </main>
           <footer class="t-Footer" id="t_Footer" role="contentinfo">
             <div class="t-Footer-body">
@@ -587,8 +584,6 @@
     </div>
     <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
       value="&#x5B;&#x5D;">
-    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
-      value="UDdfUkVRVUVTVF9DUkVBVEVEOlA3X1JFUVVFU1RFRF9CWTpQN19PUEVSQVRPUl9N.,T0JJTEU6UDdfUkVRVUVTVEVEX0RJU1RSSUNUOlA3X1JFUVVFU1RfTlVNQkVSOlA3.,X0FTU0lHTkVEX1RPOlA3X0FERElUSU9OQUxfSU5GT1JNQVRJT04&#x2F;Hsr2i1MDqZnbZxXPtytrapZqY48TcSPipCubKx0BPYbbUk5aqP4DbH-Oqg44OHrXSwG8h-NAE_2t9XDaRYw2nQ" />
   </form>
 
 
@@ -629,6 +624,8 @@
   <script src="../assets/js/chartBundle.min.js"></script> -->
   <script src="../assets/js/global.js"></script>
   <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/file.js"></script>
+
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -649,9 +646,12 @@
 
   <script type="module">
     import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+    import { processFile, checkFile } from '../assets/js/file.js';
     let dataTableRef;
 
     $(document).ready(function () {
+      let uploadFile = null;
+      let uploadPayload = null;
       const apiUrl = 'https://tngis.tnega.org/lcap_api/edm/v1/commonfunction';
       const userId = localStorage.getItem('userId');
       const secretKey = 'V7gN4dY8pT2xB3kRz';
@@ -857,6 +857,50 @@
             alert("Failed to load issue types.");
           }
         });
+      });
+
+
+
+      $('#submitBtn').on('click', async function () {
+        debugger
+        event.preventDefault();
+        if ($('#P7_UPLOAD_DROPZONE_input')) {
+          uploadFile = await processFile('#P7_UPLOAD_DROPZONE_input');
+        }
+        checkFile('#P7_UPLOAD_DROPZONE');
+
+        uploadPayload = {
+          "INTERIM": uploadFile && uploadFile.fileBase64 ? uploadFile.fileBase64 : null,
+          "INTERIM_ATTACH_FILENAME": uploadFile && uploadFile.filename ? uploadFile.filename : null,
+          "INTERIM_ATTACH_MIMETYPE": uploadFile && uploadFile.mimetype ? uploadFile.mimetype : null,
+          "COURT_ID": "POCSO/JULY     /2024/0345"
+        }
+
+        var taluk = $('#P7_LOCATION').val();
+        var operator = $('#P7_OPERATOR').val();
+        var issue_type = $('#P7_ISSUE_TYPE').val();
+        var sub_category = $('#P7_SHORT_DESCRIPTION').val();
+        var impacted_applications = $('#P7_IMPACTED_APPLICATION').val();
+        var short_des = $('#P7_SHORT').val();
+        var full_des = $('#P7_FULL_DESCRIPTION').val();
+        var contact_type = $('#P7_CONTACT_TYPE').val();
+
+
+        const payload = {
+          action: "function_call",
+          function_name: "Taluk_edm_fn",
+          params: {
+            userid: userId,
+            taluk: taluk,
+            operator: operator,
+            issue_type: issue_type,
+            sub_category: sub_category,
+            impacted_applications: impacted_applications,
+            uploadPayload: uploadPayload
+          }
+        }
+        console.log(payload)
+
       });
 
     });
