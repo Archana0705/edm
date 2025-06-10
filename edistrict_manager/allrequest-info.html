@@ -12,103 +12,29 @@
   <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
-  <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
-  <link rel="icon" href="../assets/img/app-icon-32.png">
-  <style type="text/css">
-    @font-face {
-      font-family: 'FontApex';
-      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
-        url('../font/apex-5-icon-font.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Font-APEX';
-      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
-        url('../fonts/Font-APEX-Small.woff') format('woff'),
-        url('../fonts/Font-APEX-Large.woff2') format('woff2'),
-        url('../fonts/Font-APEX-Large.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    .t-fht-thead {
-      display: none !important;
-    }
-
-    .a-IRR-table thead {
-      visibility: visible !important;
-      position: static !important;
-    }
-
-    .a-IRR-table tbody th {
-      position: static !important;
-    }
-
-    /* Disable APEX's fixed/sticky header */
-    .a-IRR-tableContainer .a-IRR-table tbody th {
-      position: static !important;
-      top: auto !important;
-      z-index: 0 !important;
-    }
-
-    /* Ensure whole table scrolls together */
-    .a-IRR-tableContainer {
-      overflow-x: auto !important;
-      overflow-y: auto !important;
-      max-height: 500px;
-      /* Adjust height as needed */
-    }
-
-    .a-IRR-table {
-      table-layout: auto !important;
-      width: max-content !important;
-      display: table !important;
-      white-space: nowrap !important;
-    }
-  </style>
-  <style>
-    .t-fht-thead.js-stickyTableHeader {
-      display: none !important;
-    }
-
-    .a-IRR-table thead {
-      position: static !important;
-      visibility: visible !important;
-    }
-  </style>
-  <style nonce="Ulw1qMqXLO4SS_c8kRESpg">
-    #P16_SHORT {
-      min-height: 0rem !important;
-    }
-  </style>
-
-  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
-  <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
-
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="-1" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+  <style>
+    #t_Body_nav {
+      width: 100% !important;
+    }
+  </style>
 </head>
 
 <body
   class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
   id="t_PageBody">
   <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
-  <form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/service-request4/114230090361743"
-    method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
-    <input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
-      value="16" id="pFlowStepId" /><input type="hidden" name="p_instance" value="114230090361743"
-      id="pInstance" /><input type="hidden" name="p_page_submission_id"
-      value="NTk5NzkwNjc1MTU3MzIzNDI2Nzg1NDE5ODQ1MzY5ODk4OTkyMzM&#x2F;H45VgHI8bibR6K1fL_Xh-4fHKsZ2m4z1gFOTZUfbKU_tIDEeKIKlvodoGKdy0FGxxMr2JNkEv8bGh7f5eMuMUg"
-      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
-      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
-      value="e-district-manager-application&#x2F;service-request4&#x2F;114230090361743" id="pContext" /><input
-      type="hidden" value="59979067515732342678541984536989899233" id="pSalt" />
+  <form role="none">
     <header class="t-Header" id="t_Header" role="banner">
 
       <div class="t-Header-branding">
@@ -174,190 +100,10 @@
       <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
         <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
           id="t_TreeNav" data-id="16_tree" aria-label="Main Navigation">
-          <ul>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=114230090361743&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w"
-                title="" style="display: none" target="">Home</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-home"></span>
-                  <span class="a-TreeView-label">Home</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/all-request4?session=114230090361743" title=""
-                style="display: none" target="">All Request</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o "></span>
-                  <span class="a-TreeView-label">All Request</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file-edit" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/service-request?p7_new=0&session=114230090361743&cs=110BX6RMm3yB5UIdQpCi-G5IFDb-mDxd9KP8m4AyaGhFOf22_34EnYHcmZZSc8xWEf4_d5vM9pqBG-FOCQqxuNA"
-                title="" style="display: none" target="">New Request</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-file-edit"></span>
-                  <span class="a-TreeView-label">New Request</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-clock"
-              data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/progress-request1?session=114230090361743" title=""
-                style="display: none" target="">In-Progress Request [ 2 ]
-
-
-
-
-
-
-
-
-              </a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-clock"></span>
-                  <span class="a-TreeView-label">In-Progress Request [ 2 ]
-
-
-
-
-
-
-
-
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-user" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/on-hold-request?session=114230090361743" title=""
-                style="display: none" target="">On-Hold Request [ 0 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-user"></span>
-                  <span class="a-TreeView-label">On-Hold Request [ 0 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-check"
-              data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/resolved-request1?session=114230090361743" title=""
-                style="display: none" target="">Resolved Request [ 51 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-check"></span>
-                  <span class="a-TreeView-label">Resolved Request [ 51 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-clipboard-check-alt"
-              data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/closed-request1?session=114230090361743" title=""
-                style="display: none" target="">Closed Request [ 0]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-clipboard-check-alt"></span>
-                  <span class="a-TreeView-label">Closed Request [ 0]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/reopned-request?session=114230090361743" title=""
-                style="display: none" target="">Reopened Request [ 1 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o "></span>
-                  <span class="a-TreeView-label">Reopened Request [ 1 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-server-user" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/operators-details?session=114230090361743" title=""
-                style="display: none" target="">Operators Details</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-server-user"></span>
-                  <span class="a-TreeView-label">Operators Details</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/instructions-received-report?session=114230090361743"
-                title="" style="display: none" target="">Instructions Received Report [ 1 ]</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-table"></span>
-                  <span class="a-TreeView-label">Instructions Received Report [ 1 ]</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/instructions-received-tickets?session=114230090361743"
-                title="" style="display: none" target="">Helpdesk Tickets</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o "></span>
-                  <span class="a-TreeView-label">Helpdesk Tickets</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-form?session=114230090361743"
-                title="" style="display: none" target="">eSevai Operator Change Request Form</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-file"></span>
-                  <span class="a-TreeView-label">eSevai Operator Change Request Form</span>
-                </div>
-              </div>
-            </li>
-            <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
-              <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-report?session=114230090361743"
-                title="" style="display: none" target="">eSevai Operator Change Request Report</a>
-              <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                <div role="none" class="a-TreeView-row"></div>
-                <div role="none" class="a-TreeView-content">
-                  <span class="fa fa-file-o fa&#x20;fa-table"></span>
-                  <span class="a-TreeView-label">eSevai Operator Change Request Report</span>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <ul id="commonMenuContainer"></ul>
         </div>
       </div>
-      <script>
-        (() => {
-          const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
-            nav = document.getElementById('t_TreeNav').classList,
-            body = document.getElementById('t_PageBody');
-          if (!sessionStorage.getItem(pref)) { sessionStorage.setItem(pref, !nav.contains('js-defaultCollapsed')); }
-          if (nav.contains('js-navCollapsed--default')) {
-            body?.classList.add('js-navCollapsed--icons');
-            if (sessionStorage.getItem(pref) === "false") { body?.classList.add('js-navCollapsed'); }
-          }
-          if (sessionStorage.getItem(pref) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
-          for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
-            label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
-          }
-        })();
-      </script>
+
       <div class="t-Body-main">
         <div class="t-Body-title" id="t_Body_title"></div>
         <div class="t-Body-content" id="t_Body_content">
@@ -645,7 +391,7 @@
                           </div>
                           <div class="col col-3  "><span class="apex-grid-nbsp">&nbsp;</span></div>
                           <div class="col col-5 apex-col-auto col-end">
-                            <div class="t-Region t-Region--noPadding t-Region--noUI t-Region--scrollBody"
+                            <!-- <div class="t-Region t-Region--noPadding t-Region--noUI t-Region--scrollBody"
                               id="R39925691585166740" role="region" aria-label="Attachment">
                               <div class="t-Region-header">
                                 <div class="t-Region-headerItems t-Region-headerItems--title">
@@ -698,10 +444,14 @@
                                   <div class="t-Region-buttons-right"></div>
                                 </div>
                               </div>
+                            </div> -->
+                            <h2 class="t-Region-title" id="R39925691585166740_heading" data-apex-heading>
+                              Attachment</h2>
+                            <div id="attachmentSection" style="display: none; margin-top: 15px;">
+                              <label><strong>Attachment:</strong> <span id="attachmentFileName"></span></label><br />
+                              <button id="P16_ATTACHMENT_VIEW">View Attachment</button>
                             </div>
-                            <input type="hidden" name="P16_ASSIGNMENT_GROUP" id="P16_ASSIGNMENT_GROUP" value=""><input
-                              type="hidden" data-for="P16_ASSIGNMENT_GROUP"
-                              value="BAwEQCbll0Q7K4fFZbP4ALy3YFDx1tyW70sh_Qm0LPo08vuwQ5nJF7jLGoPBSd7LYNgUxY0WFRzb-E_J3ZWLJg">
+
                           </div>
                         </div>
                         <div class="row ">
@@ -801,23 +551,16 @@
                           </div>
                         </div>
                       </div>
-                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        <tr>
-                          <td align="left"><button
-                              onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fresolved-request1?clear=5\u0026session=114230090361743\u0026cs=3ke3mEnhJ3vHYM7uWKINfCI3gNQTyIBpnEVZ1kwKlOuy9KEUSaYEeHx52pdjZ4sHQL0LRLJYxI092RQwlaWpBcw&#x27;);"
-                              class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
-                              type="button" id="B14603523895808130"><span class="t-Button-label">Exit</span></button>
-                          </td>
-                          <td align="right"><button
-                              onclick="apex.navigation.redirect(&#x27;#action$a-dialog-open?url=\u00252Fords\u00252Fr\u00252Fedmdev\u00252Fe-district-manager-application\u00252Ffeedback-for-the-service\u00253Fp27_request_number\u00253DEDM\u0025252F2024-06-03\u0025252F0286\u002526p27_assign_to\u00253DEDM0182\u002526clear\u00253D27\u002526session\u00253D114230090361743\u002526cs\u00253D10rCjc71Gw4R9izrJ9snuP_xoNoTXBUrx14b-beJ1FVIoMXJWMQQLiK7mztvirUyfEUqXoj1mwXe8-GkjThGndQ\u002526dialogCs\u00253DO39-p4L-HDtbzAMczgFeRykD871tQFjFiMGlhdjDzUQh7sja15QirzdylxEV7mWOu1RdfE3Sia7u3ZnZXXCYUg\u0026appId=1111\u0026pageId=27\u0026tmpl=MODAL_DIALOG\u0026title=Feedback\u002520for\u002520the\u002520service\u0026h=auto\u0026w=720\u0026mxw=960\u0026isModal=true\u0026dlgCls=\u0026pageCls=\u0026trgEl=\u002523B14603938421808136&#x27;);"
-                              class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--danger&#x20;t-Button--gapRight"
-                              type="button" id="B14603938421808136"><span class="t-Button-label">Close
-                                Request</span></button><button
-                              onclick="apex.submit({request:&#x27;Reopen&#x27;,validate:true});"
-                              class="t-Button t-Button--large&#x20;t-Button--primary" type="button"
-                              id="B73722113320512301"><span class="t-Button-label">Reopen</span></button></td>
-                        </tr>
-                      </table>
+                      <div class="row">
+                        <div class="col-6">
+                          <button id="exitBtn">Exit</button>
+                        </div>
+                        <div class="col-6 text-end">
+                          <button id="closeRequestButton">Close Request</button>
+                          <button id="reOpenBtn" type="button">Reopen</button>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -848,91 +591,178 @@
   </form>
 
 
-  <script nonce="Ulw1qMqXLO4SS_c8kRESpg">
-    var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
-    var apex = {
-      env: { APP_USER: "9344712827", APP_ID: "1111", APP_PAGE_ID: "16", APP_SESSION: "114230090361743", APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F", WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "24.2.0", APEX_BASE_VERSION: "24.2", COMPATIBILITY_MODE: 21.2, NONCE: "Ulw1qMqXLO4SS_c8kRESpg" },
-      libVersions: { cropperJs: "1.6.2", domPurify: "3.1.6", fontapex: "2.4", fullcalendar: "6.1.15", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "4.6.0", mapboxGlRtlText: "0.3.0", markedJs: "14.1.2", prismJs: "1.29.0", oraclejet: "17.0.2", turndown: "7.2.0", monacoEditor: "0.51.0", lessJs: "4.2.0" }
-    };
-  </script>
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
-  <script nonce="Ulw1qMqXLO4SS_c8kRESpg">
-    apex.da.initDaEventList = function () {
-      apex.da.gEventList = [
-        {
-          "bindEventType": "ready", "anyActionsFireOnInit": false, actionList: [{
-            "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, javascriptFunction: function () {
-              $x('P16_LOCATION').readOnly = true;
-              $x('P16_OPERATOR').readOnly = true;
-              $x('P16_ISSUE_TYPE').readOnly = true;
-              $x('P16_SHORT_DESCRIPTION').readOnly = true;
-              $x('P16_IMPACTED_APPLICATION').readOnly = true;
-              $x('P16_SHORT').readOnly = true;
-              $x('P16_FULL_DESCRIPTION').readOnly = true;
-              $x('P16_CONTACT_TYPE').readOnly = true;
-              $x('P16_ASSIGNMENT_GROUP').readOnly = true;
-              $x('P16_ASSIGNED_TO').readOnly = true;
-              $x('P16_REQUESTED_GROUP').readOnly = true;
-
-
-
-
-
-
-
-
-
-            }, "action": "NATIVE_JAVASCRIPT_CODE"
-          }]
-        }];
-    }
-  </script>
-
-  <script src="../assets/js/desktop_all.min.js"></script>
-  <script src="../assets/js/theme42.min.js"></script>
-  <script src="../assets/js/aos.js"></script>
-  <script src="../assets/js/chart.js"></script>
-  <script src="../assets/js/add.min.js"></script>
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
   <script src="../assets/js/widget.interactiveReport.min.js"></script>
   <script src="../assets/js/widget.iconList.min.js"></script>
   <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
   <script src="../assets/js/widget.stickyWidget.min.js"></script>
   <script src="../assets/js/item.Colorpicker.min.js"></script>
-  <script src="../assets/js/require.js"></script>
-  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/toastUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
 
-
-  <script nonce="Ulw1qMqXLO4SS_c8kRESpg">
-    apex.session.initTimeouts(180, { "idle_time_ms": 3593000, "life_time_ms": 24880000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome?p16_request_number=EDM\u00252F2024-06-03\u00252F0286\u0026clear=RP,16\u0026cs=1vsppyDpB4ORTnpwDsSroIedMX3agH8_HzUDgJdjl9cLK6ItSgbMpK0PUnOIruku723qjrxwV0piq0DFBeRUu_A', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome?p16_request_number=EDM\u00252F2024-06-03\u00252F0286\u0026clear=RP,16\u0026cs=1vsppyDpB4ORTnpwDsSroIedMX3agH8_HzUDgJdjl9cLK6ItSgbMpK0PUnOIruku723qjrxwV0piq0DFBeRUu_A');
-    apex.jQuery(function () {
-      apex.page.init(this, function () {
-        try {
-          (function () { apex.jQuery('body').addClass('t-PageBody--leftNav'); })();
-          (function () { apex.widget.report.init("R39925691585166740", "UkVHSU9OIFRZUEV-fjM5OTI1NjkxNTg1MTY2NzQw\u002Fa4GVmAjek8X5qqPE6U9IXs2Rfba54o4TECmCzuoiTrZmM6kaH125rb57XXdzufcz3mWrf6nwKtJRCTVasWIbRw", { "pageItems": "#P16_REQUEST_NUMBER", "lazyLoading": false, "internalRegionId": "39925691585166740" }); })();
-        } catch (e) { apex.debug.error(e) };
-        apex.item.waitForDelayLoadItems().done(function () {
-          try {
-            (function () {
-              apex.da.initDaEventList();
-              apex.da.init();
-            })();
-            apex.theme42.initializePage.noSideCol();
-
-            apex.page.warnOnUnsavedChanges();
-          } finally {
-            apex.event.trigger(apex.gPageContext$, 'apexreadyend');
-          };
-        });
-      });
-    }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
+      $('#pressReleaseTable').DataTable();
+    });
   </script>
 
   <script>
-    AOS.init();
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
   </script>
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+  <script type="module">
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+    $(document).ready(function () {
+      debugger
+
+      var userId = localStorage.getItem('userId');
+      const langSwitch = 'en';
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      let details = '';
+      const urlParams = new URLSearchParams(window.location.search);
+      const encodedDetails = urlParams.get('details');
+      const decodedDetails = atob(encodedDetails);
+      console.log(decodedDetails, "decoded req number");
+
+      // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
+      $('#P16_REQUEST_NUMBER_DISPLAY').text(decodedDetails);
+
+      const payload = {
+        action: "function_call",
+        function_name: "edm_service_request_form_fn",
+        params: {
+          p_request_no: decodedDetails
+        }
+      };
+
+      //check
+      // const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      $.ajax({
+        url: apiUrl,
+        method: "POST",
+        headers: {
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
+        },
+        data: {
+          data: encryptData(payload)
+        },
+        dataType: 'json',
+        cache: false,
+        success: function (response) {
+          console.log("Raw API response:", response); // Log raw response
+
+          try {
+            if (response && response.data) {
+              console.log("Encrypted data received:", response.data);
+              var decryptedResponse = decryptData(response.data);
+              console.log(response);
+
+              if (!Array.isArray(decryptedResponse) || decryptedResponse.length === 0) {
+                throw new Error("Invalid decrypted data format");
+              }
+
+              const decrypted = decryptedResponse[0];
+              console.log("Decrypted user data:", decrypted);
+
+
+              $('#P16_REQUEST_STATUS_DISPLAY').text(decrypted.request_status);
+              $('#P16_LOCATION').val(decrypted.location);
+              $('#P16_OPERATOR').val(decrypted.location);
+              $('#P16_ISSUE_TYPE').val(decrypted.issue_type);
+              $('#P16_SHORT_DESCRIPTION').val(decrypted.short_description);
+              $('#P16_IMPACTED_APPLICATION').val(decrypted.impacted_application);
+              $('#P16_PRIORITY').val(decrypted.priority);
+              $('#P16_SHORT').val(decrypted.short);
+              $('#P16_FULL_DESCRIPTION').val(decrypted.full_description);
+              $('#P16_ADDITIONAL_INFORMATION').val(decrypted.additional_information);
+              $('#P16_REQUESTED_GROUP').val(decrypted.requested_group);
+              $('#P16_CONTACT_TYPE').val(decrypted.contact_type);
+              $('#P16_ASSIGNED_TO').val(decrypted.assigned_to);
+
+              const fileBase64 = decrypted.helpdesk_upload;
+              const fileName = "pdf file";
+
+              const mimeType = decrypted.helpdesk_mimetype;
+
+              if (fileBase64 && fileName && mimeType) {
+
+                const byteCharacters = atob(fileBase64);
+                const byteNumbers = new Array(byteCharacters.length);
+                for (let i = 0; i < byteCharacters.length; i++) {
+                  byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                const byteArray = new Uint8Array(byteNumbers);
+                const fileBlob = new Blob([byteArray], { type: mimeType });
+
+                // Create a Blob URL
+                const fileUrl = URL.createObjectURL(fileBlob);
+
+                // Update file name label
+                $('#attachmentFileName').text(fileName);
+                $('#attachmentSection').show();
+                $('#P16_ATTACHMENT_VIEW').off('click').on('click', function () {
+                  window.open(fileUrl, '_blank');
+                });
+              } else {
+                $('#attachmentSection').hide();
+              }
+
+
+
+            } else {
+              console.error("Invalid response structure - missing data field");
+            }
+          } catch (error) {
+            console.error("Error processing response:", error);
+          }
+        },
+        error: function (xhr, status, error) {
+          console.error("API call failed:", {
+            status: xhr.status,
+            statusText: xhr.statusText,
+            responseText: xhr.responseText,
+            error: error
+          });
+        }
+      });
+
+
+      $('#exitBtn').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log("Exit button clicked");
+        window.location.href = 'allrequest.html';
+      });
+    })
+
+
+
+  </script>
+
+
 </body>
 
 </html>

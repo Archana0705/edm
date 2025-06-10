@@ -422,9 +422,8 @@
                                             data-for="P8_REQ_STATUS"
                                             value="E2ipmUGEF7LKJGS3eve2lCRiEiz7eA63kEnGvL6UQR-aINR7z0-NkAvYFHZ0uPXRGGTLRB23Zq6AFwQT_bJdKw"><span
                                             id="P8_REQ_STATUS_DISPLAY" class="display_only apex-item-display-only"
-                                            data-escape="true"></span></div><span
-                                          id="P8_REQ_STATUS_error_placeholder" class="a-Form-error"
-                                          data-template-id="8676686131964195_ET"></span>
+                                            data-escape="true"></span></div><span id="P8_REQ_STATUS_error_placeholder"
+                                          class="a-Form-error" data-template-id="8676686131964195_ET"></span>
                                       </div>
                                     </div>
                                   </div>
@@ -1083,72 +1082,72 @@ kindly cancel this return application applicant reapply this service.</textarea>
       const urlParams = new URLSearchParams(window.location.search);
       const encodedDetails = urlParams.get('details');
       const decodedDetails = atob(encodedDetails);
-      console.log(decodedDetails,"decoded req number");
+      console.log(decodedDetails, "decoded req number");
 
-        // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
-          $('#P8_REQUEST_NUMBER_DISPLAY').text(decodedDetails);
+      // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
+      $('#P8_REQUEST_NUMBER_DISPLAY').text(decodedDetails);
 
-            const payload = {
+      const payload = {
         action: "function_call",
         function_name: "edm_service_request_form_fn",
         params: {
-         p_request_no: decodedDetails
+          p_request_no: decodedDetails
         }
-    };
+      };
 
-    //check
-    // const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      //check
+      // const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
 
-    $.ajax({
+      $.ajax({
         url: apiUrl,
         method: "POST",
         headers: {
-            'X-APP-Key': "edm",
-            'X-APP-Name': "edm"
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
         },
         data: {
-            data: encryptData(payload)
+          data: encryptData(payload)
         },
         dataType: 'json',
         cache: false,
         success: function (response) {
-            console.log("Raw API response:", response); // Log raw response
+          console.log("Raw API response:", response); // Log raw response
 
-            try {
-                if (response && response.data) {
-                    console.log("Encrypted data received:", response.data);
-                    var decryptedResponse = decryptData(response.data);
-                    console.log(response);
+          try {
+            if (response && response.data) {
+              console.log("Encrypted data received:", response.data);
+              var decryptedResponse = decryptData(response.data);
+              console.log(response);
 
-                    if (!Array.isArray(decryptedResponse) || decryptedResponse.length === 0) {
-                        throw new Error("Invalid decrypted data format");
-                    }
+              if (!Array.isArray(decryptedResponse) || decryptedResponse.length === 0) {
+                throw new Error("Invalid decrypted data format");
+              }
 
-                    const decrypted = decryptedResponse[0];
-                    console.log("Decrypted user data:", decrypted);
-                 
+              const decrypted = decryptedResponse[0];
+              console.log("Decrypted user data:", decrypted);
 
-                  $('#P8_REQ_STATUS_DISPLAY').text(decrypted.request_status);
-                  $('#P8_LOCATION').val(decrypted.operator);
 
-                } else {
-                    console.error("Invalid response structure - missing data field");
-                }
-            } catch (error) {
-                console.error("Error processing response:", error);
+              $('#P8_REQ_STATUS_DISPLAY').text(decrypted.request_status);
+              $('#P8_LOCATION').val(decrypted.operator);
+
+            } else {
+              console.error("Invalid response structure - missing data field");
             }
+          } catch (error) {
+            console.error("Error processing response:", error);
+          }
         },
         error: function (xhr, status, error) {
-            console.error("API call failed:", {
-                status: xhr.status,
-                statusText: xhr.statusText,
-                responseText: xhr.responseText,
-                error: error
-            });
+          console.error("API call failed:", {
+            status: xhr.status,
+            statusText: xhr.statusText,
+            responseText: xhr.responseText,
+            error: error
+          });
         }
-    });
-  })    
-  
+      });
+    })
+
   </script>
 
 
