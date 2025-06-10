@@ -476,10 +476,11 @@
         payload: encryptData(payload),
         rowBuilder: (item) => {
           const applicationInfo = btoa(String(item.request_number));
+          const status = btoa(String(item.request_status));
           return `
       <tr>
         <td class="u-tL">
-        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}">
+        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}&status=${status}">
           ${item.request_number}
         </a>
         </td>

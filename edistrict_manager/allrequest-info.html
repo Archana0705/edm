@@ -17,6 +17,10 @@
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
   <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -553,11 +557,11 @@
                       </div>
                       <div class="row">
                         <div class="col-6">
-                          <button id="exitBtn">Exit</button>
+                          <button id="exitBtn" class="exitbtn">Exit</button>
                         </div>
-                        <div class="col-6 text-end">
-                          <button id="closeRequestButton">Close Request</button>
-                          <button id="reOpenBtn" type="button">Reopen</button>
+                        <div id="statusActionDiv" class="col-6 text-end" style="display: none;">
+                          <button id="closeRequestButton" class="closeRequestbutton">Close Request</button>
+                          <button id="reOpenBtn" class="reOpenbtn" type="button">Reopen</button>
                         </div>
                       </div>
 
@@ -588,11 +592,47 @@
       value="&#x5B;&#x7B;&#x22;r&#x22;&#x3A;&#x22;40997159128161338&#x22;,&#x22;c&#x22;&#x3A;&#x22;BlyWUMlYuPNVfiba1SiLtytPvE2oEEXpAfqaN5XuFjuuEU7yVVdTj5q0MLIafdraAvF-WuLYJ-m0Rm2umLYAXQ&#x22;&#x7D;&#x5D;">
     <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
       value="UDE2X1JFUVVFU1RfTlVNQkVSOlAxNl9SRVFVRVNUX1NUQVRVUzpQMTZfUkVRVUVT.,VF9DUkVBVEVEOlAxNl9SRVFVRVNURURfQlk6UDE2X1JFUVVFU1RFRF9ESVNUUklD.,VDpQMTZfQVNTSUdOTUVOVF9HUk9VUDpQMTZfVVBMT0FEOlAxNl9IRUxQREVTS19O.,T1RFUw&#x2F;mGZk_UyX9YqyK7ssNWTNAAZeDVs0V3C9XFttkTkgHamRCaulOuCyvVta2s9Jg6-Nz3ftau9mfhC_tHXW2gfDUw" />
+    <!-- Feedback Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="feedbackModalLabel">Feedback for the service</h5>
+            <button type="button" class="close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="feedbackForm">
+              <div class="mb-3">
+                <label for="rating" class="form-label">Rating <span class="text-danger">*</span></label>
+                <select class="form-select" id="rating" required>
+                  <option value="">--Select--</option>
+                  <option value="5">★★★★★</option>
+                  <option value="4">★★★★</option>
+                  <option value="3">★★★</option>
+                  <option value="2">★★</option>
+                  <option value="1">★</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label">Comments <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="comments" rows="3" required></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" id="submitFeedbackBtn" class="btn btn-success">Submit & Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
 
 
   <!-- jQuery -->
   <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- DataTables -->
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
@@ -640,10 +680,14 @@
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
       let details = '';
+      let status = '';
       const urlParams = new URLSearchParams(window.location.search);
       const encodedDetails = urlParams.get('details');
+      const encodedStatus = urlParams.get('status');
       const decodedDetails = atob(encodedDetails);
-      console.log(decodedDetails, "decoded req number");
+      const decodedStatus = atob(encodedStatus);
+
+      console.log(decodedStatus, "decoded status");
 
       // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
       $('#P16_REQUEST_NUMBER_DISPLAY').text(decodedDetails);
@@ -749,6 +793,50 @@
         }
       });
 
+      if (decodedStatus == 'Resolved') {
+        document.getElementById('statusActionDiv').style.display = 'block';
+
+      }
+      $('#closeRequestButton').on('click', function (event) {
+        event.preventDefault();
+        const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+        feedbackModal.show();
+      });
+
+      $('#submitFeedbackBtn').on('click', function (event) {
+        const rating = $('#rating').val();
+        const comments = $('#comments').val();
+
+        if (!rating || !comments.trim()) {
+          alert("Please provide both rating and comments.");
+          return;
+        }
+
+        const updatePayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_T",
+          primary_key: "decodedDetails",
+          decodedDetails: decodedDetails,
+          request_status: 'Closed'
+
+        };
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+          type: 'POST',
+          data: { data: encryptData(updatePayload) },
+          success: function (response) {
+            showSuccessToast("Updated Successfully");
+            setTimeout(() => window.location.href = "../admin-zonal-officers-district-report.html", 1000);
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during submission of data.");
+          }
+        });
+        console.log("Rating:", rating);
+        console.log("Comments:", comments);
+        const feedbackModal = bootstrap.Modal.getInstance(document.getElementById('feedbackModal'));
+        feedbackModal.hide();
+      })
 
       $('#exitBtn').on('click', function (event) {
         event.preventDefault();

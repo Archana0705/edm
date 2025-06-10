@@ -558,11 +558,13 @@
                 </div>
               </div>
             </div>
-            <div class="col col-1">
-              <button id="exitBtn" type="button">Exit</button>
-            </div>
-            <div class="col col-1 float-end">
-              <button id="submitBtn">Submit</button>
+            <div class="row">
+              <div class="col-6">
+                <button id="exitBtn" class="exitbtn">Exit</button>
+              </div>
+              <div id="statusActionDiv" class="col-6 text-end">
+                <button id="closeRequestButton" class="resolvedbtn">Submit</button>
+              </div>
             </div>
           </main>
           <footer class="t-Footer" id="t_Footer" role="contentinfo">
@@ -902,7 +904,12 @@
         console.log(payload)
 
       });
-
+      $('#exitBtn').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log("Exit button clicked");
+        window.location.href = 'allrequest.html';
+      });
     });
 
   </script>
