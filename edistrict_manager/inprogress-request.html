@@ -254,22 +254,7 @@
           <ul id="commonMenuContainer"></ul>
         </div>
       </div>
-      <script>
-        (() => {
-          const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
-            nav = document.getElementById('t_TreeNav').classList,
-            body = document.getElementById('t_PageBody');
-          if (!sessionStorage.getItem(pref)) { sessionStorage.setItem(pref, !nav.contains('js-defaultCollapsed')); }
-          if (nav.contains('js-navCollapsed--default')) {
-            body?.classList.add('js-navCollapsed--icons');
-            if (sessionStorage.getItem(pref) === "false") { body?.classList.add('js-navCollapsed'); }
-          }
-          if (sessionStorage.getItem(pref) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
-          for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
-            label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
-          }
-        })();
-      </script>
+
       <div class="t-Body-main">
         <div class="t-Body-title" id="t_Body_title"></div>
         <div class="t-Body-content" id="t_Body_content">
@@ -330,115 +315,40 @@
                               <input type="hidden" id="R109615596173071518_app_user" value="9344712827" />
                               <input type="hidden" id="R109615596173071518_report_id" value="109655351283214817" />
                               <input type="hidden" id="R109615596173071518_view_mode" value="REPORT" />
-                              <div role="region" aria-label="Report&#x20;settings&#x20;of&#x20;All&#x20;Request"
-                                class="a-MediaBlock a-IRR-controlsContainer" id="R109615596173071518_control_panel">
-                                <div class="a-MediaBlock-graphic">
-                                  <h3 aria-hidden="true" class="u-vh">Report Settings</h3>
-                                  <span role="heading" aria-level="3"><button type="button"
-                                      class="a-Button a-IRR-button a-IRR-button--controls"><span
-                                        class="a-Icon a-Collapsible-icon icon-down-arrow"
-                                        aria-hidden="true"></span></button></span>
-                                </div>
-                                <div class="a-MediaBlock-content">
-                                  <ul role="none" class="a-IRR-controls">
+                              
 
-
-
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                      aria-labelledby="control_text_11010062725217703" role="region"><span
-                                        class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                          data-setting="highlight" data-highlight-id="11010062725217703"
-                                          aria-label="Highlight" aria-describedby="control_text_11010062725217703"
-                                          type="checkbox" id="control_11010062725217703" checked="checked" /><label
-                                          for="control_11010062725217703" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                          aria-describedby="control_text_11010062725217703"
-                                          aria-controls="control_11010062725217703"
-                                          class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                          data-highlight-id="11010062725217703" data-bgcol="#f91033"
-                                          data-ftcol="#000000"><span aria-hidden="true">Priority =
-                                            &#x27;Critical&#x27;</span><span aria-hidden="true" class="u-vh"
-                                            id="control_text_11010062725217703">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;f91033:
-                                            Priority = &#x27;Critical&#x27;</span><span class="u-vh">Edit
-                                            Highlight</span></button></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11010062725217703"
-                                          aria-controls="control_11010062725217703" type="button"
-                                          data-setting="highlight" data-highlight-id="11010062725217703"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#f91033" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                      aria-labelledby="control_text_11010117316217703" role="region"><span
-                                        class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                          data-setting="highlight" data-highlight-id="11010117316217703"
-                                          aria-label="Highlight" aria-describedby="control_text_11010117316217703"
-                                          type="checkbox" id="control_11010117316217703" checked="checked" /><label
-                                          for="control_11010117316217703" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                          aria-describedby="control_text_11010117316217703"
-                                          aria-controls="control_11010117316217703"
-                                          class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                          data-highlight-id="11010117316217703" data-bgcol="#fb810f"
-                                          data-ftcol="#000000"><span aria-hidden="true">Priority =
-                                            &#x27;High&#x27;</span><span aria-hidden="true" class="u-vh"
-                                            id="control_text_11010117316217703">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;fb810f:
-                                            Priority = &#x27;High&#x27;</span><span class="u-vh">Edit
-                                            Highlight</span></button></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11010117316217703"
-                                          aria-controls="control_11010117316217703" type="button"
-                                          data-setting="highlight" data-highlight-id="11010117316217703"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#fb810f" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-
-                                  </ul>
-                                </div>
-                                <div class="a-IRR-reportSummaryContainer" id="R109615596173071518_control_panel_summary"
-                                  style="display:none;">
-                                  <ul class="a-IRR-reportSummary">
-                                    <li class="a-IRR-reportSummary-item a-IRR-reportSummary-item--highlight"><a href="#"
-                                        class="a-IRR-reportSummary-label"><span class="a-IRR-reportSummary-icon"
-                                          aria-label="Highlight,&#x20;2" role="img"><span
-                                            class="a-Icon icon-irr-highlight"></span><span
-                                            class="a-IRR-reportSummary-count">2</span></span><span
-                                          class="a-IRR-reportSummary-value">Priority = &#x27;Cri..., Priority =
-                                          &#x27;Hig...</span></a></li>
-                                  </ul>
-                                </div>
+                              <div class="a-IRR-reportSummaryContainer" id="R109615596173071518_control_panel_summary"
+                                style="display:none;">
+                                <ul class="a-IRR-reportSummary">
+                                  <li class="a-IRR-reportSummary-item a-IRR-reportSummary-item--highlight"><a href="#"
+                                      class="a-IRR-reportSummary-label"><span class="a-IRR-reportSummary-icon"
+                                        aria-label="Highlight,&#x20;2" role="img"><span
+                                          class="a-Icon icon-irr-highlight"></span><span
+                                          class="a-IRR-reportSummary-count">2</span></span><span
+                                        class="a-IRR-reportSummary-value">Priority = &#x27;Cri..., Priority =
+                                        &#x27;Hig...</span></a></li>
+                                </ul>
                               </div>
-                              <style nonce="3R9GgFKjhfWNNSqHEpV2xQ" id="R109615596173071518_worksheet_css">
-                                tr td.rule_11010062725217703_td {
-                                  background-color: #f91033 !important;
-                                }
+                            </div>
+                            <style nonce="3R9GgFKjhfWNNSqHEpV2xQ" id="R109615596173071518_worksheet_css">
+                              tr td.rule_11010062725217703_td {
+                                background-color: #f91033 !important;
+                              }
 
-                                tr td.rule_11010117316217703_td {
-                                  background-color: #fb810f !important;
-                                }
-                              </style>
-                              <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                id="R109615596173071518_chart" class="a-IRR-chartView"></div>
-                              <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                id="R109615596173071518_group_by" class="a-IRR-groupByView"></div>
-                              <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                id="R109615596173071518_pivot" class="a-IRR-pivotView"></div>
-                              <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                id="R109615596173071518_data_panel" class="a-IRR-reportView">
-                                <div class="a-IRR-tableContainer">
-                                  <!-- <table
+                              tr td.rule_11010117316217703_td {
+                                background-color: #fb810f !important;
+                              }
+                            </style>
+                            <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
+                              id="R109615596173071518_chart" class="a-IRR-chartView"></div>
+                            <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
+                              id="R109615596173071518_group_by" class="a-IRR-groupByView"></div>
+                            <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;All&#x20;Request"
+                              id="R109615596173071518_pivot" class="a-IRR-pivotView"></div>
+                            <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
+                              id="R109615596173071518_data_panel" class="a-IRR-reportView">
+                              <div class="a-IRR-tableContainer">
+                                <!-- <table
                                     aria-label="All&#x20;Request,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
                                     class="a-IRR-table" id="109615724414071518">
                                     <tr>
@@ -493,108 +403,108 @@
                                     </tr>
                                   </table> -->
 
-                                  <table id="pressReleaseTable" class="display" style="width:100%">
-                                    <thead>
-                                      <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Status</th>
-                                        <th>Status</th>
-                                        <th>Status</th>
-                                        <th>Status</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                  </table>
-                                </div>
-                                <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
-                                  class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
-                                  <ul class="a-IRR-pagination">
-                                    <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
-                                    <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label"> 1 - 2 of
-                                        2</span></li>
-                                    <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
-                                  </ul>
-                                </div>
+                                <table id="inProgressReport" class="display" style="width:100%">
+                                  <thead>
+                                    <tr>
+                                      <th>Request Number</th>
+                                      <th>Issue Type</th>
+                                      <th>Short Description</th>
+                                      <th>Request Status</th>
+                                      <th>Created On</th>
+                                      <th>Requested By</th>
+                                      <th>Requested Group</th>
+                                      <th>Assigned To</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                              <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
+                                class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
+                                <ul class="a-IRR-pagination">
+                                  <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                  <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label"> 1 - 2 of
+                                      2</span></li>
+                                  <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                </ul>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
-                          id="R109615596173071518_sort_widget" style="display:none;">
-                          <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column
-                            Actions</h1>
-                          <ul role="toolbar" class="a-IRR-sortWidget-actions"
-                            id="R109615596173071518_sort_widget_actions">
-                            <li role="none" class="a-IRR-sortWidget-actions-item"
-                              id="R109615596173071518_sort_widget_action_up"><button
-                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
-                                  aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li>
-                            <li role="none" class="a-IRR-sortWidget-actions-item"
-                              id="R109615596173071518_sort_widget_action_down"><button
-                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span
-                                  aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li>
-                            <li role="none" class="a-IRR-sortWidget-actions-item"
-                              id="R109615596173071518_sort_widget_action_hide"><button
-                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
-                                  aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
-                            <li role="none" class="a-IRR-sortWidget-actions-item"
-                              id="R109615596173071518_sort_widget_action_break"><button
-                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
-                                  aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
-                            <li role="none" class="a-IRR-sortWidget-actions-item"
-                              id="R109615596173071518_sort_widget_action_help"><button
-                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
-                                aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
-                                  class="a-Icon icon-irr-help"></span></button></li>
-                            <li role="none" class="a-IRR-sortWidget-actions-item"
-                              id="R109615596173071518_sort_widget_action_computation"><button
-                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
-                                aria-label="Compute" data-option="computation"><span aria-hidden="true"
-                                  class="a-Icon icon-irr-calculator"></span></button></li>
-                          </ul>
-                          <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
-                            id="R109615596173071518_sort_widget_help"></div>
-                          <div role="search" class="a-IRR-sortWidget-search"
-                            id="R109615596173071518_sort_widget_search"><label
-                              for="R109615596173071518_sort_widget_search_field"><span aria-hidden="true"
-                                class="a-IRR-sortWidget-searchLabel"></span><span
-                                class="u-vh">Search</span></label><input
-                              id="R109615596173071518_sort_widget_search_field" class="a-IRR-sortWidget-searchField"
-                              type="text" placeholder="Filter..." />
-                            <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
-                              id="R109615596173071518_sort_widget_rows"></div>
-                          </div>
+                      </div>
+                      <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
+                        id="R109615596173071518_sort_widget" style="display:none;">
+                        <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column
+                          Actions</h1>
+                        <ul role="toolbar" class="a-IRR-sortWidget-actions"
+                          id="R109615596173071518_sort_widget_actions">
+                          <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R109615596173071518_sort_widget_action_up"><button
+                              class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                              title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
+                                aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button></li>
+                          <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R109615596173071518_sort_widget_action_down"><button
+                              class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                              title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span
+                                aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button></li>
+                          <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R109615596173071518_sort_widget_action_hide"><button
+                              class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                              title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
+                                aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
+                          <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R109615596173071518_sort_widget_action_break"><button
+                              class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                              title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
+                                aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
+                          <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R109615596173071518_sort_widget_action_help"><button
+                              class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
+                              aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
+                                class="a-Icon icon-irr-help"></span></button></li>
+                          <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R109615596173071518_sort_widget_action_computation"><button
+                              class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
+                              aria-label="Compute" data-option="computation"><span aria-hidden="true"
+                                class="a-Icon icon-irr-calculator"></span></button></li>
+                        </ul>
+                        <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
+                          id="R109615596173071518_sort_widget_help"></div>
+                        <div role="search" class="a-IRR-sortWidget-search" id="R109615596173071518_sort_widget_search">
+                          <label for="R109615596173071518_sort_widget_search_field"><span aria-hidden="true"
+                              class="a-IRR-sortWidget-searchLabel"></span><span class="u-vh">Search</span></label><input
+                            id="R109615596173071518_sort_widget_search_field" class="a-IRR-sortWidget-searchField"
+                            type="text" placeholder="Filter..." />
+                          <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
+                            id="R109615596173071518_sort_widget_rows"></div>
                         </div>
                       </div>
-
-
                     </div>
+
+
                   </div>
                 </div>
               </div>
             </div>
-          </main>
-          <footer class="t-Footer" id="t_Footer" role="contentinfo">
-            <div class="t-Footer-body">
-              <div class="t-Footer-content"></div>
-              <div class="t-Footer-apex">
-                <div class="t-Footer-version"> </div>
-                <div class="t-Footer-customize"></div>
-
-              </div>
-            </div>
-            <div class="t-Footer-top">
-              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
-                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
-            </div>
-          </footer>
         </div>
+        </main>
+        <footer class="t-Footer" id="t_Footer" role="contentinfo">
+          <div class="t-Footer-body">
+            <div class="t-Footer-content"></div>
+            <div class="t-Footer-apex">
+              <div class="t-Footer-version"> </div>
+              <div class="t-Footer-customize"></div>
+
+            </div>
+          </div>
+          <div class="t-Footer-top">
+            <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+              aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+          </div>
+        </footer>
       </div>
+    </div>
     </div>
     <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
       value="&#x5B;&#x5D;">
@@ -602,76 +512,6 @@
       value="&#x2F;LyPnGHZmZmpk0O8vVb8MDD0tPjGiqDlbkgsJNiaCvStqT2n8P1gr0kHVyY4q2YdQHtFXTYwZ2IT2rc6d0bGbHA" />
   </form>
 
-
-  <!-- <script nonce="3R9GgFKjhfWNNSqHEpV2xQ">
-    var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
-    var apex = {
-      env: { APP_USER: "9344712827", APP_ID: "1111", APP_PAGE_ID: "25", APP_SESSION: "114230090361743", APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F", WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "24.2.0", APEX_BASE_VERSION: "24.2", COMPATIBILITY_MODE: 21.2, NONCE: "3R9GgFKjhfWNNSqHEpV2xQ" },
-      libVersions: { cropperJs: "1.6.2", domPurify: "3.1.6", fontapex: "2.4", fullcalendar: "6.1.15", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "4.6.0", mapboxGlRtlText: "0.3.0", markedJs: "14.1.2", prismJs: "1.29.0", oraclejet: "17.0.2", turndown: "7.2.0", monacoEditor: "0.51.0", lessJs: "4.2.0" }
-    };
-  </script>
-  <script nonce="3R9GgFKjhfWNNSqHEpV2xQ" src="/i/24.2.0/libraries/apex/minified/desktop_all.min.js?v=24.2.0"></script>
-  <script nonce="3R9GgFKjhfWNNSqHEpV2xQ"
-    src="wwv_flow.js_messages?p_app_id=1111&p_lang=en&p_version=24.2.0-39529515031887&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
-  <script nonce="3R9GgFKjhfWNNSqHEpV2xQ"
-    src="wwv_flow.js_dialogs?p_app_id=1111&p_version=24.2.0-39529515031887"></script>
-
-  <script nonce="3R9GgFKjhfWNNSqHEpV2xQ">
-    apex.da.initDaEventList = function () {
-      apex.da.gEventList = [
-        { "triggeringElementType": "REGION", "triggeringRegionId": "R109615596173071518", "bindType": "bind", "executionType": "IMMEDIATE", "bindEventType": "apexafterclosedialog", "anyActionsFireOnInit": false, actionList: [{ "eventResult": true, "executeOnPageInit": false, "stopExecutionOnError": true, "affectedElementsType": "REGION", "affectedRegionId": "R109615596173071518", javascriptFunction: apex.da.refresh, "attribute01": "N", "action": "NATIVE_REFRESH" }] }];
-    }
-  </script>
-  <script src="../assets/js/crypto-js.min.js"></script>
-  <script type="module" src="../assets/js/commonMenu.js"></script>
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="assets/vendor/datatable/dataTables.bootstrap5.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/toastUtil.js"></script>
-  <script src="../assets/js/desktop_all.min.js"></script>
-  <script src="../assets/js/theme42.min.js"></script>
-  <script src="../assets/js/aos.js"></script>
-  <script src="../assets/js/chart.js"></script>
-  <script src="../assets/js/add.min.js"></script>
-  <script src="../assets/js/widget.treeView.min.js"></script>
-  <script src="../assets/js/widget.interactiveReport.min.js"></script>
-  <script src="../assets/js/widget.iconList.min.js"></script>
-  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
-  <script src="../assets/js/widget.stickyWidget.min.js"></script>
-  <script src="../assets/js/item.Colorpicker.min.js"></script>
-  <script src="../assets/js/require.js"></script>
-  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
-  <script src="../assets/js/jetCommonBundle.min.js"></script>
-  <script src="../assets/js/chartBundle.min.js"></script>
-
-  <script nonce="3R9GgFKjhfWNNSqHEpV2xQ">
-    apex.session.initTimeouts(180, { "idle_time_ms": 3591000, "life_time_ms": 24786000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
-    apex.jQuery(function () {
-      apex.page.init(this, function () {
-        try {
-          (function () { apex.jQuery('body').addClass('t-PageBody--leftNav'); })();
-          (function () { apex.jQuery('#R109615596173071518_ir').interactiveReport({ "regionId": "R109615596173071518", "currentRowsPerPage": 10, "flashback": false, "reset": false, "helpLink": "wwv_flow_utilities.show_ir_help?p_app_id=1111\u0026p_worksheet_id=109615724414071518\u0026p_lang=en", "subscription": false, "lazyLoading": false, "ajaxIdentifier": "UkVHSU9OIFRZUEV-fjEwOTYxNTU5NjE3MzA3MTUxOA\u002FQOMCG2hHEa5B4VLzrNtVipZefdw-wpSJ7oA6aTkYecHFQr197z_FpVQ7CjeChuWe1qaRng509wZNwRNRABDphg" }); })();
-        } catch (e) { apex.debug.error(e) };
-        apex.item.waitForDelayLoadItems().done(function () {
-          try {
-            (function () {
-              apex.da.initDaEventList();
-              apex.da.init();
-            })();
-            apex.theme42.initializePage.noSideCol();
-
-            apex.page.warnOnUnsavedChanges();
-          } finally {
-            apex.event.trigger(apex.gPageContext$, 'apexreadyend');
-          };
-        });
-      });
-    }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
-  </script>
-
-  <script>
-    AOS.init();
-  </script> -->
   <!-- jQuery -->
   <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
@@ -688,11 +528,27 @@
   <script src="../assets/js/chartBundle.min.js"></script>
 
   <script src="../assets/js/toastUtil.js"></script>
-  <script src="../assets/js/dataTableUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableUtil.js"></script>
   <script src="../assets/js/crypto-js.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
 
+
+
+  <!-- <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script> -->
+  <!-- <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script> -->
   <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -705,11 +561,6 @@
   <script>
     console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
   </script>
-
-  <script>
-    AOS.init();
-  </script>
-
   <script>
     $('#t_Button_navControl').on('click', function () {
       $('#t_Body_nav').toggle();
@@ -717,48 +568,87 @@
 
   </script>
 
-  <script>
+
+
+  <script type="module">
+    import { encryptData } from '../assets/js/encrypt_decrypt.js';
+    let dataTableRef;
     $(document).ready(function () {
       debugger
 
+      var userId = localStorage.getItem('userId');
       const langSwitch = 'en';
-      const apiUrl = "https://tngis.tnega.org/lcap_api/dipr-lcap-api/v1/general/governmentOrders/viewReport";
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
+
+
       const payload = {
-        "action": "fetch",
-        "table": "edm_service_request_t",
-        "columns": "user_id, district, name, designation, mobile, email, status, created_by, created_dttm, updated_by, updated_dttm,photo, mime_type, file_name, reporting_id, personal_email, personal_mobile,personal_address, emrgency_contact",
-        "filters": {
-          "mobile": "9876543210",
-          "district": "Chennai"
+        action: "function_call",
+        function_name: "edm_service_request_edmall_fn",
+        params: {
+          status: "In-Progress",
+          userid: userId,
         }
       }
-      const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();
+      // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
       loadDataToTable({
-        tableId: 'pressReleaseTable',
+        tableId: 'inProgressReport',
         apiUrl,
         httpMethod: 'POST',
-        payload: { data: encryptedPayload },
-        rowBuilder: (item) => `
+        payload: encryptData(payload),
+        rowBuilder: (item) => {
+          const applicationInfo = btoa(String(item.request_number));
+          return `
       <tr>
         <td class="u-tL">
-          <a data-id="${item.id}" data-file="${item.order_name}" id="open-modal-btn" href="javascript:void(0);">
-            <i class="bi bi-pencil-square"></i>
-          </a>
+        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}">
+          ${item.request_number}
+        </a>
         </td>
-        <td class="u-tC">${item.go_date || 'N/A'}</td>
-        <td class="u-tC">${item.language || 'N/A'}</td>
-        <td class="u-tC">${item.order_name || 'N/A'}</td>
-        <td class="u-tC">${item.uploaded_by || 'N/A'}</td>
-        <td class="u-tC">${item.uploaded_date || 'N/A'}</td>
+        <td class="u-tC">${item.issue_type || 'N/A'}</td>
+        <td class="u-tC">${item.short_description || 'N/A'}</td>
+        <td class="u-tC">${item.request_status || 'N/A'}</td>
+        <td class="u-tC">${item.created_date || 'N/A'}</td>
+        <td class="u-tC">${item.requested_by || 'N/A'}</td>
+        <td class="u-tC">${item.requested_group || 'N/A'}</td>
+        <td class="u-tC">${item.assigned_to || 'N/A'}</td>
       </tr>
-    `
+    `;
+        },
+        onTableInit: function (dtRef) {
+          dataTableRef = dtRef;
+        }
       });
+
+      $('#statusSearchBtn').on('click', function () {
+        event.preventDefault();
+        const selectedStatus = $('#P19_STATUS').val().trim();
+
+
+        if (dataTableRef) {
+          dataTableRef
+            .column(4) // Request Status
+            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
+            .draw();
+        } else {
+          console.warn('Table not initialized yet');
+        }
+      });
+
+      $('#clearStatusBtn').on('click', function (event) {
+        event.preventDefault();
+        $('#P19_STATUS').val('');
+        dataTableRef
+          .column(4)
+          .search('')
+          .draw();
+      });
+
+
     });
 
   </script>
-
 </body>
 
 </html>

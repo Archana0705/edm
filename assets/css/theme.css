@@ -2,6 +2,25 @@
   width: 100% !important;
 }
 
+.t-Body-main {
+  background: #cbdcef;
+}
+
+thead {
+  background: #e5cada;
+}
+
+th,
+td {
+  padding: 12px 6px;
+  white-space: nowrap;
+  border: 0.5px solid #e7dede !important;
+}
+
+.a-IRR-tableContainer {
+  padding: 10px;
+}
+
 #clearStatusBtn {
   background-color: rgb(255, 212, 91);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -2px;
