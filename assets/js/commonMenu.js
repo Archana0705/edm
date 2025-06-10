@@ -219,6 +219,3 @@ function renderDynamicMenu(containerId) {
 }
 
 renderDynamicMenu("commonMenuContainer");
-
-
-renderDynamicMenu("commonMenuContainer");

@@ -2,6 +2,59 @@
   width: 100% !important;
 }
 
+button#exitBtn {
+  background: #ffd45b;
+  border: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+button#closeRequestButton {
+  background: #fe1500;
+  color: white;
+  border: none;
+}
+
+button#reOpenBtn {
+  background: #9ccefd;
+  border: none;
+}
+
+a#resolvedRequestTable_previous {
+  cursor: pointer;
+  margin: 20px;
+  text-decoration: none;
+}
+
+a#pressReleaseTable_previous {
+  cursor: pointer;
+  margin: 20px;
+  text-decoration: none;
+}
+
+
+#resolvedRequestTable_paginate span a {
+  cursor: pointer;
+  margin: 10px;
+  text-decoration: none;
+}
+
+#pressReleaseTable_paginate span a {
+  cursor: pointer;
+  margin: 10px;
+  text-decoration: none;
+}
+
+a#resolvedRequestTable_next {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a#pressReleaseTable_next {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .t-Body-main {
   background: #cbdcef;
 }
