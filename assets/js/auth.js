@@ -73,20 +73,20 @@ export async function initializeUserSession(mobnumber, password) {
 
                         localStorage.setItem('userRole', decrypted.designation || '');
                         localStorage.setItem('userDistrict', decrypted.district);
-                        localStorage.setItem('userName', decrypted.name); // likely meant name, not district
+                        localStorage.setItem('userName', decrypted.name);
                         localStorage.setItem('userId', decrypted.user_id || '');
 
                         const userNameElement = document.querySelector('.t-Button-label');
                         if (userNameElement) userNameElement.textContent = decrypted.name;
 
-                        resolve(); // ✅ Resolve the promise after successful processing
+                        resolve();
                     } else {
                         console.error("Invalid response structure - missing data field");
                         reject(new Error("Invalid response structure"));
                     }
                 } catch (error) {
                     console.error("Error processing response:", error);
-                    reject(error); // ❌ Reject on processing error
+                    reject(error);
                 }
             },
             error: function (xhr, status, error) {
@@ -96,7 +96,7 @@ export async function initializeUserSession(mobnumber, password) {
                     responseText: xhr.responseText,
                     error: error
                 });
-                reject(new Error("API call failed")); // ❌ Reject on AJAX error
+                reject(new Error("API call failed"));
             }
         });
     });
