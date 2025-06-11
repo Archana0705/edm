@@ -49,39 +49,7 @@
         </div>
         <div class="t-Header-navBar">
           <div class="t-Header-navBar--start"></div>
-          <div class="t-Header-navBar--center" style='color:black'>
-            <ul class="t-NavigationBar " id="8792244222964376">
-              <li class="t-NavigationBar-item ">
-                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
-                  id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
-                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true"></span><span class="t-Button-label">Hello
-                    Gerhara Gowri R !
-                  </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow"
-                    aria-hidden="true"></span>
-                </button>
-                <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
-                  <ul>
-                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
-                        href="apex_authentication.logout?p_app_id=1111&p_session_id=113837303316044" title=""
-                        target="">Sign Out</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D113837303316044%26dialogCs%3DF1L3RY0S4O6DfNPtoFM3jH1MlTV1nFUPsDEK0KVMRODiA6YW48jOljOhPEbr8Z9NG9KQ4KKOXJlWvLpyq3umEQ&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">Change Password</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D113837303316044%26dialogCs%3DWqcEe-KgpyLl3rpBU2CHWWuqRi7o26doysXQe7xYd3Nn1gMw7p8qN_F-kQDJ_1Ste6fDTWlhqdexrF1lbCDCtw&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">My Profile</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="t-NavigationBar-item ">
-                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-                  <span class="t-Icon " aria-hidden="true"></span><span class="t-Button-label">Last Logged in:
-                    03-05-2025 10:58 AM</span><span class="t-Button-badge"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div id="globalHeader"></div>
           <div class="t-Header-navBar--end"></div>
         </div>
       </div>
@@ -603,6 +571,7 @@
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/global.js"></script>
   <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
