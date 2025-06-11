@@ -766,6 +766,8 @@
       });
 
       $('#submitFeedbackBtn').on('click', function (event) {
+        event.preventDefault();
+
         const rating = $('#rating').val();
         const comments = $('#comments').val();
 
@@ -777,33 +779,91 @@
         const updatePayload = {
           action: "update",
           table: "EDM_SERVICE_REQUEST_T",
-          primary_key: "decodedDetails",
-          decodedDetails: decodedDetails,
+          primary_key: "request_number",
+          request_number: decodedDetails,
           request_status: 'Closed'
-
         };
+
+        const feedbackPayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_COMMENTS_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          rating: rating,
+          comments: comments.trim()
+        };
+
+        // First API call
         $.ajax({
           url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
           type: 'POST',
           data: { data: encryptData(updatePayload) },
           success: function (response) {
-            showSuccessToast("Updated Successfully");
-            setTimeout(() => window.location.href = "../admin-zonal-officers-district-report.html", 1000);
+            // Second API call
+            $.ajax({
+              url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+              type: 'POST',
+              data: { data: encryptData(feedbackPayload) },
+              success: function (feedbackResponse) {
+                showSuccessToast("Feedback submitted and request closed successfully.");
+                setTimeout(() => {
+                  window.location.href = "closed-request.html";
+                }, 1000);
+              },
+              error: function (error) {
+                showErrorToast("Request closed, but feedback submission failed.");
+              }
+            });
           },
           error: function (error) {
-            showErrorToast("An error occurred during submission of data.");
+            showErrorToast("An error occurred during request status update.");
           }
         });
+
         console.log("Rating:", rating);
         console.log("Comments:", comments);
+
         const feedbackModal = bootstrap.Modal.getInstance(document.getElementById('feedbackModal'));
         feedbackModal.hide();
-      })
+      });
+
+
+      $('#reOpenBtn').on('click', function (event) {
+
+        const updatePayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          request_status: 'Reopen'
+        };
+
+
+        // First API call: update status
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+          type: 'POST',
+          data: { data: encryptData(updatePayload) },
+          success: function (response) {
+
+            showSuccessToast("ReOpened successfully.");
+            setTimeout(() => {
+              window.location.href = "re-opened-request.html";
+            }, 10000)
+
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during request status update.");
+          }
+        });
+      });
 
       $('#exitBtn').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
-        console.log("Exit button clicked");
+        // setTimeout(() => {
+        //   window.location.href = "re-opened-request.html";
+        // }, 10000)
         window.location.href = 'allrequest.html';
       });
     })

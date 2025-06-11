@@ -2,6 +2,21 @@
   width: 100% !important;
 }
 
+#commonMenuContainer li[data-current="true"] {
+  background-color: #177dae;
+
+  border-radius: 4px;
+  /* Optional for rounded corners */
+}
+
+#commonMenuContainer li[data-current="true"] a {
+  color: #fff;
+  /* Ensure the link text is white on blue background */
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+}
+
 select option.placeholder {
   color: #999;
 }
