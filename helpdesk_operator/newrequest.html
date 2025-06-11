@@ -714,7 +714,7 @@
       value="&#x2F;BSuEVZ23jMZWH0ySdEiOlRvn47cgBLuMovpXWHiMHbTiiK6h4Qdf6jJWRP89wKTsfRGTIphE0sWdMcKO8xkAJg" />
   </form>
 
-<!-- jQuery -->
+  <!-- jQuery -->
   <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
   <!-- DataTables -->
@@ -774,6 +774,7 @@
 
   <script type="module">
     import { encryptData } from '../assets/js/encrypt_decrypt.js';
+    let dataTableRef;
     $(document).ready(function () {
       debugger
 
@@ -781,11 +782,7 @@
       const langSwitch = 'en';
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
-      $('#statusSearchBtn').on('click', function () {
-        const selectedStatus = $('#P19_STATUS').val();
-        alert(selectedStatus)
-        dataTableRef.column(4).search(selectedStatus).draw(); // column index 4 = Request Status
-      });
+
 
       const payload = {
         action: "function_call",
@@ -802,14 +799,16 @@
         apiUrl,
         httpMethod: 'POST',
         payload: encryptData(payload),
-        rowBuilder: (item) => `
+        rowBuilder: (item) => {
+          const applicationInfo = btoa(String(item.request_number));
+          const status = btoa(String(item.request_status));
+          return `
       <tr>
         <td class="u-tL">
-          <a data-id="${item.id}" id="open-modal-btn" href="javascript:void(0);">
-            <i class="bi bi-pencil-square"></i>
-          </a>
+        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}&status=${status}">
+          ${item.request_number}
+        </a>
         </td>
-        <td class="u-tC">${item.request_number || 'N/A'}</td>
         <td class="u-tC">${item.issue_type || 'N/A'}</td>
         <td class="u-tC">${item.short_description || 'N/A'}</td>
         <td class="u-tC">${item.request_status || 'N/A'}</td>
@@ -818,15 +817,42 @@
         <td class="u-tC">${item.requested_group || 'N/A'}</td>
         <td class="u-tC">${item.assigned_to || 'N/A'}</td>
       </tr>
-    `
+    `;
+        },
+        onTableInit: function (dtRef) {
+          dataTableRef = dtRef;
+        }
       });
-      $('#statusSearchBtn').off('click').on('click', function () {
-        const selectedStatus = $('#P19_STATUS').val();
-        dataTableRef.column(4).search(selectedStatus).draw();
+
+      $('#statusSearchBtn').on('click', function () {
+        event.preventDefault();
+        const selectedStatus = $('#P19_STATUS').val().trim();
+
+
+        if (dataTableRef) {
+          dataTableRef
+            .column(4) // Request Status
+            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
+            .draw();
+        } else {
+          console.warn('Table not initialized yet');
+        }
       });
+
+      $('#clearStatusBtn').on('click', function (event) {
+        event.preventDefault();
+        $('#P19_STATUS').val('');
+        dataTableRef
+          .column(4)
+          .search('')
+          .draw();
+      });
+
+
     });
 
   </script>
+  
 </body>
 
 </html>
