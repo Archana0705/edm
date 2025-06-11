@@ -2,6 +2,22 @@
   width: 100% !important;
 }
 
+select option.placeholder {
+  color: #999;
+}
+
+.t-NavigationBar-menu ul li a {
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.t-NavigationBar-menu ul {
+  background: #52a4c4;
+  list-style: none;
+}
+
+
+
 td.u-tC {
   white-space: initial;
   text-align: left !important;

@@ -54,7 +54,7 @@
         </div>
         <div class="t-Header-navBar">
           <div class="t-Header-navBar--start"></div>
-          <div class="t-Header-navBar--center" style='color:black'>
+          <!-- <div class="t-Header-navBar--center" style='color:black'>
             <ul class="t-NavigationBar " id="8792244222964376">
               <li class="t-NavigationBar-item ">
                 <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
@@ -93,7 +93,8 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </div> -->
+          <div id="globalHeader"></div>
           <div class="t-Header-navBar--end"></div>
         </div>
       </div>
@@ -147,7 +148,7 @@
                               <div class="t-Form-inputContainer col col-2">
                                 <div class="t-Form-itemWrapper">
                                   <select id="P7_LOCATION" name="P7_LOCATION" class="selectlist ">
-                                    <option value="">--Select Taluk--</option>
+                                    <option value="" class="placeholder">--Select Taluk--</option>
                                   </select>
 
                                 </div>
@@ -193,7 +194,7 @@
                               <div class="t-Form-inputContainer col col-3">
                                 <div class="t-Form-itemWrapper">
                                   <select id="P7_OPERATOR" name="P7_OPERATOR" class="selectlist ">
-                                    <option value="">--Select Operator--</option>
+                                    <option value="" class="placeholder">--Select Operator--</option>
                                   </select>
 
                                 </div>
@@ -242,7 +243,7 @@
                               <div class="t-Form-inputContainer col col-3">
                                 <div class="t-Form-itemWrapper">
                                   <select id="P7_ISSUE_TYPE" name="P7_ISSUE_TYPE" class="selectlist ">
-                                    <option value="">--Select Issue Type--</option>
+                                    <option value="" class="placeholder">--Select Issue Type--</option>
                                   </select>
 
                                 </div>
@@ -289,7 +290,7 @@
                               <div class="t-Form-inputContainer col col-3">
                                 <div class="t-Form-itemWrapper">
                                   <select id="P7_SHORT_DESCRIPTION" name="P7_SHORT_DESCRIPTION" class="selectlist ">
-                                    <option value="">--Select Sub Category--</option>
+                                    <option value="" class="placeholder">--Select Sub Category--</option>
                                   </select>
 
                                 </div>
@@ -313,8 +314,12 @@
                               </div>
                               <div class="t-Form-inputContainer col col-3">
                                 <div class="t-Form-itemWrapper">
-                                  <select multiple="multiple" id="P7_REQUESTED_GROUP" name="P7_REQUESTED_GROUP"
-                                    class="selectlist ">
+                                  <select id="P7_REQUESTED_GROUP" name="P7_REQUESTED_GROUP" class="selectlist ">
+                                    <option value="" class="placeholder">--Select Requested Group--</option>
+                                    <option value="From EDM" selected="selected">From EDM</option>
+                                    <option value="From Operator">From Operator</option>
+                                    <option value="From Department">From Department</option>
+                                    <option value="From Citizen">From Citizen</option>
                                   </select>
 
                                 </div>
@@ -341,7 +346,7 @@
                                 <div class="t-Form-itemWrapper">
                                   <select id="P7_IMPACTED_APPLICATION" name="P7_IMPACTED_APPLICATION"
                                     class="selectlist ">
-                                    <option value="">--Select Impacted Services--</option>
+                                    <option value="" class="placeholder">--Select Impacted Services--</option>
                                   </select>
 
                                 </div>
@@ -368,7 +373,7 @@
                               <div class="t-Form-inputContainer col col-2">
                                 <div class="t-Form-itemWrapper">
                                   <select id="P7_CONTACT_TYPE" name="P7_CONTACT_TYPE" class="selectlist ">
-                                    <option value="">--Select Contact Type--</option>
+                                    <option value="" class="placeholder">--Select Contact Type--</option>
                                     <option value="Phone" selected="selected">Phone</option>
                                     <option value="Email">Email</option>
                                     <option value="In&#x20;Person">In Person</option>
@@ -558,7 +563,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row mb-5 p-2">
               <div class="col-6">
                 <button id="exitBtn" class="exitbtn">Exit</button>
               </div>
@@ -627,6 +632,8 @@
   <script src="../assets/js/global.js"></script>
   <script src="../assets/js/encrypt_decrypt.js"></script>
   <script src="../assets/js/file.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
+
 
   <script>
     $(document).ready(function () {
@@ -658,7 +665,9 @@
       const userId = localStorage.getItem('userId');
       const secretKey = 'V7gN4dY8pT2xB3kRz';
       const district = localStorage.getItem('userDistrict');
-
+      const username = localStorage.getItem('userName');
+      $('#P7_REQUESTED_DISTRICT_DISPLAY').text(district);
+      $('#P7_REQUESTED_BY_DISPLAY').text(username);
       const payload = {
         action: "function_call",
         function_name: "Taluk_edm_fn",
@@ -685,7 +694,7 @@
 
           // Populate the dropdown
           const $dropdown = $('#P7_LOCATION');
-          $dropdown.empty().append('<option value="">--Select Taluk--</option>');
+          $dropdown.empty().append('<option value="" class="placeholder">--Select Taluk--</option>');
 
           decrypted.forEach(item => {
             $dropdown.append(`<option value="${item.taluk_name}">${item.taluk_name}</option>`);
@@ -725,7 +734,7 @@
             console.log("Decrypted Operator Data:", decrypted);
 
             const $dropdown = $('#P7_OPERATOR');
-            $dropdown.empty().append('<option value="">--Select Operator--</option>');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Operator--</option>');
 
             decrypted.forEach(item => {
               $dropdown.append(`<option value="${item.esevai_id}">${item.esevai_id_name}</option>`);
@@ -766,7 +775,7 @@
             console.log("Decrypted Issue Type Data:", decrypted);
 
             const $dropdown = $('#P7_ISSUE_TYPE');
-            $dropdown.empty().append('<option value="">--Select Issue Type--</option>');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Issue Type--</option>');
 
             decrypted.forEach(item => {
               $dropdown.append(`<option value="${item.issue_type_desc}">${item.issue_type_desc}</option>`);
@@ -807,7 +816,7 @@
             console.log("Decrypted Issue Type Data:", decrypted);
 
             const $dropdown = $('#P7_SHORT_DESCRIPTION');
-            $dropdown.empty().append('<option value="">--Select Issue Type--</option>');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Issue Type--</option>');
 
             decrypted.forEach(item => {
               $dropdown.append(`<option value="${item.issue_subtype}">${item.issue_subtype}</option>`);
@@ -848,7 +857,7 @@
             console.log("Decrypted Issue Type Data:", decrypted);
 
             const $dropdown = $('#P7_IMPACTED_APPLICATION');
-            $dropdown.empty().append('<option value="">--Select Issue Type--</option>');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Issue Type--</option>');
 
             decrypted.forEach(item => {
               $dropdown.append(`<option value="${item.service_name}">${item.service_name}</option>`);

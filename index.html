@@ -31,16 +31,7 @@
 <body
   class="t-PageBody--login t-PageTemplate--login no-anim   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1">
   <img data-aos="zoom-out" data-aos-duration="1200" src="assets/img/edmbg.svg" id="edm-bg">
-  <form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/login/101362951000433"
-    method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
-    <input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
-      value="9999" id="pFlowStepId" /><input type="hidden" name="p_instance" value="101362951000433"
-      id="pInstance" /><input type="hidden" name="p_page_submission_id"
-      value="MTYzOTQ4NzI3MTI1OTI0NjQ1NzUyNTM1MzM0MTk4MjQwMjU1NjUz&#x2F;Q6oaVTU_V6dojr7gtWTLQQMI-NBIK9sZD_gFntAepAUK0Q9leerOnf_qytzSjLpUGjsxDi_kMCL-kjHm6bQTYA"
-      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
-      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
-      value="e-district-manager-application&#x2F;login&#x2F;101362951000433" id="pContext" /><input type="hidden"
-      value="163948727125924645752535334198240255653" id="pSalt" />
+  <form onsubmit="return false;">
     <div class="t-Login-bg">
       <div class="t-Login-bgImg"></div>
     </div>
@@ -438,7 +429,7 @@
 
     signInButton.addEventListener('click', async (e) => {
       e.preventDefault();
-
+      e.stopPropagation();
       const mobInput = document.getElementById('P9999_USERNAME');
       const passInput = document.getElementById('P9999_PASSWORD');
       const mobnumber = mobInput?.value?.trim();
