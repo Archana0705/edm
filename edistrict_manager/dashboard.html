@@ -246,46 +246,7 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
         </div>
         <div class="t-Header-navBar">
           <div class="t-Header-navBar--start"></div>
-          <div class="t-Header-navBar--center" style='color:black'>
-            <ul class="t-NavigationBar " id="8792244222964376">
-              <li class="t-NavigationBar-item ">
-                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
-                  id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
-                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true"></span><span class="t-Button-label">Hello
-                    Bakiyalakshmi V !
-                  </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow"
-                    aria-hidden="true"></span>
-                </button>
-                <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
-                  <ul>
-                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
-                        href="apex_authentication.logout?p_app_id=1111&p_session_id=114230090361743" title=""
-                        target="">Sign Out</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D114230090361743%26dialogCs%3D7pXDxNJV74dLDdk1vSN5xl9U9UuGW5WLOCT7GSIHCbJtmuHOVrUMrrZGZJ5SQFMdbY-DDp4Ia_X8b6xNCkq_Xg&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">Change Password</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D114230090361743%26dialogCs%3DrMGdIR7vr0hwAnI4-d6IuDb5NG0cwcroqOlyAGE_uHcT7Bi5tB-6YrmJBSNe4vNW4z-EVLOmeIZSsvip7t50vA&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">My Profile</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="t-NavigationBar-item ">
-                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-                  <span class="t-Icon " aria-hidden="true"></span><span class="t-Button-label">Last Logged in:
-                    04-05-2025 09:58 PM</span><span class="t-Button-badge"></span>
-                </a>
-              </li>
-              <li class="t-NavigationBar-item is-active " aria-current="page">
-                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar"
-                  href="/ords/r/edmdev/e-district-manager-application/home?session=114230090361743" title="" target="">
-                  <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true"></span><span class="t-Button-label">
-                  </span><span class="t-Button-badge">0</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div id="globalHeader"></div>
           <div class="t-Header-navBar--end"></div>
         </div>
       </div>
@@ -552,7 +513,7 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
   <script src="../assets/js/requirejs.jetConfig.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script>
-
+  <script src="../assets/js/globalHeader.js"></script>
 
   <script nonce="-FfiJlVjxcJ0HaMyagpvKQ">
     apex.session.initTimeouts(180, { "idle_time_ms": 3595000, "life_time_ms": 24955000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
