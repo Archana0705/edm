@@ -529,13 +529,14 @@
                       </div>
                       <div class="row">
                         <div class="col-6">
-                          <button id="exitBtn">Exit</button>
+                          <button id="exitBtn" class="exitbtn">Exit</button>
                         </div>
-                        <div class="col-6 text-end">
-                          <button id="closeRequestButton">Close Request</button>
-                          <button id="reOpenBtn" type="button">Reopen</button>
+                        <div id="statusActionDiv" class="col-6 text-end" style="display: none;">
+                          <button id="closeRequestButton" class="closeRequestbutton">Close Request</button>
+                          <button id="reOpenBtn" class="reOpenbtn" type="button">Reopen</button>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -563,7 +564,6 @@
       value="&#x5B;&#x7B;&#x22;r&#x22;&#x3A;&#x22;40997159128161338&#x22;,&#x22;c&#x22;&#x3A;&#x22;BlyWUMlYuPNVfiba1SiLtytPvE2oEEXpAfqaN5XuFjuuEU7yVVdTj5q0MLIafdraAvF-WuLYJ-m0Rm2umLYAXQ&#x22;&#x7D;&#x5D;">
     <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
       value="UDE2X1JFUVVFU1RfTlVNQkVSOlAxNl9SRVFVRVNUX1NUQVRVUzpQMTZfUkVRVUVT.,VF9DUkVBVEVEOlAxNl9SRVFVRVNURURfQlk6UDE2X1JFUVVFU1RFRF9ESVNUUklD.,VDpQMTZfQVNTSUdOTUVOVF9HUk9VUDpQMTZfVVBMT0FEOlAxNl9IRUxQREVTS19O.,T1RFUw&#x2F;CWvk9laD6QbPjv62BfR3biehLAjIkGGE0aABLz9AnTZYGd5c0arLZK2htPkbYcRHpCDADTi2bHAtP5mIxS0Hjw" />
-
 
     <!-- Feedback Modal -->
     <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel"
@@ -657,9 +657,14 @@
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
       let details = '';
+      let status = '';
       const urlParams = new URLSearchParams(window.location.search);
       const encodedDetails = urlParams.get('details');
+      const encodedStatus = urlParams.get('status');
       const decodedDetails = atob(encodedDetails);
+      const decodedStatus = atob(encodedStatus);
+      console.log(decodedStatus, "decoded status");
+
       console.log(decodedDetails, "decoded req number");
 
       // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
@@ -762,23 +767,20 @@
           });
         }
       });
-      $('#exitBtn').on('click', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        console.log("Exit button clicked");
-        window.location.href = 'resolved-request.html';
-      });
-    })
-  </script>
-  <script>
-    $(document).ready(function () {
-      $('#closeRequestButton').on('click', function () {
+
+      if (decodedStatus == 'Resolved') {
+        document.getElementById('statusActionDiv').style.display = 'block';
+      }
+
+      $('#closeRequestButton').on('click', function (event) {
         event.preventDefault();
         const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
         feedbackModal.show();
       });
 
-      $('#submitFeedbackBtn').on('click', function () {
+      $('#submitFeedbackBtn').on('click', function (event) {
+        event.preventDefault();
+
         const rating = $('#rating').val();
         const comments = $('#comments').val();
 
@@ -787,21 +789,97 @@
           return;
         }
 
-        // Optional: Submit the feedback to API here using AJAX
+        const updatePayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          request_status: 'Closed'
+        };
+
+        const feedbackPayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_COMMENTS_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          rating: rating,
+          comments: comments.trim()
+        };
+
+        // First API call
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+          type: 'POST',
+          data: { data: encryptData(updatePayload) },
+          success: function (response) {
+            // Second API call
+            $.ajax({
+              url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+              type: 'POST',
+              data: { data: encryptData(feedbackPayload) },
+              success: function (feedbackResponse) {
+                showSuccessToast("Feedback submitted and request closed successfully.");
+                setTimeout(() => {
+                  window.location.href = "closed-request.html";
+                }, 1000);
+              },
+              error: function (error) {
+                showErrorToast("Request closed, but feedback submission failed.");
+              }
+            });
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during request status update.");
+          }
+        });
 
         console.log("Rating:", rating);
         console.log("Comments:", comments);
 
-        // Close modal
         const feedbackModal = bootstrap.Modal.getInstance(document.getElementById('feedbackModal'));
         feedbackModal.hide();
-
-        // Optionally disable the Close Request button or do final submit
-        alert("Feedback submitted. Request Closed.");
       });
-    });
 
+
+      $('#reOpenBtn').on('click', function (event) {
+
+        const updatePayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          request_status: 'Reopen'
+        };
+
+
+        // First API call: update status
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+          type: 'POST',
+          data: { data: encryptData(updatePayload) },
+          success: function (response) {
+
+            showSuccessToast("ReOpened successfully.");
+            setTimeout(() => {
+              window.location.href = "re-opened-request.html";
+            }, 10000)
+
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during request status update.");
+          }
+        });
+      });
+
+      $('#exitBtn').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log("Exit button clicked");
+        window.location.href = 'resolved-request.html';
+      });
+    })
   </script>
+
 </body>
 
 </html>
