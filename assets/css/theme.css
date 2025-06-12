@@ -2,6 +2,14 @@
   width: 100% !important;
 }
 
+.field-error {
+  display: block;
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+
+}
+
 #commonMenuContainer li[data-current="true"] {
   background-color: #177dae;
 
