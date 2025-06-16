@@ -76,13 +76,15 @@
                   <!-- Tabs -->
                   <ul class="nav nav-tabs" id="instructionTabs" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="open-tab" data-bs-toggle="tab" data-bs-target="#open"
-                        type="button" role="tab" aria-controls="open" aria-selected="true">Instructions Open
+                      <button class="nav-link active open_tab_class" id="open-tab" data-bs-toggle="tab"
+                        data-bs-target="#open" type="button" role="tab" aria-controls="open"
+                        aria-selected="true">Instructions Open
                         Report</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="closed-tab" data-bs-toggle="tab" data-bs-target="#closed"
-                        type="button" role="tab" aria-controls="closed" aria-selected="false">Instructions Closed
+                      <button class="nav-link closed_tab_class" id="closed-tab" data-bs-toggle="tab"
+                        data-bs-target="#closed" type="button" role="tab" aria-controls="closed"
+                        aria-selected="false">Instructions Closed
                         Report</button>
                     </li>
                   </ul>
@@ -113,8 +115,8 @@
                     <!-- Closed Tab -->
                     <div class="tab-pane fade" id="closed" role="tabpanel" aria-labelledby="closed-tab">
                       <div class="table-responsive mt-3">
-                        <table class="table table-bordered">
-                          <thead class="table-light">
+                        <table id="closedReport" class="display" style="width:100%">
+                          <thead>
                             <tr>
                               <th>Request Number</th>
                               <th>District</th>
@@ -123,54 +125,16 @@
                               <th>Short Description</th>
                               <th>Full Description</th>
                               <th>Attachment</th>
-                              <th>Created Date</th>
-                              <th>Requested By</th>
-                              <th>Status</th>
+                              <th>Request Created Dttm</th>
+                              <th>Request By</th>
+                              <th>Request Status</th>
+                              <th>Edm Notes</th>
+                              <th>Edm Upload</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <td>HDINS/2025-01-15/1101</td>
-                              <td>Salem</td>
-                              <td>eDistrict Manager 2</td>
-                              <td>Login Issue</td>
-                              <td>Portal access denied.</td>
-                              <td>User unable to login due to system error. Resolved manually.</td>
-                              <td></td>
-                              <td>15-01-2025 11:10 AM</td>
-                              <td>District Operator</td>
-                              <td>Closed</td>
-                            </tr>
-                          </tbody>
+                          <tbody></tbody>
                         </table>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row ">
-                  <div class="col col-12 apex-col-auto col-start col-end">
-                    <div id="button" class="">
-                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        <tr>
-                          <td align="left"><button
-                              class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning&#x20;t-Button--padLeft"
-                              type="button" id="B13296050075424502"><span class="t-Button-label">Exit</span></button>
-                          </td>
-                          <td align="right"><button class="t-Button t-Button--large&#x20;t-Button--warning"
-                              type="button" id="B54923214743050317"><span class="t-Button-label">Send
-                                Back</span></button><button class="t-Button t-Button--hot t-Button--large" type="button"
-                              id="B77707461176006430"><span class="t-Button-label">Reassign</span></button><button
-                              onclick=""
-                              class="t-Button js-ignoreChange&#x20;t-Button--large&#x20;t-Button--primary&#x20;t-Button--padRight&#x20;t-Button--gapTop"
-                              type="button" id="inprogress"><span
-                                class="t-Button-label">In-Progress</span></button><button onclick=""
-                              class="t-Button t-Button--large&#x20;t-Button--success&#x20;t-Button--padRight"
-                              type="button" id="B13790750297651913"><span
-                                class="t-Button-label">Resolved</span></button>
-                          </td>
-                        </tr>
-                      </table>
                     </div>
                   </div>
                 </div>
@@ -319,29 +283,52 @@
         }
       });
 
-      $('#statusSearchBtn').on('click', function () {
-        event.preventDefault();
-        const selectedStatus = $('#P19_STATUS').val().trim();
+      $(document).on('click', '.closed_tab_class', function () {
+        debugger
 
-
-        if (dataTableRef) {
-          dataTableRef
-            .column(4) // Request Status
-            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
-            .draw();
-        } else {
-          console.warn('Table not initialized yet');
+        const closedpayload = {
+          action: "function_call",
+          function_name: "HD_EDM_SERVICE_ASSAIGN_EDMALL_Fn",
+          params: {
+            status: 'Closed',
+            userid: userId,
+          }
         }
-      });
+        // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
-      $('#clearStatusBtn').on('click', function (event) {
-        event.preventDefault();
-        $('#P19_STATUS').val('');
-        dataTableRef
-          .column(4)
-          .search('')
-          .draw();
-      });
+        loadDataToTable({
+          tableId: 'closedReport',
+          apiUrl,
+          httpMethod: 'POST',
+          payload: encryptData(closedpayload),
+          rowBuilder: (item) => {
+            const applicationInfo = btoa(String(item.request_number));
+            const status = btoa(String(item.request_status));
+            return `
+      <tr>
+        <td class="u-tC">${item.request_number || 'N/A'}</td>
+        <td class="u-tC">${item.district || 'N/A'}</td>
+        <td class="u-tC">${item.assigned_to || 'N/A'}</td>
+        <td class="u-tC">${item.instruction_type || 'N/A'}</td>
+        <td class="u-tC">${item.short_description || 'N/A'}</td>
+        <td class="u-tC">${item.full_description || 'N/A'}</td>
+        <td class="u-tC">${item.attachment || 'N/A'}</td>
+        <td class="u-tC">${item.request_created_dttm || 'N/A'}</td>
+        <td class="u-tC">${item.requested_by || 'N/A'}</td>
+        <td class="u-tC">${item.request_status || 'N/A'}</td>
+        <td class="u-tC">${item.edm_notes || 'N/A'}</td>
+        <td class="u-tC">${item.edm_upload || 'N/A'}</td>
+      </tr>
+    `;
+          },
+          onTableInit: function (dtRef) {
+            dataTableRef = dtRef;
+          }
+        });
+
+
+        $('#closed-tab').removeClass('closed_tab_class');
+      })
 
 
     });

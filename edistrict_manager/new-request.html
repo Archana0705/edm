@@ -833,6 +833,10 @@
             p_attach_mimetype: file.mimetype,
           }));
         }
+        function getFormattedDateTime() {
+          return new Date().toISOString(); // Format: YYYY-MM-DDTHH:mm:ss.sssZ
+        }
+
         var taluk = $('#P7_LOCATION').val();
         var operator = $('#P7_OPERATOR').val();
         var issue_type = $('#P7_ISSUE_TYPE').val();
@@ -842,27 +846,33 @@
         var full_des = $('#P7_FULL_DESCRIPTION').val();
         var contact_type = $('#P7_CONTACT_TYPE').val();
         var requestedgroup = $('#P7_REQUESTED_GROUP').val();
-
+        const timestamp = getFormattedDateTime();
         const payload = {
           action: "function_call",
           function_name: "insert_edm_service_request_fn",
           params: {
-            OPERATOR: operator,
-            LOCATION: taluk,
-            ISSUE_TYPE: issue_type,
-            IMPACTED_APPLICATION: impacted_applications,
-            PRIORITY: "priority",
-            SHORT_DESCRIPTION: sub_category,
-            FULL_DESCRIPTION: full_des,
-            ADDITIONAL_INFORMATION: short_des,
-            REQUESTED_BY: username,
-            REQUESTED_DISTRICT: district,
-            REQUESTED_GROUP: requestedgroup,
-            CONTACT_TYPE: contact_type,
-            SHORT: short_des,
+            p_operator: operator,
+            p_location: taluk,
+            p_issue_type: issue_type,
+            p_impacted_application: impacted_applications,
+            p_priority: "priority",
+            p_short_description: sub_category,
+            p_full_description: full_des,
+            p_additional_information: short_des,
+            p_helpdesk_notes: '',
+            p_history: '',
             p_upload: uploadPayload[0].p_upload,
             p_attach_mimetype: uploadPayload[0].p_attach_mimetype,
-            p_attach_filename: uploadPayload[0].p_attach_filename
+            p_attach_filename: uploadPayload[0].p_attach_filename,
+            p_request_created: timestamp,
+            p_requested_by: username,
+            p_requested_district: district,
+            p_requested_group: requestedgroup,
+            p_contact_type: contact_type,
+            p_assignment_group: '',
+            p_product_rating: '',
+            p_short: short_des,
+
           }
         }
 
