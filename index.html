@@ -434,7 +434,8 @@
       const passInput = document.getElementById('P9999_PASSWORD');
       const mobnumber = mobInput?.value?.trim();
       const password = passInput?.value?.trim();
-
+      const userMobNumber = $('#P9999_USERNAME').val();
+      localStorage.setItem('userMob', userMobNumber)
       // Validation
       if (!mobnumber || mobnumber.length !== 10 || isNaN(mobnumber)) {
         alert("Please enter a valid 10-digit mobile number.");

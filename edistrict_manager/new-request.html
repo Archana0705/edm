@@ -417,7 +417,7 @@
                               </div>
                             </div>
                             <div class="col col-2  "><span class="apex-grid-nbsp">&nbsp;</span></div>
-                            <div class="col col-3 apex-col-auto col-end">
+                            <!-- <div class="col col-3 apex-col-auto col-end">
                               <div
                                 class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-placeholder apex-item-wrapper--text-field"
                                 id="P7_FILENAME_CONTAINER">
@@ -432,7 +432,7 @@
                                     data-template-id="8676686131964195_ET"></span>
                                 </div>
                               </div><input type="hidden" name="P7_ASSIGNMENT_GROUP" id="P7_ASSIGNMENT_GROUP" value="">
-                            </div>
+                            </div> -->
                           </div>
                           <div class="row ">
                             <div class="col col-7  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
@@ -611,6 +611,7 @@
       const secretKey = 'V7gN4dY8pT2xB3kRz';
       const district = localStorage.getItem('userDistrict');
       const username = localStorage.getItem('userName');
+      const mobnumber = localStorage.getItem('userMob');
       $('#P7_REQUESTED_DISTRICT_DISPLAY').text(district);
       $('#P7_REQUESTED_BY_DISPLAY').text(username);
       const payload = {
@@ -618,7 +619,7 @@
         function_name: "Taluk_edm_fn",
         params: {
           district: district,
-          userid: '9940660466'
+          userid: mobnumber
         }
       };
 
@@ -820,28 +821,18 @@
       $('#submitBtn').on('click', async function (event) {
         debugger
         event.preventDefault();
-        renderFileList(uploadedFiles);
+
 
         if (checkFile('#P7_UPLOAD_DROPZONE_input')) {
           const uploadedFiles = await processFile('#P7_UPLOAD_DROPZONE_input');
+          renderFileList(uploadedFiles);
 
-
-          const uploadPayload = uploadedFiles.map(file => ({
-            INTERIM: file.fileBase64,
-            INTERIM_ATTACH_FILENAME: file.filename,
-            INTERIM_ATTACH_MIMETYPE: file.mimetype,
+          uploadPayload = uploadedFiles.map(file => ({
+            p_upload: file.fileBase64,
+            p_attach_filename: file.filename,
+            p_attach_mimetype: file.mimetype,
           }));
-
-          console.log(uploadPayload);
         }
-
-        const uploadPayload = {
-          "INTERIM": uploadFile && uploadFile.fileBase64 ? uploadFile.fileBase64 : null,
-          "INTERIM_ATTACH_FILENAME": uploadFile && uploadFile.filename ? uploadFile.filename : null,
-          "INTERIM_ATTACH_MIMETYPE": uploadFile && uploadFile.mimetype ? uploadFile.mimetype : null,
-          "COURT_ID": "POCSO/JULY     /2024/0345"
-        }
-
         var taluk = $('#P7_LOCATION').val();
         var operator = $('#P7_OPERATOR').val();
         var issue_type = $('#P7_ISSUE_TYPE').val();
@@ -853,25 +844,51 @@
         var requestedgroup = $('#P7_REQUESTED_GROUP').val();
 
         const payload = {
-          action: "insert",
-          table: "EDM_SERVICE_REQUEST_T",
-          OPERATOR: operator,
-          LOCATION: taluk,
-          ISSUE_TYPE: issue_type,
-          IMPACTED_APPLICATION: impacted_applications,
-          PRIORITY: "priority",
-          SHORT_DESCRIPTION: sub_category,
-          FULL_DESCRIPTION: full_des,
-          ADDITIONAL_INFORMATION: short_des,
-          REQUESTED_BY: username,
-          REQUESTED_DISTRICT: district,
-          REQUESTED_GROUP: requestedgroup,
-          CONTACT_TYPE: contact_type,
-
-          SHORT: short_des
+          action: "function_call",
+          function_name: "insert_edm_service_request_fn",
+          params: {
+            OPERATOR: operator,
+            LOCATION: taluk,
+            ISSUE_TYPE: issue_type,
+            IMPACTED_APPLICATION: impacted_applications,
+            PRIORITY: "priority",
+            SHORT_DESCRIPTION: sub_category,
+            FULL_DESCRIPTION: full_des,
+            ADDITIONAL_INFORMATION: short_des,
+            REQUESTED_BY: username,
+            REQUESTED_DISTRICT: district,
+            REQUESTED_GROUP: requestedgroup,
+            CONTACT_TYPE: contact_type,
+            SHORT: short_des,
+            p_upload: uploadPayload[0].p_upload,
+            p_attach_mimetype: uploadPayload[0].p_attach_mimetype,
+            p_attach_filename: uploadPayload[0].p_attach_filename
+          }
         }
 
         console.log(payload);
+        $.ajax({
+          url: apiUrl,
+          method: 'POST',
+          headers: {
+            'X-APP-Key': 'edm',
+            'X-APP-Name': 'edm'
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          success: function (response) {
+            showSuccessToast("Submitted successfully.");
+            location.reload();
+
+          },
+          error(xhr, status, error) {
+            console.error("Issue Type API Error:", error);
+            alert("Failed to load issue types.");
+          }
+        });
+
       });
 
       $('#exitBtn').on('click', function (event) {
