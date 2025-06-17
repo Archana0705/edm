@@ -635,24 +635,52 @@
         var newMailId = $('#P92_NEW_MAIL_ID').val();
 
         const payload = {
-          action: "insert",
-          table: "EDM_SERVICE_REQUEST_T",
-          DISTRICT: "chennai",
-          ESEVAI_ID: esevaiId,
-          CURRENT_OPERATOR_NAME: currentOperatorName,
-          CURRENT_OPERATOR_MOBILE_NUMBER: currentOperatorMobNum,
-          CURRENT_MAIL_ID: currentMailId,
-          REASON_FOR_OPERATOR_CHANGE: reasonForChange,
-          NEW_OPERATOR_NAME: newOperatorName,
-          NEW_OPERATOR_AADHAR_NUMBER: newOperatorAadharnum,
-          NEW_OPERATOR_PHONE_NUMBER: newOperatorPhoneNum,
-          NEW_MAIL_ID: newMailId,
-          PHOTO_ATTACHMENT: uploadFile?.fileBase64 || null,
-          FILE_NAME: uploadFile?.filename || null,
-          INTERIM_ATTACH_MIMETYPE: uploadFile?.fileType || null
+          action: "function_call",
+          function_name: "edm_esevai_operator_change_request_edmall_fn",
+          params: {
+            DISTRICT: "chennai",
+            ESEVAI_ID: esevaiId,
+            CURRENT_OPERATOR_NAME: currentOperatorName,
+            CURRENT_OPERATOR_MOBILE_NUMBER: currentOperatorMobNum,
+            CURRENT_MAIL_ID: currentMailId,
+            REASON_FOR_OPERATOR_CHANGE: reasonForChange,
+            NEW_OPERATOR_NAME: newOperatorName,
+            NEW_OPERATOR_AADHAR_NUMBER: newOperatorAadharnum,
+            NEW_OPERATOR_PHONE_NUMBER: newOperatorPhoneNum,
+            NEW_MAIL_ID: newMailId,
+            PHOTO_ATTACHMENT: uploadFile?.fileBase64 || null,
+            FILE_NAME: uploadFile?.filename || null,
+            INTERIM_ATTACH_MIMETYPE: uploadFile?.fileType || null
+          }
         }
+        $.ajax({
+          url: apiUrl,
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          cache: false,
+          success: function (response) {
+            alert("inserted Succesfully")
+          },
+          error: function (xhr, status, error) {
+            console.error("API call failed:", {
+              status: xhr.status,
+              statusText: xhr.statusText,
+              responseText: xhr.responseText,
+              error: error
+            });
+          }
+        });
+
 
         console.log(payload);
+
       });
 
       $('#cancelBtn').on('click', function (event) {

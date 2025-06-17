@@ -122,10 +122,10 @@
                       </div>
                     </div>
 
-                    <!-- Closed Tab -->
+                    <!-- Approved Tab -->
                     <div class="tab-pane fade" id="closed" role="tabpanel" aria-labelledby="closed-tab">
                       <div class="table-responsive mt-3">
-                        <table id="closedReport" class="display" style="width:100%">
+                        <table id="approvedTab" class="display" style="width:100%">
                           <thead>
                             <tr>
                               <th>Action</th>
@@ -332,7 +332,7 @@
       $(document).on('click', '.approved_req_class', function () {
         const approvedPayload = {
           action: "function_call",
-          function_name: "edm_esevai_operator_change_request_edmall_fn",
+          function_name: "edm_esevai_operator_change_request_adm_all_trg",
           params: {
             status: 'C',
             userid: userId,
@@ -340,7 +340,7 @@
         };
 
         loadDataToTable({
-          tableId: 'closedReport',
+          tableId: 'approvedTab',
           apiUrl,
           httpMethod: 'POST',
           payload: encryptData(approvedPayload),
