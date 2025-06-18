@@ -148,6 +148,33 @@
                         </table>
                       </div>
                     </div>
+
+                    <!-- Reject Tab -->
+                    <div class="tab-pane fade" id="closed" role="tabpanel" aria-labelledby="closed-tab">
+                      <div class="table-responsive mt-3">
+                        <table id="rejectTab" class="display" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>Action</th>
+                              <th>SI No</th>
+                              <th>Created Date</th>
+                              <th>District</th>
+                              <th>Esevai Id</th>
+                              <th>Current Operator Name</th>
+                              <th>Current Operator Mobile Number</th>
+                              <th>Current Mail Id</th>
+                              <th>Reason for Operator Change</th>
+                              <th>New Operator Name</th>
+                              <th>New Operator Aadhar Number</th>
+                              <th>New Operator Phone Number</th>
+                              <th>New Mail Id</th>
+                              <th>Photo Attachment</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -404,35 +431,67 @@
 
       // ✅ Reject Tab Click
       $(document).on('click', '.reject_req_class', function () {
-        const rejectedPayload = {
+        const approvedPayload = {
           action: "function_call",
-          function_name: "HD_EDM_SERVICE_ASSAIGN_EDMALL_Fn",
+          function_name: "edm_esevai_operator_change_request_adm_all_trg",
           params: {
-            status: 'Closed',
+            status: 'N',
             userid: userId,
           }
         };
 
         loadDataToTable({
-          tableId: 'closedReport',
+          tableId: 'rejectTab',
           apiUrl,
           httpMethod: 'POST',
-          payload: encryptData(rejectedPayload),
+          payload: encryptData(approvedPayload),
           rowBuilder: (item) => {
+            debugger
+            const applicationinfo = {
+              district: item.district,
+              esevai_id: item.esevai_id,
+              current_operator_name: item.current_operator_name,
+              current_mail_id: item.current_mail_id,
+              current_operator_mobile_number: item.current_operator_mobile_number,
+              reason_for_operator_change: item.reason_for_operator_change,
+              new_operator_name: item.new_operator_name,
+              new_operator_aadhar_number: item.new_operator_aadhar_number,
+              new_operator_phone_number: item.new_operator_phone_number,
+              new_mail_id: item.new_mail_id
+            };
+
+            const encodedDetails = btoa(JSON.stringify(applicationinfo));
+            const encodedStatus = btoa(item.request_status || '');
             return `
           <tr>
-            <td class="u-tC">${item.request_number || 'N/A'}</td>
-            <td class="u-tC">${item.district || 'N/A'}</td>
-            <td class="u-tC">${item.assigned_to || 'N/A'}</td>
-            <td class="u-tC">${item.instruction_type || 'N/A'}</td>
-            <td class="u-tC">${item.short_description || 'N/A'}</td>
-            <td class="u-tC">${item.full_description || 'N/A'}</td>
-            <td class="u-tC">${item.attachment || 'N/A'}</td>
-            <td class="u-tC">${item.request_created_dttm || 'N/A'}</td>
-            <td class="u-tC">${item.requested_by || 'N/A'}</td>
-            <td class="u-tC">${item.request_status || 'N/A'}</td>
-            <td class="u-tC">${item.edm_notes || 'N/A'}</td>
-            <td class="u-tC">${item.edm_upload || 'N/A'}</td>
+            <td class="u-tL">
+              <a data-id="${item.esevai_id}" id="open-modal-btn"
+                 href="esevai-request-report-info.html?details=${encodedDetails}&status=${btoa(item.request_status)}">
+              <i class="bi bi-pencil-square"></i>
+              <i>
+              </a>
+            </td>
+            <td class="u-tC">${item.sl_no || 'N/A'}</td>
+          <td class="u-tC">${getRelativeTime(item.created_date || 'N/A')}</td>
+          <td class="u-tC">${item.district || 'N/A'}</td>
+          <td class="u-tC">${item.esevai_id || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_mobile_number || 'N/A'}</td>
+          <td class="u-tC">${item.current_mail_id || 'N/A'}</td>
+          <td class="u-tC">${item.reason_for_operator_change || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_aadhar_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_phone_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
+          <td class="u-tC">
+            <a href="#" class="view-file-link"
+               data-base64="${item.photo_attachment}"
+               data-mime="${item.mime_type}"
+               data-filename="${item.file_name}">
+               View File
+            </a>
+          </td>
+        </tr>
           </tr>
           `;
           },
@@ -442,47 +501,48 @@
         });
 
         $('#closed-tab').removeClass('reject_req_class');
-
-
-        document.addEventListener('click', function (e) {
-          if (e.target && e.target.classList.contains('view-file-link')) {
-            e.preventDefault();
-
-            const base64 = e.target.getAttribute('data-base64');
-            const mimeType = e.target.getAttribute('data-mime') || 'application/octet-stream';
-            const fileName = e.target.getAttribute('data-filename') || 'file';
-
-            const blob = base64ToBlob(base64, mimeType);
-            const blobUrl = URL.createObjectURL(blob);
-
-            const win = window.open(blobUrl, '_blank');
-            if (!win) {
-              alert('Pop-up blocked! Please allow pop-ups for this site.');
-            }
-
-            setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
-          }
-        });
-
-        function base64ToBlob(base64, mimeType) {
-          const byteCharacters = atob(base64);
-          const byteArrays = [];
-
-          for (let i = 0; i < byteCharacters.length; i += 512) {
-            const slice = byteCharacters.slice(i, i + 512);
-            const byteNumbers = new Array(slice.length);
-            for (let j = 0; j < slice.length; j++) {
-              byteNumbers[j] = slice.charCodeAt(j);
-            }
-            byteArrays.push(new Uint8Array(byteNumbers));
-          }
-
-          return new Blob(byteArrays, { type: mimeType });
-        }
-
       });
 
+
+
+      document.addEventListener('click', function (e) {
+        if (e.target && e.target.classList.contains('view-file-link')) {
+          e.preventDefault();
+
+          const base64 = e.target.getAttribute('data-base64');
+          const mimeType = e.target.getAttribute('data-mime') || 'application/octet-stream';
+          const fileName = e.target.getAttribute('data-filename') || 'file';
+
+          const blob = base64ToBlob(base64, mimeType);
+          const blobUrl = URL.createObjectURL(blob);
+
+          const win = window.open(blobUrl, '_blank');
+          if (!win) {
+            alert('Pop-up blocked! Please allow pop-ups for this site.');
+          }
+
+          setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
+        }
+      });
+
+      function base64ToBlob(base64, mimeType) {
+        const byteCharacters = atob(base64);
+        const byteArrays = [];
+
+        for (let i = 0; i < byteCharacters.length; i += 512) {
+          const slice = byteCharacters.slice(i, i + 512);
+          const byteNumbers = new Array(slice.length);
+          for (let j = 0; j < slice.length; j++) {
+            byteNumbers[j] = slice.charCodeAt(j);
+          }
+          byteArrays.push(new Uint8Array(byteNumbers));
+        }
+
+        return new Blob(byteArrays, { type: mimeType });
+      }
+
     });
+
   </script>
 
 </body>

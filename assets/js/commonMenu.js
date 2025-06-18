@@ -13,7 +13,7 @@ const menuItems = [
                 label: "All Requests with Reassign Options",
                 file: "request-reassign.html",
                 folder: "",
-                roles: ["helpdesk"]
+                roles: ["helpdesk_operator"]
             }
         ]
     },
