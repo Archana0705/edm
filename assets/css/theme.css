@@ -2,6 +2,39 @@
   width: 100% !important;
 }
 
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding-left: 20px;
+  display: none;
+}
+
+.submenu-visible {
+  display: block;
+}
+
+.submenu-toggle {
+  cursor: pointer;
+  float: right;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.submenu-toggle.rotated {
+  transform: rotate(180deg);
+  /* rotates the arrow upward */
+}
+
+.main-menu-item {
+  position: relative;
+  padding: 8px 0;
+}
+
+.main-menu-item>a {
+  display: inline-block;
+}
+
 .field-error {
   display: block;
   color: red;

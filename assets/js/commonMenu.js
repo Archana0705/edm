@@ -6,7 +6,17 @@ console.log("userRole", userRole)
 
 const menuItems = [
     { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
-    { label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    {
+        label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"],
+        subMenu: [
+            {
+                label: "All Requests with Reassign Options",
+                file: "request-reassign.html",
+                folder: "",
+                roles: ["helpdesk"]
+            }
+        ]
+    },
     { label: "New Requests", file: "new-request.html", folder: "", icon: "fa fa-plus-circle", roles: ["edistrict_manager", "helpdesk_operator"] },
     { label: "In Progress Requests", file: "inprogress-request.html", folder: "", icon: "fa fa-spinner", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "On-Hold Requests", file: "onhold-request.html", folder: "", icon: "fa fa-pause-circle", roles: ["helpdesk", "helpdesk_operator"] },
@@ -22,148 +32,6 @@ const menuItems = [
 
 ];
 
-// function renderDynamicMenu(containerId) {
-//     debugger
-//     const ul = document.getElementById(containerId);
-//     if (!ul) return;
-//     const userRole = sessionStorage.getItem("userRole") || "operator";
-//     const pathParts = window.location.pathname.split('/');
-//     const currentFile = pathParts.pop();
-//     const currentFolder = pathParts.pop();
-//     const filteredMenu = menuItems.filter(item => item.roles.includes(userRole));
-//     // menuItems.forEach(item => {
-//     //     const isInSameFolder = (item.folder === "" && !["helpdesk"].includes(currentFolder)) || (item.folder === currentFolder);
-//     //     const href = isInSameFolder
-//     //         ? item.file
-//     //         : item.folder === "" ? `../${item.file}` : `${item.folder}/${item.file}`;
-
-//     //     const isCurrent = item.file === currentFile && (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
-
-//     //     const li = document.createElement('li');
-//     //     li.setAttribute('data-id', '');
-//     //     li.setAttribute('data-disabled', '');
-//     //     li.setAttribute('data-icon', '');
-//     //     li.setAttribute('data-shortcut', '');
-//     //     li.setAttribute('data-current', isCurrent ? 'true' : 'false');
-
-//     //     //     li.innerHTML = `
-//     //     //   <a href="${href}" style="display: none;" target="">${item.label}</a>
-//     //     //   <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-//     //     //     <div role="none" class="a-TreeView-row"></div>
-//     //     //     <div role="none" class="a-TreeView-content">
-//     //     //         <span class="${item.icon}" style="margin-right: 8px;"></span>
-//     //     //       <span class="a-TreeView-label">${item.label}</span>
-//     //     //     </div>
-//     //     //   </div>
-//     //     // `;
-
-//     //     const aTag = document.createElement('a');
-//     //     aTag.href = href;
-//     //     aTag.style.display = 'none';
-//     //     aTag.target = '';
-//     //     aTag.textContent = item.label;
-
-//     //     // TreeView content
-//     //     const iconSpan = document.createElement('span');
-//     //     iconSpan.className = item.icon || 'fa fa-file'; // fallback if missing
-//     //     iconSpan.style.marginRight = '8px';
-
-//     //     const labelSpan = document.createElement('span');
-//     //     labelSpan.className = 'a-TreeView-label';
-//     //     labelSpan.textContent = item.label;
-
-//     //     const contentDiv = document.createElement('div');
-//     //     contentDiv.setAttribute('role', 'none');
-//     //     contentDiv.className = 'a-TreeView-content';
-//     //     contentDiv.appendChild(iconSpan);
-//     //     contentDiv.appendChild(labelSpan);
-
-//     //     const rowDiv = document.createElement('div');
-//     //     rowDiv.setAttribute('role', 'none');
-//     //     rowDiv.className = 'a-TreeView-row';
-
-//     //     const nodeDiv = document.createElement('div');
-//     //     nodeDiv.className = 'a-TreeView-node a-TreeView-node--topLevel';
-//     //     nodeDiv.setAttribute('aria-hidden', 'true');
-//     //     nodeDiv.appendChild(rowDiv);
-//     //     nodeDiv.appendChild(contentDiv);
-
-//     //     // Final LI
-//     //     li.appendChild(aTag);
-//     //     li.appendChild(nodeDiv);
-
-
-//     //     ul.appendChild(li);
-//     //     console.log("Rendering menu item:", item.label, "| Icon:", item.icon);
-//     filteredMenu.forEach(item => {
-//         const li = document.createElement("li");
-
-//         let href = "";
-
-//         if (item.folder === currentFolder || item.folder === "") {
-//             href = item.file;
-//         } else {
-//             href = `../${item.folder}/${item.file}`;
-//         }
-
-//         const a = document.createElement("a");
-//         a.href = href;
-//         a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
-
-//         li.appendChild(a);
-//         ul.appendChild(li);
-//     });
-// }
-
-
-
-
-
-// function renderDynamicMenu(containerId) {
-//     debugger
-//     const ul = document.getElementById(containerId);
-//     if (!ul) return;
-
-//     // const currentPath = window.location.pathname;
-//     // const currentFolder = currentPath.split("/").slice(-2, -1)[0];
-//     const pathParts = window.location.pathname.split('/');
-//     const currentFile = pathParts.pop();
-//     const currentFolder = pathParts.pop();
-//     const filteredMenu = menuItems.filter(item => {
-//         console.log('Checking item:', item);
-//         console.log("userRole value and type:", userRole, typeof userRole);
-//         return item.roles.includes(userRole);
-//     });
-//     filteredMenu.forEach(item => {
-//         const li = document.createElement("li");
-
-//         let href = "";
-//         if (item.folder === currentFolder || item.folder === "") {
-//             href = item.file;
-//         } else {
-//             href = `../${item.folder}/${item.file}`;
-//         }
-
-//         const a = document.createElement("a");
-//         a.href = href;
-//         a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
-
-//         const isCurrent = item.file === currentFile && (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
-
-//         // if (item.file === currentFile) {
-//         //     a.setAttribute("data-current", "true");
-//         //     // Optional: add a class to style active link
-//         //     a.classList.add("active");
-//         // }
-
-//         li.appendChild(a);
-
-//         li.setAttribute('data-current', isCurrent ? 'true' : 'false');
-//         ul.appendChild(li);
-//     });
-
-// }
-
 function normalizeRole(role) {
     if (!role) return null;
     const lowerRole = role.toLowerCase();
@@ -178,45 +46,71 @@ function normalizeRole(role) {
     return null; // or handle unknown roles
 }
 
+// function renderDynamicMenu(containerId) {
+//     const ul = document.getElementById(containerId);
+//     if (!ul) return;
+
+//     const rawUserRole = localStorage.getItem('userRole');
+//     console.log("userRole", rawUserRole);
+//     const userRole = normalizeRole(rawUserRole);
+//     console.log("Normalized Role:", userRole);
+
+//     const pathParts = window.location.pathname.split('/');
+//     const currentFile = pathParts.pop();
+//     const currentFolder = pathParts.pop();
+//     const pageSpecificMenuRestrictions = {
+//         "edm-diary.html": {
+//             allowedRoles: ["edistrict_manager"],
+//             allowedLabels: ["Home"]
+//         },
+//     };
+
+//     let filteredMenu = menuItems.filter(item => item.roles.includes(userRole));
+
+//     if (pageSpecificMenuRestrictions[currentFile]) {
+//         const restriction = pageSpecificMenuRestrictions[currentFile];
+//         if (restriction.allowedRoles.includes(userRole)) {
+//             filteredMenu = filteredMenu.filter(item =>
+//                 restriction.allowedLabels.includes(item.label)
+//             );
+//         }
+//     }
+
+//     filteredMenu.forEach(item => {
+//         const li = document.createElement("li");
+
+//         let href = "";
+//         if (item.folder === currentFolder || item.folder === "") {
+//             href = item.file;
+//         } else {
+//             href = `../${item.folder}/${item.file}`;
+//         }
+
+//         const a = document.createElement("a");
+//         a.href = href;
+//         a.innerHTML = `<span class="${item.icon}" style="margin-right: 20px;"></span>${item.label}`;
+
+//         const isCurrent = item.file === currentFile &&
+//             (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
+
+//         li.appendChild(a);
+//         li.setAttribute('data-current', isCurrent ? 'true' : 'false');
+//         ul.appendChild(li);
+//     });
+
+// }
+
 function renderDynamicMenu(containerId) {
     const ul = document.getElementById(containerId);
     if (!ul) return;
 
     const rawUserRole = localStorage.getItem('userRole');
-    console.log("userRole", rawUserRole);
     const userRole = normalizeRole(rawUserRole);
-    console.log("Normalized Role:", userRole);
 
     const pathParts = window.location.pathname.split('/');
     const currentFile = pathParts.pop();
     const currentFolder = pathParts.pop();
 
-    // const filteredMenu = menuItems.filter(item => {
-    //     return item.roles.includes(userRole);
-    // });
-
-    // filteredMenu.forEach(item => {
-    //     const li = document.createElement("li");
-
-    //     let href = "";
-    //     if (item.folder === currentFolder || item.folder === "") {
-    //         href = item.file;
-    //     } else {
-    //         href = `../${item.folder}/${item.file}`;
-    //     }
-
-    //     const a = document.createElement("a");
-    //     a.href = href;
-    //     a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
-
-    //     const isCurrent = item.file === currentFile &&
-    //         (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
-
-    //     li.appendChild(a);
-    //     li.setAttribute('data-current', isCurrent ? 'true' : 'false');
-    //     ul.appendChild(li);
-    // });
-    // STEP 1: Page-specific menu item restrictions
     const pageSpecificMenuRestrictions = {
         "edm-diary.html": {
             allowedRoles: ["edistrict_manager"],
@@ -226,7 +120,6 @@ function renderDynamicMenu(containerId) {
 
     let filteredMenu = menuItems.filter(item => item.roles.includes(userRole));
 
-    // STEP 2: If current page has restrictions, apply them
     if (pageSpecificMenuRestrictions[currentFile]) {
         const restriction = pageSpecificMenuRestrictions[currentFile];
         if (restriction.allowedRoles.includes(userRole)) {
@@ -236,29 +129,53 @@ function renderDynamicMenu(containerId) {
         }
     }
 
-    // STEP 3: Render filtered menu
     filteredMenu.forEach(item => {
         const li = document.createElement("li");
-
-        let href = "";
-        if (item.folder === currentFolder || item.folder === "") {
-            href = item.file;
-        } else {
-            href = `../${item.folder}/${item.file}`;
-        }
+        li.classList.add("main-menu-item");
 
         const a = document.createElement("a");
-        a.href = href;
-        a.innerHTML = `<span class="${item.icon}" style="margin-right: 20px;"></span>${item.label}`;
-
-        const isCurrent = item.file === currentFile &&
-            (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
-
+        a.href = (item.folder === currentFolder || item.folder === "") ? item.file : `../${item.folder}/${item.file}`;
+        a.innerHTML = `<span class="${item.icon}" style="margin-right: 10px;"></span>${item.label}`;
         li.appendChild(a);
-        li.setAttribute('data-current', isCurrent ? 'true' : 'false');
+
+        // Handle submenu
+        if (item.subMenu && Array.isArray(item.subMenu)) {
+            const subItems = item.subMenu.filter(sub => sub.roles.includes(userRole));
+            if (subItems.length > 0) {
+                // Add toggle button
+                const toggleBtn = document.createElement("span");
+                toggleBtn.innerHTML = "&#9660;"; // ▼ down arrow
+                toggleBtn.classList.add("submenu-toggle");
+                li.appendChild(toggleBtn);
+
+                // Create submenu
+                const subUl = document.createElement("ul");
+                subUl.classList.add("submenu");
+
+                subItems.forEach(sub => {
+                    const subLi = document.createElement("li");
+                    const subA = document.createElement("a");
+                    subA.href = (sub.folder === currentFolder || sub.folder === "") ? sub.file : `../${sub.folder}/${sub.file}`;
+                    subA.textContent = sub.label;
+                    subLi.appendChild(subA);
+                    subUl.appendChild(subLi);
+                });
+
+                li.appendChild(subUl);
+
+                // Add event listener to toggle visibility
+                toggleBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    subUl.classList.toggle("submenu-visible");
+                    toggleBtn.classList.toggle("rotated");
+                });
+            }
+        }
+
         ul.appendChild(li);
     });
-
 }
+
+
 
 renderDynamicMenu("commonMenuContainer");
