@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="no-js  page-16 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <title>Service Request</title>
+    <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        #t_Body_nav {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+
+<body
+    class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
+    id="t_PageBody">
+    <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+    <form role="none">
+        <header class="t-Header" id="t_Header" role="banner">
+
+            <div class="t-Header-branding">
+                <div class="t-Header-controls">
+                    <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree"
+                        aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl"
+                        type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+                </div>
+                <div class="t-Header-logo">
+                    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=120706531155812" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+                    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=120706531155812" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+                    <P class="t-Header-logo-link">TNEGA</P>
+
+                </div>
+                <div class="t-Header-navBar">
+                    <div class="t-Header-navBar--start"></div>
+                    <div id="globalHeader"></div>
+                    <div class="t-Header-navBar--end"></div>
+                </div>
+            </div>
+            <div class="t-Header-nav"></div>
+        </header>
+        <div class="t-Body">
+            <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+                <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
+                    id="t_TreeNav" data-id="75_tree" aria-label="Main Navigation">
+                    <ul id="commonMenuContainer"></ul>
+
+                </div>
+            </div>
+
+            <div class="t-Body-main">
+                <div class="t-Body-title" id="t_Body_title"></div>
+                <div class="t-Body-content" id="t_Body_content">
+                    <main id="main" class="t-Body-mainContent">
+                        <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+                            class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+                            data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+                        <div class="t-Body-fullContent"></div>
+                        <div class="t-Body-contentInner"><input type="hidden" name="P0_ROLE" id="P0_ROLE"
+                                value="Non Operators">
+                            <div class="container">
+                                <div class="row ">
+                                    <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                                    <div class="col col-5 apex-col-auto ">
+                                        <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked is-required t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--select-list"
+                                            id="P75_MONTH_CONTAINER">
+                                            <div class="t-Form-labelContainer">
+                                                <label for="P75_MONTH" id="P75_MONTH_LABEL" class="t-Form-label">Month
+                                                </label>
+                                            </div>
+                                            <div class="t-Form-inputContainer">
+                                                <div class="t-Form-itemWrapper"><select id="P75_MONTH" name="P75_MONTH"
+                                                        required class="selectlist&#x20;apex-item-select"
+                                                        data-native-menu="false" size="1">
+                                                        <option value="">Select Month</option>
+                                                        <option value="January">January</option>
+                                                        <option value="February">February</option>
+                                                        <option value="March">March</option>
+                                                        <option value="April" selected="selected">April</option>
+                                                        <option value="May">May</option>
+                                                        <option value="June">June</option>
+                                                        <option value="July">July</option>
+                                                        <option value="August">August</option>
+                                                        <option value="September">September</option>
+                                                        <option value="October">October</option>
+                                                        <option value="November">November</option>
+                                                        <option value="December">December</option>
+                                                    </select></div>
+                                                <div class="t-Form-itemAssistance">
+                                                    <span id="P75_MONTH_error_placeholder" class="a-Form-error"
+                                                        data-template-id="8677686219964196_ET"></span>
+                                                    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-5  ">
+                                        <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked is-required t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--select-list"
+                                            id="P75_DISTRICT_CONTAINER">
+                                            <div class="t-Form-labelContainer">
+                                                <label for="P75_DISTRICT" id="P75_DISTRICT_LABEL"
+                                                    class="t-Form-label">District </label>
+                                            </div>
+                                            <div class="t-Form-inputContainer">
+                                                <div class="t-Form-itemWrapper"><select id="P75_DISTRICT"
+                                                        name="P75_DISTRICT" required
+                                                        class="selectlist&#x20;apex-item-select"
+                                                        data-native-menu="false" size="1">
+                                                        <option value="">Select District</option>
+                                                        <option value="Ariyalur">Ariyalur</option>
+                                                        <option value="Chengalpattu">Chengalpattu</option>
+                                                        <option value="Chennai" selected="selected">Chennai</option>
+                                                        <option value="Coimbatore">Coimbatore</option>
+                                                        <option value="Cuddalore">Cuddalore</option>
+                                                        <option value="Dharmapuri">Dharmapuri</option>
+                                                        <option value="Dindigul">Dindigul</option>
+                                                        <option value="Erode">Erode</option>
+                                                        <option value="Kallakurichi">Kallakurichi</option>
+                                                        <option value="Kanchipuram">Kanchipuram</option>
+                                                        <option value="Kanyakumari">Kanyakumari</option>
+                                                        <option value="Karur">Karur</option>
+                                                        <option value="Krishnagiri">Krishnagiri</option>
+                                                        <option value="Madurai">Madurai</option>
+                                                        <option value="Mayiladuthurai">Mayiladuthurai</option>
+                                                        <option value="Nagappattinam">Nagappattinam</option>
+                                                        <option value="Namakkal">Namakkal</option>
+                                                        <option value="Perambalur">Perambalur</option>
+                                                        <option value="Pudukkottai">Pudukkottai</option>
+                                                        <option value="Ramanathapuram">Ramanathapuram</option>
+                                                        <option value="Ranipet">Ranipet</option>
+                                                        <option value="Salem">Salem</option>
+                                                        <option value="Sivagangai">Sivagangai</option>
+                                                        <option value="Tenkasi">Tenkasi</option>
+                                                        <option value="Thanjavur">Thanjavur</option>
+                                                        <option value="Nilgiris">Nilgiris</option>
+                                                        <option value="Theni">Theni</option>
+                                                        <option value="Thirupattur">Thirupattur</option>
+                                                        <option value="Thoothukudi">Thoothukudi</option>
+                                                        <option value="Tiruchirappalli">Tiruchirappalli</option>
+                                                        <option value="Tirunelveli">Tirunelveli</option>
+                                                        <option value="Tiruppur">Tiruppur</option>
+                                                        <option value="Tiruvallur">Tiruvallur</option>
+                                                        <option value="Tiruvannamalai">Tiruvannamalai</option>
+                                                        <option value="Tiruvarur">Tiruvarur</option>
+                                                        <option value="Vellore">Vellore</option>
+                                                        <option value="Viluppuram">Viluppuram</option>
+                                                        <option value="Virudhunagar">Virudhunagar</option>
+                                                    </select></div>
+                                                <div class="t-Form-itemAssistance">
+                                                    <span id="P75_DISTRICT_error_placeholder" class="a-Form-error"
+                                                        data-template-id="8677686219964196_ET"></span>
+                                                    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                                    <div class="col col-5 apex-col-auto ">
+                                        <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked is-required t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--select-list"
+                                            id="P75_EDM_CONTAINER">
+                                            <div class="t-Form-labelContainer">
+                                                <label for="P75_EDM" id="P75_EDM_LABEL" class="t-Form-label">EDM
+                                                </label>
+                                            </div>
+                                            <div class="t-Form-inputContainer">
+                                                <div class="t-Form-itemWrapper"><select id="P75_EDM" name="P75_EDM"
+                                                        required class="selectlist&#x20;apex-item-select"
+                                                        data-native-menu="false" size="1">
+                                                        <option value="">Select EDM</option>
+                                                        <option value="eDistrict&#x20;Manager&#x20;1"
+                                                            selected="selected">eDistrict Manager 1</option>
+                                                        <option value="eDistrict&#x20;Manager&#x20;2">eDistrict Manager
+                                                            2</option>
+                                                    </select></div>
+                                                <div class="t-Form-itemAssistance">
+                                                    <span id="P75_EDM_error_placeholder" class="a-Form-error"
+                                                        data-template-id="8677686219964196_ET"></span>
+                                                    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-5  ">
+                                        <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked is-required t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--select-list"
+                                            id="P75_ACTIVITY_CONTAINER">
+                                            <div class="t-Form-labelContainer">
+                                                <label for="P75_ACTIVITY" id="P75_ACTIVITY_LABEL"
+                                                    class="t-Form-label">Activity </label>
+                                            </div>
+                                            <div class="t-Form-inputContainer">
+                                                <div class="t-Form-itemWrapper"><select id="P75_ACTIVITY"
+                                                        name="P75_ACTIVITY" class="selectlist&#x20;apex-item-select"
+                                                        data-native-menu="false" size="1">
+                                                        <option value=""></option>
+                                                        <option value="E-office">E-office</option>
+                                                        <option value="Field&#x20;Visit">Field Visit</option>
+                                                        <option value="Inspection" selected="selected">Inspection
+                                                        </option>
+                                                        <option value="Meeting">Meeting</option>
+                                                        <option value="Others">Others</option>
+                                                        <option value="Reporting">Reporting</option>
+                                                    </select></div>
+                                                <div class="t-Form-itemAssistance">
+                                                    <span id="P75_ACTIVITY_error_placeholder" class="a-Form-error"
+                                                        data-template-id="8677686219964196_ET"></span>
+                                                    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col col-9  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                                    <div class="col col-1 apex-col-auto "><button
+                                            class="t-Button t-Button--hot t-Button--large&#x20;t-Button--success"
+                                            type="button" id="B20029465529480212"><span
+                                                class="t-Button-label">Search</span></button></div>
+                                    <div class="col col-1 apex-col-auto "><button
+                                            class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
+                                            type="button" id="B20029085705480215"><span
+                                                class="t-Button-label">Clear</span></button></div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                                    <div class="col col-10  ">
+                                        <div id="DOWNLOAD-BLOB" role="region" aria-label="Edm&#x20;Overall&#x20;Report"
+                                            class="t-IRR-region ">
+                                            <div class="t-Region-orderBy"></div>
+
+                                            <div id="DOWNLOAD-BLOB_ir" class="a-IRR-container">
+                                                <div id="DOWNLOAD-BLOB_worksheet_region" class="a-IRR"
+                                                    aria-live="polite">
+                                                    <div id="DOWNLOAD-BLOB_single_row_view" class="a-IRR-singleRowView">
+                                                    </div>
+                                                    <div id="DOWNLOAD-BLOB_full_view" class="a-IRR-fullView">
+                                                        <div id="DOWNLOAD-BLOB_actions_menu"></div>
+                                                        <div id="DOWNLOAD-BLOB_toolbar" class="a-IRR-toolbar">
+                                                            <div role="search"
+                                                                aria-label="Search&#x20;bar&#x20;of&#x20;Dairy&#x20;for&#x20;EDM"
+                                                                id="DOWNLOAD-BLOB_toolbar_controls"
+                                                                class="a-IRR-controls">
+                                                                <div
+                                                                    class="a-IRR-controlGroup a-IRR-controlGroup--search a-IRR-controlGroup--hidden">
+                                                                    <div class="a-IRR-search"><input type="hidden"
+                                                                            id="DOWNLOAD-BLOB_column_search_current_column" /><input
+                                                                            type="hidden"
+                                                                            id="DOWNLOAD-BLOB_search_field" value="" />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="a-IRR-controlGroup a-IRR-controlGroup--views">
+                                                                </div>
+                                                                <div
+                                                                    class="a-IRR-controlGroup a-IRR-controlGroup--options">
+                                                                    <input type="hidden" id="DOWNLOAD-BLOB_row_select"
+                                                                        value="50" />
+                                                                    <div class="a-IRR-actions"><button
+                                                                            id="DOWNLOAD-BLOB_actions_button"
+                                                                            class="a-Button a-IRR-button a-IRR-button--actions"
+                                                                            type="button"
+                                                                            data-menu="DOWNLOAD-BLOB_actions_menu">Actions<span
+                                                                                aria-hidden="true"
+                                                                                class="a-Icon icon-menu-drop-down"></span></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="DOWNLOAD-BLOB_content" class="a-IRR-content ">
+                                                            <div id="DOWNLOAD-BLOB_dialog_js" class="a-IRR-dialogBody"
+                                                                style="display:none;"></div><input type="hidden"
+                                                                id="DOWNLOAD-BLOB_worksheet_id"
+                                                                value="35259675155770139" />
+                                                            <input type="hidden" id="DOWNLOAD-BLOB_app_user"
+                                                                value="8667637037" />
+                                                            <input type="hidden" id="DOWNLOAD-BLOB_report_id"
+                                                                value="35271958727769443" />
+                                                            <input type="hidden" id="DOWNLOAD-BLOB_view_mode"
+                                                                value="REPORT" />
+                                                            <style nonce="f2i8iaik6b9LHIfuplgxzw"
+                                                                id="DOWNLOAD-BLOB_worksheet_css">
+                                                            </style>
+                                                            <div role="region"
+                                                                aria-label="Chart&#x20;view&#x20;of&#x20;Dairy&#x20;for&#x20;EDM"
+                                                                id="DOWNLOAD-BLOB_chart" class="a-IRR-chartView"></div>
+                                                            <div role="region"
+                                                                aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Dairy&#x20;for&#x20;EDM"
+                                                                id="DOWNLOAD-BLOB_group_by" class="a-IRR-groupByView">
+                                                            </div>
+                                                            <div role="region"
+                                                                aria-label="Pivot&#x20;view&#x20;of&#x20;Dairy&#x20;for&#x20;EDM"
+                                                                id="DOWNLOAD-BLOB_pivot" class="a-IRR-pivotView"></div>
+                                                            <div role="region"
+                                                                aria-label="Data&#x20;view&#x20;of&#x20;Dairy&#x20;for&#x20;EDM"
+                                                                id="DOWNLOAD-BLOB_data_panel" class="a-IRR-reportView">
+                                                                <div class="a-IRR-tableContainer">
+                                                                    <table
+                                                                        aria-label="Dairy&#x20;for&#x20;EDM,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
+                                                                        class="a-IRR-table" id="35259675155770139">
+                                                                        <tr>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="C35224853314028981"><span
+                                                                                    class="a-IRR-headerLabel">Sl
+                                                                                    No</span></th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="C35260353824770133"><span
+                                                                                    class="a-IRR-headerLabel">Edm
+                                                                                    Id</span></th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="C35261171417770132"><span
+                                                                                    class="a-IRR-headerLabel">Date</span>
+                                                                            </th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="C35261585524770132"><span
+                                                                                    class="a-IRR-headerLabel">Activity</span>
+                                                                            </th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="C35261983475770131"><span
+                                                                                    class="a-IRR-headerLabel">Notes</span>
+                                                                            </th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="C35262373760770131"><span
+                                                                                    class="a-IRR-headerLabel">Time
+                                                                                    Spend</span></th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="DOWNLOAD-BLOB"><span
+                                                                                    class="a-IRR-headerLabel">Inspection
+                                                                                    Report</span></th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="DOWNLOAD-BLOB"><span
+                                                                                    class="a-IRR-headerLabel">Image
+                                                                                    Attachment1</span></th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="DOWNLOAD-BLOB"><span
+                                                                                    class="a-IRR-headerLabel">Image
+                                                                                    Attachment2</span></th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="DOWNLOAD-BLOB"><span
+                                                                                    class="a-IRR-headerLabel">Image
+                                                                                    Attachment3</span></th>
+                                                                            <th class="a-IRR-header u-tC"
+                                                                                id="DOWNLOAD-BLOB"><span
+                                                                                    class="a-IRR-headerLabel">Image
+                                                                                    Attachment4</span></th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class=" u-tC"
+                                                                                headers="C35224853314028981">1</td>
+                                                                            <td class=" u-tC"
+                                                                                headers="C35260353824770133">7502427145
+                                                                            </td>
+                                                                            <td class=" u-tC"
+                                                                                headers="C35261171417770132">
+                                                                                4&#x2F;9&#x2F;2025</td>
+                                                                            <td class=" u-tC"
+                                                                                headers="C35261585524770132">Inspection
+                                                                            </td>
+                                                                            <td class=" u-tC"
+                                                                                headers="C35261983475770131">Inspected
+                                                                                the centre as per the instruction
+                                                                                received from TNeGA.
+                                                                                eSevai ID was locked due to nil
+                                                                                transaction and the operator requested
+                                                                                in TNeGA office to unlock it.
+
+                                                                                Centre is having required infrastructure
+                                                                                and the operator assued that they will
+                                                                                do transcations without any
+                                                                                interruption.</td>
+                                                                            <td class=" u-tC"
+                                                                                headers="C35262373760770131"> : </td>
+                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB"><a
+                                                                                    href="apex_util.get_blob?s=120706531155812&a=1111&c=35270779063770123&p=75&k1=13798&k2=&ck=MwrlI1Xm3f4voJyCTYImtHfcyBUM3FU4HTRcmfrpELRH6TRwuJbPdYMzTrHxULmfLuYDG3WM0E6JMQDaBLwXZg&rt=IR"
+                                                                                    alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;"
+                                                                                    title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 337KB"><i
+                                                                                        class="fa fa-eye"></i></a></td>
+                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB">
+                                                                            </td>
+                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB"><a
+                                                                                    href="apex_util.get_blob?s=120706531155812&a=1111&c=35267092009770127&p=75&k1=13798&k2=&ck=1kA_guPF2uHSKFI3qaehJlyimVFLbVHiyKy5IBZAwX9hTSbA3n4Gx3SDzo9wVYxpmPlqMAmdxO0395qT4xh9GQ&rt=IR"
+                                                                                    alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;"
+                                                                                    title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 752KB"><i
+                                                                                        class="fa fa-eye"></i></a></td>
+                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB"><a
+                                                                                    href="apex_util.get_blob?s=120706531155812&a=1111&c=35268373059770125&p=75&k1=13798&k2=&ck=J3e4jk37b9GLbb3EbXWTa2Gj_rS0jBYa91Xbqw6hNZF3R032b2rOHPa4_g3viYXj6tPQMtM4WbxUPTJKolN6Vg&rt=IR"
+                                                                                    alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;"
+                                                                                    title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 695KB"><i
+                                                                                        class="fa fa-eye"></i></a></td>
+                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div role="region"
+                                                                    aria-label="Pagination&#x20;of&#x20;Dairy&#x20;for&#x20;EDM"
+                                                                    class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
+                                                                    <ul class="a-IRR-pagination">
+                                                                        <li aria-hidden="true"
+                                                                            class="a-IRR-pagination-item is-disabled">
+                                                                        </li>
+                                                                        <li class="a-IRR-pagination-item"><span
+                                                                                class="a-IRR-pagination-label"> 1 -
+                                                                                1</span></li>
+                                                                        <li aria-hidden="true"
+                                                                            class="a-IRR-pagination-item is-disabled">
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true"
+                                                    class="a-IRR-sortWidget" id="DOWNLOAD-BLOB_sort_widget"
+                                                    style="display:none;">
+                                                    <h1 class="u-vh"
+                                                        aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">
+                                                        Column Actions</h1>
+                                                    <ul role="toolbar" class="a-IRR-sortWidget-actions"
+                                                        id="DOWNLOAD-BLOB_sort_widget_actions">
+                                                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                                                            id="DOWNLOAD-BLOB_sort_widget_action_up"><button
+                                                                class="a-Button a-IRR-button a-IRR-sortWidget-button"
+                                                                type="button" title="Sort&#x20;Ascending"
+                                                                aria-label="Sort&#x20;Ascending" data-option="up"><span
+                                                                    aria-hidden="true"
+                                                                    class="a-Icon icon-irr-sort-asc"></span></button>
+                                                        </li>
+                                                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                                                            id="DOWNLOAD-BLOB_sort_widget_action_down"><button
+                                                                class="a-Button a-IRR-button a-IRR-sortWidget-button"
+                                                                type="button" title="Sort&#x20;Descending"
+                                                                aria-label="Sort&#x20;Descending"
+                                                                data-option="down"><span aria-hidden="true"
+                                                                    class="a-Icon icon-irr-sort-desc"></span></button>
+                                                        </li>
+                                                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                                                            id="DOWNLOAD-BLOB_sort_widget_action_hide"><button
+                                                                class="a-Button a-IRR-button a-IRR-sortWidget-button"
+                                                                type="button" title="Hide&#x20;Column"
+                                                                aria-label="Hide&#x20;Column" data-option="hide"><span
+                                                                    aria-hidden="true"
+                                                                    class="a-Icon icon-irr-remove-col"></span></button>
+                                                        </li>
+                                                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                                                            id="DOWNLOAD-BLOB_sort_widget_action_break"><button
+                                                                class="a-Button a-IRR-button a-IRR-sortWidget-button"
+                                                                type="button" title="Control&#x20;Break"
+                                                                aria-label="Control&#x20;Break"
+                                                                data-option="break"><span aria-hidden="true"
+                                                                    class="a-Icon icon-irr-control-break"></span></button>
+                                                        </li>
+                                                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                                                            id="DOWNLOAD-BLOB_sort_widget_action_help"><button
+                                                                class="a-Button a-IRR-button a-IRR-sortWidget-button"
+                                                                type="button" title="Help" aria-label="Help"
+                                                                data-option="help" aria-pressed="false"><span
+                                                                    aria-hidden="true"
+                                                                    class="a-Icon icon-irr-help"></span></button></li>
+                                                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                                                            id="DOWNLOAD-BLOB_sort_widget_action_computation"><button
+                                                                class="a-Button a-IRR-button a-IRR-sortWidget-button"
+                                                                type="button" title="Compute" aria-label="Compute"
+                                                                data-option="computation"><span aria-hidden="true"
+                                                                    class="a-Icon icon-irr-calculator"></span></button>
+                                                        </li>
+                                                    </ul>
+                                                    <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
+                                                        id="DOWNLOAD-BLOB_sort_widget_help"></div>
+                                                    <div role="search" class="a-IRR-sortWidget-search"
+                                                        id="DOWNLOAD-BLOB_sort_widget_search"><label
+                                                            for="DOWNLOAD-BLOB_sort_widget_search_field"><span
+                                                                aria-hidden="true"
+                                                                class="a-IRR-sortWidget-searchLabel"></span><span
+                                                                class="u-vh">Search</span></label><input
+                                                            id="DOWNLOAD-BLOB_sort_widget_search_field"
+                                                            class="a-IRR-sortWidget-searchField" type="text"
+                                                            placeholder="Filter..." />
+                                                        <div role="group" aria-label="Filter&#x20;suggestions"
+                                                            class="a-IRR-sortWidget-rows"
+                                                            id="DOWNLOAD-BLOB_sort_widget_rows"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <footer class="t-Footer" id="t_Footer" role="contentinfo">
+                        <div class="t-Footer-body">
+                            <div class="t-Footer-content"></div>
+                            <div class="t-Footer-apex">
+                                <div class="t-Footer-version"> </div>
+                                <div class="t-Footer-customize"></div>
+
+                            </div>
+                        </div>
+                        <div class="t-Footer-top">
+                            <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                                aria-label="Start of page"><span class="a-Icon icon-up-chevron"
+                                    aria-hidden="true"></span></a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden"
+            id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+        <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+            value="&#x2F;9VzkPuj-CxN_1pjmhj7pLrpLxrFfmjMVSdjby7j4Ld1PxMq1TKD_-VdKCxk8K3qTdRhAUWDyFiewZTfNRaIbrA" />
+    </form>
+
+    <!-- jQuery -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/widget.treeView.min.js"></script>
+    <script type="module" src="../assets/js/commonMenu.js"></script>
+    <script src="../assets/js/widget.interactiveReport.min.js"></script>
+    <script src="../assets/js/widget.iconList.min.js"></script>
+    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+    <script src="../assets/js/widget.stickyWidget.min.js"></script>
+    <script src="../assets/js/item.Colorpicker.min.js"></script>
+    <script src="../assets/js/jetCommonBundle.min.js"></script>
+    <script src="../assets/js/chartBundle.min.js"></script>
+    <script src="../assets/js/toastUtil.js"></script>
+    <script type="module" src="../assets/js/dataTableUtil.js"></script>
+    <script src="../assets/js/crypto-js.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/encrypt_decrypt.js"></script>
+    <script src="../assets/js/globalHeader.js"></script>
+
+
+</body>
+
+</html>

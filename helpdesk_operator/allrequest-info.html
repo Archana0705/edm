@@ -455,9 +455,20 @@
                         <div class="col-6">
                           <button id="exitBtn" class="exitbtn">Exit</button>
                         </div>
-                        <div id="statusActionDiv" class="col-6 text-end" style="display: none;">
-                          <button id="closeRequestButton" class="closeRequestbutton">Close Request</button>
-                          <button id="reOpenBtn" class="reOpenbtn" type="button">Reopen</button>
+                        <div class="row">
+                          <div class="col-6"></div> <!-- Empty left space (optional) -->
+
+                          <div id="statusActionDiv" class="col-6 d-flex justify-content-end gap-2"
+                            style="display: none;">
+                            <button id="sendBackButton" class="exitbtn btn btn-sm" type="button"
+                              style="display: none;">Send Back</button>
+                            <button id="reassignButton" class="reassign btn btn-sm" type="button"
+                              style="display: none;">Reassign</button>
+                            <button id="inprogressButton" class="reOpenbtn btn btn-sm" type="button"
+                              style="display: none;">In Progress</button>
+                            <button id="resolvedBtn" class="resolvedbtn btn btn-success btn-sm" type="button"
+                              style="display: none;">Resolved</button>
+                          </div>
                         </div>
                       </div>
 
@@ -633,7 +644,7 @@
 
               $('#P16_REQUEST_STATUS_DISPLAY').text(decrypted.request_status);
               $('#P16_LOCATION').val(decrypted.location);
-              $('#P16_OPERATOR').val(decrypted.location);
+              $('#P16_OPERATOR').val(decrypted.operator);
               $('#P16_ISSUE_TYPE').val(decrypted.issue_type);
               $('#P16_SUB_CATEGORY').val(decrypted.short_description);
               $('#P16_IMPACTED_APPLICATION').val(decrypted.impacted_application);
@@ -692,17 +703,19 @@
           });
         }
       });
-
-      if (decodedStatus == 'Resolved') {
-        document.getElementById('statusActionDiv').style.display = 'block';
-
-      }
       $('#closeRequestButton').on('click', function (event) {
         event.preventDefault();
         const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
         feedbackModal.show();
       });
 
+      if (decodedStatus == 'New') {
+        document.getElementById('statusActionDiv').style.display = 'block';
+        document.getElementById('sendBackButton').style.display = 'block';
+        document.getElementById('reassignButton').style.display = 'block';
+        document.getElementById('inprogressButton').style.display = 'block';
+        document.getElementById('resolvedBtn').style.display = 'block';
+      }
       $('#submitFeedbackBtn').on('click', function (event) {
         event.preventDefault();
 
@@ -766,7 +779,7 @@
       });
 
 
-      $('#reOpenBtn').on('click', function (event) {
+      $('#resolvedBtn').on('click', function (event) {
 
         const updatePayload = {
           action: "update",
