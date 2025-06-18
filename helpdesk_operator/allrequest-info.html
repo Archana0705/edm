@@ -460,14 +460,14 @@
 
                           <div id="statusActionDiv" class="col-6 d-flex justify-content-end gap-2"
                             style="display: none;">
-                            <button id="sendBackButton" class="exitbtn btn btn-sm" type="button"
-                              style="display: none;">Send Back</button>
-                            <button id="reassignButton" class="reassign btn btn-sm" type="button"
-                              style="display: none;">Reassign</button>
+                            <button id="sendBackButton" class="exitbtn btn btn-sm" type="button" style="display: none;"
+                              data-redirect="inprogress-request.html">Send Back</button>
+                            <button id="reassignButton" class="reassign btn btn-sm" type="button" style="display: none;"
+                              data-redirect="reassigned-request.html">Reassign</button>
                             <button id="inprogressButton" class="reOpenbtn btn btn-sm" type="button"
-                              style="display: none;">In Progress</button>
+                              style="display: none;" data-redirect="inprogress-request.html">In Progress</button>
                             <button id="resolvedBtn" class="resolvedbtn btn btn-success btn-sm" type="button"
-                              style="display: none;">Resolved</button>
+                              style="display: none;" data-redirect="resolved-request.html">Resolved</button>
                           </div>
                         </div>
                       </div>
@@ -779,35 +779,188 @@
       });
 
 
-      $('#resolvedBtn').on('click', function (event) {
+      // $('#inprogressButton').on('click', function (event) {
+      //   const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      //   var additionalInfo = $('#P16_ADDITIONAL_INFORMATION').val();
+      //   if (!additionalInfo) {
+      //     showErrorToast("Please add the Work notes");
+      //     return
+      //   }
+      //   const updatePayload = {
+      //     action: "function_call",
+      //     function_name: "upt_edm_service_request_inprog_fn",
+      //     params: {
+      //       p_ADDITIONAL_INFORMATION: additionalInfo,
+      //       request_number: decodedDetails
+      //     }
+      //   };
 
-        const updatePayload = {
-          action: "update",
-          table: "EDM_SERVICE_REQUEST_T",
-          primary_key: "request_number",
-          request_number: decodedDetails,
-          request_status: 'Reopen'
-        };
+
+      //   // First API call: update status
+      //   $.ajax({
+      //     url: apiUrl,
+      //     type: 'POST',
+      //     data: { data: encryptData(updatePayload) },
+      //     success: function (response) {
+      //       showSuccessToast("Status changed Successfully");
+      //       setTimeout(() => {
+      //         window.location.href = "inprogress-request.html";
+      //       }, 1000)
+
+      //     },
+      //     error: function (error) {
+      //       showErrorToast("An error occurred during request status update.");
+      //     }
+      //   });
+      // });
+
+      // $('#sendBackButton').on('click', function (event) {
+      //   const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      //   var additionalInfo = $('#P16_ADDITIONAL_INFORMATION').val();
+      //   if (!additionalInfo) {
+      //     showErrorToast("Please add the Work notes");
+      //     return
+      //   }
+      //   const updatePayload = {
+      //     action: "function_call",
+      //     function_name: "upt_edm_service_request_sndbck_fn",
+      //     params: {
+      //       p_ADDITIONAL_INFORMATION: additionalInfo,
+      //       request_number: decodedDetails
+      //     }
+      //   };
 
 
-        // First API call: update status
-        $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
-          type: 'POST',
-          data: { data: encryptData(updatePayload) },
-          success: function (response) {
+      //   // First API call: update status
+      //   $.ajax({
+      //     url: apiUrl,
+      //     type: 'POST',
+      //     data: { data: encryptData(updatePayload) },
+      //     success: function (response) {
+      //       showSuccessToast("Status changed Successfully");
+      //       setTimeout(() => {
+      //         window.location.href = "inprogress-request.html";
+      //       }, 1000)
 
-            showSuccessToast("ReOpened successfully.");
-            setTimeout(() => {
-              window.location.href = "re-opened-request.html";
-            }, 1000)
+      //     },
+      //     error: function (error) {
+      //       showErrorToast("An error occurred during request status update.");
+      //     }
+      //   });
+      // });
 
-          },
-          error: function (error) {
-            showErrorToast("An error occurred during request status update.");
+      // $('#reassignButton').on('click', function (event) {
+      //   const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      //   var additionalInfo = $('#P16_ADDITIONAL_INFORMATION').val();
+      //   if (!additionalInfo) {
+      //     showErrorToast("Please add the Work notes");
+      //     return
+      //   }
+      //   const updatePayload = {
+      //     action: "function_call",
+      //     function_name: "upt_edm_service_request_reasgn_fn",
+      //     params: {
+      //       p_ADDITIONAL_INFORMATION: additionalInfo,
+      //       request_number: decodedDetails
+      //     }
+      //   };
+
+
+      //   // First API call: update status
+      //   $.ajax({
+      //     url: apiUrl,
+      //     type: 'POST',
+      //     data: { data: encryptData(updatePayload) },
+      //     success: function (response) {
+      //       showSuccessToast("Status changed Successfully");
+      //       setTimeout(() => {
+      //         window.location.href = "inprogress-request.html";
+      //       }, 1000)
+
+      //     },
+      //     error: function (error) {
+      //       showErrorToast("An error occurred during request status update.");
+      //     }
+      //   });
+      // });
+
+      // $('#resolvedBtn').on('click', function (event) {
+      //   const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      //   var additionalInfo = $('#P16_ADDITIONAL_INFORMATION').val();
+      //   if (!additionalInfo) {
+      //     showErrorToast("Please add the Work notes");
+      //     return
+      //   }
+      //   const updatePayload = {
+      //     action: "function_call",
+      //     function_name: "upt_edm_service_request_resolv_fn",
+      //     params: {
+      //       p_ADDITIONAL_INFORMATION: additionalInfo,
+      //       request_number: decodedDetails
+      //     }
+      //   };
+
+
+      //   // First API call: update status
+      //   $.ajax({
+      //     url: apiUrl,
+      //     type: 'POST',
+      //     data: { data: encryptData(updatePayload) },
+      //     success: function (response) {
+      //       showSuccessToast("Status changed Successfully");
+      //       setTimeout(() => {
+      //         window.location.href = "inprogress-request.html";
+      //       }, 1000)
+
+      //     },
+      //     error: function (error) {
+      //       showErrorToast("An error occurred during request status update.");
+      //     }
+      //   });
+      // });
+
+      function handleStatusUpdate(buttonId, functionName) {
+        $(`#${buttonId}`).on('click', function (event) {
+          const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+          const additionalInfo = $('#P16_ADDITIONAL_INFORMATION').val();
+          const redirectUrl = $(this).data('redirect');
+
+          if (!additionalInfo) {
+            showErrorToast("Please add the Work notes");
+            return;
           }
+
+          const updatePayload = {
+            action: "function_call",
+            function_name: functionName,
+            params: {
+              p_ADDITIONAL_INFORMATION: additionalInfo,
+              request_number: decodedDetails
+            }
+          };
+
+          $.ajax({
+            url: apiUrl,
+            type: 'POST',
+            data: { data: encryptData(updatePayload) },
+            success: function (response) {
+              showSuccessToast("Status changed Successfully");
+              setTimeout(() => {
+                window.location.href = redirectUrl;
+              }, 1000);
+            },
+            error: function () {
+              showErrorToast("An error occurred during request status update.");
+            }
+          });
         });
-      });
+      }
+
+      // Call this for each button
+      handleStatusUpdate('inprogressButton', 'upt_edm_service_request_inprog_fn');
+      handleStatusUpdate('sendBackButton', 'upt_edm_service_request_sndbck_fn');
+      handleStatusUpdate('reassignButton', 'upt_edm_service_request_reasgn_fn');
+      handleStatusUpdate('resolvedBtn', 'upt_edm_service_request_resolv_fn');
 
       $('#exitBtn').on('click', function (event) {
         event.preventDefault();
