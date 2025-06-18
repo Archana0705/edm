@@ -191,10 +191,52 @@ function renderDynamicMenu(containerId) {
     const currentFile = pathParts.pop();
     const currentFolder = pathParts.pop();
 
-    const filteredMenu = menuItems.filter(item => {
-        return item.roles.includes(userRole);
-    });
+    // const filteredMenu = menuItems.filter(item => {
+    //     return item.roles.includes(userRole);
+    // });
 
+    // filteredMenu.forEach(item => {
+    //     const li = document.createElement("li");
+
+    //     let href = "";
+    //     if (item.folder === currentFolder || item.folder === "") {
+    //         href = item.file;
+    //     } else {
+    //         href = `../${item.folder}/${item.file}`;
+    //     }
+
+    //     const a = document.createElement("a");
+    //     a.href = href;
+    //     a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
+
+    //     const isCurrent = item.file === currentFile &&
+    //         (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
+
+    //     li.appendChild(a);
+    //     li.setAttribute('data-current', isCurrent ? 'true' : 'false');
+    //     ul.appendChild(li);
+    // });
+    // STEP 1: Page-specific menu item restrictions
+    const pageSpecificMenuRestrictions = {
+        "edm-diary.html": {
+            allowedRoles: ["edistrict_manager"],
+            allowedLabels: ["Home"]
+        },
+    };
+
+    let filteredMenu = menuItems.filter(item => item.roles.includes(userRole));
+
+    // STEP 2: If current page has restrictions, apply them
+    if (pageSpecificMenuRestrictions[currentFile]) {
+        const restriction = pageSpecificMenuRestrictions[currentFile];
+        if (restriction.allowedRoles.includes(userRole)) {
+            filteredMenu = filteredMenu.filter(item =>
+                restriction.allowedLabels.includes(item.label)
+            );
+        }
+    }
+
+    // STEP 3: Render filtered menu
     filteredMenu.forEach(item => {
         const li = document.createElement("li");
 
@@ -207,7 +249,7 @@ function renderDynamicMenu(containerId) {
 
         const a = document.createElement("a");
         a.href = href;
-        a.innerHTML = `<span class="${item.icon}" style="margin-right: 8px;"></span>${item.label}`;
+        a.innerHTML = `<span class="${item.icon}" style="margin-right: 20px;"></span>${item.label}`;
 
         const isCurrent = item.file === currentFile &&
             (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
@@ -216,6 +258,7 @@ function renderDynamicMenu(containerId) {
         li.setAttribute('data-current', isCurrent ? 'true' : 'false');
         ul.appendChild(li);
     });
+
 }
 
 renderDynamicMenu("commonMenuContainer");
