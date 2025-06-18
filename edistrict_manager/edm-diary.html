@@ -12,208 +12,22 @@
     <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
-    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
-    <link rel="icon" href="../assets/img/app-icon-32.png">
-    <link rel="stylesheet" href="../assets/css/icon.css">
-
-    <style type="text/css">
-        @font-face {
-            font-family: 'FontApex';
-            src: url('../font/apex-5-icon-font.woff2') format('woff2'),
-                url('../font/apex-5-icon-font.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Font-APEX';
-            src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
-                url('../fonts/Font-APEX-Small.woff') format('woff'),
-                url('../fonts/Font-APEX-Large.woff2') format('woff2'),
-                url('../fonts/Font-APEX-Large.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        .t-fht-thead {
-            display: none !important;
-        }
-
-        .a-IRR-table thead {
-            visibility: visible !important;
-            position: static !important;
-        }
-
-        .a-IRR-table tbody th {
-            position: static !important;
-        }
-
-        /* Disable APEX's fixed/sticky header */
-        .a-IRR-tableContainer .a-IRR-table tbody th {
-            position: static !important;
-            top: auto !important;
-            z-index: 0 !important;
-        }
-
-        /* Ensure whole table scrolls together */
-        .a-IRR-tableContainer {
-            overflow-x: auto !important;
-            overflow-y: auto !important;
-            max-height: 500px;
-            /* Adjust height as needed */
-        }
-
-        .a-IRR-table {
-            table-layout: auto !important;
-            width: max-content !important;
-            display: table !important;
-            white-space: nowrap !important;
-        }
-    </style>
-    <style>
-        .t-fht-thead.js-stickyTableHeader {
-            display: none !important;
-        }
-
-        .a-IRR-table thead {
-            position: static !important;
-            visibility: visible !important;
-        }
-    </style>
-
-
-    <style nonce="-FfiJlVjxcJ0HaMyagpvKQ">
-        .t-Region-body {
-            /* display:none; */
-            background-color: #C7E3F8;
-        }
-
-        #P1_INSPECTION_COUNT,
-        #P0_INSPECTION_COUNT {
-            font-size: 20px;
-            color: #177DAE;
-            background-color: #C7E3F8;
-        }
-
-        #profile_img {
-            margin-left: -300px !important;
-        }
-
-        #change_password {
-            margin-top: 60px;
-        }
-
-        #popup {
-
-            background-image: URL('r/edmdev/1111/files/static/v1087/alert.jpg') !important;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .note_color {
-            color: rgba(255, 0, 0, 0.596);
-        }
-
-        .apex-item-display-only {
-            font-weight: bolder;
-            font-size: 17.5px;
-            color: #3d8064;
-            margin-top: 150px;
-            margin-left: 50px;
-        }
-
-        .has-media--background {
-            max-width: 100px;
-            border-radius: 50%;
-            margin-left: -10px;
-
-        }
-
-        .a-CardView-media--square .a-CardView-mediaImg,
-        .a-CardView-media--square iframe,
-        .a-CardView-media--widescreen .a-CardView-mediaImg,
-        .a-CardView-media--widescreen iframe {
-            bottom: 0;
-            height: 100%;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 100%;
-            border-radius: 50%;
-        }
-
-        .a-CardView-items--float .a-CardView-item {
-            float: left;
-            min-width: 160px;
-            margin-top: 0px;
-            position: absolute;
-            margin-top: -45px;
-            margin-left: 100px;
-        }
-
-        /*.a-CardView-items--float .a-CardView-item:hover {
-transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) 
-}*/
-        .a-StarRating-stars {
-            position: absolute;
-            margin-top: 160px;
-            margin-left: 100px;
-            border-radius: 2px;
-            flex-basis: auto;
-            flex-grow: 1;
-            flex-shrink: 0;
-            padding: var(--a-starrating-stars-padding-y, 4px) var(--a-starrating-stars-padding-x, 4px);
-        }
-
-        .a-StarRating-stars-fg .a-StarRating-star {
-            color: #d09b4c;
-        }
-
-        a-StarRating-star fa fa-star {
-
-            color: #b1b8b8;
-        }
-
-        /*#edm-logo {
-    width: 109px;
-    margin-left: -100px;
-    margin-right: 0px;
-}*/
-        #t_Body_title {
-            display: flex;
-            padding: 0.5% 15%;
-            justify-content: space-between;
-            height: 125px;
-        }
-
-        .apex_disabled {
-
-            opacity: 100% !important;
-
-        }
-
-        .app-links {
-            font-size: 13px;
-            padding: 3px 3px;
-            background-color: rgb(219, 219, 219);
-            border-radius: 20px;
-            margin: 5px 10px;
-            /* width: 80%; */
-            transition: all 0.1s ease-in-out;
-        }
-    </style>
-
-    <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
-    <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
-
+    <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+    <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+    <style>
+        #t_Body_nav {
+            width: 100% !important;
+        }
+    </style>
 </head>
 
 <body
@@ -248,55 +62,7 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
                 </div>
                 <div class="t-Header-navBar">
                     <div class="t-Header-navBar--start"></div>
-                    <div class="t-Header-navBar--center" style='color:black'>
-                        <ul class="t-NavigationBar " id="8792244222964376">
-                            <li class="t-NavigationBar-item ">
-                                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar"
-                                    type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
-                                    <span class="t-Icon fa&#x20;fa-user" aria-hidden="true"></span><span
-                                        class="t-Button-label">Hello
-                                        Ashwin !
-                                    </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow"
-                                        aria-hidden="true"></span>
-                                </button>
-                                <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
-                                    <ul>
-                                        <li class="" data-current="false" data-icon=""><a href="separator" title=""
-                                                target="">---</a></li>
-                                        <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
-                                                href="apex_authentication.logout?p_app_id=1111&p_session_id=116639350395160"
-                                                title="" target="">Sign Out</a></li>
-                                        <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a
-                                                href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D116639350395160%26dialogCs%3DXw9EasBbPRAs5LrBzjMX1Tpb4rE0BN6JjNq4eikJi95U9Jw5IdRHvDzvfQa-ct90R_RtsolO9guLKwZTmjuSBA&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                                                title="" target="">Change Password</a></li>
-                                        <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
-                                                href="/ords/r/edmdev/e-district-manager-application/user_admin?session=116639350395160"
-                                                title="" target="">User Admin</a></li>
-                                        <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
-                                                href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D116639350395160%26dialogCs%3D-H9J6ftvJgxAxeAlQfJzoMAWsfH4tTA9OILkur9ucXeUrsa8GLQcI3aMLaEI9favO5A_3RhrooCZxpplXrsS2g&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                                                title="" target="">My Profile</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="t-NavigationBar-item ">
-                                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title=""
-                                    target="">
-                                    <span class="t-Icon " aria-hidden="true"></span><span class="t-Button-label">Last
-                                        Logged in:
-                                        04-05-2025 04:04 PM</span><span class="t-Button-badge"></span>
-                                </a>
-                            </li>
-                            <li class="t-NavigationBar-item is-active " aria-current="page">
-                                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar"
-                                    href="/ords/r/edmdev/e-district-manager-application/home?session=116639350395160"
-                                    title="" target="">
-                                    <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true"></span><span
-                                        class="t-Button-label">
-                                    </span><span class="t-Button-badge">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <div id="globalHeader"></div>
                     <div class="t-Header-navBar--end"></div>
                 </div>
             </div>
@@ -306,49 +72,9 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
             <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
                 <div class="a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA js-navCollapsed--hidden"
                     id="t_TreeNav" data-id="77_tree" aria-label="Main Navigation">
-                    <ul>
-                        <li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home"
-                            data-shortcut="">
-                            <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=116639350395160&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w"
-                                title="" style="display: none" target="">Home</a>
-                            <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                                <div role="none" class="a-TreeView-row"></div>
-                                <div role="none" class="a-TreeView-content">
-                                    <span class="fa fa-file-o fa&#x20;fa-home"></span>
-                                    <span class="a-TreeView-label">Home</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-                            <a href="/ords/r/edmdev/e-district-manager-application/time-sheet-approvals?session=116639350395160"
-                                title="" style="display: none" target="">Timesheet Details</a>
-                            <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-                                <div role="none" class="a-TreeView-row"></div>
-                                <div role="none" class="a-TreeView-content">
-                                    <span class="fa fa-file-o "></span>
-                                    <span class="a-TreeView-label">Timesheet Details</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul id="commonMenuContainer"></ul>
                 </div>
             </div>
-            <script>
-                (() => {
-                    const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
-                        nav = document.getElementById('t_TreeNav').classList,
-                        body = document.getElementById('t_PageBody');
-                    if (!sessionStorage.getItem(pref)) { sessionStorage.setItem(pref, !nav.contains('js-defaultCollapsed')); }
-                    if (nav.contains('js-navCollapsed--default')) {
-                        body?.classList.add('js-navCollapsed--icons');
-                        if (sessionStorage.getItem(pref) === "false") { body?.classList.add('js-navCollapsed'); }
-                    }
-                    if (sessionStorage.getItem(pref) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
-                    for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
-                        label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
-                    }
-                })();
-            </script>
             <div class="t-Body-main">
                 <div class="t-Body-title" id="t_Body_title"></div>
                 <div class="t-Body-content" id="t_Body_content">
@@ -379,7 +105,7 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
                                                     <div class="t-Region-buttons-left"></div>
                                                     <div class="t-Region-buttons-right"></div>
                                                 </div>
-                                                <div class="t-Region-body">
+                                                <div class="t-Region-body bg-white-cls">
                                                     <div class="t-Region-orderBy"></div>
                                                     <html>
 
@@ -442,30 +168,9 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
                                                                             class="t-Form-label">Date</label>
                                                                     </div>
                                                                     <div class="t-Form-inputContainer">
-                                                                        <div class="t-Form-itemWrapper"><a-date-picker
-                                                                                id="P77_TS_DATE" change-month="true"
-                                                                                change-year="true" display-as="popup"
-                                                                                display-weeks="none"
-                                                                                format="dd&#x2F;mm&#x2F;yyyy"
-                                                                                maxlength="255"
-                                                                                previous-next-distance="one-month"
-                                                                                show-days-outside-month="visible"
-                                                                                show-on="focus" show-time="false"
-                                                                                size="32" time-increment-minute="15"
-                                                                                today-button="true"
-                                                                                valid-example="04&#x2F;05&#x2F;2025"
-                                                                                year-selection-range="5"><input
-                                                                                    aria-haspopup="dialog"
-                                                                                    class="apex-item-text&#x20;apex-item-datepicker"
-                                                                                    name="P77_TS_DATE" size="32"
-                                                                                    type="text"><button
-                                                                                    aria-haspopup="dialog"
-                                                                                    aria-label="Select&#x20;Date"
-                                                                                    class="a-Button&#x20;a-Button--calendar"
-                                                                                    tabindex="-1"
-                                                                                    title="Select&#x20;Date"
-                                                                                    type="button"><span
-                                                                                        class="a-Icon icon-calendar"></span></button></a-date-picker>
+                                                                        <div class="t-Form-itemWrapper"> <input
+                                                                                type="date" id="P53_COURT_FILE_DATE"
+                                                                                name="P53_COURT_FILE_DATE" required />
                                                                         </div><span id="P77_TS_DATE_error_placeholder"
                                                                             class="a-Form-error"
                                                                             data-template-id="8676716703964195_ET"></span>
@@ -474,7 +179,7 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
                                                             </div>
                                                             <div class="col col-3 apex-col-auto ">
                                                                 <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--select-list"
-                                                                    id="P77_TS_ACTIVITY_CONTAINER">
+                                                                    id="P77_TS_ACTIVITY_    CONTAINER">
                                                                     <div class="t-Form-labelContainer">
                                                                         <label for="P77_TS_ACTIVITY"
                                                                             id="P77_TS_ACTIVITY_LABEL"
@@ -638,314 +343,251 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row ">
-                                                            <div class="col col-3 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
-                                                                    id="P77_INSPECTION_REPORT_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P77_INSPECTION_REPORT"
-                                                                            id="P77_INSPECTION_REPORT_LABEL"
-                                                                            class="t-Form-label">Inspection
-                                                                            Report</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-1">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P77_INSPECTION_REPORT"
-                                                                                name="P77_INSPECTION_REPORT"
-                                                                                upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                max-file-size="1024"
-                                                                                download-link="true"><input type="file"
-                                                                                    id="P77_INSPECTION_REPORT_input"
-                                                                                    aria-labelledby="P77_INSPECTION_REPORT_LABEL"
-                                                                                    class="u-vh" />
-                                                                                <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-body"><span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </a-file-upload></div><span
-                                                                            id="P77_INSPECTION_REPORT_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="8676686131964195_ET"></span>
-                                                                    </div>
-                                                                </div><input type="hidden" name="P77_FILE_NAME5"
-                                                                    id="P77_FILE_NAME5" value=""><input type="hidden"
-                                                                    data-for="P77_FILE_NAME5"
-                                                                    value="LpaJqhSW3fqFCy4LxFB4v6Ez7ne90C5KyIfHi-NPewLRPhRAeaWM7tyRC9RHfNPNNXgvhgo0tYLHlB0OkgE2JQ"><input
-                                                                    type="hidden" name="P77_MIME_TYPE5"
-                                                                    id="P77_MIME_TYPE5" value=""><input type="hidden"
-                                                                    data-for="P77_MIME_TYPE5"
-                                                                    value="TMWU3M-RUPk9-8iRXEKWtEaJ34-QMD6w9AI2cNITKISVtkiuGxeE4OPcxNvPepb0H1nsvZGW_3_LI9IfYaeGqg">
+                                                        <div id="inspectionDetails" style="display: none;">
+                                                            <div class="row ">
+                                                                <div class="col col-4 apex-col-auto col-start col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P92_PHOTO_ATTACHMENT_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P92_PHOTO_ATTACHMENT"
+                                                                                id="P92_PHOTO_ATTACHMENT_LABEL"
+                                                                                class="t-Form-label">Inspection
+                                                                                Report</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="P7_UPLOAD_DROPZONE">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="P7_UPLOAD_DROPZONE_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="P7_UPLOAD_DROPZONE_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
+                                                                        </div>
+
+
+                                                                    </div><input type="hidden" name="P92_MIME_TYPE"
+                                                                        id="P92_MIME_TYPE" value=""><input type="hidden"
+                                                                        name="P92_FILE_NAME" id="P92_FILE_NAME"
+                                                                        value=""><input type="hidden" name="P92_STATUS"
+                                                                        id="P92_STATUS" value=""><input type="hidden"
+                                                                        name="P92_CREATED_BY" id="P92_CREATED_BY"
+                                                                        value=""><input type="hidden"
+                                                                        name="P92_CREATED_DTTM" id="P92_CREATED_DTTM"
+                                                                        value=""><input type="hidden"
+                                                                        name="P92_UPDATED_BY" id="P92_UPDATED_BY"
+                                                                        value=""><input type="hidden"
+                                                                        name="P92_UPDATED_DTTM" id="P92_UPDATED_DTTM"
+                                                                        value="">
+                                                                </div>
+
                                                             </div>
-                                                            <div class="col col-9 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
-                                                                    id="P77_IMAGE_ATTACHMENT1_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P77_IMAGE_ATTACHMENT1"
-                                                                            id="P77_IMAGE_ATTACHMENT1_LABEL"
-                                                                            class="t-Form-label">Rate card Image</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-7">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P77_IMAGE_ATTACHMENT1"
-                                                                                name="P77_IMAGE_ATTACHMENT1"
-                                                                                upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                max-file-size="1024"
-                                                                                download-link="true"><input type="file"
-                                                                                    id="P77_IMAGE_ATTACHMENT1_input"
-                                                                                    aria-labelledby="P77_IMAGE_ATTACHMENT1_LABEL"
-                                                                                    class="u-vh" />
-                                                                                <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
+                                                            <div class="row ">
+                                                                <div class="col col-3 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P77_IMAGE_ATTACHMENT2_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P77_IMAGE_ATTACHMENT2"
+                                                                                id="P77_IMAGE_ATTACHMENT2_LABEL"
+                                                                                class="t-Form-label">Inspection Image
+                                                                                1</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-1">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <a-file-upload
+                                                                                    id="P77_IMAGE_ATTACHMENT2"
+                                                                                    name="P77_IMAGE_ATTACHMENT2"
+                                                                                    upload-type="FILE"
+                                                                                    display-style="INLINE" size="30"
+                                                                                    label="Choose&#x20;File"
+                                                                                    description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
+                                                                                    max-file-size="1024"
+                                                                                    download-link="true"><input
+                                                                                        type="file"
+                                                                                        id="P77_IMAGE_ATTACHMENT2_input"
+                                                                                        aria-labelledby="P77_IMAGE_ATTACHMENT2_LABEL"
+                                                                                        class="u-vh" />
+                                                                                    <div
+                                                                                        class="a-FileDrop&#x20;a-FileDrop--inline">
+                                                                                        <div class="a-FileDrop-icon">
+                                                                                            <span
+                                                                                                class="a-Icon&#x20;icon-file-browse"
+                                                                                                aria-hidden="true">
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="a-FileDrop-body">
+                                                                                            <span
+                                                                                                class="a-FileDrop-heading">Choose
+                                                                                                File</span><span
+                                                                                                class="a-FileDrop-description">Select
+                                                                                                a file or drop one
+                                                                                                here.</span>
+                                                                                        </div>
+                                                                                        <div class="a-FileDrop-action">
+                                                                                            <span
+                                                                                                class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
+                                                                                                File</span>
+                                                                                        </div>
                                                                                     </div>
-                                                                                    <div class="a-FileDrop-body"><span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span>
+                                                                                </a-file-upload>
+                                                                            </div><span
+                                                                                id="P77_IMAGE_ATTACHMENT2_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="8676686131964195_ET"></span>
+                                                                        </div>
+                                                                    </div><input type="hidden" name="P77_FILE_NAME2"
+                                                                        id="P77_FILE_NAME2" value=""><input
+                                                                        type="hidden" data-for="P77_FILE_NAME2"
+                                                                        value="U2vtmWGFXIiTsVKBR8Jw9qJukKzRbjPjKpiPH6KKNCfDMQFXGr-RS5F8ATUgxOoC8XuS23OdiYa1WZU654434Q"><input
+                                                                        type="hidden" name="P77_MIME_TYPE2"
+                                                                        id="P77_MIME_TYPE2" value=""><input
+                                                                        type="hidden" data-for="P77_MIME_TYPE2"
+                                                                        value="00u5MPwBk4cPs1Fyp7MW4c_u5pZ2q56aDameYHnub660qu7KDCq19_sZEWhcqXqpSUw0FhTxU7iFUz6M16laBw">
+                                                                </div>
+                                                                <div class="col col-3 apex-col-auto ">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P77_IMAGE_ATTACHMENT3_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P77_IMAGE_ATTACHMENT3"
+                                                                                id="P77_IMAGE_ATTACHMENT3_LABEL"
+                                                                                class="t-Form-label">Inspection Image
+                                                                                2</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-1">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <a-file-upload
+                                                                                    id="P77_IMAGE_ATTACHMENT3"
+                                                                                    name="P77_IMAGE_ATTACHMENT3"
+                                                                                    upload-type="FILE"
+                                                                                    display-style="INLINE" size="30"
+                                                                                    label="Choose&#x20;File"
+                                                                                    description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
+                                                                                    max-file-size="1024"
+                                                                                    download-link="true"><input
+                                                                                        type="file"
+                                                                                        id="P77_IMAGE_ATTACHMENT3_input"
+                                                                                        aria-labelledby="P77_IMAGE_ATTACHMENT3_LABEL"
+                                                                                        class="u-vh" />
+                                                                                    <div
+                                                                                        class="a-FileDrop&#x20;a-FileDrop--inline">
+                                                                                        <div class="a-FileDrop-icon">
+                                                                                            <span
+                                                                                                class="a-Icon&#x20;icon-file-browse"
+                                                                                                aria-hidden="true">
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="a-FileDrop-body">
+                                                                                            <span
+                                                                                                class="a-FileDrop-heading">Choose
+                                                                                                File</span><span
+                                                                                                class="a-FileDrop-description">Select
+                                                                                                a file or drop one
+                                                                                                here.</span>
+                                                                                        </div>
+                                                                                        <div class="a-FileDrop-action">
+                                                                                            <span
+                                                                                                class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
+                                                                                                File</span>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                            </a-file-upload></div><span
-                                                                            id="P77_IMAGE_ATTACHMENT1_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="8676686131964195_ET"></span>
-                                                                    </div>
-                                                                </div><input type="hidden" name="P77_FILE_NAME1"
-                                                                    id="P77_FILE_NAME1" value=""><input type="hidden"
-                                                                    data-for="P77_FILE_NAME1"
-                                                                    value="_fBqTHnuFuyouvU8a34FCGygZb-1BhRzpibGkym_JEkYCVuaqAYlPGE2AxX9IdC-Qu2V_mcB4DiGQT9R8d4hWQ"><input
-                                                                    type="hidden" name="P77_MIME_TYPE1"
-                                                                    id="P77_MIME_TYPE1" value=""><input type="hidden"
-                                                                    data-for="P77_MIME_TYPE1"
-                                                                    value="M_d2dF63IDbyYviLoET9A1k9Uz2ZkZOenOxgj8c1TLBy7lEg3NG_zUUYc9A7dRmTJcZyr8OBf_XwP5v2BUY0Qg">
-                                                            </div>
-                                                        </div>
-                                                        <div class="row ">
-                                                            <div class="col col-3 apex-col-auto col-start">
-                                                                <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
-                                                                    id="P77_IMAGE_ATTACHMENT2_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P77_IMAGE_ATTACHMENT2"
-                                                                            id="P77_IMAGE_ATTACHMENT2_LABEL"
-                                                                            class="t-Form-label">Inspection Image
-                                                                            1</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-1">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P77_IMAGE_ATTACHMENT2"
-                                                                                name="P77_IMAGE_ATTACHMENT2"
-                                                                                upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                max-file-size="1024"
-                                                                                download-link="true"><input type="file"
-                                                                                    id="P77_IMAGE_ATTACHMENT2_input"
-                                                                                    aria-labelledby="P77_IMAGE_ATTACHMENT2_LABEL"
-                                                                                    class="u-vh" />
-                                                                                <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
+                                                                                </a-file-upload>
+                                                                            </div><span
+                                                                                id="P77_IMAGE_ATTACHMENT3_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="8676686131964195_ET"></span>
+                                                                        </div>
+                                                                    </div><input type="hidden" name="P77_FILE_NAME3"
+                                                                        id="P77_FILE_NAME3" value=""><input
+                                                                        type="hidden" data-for="P77_FILE_NAME3"
+                                                                        value="Tx5fTO9ZqDMA00DQupGnC6_g68a_dbyyoqOLEEjhqWnCwmUCs3h3ddPxtl9dO666nchCnIlBpJst2BQqSFZ3fQ"><input
+                                                                        type="hidden" name="P77_MIME_TYPE3"
+                                                                        id="P77_MIME_TYPE3" value=""><input
+                                                                        type="hidden" data-for="P77_MIME_TYPE3"
+                                                                        value="HhaJNCN9u2uNpW74xy1a_C7RlgfXlSH_3EBOHy33T1OhTIBz9GPvYllpAK_KcVz27z0Y4Y-qagnj4JIqjdt0mg">
+                                                                </div>
+                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P77_IMAGE_ATTACHMENT4_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P77_IMAGE_ATTACHMENT4"
+                                                                                id="P77_IMAGE_ATTACHMENT4_LABEL"
+                                                                                class="t-Form-label">Inspection Image
+                                                                                3</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <a-file-upload
+                                                                                    id="P77_IMAGE_ATTACHMENT4"
+                                                                                    name="P77_IMAGE_ATTACHMENT4"
+                                                                                    upload-type="FILE"
+                                                                                    display-style="INLINE" size="30"
+                                                                                    label="Choose&#x20;File"
+                                                                                    description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
+                                                                                    max-file-size="1024"
+                                                                                    download-link="true"><input
+                                                                                        type="file"
+                                                                                        id="P77_IMAGE_ATTACHMENT4_input"
+                                                                                        aria-labelledby="P77_IMAGE_ATTACHMENT4_LABEL"
+                                                                                        class="u-vh" />
+                                                                                    <div
+                                                                                        class="a-FileDrop&#x20;a-FileDrop--inline">
+                                                                                        <div class="a-FileDrop-icon">
+                                                                                            <span
+                                                                                                class="a-Icon&#x20;icon-file-browse"
+                                                                                                aria-hidden="true">
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="a-FileDrop-body">
+                                                                                            <span
+                                                                                                class="a-FileDrop-heading">Choose
+                                                                                                File</span><span
+                                                                                                class="a-FileDrop-description">Select
+                                                                                                a file or drop one
+                                                                                                here.</span>
+                                                                                        </div>
+                                                                                        <div class="a-FileDrop-action">
+                                                                                            <span
+                                                                                                class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
+                                                                                                File</span>
+                                                                                        </div>
                                                                                     </div>
-                                                                                    <div class="a-FileDrop-body"><span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </a-file-upload></div><span
-                                                                            id="P77_IMAGE_ATTACHMENT2_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="8676686131964195_ET"></span>
-                                                                    </div>
-                                                                </div><input type="hidden" name="P77_FILE_NAME2"
-                                                                    id="P77_FILE_NAME2" value=""><input type="hidden"
-                                                                    data-for="P77_FILE_NAME2"
-                                                                    value="U2vtmWGFXIiTsVKBR8Jw9qJukKzRbjPjKpiPH6KKNCfDMQFXGr-RS5F8ATUgxOoC8XuS23OdiYa1WZU654434Q"><input
-                                                                    type="hidden" name="P77_MIME_TYPE2"
-                                                                    id="P77_MIME_TYPE2" value=""><input type="hidden"
-                                                                    data-for="P77_MIME_TYPE2"
-                                                                    value="00u5MPwBk4cPs1Fyp7MW4c_u5pZ2q56aDameYHnub660qu7KDCq19_sZEWhcqXqpSUw0FhTxU7iFUz6M16laBw">
-                                                            </div>
-                                                            <div class="col col-3 apex-col-auto ">
-                                                                <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
-                                                                    id="P77_IMAGE_ATTACHMENT3_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P77_IMAGE_ATTACHMENT3"
-                                                                            id="P77_IMAGE_ATTACHMENT3_LABEL"
-                                                                            class="t-Form-label">Inspection Image
-                                                                            2</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-1">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P77_IMAGE_ATTACHMENT3"
-                                                                                name="P77_IMAGE_ATTACHMENT3"
-                                                                                upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                max-file-size="1024"
-                                                                                download-link="true"><input type="file"
-                                                                                    id="P77_IMAGE_ATTACHMENT3_input"
-                                                                                    aria-labelledby="P77_IMAGE_ATTACHMENT3_LABEL"
-                                                                                    class="u-vh" />
-                                                                                <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-body"><span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </a-file-upload></div><span
-                                                                            id="P77_IMAGE_ATTACHMENT3_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="8676686131964195_ET"></span>
-                                                                    </div>
-                                                                </div><input type="hidden" name="P77_FILE_NAME3"
-                                                                    id="P77_FILE_NAME3" value=""><input type="hidden"
-                                                                    data-for="P77_FILE_NAME3"
-                                                                    value="Tx5fTO9ZqDMA00DQupGnC6_g68a_dbyyoqOLEEjhqWnCwmUCs3h3ddPxtl9dO666nchCnIlBpJst2BQqSFZ3fQ"><input
-                                                                    type="hidden" name="P77_MIME_TYPE3"
-                                                                    id="P77_MIME_TYPE3" value=""><input type="hidden"
-                                                                    data-for="P77_MIME_TYPE3"
-                                                                    value="HhaJNCN9u2uNpW74xy1a_C7RlgfXlSH_3EBOHy33T1OhTIBz9GPvYllpAK_KcVz27z0Y4Y-qagnj4JIqjdt0mg">
-                                                            </div>
-                                                            <div class="col col-6 apex-col-auto col-end">
-                                                                <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
-                                                                    id="P77_IMAGE_ATTACHMENT4_CONTAINER">
-                                                                    <div class="t-Form-labelContainer col col-2">
-                                                                        <label for="P77_IMAGE_ATTACHMENT4"
-                                                                            id="P77_IMAGE_ATTACHMENT4_LABEL"
-                                                                            class="t-Form-label">Inspection Image
-                                                                            3</label>
-                                                                    </div>
-                                                                    <div class="t-Form-inputContainer col col-4">
-                                                                        <div class="t-Form-itemWrapper"><a-file-upload
-                                                                                id="P77_IMAGE_ATTACHMENT4"
-                                                                                name="P77_IMAGE_ATTACHMENT4"
-                                                                                upload-type="FILE"
-                                                                                display-style="INLINE" size="30"
-                                                                                label="Choose&#x20;File"
-                                                                                description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                max-file-size="1024"
-                                                                                download-link="true"><input type="file"
-                                                                                    id="P77_IMAGE_ATTACHMENT4_input"
-                                                                                    aria-labelledby="P77_IMAGE_ATTACHMENT4_LABEL"
-                                                                                    class="u-vh" />
-                                                                                <div
-                                                                                    class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                    <div class="a-FileDrop-icon">
-                                                                                        <span
-                                                                                            class="a-Icon&#x20;icon-file-browse"
-                                                                                            aria-hidden="true">
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="a-FileDrop-body"><span
-                                                                                            class="a-FileDrop-heading">Choose
-                                                                                            File</span><span
-                                                                                            class="a-FileDrop-description">Select
-                                                                                            a file or drop one
-                                                                                            here.</span></div>
-                                                                                    <div class="a-FileDrop-action"><span
-                                                                                            class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                            File</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </a-file-upload></div><span
-                                                                            id="P77_IMAGE_ATTACHMENT4_error_placeholder"
-                                                                            class="a-Form-error"
-                                                                            data-template-id="8676686131964195_ET"></span>
-                                                                    </div>
-                                                                </div><input type="hidden" name="P77_FILE_NAME4"
-                                                                    id="P77_FILE_NAME4" value=""><input type="hidden"
-                                                                    data-for="P77_FILE_NAME4"
-                                                                    value="vAgI_UKYhGeFld0vPlB9dofA7FPQW5Gh8J4vp6tcBkdCYUnUwSw5vaTe7_qRxxLeprHo10olI57iHjXzDWIY5Q"><input
-                                                                    type="hidden" name="P77_MIME_TYPE4"
-                                                                    id="P77_MIME_TYPE4" value=""><input type="hidden"
-                                                                    data-for="P77_MIME_TYPE4"
-                                                                    value="k9nyq1QbdFDZFJW7N5yu_jFbToCG9XdlFte2RP_BmkU8090x3uRK1cln91voU00caeqY_JoYZ1vVu3q2fCOY6w">
+                                                                                </a-file-upload>
+                                                                            </div><span
+                                                                                id="P77_IMAGE_ATTACHMENT4_error_placeholder"
+                                                                                class="a-Form-error"
+                                                                                data-template-id="8676686131964195_ET"></span>
+                                                                        </div>
+                                                                    </div><input type="hidden" name="P77_FILE_NAME4"
+                                                                        id="P77_FILE_NAME4" value=""><input
+                                                                        type="hidden" data-for="P77_FILE_NAME4"
+                                                                        value="vAgI_UKYhGeFld0vPlB9dofA7FPQW5Gh8J4vp6tcBkdCYUnUwSw5vaTe7_qRxxLeprHo10olI57iHjXzDWIY5Q"><input
+                                                                        type="hidden" name="P77_MIME_TYPE4"
+                                                                        id="P77_MIME_TYPE4" value=""><input
+                                                                        type="hidden" data-for="P77_MIME_TYPE4"
+                                                                        value="k9nyq1QbdFDZFJW7N5yu_jFbToCG9XdlFte2RP_BmkU8090x3uRK1cln91voU00caeqY_JoYZ1vVu3q2fCOY6w">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                 </div>
-                                                <div class="t-Region-buttons t-Region-buttons--bottom">
-                                                    <div class="t-Region-buttons-left"><button
-                                                            class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--large&#x20;t-Button--primary&#x20;t-Button--iconLeft&#x20;t-Button--hoverIconPush t-Button--hot"
-                                                            onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome?session=116639350395160&#x27;);"
-                                                            type="button" id="B15065433632936607"><span
-                                                                class="t-Icon t-Icon--left fa&#x20;fa-window-close-o"
-                                                                aria-hidden="true"></span><span
-                                                                class="t-Button-label">Cancel</span><span
-                                                                class="t-Icon t-Icon--right fa&#x20;fa-window-close-o"
-                                                                aria-hidden="true"></span></button></div>
-                                                    <div class="t-Region-buttons-right"><button
-                                                            class="t-Button t-Button--icon t-Button--large&#x20;t-Button--success&#x20;t-Button--iconLeft&#x20;t-Button--hoverIconPush t-Button--hot"
-                                                            onclick="apex.submit({request:&#x27;CREATE&#x27;,validate:true});"
-                                                            type="button" id="B15066844013936606"><span
-                                                                class="t-Icon t-Icon--left fa&#x20;fa-save-as"
-                                                                aria-hidden="true"></span><span
-                                                                class="t-Button-label">Save</span><span
-                                                                class="t-Icon t-Icon--right fa&#x20;fa-save-as"
-                                                                aria-hidden="true"></span></button><button
-                                                            class="t-Button t-Button--icon t-Button--large&#x20;t-Button--warning&#x20;t-Button--iconLeft&#x20;t-Button--hoverIconPush t-Button--hot"
-                                                            onclick="void(0);" type="button"
-                                                            id="B18824395708346934"><span
-                                                                class="t-Icon t-Icon--left fa&#x20;fa-repeat"
-                                                                aria-hidden="true"></span><span
-                                                                class="t-Button-label">Clear</span><span
-                                                                class="t-Icon t-Icon--right fa&#x20;fa-repeat"
-                                                                aria-hidden="true"></span></button></div>
+                                                <div class="row mb-5 p-2">
+                                                    <div class="col-6">
+                                                        <button id="cancelBtn" class="exitbtn">Exit</button>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <button id="submitBtn" class="resolvedbtn">Save</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1160,71 +802,180 @@ transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will g
     </form>
 
 
-    <script nonce="-FfiJlVjxcJ0HaMyagpvKQ">
-        var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
-        var apex = {
-            env: { APP_USER: "9344712827", APP_ID: "1111", APP_PAGE_ID: "1", APP_SESSION: "114230090361743", APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F", WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F", APEX_VERSION: "24.2.0", APEX_BASE_VERSION: "24.2", COMPATIBILITY_MODE: 21.2, NONCE: "-FfiJlVjxcJ0HaMyagpvKQ" },
-            libVersions: { cropperJs: "1.6.2", domPurify: "3.1.6", fontapex: "2.4", fullcalendar: "6.1.15", hammer: "2.0.8", jquery: "3.6.4", jqueryUi: "1.13.2", maplibre: "4.6.0", mapboxGlRtlText: "0.3.0", markedJs: "14.1.2", prismJs: "1.29.0", oraclejet: "17.0.2", turndown: "7.2.0", monacoEditor: "0.51.0", lessJs: "4.2.0" }
-        };
-    </script>
-    <script nonce="-FfiJlVjxcJ0HaMyagpvKQ" src="/i/24.2.0/libraries/apex/minified/desktop_all.min.js?v=24.2.0"></script>
-    <script nonce="-FfiJlVjxcJ0HaMyagpvKQ"
-        src="wwv_flow.js_messages?p_app_id=1111&p_lang=en&p_version=24.2.0-39529515031887&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
-    <script nonce="-FfiJlVjxcJ0HaMyagpvKQ"
-        src="wwv_flow.js_dialogs?p_app_id=1111&p_version=24.2.0-39529515031887"></script>
+    <!-- jQuery -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script nonce="-FfiJlVjxcJ0HaMyagpvKQ">
-        apex.da.initDaEventList = function () {
-            apex.da.gEventList = [
-                { "conditionElement": "P1_PASSWORD", "triggeringConditionType": "EQUALS", "triggeringConditionExpression": "Edm@1234", "bindEventType": "ready", "anyActionsFireOnInit": false, actionList: [] }];
-        }
-    </script>
-    <script type="module" src="../assets/js/statusbar.js"></script>
-    <script src="../assets/js/desktop_all.min.js"></script>
-    <script src="../assets/js/theme42.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/chart.js"></script>
-    <script src="../assets/js/add.min.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="../assets/js/widget.treeView.min.js"></script>
+    <script type="module" src="../assets/js/commonMenu.js"></script>
     <script src="../assets/js/widget.interactiveReport.min.js"></script>
     <script src="../assets/js/widget.iconList.min.js"></script>
     <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
     <script src="../assets/js/widget.stickyWidget.min.js"></script>
     <script src="../assets/js/item.Colorpicker.min.js"></script>
-    <script src="../assets/js/require.js"></script>
-    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
     <script src="../assets/js/jetCommonBundle.min.js"></script>
     <script src="../assets/js/chartBundle.min.js"></script>
+    <script src="../assets/js/toastUtil.js"></script>
+    <script type="module" src="../assets/js/dataTableUtil.js"></script>
+    <script src="../assets/js/crypto-js.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/encrypt_decrypt.js"></script>
+    <script src="../assets/js/singleFileUpload.js"></script>
+    <script src="../assets/js/globalHeader.js"></script>
+    <script src="../assets/js/validateField.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/js/globalHeader.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+            console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
 
-
-    <script nonce="-FfiJlVjxcJ0HaMyagpvKQ">
-        apex.session.initTimeouts(180, { "idle_time_ms": 3595000, "life_time_ms": 24955000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
-        apex.jQuery(function () {
-            apex.page.init(this, function () {
-                try {
-                    (function () { apex.widget.starRating("P1_NEW", { "readOnly": false, "isRequired": false, "showClearButton": false, "numStars": 5, "clearToolip": "Clear Rating", "iconClass": "fa-star", "iconTooltip": "#VALUE#", "activeColor": "", "inactiveColor": "", "showValue": false, "readOnlyDisplay": "STARS" }); })();
-                    (function () { apex.util.defineTemplates([{ "name": "APEX_CARDS_BEFORE", "template": "\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A", "args": [{ "name": "CARD_LAYOUT", "escape": "ATTR" }, { "name": "COMPONENT_CLASSES", "escape": "ATTR" }] }, { "name": "APEX_CARDS_CARD_8825038167996114", "template": "\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--background has-media--square has-media--cover{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=\u0022#MEDIA#\u0022 alt=\u0022\u0022 loading=\u0022lazy\u0022 \u002F\u003E\u003C\u002Fdiv\u003E\u000A{endif\u002F}\u000A\u003C\u002Fdiv\u003E\u000A\u003C\u002Fli\u003E\u000A", "args": [{ "name": "CARD_CLASSES", "escape": "ATTR" }, { "name": "MEDIA_POSITION", "escape": "ATTR" }, { "name": "MEDIA_APPEARANCE", "escape": "ATTR" }, { "name": "MEDIA_SIZING", "escape": "ATTR" }, { "name": "MEDIA_CLASSES", "escape": "ATTR" }, { "name": "MEDIA", "escape": "ATTR" }] }, { "name": "APEX_CARDS_AFTER", "template": "\u003C\u002Ful\u003E" }]); apex.widget.templateReportRegionInit({ "regionId": "8825038167996114", "regionStaticId": "profile_img", "regionType": "Cards", "ajaxIdentifier": "UkVHSU9OIFRZUEV-fjg4MjUwMzgxNjc5OTYxMTQ\u002F8XgiJ65oRGE2eG5cTSnQyNMJ5aQwc1_e-WjHYIE0uShIOhBplqJ1ZC3_5QOZiyGbF_ycYjTfTEht2nmQyQ2-Ng", "modelName": "profile_img", "modelOptions": { "regionId": 8825038167996114, "paginationType": "progressive", "pageSize": 100, "identityField": "USER_ID" }, "pagination": { "scroll": true, "showRange": false, "firstAndLastButtons": false, "hideSinglePage": true }, "footer": false, "hideEmptyFooter": true, "hasSize": false, "beforeTemplate": "{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--float\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}", "recordTemplate": "{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--background\u000AMEDIA_APPEARANCE:=a-CardView-media--square\u000AMEDIA_SIZING:=a-CardView-media--cover\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PHOTO_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_8825038167996114\u002F}", "afterTemplate": "{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}", "columns": [{ "USER_ID": { "index": 0 }, "PHOTO": { "index": 1 }, "APEX$PHOTO_BLOB": { "index": 2 }, "APEX$BUTTON_ACTION_EXISTS": { "index": 3 }, "APEX$FULL_ACTION_EXISTS": { "index": 4 }, "APEX$ACTION_EXISTS": { "index": 5 } }] }, gCard8825038167996114data); })();
-                } catch (e) { apex.debug.error(e) };
-                apex.item.waitForDelayLoadItems().done(function () {
-                    try {
-                        (function () {
-                            apex.da.initDaEventList();
-                            apex.da.init();
-                        })();
-                        apex.theme42.initializePage.noSideCol();
-
-                        apex.page.warnOnUnsavedChanges();
-                    } finally {
-                        apex.event.trigger(apex.gPageContext$, 'apexreadyend');
-                    };
-                });
-            });
-        }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
+            $('#pressReleaseTable').DataTable();
+        });
     </script>
 
     <script>
-        AOS.init();
+        console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
     </script>
+    <script>
+        $('#t_Button_navControl').on('click', function () {
+            $('#t_Body_nav').toggle();
+        });
+
+    </script>
+
+    <script type="module">
+        import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+        import { processFile, checkFile, renderFileList } from '../assets/js/singleFileUpload.js';
+        import { validateField, validateEmptyFields } from '../assets/js/validateField.js'
+        $(document).ready(function () {
+            debugger
+
+            var userId = localStorage.getItem('userId');
+            const langSwitch = 'en';
+            const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+            const secretKey = 'V7gN4dY8pT2xB3kRz';
+            let details = '';
+            let status = '';
+            const urlParams = new URLSearchParams(window.location.search);
+            const encodedDetails = urlParams.get('details');
+            const encodedStatus = urlParams.get('status');
+            const decodedDetails = atob(encodedDetails);
+            const decodedStatus = atob(encodedStatus);
+            console.log(decodedStatus, "decoded status");
+
+            console.log(decodedDetails, "decoded req number");
+            document.getElementById('P77_TS_ACTIVITY').addEventListener('change', function () {
+
+                const selectedValue = this.value;
+                const targetElement = document.getElementById('inspectionDetails');
+
+                if (selectedValue === "Inspection") {
+                    $('#inspectionDetails').show();
+
+                } else {
+                    $('#inspectionDetails').hide();
+                }
+            });
+            $('#submitBtn').on('click', async function (event) {
+                debugger
+                event.preventDefault();
+
+
+                // $('.field-error').remove(); // clear all previous errors
+
+
+
+
+                var courtFileDate = $('#P53_COURT_FILE_DATE').val();
+                var activity = $('#P77_TS_ACTIVITY').val();
+                var tsHrs = $('#P77_TS_HRS').val();
+                var tsMins = $('#P77_TS_MINS').val();
+                var tsNotes = $('#P77_TS_NOTES').val();
+                var tsTotalWrkngHrs = $('#P77_TOTAL_WORKING_HRS').val();
+
+                const payload = {
+                    action: "function_call",
+                    function_name: "edm_esevai_operator_change_request_edmall_fn",
+                    params: {
+                        courtFileDate: courtFileDate,
+                        activity: activity,
+                        tsHrs: tsHrs,
+                        tsMins: tsMins,
+                        tsNotes: tsNotes,
+                        tsTotalWrkngHrs: tsTotalWrkngHrs
+                    }
+                }
+
+
+                if (activity === "Inspection") {
+                    const uploadedFiles = await processFile('#P7_UPLOAD_DROPZONE_input');
+                    if (!uploadedFiles) return;
+                    const uploadFile = uploadedFiles[0];
+
+                    const fileSelectors = [
+                        '#P7_UPLOAD_DROPZONE_input',
+                        // '#file4',
+                        // '#file5'
+                    ];
+
+                    let allUploadedFiles = [];
+
+                    for (const selector of fileSelectors) {
+                        const files = await processFile(selector); // You already have this function
+                        if (files && files.length > 0) {
+                            allUploadedFiles = allUploadedFiles.concat(files);
+                        }
+                    }
+
+                    if (allUploadedFiles.length === 0) {
+                        alert("Please upload at least one file for inspection.");
+                        return;
+                    }
+
+                    payload.params.inspectionFiles = uploadFile;
+                }
+
+
+                console.log(payload);
+
+                return
+                $.ajax({
+                    url: apiUrl,
+                    method: "POST",
+                    headers: {
+                        'X-APP-Key': "edm",
+                        'X-APP-Name': "edm"
+                    },
+                    data: {
+                        data: encryptData(payload)
+                    },
+                    dataType: 'json',
+                    cache: false,
+                    success: function (response) {
+                        alert("inserted Succesfully")
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("API call failed:", {
+                            status: xhr.status,
+                            statusText: xhr.statusText,
+                            responseText: xhr.responseText,
+                            error: error
+                        });
+                    }
+                });
+
+
+                console.log(payload);
+
+            });
+
+        })
+    </script>
+
 </body>
 
 </html>

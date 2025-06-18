@@ -50,7 +50,7 @@ window.loadDataToTable = function ({
         },
         error(xhr, status, error) {
             console.error("API Error:", error);
-            tableBody.html('<tr><td colspan="10" class="text-center">Failed to load data</td></tr>');
+            tableBody.html('<tr><td colspan="10" class="text-center">No Data Found</td></tr>');
         }
     });
 };

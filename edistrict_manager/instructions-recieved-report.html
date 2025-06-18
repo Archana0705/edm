@@ -98,13 +98,17 @@
                           <thead>
                             <tr>
                               <th>Request Number</th>
-                              <th>Issue Type</th>
-                              <th>Short Description</th>
-                              <th>Request Status</th>
-                              <th>Created On</th>
-                              <th>Requested By</th>
-                              <th>Requested Group</th>
+                              <th>District</th>
                               <th>Assigned To</th>
+                              <th>Instruction Type</th>
+                              <th>Short Description</th>
+                              <th>Full Description</th>
+                              <th>Attachment</th>
+                              <th>Request Created Dttm</th>
+                              <th>Request By</th>
+                              <th>Request Status</th>
+                              <th>Edm Notes</th>
+                              <th>Edm Upload</th>
                             </tr>
                           </thead>
                           <tbody></tbody>
@@ -204,13 +208,6 @@
   <script src="../assets/js/encrypt_decrypt.js"></script>
   <script src="../assets/js/globalHeader.js"></script>
   <script>
-    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
-      $('#pressReleaseTable').DataTable().columns.adjust().draw();
-    });
-
-    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
-      apex.region("R60382631052657851").refresh();
-    });
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
       console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
@@ -229,8 +226,6 @@
 
   </script>
 
-
-
   <script type="module">
     import { encryptData } from '../assets/js/encrypt_decrypt.js';
     let dataTableRef;
@@ -245,9 +240,9 @@
 
       const payload = {
         action: "function_call",
-        function_name: "HD_EDM_SERVICE_ASSAIGN_EDMALL_Fn",
+        function_name: "edm_service_assign_edmall_fun",
         params: {
-          status: 'Assisned to Edm',
+          status: 'New',
           userid: userId,
         }
       }
@@ -268,13 +263,18 @@
           ${item.request_number}
         </a>
         </td>
-        <td class="u-tC">${item.issue_type || 'N/A'}</td>
-        <td class="u-tC">${item.short_description || 'N/A'}</td>
-        <td class="u-tC">${item.request_status || 'N/A'}</td>
-        <td class="u-tC">${item.created_date || 'N/A'}</td>
-        <td class="u-tC">${item.requested_by || 'N/A'}</td>
-        <td class="u-tC">${item.requested_group || 'N/A'}</td>
+        <td class="u-tC">${item.district || 'N/A'}</td>
         <td class="u-tC">${item.assigned_to || 'N/A'}</td>
+        <td class="u-tC">${item.instruction_type || 'N/A'}</td>
+        <td class="u-tC">${item.short_description || 'N/A'}</td>
+        <td class="u-tC">${item.full_description || 'N/A'}</td>
+        <td class="u-tC">${item.attachment || 'N/A'}</td>
+        <td class="u-tC">${item.request_created_dttm || 'N/A'}</td>
+        <td class="u-tC">${item.requested_by || 'N/A'}</td>
+        <td class="u-tC">${item.request_status || 'N/A'}</td>
+        <td class="u-tC">${item.edm_notes || 'N/A'}</td>
+        <td class="u-tC">${item.edm_upload || 'N/A'}</td>
+
       </tr>
     `;
         },
@@ -283,12 +283,14 @@
         }
       });
 
+
+
       $(document).on('click', '.closed_tab_class', function () {
         debugger
 
         const closedpayload = {
           action: "function_call",
-          function_name: "HD_EDM_SERVICE_ASSAIGN_EDMALL_Fn",
+          function_name: "edm_service_assign_edmall_fun",
           params: {
             status: 'Closed',
             userid: userId,
@@ -306,7 +308,11 @@
             const status = btoa(String(item.request_status));
             return `
       <tr>
-        <td class="u-tC">${item.request_number || 'N/A'}</td>
+        <td class="u-tL">
+        <a data-id="${item.request_number}" id="open-modal-btn" href="helpdesk-report-info.html?details=${applicationInfo}&status=${status}">
+          ${item.request_number}
+        </a>
+        </td>
         <td class="u-tC">${item.district || 'N/A'}</td>
         <td class="u-tC">${item.assigned_to || 'N/A'}</td>
         <td class="u-tC">${item.instruction_type || 'N/A'}</td>
@@ -318,6 +324,7 @@
         <td class="u-tC">${item.request_status || 'N/A'}</td>
         <td class="u-tC">${item.edm_notes || 'N/A'}</td>
         <td class="u-tC">${item.edm_upload || 'N/A'}</td>
+
       </tr>
     `;
           },
@@ -329,7 +336,6 @@
 
         $('#closed-tab').removeClass('closed_tab_class');
       })
-
 
     });
 

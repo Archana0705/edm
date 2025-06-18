@@ -7,7 +7,7 @@ export function renderStatusBar(containerId) {
         { label: "Service Request", href: "allrequest.html" },
         { label: "My Queue", href: "/my-queue" },
         { label: "Reference Documents", href: "/reference-documents" },
-        { label: "EDM Diary", href: "/edm-diary" },
+        { label: "EDM Diary", href: "edm-diary.html" },
         { label: "Training", href: "/training" },
         { label: "Reports & Dashboards", href: "/reports-dashboards" },
         { label: "Contacts", href: "/contacts" },

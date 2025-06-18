@@ -17,6 +17,8 @@
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -54,46 +56,6 @@
         </div>
         <div class="t-Header-navBar">
           <div class="t-Header-navBar--start"></div>
-          <!-- <div class="t-Header-navBar--center" style='color:black'>
-            <ul class="t-NavigationBar " id="8792244222964376">
-              <li class="t-NavigationBar-item ">
-                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
-                  id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
-                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true"></span><span class="t-Button-label">Hello
-                    Bakiyalakshmi V !
-                  </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow"
-                    aria-hidden="true"></span>
-                </button>
-                <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
-                  <ul>
-                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
-                        href="apex_authentication.logout?p_app_id=1111&p_session_id=114230090361743" title=""
-                        target="">Sign Out</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D114230090361743%26dialogCs%3D7pXDxNJV74dLDdk1vSN5xl9U9UuGW5WLOCT7GSIHCbJtmuHOVrUMrrZGZJ5SQFMdbY-DDp4Ia_X8b6xNCkq_Xg&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">Change Password</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D114230090361743%26dialogCs%3DrMGdIR7vr0hwAnI4-d6IuDb5NG0cwcroqOlyAGE_uHcT7Bi5tB-6YrmJBSNe4vNW4z-EVLOmeIZSsvip7t50vA&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">My Profile</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="t-NavigationBar-item ">
-                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-                  <span class="t-Icon " aria-hidden="true"></span><span class="t-Button-label">Last Logged in:
-                    04-05-2025 09:58 PM</span><span class="t-Button-badge"></span>
-                </a>
-              </li>
-              <li class="t-NavigationBar-item is-active " aria-current="page">
-                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar"
-                  href="/ords/r/edmdev/e-district-manager-application/home?session=114230090361743" title="" target="">
-                  <span class="t-Icon fa&#x20;fa-bell&#x20;" aria-hidden="true"></span><span class="t-Button-label">
-                  </span><span class="t-Button-badge">0</span>
-                </a>
-              </li>
-            </ul>
-          </div> -->
           <div id="globalHeader"></div>
           <div class="t-Header-navBar--end"></div>
         </div>
@@ -107,22 +69,6 @@
           <ul id="commonMenuContainer"></ul>
         </div>
       </div>
-      <script>
-        (() => {
-          const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
-            nav = document.getElementById('t_TreeNav').classList,
-            body = document.getElementById('t_PageBody');
-          if (!sessionStorage.getItem(pref)) { sessionStorage.setItem(pref, !nav.contains('js-defaultCollapsed')); }
-          if (nav.contains('js-navCollapsed--default')) {
-            body?.classList.add('js-navCollapsed--icons');
-            if (sessionStorage.getItem(pref) === "false") { body?.classList.add('js-navCollapsed'); }
-          }
-          if (sessionStorage.getItem(pref) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
-          for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
-            label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
-          }
-        })();
-      </script>
       <div class="t-Body-main">
         <div class="t-Body-title" id="t_Body_title"></div>
         <div class="t-Body-content" id="t_Body_content">
@@ -427,7 +373,7 @@
                                   <a-file-upload id="P7_UPLOAD_DROPZONE" name="P7_UPLOAD_DROPZONE" upload-type="FILE"
                                     display-style="NATIVE" size="30" download-link="true">
                                     <input type="file" id="P7_UPLOAD_DROPZONE_input"
-                                      aria-labelledby="P7_UPLOAD_DROPZONE_LABEL" />
+                                      aria-labelledby="P7_UPLOAD_DROPZONE_LABEL" multiple accept=".pdf, .jpg, .jpeg" />
                                     <div class="a-FileDrop&#x20;a-FileDrop--native"></div>
                                   </a-file-upload>
                                 </div>
@@ -437,140 +383,138 @@
 
                             </div>
                           </div>
-                          <div class="col col-1  col-end"><button
-                              class="t-Button t-Button--small&#x20;t-Button--primary&#x20;t-Button--padTop"
-                              type="button" id="upload"><span class="t-Button-label">Upload</span></button></div>
-                        </div>
-                        <div class="row ">
-                          <div class="col col-7  col-start">
-                            <div
-                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper apex-item-wrapper--textarea"
-                              id="P7_FULL_DESCRIPTION_CONTAINER">
-                              <div class="t-Form-labelContainer col col-2">
-                                <label for="P7_FULL_DESCRIPTION" id="P7_FULL_DESCRIPTION_LABEL"
-                                  class="t-Form-label">Full Description </label>
-                              </div>
-                              <div class="t-Form-inputContainer col col-5">
-                                <div class="t-Form-itemWrapper">
-                                  <div class="apex-item-group apex-item-group--textarea"><textarea
-                                      name="P7_FULL_DESCRIPTION" rows="5" cols="70" maxlength="5000"
-                                      id="P7_FULL_DESCRIPTION" class="textarea&#x20;apex-item-textarea"
-                                      data-counter="true" data-max-char="5000"></textarea>
-                                    <div id="P7_FULL_DESCRIPTION_CHAR_COUNT" style="display:none;"
-                                      class="apex-item-textarea-counter"><span id="P7_FULL_DESCRIPTION_CHAR_COUNTER"
-                                        class="apex-item-textarea-counter--length">0</span> of <span
-                                        class="apex-item-textarea-counter--size">5000</span>
+                          <div id="uploadedFileList" class="mt-2"></div>
+
+                          <div class="row ">
+                            <div class="col col-7  col-start">
+                              <div
+                                class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper apex-item-wrapper--textarea"
+                                id="P7_FULL_DESCRIPTION_CONTAINER">
+                                <div class="t-Form-labelContainer col col-2">
+                                  <label for="P7_FULL_DESCRIPTION" id="P7_FULL_DESCRIPTION_LABEL"
+                                    class="t-Form-label">Full Description </label>
+                                </div>
+                                <div class="t-Form-inputContainer col col-5">
+                                  <div class="t-Form-itemWrapper">
+                                    <div class="apex-item-group apex-item-group--textarea"><textarea
+                                        name="P7_FULL_DESCRIPTION" rows="5" cols="70" maxlength="5000"
+                                        id="P7_FULL_DESCRIPTION" class="textarea&#x20;apex-item-textarea"
+                                        data-counter="true" data-max-char="5000"></textarea>
+                                      <div id="P7_FULL_DESCRIPTION_CHAR_COUNT" style="display:none;"
+                                        class="apex-item-textarea-counter"><span id="P7_FULL_DESCRIPTION_CHAR_COUNTER"
+                                          class="apex-item-textarea-counter--length">0</span> of <span
+                                          class="apex-item-textarea-counter--size">5000</span>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="t-Form-itemAssistance">
-                                  <span id="P7_FULL_DESCRIPTION_error_placeholder" class="a-Form-error"
-                                    data-template-id="8676937166964195_ET"></span>
-                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
-                                </div>
-
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col col-2  "><span class="apex-grid-nbsp">&nbsp;</span></div>
-                          <div class="col col-3 apex-col-auto col-end">
-                            <div
-                              class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-placeholder apex-item-wrapper--text-field"
-                              id="P7_FILENAME_CONTAINER">
-                              <div class="t-Form-labelContainer col col-0">
-                                <label for="P7_FILENAME" id="P7_FILENAME_LABEL" class="t-Form-label">File Name</label>
-                              </div>
-                              <div class="t-Form-inputContainer col col-3">
-                                <div class="t-Form-itemWrapper"><input type="text" id="P7_FILENAME" name="P7_FILENAME"
-                                    placeholder="FileName" class="text_field&#x20;apex-item-text" value="" size="30"
-                                    data-enter-submit="false" data-is-page-item-type="true" /></div><span
-                                  id="P7_FILENAME_error_placeholder" class="a-Form-error"
-                                  data-template-id="8676686131964195_ET"></span>
-                              </div>
-                            </div><input type="hidden" name="P7_ASSIGNMENT_GROUP" id="P7_ASSIGNMENT_GROUP" value="">
-                          </div>
-                        </div>
-                        <div class="row ">
-                          <div class="col col-7  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
-                          <div class="col col-5 apex-col-auto col-end">
-                            <div
-                              class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noUI t-Region--scrollBody"
-                              id="attachment" role="banner" aria-label="New">
-                              <div class="t-Region-header">
-                                <div class="t-Region-headerItems t-Region-headerItems--title">
-                                  <span class="t-Region-headerIcon"><span class="t-Icon "
-                                      aria-hidden="true"></span></span>
-                                  <h2 class="t-Region-title" id="attachment_heading" data-apex-heading>New</h2>
-                                </div>
-                                <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
-                                    class="js-maximizeButtonContainer"></span></div>
-                              </div>
-                              <div class="t-Region-bodyWrap">
-                                <div class="t-Region-buttons t-Region-buttons--top">
-                                  <div class="t-Region-buttons-left"></div>
-                                  <div class="t-Region-buttons-right"></div>
-                                </div>
-                                <div class="t-Region-body">
-                                  <div class="t-Region-orderBy"></div>
-                                  <div id="report_37316341060994133_catch"><span class="nodatafound"></span>
+                                  <div class="t-Form-itemAssistance">
+                                    <span id="P7_FULL_DESCRIPTION_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676937166964195_ET"></span>
+                                    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
                                   </div>
 
                                 </div>
-                                <div class="t-Region-buttons t-Region-buttons--bottom">
-                                  <div class="t-Region-buttons-left"></div>
-                                  <div class="t-Region-buttons-right"></div>
-                                </div>
                               </div>
                             </div>
-                            <input type="hidden" name="P7_ASSIGNED_TO" id="P7_ASSIGNED_TO" value=""><input type="hidden"
-                              data-for="P7_ASSIGNED_TO"
-                              value="430JRz-bpu1jw6_usAIh5t5GfLuVVzypGkxuiXelekOiXklPzSh0mfMqdwsQtzopi0gotFOnR27Sy6W4M655WQ"><input
-                              type="hidden" name="P7_ADDITIONAL_INFORMATION" id="P7_ADDITIONAL_INFORMATION"
-                              value=""><input type="hidden" data-for="P7_ADDITIONAL_INFORMATION"
-                              value="az9hMz1ASn-uwIvOSRpPGt0sFrV3W6IptbElooWWaKo-Yng1Cq4q_RRQh3OTS4VWrbCujzXHE2vu9rzSHmN6AA"><input
-                              type="hidden" name="P7_FILE_NAME" id="P7_FILE_NAME" value=""><input type="hidden"
-                              name="P7_ATTACH_ID" id="P7_ATTACH_ID" value=""><input type="hidden" name="P7_NEW"
-                              id="P7_NEW" value="0"><input type="hidden" name="P7_HELPDESK_NOTES" id="P7_HELPDESK_NOTES"
-                              value=""><input type="hidden" name="P7_HISTORY" id="P7_HISTORY" value=""><input
-                              type="hidden" name="P7_ATTACH_CHARSET" id="P7_ATTACH_CHARSET" value=""><input
-                              type="hidden" name="P7_STATUS" id="P7_STATUS" value=""><input type="hidden"
-                              name="P7_CREATED_BY" id="P7_CREATED_BY" value=""><input type="hidden"
-                              name="P7_CREATED_DATE" id="P7_CREATED_DATE" value=""><input type="hidden"
-                              name="P7_UPDATED_BY" id="P7_UPDATED_BY" value=""><input type="hidden"
-                              name="P7_UPDATED_DATE" id="P7_UPDATED_DATE" value=""><input type="hidden"
-                              name="P7_REQUEST_STATUS" id="P7_REQUEST_STATUS" value=""><input type="hidden"
-                              name="P7_PRODUCT_RATING" id="P7_PRODUCT_RATING" value="file">
+                            <div class="col col-2  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                            <!-- <div class="col col-3 apex-col-auto col-end">
+                              <div
+                                class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-placeholder apex-item-wrapper--text-field"
+                                id="P7_FILENAME_CONTAINER">
+                                <div class="t-Form-labelContainer col col-0">
+                                  <label for="P7_FILENAME" id="P7_FILENAME_LABEL" class="t-Form-label">File Name</label>
+                                </div>
+                                <div class="t-Form-inputContainer col col-3">
+                                  <div class="t-Form-itemWrapper"><input type="text" id="P7_FILENAME" name="P7_FILENAME"
+                                      placeholder="FileName" class="text_field&#x20;apex-item-text" value="" size="30"
+                                      data-enter-submit="false" data-is-page-item-type="true" /></div><span
+                                    id="P7_FILENAME_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676686131964195_ET"></span>
+                                </div>
+                              </div><input type="hidden" name="P7_ASSIGNMENT_GROUP" id="P7_ASSIGNMENT_GROUP" value="">
+                            </div> -->
+                          </div>
+                          <div class="row ">
+                            <div class="col col-7  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                            <div class="col col-5 apex-col-auto col-end">
+                              <div
+                                class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noUI t-Region--scrollBody"
+                                id="attachment" role="banner" aria-label="New">
+                                <div class="t-Region-header">
+                                  <div class="t-Region-headerItems t-Region-headerItems--title">
+                                    <span class="t-Region-headerIcon"><span class="t-Icon "
+                                        aria-hidden="true"></span></span>
+                                    <h2 class="t-Region-title" id="attachment_heading" data-apex-heading>New</h2>
+                                  </div>
+                                  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
+                                      class="js-maximizeButtonContainer"></span></div>
+                                </div>
+                                <div class="t-Region-bodyWrap">
+                                  <div class="t-Region-buttons t-Region-buttons--top">
+                                    <div class="t-Region-buttons-left"></div>
+                                    <div class="t-Region-buttons-right"></div>
+                                  </div>
+                                  <div class="t-Region-body">
+                                    <div class="t-Region-orderBy"></div>
+                                    <div id="report_37316341060994133_catch"><span class="nodatafound"></span>
+                                    </div>
+
+                                  </div>
+                                  <div class="t-Region-buttons t-Region-buttons--bottom">
+                                    <div class="t-Region-buttons-left"></div>
+                                    <div class="t-Region-buttons-right"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <input type="hidden" name="P7_ASSIGNED_TO" id="P7_ASSIGNED_TO" value=""><input
+                                type="hidden" data-for="P7_ASSIGNED_TO"
+                                value="430JRz-bpu1jw6_usAIh5t5GfLuVVzypGkxuiXelekOiXklPzSh0mfMqdwsQtzopi0gotFOnR27Sy6W4M655WQ"><input
+                                type="hidden" name="P7_ADDITIONAL_INFORMATION" id="P7_ADDITIONAL_INFORMATION"
+                                value=""><input type="hidden" data-for="P7_ADDITIONAL_INFORMATION"
+                                value="az9hMz1ASn-uwIvOSRpPGt0sFrV3W6IptbElooWWaKo-Yng1Cq4q_RRQh3OTS4VWrbCujzXHE2vu9rzSHmN6AA"><input
+                                type="hidden" name="P7_FILE_NAME" id="P7_FILE_NAME" value=""><input type="hidden"
+                                name="P7_ATTACH_ID" id="P7_ATTACH_ID" value=""><input type="hidden" name="P7_NEW"
+                                id="P7_NEW" value="0"><input type="hidden" name="P7_HELPDESK_NOTES"
+                                id="P7_HELPDESK_NOTES" value=""><input type="hidden" name="P7_HISTORY" id="P7_HISTORY"
+                                value=""><input type="hidden" name="P7_ATTACH_CHARSET" id="P7_ATTACH_CHARSET"
+                                value=""><input type="hidden" name="P7_STATUS" id="P7_STATUS" value=""><input
+                                type="hidden" name="P7_CREATED_BY" id="P7_CREATED_BY" value=""><input type="hidden"
+                                name="P7_CREATED_DATE" id="P7_CREATED_DATE" value=""><input type="hidden"
+                                name="P7_UPDATED_BY" id="P7_UPDATED_BY" value=""><input type="hidden"
+                                name="P7_UPDATED_DATE" id="P7_UPDATED_DATE" value=""><input type="hidden"
+                                name="P7_REQUEST_STATUS" id="P7_REQUEST_STATUS" value=""><input type="hidden"
+                                name="P7_PRODUCT_RATING" id="P7_PRODUCT_RATING" value="file">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col col-12 apex-col-auto col-start col-end">
+                      <div class="t-ButtonRegion t-Form--floatLeft " id="buttons" role="region" aria-label="Buttons">
+                        <div class="t-ButtonRegion-wrap">
+                          <div class="t-ButtonRegion-col t-ButtonRegion-col--left">
+                            <div class="t-ButtonRegion-buttons"></div>
+                          </div>
+
+                          <div class="t-ButtonRegion-col t-ButtonRegion-col--right">
+                            <div class="t-ButtonRegion-buttons"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="row ">
-                  <div class="col col-12 apex-col-auto col-start col-end">
-                    <div class="t-ButtonRegion t-Form--floatLeft " id="buttons" role="region" aria-label="Buttons">
-                      <div class="t-ButtonRegion-wrap">
-                        <div class="t-ButtonRegion-col t-ButtonRegion-col--left">
-                          <div class="t-ButtonRegion-buttons"></div>
-                        </div>
-
-                        <div class="t-ButtonRegion-col t-ButtonRegion-col--right">
-                          <div class="t-ButtonRegion-buttons"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+              <div class="row mb-5 p-2">
+                <div class="col-6">
+                  <button id="exitBtn" class="exitbtn">Exit</button>
+                </div>
+                <div id="statusActionDiv" class="col-6 text-end">
+                  <button id="submitBtn" class="resolvedbtn">Submit</button>
                 </div>
               </div>
-            </div>
-            <div class="row mb-5 p-2">
-              <div class="col-6">
-                <button id="exitBtn" class="exitbtn">Exit</button>
-              </div>
-              <div id="statusActionDiv" class="col-6 text-end">
-                <button id="closeRequestButton" class="resolvedbtn">Submit</button>
-              </div>
-            </div>
           </main>
           <footer class="t-Footer" id="t_Footer" role="contentinfo">
             <div class="t-Footer-body">
@@ -596,6 +540,7 @@
 
   <!-- jQuery -->
   <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- DataTables -->
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
@@ -655,7 +600,7 @@
 
   <script type="module">
     import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
-    import { processFile, checkFile } from '../assets/js/file.js';
+    import { processFile, checkFile, renderFileList } from '../assets/js/file.js';
     let dataTableRef;
 
     $(document).ready(function () {
@@ -666,6 +611,7 @@
       const secretKey = 'V7gN4dY8pT2xB3kRz';
       const district = localStorage.getItem('userDistrict');
       const username = localStorage.getItem('userName');
+      const mobnumber = localStorage.getItem('userMob');
       $('#P7_REQUESTED_DISTRICT_DISPLAY').text(district);
       $('#P7_REQUESTED_BY_DISPLAY').text(username);
       const payload = {
@@ -673,7 +619,7 @@
         function_name: "Taluk_edm_fn",
         params: {
           district: district,
-          userid: '9940660466'
+          userid: mobnumber
         }
       };
 
@@ -872,19 +818,23 @@
 
 
 
-      $('#submitBtn').on('click', async function () {
+      $('#submitBtn').on('click', async function (event) {
         debugger
         event.preventDefault();
-        if ($('#P7_UPLOAD_DROPZONE_input')) {
-          uploadFile = await processFile('#P7_UPLOAD_DROPZONE_input');
-        }
-        checkFile('#P7_UPLOAD_DROPZONE');
 
-        uploadPayload = {
-          "INTERIM": uploadFile && uploadFile.fileBase64 ? uploadFile.fileBase64 : null,
-          "INTERIM_ATTACH_FILENAME": uploadFile && uploadFile.filename ? uploadFile.filename : null,
-          "INTERIM_ATTACH_MIMETYPE": uploadFile && uploadFile.mimetype ? uploadFile.mimetype : null,
-          "COURT_ID": "POCSO/JULY     /2024/0345"
+
+        if (checkFile('#P7_UPLOAD_DROPZONE_input')) {
+          const uploadedFiles = await processFile('#P7_UPLOAD_DROPZONE_input');
+          renderFileList(uploadedFiles);
+
+          uploadPayload = uploadedFiles.map(file => ({
+            p_upload: file.fileBase64,
+            p_attach_filename: file.filename,
+            p_attach_mimetype: file.mimetype,
+          }));
+        }
+        function getFormattedDateTime() {
+          return new Date().toISOString(); // Format: YYYY-MM-DDTHH:mm:ss.sssZ
         }
 
         var taluk = $('#P7_LOCATION').val();
@@ -895,24 +845,63 @@
         var short_des = $('#P7_SHORT').val();
         var full_des = $('#P7_FULL_DESCRIPTION').val();
         var contact_type = $('#P7_CONTACT_TYPE').val();
-
-
+        var requestedgroup = $('#P7_REQUESTED_GROUP').val();
+        const timestamp = getFormattedDateTime();
         const payload = {
           action: "function_call",
-          function_name: "Taluk_edm_fn",
+          function_name: "insert_edm_service_request_fn",
           params: {
-            userid: userId,
-            taluk: taluk,
-            operator: operator,
-            issue_type: issue_type,
-            sub_category: sub_category,
-            impacted_applications: impacted_applications,
-            uploadPayload: uploadPayload
+            p_operator: operator,
+            p_location: taluk,
+            p_issue_type: issue_type,
+            p_impacted_application: impacted_applications,
+            p_priority: "priority",
+            p_short_description: sub_category,
+            p_full_description: full_des,
+            p_additional_information: short_des,
+            p_helpdesk_notes: '',
+            p_history: '',
+            p_upload: uploadPayload[0].p_upload,
+            p_attach_mimetype: uploadPayload[0].p_attach_mimetype,
+            p_attach_filename: uploadPayload[0].p_attach_filename,
+            p_request_created: timestamp,
+            p_requested_by: username,
+            p_requested_district: district,
+            p_requested_group: requestedgroup,
+            p_contact_type: contact_type,
+            p_assignment_group: '',
+            p_product_rating: '',
+            p_short: short_des,
+            p_created_by: userId,
+
           }
         }
-        console.log(payload)
+
+        console.log(payload);
+        $.ajax({
+          url: apiUrl,
+          method: 'POST',
+          headers: {
+            'X-APP-Key': 'edm',
+            'X-APP-Name': 'edm'
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          success: function (response) {
+            showSuccessToast("Submitted successfully.");
+            location.reload();
+
+          },
+          error(xhr, status, error) {
+            console.error("Issue Type API Error:", error);
+            alert("Failed to load issue types.");
+          }
+        });
 
       });
+
       $('#exitBtn').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
