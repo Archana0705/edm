@@ -61,47 +61,7 @@
         </div>
         <div class="t-Header-navBar">
           <div class="t-Header-navBar--start"></div>
-          <div class="t-Header-navBar--center" style='color:black'>
-            <ul class="t-NavigationBar " id="8792244222964376">
-              <li class="t-NavigationBar-item ">
-                <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button"
-                  id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
-                  <span class="t-Icon fa&#x20;fa-user" aria-hidden="true"></span><span class="t-Button-label">Hello
-                    Manju !
-                  </span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow"
-                    aria-hidden="true"></span>
-                </button>
-                <div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414">
-                  <ul>
-                    <li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a
-                        href="apex_authentication.logout?p_app_id=1111&p_session_id=114048261149373" title=""
-                        target="">Sign Out</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D114048261149373%26dialogCs%3D8IijKNdS-dqefY0lI0oxSqCzWJFFGPvy00Z-lEUf8oqRQNE0BzdWu_eeelVTtj9gQa6l4kaiI0Pv3HMWlze8mQ&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">Change Password</a></li>
-                    <li class="" data-current="false" data-icon="fa&#x20;fa-user"><a
-                        href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D114048261149373%26dialogCs%3Dt4Es6-6kRjTpSet6FSa-l8DTsruP3UV5A8XRu6pibYVXc_DCM3dsDZ18J58bltMk-ndvJ5XgSchVRS3AxymJHw&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24"
-                        title="" target="">My Profile</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="t-NavigationBar-item ">
-                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-                  <span class="t-Icon " aria-hidden="true"></span><span class="t-Button-label">Last Logged in:
-                    04-05-2025 07:44 PM</span><span class="t-Button-badge"></span>
-                </a>
-              </li>
-              <li class="t-NavigationBar-item ">
-                <a class="t-Button t-Button--icon t-Button--header t-Button--navBar"
-                  href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fnotification%3Fsession%3D114048261149373%26dialogCs%3DsGfh5YtHarVjpffn0JCXIJUd13z9LPjVkgharzkiLiB4mURqFrFzC2eM9Ao09WCKB2ybI38TeP3FxWuii1JT2g&appId=1111&pageId=45&tmpl=DRAWER&title=Notification&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=%20js-dialog-class-t-Drawer--pullOutEnd&trgEl=apex.gPageContext%24"
-                  title="" target="">
-                  <span class="t-Icon fa&#x20;fa-bell&#x20;fa-anim-horizontal-shake" aria-hidden="true"></span><span
-                    class="t-Button-label"> </span><span class="t-Button-badge">12</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div id="globalHeader"></div>
           <div class="t-Header-navBar--end"></div>
         </div>
       </div>
@@ -247,13 +207,11 @@
                           </div>
                           <div class="col col-1  "><button
                               class="t-Button t-Button--icon t-Button--success&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
-                              onclick="apex.submit({request:&#x27;Search&#x27;,validate:true});" type="button"
-                              id="B78164121363008477"><span class="t-Icon t-Icon--left fa&#x20;fa-search"
+                              type="button" id="B78164121363008477"><span class="t-Icon t-Icon--left fa&#x20;fa-search"
                                 aria-hidden="true"></span><span class="t-Button-label">Search</span><span
                                 class="t-Icon t-Icon--right fa&#x20;fa-search" aria-hidden="true"></span></button></div>
                           <div class="col col-1  "><button
                               class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--warning&#x20;t-Button--iconLeft&#x20;t-Button--padTop"
-                              onclick="apex.navigation.redirect(&#x27;\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fnew-request?clear=64\u0026session=114048261149373\u0026cs=380a3jHCBCLWLclN_OYhgR-D6EItp_xegjWuY0s2rNb7Zyil1qvJrp7lkRwwgmY0PIepcVZ3b50RV45O7ZfeJmQ&#x27;);"
                               type="button" id="B78164504890008476"><span class="t-Icon t-Icon--left fa&#x20;fa-refresh"
                                 aria-hidden="true"></span><span class="t-Button-label">Clear</span><span
                                 class="t-Icon t-Icon--right fa&#x20;fa-refresh" aria-hidden="true"></span></button>
@@ -274,300 +232,12 @@
                           <div id="R105002415629461339_full_view" class="a-IRR-fullView">
                             <div id="R105002415629461339_actions_menu"></div>
                             <div id="R105002415629461339_column_search_drop" class="a-IRR-colSearch"></div>
-                            <div id="R105002415629461339_toolbar" class="a-IRR-toolbar">
-                              <div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;All&#x20;Request"
-                                id="R105002415629461339_toolbar_controls" class="a-IRR-controls">
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--search">
-                                  <div class="a-IRR-search"><input type="hidden"
-                                      id="R105002415629461339_column_search_current_column" />
-                                    <div class="a-IRR-colSelector"><button id="R105002415629461339_column_search_root"
-                                        data-menu="R105002415629461339_column_search_drop"
-                                        class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel"
-                                        title="Select&#x20;columns&#x20;to&#x20;search"
-                                        aria-label="Select&#x20;columns&#x20;to&#x20;search" type="button"><span
-                                          class="a-Icon icon-search" aria-hidden="true"></span><span
-                                          class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div>
-                                    <div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field"
-                                        id="R105002415629461339_search_field" title="Search Report" type="search"
-                                        size="30" maxlength="4000" value="" /></div>
-                                    <div class="a-IRR-searchButtonContainer"><button
-                                        id="R105002415629461339_search_button"
-                                        class="a-Button a-IRR-button a-IRR-button--search"
-                                        type="button"><span>Go</span></button></div>
-                                  </div>
-                                </div>
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--options">
-                                  <div class="a-IRR-rowSelector"><label
-                                      for="R105002415629461339_row_select">Rows</label><select class="a-IRR-selectList"
-                                      size="1" id="R105002415629461339_row_select" name="p_accept_processing">
-                                      <option value="1">1</option>
-                                      <option value="5">5</option>
-                                      <option value="10">10</option>
-                                      <option selected="selected" value="15">15</option>
-                                      <option value="20">20</option>
-                                      <option value="25">25</option>
-                                      <option value="50">50</option>
-                                      <option value="100">100</option>
-                                      <option value="1000">1000</option>
-                                      <option value="100000">All</option>
-                                    </select></div>
-                                  <div class="a-IRR-actions"><button id="R105002415629461339_actions_button"
-                                      class="a-Button a-IRR-button a-IRR-button--actions" type="button"
-                                      data-menu="R105002415629461339_actions_menu">Actions<span aria-hidden="true"
-                                        class="a-Icon icon-menu-drop-down"></span></button></div>
-                                </div>
-                              </div>
-                            </div>
+                           
                             <div id="R105002415629461339_content" class="a-IRR-content ">
                               <div id="R105002415629461339_dialog_js" class="a-IRR-dialogBody" style="display:none;">
                               </div><input type="hidden" id="R105002415629461339_worksheet_id"
                                 value="105002543870461339" />
-                              <input type="hidden" id="R105002415629461339_app_user" value="6380988375" />
-                              <input type="hidden" id="R105002415629461339_report_id" value="105042170739604638" />
-                              <input type="hidden" id="R105002415629461339_view_mode" value="REPORT" />
-                              <div role="region" aria-label="Report&#x20;settings&#x20;of&#x20;All&#x20;Request"
-                                class="a-MediaBlock a-IRR-controlsContainer" id="R105002415629461339_control_panel">
-                                <div class="a-MediaBlock-graphic">
-                                  <h3 aria-hidden="true" class="u-vh">Report Settings</h3>
-                                  <span role="heading" aria-level="3"><button type="button"
-                                      class="a-Button a-IRR-button a-IRR-button--controls"><span
-                                        class="a-Icon a-Collapsible-icon icon-down-arrow"
-                                        aria-hidden="true"></span></button></span>
-                                </div>
-                                <div class="a-MediaBlock-content">
-                                  <ul role="none" class="a-IRR-controls">
-
-
-
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                      aria-labelledby="control_text_10999907087059819" role="region"><span
-                                        class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                          data-setting="highlight" data-highlight-id="10999907087059819"
-                                          aria-label="Highlight" aria-describedby="control_text_10999907087059819"
-                                          type="checkbox" id="control_10999907087059819" checked="checked" /><label
-                                          for="control_10999907087059819" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                          aria-describedby="control_text_10999907087059819"
-                                          aria-controls="control_10999907087059819"
-                                          class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                          data-highlight-id="10999907087059819" data-bgcol="#feabc4"
-                                          data-ftcol="#000000"><span aria-hidden="true">Hours Since Creation &gt;
-                                            48</span><span aria-hidden="true" class="u-vh"
-                                            id="control_text_10999907087059819">Highlight&#x20;Row,&#x20;&#x23;000000&#x20;on&#x20;&#x23;feabc4:
-                                            Hours Since Creation &gt; 48</span><span class="u-vh">Edit
-                                            Highlight</span></button></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_10999907087059819"
-                                          aria-controls="control_10999907087059819" type="button"
-                                          data-setting="highlight" data-highlight-id="10999907087059819"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#feabc4" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight is-error"
-                                      aria-label="Error&#x21;&#x20;Highlight&#x3A;&#x20;PRIORITY&#x20;&#x3D;&#x20;&#x27;Critical&#x27;"
-                                      role="region"><span class="a-IRR-controls-cell"><input
-                                          class="a-IRR-controlsCheckbox" data-setting="highlight"
-                                          data-highlight-id="11000076360059819" disabled aria-invalid="true"
-                                          aria-label="Highlight" aria-describedby="control_text_11000076360059819"
-                                          type="checkbox" id="control_11000076360059819" checked="checked" /><label
-                                          for="control_11000076360059819" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><span aria-hidden="true"
-                                          id="control_text_11000076360059819" class="a-IRR-controlsLabel">Highlight:
-                                          PRIORITY = &#x27;Critical&#x27;</span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11000076360059819"
-                                          aria-controls="control_11000076360059819" type="button"
-                                          data-setting="highlight" data-highlight-id="11000076360059819"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#f91033" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight is-error"
-                                      aria-label="Error&#x21;&#x20;Highlight&#x3A;&#x20;PRIORITY&#x20;&#x3D;&#x20;&#x27;High&#x27;"
-                                      role="region"><span class="a-IRR-controls-cell"><input
-                                          class="a-IRR-controlsCheckbox" data-setting="highlight"
-                                          data-highlight-id="11000167485059819" disabled aria-invalid="true"
-                                          aria-label="Highlight" aria-describedby="control_text_11000167485059819"
-                                          type="checkbox" id="control_11000167485059819" checked="checked" /><label
-                                          for="control_11000167485059819" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><span aria-hidden="true"
-                                          id="control_text_11000167485059819" class="a-IRR-controlsLabel">Highlight:
-                                          PRIORITY = &#x27;High&#x27;</span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11000167485059819"
-                                          aria-controls="control_11000167485059819" type="button"
-                                          data-setting="highlight" data-highlight-id="11000167485059819"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#fb810f" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                      aria-labelledby="control_text_11000260035059819" role="region"><span
-                                        class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                          data-setting="highlight" data-highlight-id="11000260035059819"
-                                          aria-label="Highlight" aria-describedby="control_text_11000260035059819"
-                                          type="checkbox" id="control_11000260035059819" checked="checked" /><label
-                                          for="control_11000260035059819" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                          aria-describedby="control_text_11000260035059819"
-                                          aria-controls="control_11000260035059819"
-                                          class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                          data-highlight-id="11000260035059819" data-bgcol="#14c6f8"
-                                          data-ftcol="#000000"><span aria-hidden="true">&lt;span
-                                            style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;Closed&#x27;</span><span aria-hidden="true" class="u-vh"
-                                            id="control_text_11000260035059819">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;14c6f8:
-                                            &lt;span style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;Closed&#x27;</span><span class="u-vh">Edit
-                                            Highlight</span></button></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11000260035059819"
-                                          aria-controls="control_11000260035059819" type="button"
-                                          data-setting="highlight" data-highlight-id="11000260035059819"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#14c6f8" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                      aria-labelledby="control_text_11000315415059819" role="region"><span
-                                        class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                          data-setting="highlight" data-highlight-id="11000315415059819"
-                                          aria-label="Highlight" aria-describedby="control_text_11000315415059819"
-                                          type="checkbox" id="control_11000315415059819" checked="checked" /><label
-                                          for="control_11000315415059819" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                          aria-describedby="control_text_11000315415059819"
-                                          aria-controls="control_11000315415059819"
-                                          class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                          data-highlight-id="11000315415059819" data-bgcol="#fbce1a"
-                                          data-ftcol="#000000"><span aria-hidden="true">&lt;span
-                                            style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;In-Progress&#x27;</span><span aria-hidden="true" class="u-vh"
-                                            id="control_text_11000315415059819">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;fbce1a:
-                                            &lt;span style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;In-Progress&#x27;</span><span class="u-vh">Edit
-                                            Highlight</span></button></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11000315415059819"
-                                          aria-controls="control_11000315415059819" type="button"
-                                          data-setting="highlight" data-highlight-id="11000315415059819"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#fbce1a" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                      aria-labelledby="control_text_11000451132059819" role="region"><span
-                                        class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                          data-setting="highlight" data-highlight-id="11000451132059819"
-                                          aria-label="Highlight" aria-describedby="control_text_11000451132059819"
-                                          type="checkbox" id="control_11000451132059819" checked="checked" /><label
-                                          for="control_11000451132059819" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                          aria-describedby="control_text_11000451132059819"
-                                          aria-controls="control_11000451132059819"
-                                          class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                          data-highlight-id="11000451132059819" data-bgcol="#e824fa"
-                                          data-ftcol="#000000"><span aria-hidden="true">&lt;span
-                                            style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;On-Hold&#x27;</span><span aria-hidden="true" class="u-vh"
-                                            id="control_text_11000451132059819">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;e824fa:
-                                            &lt;span style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;On-Hold&#x27;</span><span class="u-vh">Edit
-                                            Highlight</span></button></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11000451132059819"
-                                          aria-controls="control_11000451132059819" type="button"
-                                          data-setting="highlight" data-highlight-id="11000451132059819"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#e824fa" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-                                    <li class="a-IRR-controls-item a-IRR-controls-item--highlight"
-                                      aria-labelledby="control_text_11000562806059819" role="region"><span
-                                        class="a-IRR-controls-cell"><input class="a-IRR-controlsCheckbox"
-                                          data-setting="highlight" data-highlight-id="11000562806059819"
-                                          aria-label="Highlight" aria-describedby="control_text_11000562806059819"
-                                          type="checkbox" id="control_11000562806059819" checked="checked" /><label
-                                          for="control_11000562806059819" aria-hidden="true"
-                                          class="a-IRR-controlsCheckboxLabel"></label></span><span
-                                        class="a-IRR-controls-cell"><span
-                                          class="a-Icon a-IRR-controlsIcon icon-irr-highlight"
-                                          aria-hidden="true"></span></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--label"><button type="button"
-                                          aria-describedby="control_text_11000562806059819"
-                                          aria-controls="control_11000562806059819"
-                                          class="a-IRR-button--edit a-IRR-controlsLabel" data-setting="highlight"
-                                          data-highlight-id="11000562806059819" data-bgcol="#1edc09"
-                                          data-ftcol="#000000"><span aria-hidden="true">&lt;span
-                                            style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;Resolved&#x27;</span><span aria-hidden="true" class="u-vh"
-                                            id="control_text_11000562806059819">Highlight&#x20;Cell,&#x20;&#x23;000000&#x20;on&#x20;&#x23;1edc09:
-                                            &lt;span style=&#x27;width:150px&#x27;&gt;Status&lt;&#x2F;span&gt; =
-                                            &#x27;Resolved&#x27;</span><span class="u-vh">Edit
-                                            Highlight</span></button></span><span
-                                        class="a-IRR-controls-cell a-IRR-controls-cell--remove"><button
-                                          class="a-Button a-IRR-button a-Button--noUI a-IRR-button--remove"
-                                          aria-label="Remove&#x20;Highlight"
-                                          aria-describedby="control_text_11000562806059819"
-                                          aria-controls="control_11000562806059819" type="button"
-                                          data-setting="highlight" data-highlight-id="11000562806059819"><span
-                                            aria-hidden="true" class="a-Icon icon-remove"></span><span class="u-vh"
-                                            data-bgcol="#1edc09" data-ftcol="#000000">Remove
-                                            Highlight</span></button></span></li>
-
-                                  </ul>
-                                </div>
-                                <div class="a-IRR-reportSummaryContainer" id="R105002415629461339_control_panel_summary"
-                                  style="display:none;">
-                                  <ul class="a-IRR-reportSummary">
-                                    <li class="a-IRR-reportSummary-item a-IRR-reportSummary-item--highlight"><a href="#"
-                                        class="a-IRR-reportSummary-label"><span class="a-IRR-reportSummary-icon"
-                                          aria-label="Highlight,&#x20;5" role="img"><span
-                                            class="a-Icon icon-irr-highlight"></span><span
-                                            class="a-IRR-reportSummary-count">5</span></span><span
-                                          class="a-IRR-reportSummary-value">Hours Since Creation..., &lt;span
-                                          style=&#x27..., &lt;span style=&#x27..., &lt;span style=&#x27..., &lt;span
-                                          style=&#x27...</span></a></li>
-                                    <li class="a-IRR-reportSummary-item a-IRR-reportSummary-item--invalidSettings"><a
-                                        href="#" class="a-IRR-reportSummary-label"><span
-                                          class="a-IRR-reportSummary-icon" aria-label="&#x20;invalid&#x20;settings"
-                                          role="img"><span class="a-Icon icon-irr-invalid-settings"></span></span><span
-                                          class="a-IRR-reportSummary-value">2 invalid settings</span></a></li>
-                                  </ul>
-                                </div>
-                              </div>
+                              
                               <style nonce="1d03MoX53SAZkZJC15IUBw" id="R105002415629461339_worksheet_css">
                                 .rule_10999907087059819 td {
                                   background-color: #feabc4 !important;
@@ -599,21 +269,21 @@
                                 id="R105002415629461339_data_panel" class="a-IRR-reportView">
                                 <div class="a-IRR-tableContainer">
                                   <table id="pressReleaseTable" class="display" style="width:100%">
-                                        <thead>
-                                          <tr>
-                                            <th>Actions</th>
-                                            <th>Request Number</th>
-                                            <th>Issue Type</th>
-                                            <th>Short Description</th>
-                                            <th>Request Status</th>
-                                            <th>Created On</th>
-                                            <th>Requested By</th>
-                                            <th>Requested Group</th>
-                                            <th>Assigned To</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                      </table>
+                                    <thead>
+                                      <tr>
+                                        <!-- <th>Actions</th> -->
+                                        <th>Request Number</th>
+                                        <th>Issue Type</th>
+                                        <th>Sub Category</th>
+                                        <th>Created On</th>
+                                        <th>Requested By</th>
+                                        <th>Requested District</th>
+                                        <th>Requested Group</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                  </table>
                                 </div>
                                 <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
                                   class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
@@ -751,6 +421,7 @@
   <script src="../assets/js/chartBundle.min.js"></script> -->
   <script src="../assets/js/global.js"></script>
   <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -783,13 +454,14 @@
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
 
+      const mobileNum = localStorage.getItem('userMob');
 
       const payload = {
         action: "function_call",
-        function_name: "edm_service_request_edmall_fn",
+        function_name: "hdo_service_request_new_fn",
         params: {
           status: null,
-          userid: userId,
+          userId: userId,
         }
       }
       // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
@@ -805,17 +477,16 @@
           return `
       <tr>
         <td class="u-tL">
-        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}&status=${status}">
+        <a data-id="${item.request_number}" id="open-modal-btn" href="newrequest-info.html?details=${applicationInfo}&status=${status}">
           ${item.request_number}
         </a>
         </td>
         <td class="u-tC">${item.issue_type || 'N/A'}</td>
-        <td class="u-tC">${item.short_description || 'N/A'}</td>
-        <td class="u-tC">${item.request_status || 'N/A'}</td>
+        <td class="u-tC">${item.short_description || 'N/A'}</td> 
         <td class="u-tC">${item.created_date || 'N/A'}</td>
         <td class="u-tC">${item.requested_by || 'N/A'}</td>
+        <td class="u-tC">${item.requested_district || 'N/A'}</td>
         <td class="u-tC">${item.requested_group || 'N/A'}</td>
-        <td class="u-tC">${item.assigned_to || 'N/A'}</td>
       </tr>
     `;
         },
@@ -852,7 +523,7 @@
     });
 
   </script>
-  
+
 </body>
 
 </html>
