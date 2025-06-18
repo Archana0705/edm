@@ -213,15 +213,16 @@
                                    <table id="pressReleaseTable" class="display" style="width:100%">
                                         <thead>
                                           <tr>
-                                            <th>Actions</th>
+                                            <!-- <th>Actions</th> -->
                                             <th>Request Number</th>
                                             <th>Issue Type</th>
+                                            <th>Status</th>
                                             <th>Short Description</th>
-                                            <th>Request Status</th>
-                                            <th>Created On</th>
-                                            <th>Requested By</th>
+                                            <th>Requested District</th>
+                                            <th>Created On</th> 
+                                            <!-- <th>Requested By</th>
                                             <th>Requested Group</th>
-                                            <th>Work Notes</th>   
+                                            <th>Work Notes</th>    -->
                                           </tr>
                                         </thead>
                                         <tbody></tbody>
@@ -388,26 +389,26 @@
           apiUrl,
           httpMethod: 'POST',
           payload: encryptData(payload),
-          rowBuilder: (item) => `
+          rowBuilder: (item) => {
+          const applicationInfo = btoa(String(item.request_number));
+          const status = btoa(String(item.request_status));
+          return `
       <tr>
         <td class="u-tL">
-          <a data-id="${item.id}" id="open-modal-btn" href="javascript:void(0);">
-            <i class="bi bi-pencil-square"></i>
-          </a>
+        <a data-id="${item.request_number}" id="open-modal-btn" href="inprogress-request-info.html?details=${applicationInfo}&status=${status}"> 
+          ${item.request_number}
+        </a>
         </td>
-        <td class="u-tC">${item.request_number || 'N/A'}</td>
         <td class="u-tC">${item.issue_type || 'N/A'}</td>
-        <td class="u-tC">${item.short_description || 'N/A'}</td>
         <td class="u-tC">${item.request_status || 'N/A'}</td>
-        <td class="u-tC">${item.created_date || 'N/A'}</td>
-        <td class="u-tC">${item.requested_by || 'N/A'}</td>
-        <td class="u-tC">${item.requested_group || 'N/A'}</td>
-        <td class="u-tC">${item.helpdesk_notes || 'N/A'}</td>
-      </tr> 
-    `,
-          onTableInit: function (dtRef) {
-            dataTableRef = dtRef;
-          }
+        <td class="u-tC">${item.short_description || 'N/A'}</td>
+        <td class="u-tC">${item.requested_district || 'N/A'}</td>
+        <td class="u-tC">${item.created_date || 'N/A'}</td> 
+      </tr>  
+    `; },
+        onTableInit: function (dtRef) {
+          dataTableRef = dtRef;
+        }
         });
 
         $('#statusSearchBtn').on('click', function () {
