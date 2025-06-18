@@ -335,11 +335,11 @@
           const status = btoa(String(item.request_status));
           return `
     <tr>
-      <td class="u-tL">
-        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}}&status=${status}">
+    <td class="u-tL">
+        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}&status=${status}">
           ${item.request_number}
         </a>
-      </td>
+        </td>
       <td class="u-tC">${item.issue_type || 'N/A'}</td>
       <td class="u-tC">${item.short_description || 'N/A'}</td>
       <td class="u-tC">${item.request_status || 'N/A'}</td>
