@@ -30,6 +30,37 @@ const menuItems = [
     { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Ticket Updates", file: "ticket-updates.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-list", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    {
+        label: "Helpdesk Tickets Updates", file: "", folder: "", icon: "fa fa-list", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"],
+        subMenu: [
+            {
+                label: "Helpdesk Instruction Open Report ",
+                file: "helpdeskopen.html",
+                folder: "",
+                roles: ["helpdesk_operator"]
+            },
+            {
+                label: "Helpdesk Instruction In Progress Report ",
+                file: "request-reassign.html",
+                folder: "",
+                roles: ["helpdesk_operator"]
+            },
+            {
+                label: "Helpdesk Instruction Closed Report ",
+                file: "request-reassign.html",
+                folder: "",
+                roles: ["helpdesk_operator"]
+            },
+            {
+                label: "Helpdesk Instruction Reassigned Report",
+                file: "request-reassign.html",
+                folder: "",
+                roles: ["helpdesk_operator"]
+            }
+
+        ]
+    },
+
     { label: "eSevai Operator Change Request Form", file: "esevai-request-form.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "eSevai Operator Change Request Report", file: "esevai-request-report.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Approved / Rejected Operator Change Report", file: "approve-reject-operator-request.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
@@ -46,62 +77,8 @@ function normalizeRole(role) {
     } else if (lowerRole.includes("helpdesk")) {
         return "helpdesk";
     }
-    return null; // or handle unknown roles
+    return null;
 }
-
-// function renderDynamicMenu(containerId) {
-//     const ul = document.getElementById(containerId);
-//     if (!ul) return;
-
-//     const rawUserRole = localStorage.getItem('userRole');
-//     console.log("userRole", rawUserRole);
-//     const userRole = normalizeRole(rawUserRole);
-//     console.log("Normalized Role:", userRole);
-
-//     const pathParts = window.location.pathname.split('/');
-//     const currentFile = pathParts.pop();
-//     const currentFolder = pathParts.pop();
-//     const pageSpecificMenuRestrictions = {
-//         "edm-diary.html": {
-//             allowedRoles: ["edistrict_manager"],
-//             allowedLabels: ["Home"]
-//         },
-//     };
-
-//     let filteredMenu = menuItems.filter(item => item.roles.includes(userRole));
-
-//     if (pageSpecificMenuRestrictions[currentFile]) {
-//         const restriction = pageSpecificMenuRestrictions[currentFile];
-//         if (restriction.allowedRoles.includes(userRole)) {
-//             filteredMenu = filteredMenu.filter(item =>
-//                 restriction.allowedLabels.includes(item.label)
-//             );
-//         }
-//     }
-
-//     filteredMenu.forEach(item => {
-//         const li = document.createElement("li");
-
-//         let href = "";
-//         if (item.folder === currentFolder || item.folder === "") {
-//             href = item.file;
-//         } else {
-//             href = `../${item.folder}/${item.file}`;
-//         }
-
-//         const a = document.createElement("a");
-//         a.href = href;
-//         a.innerHTML = `<span class="${item.icon}" style="margin-right: 20px;"></span>${item.label}`;
-
-//         const isCurrent = item.file === currentFile &&
-//             (item.folder === currentFolder || (item.folder === "" && !["helpdesk"].includes(currentFolder)));
-
-//         li.appendChild(a);
-//         li.setAttribute('data-current', isCurrent ? 'true' : 'false');
-//         ul.appendChild(li);
-//     });
-
-// }
 
 function renderDynamicMenu(containerId) {
     const ul = document.getElementById(containerId);
