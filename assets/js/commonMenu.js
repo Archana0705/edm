@@ -41,13 +41,13 @@ const menuItems = [
             },
             {
                 label: "Helpdesk Instruction In Progress Report ",
-                file: "request-reassign.html",
+                file: "helpdesk-inprogress.html",
                 folder: "",
                 roles: ["helpdesk_operator"]
             },
             {
                 label: "Helpdesk Instruction Closed Report ",
-                file: "request-reassign.html",
+                file: "helpdesk-closed.html",
                 folder: "",
                 roles: ["helpdesk_operator"]
             },

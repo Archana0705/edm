@@ -74,44 +74,45 @@
             <div class="t-Body-fullContent"></div>
             <div class="t-Body-contentInner">
               <div class="container">
-                <div class="row ">
-                  <div class="col col-12 apex-col-auto col-start col-end">
-                    <div id="R14906316609213947" class="t-Form--leftLabels">
-                      <div class="container">
-                        <div class="row ">
-                          <div class="col col-3  col-start">
-                            <div
-                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
-                              id="P19_STATUS_CONTAINER">
-                              <div class="t-Form-labelContainer col col-1">
-                                <label for="P19_STATUS" id="P19_STATUS_LABEL" class="t-Form-label">Status</label>
-                              </div>
-                              <div class="t-Form-inputContainer col col-2">
-                                <div class="t-Form-itemWrapper"><select id="P19_STATUS" name="P19_STATUS"
-                                    class="selectlist&#x20;apex-item-select" data-native-menu="false" size="1">
-                                    <option value="" selected="selected"></option>
-                                    <option value="New">New</option>
-                                    <option value="Open">Open</option>
-                                    <option value="In-Progress">In-Progress</option>
-                                    <option value="On-Hold">On-Hold</option>
-                                    <option value="Resolved">Resolved</option>
-                                    <option value="Closed">Closed</option>
-                                  </select></div><span id="P19_STATUS_error_placeholder" class="a-Form-error"
-                                  data-template-id="8676686131964195_ET"></span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col col-1  ">
-                            <button id="statusSearchBtn">Search</button>
-                          </div>
-                          <div class="col col-1  ">
-                            <button id="clearStatusBtn" type="button">Clear</button>
-                          </div>
+                <div class="row">
+                  <div class="col col-6 col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+
+                  <div class="col col-4 apex-col-auto">
+                    <div
+                      class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
+                      id="P86_ASSIGNED_TO_CONTAINER">
+                      <div class="t-Form-labelContainer col col-2">
+                        <label for="P86_ASSIGNED_TO" id="P86_ASSIGNED_TO_LABEL" class="t-Form-label">Assigned To</label>
+                      </div>
+                      <div class="t-Form-inputContainer col col-2">
+                        <div class="t-Form-itemWrapper">
+                          <select id="P86_ASSIGNED_TO" name="P86_ASSIGNED_TO" class="selectlist apex-item-select"
+                            data-native-menu="false" size="1">
+                            <option value="" selected="selected"></option>
+                            <option value="Assistant System Engineer">Gerhara Gowri R</option>
+                            <option value="Helpdesk_Operator1">Manju</option>
+                            <option value="Helpdesk_Operator4">Mohan Raj</option>
+                            <option value="Helpdesk_Operator3">Mohan Ravikumar</option>
+                            <option value="Helpdesk_Operator2">Vishva VR</option>
+                            <option value="Helpdesk_Operator7">Kabalishwaran</option>
+                            <option value="Helpdesk_Operator8">ArunKumar K</option>
+                            <option value="Helpdesk_Operator9">Vithiya</option>
+                          </select>
                         </div>
+                        <span id="P86_ASSIGNED_TO_error_placeholder" class="a-Form-error"
+                          data-template-id="8676686131964195_ET"></span>
                       </div>
                     </div>
                   </div>
+
+                  <div class="col col-2 col-end">
+                    <button id="reassignBtn" class="btn btn-success" disabled>
+                      <i class="fa fa-arrow-circle-o-right" style="margin-top: 4px;"></i> Re Assign
+                    </button>
+                  </div>
                 </div>
+
+
                 <div class="row ">
                   <div class="col col-12 apex-col-auto col-start col-end">
                     <div
@@ -173,18 +174,17 @@
                                     <table id="pressReleaseTable" class="display" style="width:100%">
                                       <thead>
                                         <tr>
+                                          <th><input type="checkbox" id="pressReleaseTable_select_all"></th>
                                           <th>Request Number</th>
-                                          <th>Issue Type</th>
+                                          <th>Instruction Type</th>
                                           <th>Short Description</th>
-                                          <th>Request Status</th>
-                                          <th>Created On</th>
-                                          <th>Requested By</th>
-                                          <th>Requested Group</th>
-                                          <th>Assigned To</th>
+                                          <th>Full Description</th>
+                                          <th>Attachment</th>
                                         </tr>
                                       </thead>
                                       <tbody></tbody>
                                     </table>
+
                                   </div>
                                   <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
                                     class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
@@ -303,7 +303,7 @@
   <script src="../assets/js/chartBundle.min.js"></script>
 
   <script src="../assets/js/toastUtil.js"></script>
-  <script type="module" src="../assets/js/dataTableUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableWithSelection.js"></script>
   <script src="../assets/js/crypto-js.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
 
@@ -325,6 +325,8 @@
   <script src="../assets/js/global.js"></script>
   <script src="../assets/js/encrypt_decrypt.js"></script>
   <script src="../assets/js/globalHeader.js"></script>
+  <script src="../assets/js/downloadLink.js"></script>
+
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -333,6 +335,20 @@
       $('#pressReleaseTable').DataTable();
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const assignedToSelect = document.getElementById("P86_ASSIGNED_TO");
+      const reassignButton = document.getElementById("reassignBtn");
+
+      const toggleButton = () => {
+        reassignButton.disabled = !assignedToSelect.value;
+      };
+
+      toggleButton(); // Initial check on load
+      assignedToSelect.addEventListener("change", toggleButton); // Enable/disable on change
+    });
+  </script>
+
 
   <script>
     console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
@@ -359,41 +375,44 @@
 
       const payload = {
         action: "function_call",
-        function_name: "edm_service_request_edmall_fn",
+        function_name: "hd_edm_service_assaign_edmall_fn",
         params: {
-          status: null,
-          userid: userId,
+          array: 'New',
+          userId: userId
         }
       }
       // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
-      loadDataToTable({
+      loadTableWithSelection({
         tableId: 'pressReleaseTable',
         apiUrl,
         httpMethod: 'POST',
         payload: encryptData(payload),
+
         rowBuilder: (item) => {
           const applicationInfo = btoa(String(item.request_number));
           const status = btoa(String(item.request_status));
+
           return `
-      <tr>
-        <td class="u-tL">
-        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}&status=${status}">
+      <td class="u-tL">
+        <a data-id="${item.request_number}" id="open-modal-btn" 
+           href="allrequest-info.html?details=${applicationInfo}&status=${status}">
           ${item.request_number}
         </a>
-        </td>
-        <td class="u-tC">${item.issue_type || 'N/A'}</td>
-        <td class="u-tC">${item.short_description || 'N/A'}</td>
-        <td class="u-tC">${item.request_status || 'N/A'}</td>
-        <td class="u-tC">${item.created_date || 'N/A'}</td>
-        <td class="u-tC">${item.requested_by || 'N/A'}</td>
-        <td class="u-tC">${item.requested_group || 'N/A'}</td>
-        <td class="u-tC">${item.assigned_to || 'N/A'}</td>
-      </tr>
+      </td>
+      <td class="u-tC">${item.instruction_type || 'N/A'}</td>
+      <td class="u-tC">${item.short_description || 'N/A'}</td>
+      <td class="u-tC">${item.full_description || 'N/A'}</td>
+      <td>${createDownloadLink(item.photo_attachment, item.mime_type, item.file_name)}</td>
     `;
         },
+
         onTableInit: function (dtRef) {
           dataTableRef = dtRef;
+        },
+
+        onSelectionChange: function (selectedRows) {
+          console.log("Selected rows changed:", selectedRows);
         }
       });
 
