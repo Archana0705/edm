@@ -28,6 +28,7 @@ const menuItems = [
     { label: "EDM Instruction Report", file: "edm-instruction-request.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk_operator"] },
     { label: "Overall EDM Report", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
     { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Ticket Updates", file: "ticket-updates.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-list", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "eSevai Operator Change Request Form", file: "esevai-request-form.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "eSevai Operator Change Request Report", file: "esevai-request-report.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
