@@ -313,7 +313,23 @@
       }
 
       console.log(getRelativeTime("2024-12-04")); // Output: "6 months ago" (as of June 2025)
+      const createDownloadLink = (content, mimeType, filename) => {
+        if (!content) return "N/A";
 
+        try {
+          const base64Pattern = /^[A-Za-z0-9+/=]+$/;
+          if (base64Pattern.test(content.replace(/\s/g, ""))) {
+            const blob = new Blob([new Uint8Array(atob(content).split("").map(c => c.charCodeAt(0)))], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            return `<a href="${url}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
+          }
+
+          return `<a href="${content}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
+        } catch (error) {
+          console.error("Error creating download link:", error);
+          return "Invalid content";
+        }
+      };
       loadDataToTable({
         tableId: 'pressReleaseTable',
         apiUrl,
@@ -336,15 +352,7 @@
           <td class="u-tC">${item.new_operator_aadhar_number || 'N/A'}</td>
           <td class="u-tC">${item.new_operator_phone_number || 'N/A'}</td>
           <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
-          <td class="u-tC">
-            <a href="#" class="view-file-link"
-               data-base64="${item.photo_attachment}"
-               data-mime="${item.mime_type}"
-               data-filename="${item.file_name}"
-               >
-               View File
-            </a>
-          </td>
+          <td>${createDownloadLink(item.photo_attachment, item.mime_type, item.file_name)}</td>
           <td class="u-tC">${item.status || 'N/A'}</td>
         </tr>
         `;
