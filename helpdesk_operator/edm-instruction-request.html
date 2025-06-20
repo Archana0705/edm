@@ -1128,10 +1128,13 @@
       debugger
 
       var userId = localStorage.getItem('userId');
+      const district = localStorage.getItem('userDistrict');
+      const username = localStorage.getItem('userName');
       const langSwitch = 'en';
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
       const secretKey = 'V7gN4dY8pT2xB3kRz';
-
+      $('#P7_REQUESTED_DISTRICT_DISPLAY').text(district);
+      $('#P80_REQUESTED_BY_DISPLAY').text(username);
 
       const payload = {
         action: "function_call",
@@ -1278,7 +1281,7 @@
       var instructionType = $('#P80_INSTRUCTION_TYPE').val();
       var shortDescription = $('#P80_SHORT_DESCRIPTION').val();
       var fullDescription = $('#P80_FULL_DESCRIPTION').val();
-
+      var requestedBy = $('#P80_REQUESTED_BY_DISPLAY').text();
       const payload = {
         action: "function_call",
         function_name: "inst_edm_service_assign_fn",
@@ -1291,8 +1294,8 @@
           p_attachment: uploadFile?.fileBase64 || null,
           p_file_name: uploadFile?.filename || null,
           p_mime_type: uploadFile?.fileType || null,
-          p_created_by: userId
-
+          p_requested_by: requestedBy,
+          p_created_by: userId,
         }
       }
       console.log(payload, "payloadddddd");
