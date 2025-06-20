@@ -56,3 +56,55 @@ document.addEventListener('click', function (event) {
     }
 });
 
+// document.body.addEventListener('click', async function (e) {
+//     if (e.target && e.target.id === 'changePasswordLink') {
+//         e.preventDefault();
+
+//         // Check if popup already exists
+//         if (!document.getElementById('popup-overlay')) {
+//             await loadChangePasswordPopup(); // load HTML only once
+//         }
+
+//         $('#popup-overlay').fadeIn();
+//         $('.t-Header').css('z-index', '0');
+//     }
+// });
+
+// async function loadChangePasswordPopup() {
+//     try {
+//         const response = await fetch('../assets/ChangePassword/ChangePassword.html');
+//         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+//         const html = await response.text();
+//         document.body.insertAdjacentHTML('beforeend', html);
+
+//         // Dynamically load and initialize JS file (changePassword.js)
+//         const script = document.createElement('script');
+//         script.src = '../assets/js/changePassword.js';
+//         document.body.appendChild(script);
+//     } catch (error) {
+//         console.error('Error loading popup:', error);
+//     }
+// }
+document.addEventListener('click', async function (e) {
+    debugger
+    if (e.target && e.target.id === 'changePasswordLink') {
+        e.preventDefault();
+
+        if (!document.getElementById('popup-overlay')) {
+            await fetch('../assets/ChangePassword/ChangePassword.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.body.insertAdjacentHTML('beforeend', html);
+
+                    // Now load the script AFTER popup is in DOM
+                    const script = document.createElement('script');
+                    script.src = '../assets/js/changePassword.js';
+                    document.body.appendChild(script);
+                })
+                .catch(err => console.error('Error loading change password popup:', err));
+        }
+
+        $('#popup-overlay').fadeIn();
+        $('.t-Header').css('z-index', '0');
+    }
+});
