@@ -240,33 +240,22 @@
                               <div class="col col-5  ">
                                 <div
                                   class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--file"
-                                  id="P80_ATTACHMENT_CONTAINER">
+                                  id="P92_PHOTO_ATTACHMENT_CONTAINER">
                                   <div class="t-Form-labelContainer col col-2">
-                                    <label for="P80_ATTACHMENT" id="P80_ATTACHMENT_LABEL"
+                                    <label for="P92_PHOTO_ATTACHMENT" id="P92_PHOTO_ATTACHMENT_LABEL"
                                       class="t-Form-label">Attachment</label>
                                   </div>
-                                  <div class="t-Form-inputContainer col col-3">
-                                    <div class="t-Form-itemWrapper"><a-file-upload id="P80_ATTACHMENT"
-                                        name="P80_ATTACHMENT" upload-type="FILE" display-style="INLINE" size="60"
-                                        label="Choose&#x20;File"
-                                        description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                        max-file-size="1024" download-link="true"><input type="file"
-                                          id="P80_ATTACHMENT_input" aria-labelledby="P80_ATTACHMENT_LABEL"
-                                          class="u-vh" />
-                                        <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                          <div class="a-FileDrop-icon">
-                                            <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                            </span>
-                                          </div>
-                                          <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                              File</span><span class="a-FileDrop-description">Select a file or drop one
-                                              here.</span></div>
-                                          <div class="a-FileDrop-action"><span
-                                              class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span>
-                                          </div>
-                                        </div>
-                                      </a-file-upload></div><span id="P80_ATTACHMENT_error_placeholder"
-                                      class="a-Form-error" data-template-id="8676686131964195_ET"></span>
+                                  <div class="t-Form-inputContainer col col-6" id="P7_UPLOAD_DROPZONE">
+                                    <div class="t-Form-itemWrapper">
+                                      <label for="P7_UPLOAD_DROPZONE_input">Upload File (PDF/JPG/JPEG, Max 2MB):</label>
+                                      <input type="file" id="P7_UPLOAD_DROPZONE_input" accept=".pdf,.jpg,.jpeg"
+                                        multiple />
+                                    </div>
+                                    <span id="P7_UPLOAD_DROPZONE_input_error_placeholder" class="a-Form-error"
+                                      style="color:red; display:block; margin-top:5px;"></span>
+
+                                    <div id="filePreviewList" style="margin-top: 10px;"></div>
+
                                   </div>
                                 </div><input type="hidden" name="P80_PRIORITY" id="P80_PRIORITY" value="">
                               </div>
@@ -332,21 +321,13 @@
                           </div>
 
                         </div>
-                        <div class="t-Region-buttons t-Region-buttons--bottom">
-                          <div class="t-Region-buttons-left"><button
-                              class="t-Button t-Button--icon js-ignoreChange&#x20;t-Button--warning&#x20;t-Button--iconLeft t-Button--hot"
-                              type="button" id="B25954735732548119"><span
-                                class="t-Icon t-Icon--left fa&#x20;fa-ban&#x20;fa-anim-horizontal-shake"
-                                aria-hidden="true"></span><span class="t-Button-label">Cancel</span><span
-                                class="t-Icon t-Icon--right fa&#x20;fa-ban&#x20;fa-anim-horizontal-shake"
-                                aria-hidden="true"></span></button></div>
-                          <div class="t-Region-buttons-right"><button
-                              class="t-Button t-Button--icon t-Button--success&#x20;t-Button--iconLeft t-Button--hot"
-                              id="B25956142863548116"><span
-                                class="t-Icon t-Icon--left fa&#x20;fa-save&#x20;fa-anim-flash"
-                                aria-hidden="true"></span><span class="t-Button-label">Save</span><span
-                                class="t-Icon t-Icon--right fa&#x20;fa-save&#x20;fa-anim-flash"
-                                aria-hidden="true"></span></button></div>
+                        <div class="row mb-5 p-2">
+                          <div class="col-6">
+                            <button id="cancelBtn" class="exitbtn">Cancel</button>
+                          </div>
+                          <div class="col-6 text-end">
+                            <button id="submitBtn" class="resolvedbtn">Save</button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1117,7 +1098,9 @@
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/global.js"></script>
   <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/singleFileUpload.js"></script>
   <script src="../assets/js/globalHeader.js"></script>
+  <script src="../assets/js/validateField.js"></script>
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -1137,7 +1120,9 @@
   </script>
 
   <script type="module">
-    import { encryptData } from '../assets/js/encrypt_decrypt.js';
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+    import { processFile, checkFile, renderFileList } from '../assets/js/singleFileUpload.js';
+    import { validateField, validateEmptyFields } from '../assets/js/validateField.js'
     let dataTableRef;
     $(document).ready(function () {
       debugger
@@ -1249,7 +1234,117 @@
 
     });
 
+    $(document).ready(function () {
+      const assignedValues = ["eDistrict Manager 1", "eDistrict Manager 2"];
+
+      $('#P80_DISTRICT').on('change', function () {
+        const $assignedTo = $('#P80_ASSIGNED_TO');
+        $assignedTo.empty(); // Clear existing options
+
+        // Add default empty option
+        $assignedTo.append('<option value="" selected="selected"></option>');
+
+        // Append assigned manager options
+        assignedValues.forEach(function (item) {
+          $assignedTo.append(`<option value="${item}">${item}</option>`);
+        });
+      });
+    });
+
+    function validateFields() {
+      let isValid = true;
+      isValid &= validateEmptyFields();
+      isValid &= validateField({
+        selector: '#P80_DISTRICT',
+        pattern: /^.+$/, // checks it's not empty
+        errorMessage: 'Please select a district',
+      });
+      return !!isValid;
+    }
+
+    $('#submitBtn').on('click', async function (event) {
+      debugger
+      event.preventDefault();
+      var userId = localStorage.getItem('userId');
+      $('.field-error').remove();
+      if (!validateFields()) return;
+      const apiUrl = 'https://tngis.tnega.org/lcap_api/edm/v1/commonfunction';
+
+      const uploadedFiles = await processFile('#P7_UPLOAD_DROPZONE_input');
+      if (!uploadedFiles) return;
+      const uploadFile = uploadedFiles[0];
+      var district = $('#P80_DISTRICT').val();
+      var assignedTo = $('#P80_ASSIGNED_TO').val();
+      var instructionType = $('#P80_INSTRUCTION_TYPE').val();
+      var shortDescription = $('#P80_SHORT_DESCRIPTION').val();
+      var fullDescription = $('#P80_FULL_DESCRIPTION').val();
+
+      const payload = {
+        action: "function_call",
+        function_name: "inst_edm_service_assign_fn",
+        params: {
+          p_district: district,
+          p_assigned_to: assignedTo,
+          p_instruction_type: instructionType,
+          p_short_description: shortDescription,
+          p_full_description: fullDescription,
+          p_attachment: uploadFile?.fileBase64 || null,
+          p_file_name: uploadFile?.filename || null,
+          p_mime_type: uploadFile?.fileType || null,
+          p_created_by: userId
+
+        }
+      }
+      console.log(payload, "payloadddddd");
+
+      $.ajax({
+        url: apiUrl,
+        method: "POST",
+        headers: {
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
+        },
+        data: {
+          data: encryptData(payload)
+        },
+        dataType: 'json',
+        cache: false,
+        success: function (response) {
+          alert("inserted Succesfully")
+        },
+        error: function (xhr, status, error) {
+          console.error("API call failed:", {
+            status: xhr.status,
+            statusText: xhr.statusText,
+            responseText: xhr.responseText,
+            error: error
+          });
+        }
+      });
+
+
+      console.log(payload);
+
+    });
+    $('#cancelBtn').on('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      $('form')[0].reset();
+
+      $('input[type="text"],input[type="file"], input[type="email"], input[type="number"], textarea, select')
+        .val('')
+        .prop('selectedIndex', 0);
+
+      $('.field-error').remove();
+      $('.file-chosen-label').text('No file chosen');
+      window.location.href = 'dashboard.html';
+
+    });
+
+
   </script>
+
 </body>
 
 </html>
