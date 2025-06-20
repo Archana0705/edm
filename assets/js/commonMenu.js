@@ -27,7 +27,7 @@ const menuItems = [
     { label: "Diary for EDM Inspection Report", file: "dairy-for-inspection.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk_operator"] },
     { label: "EDM Instruction Report", file: "edm-instruction-request.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk_operator"] },
     // { label: "Overall EDM Report", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
-    { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager",] },
     { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager"] },
 
     { label: "Ticket Updates", file: "ticket-updates.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
