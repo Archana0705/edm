@@ -1,3 +1,4 @@
+// loadTableWithSelection.js
 import { decryptData } from './encrypt_decrypt.js';
 
 let currentTableData = [];
@@ -42,17 +43,16 @@ window.loadTableWithSelection = function ({
                 $(tableSelector).DataTable().clear().destroy();
             }
 
-            // Create table head with select-all checkbox if not already
             if (!tableHead.find("th:first input[type='checkbox']").length) {
                 const firstTh = tableHead.find("th").first();
                 firstTh.html(`<input type="checkbox" id="${tableId}_select_all">`);
             }
 
             const rows = data.map((item, index) => {
-                const rowHtml = rowBuilder(item, index); // builds rest of the row
+                const rowHtml = rowBuilder(item, index);
                 return `<tr data-index="${index}">
-                    <td><input type="checkbox" class="row-checkbox" data-index="${index}"></td>
-                    ${rowHtml}
+                  <td><input type="checkbox" class="row-checkbox" data-index="${index}"></td>
+                  ${rowHtml}
                 </tr>`;
             }).join('');
 
@@ -65,14 +65,12 @@ window.loadTableWithSelection = function ({
                 responsive: true,
             });
 
-            // Select All checkbox handler
             $(`#${tableId}_select_all`).on('change', function () {
                 const isChecked = $(this).is(':checked');
                 $(`${tableSelector} tbody .row-checkbox`).prop('checked', isChecked);
                 onSelectionChange(getSelectedRows());
             });
 
-            // Individual checkbox handler
             $(`${tableSelector} tbody`).on('change', '.row-checkbox', function () {
                 const all = $(`${tableSelector} .row-checkbox`);
                 const checked = all.filter(':checked');
@@ -89,7 +87,6 @@ window.loadTableWithSelection = function ({
     });
 };
 
-// Utility to get selected row data
 window.getSelectedRows = function () {
     const selected = [];
     $('.row-checkbox:checked').each(function () {

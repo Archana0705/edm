@@ -574,6 +574,11 @@
         let isValid = true;
         isValid &= validateEmptyFields();
         isValid &= validateField({
+          selector: '#P92_DISTRICT',
+          pattern: /^.+$/, // checks it's not empty
+          errorMessage: 'Please select a district',
+        });
+        isValid &= validateField({
           selector: '#P92_CURRENT_OPERATOR_MOBILE_NUMBER',
           pattern: /^[6-9]\d{9}$/,
           errorMessage: 'Invalid mobile number',
