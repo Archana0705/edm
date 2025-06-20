@@ -19,19 +19,21 @@ const menuItems = [
     },
     { label: "New Requests", file: "new-request.html", folder: "", icon: "fa fa-plus-circle", roles: ["edistrict_manager", "helpdesk_operator"] },
     { label: "In Progress Requests", file: "inprogress-request.html", folder: "", icon: "fa fa-spinner", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
-    { label: "On-Hold Requests", file: "onhold-request.html", folder: "", icon: "fa fa-pause-circle", roles: ["helpdesk", "helpdesk_operator"] },
+    // { label: "On-Hold Requests", file: "onhold-request.html", folder: "", icon: "fa fa-pause-circle", roles: ["helpdesk", "helpdesk_operator"] },
     { label: "Resolved Requests", file: "resolved-request.html", folder: "", icon: "fa fa-check-circle", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Closed Requests", file: "closed-request.html", folder: "", icon: "fa fa-times-circle", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Reopened Requests", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Operator Details", file: "operator-details.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Diary for EDM Inspection Report", file: "dairy-for-inspection.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk_operator"] },
     { label: "EDM Instruction Report", file: "edm-instruction-request.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk_operator"] },
-    { label: "Overall EDM Report", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
+    // { label: "Overall EDM Report", file: "re-opened-request.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
     { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
-    { label: "Ticket Updates", file: "ticket-updates.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
-    { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-list", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager"] },
+
+    { label: "Ticket Updates", file: "ticket-updates.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
+    { label: "Helpdesk Ticket Updates", file: "helpdesk-ticket-update.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
     {
-        label: "Helpdesk Tickets Updates", file: "", folder: "", icon: "fa fa-list", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"],
+        label: "Helpdesk Tickets Reports", file: "", folder: "", icon: "fa fa-list", roles: ["helpdesk", "helpdesk_operator"],
         subMenu: [
             {
                 label: "Helpdesk Instruction Open Report ",
@@ -63,7 +65,7 @@ const menuItems = [
 
     { label: "eSevai Operator Change Request Form", file: "esevai-request-form.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "eSevai Operator Change Request Report", file: "esevai-request-report.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
-    { label: "Approved / Rejected Operator Change Report", file: "approve-reject-operator-request.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Approved / Rejected Operator Change Report", file: "approve-reject-operator-request.html", folder: "", icon: "fa fa-lock", roles: ["helpdesk", "helpdesk_operator"] },
 ];
 
 function normalizeRole(role) {
