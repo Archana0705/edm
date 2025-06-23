@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="no-js  page-86 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Helpdesk Ticket Report</title>
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #t_Body_nav {
+      width: 100% !important;
+    }
+  </style>
+</head>
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form>
+    <header class="t-Header" id="t_Header" role="banner">
+
+      <div class="t-Header-branding">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114048261149373" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114048261149373" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+          <P class="t-Header-logo-link">TNEGA</P>
+
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div id="globalHeader"></div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav"></div>
+    </header>
+    <div class="t-Body">
+      <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+        <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
+          id="t_TreeNav" data-id="86_tree" aria-label="Main Navigation">
+          <ul id="commonMenuContainer"></ul>
+        </div>
+      </div>
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"></div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent"></div>
+            <div class="t-Body-contentInner">
+              <div class="container">
+                <div class="row">
+                  <div class="col col-6 col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+
+                  <div class="col col-4 apex-col-auto">
+                    <div
+                      class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
+                      id="P86_ASSIGNED_TO_CONTAINER">
+                      <div class="t-Form-labelContainer col col-2">
+                        <label for="P86_ASSIGNED_TO" id="P86_ASSIGNED_TO_LABEL" class="t-Form-label">Assigned To</label>
+                      </div>
+                      <div class="t-Form-inputContainer col col-2">
+                        <div class="t-Form-itemWrapper">
+                          <select id="P86_ASSIGNED_TO" name="P86_ASSIGNED_TO" class="selectlist apex-item-select"
+                            data-native-menu="false" size="1">
+                            <option value="" selected="selected"></option>
+                            <option value="Assistant System Engineer">Gerhara Gowri R</option>
+                            <option value="Helpdesk_Operator1">Manju</option>
+                            <option value="Helpdesk_Operator4">Mohan Raj</option>
+                            <option value="Helpdesk_Operator3">Mohan Ravikumar</option>
+                            <option value="Helpdesk_Operator2">Vishva VR</option>
+                            <option value="Helpdesk_Operator7">Kabalishwaran</option>
+                            <option value="Helpdesk_Operator8">ArunKumar K</option>
+                            <option value="Helpdesk_Operator9">Vithiya</option>
+                          </select>
+                        </div>
+                        <span id="P86_ASSIGNED_TO_error_placeholder" class="a-Form-error"
+                          data-template-id="8676686131964195_ET"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col col-2 col-end">
+                    <button id="reassignBtn" class="btn btn-success" disabled>
+                      <i class="fa fa-arrow-circle-o-right" style="margin-top: 4px;"></i> Re Assign
+                    </button>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col col-12 apex-col-auto col-start col-end">
+                    <div
+                      class="t-Region t-Region--noPadding t-Region--removeHeader js-removeLandmark t-Region--noUI t-Region--scrollBody"
+                      id="td.u-tC" role="region" aria-label="All&#x20;Request">
+                      <div class="t-Region-header">
+                        <div class="t-Region-headerItems t-Region-headerItems--title">
+                          <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                          <h2 class="t-Region-title" id="td.u-tC_heading" data-apex-heading>All Request</h2>
+                        </div>
+                        <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
+                            class="js-maximizeButtonContainer"></span></div>
+                      </div>
+                      <div class="t-Region-bodyWrap">
+                        <div class="t-Region-buttons t-Region-buttons--top">
+                          <div class="t-Region-buttons-left"></div>
+                          <div class="t-Region-buttons-right"></div>
+                        </div>
+                        <div class="t-Region-body">
+                          <div class="t-Region-orderBy"></div>
+                          <div id="td.u-tC_ir" class="a-IRR-container">
+                            <div id="td.u-tC_worksheet_region" class="a-IRR" aria-live="polite">
+                              <div id="td.u-tC_single_row_view" class="a-IRR-singleRowView"></div>
+                              <div id="td.u-tC_full_view" class="a-IRR-fullView">
+                                <div id="td.u-tC_actions_menu"></div>
+                                <div id="td.u-tC_column_search_drop" class="a-IRR-colSearch"></div>
+                                <div id="td.u-tC_toolbar" class="a-IRR-toolbar">
+
+
+                                  <div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden"
+                                      id="td.u-tC_row_select" value="10" />
+                                    <div class="a-IRR-actions"><button id="td.u-tC_actions_button"
+                                        class="a-Button a-IRR-button a-IRR-button--actions" type="button"
+                                        data-menu="td.u-tC_actions_menu">Actions<span aria-hidden="true"
+                                          class="a-Icon icon-menu-drop-down"></span></button></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="td.u-tC_content" class="a-IRR-content ">
+
+                                <!-- <style nonce="3LvgEVni8AP-QAvCYx16JA" id="td.u-tC_worksheet_css">
+                                    tr td.rule_11009370567205292_td {
+                                      background-color: #f91033 !important;
+                                    }
+
+                                    tr td.rule_11009479755205292_td {
+                                      background-color: #fb810f !important;
+                                    }
+                                  </style> -->
+                                <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_chart" class="a-IRR-chartView"></div>
+                                <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_group_by" class="a-IRR-groupByView"></div>
+                                <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_pivot" class="a-IRR-pivotView"></div>
+                                <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                  id="td.u-tC_data_panel" class="a-IRR-reportView">
+                                  <div class="a-IRR-tableContainer">
+                                    <table id="pressReleaseTable" class="display" style="width:100%">
+                                      <thead>
+                                        <tr>
+                                          <th><input type="checkbox" id="pressReleaseTable_select_all"></th>
+                                          <th>Request Number</th>
+                                          <th>Instruction Type</th>
+                                          <th>Short Description</th>
+                                          <th>Full Description</th>
+                                          <th>Attachment</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody></tbody>
+                                    </table>
+
+                                  </div>
+                                  <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
+                                    class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
+                                    <ul class="a-IRR-pagination">
+                                      <li aria-hidden="true" class="a-IRR-pagination-item is-disabled"></li>
+                                      <li class="a-IRR-pagination-item"><span class="a-IRR-pagination-label"> 1 - 10
+                                          of 60</span></li>
+                                      <li class="a-IRR-pagination-item"><button type="button"
+                                          class="a-Button a-IRR-button a-IRR-button--pagination" aria-controls="td.u-tC"
+                                          title="Next" aria-label="Next"
+                                          data-pagination="pgR_min_row=11max_rows=10rows_fetched=10"><span
+                                            class="a-Icon icon-right-chevron" aria-hidden="true"></span></button></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
+                            id="td.u-tC_sort_widget" style="display:none;">
+                            <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">Column
+                              Actions</h1>
+                            <ul role="toolbar" class="a-IRR-sortWidget-actions" id="td.u-tC_sort_widget_actions">
+                              <li role="none" class="a-IRR-sortWidget-actions-item" id="td.u-tC_sort_widget_action_up">
+                                <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button>
+                              </li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_down"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending"
+                                  data-option="down"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-sort-desc"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_hide"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_break"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                  title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_help"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
+                                  aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-help"></span></button></li>
+                              <li role="none" class="a-IRR-sortWidget-actions-item"
+                                id="td.u-tC_sort_widget_action_computation"><button
+                                  class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
+                                  aria-label="Compute" data-option="computation"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-calculator"></span></button></li>
+                            </ul>
+                            <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
+                              id="td.u-tC_sort_widget_help"></div>
+                            <div role="search" class="a-IRR-sortWidget-search" id="td.u-tC_sort_widget_search"><label
+                                for="td.u-tC_sort_widget_search_field"><span aria-hidden="true"
+                                  class="a-IRR-sortWidget-searchLabel"></span><span
+                                  class="u-vh">Search</span></label><input id="td.u-tC_sort_widget_search_field"
+                                class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." />
+                              <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
+                                id="td.u-tC_sort_widget_rows"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="t-Region-buttons t-Region-buttons--bottom">
+                        <div class="t-Region-buttons-left"></div>
+                        <div class="t-Region-buttons-right"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </main>
+        <footer class="t-Footer" id="t_Footer" role="contentinfo">
+          <div class="t-Footer-body">
+            <div class="t-Footer-content"></div>
+            <div class="t-Footer-apex">
+              <div class="t-Footer-version"> </div>
+              <div class="t-Footer-customize"></div>
+
+            </div>
+          </div>
+          <div class="t-Footer-top">
+            <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+              aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
+      value="&#x5B;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="&#x2F;hoLOylL0trN0EUOonqv_dREo8RFlP-JVE7yqWIfr2vwyOmktQbaCMQZV0DdCSYtwFx3BHeBSzoWtt-ktln2Nmw" />
+  </form>
+
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+
+  <script src="../assets/js/toastUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableWithSelection.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+
+
+
+  <!-- <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script> -->
+  <!-- <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script> -->
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
+  <script src="../assets/js/downloadLink.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
+
+
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+  </script>
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+  <script type="module">
+    import { encryptData } from '../assets/js/encrypt_decrypt.js';
+
+    let dataTableRef;
+
+    $(document).ready(function () {
+      const userId = localStorage.getItem('userId');
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      const payload = {
+        action: "function_call",
+        function_name: "hd_edm_service_assaign_edmall_fn",
+        params: {
+          array: 'New',
+          userId: userId
+        }
+      };
+
+      loadTableWithSelection({
+        tableId: 'pressReleaseTable',
+        apiUrl,
+        httpMethod: 'POST',
+        payload: encryptData(payload),
+
+        rowBuilder: (item) => {
+          const applicationInfo = btoa(String(item.request_number));
+          const status = btoa(String(item.request_status));
+
+          return `
+          <td class="u-tL">
+            <a data-id="${item.request_number}" id="open-modal-btn" 
+               href="allrequest-info.html?details=${applicationInfo}&status=${status}">
+              ${item.request_number}
+            </a>
+          </td>
+          <td class="u-tC">${item.instruction_type || 'N/A'}</td>
+          <td class="u-tC">${item.short_description || 'N/A'}</td>
+          <td class="u-tC">${item.full_description || 'N/A'}</td>
+          <td>${createDownloadLink(item.photo_attachment, item.mime_type, item.file_name)}</td>
+        `;
+        },
+
+        onTableInit: function (dtRef) {
+          dataTableRef = dtRef;
+        },
+
+        onSelectionChange: function (selectedRows) {
+          console.log("✅ Selected Rows:", selectedRows);
+        }
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      const assignedToSelect = document.getElementById("P86_ASSIGNED_TO");
+      const reassignButton = document.getElementById("reassignBtn");
+
+      const toggleButton = () => {
+        reassignButton.disabled = !assignedToSelect.value;
+      };
+
+      toggleButton();
+      assignedToSelect.addEventListener("change", toggleButton);
+
+      reassignButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const selectedUser = assignedToSelect.value;
+        const selectedRows = window.getSelectedRows();
+
+        if (selectedRows.length === 0) {
+          alert("Please select at least one Request Number.");
+          return;
+        }
+
+        const requestNumbers = selectedRows.map(row => row.request_number);
+        const requestNumbersString = requestNumbers.join('|');
+
+        const payload = {
+          action: "function_call",
+          function_name: "upd_hd_edm_service_assign_mulsel_fn",
+          params: {
+            assignedTo: selectedUser,
+            requestNumbers: requestNumbersString
+          }
+        };
+
+        console.log("Payload to send:", payload);
+
+        $.ajax({
+          url: apiUrl,
+          type: 'POST',
+          data: { data: encryptData(payload) },
+          success: function (response) {
+
+            showSuccessToast("Re Assigned successfully.");
+
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during request status update.");
+          }
+        });
+
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
