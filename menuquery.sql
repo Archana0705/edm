@@ -7,7 +7,7 @@ P75_DISTRICT 	-- SELECT DISTRICT d, DISTRICT r FROM EDM_DISTRICT_TB ORDER BY ID 
 P75_EDM			-- SELECT DESIGNATION d, DESIGNATION r FROM EDM_LOGIN_TB WHERE DISTRICT = :P75_DISTRICT AND DESIGNATION IN ('eDistrict Manager', 'eDistrict Manager 1', 'eDistrict Manager 2');
 P75_ACTIVITY	-- SELECT DISTINCT TS_ACTIVITY D, TS_ACTIVITY R FROM TIME_SHEET_DETAILS ORDER BY 1 ASC
 
--- Dairy for EDM
+-- Dairy for EDM 
 -- FUNCTION:
 SELECT * FROM time_sheet_details_edmall_fn(p_edm_id, p_date,p_status);
 
@@ -17,8 +17,17 @@ SELECT * FROM time_sheet_details_edmall_fn(p_edm_id, p_date,p_status);
 SELECT * FROM operator_details_fn(Null, Null);
 
 --save button
-Pending
 
+SELECT upt_master_operator_fn(
+	P_esevai_id ,
+	p_CENTRE_ADDRESS,
+	p_AGENCY_CODE ,
+	p_DISTRICT_NAME ,
+	p_TALUK_NAME ,
+	p_NAME ,
+	p_MOBILENO,
+	p_EMAIL ,
+	p_updated_by)
 --------------------------New Request toooo Reassgined ---------------------
 
 -- New Request:
