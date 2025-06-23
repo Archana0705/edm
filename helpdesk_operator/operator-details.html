@@ -295,78 +295,100 @@
 
 
   <script type="module">
-    import { encryptData } from '../assets/js/encrypt_decrypt.js';
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
     let dataTableRef;
-    $(document).ready(function () {
-      debugger
 
-      var userId = localStorage.getItem('userId');
-      const langSwitch = 'en';
-      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
-      const secretKey = 'V7gN4dY8pT2xB3kRz';
+    function initializeOperatorTable() {
+      const userId = localStorage.getItem('userId');
       const p_district = localStorage.getItem('userDistrict');
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
 
-      const payload = {
-        action: "function_call",
-        function_name: "operator_details_fn",
-        params: {
-          param1: null,
-          param2: null
-          // p_district: p_district,
-          // userid: userId,
-        }
+      if ($.fn.DataTable.isDataTable('#pressReleaseTable')) {
+        $('#pressReleaseTable').DataTable().clear().destroy();
+        $('#pressReleaseTable').empty();
       }
-      // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
-      loadDataToTable({
-        tableId: 'pressReleaseTable',
-        apiUrl,
-        httpMethod: 'POST',
-        payload: encryptData(payload),
-        rowBuilder: (item) => {
-          const applicationInfo = btoa(String(item.esevai_id));
-          return `
-      <tr>
-        <td class="u-tC">${item.esevai_id || 'N/A'}</td>
-        <td class="u-tC">${item.centre_address || 'N/A'}</td>
-        <td class="u-tC">${item.district_name || 'N/A'}</td>
-        <td class="u-tC">${item.taluk_name || 'N/A'}</td>
-        <td class="u-tC">${item.name || 'N/A'}</td>
-        <td class="u-tC">${item.mobileno || 'N/A'}</td>
-        <td class="u-tC">${item.email || 'N/A'}</td>
-      </tr>
-    `;
+      dataTableRef = $('#pressReleaseTable').DataTable({
+        serverSide: true,
+        processing: true,
+        searching: false,
+        ordering: false,
+        pageLength: 15,
+        ajax: function (data, callback) {
+          const offset = data.start;
+          const limit = data.length;
+          // const selectedStatus = $('#P19_STATUS').val().trim();
+
+          const payload = {
+            action: "function_call",
+            function_name: "operator_details_fn",
+            params: {
+              p_district: p_district,
+              userid: userId
+            },
+            limit: limit,
+            offset: offset,
+            search: " ",
+            search_key: "name"
+          };
+
+          $.ajax({
+            url: apiUrl,
+            method: 'POST',
+            data: { data: encryptData(payload) },
+            success: function (response) {
+              const decrypted = decryptData(response.data);
+              const totalRecords = response.pagination.total
+              console.log(decrypted, "decryptData")
+              callback({
+                recordsTotal: totalRecords,
+                recordsFiltered: totalRecords,
+                data: decrypted.map(item => {
+                  return [
+                    item.esevai_id || 'N/A',
+                    item.centre_address || 'N/A',
+                    item.district_name || 'N/A',
+                    item.taluk_name || 'N/A',
+                    item.name || 'N/A',
+                    item.mobileno || 'N/A',
+                    item.email || 'N/A'
+                  ];
+                })
+              });
+            },
+            error: function (xhr) {
+              console.error("Failed to load data:", xhr);
+            }
+          });
         },
-        onTableInit: function (dtRef) {
-          dataTableRef = dtRef;
-        }
+        columns: [
+          { title: "Esevai ID" },
+          { title: "Centre Address" },
+          { title: "District" },
+          { title: "Taluk" },
+          { title: "Name" },
+          { title: "Mobile" },
+          { title: "Email" }
+        ]
       });
+    }
+    $(document).ready(function () {
+      initializeOperatorTable();
 
-      $('#statusSearchBtn').on('click', function () {
+      $('#statusSearchBtn').on('click', function (event) {
         event.preventDefault();
-        const selectedStatus = $('#P19_STATUS').val().trim();
-
-
         if (dataTableRef) {
-          dataTableRef
-            .column(4) // Request Status
-            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
-            .draw();
-        } else {
-          console.warn('Table not initialized yet');
+          dataTableRef.ajax.reload(); // ✅ don't reinitialize!
         }
       });
 
       $('#clearStatusBtn').on('click', function (event) {
         event.preventDefault();
         $('#P19_STATUS').val('');
-        dataTableRef
-          .column(4)
-          .search('')
-          .draw();
+        if (dataTableRef) {
+          dataTableRef.ajax.reload(); // ✅ still don't reinitialize!
+        }
       });
-
-
     });
 
   </script>
