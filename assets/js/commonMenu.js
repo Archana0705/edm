@@ -66,6 +66,8 @@ const menuItems = [
     { label: "eSevai Operator Change Request Form", file: "esevai-request-form.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "eSevai Operator Change Request Report", file: "esevai-request-report.html", folder: "", icon: "fa fa-lock", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Approved / Rejected Operator Change Report", file: "approve-reject-operator-request.html", folder: "", icon: "fa fa-lock", roles: ["helpdesk", "helpdesk_operator"] },
+    { label: "Public Petitions", file: "publicpetitions.html", folder: "", icon: "fa fa-lock", roles: ["helpdesk", "helpdesk_operator"] },
+
 ];
 
 function normalizeRole(role) {
