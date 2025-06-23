@@ -78,12 +78,10 @@ function normalizeRole(role) {
 
     if (lowerRole.includes("helpdesk_operator6")) {
         return "call-center-operator";
-    } else if (lowerRole.includes("edistrict manager")) {
-        return "edistrict_manager";
-    } else if (lowerRole.includes("helpdesk")) {
-        return "helpdesk";
     } else if (lowerRole.includes("helpdesk_operator")) {
         return "helpdesk_operator";
+    } else if (lowerRole.includes("edistrict manager")) {
+        return "edistrict_manager";
     }
     return null;
 }
