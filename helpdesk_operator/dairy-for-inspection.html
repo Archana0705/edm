@@ -238,17 +238,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row ">
-                                    <div class="col col-9  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
-                                    <div class="col col-1 apex-col-auto "><button
-                                            class="t-Button t-Button--hot t-Button--large&#x20;t-Button--success"
-                                            type="button" id="B20029465529480212"><span
-                                                class="t-Button-label">Search</span></button></div>
-                                    <div class="col col-1 apex-col-auto "><button
-                                            class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
-                                            type="button" id="B20029085705480215"><span
-                                                class="t-Button-label">Clear</span></button></div>
+                                <div class="row">
+                                    <div class="col-11 text-end mb-2">
+                                        <button id="saveBtn"
+                                            class="t-Button t-Button--hot t-Button--large t-Button--success">Search</button>
+                                        <button id="exitBtn"
+                                            class="t-Button t-Button--hot js-ignoreChange t-Button--large t-Button--warning exitbtn">Clear</button>
+
+                                    </div>
                                 </div>
+
                                 <div class="row ">
                                     <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
                                     <div class="col col-10  ">
@@ -322,101 +321,24 @@
                                                                 aria-label="Data&#x20;view&#x20;of&#x20;Dairy&#x20;for&#x20;EDM"
                                                                 id="DOWNLOAD-BLOB_data_panel" class="a-IRR-reportView">
                                                                 <div class="a-IRR-tableContainer">
-                                                                    <table
-                                                                        aria-label="Dairy&#x20;for&#x20;EDM,&#x20;Report&#x20;&#x3D;&#x20;Primary&#x20;Default,&#x20;View&#x20;&#x3D;&#x20;Report"
-                                                                        class="a-IRR-table" id="35259675155770139">
-                                                                        <tr>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="C35224853314028981"><span
-                                                                                    class="a-IRR-headerLabel">Sl
-                                                                                    No</span></th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="C35260353824770133"><span
-                                                                                    class="a-IRR-headerLabel">Edm
-                                                                                    Id</span></th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="C35261171417770132"><span
-                                                                                    class="a-IRR-headerLabel">Date</span>
-                                                                            </th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="C35261585524770132"><span
-                                                                                    class="a-IRR-headerLabel">Activity</span>
-                                                                            </th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="C35261983475770131"><span
-                                                                                    class="a-IRR-headerLabel">Notes</span>
-                                                                            </th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="C35262373760770131"><span
-                                                                                    class="a-IRR-headerLabel">Time
-                                                                                    Spend</span></th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="DOWNLOAD-BLOB"><span
-                                                                                    class="a-IRR-headerLabel">Inspection
-                                                                                    Report</span></th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="DOWNLOAD-BLOB"><span
-                                                                                    class="a-IRR-headerLabel">Image
-                                                                                    Attachment1</span></th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="DOWNLOAD-BLOB"><span
-                                                                                    class="a-IRR-headerLabel">Image
-                                                                                    Attachment2</span></th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="DOWNLOAD-BLOB"><span
-                                                                                    class="a-IRR-headerLabel">Image
-                                                                                    Attachment3</span></th>
-                                                                            <th class="a-IRR-header u-tC"
-                                                                                id="DOWNLOAD-BLOB"><span
-                                                                                    class="a-IRR-headerLabel">Image
-                                                                                    Attachment4</span></th>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td class=" u-tC"
-                                                                                headers="C35224853314028981">1</td>
-                                                                            <td class=" u-tC"
-                                                                                headers="C35260353824770133">7502427145
-                                                                            </td>
-                                                                            <td class=" u-tC"
-                                                                                headers="C35261171417770132">
-                                                                                4&#x2F;9&#x2F;2025</td>
-                                                                            <td class=" u-tC"
-                                                                                headers="C35261585524770132">Inspection
-                                                                            </td>
-                                                                            <td class=" u-tC"
-                                                                                headers="C35261983475770131">Inspected
-                                                                                the centre as per the instruction
-                                                                                received from TNeGA.
-                                                                                eSevai ID was locked due to nil
-                                                                                transaction and the operator requested
-                                                                                in TNeGA office to unlock it.
-
-                                                                                Centre is having required infrastructure
-                                                                                and the operator assued that they will
-                                                                                do transcations without any
-                                                                                interruption.</td>
-                                                                            <td class=" u-tC"
-                                                                                headers="C35262373760770131"> : </td>
-                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB"><a
-                                                                                    href="apex_util.get_blob?s=120706531155812&a=1111&c=35270779063770123&p=75&k1=13798&k2=&ck=MwrlI1Xm3f4voJyCTYImtHfcyBUM3FU4HTRcmfrpELRH6TRwuJbPdYMzTrHxULmfLuYDG3WM0E6JMQDaBLwXZg&rt=IR"
-                                                                                    alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;"
-                                                                                    title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 337KB"><i
-                                                                                        class="fa fa-eye"></i></a></td>
-                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB">
-                                                                            </td>
-                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB"><a
-                                                                                    href="apex_util.get_blob?s=120706531155812&a=1111&c=35267092009770127&p=75&k1=13798&k2=&ck=1kA_guPF2uHSKFI3qaehJlyimVFLbVHiyKy5IBZAwX9hTSbA3n4Gx3SDzo9wVYxpmPlqMAmdxO0395qT4xh9GQ&rt=IR"
-                                                                                    alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;"
-                                                                                    title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 752KB"><i
-                                                                                        class="fa fa-eye"></i></a></td>
-                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB"><a
-                                                                                    href="apex_util.get_blob?s=120706531155812&a=1111&c=35268373059770125&p=75&k1=13798&k2=&ck=J3e4jk37b9GLbb3EbXWTa2Gj_rS0jBYa91Xbqw6hNZF3R032b2rOHPa4_g3viYXj6tPQMtM4WbxUPTJKolN6Vg&rt=IR"
-                                                                                    alt="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt;"
-                                                                                    title="&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;&#x2F;i&gt; 695KB"><i
-                                                                                        class="fa fa-eye"></i></a></td>
-                                                                            <td class=" u-tC" headers="DOWNLOAD-BLOB">
-                                                                            </td>
-                                                                        </tr>
+                                                                    <table id="pressReleaseTable" class="display"
+                                                                        style="width:100%">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>SI No</th>
+                                                                                <th>Edm Id</th>
+                                                                                <th>Date</th>
+                                                                                <th>Activity</th>
+                                                                                <th>Notes</th>
+                                                                                <th>Time Spend</th>
+                                                                                <th>Inspection Report</th>
+                                                                                <th>Image Attachment1</th>
+                                                                                <th>Image Attachment2</th>
+                                                                                <th>Image Attachment3</th>
+                                                                                <th>Image Attachment4</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody></tbody>
                                                                     </table>
                                                                 </div>
                                                                 <div role="region"
@@ -564,7 +486,102 @@
     <script src="../assets/js/global.js"></script>
     <script src="../assets/js/encrypt_decrypt.js"></script>
     <script src="../assets/js/globalHeader.js"></script>
+    <script src="../assets/js/downloadLink.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+            console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+            $('#pressReleaseTable').DataTable();
+        });
+    </script>
+    <script type="module">
+        import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+
+        $(document).ready(function () {
+            debugger
+
+            var userId = localStorage.getItem('userId');
+            const langSwitch = 'en';
+            const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+            const secretKey = 'V7gN4dY8pT2xB3kRz';
+            let details = '';
+            let status = '';
+            const urlParams = new URLSearchParams(window.location.search);
+            // const encodedDetails = urlParams.get('details');
+            // const encodedStatus = urlParams.get('status');
+            // const decodedDetails = atob(encodedDetails);
+            // const decodedStatus = atob(encodedStatus);
+
+            // console.log(decodedStatus, "decoded status");
+
+            // // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
+            var month = $('#P75_MONTH').val();
+            var district = $('#P75_DISTRICT').val();
+            var edmvalue = $('#P75_EDM').val();
+            var activity = $('#P75_ACTIVITY').val();
+
+            const payload = {
+                action: "function_call",
+                function_name: "hd_timesheet_details",
+                params: {
+                    // p_month: month,
+                    // p_district: district,
+                    // p_edm: edmvalue,
+                    // p_activity: activity
+                    p_month: null,
+                    p_district: null,
+                    p_edm: null,
+                    p_activity: null
+                }
+
+            };
+
+            //check
+            // const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+            loadDataToTable({
+                tableId: 'pressReleaseTable',
+                apiUrl,
+                httpMethod: 'POST',
+                payload: encryptData(payload),
+                rowBuilder: (item) => {
+                    const applicationInfo = btoa(String(item.request_number));
+                    const status = btoa(String(item.request_status));
+                    return `
+      <tr>
+        <td class="u-tC">${item.sl_no || 'N/A'}</td>
+        <td class="u-tC">${item.ts_edm_id || 'N/A'}</td>
+        <td class="u-tC">${item.ts_date || 'N/A'}</td>
+        <td class="u-tC">${item.ts_activity || 'N/A'}</td>
+        <td class="u-tC">${item.ts_notes || 'N/A'}</td>
+        <td class="u-tC">${item.ts_created_date || 'N/A'}</td>
+        <td class="u-tC">${item.inspection_report || 'N/A'}</td>
+         <td>${createDownloadLink(item.image_attachment1, item.mime_type1, item.file_name1)}</td>
+         <td>${createDownloadLink(item.image_attachment2, item.mime_type2, item.file_name2)}</td>
+         <td>${createDownloadLink(item.image_attachment3, item.mime_type3, item.file_name3)}</td>
+         <td>${createDownloadLink(item.image_attachment4, item.mime_type4, item.file_name4)}</td>
+
+      </tr>
+    `;
+                },
+                onTableInit: function (dtRef) {
+                    dataTableRef = dtRef;
+                }
+            });
+
+            $('#saveBtn').on('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                alert("hi")
+            });
+        })
+
+
+
+    </script>
 
 </body>
 

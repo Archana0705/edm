@@ -80,171 +80,110 @@
                         <div class="t-Body-fullContent"></div>
                         <div class="t-Body-contentInner">
                             <div class="container">
-                                <div class="row ">
-                                    <div class="col col-12 apex-col-auto col-start col-end">
-                                        <div id="R40964975687648032" class="t-Form--leftLabels"><input type="hidden"
-                                                name="P29_PRIORITY" id="P29_PRIORITY" value=""><input type="hidden"
-                                                data-for="P29_PRIORITY"
-                                                value="xURy0cBMsCpaMKc_PDy5z9EBcNvSRnHl8Q_X_kpWXsS94HxOLghWk4WUIULu5Q4KJUm4zDCfkWR4axGOA4EGqA">
-                                            <div class="container">
-                                                <div class="row ">
-                                                    <div class="col col-3  col-start">
-                                                        <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
-                                                            id="P29_STATUS_CONTAINER">
-                                                            <div class="t-Form-labelContainer col col-1">
-                                                                <label for="P29_STATUS" id="P29_STATUS_LABEL"
-                                                                    class="t-Form-label">Status</label>
-                                                            </div>
-                                                            <div class="t-Form-inputContainer col col-2">
-                                                                <div class="t-Form-itemWrapper"><select id="P29_STATUS"
-                                                                        name="P29_STATUS"
-                                                                        class="selectlist&#x20;apex-item-select"
-                                                                        data-native-menu="false" size="1">
-                                                                        <option value="" selected="selected"></option>
-                                                                        <option value="New">New</option>
-                                                                        <option value="Open">Open</option>
-                                                                        <option value="In-Progress">In-Progress</option>
-                                                                        <option value="On-Hold">On-Hold</option>
-                                                                        <option value="Resolved">Resolved</option>
-                                                                        <option value="Closed">Closed</option>
-                                                                    </select></div><span
-                                                                    id="P29_STATUS_error_placeholder"
-                                                                    class="a-Form-error"
-                                                                    data-template-id="8676686131964195_ET"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col col-1  ">
-                                                        <button id="statusSearchBtn">Search</button>
-                                                    </div>
-                                                    <div class="col col-1  ">
-                                                        <button id="clearStatusBtn" type="button">Clear</button>
-                                                    </div>
-
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="R53337887249653684_content" class="a-IRR-content ">
-                                    <div id="R53337887249653684_dialog_js" class="a-IRR-dialogBody"
-                                        style="display:none;"></div><input type="hidden"
-                                        id="R53337887249653684_worksheet_id" value="53338015490653684" />
-                                    <input type="hidden" id="R53337887249653684_app_user" value="6380988375" />
-                                    <input type="hidden" id="R53337887249653684_report_id" value="53377642359796983" />
-                                    <input type="hidden" id="R53337887249653684_view_mode" value="REPORT" />
-                                    <div role="region" aria-label="Report&#x20;settings&#x20;of&#x20;All&#x20;Request"
-                                        class="a-MediaBlock a-IRR-controlsContainer"
-                                        id="R53337887249653684_control_panel">
-                                        <div class="a-MediaBlock-graphic">
-                                            <h3 aria-hidden="true" class="u-vh">Report Settings</h3>
-                                            <span role="heading" aria-level="3"><button type="button"
-                                                    class="a-Button a-IRR-button a-IRR-button--controls"><span
-                                                        class="a-Icon a-Collapsible-icon icon-down-arrow"
-                                                        aria-hidden="true"></span></button></span>
-                                        </div>
-                                        <div class="a-MediaBlock-content">
-
-                                        </div>
-                                    </div>
-
-                                    <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                        id="R53337887249653684_chart" class="a-IRR-chartView"></div>
-                                    <div role="region"
-                                        aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                        id="R53337887249653684_group_by" class="a-IRR-groupByView"></div>
-                                    <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                        id="R53337887249653684_pivot" class="a-IRR-pivotView"></div>
-                                    <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
-                                        id="R53337887249653684_data_panel" class="a-IRR-reportView">
-                                        <div class="a-IRR-tableContainer">
-                                            <table id="pressReleaseTable" class="display" style="width:100%">
-                                                <thead>
-                                                    <tr>
-                                                        <!-- <th>Actions</th> -->
-                                                        <th>Request Number</th>
-                                                        <th>Issue Type</th>
-                                                        <th>Short Description</th>
-                                                        <th>Request Status</th>
-                                                        <th>Created On</th>
-                                                        <th>Requested By</th>
-                                                        <th>Requested Group</th>
-                                                        <th>Assigned To</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody></tbody>
-                                            </table>
-                                        </div>
-
-                                    </div>
+                                <div class="col col-2 float-end m-2">
+                                    <button id="createBtn" class="btn btn-success">
+                                        <i class="t-Icon t-Icon--left fa fa-plus-circle-o fa-anim-flash"
+                                            style="margin-top: 5px;"></i>Create
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                        <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
-                            id="R53337887249653684_sort_widget" style="display:none;">
-                            <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">
-                                Column Actions</h1>
-                            <ul role="toolbar" class="a-IRR-sortWidget-actions"
-                                id="R53337887249653684_sort_widget_actions">
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                    id="R53337887249653684_sort_widget_action_up">
-                                    <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                        title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending"
-                                        data-option="up"><span aria-hidden="true"
-                                            class="a-Icon icon-irr-sort-asc"></span></button>
-                                </li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                    id="R53337887249653684_sort_widget_action_down">
-                                    <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                        title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending"
-                                        data-option="down"><span aria-hidden="true"
-                                            class="a-Icon icon-irr-sort-desc"></span></button>
-                                </li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                    id="R53337887249653684_sort_widget_action_hide">
-                                    <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                        title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
-                                            aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button>
-                                </li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                    id="R53337887249653684_sort_widget_action_break">
-                                    <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                        title="Control&#x20;Break" aria-label="Control&#x20;Break"
-                                        data-option="break"><span aria-hidden="true"
-                                            class="a-Icon icon-irr-control-break"></span></button>
-                                </li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                    id="R53337887249653684_sort_widget_action_help">
-                                    <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                        title="Help" aria-label="Help" data-option="help" aria-pressed="false"><span
-                                            aria-hidden="true" class="a-Icon icon-irr-help"></span></button>
-                                </li>
-                                <li role="none" class="a-IRR-sortWidget-actions-item"
-                                    id="R53337887249653684_sort_widget_action_computation"><button
-                                        class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
-                                        title="Compute" aria-label="Compute" data-option="computation"><span
-                                            aria-hidden="true" class="a-Icon icon-irr-calculator"></span></button></li>
-                            </ul>
-                            <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
-                                id="R53337887249653684_sort_widget_help"></div>
-                            <div role="search" class="a-IRR-sortWidget-search"
-                                id="R53337887249653684_sort_widget_search"><label
-                                    for="R53337887249653684_sort_widget_search_field"><span aria-hidden="true"
-                                        class="a-IRR-sortWidget-searchLabel"></span><span
-                                        class="u-vh">Search</span></label><input
-                                    id="R53337887249653684_sort_widget_search_field"
-                                    class="a-IRR-sortWidget-searchField" type="text" placeholder="Filter..." />
-                                <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
-                                    id="R53337887249653684_sort_widget_rows"></div>
+                            <div id="R53337887249653684_content" class="a-IRR-content ">
+                                <div id="R53337887249653684_dialog_js" class="a-IRR-dialogBody" style="display:none;">
+                                </div><input type="hidden" id="R53337887249653684_worksheet_id"
+                                    value="53338015490653684" />
+                                <input type="hidden" id="R53337887249653684_app_user" value="6380988375" />
+                                <input type="hidden" id="R53337887249653684_report_id" value="53377642359796983" />
+                                <input type="hidden" id="R53337887249653684_view_mode" value="REPORT" />
+
+
+                                <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                    id="R53337887249653684_chart" class="a-IRR-chartView"></div>
+                                <div role="region" aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                    id="R53337887249653684_group_by" class="a-IRR-groupByView"></div>
+                                <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                    id="R53337887249653684_pivot" class="a-IRR-pivotView"></div>
+                                <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;All&#x20;Request"
+                                    id="R53337887249653684_data_panel" class="a-IRR-reportView">
+                                    <div class="a-IRR-tableContainer">
+                                        <table id="pressReleaseTable" class="display" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Actions</th>
+                                                    <th>SI no</th>
+                                                    <th>Petition Date</th>
+                                                    <th>Citizen Name</th>
+                                                    <th>Mobile Number</th>
+                                                    <th>Issue Related to</th>
+                                                    <th>Issue handled by</th>
+                                                    <th>Remarks</th>
+                                                    <th>Issue Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                 </div>
-
-
+                <div role="dialog" aria-label="Column&#x20;Actions" aria-modal="true" class="a-IRR-sortWidget"
+                    id="R53337887249653684_sort_widget" style="display:none;">
+                    <h1 class="u-vh" aria-roledescription="Visually&#x20;hidden&#x20;dialog&#x20;title">
+                        Column Actions</h1>
+                    <ul role="toolbar" class="a-IRR-sortWidget-actions" id="R53337887249653684_sort_widget_actions">
+                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R53337887249653684_sort_widget_action_up">
+                            <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Sort&#x20;Ascending" aria-label="Sort&#x20;Ascending" data-option="up"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-sort-asc"></span></button>
+                        </li>
+                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R53337887249653684_sort_widget_action_down">
+                            <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Sort&#x20;Descending" aria-label="Sort&#x20;Descending" data-option="down"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-sort-desc"></span></button>
+                        </li>
+                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R53337887249653684_sort_widget_action_hide">
+                            <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Hide&#x20;Column" aria-label="Hide&#x20;Column" data-option="hide"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-remove-col"></span></button>
+                        </li>
+                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R53337887249653684_sort_widget_action_break">
+                            <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button"
+                                title="Control&#x20;Break" aria-label="Control&#x20;Break" data-option="break"><span
+                                    aria-hidden="true" class="a-Icon icon-irr-control-break"></span></button>
+                        </li>
+                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R53337887249653684_sort_widget_action_help">
+                            <button class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Help"
+                                aria-label="Help" data-option="help" aria-pressed="false"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-help"></span></button>
+                        </li>
+                        <li role="none" class="a-IRR-sortWidget-actions-item"
+                            id="R53337887249653684_sort_widget_action_computation"><button
+                                class="a-Button a-IRR-button a-IRR-sortWidget-button" type="button" title="Compute"
+                                aria-label="Compute" data-option="computation"><span aria-hidden="true"
+                                    class="a-Icon icon-irr-calculator"></span></button></li>
+                    </ul>
+                    <div role="region" aria-label="Help" class="a-IRR-sortWidget-help"
+                        id="R53337887249653684_sort_widget_help"></div>
+                    <div role="search" class="a-IRR-sortWidget-search" id="R53337887249653684_sort_widget_search"><label
+                            for="R53337887249653684_sort_widget_search_field"><span aria-hidden="true"
+                                class="a-IRR-sortWidget-searchLabel"></span><span
+                                class="u-vh">Search</span></label><input
+                            id="R53337887249653684_sort_widget_search_field" class="a-IRR-sortWidget-searchField"
+                            type="text" placeholder="Filter..." />
+                        <div role="group" aria-label="Filter&#x20;suggestions" class="a-IRR-sortWidget-rows"
+                            id="R53337887249653684_sort_widget_rows"></div>
+                    </div>
+                </div>
             </div>
+
+
+        </div>
         </div>
         </div>
         </div>
@@ -334,10 +273,9 @@
 
             const payload = {
                 action: "function_call",
-                function_name: "hdo_service_request_fn",
+                function_name: "hdo_public_pettition_fn",
                 params: {
-                    status: null,
-                    userid: userId,
+
                     // userid: "EDM0416",
                 }
             }
@@ -349,22 +287,35 @@
                 httpMethod: 'POST',
                 payload: encryptData(payload),
                 rowBuilder: (item) => {
-                    const applicationInfo = btoa(String(item.request_number));
+                    const applicationinfo = {
+                        petition_id: item.petition_id,
+                        petition_date: item.petition_date,
+                        citizen_name: item.citizen_name,
+                        issue_related_to: item.issue_related_to,
+                        remarks: item.remarks,
+                        issue_handled_by: item.issue_handled_by,
+                        issue_type: item.issue_type,
+                        mobile_number: item.mobile_number,
+
+                    };
+                    const encodedDetails = btoa(JSON.stringify(applicationinfo));
+
                     const status = btoa(String(item.request_status));
                     return `
     <tr>
     <td class="u-tL">
-        <a data-id="${item.request_number}" id="open-modal-btn" href="allrequest-info.html?details=${applicationInfo}&status=${status}">
-          ${item.request_number}
+        <a data-id="${item.petition_id}" id="open-modal-btn" href="publicpetitions-info.html?details=${encodedDetails}&status=${status}">
+       <i class="bi bi-pencil-square"></i>
         </a>
         </td>
+      <td class="u-tC">${item.sl_no || 'N/A'}</td>
+      <td class="u-tC">${item.petition_date || 'N/A'}</td>
+      <td class="u-tC">${item.citizen_name || 'N/A'}</td>
+      <td class="u-tC">${item.mobile_number || 'N/A'}</td>
+      <td class="u-tC">${item.issue_related_to || 'N/A'}</td>
+      <td class="u-tC">${item.issue_handled_by || 'N/A'}</td>
+      <td class="u-tC">${item.remarks || 'N/A'}</td>
       <td class="u-tC">${item.issue_type || 'N/A'}</td>
-      <td class="u-tC">${item.short_description || 'N/A'}</td>
-      <td class="u-tC">${item.request_status || 'N/A'}</td>
-      <td class="u-tC">${item.created_date || 'N/A'}</td>
-      <td class="u-tC">${item.requested_by || 'N/A'}</td>
-      <td class="u-tC">${item.requested_group || 'N/A'}</td>
-      <td class="u-tC">${item.assigned_to || 'N/A'}</td>
     </tr>
   `;
                 },
@@ -373,19 +324,9 @@
                 }
             });
 
-            $('#statusSearchBtn').on('click', function () {
+            $('#createBtn').on('click', function () {
                 event.preventDefault();
-                const selectedStatus = $('#P29_STATUS').val().trim();
-
-
-                if (dataTableRef) {
-                    dataTableRef
-                        .column(3) // Request Status
-                        .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
-                        .draw();
-                } else {
-                    console.warn('Table not initialized yet');
-                }
+                window.location.href = 'publicpetitions-create.html';
             });
 
             $('#clearStatusBtn').on('click', function (event) {
