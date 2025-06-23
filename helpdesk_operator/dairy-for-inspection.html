@@ -99,7 +99,7 @@
                                                         <option value="January">January</option>
                                                         <option value="February">February</option>
                                                         <option value="March">March</option>
-                                                        <option value="April" selected="selected">April</option>
+                                                        <option value="April">April</option>
                                                         <option value="May">May</option>
                                                         <option value="June">June</option>
                                                         <option value="July">July</option>
@@ -133,7 +133,7 @@
                                                         <option value="">Select District</option>
                                                         <option value="Ariyalur">Ariyalur</option>
                                                         <option value="Chengalpattu">Chengalpattu</option>
-                                                        <option value="Chennai" selected="selected">Chennai</option>
+                                                        <option value="Chennai">Chennai</option>
                                                         <option value="Coimbatore">Coimbatore</option>
                                                         <option value="Cuddalore">Cuddalore</option>
                                                         <option value="Dharmapuri">Dharmapuri</option>
@@ -194,8 +194,8 @@
                                                         required class="selectlist&#x20;apex-item-select"
                                                         data-native-menu="false" size="1">
                                                         <option value="">Select EDM</option>
-                                                        <option value="eDistrict&#x20;Manager&#x20;1"
-                                                            selected="selected">eDistrict Manager 1</option>
+                                                        <option value="eDistrict&#x20;Manager&#x20;1">eDistrict Manager
+                                                            1</option>
                                                         <option value="eDistrict&#x20;Manager&#x20;2">eDistrict Manager
                                                             2</option>
                                                     </select></div>
@@ -222,7 +222,7 @@
                                                         <option value=""></option>
                                                         <option value="E-office">E-office</option>
                                                         <option value="Field&#x20;Visit">Field Visit</option>
-                                                        <option value="Inspection" selected="selected">Inspection
+                                                        <option value="Inspection">Inspection
                                                         </option>
                                                         <option value="Meeting">Meeting</option>
                                                         <option value="Others">Others</option>
@@ -240,9 +240,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-11 text-end mb-2">
-                                        <button id="saveBtn"
+                                        <button id="searchBtn"
                                             class="t-Button t-Button--hot t-Button--large t-Button--success">Search</button>
-                                        <button id="exitBtn"
+                                        <button id="clearBtn"
                                             class="t-Button t-Button--hot js-ignoreChange t-Button--large t-Button--warning exitbtn">Clear</button>
 
                                     </div>
@@ -500,85 +500,80 @@
         import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
 
         $(document).ready(function () {
-            debugger
+            let dataTableRef = null;
 
-            var userId = localStorage.getItem('userId');
-            const langSwitch = 'en';
             const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
             const secretKey = 'V7gN4dY8pT2xB3kRz';
-            let details = '';
-            let status = '';
-            const urlParams = new URLSearchParams(window.location.search);
-            // const encodedDetails = urlParams.get('details');
-            // const encodedStatus = urlParams.get('status');
-            // const decodedDetails = atob(encodedDetails);
-            // const decodedStatus = atob(encodedStatus);
+            const langSwitch = 'en';
 
-            // console.log(decodedStatus, "decoded status");
+            function getPayload() {
+                return {
+                    action: "function_call",
+                    function_name: "hd_timesheet_details",
+                    params: {
+                        p_month: $('#P75_MONTH').val() || null,
+                        p_district: $('#P75_DISTRICT').val() || null,
+                        p_edm: $('#P75_EDM').val() || null,
+                        p_activity: $('#P75_ACTIVITY').val() || null
+                    }
+                };
+            }
 
-            // // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
-            var month = $('#P75_MONTH').val();
-            var district = $('#P75_DISTRICT').val();
-            var edmvalue = $('#P75_EDM').val();
-            var activity = $('#P75_ACTIVITY').val();
+            function fetchTableData() {
+                const payload = getPayload();
+                loadDataToTable({
+                    tableId: 'pressReleaseTable',
+                    apiUrl,
+                    httpMethod: 'POST',
+                    payload: encryptData(payload),
+                    rowBuilder: (item) => {
+                        return `
+                  <tr>
+                    <td class="u-tC">${item.sl_no || 'N/A'}</td>
+                    <td class="u-tC">${item.ts_edm_id || 'N/A'}</td>
+                    <td class="u-tC">${item.ts_date || 'N/A'}</td>
+                    <td class="u-tC">${item.ts_activity || 'N/A'}</td>
+                    <td class="u-tC">${item.ts_notes || 'N/A'}</td>
+                    <td class="u-tC">${item.ts_created_date || 'N/A'}</td>
+                    <td class="u-tC">${item.inspection_report || 'N/A'}</td>
+                    <td>${createDownloadLink(item.image_attachment1, item.mime_type1, item.file_name1)}</td>
+                    <td>${createDownloadLink(item.image_attachment2, item.mime_type2, item.file_name2)}</td>
+                    <td>${createDownloadLink(item.image_attachment3, item.mime_type3, item.file_name3)}</td>
+                    <td>${createDownloadLink(item.image_attachment4, item.mime_type4, item.file_name4)}</td>
+                  </tr>
+                `;
+                    },
+                    onTableInit: function (dtRef) {
+                        dataTableRef = dtRef;
+                    }
+                });
+            }
 
-            const payload = {
-                action: "function_call",
-                function_name: "hd_timesheet_details",
-                params: {
-                    // p_month: month,
-                    // p_district: district,
-                    // p_edm: edmvalue,
-                    // p_activity: activity
-                    p_month: null,
-                    p_district: null,
-                    p_edm: null,
-                    p_activity: null
-                }
+            fetchTableData();
 
-            };
+            $('#searchBtn').on('click', function (e) {
+                e.preventDefault();
+                fetchTableData();
+            });
 
-            //check
-            // const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+            $('#clearBtn').on('click', function (e) {
+                e.preventDefault();
+                $('#P75_MONTH').val('');
+                $('#P75_DISTRICT').val('');
+                $('#P75_EDM').val('');
+                $('#P75_ACTIVITY').val('');
+                fetchTableData();
+            });
 
-            loadDataToTable({
-                tableId: 'pressReleaseTable',
-                apiUrl,
-                httpMethod: 'POST',
-                payload: encryptData(payload),
-                rowBuilder: (item) => {
-                    const applicationInfo = btoa(String(item.request_number));
-                    const status = btoa(String(item.request_status));
-                    return `
-      <tr>
-        <td class="u-tC">${item.sl_no || 'N/A'}</td>
-        <td class="u-tC">${item.ts_edm_id || 'N/A'}</td>
-        <td class="u-tC">${item.ts_date || 'N/A'}</td>
-        <td class="u-tC">${item.ts_activity || 'N/A'}</td>
-        <td class="u-tC">${item.ts_notes || 'N/A'}</td>
-        <td class="u-tC">${item.ts_created_date || 'N/A'}</td>
-        <td class="u-tC">${item.inspection_report || 'N/A'}</td>
-         <td>${createDownloadLink(item.image_attachment1, item.mime_type1, item.file_name1)}</td>
-         <td>${createDownloadLink(item.image_attachment2, item.mime_type2, item.file_name2)}</td>
-         <td>${createDownloadLink(item.image_attachment3, item.mime_type3, item.file_name3)}</td>
-         <td>${createDownloadLink(item.image_attachment4, item.mime_type4, item.file_name4)}</td>
-
-      </tr>
-    `;
-                },
-                onTableInit: function (dtRef) {
-                    dataTableRef = dtRef;
-                }
+            $(document).on('click', '.menu-link', function () {
+                $('#P75_MONTH, #P75_DISTRICT, #P75_EDM, #P75_ACTIVITY').val('');
             });
 
             $('#saveBtn').on('click', function (event) {
                 event.preventDefault();
                 event.stopPropagation();
-
-                alert("hi")
             });
-        })
-
+        });
 
 
     </script>
