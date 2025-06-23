@@ -457,7 +457,9 @@
 
         let folder = '';
 
-        if (role.toLowerCase().includes('helpdesk_operator')) {
+        if (role.toLowerCase().includes('helpdesk_operator6')) {
+          folder = 'call-center-operator';
+        } else if (role.toLowerCase().includes('helpdesk_operator')) {
           folder = 'helpdesk_operator';
         } else if (role.toLowerCase().includes('edistrict manager')) {
           folder = 'edistrict_manager';

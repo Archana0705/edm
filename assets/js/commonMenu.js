@@ -5,7 +5,7 @@ const userRole = localStorage.getItem('userRole');
 console.log("userRole", userRole)
 
 const menuItems = [
-    { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", "call-center-operator"] },
     {
         label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"],
         subMenu: [
@@ -30,34 +30,36 @@ const menuItems = [
     { label: "Instructions Received Report", file: "instructions-recieved-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager",] },
     { label: "Helpdesk Tickets", file: "helpdesk-report.html", folder: "", icon: "fa fa-refresh", roles: ["edistrict_manager"] },
 
-    { label: "Ticket Updates", file: "ticket-updates.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
+    { label: "Ticket Updates", file: "allrequest.html", folder: "", icon: "fa fa-refresh", roles: ["call-center-operator"] },
+    { label: "Ticket Raise Request", file: "ticket-updates.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
+
     { label: "Helpdesk Ticket Updates", file: "helpdesk-ticket-update.html", folder: "", icon: "fa fa-refresh", roles: ["helpdesk", "helpdesk_operator"] },
     {
-        label: "Helpdesk Tickets Reports", file: "", folder: "", icon: "fa fa-list", roles: ["helpdesk", "helpdesk_operator"],
+        label: "Helpdesk Tickets Reports", file: "", folder: "", icon: "fa fa-list", roles: ["helpdesk", "helpdesk_operator", "call-center-operator"],
         subMenu: [
             {
                 label: "Helpdesk Instruction Open Report ",
                 file: "helpdeskopen.html",
                 folder: "",
-                roles: ["helpdesk_operator"]
+                roles: ["helpdesk_operator", "call-center-operator"]
             },
             {
                 label: "Helpdesk Instruction In Progress Report ",
                 file: "helpdesk-inprogress.html",
                 folder: "",
-                roles: ["helpdesk_operator"]
+                roles: ["helpdesk_operator", "call-center-operator"]
             },
             {
                 label: "Helpdesk Instruction Closed Report ",
                 file: "helpdesk-closed.html",
                 folder: "",
-                roles: ["helpdesk_operator"]
+                roles: ["helpdesk_operator", "call-center-operator"]
             },
             {
                 label: "Helpdesk Instruction Reassigned Report",
                 file: "request-reassign.html",
                 folder: "",
-                roles: ["helpdesk_operator"]
+                roles: ["helpdesk_operator", "call-center-operator"]
             }
 
         ]
@@ -74,12 +76,14 @@ function normalizeRole(role) {
     if (!role) return null;
     const lowerRole = role.toLowerCase();
 
-    if (lowerRole.includes("helpdesk_operator")) {
-        return "helpdesk_operator";
+    if (lowerRole.includes("helpdesk_operator6")) {
+        return "call-center-operator";
     } else if (lowerRole.includes("edistrict manager")) {
         return "edistrict_manager";
     } else if (lowerRole.includes("helpdesk")) {
         return "helpdesk";
+    } else if (lowerRole.includes("helpdesk_operator")) {
+        return "helpdesk_operator";
     }
     return null;
 }

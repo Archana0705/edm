@@ -296,75 +296,94 @@
 
   <script type="module">
     import { encryptData } from '../assets/js/encrypt_decrypt.js';
+
     let dataTableRef;
+
     $(document).ready(function () {
-      debugger
-
-      var userId = localStorage.getItem('userId');
-      const langSwitch = 'en';
-      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
-      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      const userId = localStorage.getItem('userId');
       const p_district = localStorage.getItem('userDistrict');
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
 
-      const payload = {
-        action: "function_call",
-        function_name: "operator_details_fn",
-        params: {
-          p_district: p_district,
-          userid: userId,
-        }
-      }
-      // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
+      dataTableRef = $('#pressReleaseTable').DataTable({
+        serverSide: true,
+        processing: true,
+        searching: false,
+        ordering: false,
+        pageLength: 10,
+        ajax: function (data, callback) {
+          const offset = data.start;
+          const limit = data.length;
+          const selectedStatus = $('#P19_STATUS').val().trim();
 
-      loadDataToTable({
-        tableId: 'pressReleaseTable',
-        apiUrl,
-        httpMethod: 'POST',
-        payload: encryptData(payload),
-        rowBuilder: (item) => {
-          const applicationInfo = btoa(String(item.esevai_id));
-          return `
-      <tr>
-        <td class="u-tC">${item.esevai_id || 'N/A'}</td>
-        <td class="u-tC">${item.centre_address || 'N/A'}</td>
-        <td class="u-tC">${item.district_name || 'N/A'}</td>
-        <td class="u-tC">${item.taluk_name || 'N/A'}</td>
-        <td class="u-tC">${item.name || 'N/A'}</td>
-        <td class="u-tC">${item.mobileno || 'N/A'}</td>
-        <td class="u-tC">${item.email || 'N/A'}</td>
-      </tr>
-    `;
+          const payload = {
+            action: "function_call",
+            function_name: "operator_details_fn",
+            params: {
+              p_district: p_district,
+              userid: userId
+            },
+            limit: limit,
+            offset: offset,
+            search: selectedStatus,
+            search_key: "name" // Adjust to your actual searchable column
+          };
+
+          $.ajax({
+            url: apiUrl,
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(encryptData(payload)),
+            success: function (response) {
+              const decrypted = decryptData(response); // Assume this returns a usable object
+              const dataList = decrypted.data || [];
+              const totalRecords = decrypted.total || 0;
+
+              callback({
+                recordsTotal: totalRecords,
+                recordsFiltered: totalRecords,
+                data: dataList.map(item => {
+                  return [
+                    item.esevai_id || 'N/A',
+                    item.centre_address || 'N/A',
+                    item.district_name || 'N/A',
+                    item.taluk_name || 'N/A',
+                    item.name || 'N/A',
+                    item.mobileno || 'N/A',
+                    item.email || 'N/A'
+                  ];
+                })
+              });
+            },
+            error: function (xhr) {
+              console.error("Failed to load data:", xhr);
+            }
+          });
         },
-        onTableInit: function (dtRef) {
-          dataTableRef = dtRef;
-        }
+        columns: [
+          { title: "Esevai ID" },
+          { title: "Centre Address" },
+          { title: "District" },
+          { title: "Taluk" },
+          { title: "Name" },
+          { title: "Mobile" },
+          { title: "Email" }
+        ]
       });
 
-      $('#statusSearchBtn').on('click', function () {
+      // 🔍 Filter by status (search)
+      $('#statusSearchBtn').on('click', function (event) {
         event.preventDefault();
-        const selectedStatus = $('#P19_STATUS').val().trim();
-
-
         if (dataTableRef) {
-          dataTableRef
-            .column(4) // Request Status
-            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
-            .draw();
-        } else {
-          console.warn('Table not initialized yet');
+          dataTableRef.ajax.reload();
         }
       });
 
+      // ❌ Clear status filter
       $('#clearStatusBtn').on('click', function (event) {
         event.preventDefault();
         $('#P19_STATUS').val('');
-        dataTableRef
-          .column(4)
-          .search('')
-          .draw();
+        dataTableRef.ajax.reload();
       });
-
-
     });
 
   </script>
