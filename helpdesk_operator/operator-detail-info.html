@@ -534,16 +534,21 @@
           dataType: 'json',
           cache: false,
           success: function (response) {
-            console.log("Raw API response:", response); 
-            showSuccessToast("Saved successfully.");
-            $('#P51_CENTRE_ADDRESS').val('');
-            $('#P51_AGENCYC_ODE').val('');
-            $('#P51_DISTRICT_NAME').val('');
-            $('#P51_TALUK_NAME').val('');
-            $('#P51_NAME').val('');
-            $('#P51_MOBILENO').val('');
-            $('#P51_EMAIL').val('');
+            const decryptedData = decryptData(response.data);
+            console.log("Raw API response:", decryptedData);
+            const message = decryptedData[0]?.upt_master_operator_fn || "Saved successfully.";
 
+            showSuccessToast(message);
+            // $('#P51_CENTRE_ADDRESS').val('');
+            // $('#P51_AGENCYC_ODE').val('');
+            // $('#P51_DISTRICT_NAME').val('');
+            // $('#P51_TALUK_NAME').val('');
+            // $('#P51_NAME').val('');
+            // $('#P51_MOBILENO').val('');
+            // $('#P51_EMAIL').val('');
+            setTimeout(() => {
+              window.location.href = 'operator-details.html';
+            }, 1500);
           },
           error: function (xhr, status, error) {
             console.error("API call failed:", {

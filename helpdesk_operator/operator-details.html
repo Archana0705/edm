@@ -85,38 +85,7 @@
                           <div id="R74218392229849618_full_view" class="a-IRR-fullView">
                             <div id="R74218392229849618_actions_menu"></div>
                             <div id="R74218392229849618_column_search_drop" class="a-IRR-colSearch"></div>
-                            <div id="R74218392229849618_toolbar" class="a-IRR-toolbar">
-                              <div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_toolbar_controls" class="a-IRR-controls">
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--search">
-                                  <div class="a-IRR-search"><input type="hidden"
-                                      id="R74218392229849618_column_search_current_column" />
-                                    <div class="a-IRR-colSelector"><button id="R74218392229849618_column_search_root"
-                                        data-menu="R74218392229849618_column_search_drop"
-                                        class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel"
-                                        title="Select&#x20;columns&#x20;to&#x20;search"
-                                        aria-label="Select&#x20;columns&#x20;to&#x20;search" type="button"><span
-                                          class="a-Icon icon-search" aria-hidden="true"></span><span
-                                          class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div>
-                                    <div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field"
-                                        id="R74218392229849618_search_field" title="Search Report" type="search"
-                                        size="30" maxlength="4000" value="" /></div>
-                                    <div class="a-IRR-searchButtonContainer"><button
-                                        id="R74218392229849618_search_button"
-                                        class="a-Button a-IRR-button a-IRR-button--search"
-                                        type="button"><span>Go</span></button></div>
-                                  </div>
-                                </div>
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden"
-                                    id="R74218392229849618_row_select" value="50" />
-                                  <div class="a-IRR-actions"><button id="R74218392229849618_actions_button"
-                                      class="a-Button a-IRR-button a-IRR-button--actions" type="button"
-                                      data-menu="R74218392229849618_actions_menu">Actions<span aria-hidden="true"
-                                        class="a-Icon icon-menu-drop-down"></span></button></div>
-                                </div>
-                              </div>
-                            </div>
+
                             <div id="R74218392229849618_content" class="a-IRR-content ">
                               <div id="R74218392229849618_dialog_js" class="a-IRR-dialogBody" style="display:none;">
                               </div><input type="hidden" id="R74218392229849618_worksheet_id"
@@ -126,13 +95,7 @@
                               <input type="hidden" id="R74218392229849618_view_mode" value="REPORT" />
                               <style nonce="lLH-NN40dONNcFC0JpTw-Q" id="R74218392229849618_worksheet_css">
                               </style>
-                              <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_chart" class="a-IRR-chartView"></div>
-                              <div role="region"
-                                aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_group_by" class="a-IRR-groupByView"></div>
-                              <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_pivot" class="a-IRR-pivotView"></div>
+                              <input type="text" id="customSearchBox" placeholder="Search by name..." />
                               <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Operators&#x20;Details"
                                 id="R74218392229849618_data_panel" class="a-IRR-reportView">
                                 <div class="a-IRR-tableContainer">
@@ -297,7 +260,9 @@
   <script type="module">
     import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
     let dataTableRef;
-
+    $('#customSearchBox').on('keyup', function () {
+      dataTableRef.search(this.value).draw();
+    });
     function initializeOperatorTable() {
       const userId = localStorage.getItem('userId');
       const p_district = localStorage.getItem('userDistrict');
@@ -311,12 +276,13 @@
       dataTableRef = $('#pressReleaseTable').DataTable({
         serverSide: true,
         processing: true,
-        searching: false,
+        searching: true,
         ordering: false,
         pageLength: 15,
         ajax: function (data, callback) {
           const offset = data.start;
           const limit = data.length;
+          const searchValue = data.search.value?.trim() || " ";
           // const selectedStatus = $('#P19_STATUS').val().trim();
 
           const payload = {
@@ -328,7 +294,7 @@
             },
             limit: limit,
             offset: offset,
-            search: " ",
+            search: searchValue,
             search_key: "name"
           };
 
