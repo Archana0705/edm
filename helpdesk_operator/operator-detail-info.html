@@ -1,445 +1,322 @@
-
 <!DOCTYPE html>
-<html class="no-js  page-51 app-E-DISTRICT-MANAGER-APPLICATION" lang="en" >
+<html class="no-js  page-51 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
 <head>
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta charset="utf-8">
   <title>Operators Details Entry</title>
- 
   <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
-    <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
-    <link rel="icon" href="../assets/img/app-icon-32.png">
-    <style type="text/css">
-      @font-face {
-      font-family: 'FontApex';
-      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
-      url('../font/apex-5-icon-font.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;  
-      } 
-      @font-face { 
-      font-family: 'Font-APEX';
-      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
-      url('../fonts/Font-APEX-Small.woff') format('woff'),
-      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
-      url('../fonts/Font-APEX-Large.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      } 
-      .t-fht-thead {
-      display: none !important;
-      }
-      .a-IRR-table thead {
-      visibility: visible !important;
-      position: static !important;
-      }
-      .a-IRR-table tbody th {
-      position: static !important;
-      }
-      /* Disable APEX's fixed/sticky header */
-      .a-IRR-tableContainer .a-IRR-table tbody th {
-      position: static !important;
-      top: auto !important;
-      z-index: 0 !important;
-      }
-      /* Ensure whole table scrolls together */
-      .a-IRR-tableContainer {
-      overflow-x: auto !important;
-      overflow-y: auto !important;
-      max-height: 500px; /* Adjust height as needed */
-      }
-      .a-IRR-table {
-      table-layout: auto !important;
-      width: max-content !important;
-      display: table !important;
-      white-space: nowrap !important;
-      }
-    </style>
-    <style>
-      .t-fht-thead.js-stickyTableHeader {
-      display: none !important;
-      }
-      .a-IRR-table thead {
-      position: static !important;
-      visibility: visible !important;
-      }
-    </style>
-  
-  <style nonce="Yl9gT7FFgurm3c6CVTIskA" >
-/*#P51_EMAIL_CONTAINER
-{
-    margin-top:-56px;
-}*/
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-</style>
-
-  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" /><link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
-  
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" />
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+  <style>
+    #t_Body_nav {
+      width: 100% !important;
+    }
+  </style>
 </head>
-<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"   id="t_PageBody">
-<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
-<form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/operators-details-entry/114048261149373" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  autocomplete="off">
-<input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="51" id="pFlowStepId" /><input type="hidden" name="p_instance" value="114048261149373" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="MjQ0Mzg1NzAyMTg3MzI0MTI2NzgyMDc2OTcyNjQ2NTMyMTQ1NA&#x2F;XGGGNJqAODv14-LZhX_w3zWXfD9IqyegjU0hDIKFlg8ME9RtawRSpk0lFrSQZh_YUpryU32Z6MTqpa28DJxKsA" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="e-district-manager-application&#x2F;operators-details-entry&#x2F;114048261149373" id="pContext" /><input type="hidden" value="2443857021873241267820769726465321454" id="pSalt" />
-<header class="t-Header" id="t_Header" role="banner">
-  
-  <div class="t-Header-branding">
-    <div class="t-Header-controls">
-      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
-    </div>
-    <div class="t-Header-logo">
-      <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114048261149373" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>
-      
-    </div>
-    <div class="t-Header-navBar">
-      <div class="t-Header-navBar--start"></div>
-      <div class="t-Header-navBar--center"><ul class="t-NavigationBar " id="8792244222964376"><li class="t-NavigationBar-item ">
-  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar" type="button" id="L8804321173964414" data-menu="menu_L8804321173964414" title="">
-      <span class="t-Icon fa&#x20;fa-user" aria-hidden="true" ></span><span class="t-Button-label">Hello Manju !
-</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
-  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L8804321173964414"><ul><li class="" data-current="false" data-icon=""><a href="separator" title="" target="">---</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-sign-out"><a href="apex_authentication.logout?p_app_id=1111&p_session_id=114048261149373" title="" target="">Sign Out</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-lock-password"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fchange-password%3Fsession%3D114048261149373%26dialogCs%3D8IijKNdS-dqefY0lI0oxSqCzWJFFGPvy00Z-lEUf8oqRQNE0BzdWu_eeelVTtj9gQa6l4kaiI0Pv3HMWlze8mQ&appId=1111&pageId=18&tmpl=MODAL_DIALOG&title=Change%20Password&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">Change Password</a></li><li class="" data-current="false" data-icon="fa&#x20;fa-user"><a href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fprofile%3Fsession%3D114048261149373%26dialogCs%3Dt4Es6-6kRjTpSet6FSa-l8DTsruP3UV5A8XRu6pibYVXc_DCM3dsDZ18J58bltMk-ndvJ5XgSchVRS3AxymJHw&appId=1111&pageId=66&tmpl=MODAL_DIALOG&title=My%20Profile&h=auto&w=70%25&mxw=960&isModal=true&dlgCls=&pageCls=&trgEl=apex.gPageContext%24" title="" target="">My Profile</a></li></ul></div></li><li class="t-NavigationBar-item ">
-  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
-    <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label">Last Logged in: 04-05-2025 07:44 PM</span><span class="t-Button-badge"></span>
-  </a>
-</li><li class="t-NavigationBar-item ">
-  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#action$a-dialog-open?url=%2Fords%2Fr%2Fedmdev%2Fe-district-manager-application%2Fnotification%3Fsession%3D114048261149373%26dialogCs%3DsGfh5YtHarVjpffn0JCXIJUd13z9LPjVkgharzkiLiB4mURqFrFzC2eM9Ao09WCKB2ybI38TeP3FxWuii1JT2g&appId=1111&pageId=45&tmpl=DRAWER&title=Notification&h=auto&w=720&mxw=960&isModal=true&dlgCls=&pageCls=%20js-dialog-class-t-Drawer--pullOutEnd&trgEl=apex.gPageContext%24" title="" target="">
-    <span class="t-Icon fa&#x20;fa-bell&#x20;fa-anim-horizontal-shake" aria-hidden="true" ></span><span class="t-Button-label"> </span><span class="t-Button-badge">12</span>
-  </a>
-</li></ul></div>
-      <div class="t-Header-navBar--end"></div>
-    </div>
-  </div>
-  <div class="t-Header-nav"></div>
-</header>
-  <div class="t-Body">
-<div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
-  <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic" id="t_TreeNav" data-id="51_tree" aria-label="Main Navigation">
-    <ul>
-<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/home?p1_page_no=1&session=114048261149373&cs=10GHsVYgUbdiJ8yf3_98DakYy-WNSlkpLyaWGD-lSQG5Jgpn3_ncTGjM0Mt3aiLIR3i8AiZctxDSUL88mJuQC7w" title="" style="display: none" target="">Home</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-home"></span>
-      <span class="a-TreeView-label">Home</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/all-request5?session=114048261149373" title="" style="display: none" target="">All Request</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o "></span>
-      <span class="a-TreeView-label">All Request</span>
-    </div>
-  </div>
-<ul style="display:none"><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/all-requests-with-re-assaign-option?session=114048261149373" title="" target="">All requests with Re-assaign Option</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-user-headset" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/new-request?p7_new=0&session=114048261149373&cs=110BX6RMm3yB5UIdQpCi-G5IFDb-mDxd9KP8m4AyaGhFOf22_34EnYHcmZZSc8xWEf4_d5vM9pqBG-FOCQqxuNA" title="" style="display: none" target="">New Request [ 83 ]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-user-headset"></span>
-      <span class="a-TreeView-label">New Request [ 83 ]</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-clock" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/progress-request?session=114048261149373" title="" style="display: none" target="">In-Progress Request [ 2 ]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-folder-clock"></span>
-      <span class="a-TreeView-label">In-Progress Request [ 2 ]</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-bookmark" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/resolved-request2?session=114048261149373" title="" style="display: none" target="">Resolved Request [ 710 ]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-folder-bookmark"></span>
-      <span class="a-TreeView-label">Resolved Request [ 710 ]</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/reopened-request?session=114048261149373" title="" style="display: none" target="">Reopened Request [ 7 ]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o "></span>
-      <span class="a-TreeView-label">Reopened Request [ 7 ]</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-folder-check" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/closed-request?session=114048261149373" title="" style="display: none" target="">Closed Request [ 213]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-folder-check"></span>
-      <span class="a-TreeView-label">Closed Request [ 213]</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-exchange" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/reassigned-requests?session=114048261149373" title="" style="display: none" target="">Reassigned Requests</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-exchange"></span>
-      <span class="a-TreeView-label">Reassigned Requests</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-server-user" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/operators-details?session=114048261149373" title="" style="display: none" target="">Operators Details</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-server-user"></span>
-      <span class="a-TreeView-label">Operators Details</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/dairy-for-edm-inspection-report?session=114048261149373" title="" style="display: none" target="">Dairy for EDM Inspection Report</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-notebook&#x20;fa-2x&#x20;fa-lg"></span>
-      <span class="a-TreeView-label">Dairy for EDM Inspection Report</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-forms" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/edm-instruction-request?session=114048261149373" title="" style="display: none" target="">EDM Instruction Request</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-forms"></span>
-      <span class="a-TreeView-label">EDM Instruction Request</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/ticket-updates?session=114048261149373" title="" style="display: none" target="">Ticket Updates</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o "></span>
-      <span class="a-TreeView-label">Ticket Updates</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-updates?session=114048261149373" title="" style="display: none" target="">Helpdesk Ticket Updates</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o "></span>
-      <span class="a-TreeView-label">Helpdesk Ticket Updates</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="" data-shortcut="">
-  <a href="" title="" style="display: none" target="">Helpdesk Ticket Report [ 18 ]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o "></span>
-      <span class="a-TreeView-label">Helpdesk Ticket Report [ 18 ]</span>
-    </div>
-  </div>
-<ul style="display:none"><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-ticket-report?session=114048261149373" title="" target="">Helpdesk Instruction Open Report [ 0 ]</a></li><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-in-progress-report?session=114048261149373" title="" target="">Helpdesk Instructions In-Progress Report [ 0 ]</a></li><li data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut=""><a href="/ords/r/edmdev/e-district-manager-application/helpdesk-instructions-closed-report?session=114048261149373" title="" target="">Helpdesk Instructions Closed Report [ 18 ]</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-form?session=114048261149373" title="" style="display: none" target="">eSevai Operator Change Request Form</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-file"></span>
-      <span class="a-TreeView-label">eSevai Operator Change Request Form</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/esevai-operator-change-request-report?session=114048261149373" title="" style="display: none" target="">eSevai Operator Change Request Report</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-table"></span>
-      <span class="a-TreeView-label">eSevai Operator Change Request Report</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/closed-operator-change-report?session=114048261149373" title="" style="display: none" target="">Approved&#x2F;Rejected Operator Change Report [ 620]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-table"></span>
-      <span class="a-TreeView-label">Approved&#x2F;Rejected Operator Change Report [ 620]</span>
-    </div>
-  </div>
-</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-table" data-shortcut="">
-  <a href="/ords/r/edmdev/e-district-manager-application/public-petitions-report?session=114048261149373" title="" style="display: none" target="">Public Petitions [ 55]</a>
-  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
-    <div role="none" class="a-TreeView-row"></div>
-    <div role="none" class="a-TreeView-content">
-      <span class="fa fa-file-o fa&#x20;fa-table"></span>
-      <span class="a-TreeView-label">Public Petitions [ 55]</span>
-    </div>
-  </div>
-</li>    </ul>
-  </div>
-</div>
-<script>
-(() => {
-  const pref = "ORA_WWV_apex.toggleCore.nav.1111.preferenceForExpanded",
-        nav  = document.getElementById('t_TreeNav').classList,
-        body = document.getElementById('t_PageBody');
-  if ( !sessionStorage.getItem( pref ) ) { sessionStorage.setItem( pref, !nav.contains('js-defaultCollapsed') ); }
-  if ( nav.contains('js-navCollapsed--default') ) {
-      body?.classList.add('js-navCollapsed--icons');
-      if ( sessionStorage.getItem( pref ) === "false" ) { body?.classList.add('js-navCollapsed'); }
-  }
-  if ( sessionStorage.getItem( pref ) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
-  for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
-      label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
-  }
-})();
-</script>
-  <div class="t-Body-main">
-    <div class="t-Body-title" id="t_Body_title"></div>
-    <div class="t-Body-content" id="t_Body_content">
-      <main id="main" class="t-Body-mainContent">
-        <span id="APEX_SUCCESS_MESSAGE" data-template-id="35568072940746088_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="35568072940746088_E" class="apex-page-error u-hidden"></span>
-        <div class="t-Body-fullContent"></div>
-        <div class="t-Body-contentInner"><div class="container">
-<div class="row ">
-<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noUI t-Region--scrollBody t-Form--leftLabels" id="R74216798417849602"  role="region" aria-label="New" >
- <div class="t-Region-header">
-  <div class="t-Region-headerItems t-Region-headerItems--title">
-    <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
-    <h2 class="t-Region-title" id="R74216798417849602_heading" data-apex-heading>New</h2>
-  </div>
-  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
- </div>
- <div class="t-Region-bodyWrap">
-   <div class="t-Region-buttons t-Region-buttons--top">
-    <div class="t-Region-buttons-left"></div>
-    <div class="t-Region-buttons-right"></div>
-   </div>
-   <div class="t-Region-body">
-     <div class="t-Region-orderBy"></div>
-     <input type="hidden" name="P51_ID" id="P51_ID" value=""><input type="hidden" data-for="P51_ID" value="BM6w_MmYf5PhImqlJDrjZTbWG6LJKB-HyLU_IgvJ_MunyBdaqsC6XMpJ3bCF3SFOCZK8LsdNAHUI8V4ihfFb2w"><div class="container">
-<div class="row ">
-<div class="col col-6 apex-col-auto col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only" id="P51_ESEVAI_ID_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_ESEVAI_ID" id="P51_ESEVAI_ID_LABEL" class="t-Form-label">Esevai Id</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><input type="hidden" id="P51_ESEVAI_ID" name="P51_ESEVAI_ID" value="TNTACCUD003-01"><input type="hidden" data-for="P51_ESEVAI_ID" value="_5Kv0K4YNOuina7KWxXpQfrXiN6bFfKJB6K_LJW4bbf5WgFjHPF0Q5GK6l1u3HAJzkzYSVs0DN6JswusEKzZOw"><span id="P51_ESEVAI_ID_DISPLAY"  class="display_only&#x20;apex-item-display-only"  data-escape="true">TNTACCUD003-01</span></div><span id="P51_ESEVAI_ID_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-6 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field" id="P51_AGENCYC_ODE_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_AGENCYC_ODE" id="P51_AGENCYC_ODE_LABEL" class="t-Form-label">Agencyc Ode</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><input type="text"  id="P51_AGENCYC_ODE" name="P51_AGENCYC_ODE" class="text_field&#x20;apex-item-text" value="TAC [Tamil Nadu Arasu Cable TV Corporation]" size="30" maxlength="255" data-enter-submit="false" data-is-page-item-type="true"  /></div><span id="P51_AGENCYC_ODE_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
-</div><div class="row ">
-<div class="col col-6 apex-col-auto col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field" id="P51_NAME_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_NAME" id="P51_NAME_LABEL" class="t-Form-label">Name</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><input type="text"  id="P51_NAME" name="P51_NAME" class="text_field&#x20;apex-item-text" value="Person name" size="30" maxlength="200" data-enter-submit="false" data-is-page-item-type="true"  /></div><span id="P51_NAME_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-6 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--number-field" id="P51_MOBILENO_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_MOBILENO" id="P51_MOBILENO_LABEL" class="t-Form-label">Mobileno</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><input type="text"  id="P51_MOBILENO" name="P51_MOBILENO" class="number_field&#x20;apex-item-text&#x20;apex-item-number&#x20;u-textStart" value="8012735864" size="30" inputmode="decimal" /></div><span id="P51_MOBILENO_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
-</div><div class="row ">
-<div class="col col-6 apex-col-auto col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--textarea" id="P51_CENTRE_ADDRESS_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_CENTRE_ADDRESS" id="P51_CENTRE_ADDRESS_LABEL" class="t-Form-label">Centre Address</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><div class="apex-item-group apex-item-group--textarea"><textarea name="P51_CENTRE_ADDRESS" rows="5" cols="30" maxlength="350"  id="P51_CENTRE_ADDRESS" class="textarea&#x20;apex-item-textarea"  data-resizable="true" >68A,Reddiyar street,Annavalli,Cuddalore,607003</textarea></div></div><span id="P51_CENTRE_ADDRESS_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-6 apex-col-auto col-end" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field" id="P51_EMAIL_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_EMAIL" id="P51_EMAIL_LABEL" class="t-Form-label">Email</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper"><input type="text"  id="P51_EMAIL" name="P51_EMAIL" class="text_field&#x20;apex-item-text" value="csccuddalore@gmail.com" size="30" maxlength="255" data-enter-submit="false" data-is-page-item-type="true"  /></div><span id="P51_EMAIL_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
-</div><div class="row ">
-<div class="col col-6  col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value plugin-be.ctb.select2" id="P51_DISTRICT_NAME_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_DISTRICT_NAME" id="P51_DISTRICT_NAME_LABEL" class="t-Form-label">District Name</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper">
-    <select 
-      id="P51_DISTRICT_NAME"
-      name="P51_DISTRICT_NAME"
-      class="selectlist ">
-<option value="">--Select District -- </option>
-<option value="Ariyalur">Ariyalur</option>
-<option value="Chengalpattu">Chengalpattu</option>
-<option value="Chennai">Chennai</option>
-<option value="Coimbatore">Coimbatore</option>
-<option value="Cuddalore" selected="selected" >Cuddalore</option>
-<option value="Dharmapuri">Dharmapuri</option>
-<option value="Dindigul">Dindigul</option>
-<option value="Erode">Erode</option>
-<option value="Kallakurichi">Kallakurichi</option>
-<option value="Kanchipuram">Kanchipuram</option>
-<option value="Kanyakumari">Kanyakumari</option>
-<option value="Karur">Karur</option>
-<option value="Krishnagiri">Krishnagiri</option>
-<option value="Madurai">Madurai</option>
-<option value="Mayiladuthurai">Mayiladuthurai</option>
-<option value="Nagappattinam">Nagappattinam</option>
-<option value="Namakkal">Namakkal</option>
-<option value="Perambalur">Perambalur</option>
-<option value="Pudukkottai">Pudukkottai</option>
-<option value="Ramanathapuram">Ramanathapuram</option>
-<option value="Ranipet">Ranipet</option>
-<option value="Salem">Salem</option>
-<option value="Sivagangai">Sivagangai</option>
-<option value="Tenkasi">Tenkasi</option>
-<option value="Thanjavur">Thanjavur</option>
-<option value="Nilgiris">Nilgiris</option>
-<option value="Theni">Theni</option>
-<option value="Thirupattur">Thirupattur</option>
-<option value="Thoothukudi">Thoothukudi</option>
-<option value="Tiruchirappalli">Tiruchirappalli</option>
-<option value="Tirunelveli">Tirunelveli</option>
-<option value="Tiruppur">Tiruppur</option>
-<option value="Tiruvallur">Tiruvallur</option>
-<option value="Tiruvannamalai">Tiruvannamalai</option>
-<option value="Tiruvarur">Tiruvarur</option>
-<option value="Vellore">Vellore</option>
-<option value="Viluppuram">Viluppuram</option>
-<option value="Virudhunagar">Virudhunagar</option>
-</select>
-</div><span id="P51_DISTRICT_NAME_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div>
-</div><div class="row ">
-<div class="col col-6  col-start" ><div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value plugin-be.ctb.select2" id="P51_TALUK_NAME_CONTAINER"><div class="t-Form-labelContainer col col-2">
-<label for="P51_TALUK_NAME" id="P51_TALUK_NAME_LABEL" class="t-Form-label">Taluk Name</label>
-</div>
-<div class="t-Form-inputContainer col col-4"><div class="t-Form-itemWrapper">
-    <select 
-      id="P51_TALUK_NAME"
-      name="P51_TALUK_NAME"
-      class="selectlist ">
-<option value="">--Select Taluk--</option>
-<option value="Cuddalore" selected="selected" >Cuddalore</option>
-<option value="Bhuvanagiri">Bhuvanagiri</option>
-<option value="Chidambaram">Chidambaram</option>
-<option value="Kattumannarkoil">Kattumannarkoil</option>
-<option value="Kurinjipadi">Kurinjipadi</option>
-<option value="Panruti">Panruti</option>
-<option value="Srimushnam">Srimushnam</option>
-<option value="Thittakudi">Thittakudi</option>
-<option value="Veppur">Veppur</option>
-<option value="Virudhachalam">Virudhachalam</option>
-</select>
-</div><span id="P51_TALUK_NAME_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span></div></div></div><div class="col col-5  " ><span class="apex-grid-nbsp">&nbsp;</span></div><div class="col col-1 apex-col-auto col-end" ><button onclick="apex.submit({request:&#x27;Save&#x27;,validate:true});" class="t-Button t-Button--success" type="button"  id="B74217944468849614"><span class="t-Button-label">Save</span></button></div>
-</div>
-</div>
-     
-   </div>
-   <div class="t-Region-buttons t-Region-buttons--bottom">
-    <div class="t-Region-buttons-left"></div>
-    <div class="t-Region-buttons-right"></div>
-   </div>
- </div>
-</div>
-</div>
-</div>
-</div></div>
-      </main>
-     <!-- <footer class="t-Footer" id="t_Footer" role="contentinfo">
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form>
+    <header class="t-Header" id="t_Header" role="banner">
+
+      <div class="t-Header-branding">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo">
+          <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114048261149373"
+            class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>
+
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div id="globalHeader"></div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav"></div>
+    </header>
+    <div class="t-Body">
+      <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+        <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
+          id="t_TreeNav" data-id="51_tree" aria-label="Main Navigation">
+          <ul id="commonMenuContainer"></ul>
+        </div>
+      </div>
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"></div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="35568072940746088_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="35568072940746088_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent"></div>
+            <div class="t-Body-contentInner">
+              <div class="container">
+                <div class="row ">
+                  <div class="col col-12 apex-col-auto col-start col-end">
+                    <div
+                      class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noUI t-Region--scrollBody t-Form--leftLabels"
+                      id="R74216798417849602" role="region" aria-label="New">
+                      <div class="t-Region-header">
+                        <div class="t-Region-headerItems t-Region-headerItems--title">
+                          <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                          <h2 class="t-Region-title" id="R74216798417849602_heading" data-apex-heading>New</h2>
+                        </div>
+                        <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
+                            class="js-maximizeButtonContainer"></span></div>
+                      </div>
+                      <div class="t-Region-bodyWrap">
+                        <div class="t-Region-buttons t-Region-buttons--top">
+                          <div class="t-Region-buttons-left"></div>
+                          <div class="t-Region-buttons-right"></div>
+                        </div>
+                        <div class="t-Region-body">
+                          <div class="t-Region-orderBy"></div>
+                          <input type="hidden" name="P51_ID" id="P51_ID" value=""><input type="hidden" data-for="P51_ID"
+                            value="BM6w_MmYf5PhImqlJDrjZTbWG6LJKB-HyLU_IgvJ_MunyBdaqsC6XMpJ3bCF3SFOCZK8LsdNAHUI8V4ihfFb2w">
+                          <div class="container">
+                            <div class="row ">
+                              <div class="col col-6 apex-col-auto col-start">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                                  id="P51_ESEVAI_ID_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_ESEVAI_ID" id="P51_ESEVAI_ID_LABEL" class="t-Form-label">Esevai
+                                      Id</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P51_ESEVAI_ID"
+                                        name="P51_ESEVAI_ID" value="TNTACCUD003-01"><input type="hidden"
+                                        data-for="P51_ESEVAI_ID"
+                                        value="_5Kv0K4YNOuina7KWxXpQfrXiN6bFfKJB6K_LJW4bbf5WgFjHPF0Q5GK6l1u3HAJzkzYSVs0DN6JswusEKzZOw"><span
+                                        id="P51_ESEVAI_ID_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                        data-escape="true">TNTACCUD003-01</span></div><span
+                                      id="P51_ESEVAI_ID_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-6 apex-col-auto col-end">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field"
+                                  id="P51_AGENCYC_ODE_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_AGENCYC_ODE" id="P51_AGENCYC_ODE_LABEL" class="t-Form-label">Agencyc
+                                      Ode</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper"><input type="text" id="P51_AGENCYC_ODE"
+                                        name="P51_AGENCYC_ODE" class="text_field&#x20;apex-item-text"
+                                        value="TAC [Tamil Nadu Arasu Cable TV Corporation]" size="30" maxlength="255"
+                                        data-enter-submit="false" data-is-page-item-type="true" /></div><span
+                                      id="P51_AGENCYC_ODE_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row ">
+                              <div class="col col-6 apex-col-auto col-start">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field"
+                                  id="P51_NAME_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_NAME" id="P51_NAME_LABEL" class="t-Form-label">Name</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper"><input type="text" id="P51_NAME" name="P51_NAME"
+                                        class="text_field&#x20;apex-item-text" value="Person name" size="30"
+                                        maxlength="200" data-enter-submit="false" data-is-page-item-type="true" /></div>
+                                    <span id="P51_NAME_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-6 apex-col-auto col-end">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--number-field"
+                                  id="P51_MOBILENO_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_MOBILENO" id="P51_MOBILENO_LABEL"
+                                      class="t-Form-label">Mobileno</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper"><input type="text" id="P51_MOBILENO"
+                                        name="P51_MOBILENO"
+                                        class="number_field&#x20;apex-item-text&#x20;apex-item-number&#x20;u-textStart"
+                                        value="8012735864" size="30" inputmode="decimal" /></div><span
+                                      id="P51_MOBILENO_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row ">
+                              <div class="col col-6 apex-col-auto col-start">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--textarea"
+                                  id="P51_CENTRE_ADDRESS_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_CENTRE_ADDRESS" id="P51_CENTRE_ADDRESS_LABEL"
+                                      class="t-Form-label">Centre Address</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper">
+                                      <div class="apex-item-group apex-item-group--textarea"><textarea
+                                          name="P51_CENTRE_ADDRESS" rows="5" cols="30" maxlength="350"
+                                          id="P51_CENTRE_ADDRESS" class="textarea&#x20;apex-item-textarea"
+                                          data-resizable="true">68A,Reddiyar street,Annavalli,Cuddalore,607003</textarea>
+                                      </div>
+                                    </div><span id="P51_CENTRE_ADDRESS_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-6 apex-col-auto col-end">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field"
+                                  id="P51_EMAIL_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_EMAIL" id="P51_EMAIL_LABEL" class="t-Form-label">Email</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper"><input type="text" id="P51_EMAIL" name="P51_EMAIL"
+                                        class="text_field&#x20;apex-item-text" value="csccuddalore@gmail.com" size="30"
+                                        maxlength="255" data-enter-submit="false" data-is-page-item-type="true" /></div>
+                                    <span id="P51_EMAIL_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row ">
+                              <div class="col col-6  col-start">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value plugin-be.ctb.select2"
+                                  id="P51_DISTRICT_NAME_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_DISTRICT_NAME" id="P51_DISTRICT_NAME_LABEL"
+                                      class="t-Form-label">District Name</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper">
+                                      <select id="P51_DISTRICT_NAME" name="P51_DISTRICT_NAME" class="selectlist ">
+                                        <option value="">--Select District -- </option>
+                                        <option value="Ariyalur">Ariyalur</option>
+                                        <option value="Chengalpattu">Chengalpattu</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Coimbatore">Coimbatore</option>
+                                        <option value="Cuddalore" selected="selected">Cuddalore</option>
+                                        <option value="Dharmapuri">Dharmapuri</option>
+                                        <option value="Dindigul">Dindigul</option>
+                                        <option value="Erode">Erode</option>
+                                        <option value="Kallakurichi">Kallakurichi</option>
+                                        <option value="Kanchipuram">Kanchipuram</option>
+                                        <option value="Kanyakumari">Kanyakumari</option>
+                                        <option value="Karur">Karur</option>
+                                        <option value="Krishnagiri">Krishnagiri</option>
+                                        <option value="Madurai">Madurai</option>
+                                        <option value="Mayiladuthurai">Mayiladuthurai</option>
+                                        <option value="Nagappattinam">Nagappattinam</option>
+                                        <option value="Namakkal">Namakkal</option>
+                                        <option value="Perambalur">Perambalur</option>
+                                        <option value="Pudukkottai">Pudukkottai</option>
+                                        <option value="Ramanathapuram">Ramanathapuram</option>
+                                        <option value="Ranipet">Ranipet</option>
+                                        <option value="Salem">Salem</option>
+                                        <option value="Sivagangai">Sivagangai</option>
+                                        <option value="Tenkasi">Tenkasi</option>
+                                        <option value="Thanjavur">Thanjavur</option>
+                                        <option value="Nilgiris">Nilgiris</option>
+                                        <option value="Theni">Theni</option>
+                                        <option value="Thirupattur">Thirupattur</option>
+                                        <option value="Thoothukudi">Thoothukudi</option>
+                                        <option value="Tiruchirappalli">Tiruchirappalli</option>
+                                        <option value="Tirunelveli">Tirunelveli</option>
+                                        <option value="Tiruppur">Tiruppur</option>
+                                        <option value="Tiruvallur">Tiruvallur</option>
+                                        <option value="Tiruvannamalai">Tiruvannamalai</option>
+                                        <option value="Tiruvarur">Tiruvarur</option>
+                                        <option value="Vellore">Vellore</option>
+                                        <option value="Viluppuram">Viluppuram</option>
+                                        <option value="Virudhunagar">Virudhunagar</option>
+                                      </select>
+                                    </div><span id="P51_DISTRICT_NAME_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row ">
+                              <div class="col col-6  col-start">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value plugin-be.ctb.select2"
+                                  id="P51_TALUK_NAME_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P51_TALUK_NAME" id="P51_TALUK_NAME_LABEL" class="t-Form-label">District
+                                      Name</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-4">
+                                    <div class="t-Form-itemWrapper">
+                                      <select id="P51_TALUK_NAME" name="P51_TALUK_NAME" class="selectlist ">
+                                        <option value="">--Select Taluk -- </option>
+                                      </select>
+                                    </div><span id="P51_TALUK_NAME_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="t-Region-buttons t-Region-buttons--bottom">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row ">
+                <div class="col col-9  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                <div class="col col-2  ">
+                  <button
+                    class="t-Button t-Button--icon t-Button--large t-Button--success t-Button--iconLeft t-Button--hot"
+                    id="saveBtn"><span class="t-Icon t-Icon--left fa fa-save fa-anim-flash"
+                      aria-hidden="true"></span><span class="t-Button-label">Save
+                      Petition</span><span class="t-Icon t-Icon--right fa fa-save fa-anim-flash"
+                      aria-hidden="true"></span></button>
+                </div>
+              </div>
+          </main>
+          <!-- <footer class="t-Footer" id="t_Footer" role="contentinfo">
         <div class="t-Footer-body">
           <div class="t-Footer-content"></div>
           <div class="t-Footer-apex">
@@ -452,74 +329,250 @@
           <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
         </div>
       </footer> -->
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
-<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDUxX0lEOlA1MV9FU0VWQUlfSUQ&#x2F;U3y1zQxQbfdVfVjy9gE7qdMWME1FLa6QVnFK8tG9rU1PifqBU0T-nkSSSsXdZjec9vnsNoCNyCU_qEWwb8S3UQ" /></form>
-
-
-<script nonce="Yl9gT7FFgurm3c6CVTIskA">
-var apex_img_dir = "\u002Fi\u002F24.2.0\u002F";
-var apex = {env: {APP_USER: "6380988375",APP_ID: "1111",APP_PAGE_ID: "51",APP_SESSION: "114048261149373",APP_FILES: "r\u002Fedmdev\u002F1111\u002Ffiles\u002Fstatic\u002Fv1087\u002F",WORKSPACE_FILES: "r\u002Fedmdev\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.2.0",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 21.2,NONCE: "Yl9gT7FFgurm3c6CVTIskA"},
-libVersions:{cropperJs:"1.6.2",domPurify:"3.1.6",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.29.0",oraclejet:"17.0.2",turndown:"7.2.0",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
-</script>
-
-
- <script src="../assets/js/desktop_all.min.js"></script>
-    <script src="../assets/js/theme42.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/chart.js"></script>
-    <script src="../assets/js/add.min.js"></script>
-    <script src="../assets/js/widget.treeView.min.js"></script>
-    <script src="../assets/js/widget.interactiveReport.min.js"></script>
-    <script src="../assets/js/widget.iconList.min.js"></script>
-    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
-    <script src="../assets/js/widget.stickyWidget.min.js"></script>
-    <script src="../assets/js/item.Colorpicker.min.js"></script>
-    <script src="../assets/js/require.js"></script>
-    <script src="../assets/js/requirejs.jetConfig.min.js"></script>
-    <script src="../assets/js/jetCommonBundle.min.js"></script>
-    <script src="../assets/js/chartBundle.min.js"></script>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
+      value="&#x5B;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="UDUxX0lEOlA1MV9FU0VWQUlfSUQ&#x2F;U3y1zQxQbfdVfVjy9gE7qdMWME1FLa6QVnFK8tG9rU1PifqBU0T-nkSSSsXdZjec9vnsNoCNyCU_qEWwb8S3UQ" />
+  </form>
 
 
 
-<script nonce="Yl9gT7FFgurm3c6CVTIskA">
-apex.session.initTimeouts(180,{"idle_time_ms":3600000,"life_time_ms":26885000,"max_idle_time_ms":3600000},'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome','\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
-apex.jQuery( function() {
-apex.page.init( this, function() {
-try {
-(function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
-(function(){
-      $("#P51_DISTRICT_NAME").select2({"placeholder":"--Select District -- ","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},"width":"200"});
-        $("#P51_DISTRICT_NAME").on(
-          "select2:select",
-          function(){ $(this).focus(); }
-        );
-      beCtbSelect2.events.bind("#P51_DISTRICT_NAME");})();
-(function(){
-      $("#P51_TALUK_NAME").select2({"placeholder":"--Select Taluk--","allowClear":true,"closeOnSelect":true,"selectOnClose":false,"language": {},"width":"250"});
-        $("#P51_TALUK_NAME").on(
-          "select2:select",
-          function(){ $(this).focus(); }
-        );
-      beCtbSelect2.events.bind("#P51_TALUK_NAME");})();
-} catch(e) {apex.debug.error(e)};
-apex.item.waitForDelayLoadItems().done(function() {
-try {
-apex.theme42.initializePage.noSideCol();
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-apex.page.warnOnUnsavedChanges();
-} finally {
-apex.event.trigger(apex.gPageContext$,'apexreadyend');
-};
-});
-});
-});apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' } );
-</script>
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/toastUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
+  <script src="../assets/js/singleFileUpload.js"></script>
 
-<script>
-    AOS.init();
-</script>
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
+
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+  </script>
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+
+  <script type="module">
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+    import { processFile, checkFile, renderFileList } from '../assets/js/singleFileUpload.js';
+
+    $(document).ready(function () {
+      debugger
+
+      var userId = localStorage.getItem('userId');
+      const langSwitch = 'en';
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      let details = '';
+      let status = '';
+      const urlParams = new URLSearchParams(window.location.search);
+      const encodedDetails = urlParams.get('details');
+
+      // Decode from base64
+      const decodedDetailsStr = atob(encodedDetails);
+
+      // // // Parse JSON string
+      const decodedDetails = JSON.parse(decodedDetailsStr);
+
+      // Now you can access properties
+      console.log(decodedDetailsStr, "decoded status");
+
+      // Store the taluk for later binding
+      const preselectedTaluk = decodedDetails.taluk_name;
+
+      // Set form values
+      $('#P51_ESEVAI_ID_DISPLAY').text(decodedDetails.esevai_id);
+      $('#P51_NAME').val(decodedDetails.name);
+      $('#P51_CENTRE_ADDRESS').val(decodedDetails.centre_address);
+      $('#P51_DISTRICT_NAME').val(decodedDetails.district_name);
+      $('#P51_AGENCYC_ODE').val(decodedDetails.agency_code);
+      $('#P51_MOBILENO').val(decodedDetails.mobileno);
+      $('#P51_EMAIL').val(decodedDetails.email);
+
+      // ✅ Bind the change handler FIRST
+      $('#P51_DISTRICT_NAME').on('change', function () {
+        const selectedDistrict = $(this).val();
+
+        if (!selectedDistrict) {
+          $('#P51_TALUK_NAME').html('<option value="">--Select Taluk--</option>');
+          return;
+        }
+
+        const talukPayload = {
+          action: "function_call",
+          function_name: "taluk_edm_fn",
+          params: {
+            p_district_name: selectedDistrict,
+            p_dummy: null
+          }
+        };
+
+        $.ajax({
+          url: apiUrl,
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(talukPayload)
+          },
+          dataType: 'json',
+          cache: false,
+          success: function (response) {
+            try {
+              if (response && response.data) {
+                const decryptedTaluks = decryptData(response.data);
+
+                if (!Array.isArray(decryptedTaluks)) {
+                  throw new Error("Taluk list is not an array");
+                }
+
+                let options = '<option value="">--Select Taluk--</option>';
+                decryptedTaluks.forEach(taluk => {
+                  options += `<option value="${taluk.taluk_name}">${taluk.taluk_name}</option>`;
+                });
+
+                $('#P51_TALUK_NAME').html(options);
+
+                // ✅ Preselect the taluk
+                if (preselectedTaluk) {
+                  $('#P51_TALUK_NAME').val(preselectedTaluk);
+                }
+
+              } else {
+                console.error("Missing `data` in taluk response");
+              }
+            } catch (err) {
+              console.error("Error processing taluk list:", err);
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error("Taluk API failed:", {
+              status: xhr.status,
+              statusText: xhr.statusText,
+              responseText: xhr.responseText,
+              error: error
+            });
+          }
+        });
+      });
+
+      $('#P51_DISTRICT_NAME').trigger('change');
+
+      $('#saveBtn').on('click', function () {
+        event.preventDefault();
+
+        var P_esevai_id = $('#P51_ESEVAI_ID_DISPLAY').text();
+        var p_CENTRE_ADDRESS = $('#P51_CENTRE_ADDRESS').val();
+        var p_AGENCY_CODE = $('#P51_AGENCYC_ODE').val();
+        var p_DISTRICT_NAME = $('#P51_DISTRICT_NAME').val();
+        var p_TALUK_NAME = $('#P51_TALUK_NAME').val();
+        var p_NAME = $('#P51_NAME').val();
+        var p_MOBILENO = $('#P51_MOBILENO').val();
+        var p_EMAIL = $('#P51_EMAIL').val();
+        var p_updated_by = userId;
+
+        var payload = {
+          action: "function_call",
+          function_name: "upt_master_operator_fn",
+          params: {
+            P_esevai_id: P_esevai_id,
+            p_CENTRE_ADDRESS: p_CENTRE_ADDRESS,
+            p_AGENCY_CODE: p_AGENCY_CODE,
+            p_DISTRICT_NAME: p_DISTRICT_NAME,
+            p_TALUK_NAME: p_TALUK_NAME,
+            p_NAME: p_NAME,
+            p_MOBILENO: p_MOBILENO,
+            p_EMAIL: p_EMAIL,
+            p_updated_by: userId
+          }
+        }
+        console.log(payload)
+        $.ajax({
+          url: apiUrl,
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          cache: false,
+          success: function (response) {
+            console.log("Raw API response:", response); // Log raw response
+            showSuccessToast("Saved successfully.");
+            $('#P51_CENTRE_ADDRESS').val('');
+            $('#P51_AGENCYC_ODE').val('');
+            $('#P51_DISTRICT_NAME').val('');
+            $('#P51_TALUK_NAME').val('');
+            $('#P51_NAME').val('');
+            $('#P51_MOBILENO').val('');
+            $('#P51_EMAIL').val('');
+
+          },
+          error: function (xhr, status, error) {
+            console.error("API call failed:", {
+              status: xhr.status,
+              statusText: xhr.statusText,
+              responseText: xhr.responseText,
+              error: error
+            });
+          }
+        });
+
+      });
+
+      $('#exitBtn').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        // setTimeout(() => {
+        //   window.location.href = "re-opened-request.html";
+        // }, 10000)
+        window.location.href = 'allrequest.html';
+      });
+    })
+
+
+
+  </script>
+
+
+
 </body>
+
 </html>

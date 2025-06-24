@@ -344,8 +344,23 @@
                 recordsTotal: totalRecords,
                 recordsFiltered: totalRecords,
                 data: decrypted.map(item => {
+                  const applicationinfo = {
+                    esevai_id: item.esevai_id,
+                    centre_address: item.centre_address,
+                    agency_code: item.agency_code,
+                    district_name: item.district_name,
+                    taluk_name: item.taluk_name,
+                    name: item.name,
+                    mobileno: item.mobileno,
+                    email: item.email,
+                  };
+                  const encodedDetails = btoa(JSON.stringify(applicationinfo));
+
+                  const esevaIdLink = item.esevai_id
+                    ? `<a href="operator-detail-info.html?details=${encodedDetails}">${item.esevai_id}</a>`
+                    : 'N/A';
                   return [
-                    item.esevai_id || 'N/A',
+                    esevaIdLink,
                     item.centre_address || 'N/A',
                     item.district_name || 'N/A',
                     item.taluk_name || 'N/A',
