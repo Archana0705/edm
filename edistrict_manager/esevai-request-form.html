@@ -641,7 +641,7 @@
 
         const payload = {
           action: "function_call",
-          function_name: "edm_esevai_operator_change_request_edmall_fn",
+          function_name: "insert_edm_esevai_operator_change_request_fn",
           params: {
             DISTRICT: "chennai",
             ESEVAI_ID: esevaiId,
@@ -654,8 +654,9 @@
             NEW_OPERATOR_PHONE_NUMBER: newOperatorPhoneNum,
             NEW_MAIL_ID: newMailId,
             PHOTO_ATTACHMENT: uploadFile?.fileBase64 || null,
+            INTERIM_ATTACH_MIMETYPE: uploadFile?.fileType || null,
             FILE_NAME: uploadFile?.filename || null,
-            INTERIM_ATTACH_MIMETYPE: uploadFile?.fileType || null
+            created_by: userId
           }
         }
         $.ajax({
