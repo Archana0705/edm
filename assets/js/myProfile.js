@@ -80,7 +80,10 @@ $(document).ready(function () {
             $('#P66_NAME').val(decrypted[0].name);
             $('#P66_MOBILE').val(decrypted[0].mobile);
             $('#P66_EMAIL').val(decrypted[0].email);
-
+            const preselectedTaluk = decrypted[0].district;
+            if (preselectedTaluk) {
+                $('#P51_DISTRICT_NAME').val(preselectedTaluk);
+            }
             // Populate the dropdown
             const $dropdown = $('#P7_LOCATION');
             $dropdown.empty().append('<option value="" class="placeholder">--Select Taluk--</option>');
