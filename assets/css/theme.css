@@ -2,6 +2,68 @@
   width: 100% !important;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.profile-modal {
+  background: #fff;
+  width: 800px;
+  margin: 5% auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.close-btn {
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+
+.form-section label {
+  grid-column: span 2;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  grid-column: span 2;
+  /* padding: 8px;
+  width: 100%; */
+}
+
+textarea {
+  height: 60px;
+}
+
+.form-actions {
+  margin-top: 2px;
+  text-align: right;
+}
+
+.save-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
 .buttonRight {
   display: flex;
   justify-content: end;
