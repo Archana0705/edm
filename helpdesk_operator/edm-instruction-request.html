@@ -1313,7 +1313,16 @@
         dataType: 'json',
         cache: false,
         success: function (response) {
-          alert("inserted Succesfully")
+          alert("inserted Succesfully");
+
+          $('#P80_DISTRICT').val('');
+          $('#P80_ASSIGNED_TO').val('');
+          $('#P80_INSTRUCTION_TYPE').val('');
+          $('#P80_SHORT_DESCRIPTION').val('');
+          $('#P80_FULL_DESCRIPTION').val('');
+          $('#P80_REQUESTED_BY_DISPLAY').val('');
+          $('#P7_UPLOAD_DROPZONE_input').val('');
+          $('#filePreviewList').empty();
         },
         error: function (xhr, status, error) {
           console.error("API call failed:", {
