@@ -445,7 +445,10 @@
           success: function (response) {
 
             showSuccessToast("Re Assigned successfully.");
-
+            $('#P86_ASSIGNED_TO').val('').trigger('change');
+            $('input[type="checkbox"]:checked').prop('checked', false);
+            reassignButton.disabled = true;
+            setTimeout(() => location.reload(), 1000);
           },
           error: function (error) {
             showErrorToast("An error occurred during request status update.");
