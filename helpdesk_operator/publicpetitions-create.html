@@ -495,9 +495,13 @@
                     type: 'POST',
                     data: { data: encryptData(payload) },
                     success: function (response) {
-                        showSuccessToast(successMessage);
-                        $('input[type="checkbox"]:checked').prop('checked', false);
-                        button.prop('disabled', true);
+                        showSuccessToast("Saved Successfully");
+                        $('#P98_PETITION_DATE').val('');
+                        $('#P98_CITIZEN_NAME').val('');
+                        $('#P98_ISSUE_RELATED_TO').val('');
+                        $('#P98_REMARKS').val('');
+                        $('#P98_MOBILE_NUMBER').val('');
+                        $('#P98_ISSUE_TYPE').val('');
                         setTimeout(() => location.reload(), 1000);
                     },
                     error: function () {

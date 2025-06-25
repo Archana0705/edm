@@ -442,7 +442,7 @@
                         const applicationInfo = btoa(String(item.request_number));
                         const status = btoa(String(item.request_status));
                         return `
-      <tr>
+      
          <td class="u-tC">${item.created_date || 'N/A'}</td>
         <td class="u-tC">${item.district || 'N/A'}</td>
         <td class="u-tC">${item.esevai_id || 'N/A'}</td>
@@ -455,7 +455,7 @@
         <td class="u-tC">${item.new_operator_phone_number || 'N/A'}</td>
         <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
          <td>${createDownloadLink(item.photo_attachment, item.mime_type, item.file_name)}</td>
-      </tr>
+      
     `;
                     },
                     onTableInit: function (dtRef) {
@@ -538,11 +538,12 @@
                     alert("Selection logic is not initialized.");
                     return;
                 }
+
                 const selectedRows = window.getSelectedRows();
-                console.log("Selected rows:", selectedRows);
+                console.log("🔍 Selected Rows:", selectedRows);
 
                 const requestNumbers = selectedRows
-                    .map(row => row.esevai_id || row.data?.esevai_id)
+                    .map(row => row.id)
                     .filter(Boolean);
 
                 if (requestNumbers.length === 0) {
@@ -551,6 +552,9 @@
                 }
 
                 const requestNumbersString = requestNumbers.join('|');
+                console.log("🧾 Final ID string:", requestNumbersString);
+
+
 
                 const payload = {
                     action: "function_call",
