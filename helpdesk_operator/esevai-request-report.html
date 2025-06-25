@@ -94,16 +94,42 @@
                                                 Request</button>
                                         </li>
                                     </ul>
+                                    <div>
 
+                                    </div>
                                     <!-- Tab Content -->
                                     <div class="tab-content" id="instructionTabsContent">
                                         <!-- Open Tab -->
                                         <div class="tab-pane fade show active" id="open" role="tabpanel"
                                             aria-labelledby="open-tab">
+                                            <div class="col col-12 text-end mt-3">
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--success t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_change_operator_mulsel_fn"
+                                                    data-success="Operator Changed Successfully" id="changeOperatorBtn"
+                                                    type="button">
+                                                    <i
+                                                        class="t-Icon t-Icon--left fa fa-thumbs-o-up fa-anim-flash"></i>Change
+                                                    Operator
+                                                </button>
+
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--danger t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_reject_mulsel_fn"
+                                                    data-success="Operator Rejected successfully."
+                                                    id="rejectOperatorBtn" type="button">
+                                                    <i
+                                                        class="t-Icon t-Icon--left fa fa-times-circle-o fa-anim-flash"></i>Reject
+                                                    Operator
+                                                </button>
+
+                                            </div>
                                             <div class="table-responsive mt-3">
                                                 <table id="pressReleaseTable" class="display" style="width:100%">
                                                     <thead>
                                                         <tr>
+                                                            <th><input type="checkbox"
+                                                                    id="pressReleaseTable_select_all"></th>
                                                             <th>Created Date</th>
                                                             <th>District</th>
                                                             <th>ESevai Id</th>
@@ -126,10 +152,43 @@
                                         <!-- Closed Tab -->
                                         <div class="tab-pane fade" id="closed" role="tabpanel"
                                             aria-labelledby="closed-tab">
+                                            <div class="col col-12 text-end mt-3">
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--success t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_cls_rqst_mulsel_fn"
+                                                    data-success="Request Closed Successfully" id="closeRequest"
+                                                    type="button">
+                                                    <i class="t-Icon t-Icon--left fa fa-thumbs-o-up fa-anim-flash"></i>
+                                                    Close Request
+                                                </button>
+
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--warning t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_back_to_rpt_mulsel_fn"
+                                                    data-success="Report Status Changed Successfully"
+                                                    id="backToReportBtn" type="button">
+                                                    <i
+                                                        class="t-Icon t-Icon--left fa fa-arrow-circle-o-left fa-anim-flash"></i>Back
+                                                    To
+                                                    Report
+                                                </button>
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--danger t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_reject_mulsel_fn"
+                                                    data-success="Report Status Changed Successfully"
+                                                    id="rejectReportBtn" type="button">
+                                                    <i
+                                                        class="t-Icon t-Icon--left fa fa-times-circle-o fa-anim-flash"></i>Reject
+                                                    Report
+                                                </button>
+
+                                            </div>
                                             <div class="table-responsive mt-3">
                                                 <table id="closedReport" class="display" style="width:100%">
                                                     <thead>
                                                         <tr>
+                                                            <th><input type="checkbox"
+                                                                    id="pressReleaseTable_select_all"></th>
                                                             <th>Created Date</th>
                                                             <th>District</th>
                                                             <th>ESevai Id</th>
@@ -150,12 +209,46 @@
                                         </div>
 
                                         <!-- Reject Tab -->
-                                        <div class="tab-pane fade" id="closed" role="tabpanel"
+                                        <div class="tab-pane fade" id="reject" role="tabpanel"
                                             aria-labelledby="reject-tab">
+                                            <div class="col col-12 text-end mt-3">
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--primary t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_cls_rqst_mulsel_fn"
+                                                    data-success="Request Closed Successfully" id="closeRequest"
+                                                    type="button">
+                                                    <i
+                                                        class="t-Icon t-Icon--left fa fa-arrow-circle-o-right fa-anim-flash"></i>
+                                                    Close Request
+                                                </button>
+
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--warning t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_back_to_rpt_mulsel_fn"
+                                                    data-success="Report Status Changed Successfully"
+                                                    id="backToReportBtn" type="button">
+                                                    <i
+                                                        class="t-Icon t-Icon--left fa fa-arrow-circle-o-left fa-anim-flash"></i>Back
+                                                    To
+                                                    Report
+                                                </button>
+                                                <button
+                                                    class="action-btn t-Button t-Button--icon t-Button--large t-Button--success t-Button--iconLeft t-Button--hot"
+                                                    data-function="upt_change_operator_mulsel_fn"
+                                                    data-success="Approved Successfully" id="approveReportBtn"
+                                                    type="button">
+                                                    <i
+                                                        class="t-Icon t-Icon--left fa fa-thumbs-o-up fa-anim-flash"></i>Approve
+                                                    Report
+                                                </button>
+
+                                            </div>
                                             <div class="table-responsive mt-3">
                                                 <table id="rejectReport" class="display" style="width:100%">
                                                     <thead>
                                                         <tr>
+                                                            <th><input type="checkbox"
+                                                                    id="pressReleaseTable_select_all"></th>
                                                             <th>Created Date</th>
                                                             <th>District</th>
                                                             <th>ESevai Id</th>
@@ -174,6 +267,7 @@
                                                 </table>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +316,7 @@
     <script src="../assets/js/chartBundle.min.js"></script>
 
     <script src="../assets/js/toastUtil.js"></script>
-    <script type="module" src="../assets/js/dataTableUtil.js"></script>
+    <script type="module" src="../assets/js/dataTableWithSelection.js"></script>
     <script src="../assets/js/crypto-js.min.js"></script>
     <script src="../assets/js/theme42.min.js"></script>
 
@@ -280,13 +374,13 @@
                 action: "function_call",
                 function_name: "edm_esevai_operator_change_request_edmall_fn",
                 params: {
-                    status: 'C',
+                    status: 'Y',
                     userid: null,
                 }
             }
             // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
-            loadDataToTable({
+            loadTableWithSelection({
                 tableId: 'pressReleaseTable',
                 apiUrl,
                 httpMethod: 'POST',
@@ -295,7 +389,7 @@
                     const applicationInfo = btoa(String(item.request_number));
                     const status = btoa(String(item.request_status));
                     return `
-      <tr>
+     
         <td class="u-tC">${item.created_date || 'N/A'}</td>
         <td class="u-tC">${item.district || 'N/A'}</td>
         <td class="u-tC">${item.esevai_id || 'N/A'}</td>
@@ -309,15 +403,16 @@
         <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
          <td>${createDownloadLink(item.photo_attachment, item.mime_type, item.file_name)}</td>
 
-      </tr>
+    
     `;
                 },
                 onTableInit: function (dtRef) {
                     dataTableRef = dtRef;
+                },
+                onSelectionChange: function (selectedRows) {
+                    console.log("✅ Selected Rows:", selectedRows);
                 }
             });
-
-
 
 
             $(document).on('click', '.closed_tab_class', function () {
@@ -332,13 +427,13 @@
                     // }
                     function_name: "edm_esevai_operator_change_request_edmall_fn",
                     params: {
-                        status: 'C',
+                        status: 'A',
                         userid: null,
                     }
                 }
                 // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
-                loadDataToTable({
+                loadTableWithSelection({
                     tableId: 'closedReport',
                     apiUrl,
                     httpMethod: 'POST',
@@ -365,6 +460,9 @@
                     },
                     onTableInit: function (dtRef) {
                         dataTableRef = dtRef;
+                    },
+                    onSelectionChange: function (selectedRows) {
+                        console.log("✅ Selected Rows:", selectedRows);
                     }
                 });
 
@@ -385,13 +483,13 @@
                     // }
                     function_name: "edm_esevai_operator_change_request_edmall_fn",
                     params: {
-                        status: 'C',
+                        status: 'N',
                         userid: null,
                     }
                 }
                 // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
-                loadDataToTable({
+                loadTableWithSelection({
                     tableId: 'rejectReport',
                     apiUrl,
                     httpMethod: 'POST',
@@ -400,7 +498,7 @@
                         const applicationInfo = btoa(String(item.request_number));
                         const status = btoa(String(item.request_status));
                         return `
-      <tr>
+
          <td class="u-tC">${item.created_date || 'N/A'}</td>
         <td class="u-tC">${item.district || 'N/A'}</td>
         <td class="u-tC">${item.esevai_id || 'N/A'}</td>
@@ -413,17 +511,74 @@
         <td class="u-tC">${item.new_operator_phone_number || 'N/A'}</td>
         <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
          <td>${createDownloadLink(item.photo_attachment, item.mime_type, item.file_name)}</td>
-      </tr>
+  
     `;
                     },
                     onTableInit: function (dtRef) {
                         dataTableRef = dtRef;
+                    },
+                    onSelectionChange: function (selectedRows) {
+                        console.log("✅ Selected Rows:", selectedRows);
                     }
                 });
 
 
                 $('#reject-tab').removeClass('reject_tab_class');
             })
+
+            $('.action-btn').on('click', function (event) {
+                event.preventDefault();
+                debugger;
+
+                const button = $(this);
+                const functionName = button.data('function');
+                const successMessage = button.data('success');
+
+                if (typeof window.getSelectedRows !== 'function') {
+                    alert("Selection logic is not initialized.");
+                    return;
+                }
+                const selectedRows = window.getSelectedRows();
+                console.log("Selected rows:", selectedRows);
+
+                const requestNumbers = selectedRows
+                    .map(row => row.esevai_id || row.data?.esevai_id)
+                    .filter(Boolean);
+
+                if (requestNumbers.length === 0) {
+                    alert("Please select at least 1 request");
+                    return;
+                }
+
+                const requestNumbersString = requestNumbers.join('|');
+
+                const payload = {
+                    action: "function_call",
+                    function_name: functionName,
+                    params: {
+                        p_com_id: requestNumbersString,
+                        p_user_id: userId
+                    }
+                };
+
+                console.log("✅ Final Payload:", payload);
+
+                $.ajax({
+                    url: apiUrl,
+                    type: 'POST',
+                    data: { data: encryptData(payload) },
+                    success: function (response) {
+                        showSuccessToast(successMessage);
+                        $('input[type="checkbox"]:checked').prop('checked', false);
+                        button.prop('disabled', true);
+                        setTimeout(() => location.reload(), 1000);
+                    },
+                    error: function () {
+                        showErrorToast("An error occurred during the operation.");
+                    }
+                });
+            });
+
 
         });
 
