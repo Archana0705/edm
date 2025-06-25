@@ -476,15 +476,35 @@
                 var issue_type = $('#P98_ISSUE_TYPE').val();
 
                 var payload = {
-                    petition_date: petition_date,
-                    citizen_name: citizen_name,
-                    issue_related_to: issue_related_to,
-                    remarks: remarks,
-                    issue_handled_by: issue_handled_by,
-                    mobile_number: mobile_number,
-                    issue_type: issue_type
+                    action: "function_call",
+                    function_name: "ins_publ_pet_fn",
+                    params: {
+                        p_petetion_date: petition_date,
+                        p_citizen_name: citizen_name,
+                        p_mobile_number: mobile_number,
+                        p_issue_related_to: issue_related_to,
+                        p_issue_handled_by: issue_handled_by,
+                        p_remarks: remarks,
+                        p_issue_type: issue_type,
+                        p_created_by: userId
+                    }
                 }
-                console.log("savee", payload)
+                console.log("savee", payload);
+                $.ajax({
+                    url: apiUrl,
+                    type: 'POST',
+                    data: { data: encryptData(payload) },
+                    success: function (response) {
+                        showSuccessToast(successMessage);
+                        $('input[type="checkbox"]:checked').prop('checked', false);
+                        button.prop('disabled', true);
+                        setTimeout(() => location.reload(), 1000);
+                    },
+                    error: function () {
+                        showErrorToast("An error occurred during the operation.");
+                    }
+                });
+
             });
         })
 
