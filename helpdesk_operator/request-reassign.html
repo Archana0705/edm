@@ -129,7 +129,39 @@
                                 <button id="clearStatusBtn" type="button">Clear</button>
                               </div>
 
-
+                              <div class="col col-4 apex-col-auto">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
+                                  id="P86_ASSIGNED_TO_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-2">
+                                    <label for="P86_ASSIGNED_TO" id="P86_ASSIGNED_TO_LABEL"
+                                      class="t-Form-label">Assigned To</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-2">
+                                    <div class="t-Form-itemWrapper">
+                                      <select id="P86_ASSIGNED_TO" name="P86_ASSIGNED_TO"
+                                        class="selectlist apex-item-select" data-native-menu="false" size="1">
+                                        <option value="" selected="selected"></option>
+                                        <option value="Assistant System Engineer">Gerhara Gowri R</option>
+                                        <option value="Helpdesk_Operator1">Manju</option>
+                                        <option value="Helpdesk_Operator4">Mohan Raj</option>
+                                        <option value="Helpdesk_Operator3">Mohan Ravikumar</option>
+                                        <option value="Helpdesk_Operator2">Vishva VR</option>
+                                        <option value="Helpdesk_Operator7">Kabalishwaran</option>
+                                        <option value="Helpdesk_Operator8">ArunKumar K</option>
+                                        <option value="Helpdesk_Operator9">Vithiya</option>
+                                      </select>
+                                    </div>
+                                    <span id="P86_ASSIGNED_TO_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-2 col-end">
+                                <button id="reassignBtn" class="btn btn-success" disabled>
+                                  <i class="fa fa-arrow-circle-o-right" style="margin-top: 4px;"></i> Re Assign
+                                </button>
+                              </div>
                             </div>
 
                             <div id="R183192529660627764_content" class="a-IRR-content ">
@@ -199,7 +231,7 @@
                                   <table id="pressReleaseTable" class="display" style="width:100%">
                                     <thead>
                                       <tr>
-                                        <!-- <th>Actions</th> -->
+                                        <th><input type="checkbox" id="pressReleaseTable_select_all"></th>
                                         <th>Request Number</th>
                                         <th>Issue Type</th>
                                         <th>Status</th>
@@ -314,6 +346,8 @@
 
   <!-- jQuery -->
   <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
   <!-- DataTables -->
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
@@ -327,7 +361,7 @@
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script>
   <script src="../assets/js/toastUtil.js"></script>
-  <script type="module" src="../assets/js/dataTableUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableWithSelection.js"></script>
   <script src="../assets/js/crypto-js.min.js"></script>
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/global.js"></script>
@@ -378,7 +412,7 @@
       }
       // const encryptedPayload = CryptoJS.AES.encrypt(JSON.stringify(payload), secretKey).toString();//check
 
-      loadDataToTable({
+      loadTableWithSelection({
         tableId: 'pressReleaseTable',
         apiUrl,
         httpMethod: 'POST',
@@ -387,7 +421,6 @@
           const applicationInfo = btoa(String(item.request_number));
           const status = btoa(String(item.request_status));
           return `
-    <tr>
     <td class="u-tL">
         <a data-id="${item.request_number}" id="open-modal-btn" href="request-reassign-info.html?details=${applicationInfo}&status=${status}">
           ${item.request_number}
@@ -401,7 +434,6 @@
       <td class="u-tC">${item.requested_by || 'N/A'}</td>
       <td class="u-tC">${item.requested_district || 'N/A'}</td>
       <td class="u-tC">${item.requested_group || 'N/A'}</td>
-    </tr>
   `;
         },
         onTableInit: function (dtRef) {
@@ -433,6 +465,65 @@
           .draw();
       });
 
+
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      const assignedToSelect = document.getElementById("P86_ASSIGNED_TO");
+      const reassignButton = document.getElementById("reassignBtn");
+
+      const toggleButton = () => {
+        reassignButton.disabled = !assignedToSelect.value;
+      };
+
+      toggleButton();
+      assignedToSelect.addEventListener("change", toggleButton);
+
+      reassignButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const selectedUser = assignedToSelect.value;
+        const selectedRows = window.getSelectedRows();
+
+        if (selectedRows.length === 0) {
+          alert("Please select at least one Request Number.");
+          return;
+        }
+
+        const requestNumbers = selectedRows.map(row => row.request_number);
+        const requestNumbersString = requestNumbers.join('|');
+
+        const payload = {
+          action: "function_call",
+          function_name: "upt_edm_service_req_mulsel_fn",
+          params: {
+            p_assign_to: selectedUser,
+            p_req_num: requestNumbersString
+          }
+        };
+
+        console.log("Payload to send:", payload);
+
+        $.ajax({
+          url: apiUrl,
+          type: 'POST',
+          data: { data: encryptData(payload) },
+          success: function (response) {
+
+            showSuccessToast("Re Assigned successfully.");
+            $('#P86_ASSIGNED_TO').val('').trigger('change');
+            $('input[type="checkbox"]:checked').prop('checked', false);
+            reassignButton.disabled = true;
+            setTimeout(() => location.reload(), 1000);
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during request status update.");
+          }
+        });
+
+      });
     });
 
   </script>
