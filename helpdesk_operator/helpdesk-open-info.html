@@ -282,7 +282,7 @@
                                     <option value="Kancheepuram">Kancheepuram</option>
                                     <option value="Kanyakumari">Kanyakumari</option>
                                     <option value="Karur">Karur</option>
-                                    <option value="Krishnagiri" selected="selected">Krishnagiri</option>
+                                    <option value="Krishnagiri">Krishnagiri</option>
                                     <option value="Madurai">Madurai</option>
                                     <option value="Mayiladuthurai">Mayiladuthurai</option>
                                     <option value="Nagapattinam">Nagapattinam</option>
@@ -311,19 +311,7 @@
                                   </select></div><span id="P87_DISTRICT_error_placeholder" class="a-Form-error"
                                   data-template-id="8676686131964195_ET"></span>
                               </div>
-                            </div><input type="hidden" name="P87_STATUS" id="P87_STATUS" value="Y"><input type="hidden"
-                              name="P87_CREATED_BY" id="P87_CREATED_BY" value="EDM0801"><input type="hidden"
-                              name="P87_CREATED_DTTM" id="P87_CREATED_DTTM" value="5&#x2F;3&#x2F;2025"><input
-                              type="hidden" name="P87_UPDATED_BY" id="P87_UPDATED_BY" value=""><input type="hidden"
-                              name="P87_UPDATED_DTTM" id="P87_UPDATED_DTTM" value=""><input type="hidden"
-                              name="P87_REQUEST_STATUS" id="P87_REQUEST_STATUS" value="New"><input type="hidden"
-                              name="P87_EDM_FILE_NAME" id="P87_EDM_FILE_NAME" value=""><input type="hidden"
-                              name="P87_EDM_MIME_TYPE" id="P87_EDM_MIME_TYPE" value=""><input type="hidden"
-                              name="P87_EDM_LAST_UPDATE" id="P87_EDM_LAST_UPDATE" value=""><input type="hidden"
-                              name="P87_EDM_CHARSET" id="P87_EDM_CHARSET" value=""><input type="hidden"
-                              name="P87_PRODUCT_RATING" id="P87_PRODUCT_RATING" value=""><input type="hidden"
-                              name="P87_SHORT" id="P87_SHORT" value=""><input type="hidden" name="P87_EDM_SEC_COMMENTS"
-                              id="P87_EDM_SEC_COMMENTS" value="">
+                            </div>
                           </div>
                           <div class="col col-6 apex-col-auto col-end">
                             <div
@@ -337,14 +325,7 @@
                                 <div class="t-Form-itemWrapper"><select id="P87_ASSIGN_TO_1" name="P87_ASSIGN_TO_1"
                                     class="selectlist&#x20;apex-item-select" data-native-menu="false" size="1">
                                     <option value=""></option>
-                                    <option value="eDistrict&#x20;Manager&#x20;1">eDistrict Manager 1</option>
-                                    <option value="eDistrict&#x20;Manager&#x20;2">eDistrict Manager 2</option>
-                                    <option value="Helpdesk_Operator7">Kabalishwaran</option>
-                                    <option value="Helpdesk_Operator3">Mohan Ravikumar</option>
-                                    <option value="Helpdesk_Operator4">Mohan Raj</option>
-                                    <option value="Assistant&#x20;System&#x20;Engineer2">Muthulakshmi</option>
-                                    <option value="Helpdesk_Operator1" selected="selected">Manju</option>
-                                    <option value="Helpdesk_Operator2">Vishva VR</option>
+
                                   </select></div><span id="P87_ASSIGN_TO_1_error_placeholder" class="a-Form-error"
                                   data-template-id="8676686131964195_ET"></span>
                               </div>
@@ -356,12 +337,15 @@
                               class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
                               type="button" id="B34252333769632052"><span class="t-Button-label">Cancel</span></button>
                           </div>
-                          <div class="col col-1 apex-col-auto "><button class="t-Button t-Button--hot t-Button--large"
-                              type="button" id="B34252791051632052"><span
-                                class="t-Button-label">Re-Assign</span></button></div>
+
+                          <div class="col col-1 apex-col-auto ">
+                            <button class="t-Button t-Button--hot t-Button--large" type="button" id="reassignBtn"><span
+                                class="t-Button-label">Re-Assign</span></button>
+                          </div>
                           <div class="col col-3 apex-col-auto col-end"><button
                               class="t-Button t-Button--hot t-Button--large&#x20;t-Button--primary" type="button"
-                              id="B76175472657717801"><span class="t-Button-label">In-Progress</span></button></div>
+                              id="inprogressBtn"><span class="t-Button-label">In-Progress</span></button></div>
+
                         </div>
                         <div class="row ">
                           <div class="col col-2  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
@@ -382,11 +366,7 @@
                                   <div class="t-Region-buttons-left"></div>
                                   <div class="t-Region-buttons-right"></div>
                                 </div>
-                                <div class="t-Region-body">
-                                  <div class="t-Region-orderBy"></div>
 
-
-                                </div>
                                 <div class="t-Region-buttons t-Region-buttons--bottom">
                                   <div class="t-Region-buttons-left"></div>
                                   <div class="t-Region-buttons-right"></div>
@@ -423,35 +403,25 @@
                                 <label for="P87_EDM_UPLOAD" id="P87_EDM_UPLOAD_LABEL" class="t-Form-label">Closing
                                   Attachment</label>
                               </div>
-                              <div class="t-Form-inputContainer col col-4">
-                                <div class="t-Form-itemWrapper"><a-file-upload id="P87_EDM_UPLOAD" name="P87_EDM_UPLOAD"
-                                    upload-type="FILE" display-style="INLINE" size="30" label="Choose&#x20;File"
-                                    description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                    download-link="true"><input type="file" id="P87_EDM_UPLOAD_input"
-                                      aria-labelledby="P87_EDM_UPLOAD_LABEL" class="u-vh" />
-                                    <div class="a-FileDrop&#x20;a-FileDrop--inline">
-                                      <div class="a-FileDrop-icon">
-                                        <span class="a-Icon&#x20;icon-file-browse" aria-hidden="true">
-                                        </span>
-                                      </div>
-                                      <div class="a-FileDrop-body"><span class="a-FileDrop-heading">Choose
-                                          File</span><span class="a-FileDrop-description">Select a file or drop one
-                                          here.</span></div>
-                                      <div class="a-FileDrop-action"><span
-                                          class="a-Button a-FileDrop-action-choose a-Button--hot">Choose File</span>
-                                      </div>
-                                    </div>
-                                  </a-file-upload></div><span id="P87_EDM_UPLOAD_error_placeholder" class="a-Form-error"
-                                  data-template-id="8676686131964195_ET"></span>
+                              <div class="t-Form-inputContainer col col-6" id="P7_UPLOAD_DROPZONE">
+                                <div class="t-Form-itemWrapper">
+                                  <label for="P7_UPLOAD_DROPZONE_input">Upload File (PDF/JPG/JPEG, Max 2MB):</label>
+                                  <input type="file" id="P7_UPLOAD_DROPZONE_input" accept=".pdf,.jpg,.jpeg" multiple />
+                                  <span id="P7_UPLOAD_DROPZONE_input_error_placeholder" class="a-Form-error"
+                                    style="color:red; display:block; margin-top:5px;"></span>
+                                </div>
+
+                                <div id="filePreviewList" style="margin-top: 10px;"></div>
+
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="row ">
+                        <div class="row">
                           <div class="col col-9  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
                           <div class="col col-2  "><button onclick=""
                               class="t-Button t-Button--hot t-Button--large&#x20;t-Button--success" type="button"
-                              id="B78665273362915302"><span class="t-Button-label">Close Ticket</span></button></div>
+                              id="closeTicketBtn"><span class="t-Button-label">Close Ticket</span></button></div>
                         </div>
                       </div>
                     </div>
@@ -523,6 +493,291 @@
   <script>
     $('#t_Button_navControl').on('click', function () {
       $('#t_Body_nav').toggle();
+    });
+
+  </script>
+  <script type="module">
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+    import { processFile, checkFile, renderFileList } from '../assets/js/singleFileUpload.js';
+
+    $(document).ready(function () {
+      debugger
+
+      var userId = localStorage.getItem('userId');
+      var userName = localStorage.getItem('userName');
+
+      const langSwitch = 'en';
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      let decodedDetailsStr = '';
+      let decodedDetails = null;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const encodedDetails = urlParams.get('details');
+
+      try {
+        if (!encodedDetails) throw new Error("No 'details' param found");
+
+        // ✅ Decode safely
+        const decodedDetailsStr = decodeURIComponent(escape(atob(encodedDetails)));
+        const decodedDetails = JSON.parse(decodedDetailsStr);
+
+        console.log("✅ Decoded Details:", decodedDetails);
+
+        $('#P87_REQUEST_NUMBER_DISPLAY').text(decodedDetails.request_number || '');
+        $('#P87_REQUEST_CREATED_DTTM_DISPLAY').text(decodedDetails.request_created_dttm || '');
+        $('#P87_ASSIGNED_TO_DISPLAY').text(decodedDetails.assigned_to || '');
+        $('#P87_INSTRUCTION_TYPE_DISPLAY').text(decodedDetails.instruction_type || '');
+        $('#P87_FULL_DESCRIPTION_DISPLAY').text(decodedDetails.full_description || '');
+        $('#P87_REQUESTED_BY_DISPLAY').text(decodedDetails.requested_by || '');
+        $('#P87_SHORT_DESCRIPTION_DISPLAY').text(decodedDetails.short_description || '');
+
+      } catch (e) {
+        console.error("❌ Decoding Failed:", e.message);
+        $('#P87_FULL_DESCRIPTION_DISPLAY').text("⚠️ Unable to load details.");
+      }
+
+
+
+      $('#P87_DISTRICT').on('change', function () {
+        const selectedDistrict = $(this).val();
+
+        if (!selectedDistrict) return;
+
+        const payload = {
+          action: "function_call",
+          function_name: "assign_to_1_list_fn",
+          params: {
+            p_district: selectedDistrict
+          }
+        };
+
+        $.ajax({
+          url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          cache: false,
+          success: function (response) {
+            try {
+              if (response && response.data) {
+                console.log("Encrypted data received:", response.data);
+                var decryptedResponse = decryptData(response.data);
+                console.log("decryptedddddd", decryptedResponse);
+
+                const $assignToDropdown = $('#P87_ASSIGN_TO_1');
+                $assignToDropdown.find('option:not(:first)').remove();
+
+                // Append new options from decrypted response
+                decryptedResponse.forEach(item => {
+                  if (item.assign_to) {
+                    const option = $('<option>', {
+                      value: item.assign_to,
+                      text: item.assign_to
+                    });
+                    $assignToDropdown.append(option);
+                  }
+                });
+
+
+              } else {
+                console.error("error");
+              }
+            } catch (error) {
+              console.error("Error processing response:", error);
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error("API call failed:", {
+              status: xhr.status,
+              statusText: xhr.statusText,
+              responseText: xhr.responseText,
+              error: error
+            });
+          }
+        });
+      });
+
+      $('#reassignBtn').on('click', function (event) {
+        event.preventDefault();
+
+        const selectedDistrict = $('#P87_DISTRICT').val();
+        const assign_to = $('#P87_ASSIGN_TO_1').val();
+        const edm_notes = $('#P87_EDM_NOTES').val();
+
+        // --- Validation ---
+        if (!selectedDistrict) {
+          showErrorToast("Please select a District.");
+          $('#P87_DISTRICT').focus();
+          return;
+        }
+
+        if (!assign_to) {
+          showErrorToast("Please select a person to assign to.");
+          $('#P87_ASSIGN_TO_1').focus();
+          return;
+        }
+
+        if (!edm_notes || edm_notes.trim() === '') {
+          showErrorToast("Please enter EDM Notes.");
+          $('#P87_EDM_NOTES').focus();
+          return;
+        }
+        const payload = {
+          action: "function_call",
+          function_name: "upt_reassign_edm_serv_assn_fn",
+          params: {
+            p_district: selectedDistrict,
+            p_assign_to_1: assign_to,
+            p_edm_notes: edm_notes
+          }
+        };
+        $.ajax({
+          url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          cache: false,
+          success: function (response) {
+            showSuccessToast("Re-Assigned Successfully");
+            setTimeout(() => {
+              window.location.href = "reassigned-request.html";
+            }, 1000);
+          },
+          error: function (xhr, status, error) {
+
+            console.error("API call failed:", {
+              status: xhr.status,
+              statusText: xhr.statusText,
+              responseText: xhr.responseText,
+              error: error
+            });
+
+            showErrorToast(xhr.statusText);
+
+          }
+        });
+
+      });
+
+
+      $('#inprogressBtn').on('click', function (event) {
+        event.preventDefault();
+
+        const requestNumber = $('#P87_REQUEST_NUMBER_DISPLAY').text();
+
+        const payload = {
+          action: "function_call",
+          function_name: "upt_inprog_ticket_edm_ser_asgn_fn",
+          params: {
+            p_req_number: requestNumber
+          }
+        };
+        $.ajax({
+          url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          cache: false,
+          success: function (response) {
+            showSuccessToast("Status Changed Successfully");
+            setTimeout(() => {
+              window.location.href = "inprogress-request.html";
+            }, 1000);
+          },
+          error: function (xhr, status, error) {
+
+            console.error("API call failed:", {
+              status: xhr.status,
+              statusText: xhr.statusText,
+              responseText: xhr.responseText,
+              error: error
+            });
+
+            showErrorToast(xhr.statusText);
+
+          }
+        });
+
+      });
+
+      $('#closeTicketBtn').on('click', async function (event) {
+        debugger
+        event.preventDefault();
+        var closed_notes = $('#P87_EDM_NOTES_1_2').val();
+        if (!closed_notes) {
+          showErrorToast("Please select a person to assign to.");
+          $('#P87_EDM_NOTES_1_2').focus();
+          return;
+        }
+
+        const uploadedFiles = await processFile('#P7_UPLOAD_DROPZONE_input');
+        if (!uploadedFiles) return;
+        const uploadFile = uploadedFiles[0];
+
+
+
+        const payload = {
+          action: "function_call",
+          function_name: "insert_edm_esevai_operator_change_request_fn",
+          params: {
+            p_edm_notes: closed_notes,
+            PHOTO_ATTACHMENT: uploadFile?.fileBase64 || null,
+            INTERIM_ATTACH_MIMETYPE: uploadFile?.fileType || null,
+            FILE_NAME: uploadFile?.filename || null,
+            created_by: userId
+          }
+        }
+        console.log(payload);
+        return;
+        $.ajax({
+          url: apiUrl,
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          cache: false,
+          success: function (response) {
+            alert("inserted Succesfully")
+          },
+          error: function (xhr, status, error) {
+            console.error("API call failed:", {
+              status: xhr.status,
+              statusText: xhr.statusText,
+              responseText: xhr.responseText,
+              error: error
+            });
+          }
+        });
+
+
+        console.log(payload);
+
+      });
+
     });
 
   </script>
