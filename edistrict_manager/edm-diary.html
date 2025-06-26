@@ -365,24 +365,12 @@
                                                                         </div>
 
 
-                                                                    </div><input type="hidden" name="P92_MIME_TYPE"
-                                                                        id="P92_MIME_TYPE" value=""><input type="hidden"
-                                                                        name="P92_FILE_NAME" id="P92_FILE_NAME"
-                                                                        value=""><input type="hidden" name="P92_STATUS"
-                                                                        id="P92_STATUS" value=""><input type="hidden"
-                                                                        name="P92_CREATED_BY" id="P92_CREATED_BY"
-                                                                        value=""><input type="hidden"
-                                                                        name="P92_CREATED_DTTM" id="P92_CREATED_DTTM"
-                                                                        value=""><input type="hidden"
-                                                                        name="P92_UPDATED_BY" id="P92_UPDATED_BY"
-                                                                        value=""><input type="hidden"
-                                                                        name="P92_UPDATED_DTTM" id="P92_UPDATED_DTTM"
-                                                                        value="">
+                                                                    </div>
                                                                 </div>
 
                                                             </div>
                                                             <div class="row ">
-                                                                <div class="col col-3 apex-col-auto col-start">
+                                                                <div class="col col-4 apex-col-auto col-start">
                                                                     <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
                                                                         id="P77_IMAGE_ATTACHMENT2_CONTAINER">
                                                                         <div class="t-Form-labelContainer col col-2">
@@ -391,59 +379,29 @@
                                                                                 class="t-Form-label">Inspection Image
                                                                                 1</label>
                                                                         </div>
-                                                                        <div class="t-Form-inputContainer col col-1">
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="INSPECTION_INPUT1">
                                                                             <div class="t-Form-itemWrapper">
-                                                                                <a-file-upload
-                                                                                    id="P77_IMAGE_ATTACHMENT2"
-                                                                                    name="P77_IMAGE_ATTACHMENT2"
-                                                                                    upload-type="FILE"
-                                                                                    display-style="INLINE" size="30"
-                                                                                    label="Choose&#x20;File"
-                                                                                    description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                    max-file-size="1024"
-                                                                                    download-link="true"><input
-                                                                                        type="file"
-                                                                                        id="P77_IMAGE_ATTACHMENT2_input"
-                                                                                        aria-labelledby="P77_IMAGE_ATTACHMENT2_LABEL"
-                                                                                        class="u-vh" />
-                                                                                    <div
-                                                                                        class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                        <div class="a-FileDrop-icon">
-                                                                                            <span
-                                                                                                class="a-Icon&#x20;icon-file-browse"
-                                                                                                aria-hidden="true">
-                                                                                            </span>
-                                                                                        </div>
-                                                                                        <div class="a-FileDrop-body">
-                                                                                            <span
-                                                                                                class="a-FileDrop-heading">Choose
-                                                                                                File</span><span
-                                                                                                class="a-FileDrop-description">Select
-                                                                                                a file or drop one
-                                                                                                here.</span>
-                                                                                        </div>
-                                                                                        <div class="a-FileDrop-action">
-                                                                                            <span
-                                                                                                class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                                File</span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </a-file-upload>
-                                                                            </div><span
-                                                                                id="P77_IMAGE_ATTACHMENT2_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="8676686131964195_ET"></span>
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="INSPECTION_INPUT1_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="INSPECTION_INPUT1_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
                                                                         </div>
-                                                                    </div><input type="hidden" name="P77_FILE_NAME2"
-                                                                        id="P77_FILE_NAME2" value=""><input
-                                                                        type="hidden" data-for="P77_FILE_NAME2"
-                                                                        value="U2vtmWGFXIiTsVKBR8Jw9qJukKzRbjPjKpiPH6KKNCfDMQFXGr-RS5F8ATUgxOoC8XuS23OdiYa1WZU654434Q"><input
-                                                                        type="hidden" name="P77_MIME_TYPE2"
-                                                                        id="P77_MIME_TYPE2" value=""><input
-                                                                        type="hidden" data-for="P77_MIME_TYPE2"
-                                                                        value="00u5MPwBk4cPs1Fyp7MW4c_u5pZ2q56aDameYHnub660qu7KDCq19_sZEWhcqXqpSUw0FhTxU7iFUz6M16laBw">
+                                                                    </div>
                                                                 </div>
-                                                                <div class="col col-3 apex-col-auto ">
+                                                                <div class="col col-4 apex-col-auto ">
                                                                     <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
                                                                         id="P77_IMAGE_ATTACHMENT3_CONTAINER">
                                                                         <div class="t-Form-labelContainer col col-2">
@@ -452,59 +410,29 @@
                                                                                 class="t-Form-label">Inspection Image
                                                                                 2</label>
                                                                         </div>
-                                                                        <div class="t-Form-inputContainer col col-1">
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="INSPECTION_INPUT2">
                                                                             <div class="t-Form-itemWrapper">
-                                                                                <a-file-upload
-                                                                                    id="P77_IMAGE_ATTACHMENT3"
-                                                                                    name="P77_IMAGE_ATTACHMENT3"
-                                                                                    upload-type="FILE"
-                                                                                    display-style="INLINE" size="30"
-                                                                                    label="Choose&#x20;File"
-                                                                                    description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                    max-file-size="1024"
-                                                                                    download-link="true"><input
-                                                                                        type="file"
-                                                                                        id="P77_IMAGE_ATTACHMENT3_input"
-                                                                                        aria-labelledby="P77_IMAGE_ATTACHMENT3_LABEL"
-                                                                                        class="u-vh" />
-                                                                                    <div
-                                                                                        class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                        <div class="a-FileDrop-icon">
-                                                                                            <span
-                                                                                                class="a-Icon&#x20;icon-file-browse"
-                                                                                                aria-hidden="true">
-                                                                                            </span>
-                                                                                        </div>
-                                                                                        <div class="a-FileDrop-body">
-                                                                                            <span
-                                                                                                class="a-FileDrop-heading">Choose
-                                                                                                File</span><span
-                                                                                                class="a-FileDrop-description">Select
-                                                                                                a file or drop one
-                                                                                                here.</span>
-                                                                                        </div>
-                                                                                        <div class="a-FileDrop-action">
-                                                                                            <span
-                                                                                                class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                                File</span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </a-file-upload>
-                                                                            </div><span
-                                                                                id="P77_IMAGE_ATTACHMENT3_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="8676686131964195_ET"></span>
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="INSPECTION_INPUT2_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="INSPECTION_INPUT2_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
                                                                         </div>
-                                                                    </div><input type="hidden" name="P77_FILE_NAME3"
-                                                                        id="P77_FILE_NAME3" value=""><input
-                                                                        type="hidden" data-for="P77_FILE_NAME3"
-                                                                        value="Tx5fTO9ZqDMA00DQupGnC6_g68a_dbyyoqOLEEjhqWnCwmUCs3h3ddPxtl9dO666nchCnIlBpJst2BQqSFZ3fQ"><input
-                                                                        type="hidden" name="P77_MIME_TYPE3"
-                                                                        id="P77_MIME_TYPE3" value=""><input
-                                                                        type="hidden" data-for="P77_MIME_TYPE3"
-                                                                        value="HhaJNCN9u2uNpW74xy1a_C7RlgfXlSH_3EBOHy33T1OhTIBz9GPvYllpAK_KcVz27z0Y4Y-qagnj4JIqjdt0mg">
+                                                                    </div>
                                                                 </div>
-                                                                <div class="col col-6 apex-col-auto col-end">
+                                                                <div class="col col-4 apex-col-auto col-end">
                                                                     <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
                                                                         id="P77_IMAGE_ATTACHMENT4_CONTAINER">
                                                                         <div class="t-Form-labelContainer col col-2">
@@ -513,48 +441,25 @@
                                                                                 class="t-Form-label">Inspection Image
                                                                                 3</label>
                                                                         </div>
-                                                                        <div class="t-Form-inputContainer col col-4">
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="INSPECTION_INPUT3">
                                                                             <div class="t-Form-itemWrapper">
-                                                                                <a-file-upload
-                                                                                    id="P77_IMAGE_ATTACHMENT4"
-                                                                                    name="P77_IMAGE_ATTACHMENT4"
-                                                                                    upload-type="FILE"
-                                                                                    display-style="INLINE" size="30"
-                                                                                    label="Choose&#x20;File"
-                                                                                    description="Select&#x20;a&#x20;file&#x20;or&#x20;drop&#x20;one&#x20;here."
-                                                                                    max-file-size="1024"
-                                                                                    download-link="true"><input
-                                                                                        type="file"
-                                                                                        id="P77_IMAGE_ATTACHMENT4_input"
-                                                                                        aria-labelledby="P77_IMAGE_ATTACHMENT4_LABEL"
-                                                                                        class="u-vh" />
-                                                                                    <div
-                                                                                        class="a-FileDrop&#x20;a-FileDrop--inline">
-                                                                                        <div class="a-FileDrop-icon">
-                                                                                            <span
-                                                                                                class="a-Icon&#x20;icon-file-browse"
-                                                                                                aria-hidden="true">
-                                                                                            </span>
-                                                                                        </div>
-                                                                                        <div class="a-FileDrop-body">
-                                                                                            <span
-                                                                                                class="a-FileDrop-heading">Choose
-                                                                                                File</span><span
-                                                                                                class="a-FileDrop-description">Select
-                                                                                                a file or drop one
-                                                                                                here.</span>
-                                                                                        </div>
-                                                                                        <div class="a-FileDrop-action">
-                                                                                            <span
-                                                                                                class="a-Button a-FileDrop-action-choose a-Button--hot">Choose
-                                                                                                File</span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </a-file-upload>
-                                                                            </div><span
-                                                                                id="P77_IMAGE_ATTACHMENT4_error_placeholder"
-                                                                                class="a-Form-error"
-                                                                                data-template-id="8676686131964195_ET"></span>
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="INSPECTION_INPUT3_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="INSPECTION_INPUT3_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
                                                                         </div>
                                                                     </div><input type="hidden" name="P77_FILE_NAME4"
                                                                         id="P77_FILE_NAME4" value=""><input
@@ -901,20 +806,17 @@
 
 
                 if (activity === "Inspection") {
-                    const uploadedFiles = await processFile('#P7_UPLOAD_DROPZONE_input');
-                    if (!uploadedFiles) return;
-                    const uploadFile = uploadedFiles[0];
-
                     const fileSelectors = [
                         '#P7_UPLOAD_DROPZONE_input',
-                        // '#file4',
-                        // '#file5'
+                        '#INSPECTION_INPUT1_input',
+                        '#INSPECTION_INPUT2_input',
+                        '#INSPECTION_INPUT3_input'
                     ];
 
                     let allUploadedFiles = [];
 
                     for (const selector of fileSelectors) {
-                        const files = await processFile(selector); // You already have this function
+                        const files = await processFile(selector);
                         if (files && files.length > 0) {
                             allUploadedFiles = allUploadedFiles.concat(files);
                         }
@@ -925,13 +827,16 @@
                         return;
                     }
 
-                    payload.params.inspectionFiles = uploadFile;
+                    // Flatten file data into separate fields
+                    allUploadedFiles.forEach((file, index) => {
+                        const suffix = index === 0 ? '' : index; // '' for first file, '1', '2', etc. for others
+                        payload.params[`inspectionFillename${suffix}`] = file.filename;
+                        payload.params[`inspectionfileBase64${suffix}`] = file.fileBase64;
+                        payload.params[`inspectionFileType${suffix}`] = file.fileType;
+                    });
                 }
 
-
                 console.log(payload);
-
-                return
                 $.ajax({
                     url: apiUrl,
                     method: "POST",
