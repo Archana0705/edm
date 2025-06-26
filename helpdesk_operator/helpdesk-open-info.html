@@ -629,14 +629,16 @@
           $('#P87_EDM_NOTES').focus();
           return;
         }
+        const requestNumber = $('#P87_REQUEST_NUMBER_DISPLAY').text();
         const payload = {
           action: "function_call",
           function_name: "upt_reassign_edm_serv_assn_fn",
           params: {
-            p_district: selectedDistrict,
             p_assign_to_1: assign_to,
             p_edm_notes: edm_notes,
-            updated_by: userId
+            p_district: selectedDistrict,
+            p_req_number: requestNumber,
+            p_user_id: userId
           }
         };
         $.ajax({
@@ -684,7 +686,7 @@
           function_name: "upt_inprog_ticket_edm_ser_asgn_fn",
           params: {
             p_req_number: requestNumber,
-            updated_by: userId
+            p_user_id: userId
 
           }
         };
@@ -737,16 +739,17 @@
         const uploadFile = uploadedFiles[0];
 
 
-
+        const requestNumber = $('#P87_REQUEST_NUMBER_DISPLAY').text();
         const payload = {
           action: "function_call",
-          function_name: "insert_edm_esevai_operator_change_request_fn",
+          function_name: "upt_close_ticket_edm_ser_asgn_fn",
           params: {
             p_edm_notes: closed_notes,
-            PHOTO_ATTACHMENT: uploadFile?.fileBase64 || null,
-            INTERIM_ATTACH_MIMETYPE: uploadFile?.fileType || null,
-            FILE_NAME: uploadFile?.filename || null,
-            updated_by: userId
+            p_req_number: requestNumber,
+            p_attachment: uploadFile?.fileBase64 || null,
+            p_mimetype: uploadFile?.fileType || null,
+            p_file_name: uploadFile?.filename || null,
+            p_user_id: userId
           }
         }
         console.log(payload);

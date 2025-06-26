@@ -266,12 +266,15 @@ Thanks,"><input type="hidden" data-for="P89_FULL_DESCRIPTION"
                         <div class="row ">
                           <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
                           <div class="col col-2  "><button
-                              class="t-Button t-Button--hot js-ignoreChange&#x20;t-Button--large&#x20;t-Button--warning"
-                              type="button" id="B34345114948122615"><span class="t-Button-label">Cancel</span></button>
+                              class="t-Button t-Button--icon js-ignoreChange t-Button--large t-Button--warning t-Button--iconLeft t-Button--hot"
+                              type="button" id="cancelBtn"><span
+                                class="t-Icon t-Icon--left fa fa-ban fa-anim-flash">Cancel</span></button>
                           </div>
                           <div class="col col-6  "><span class="apex-grid-nbsp">&nbsp;</span></div>
                           <div class="col col-2  ">
-                            <button id="applyBtn" class="resolvedbtn">Apply Changes</button>
+                            <button id="applyBtn"
+                              class="t-Button t-Button--icon t-Button--large t-Button--success t-Button--iconLeft t-Button--hot">Apply
+                              Changes</button>
                           </div>
                         </div>
                       </div>
@@ -626,13 +629,13 @@ Thanks,"><input type="hidden" data-for="P89_FULL_DESCRIPTION"
         });
       });
 
-      $('#exitBtn').on('click', function (event) {
+      $('#cancelBtn').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
         // setTimeout(() => {
         //   window.location.href = "re-opened-request.html";
         // }, 10000)
-        window.location.href = 'allrequest.html';
+        window.location.href = 'helpdesk-report.html';
       });
     })
 
