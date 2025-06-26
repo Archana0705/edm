@@ -111,8 +111,8 @@
       <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
         <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
           id="t_TreeNav" data-id="62_tree" aria-label="Main Navigation">
-          
-        <ul id="commonMenuContainer"></ul> 
+
+          <ul id="commonMenuContainer"></ul>
 
         </div>
       </div>
@@ -153,36 +153,40 @@
                           <div id="R183192529660627764_full_view" class="a-IRR-fullView">
                             <div id="R183192529660627764_actions_menu"></div>
                             <div id="R183192529660627764_column_search_drop" class="a-IRR-colSearch"></div>
-                            
+
                             <div class="row ">
-                          <div class="col col-3  col-start">
-                            <div class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list" id="P29_STATUS_CONTAINER">
-                              <div class="t-Form-labelContainer col col-1">
-                                <label for="P29_STATUS" id="P29_STATUS_LABEL" class="t-Form-label">Status</label>
+                              <div class="col col-3  col-start">
+                                <div
+                                  class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--select-list"
+                                  id="P29_STATUS_CONTAINER">
+                                  <div class="t-Form-labelContainer col col-1">
+                                    <label for="P29_STATUS" id="P29_STATUS_LABEL" class="t-Form-label">Status</label>
+                                  </div>
+                                  <div class="t-Form-inputContainer col col-2">
+                                    <div class="t-Form-itemWrapper"><select id="P29_STATUS" name="P29_STATUS"
+                                        class="selectlist apex-item-select" data-native-menu="false" size="1">
+                                        <option value="" selected="selected"></option>
+                                        <option value="New">New</option>
+                                        <option value="Open">Open</option>
+                                        <option value="In-Progress">In-Progress</option>
+                                        <option value="On-Hold">On-Hold</option>
+                                        <option value="Resolved">Resolved</option>
+                                        <option value="Closed">Closed</option>
+                                      </select></div><span id="P29_STATUS_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
+                                </div>
                               </div>
-                              <div class="t-Form-inputContainer col col-2">
-                                <div class="t-Form-itemWrapper"><select id="P29_STATUS" name="P29_STATUS" class="selectlist apex-item-select" data-native-menu="false" size="1">
-                                    <option value="" selected="selected"></option>
-                                    <option value="New">New</option>
-                                    <option value="Open">Open</option>
-                                    <option value="In-Progress">In-Progress</option>
-                                    <option value="On-Hold">On-Hold</option>
-                                    <option value="Resolved">Resolved</option>
-                                    <option value="Closed">Closed</option>
-                                  </select></div><span id="P29_STATUS_error_placeholder" class="a-Form-error" data-template-id="8676686131964195_ET"></span>
+
+                              <div class="col col-1  ">
+                                <button id="statusSearchBtn">Search</button>
                               </div>
+                              <div class="col col-1  ">
+                                <button id="clearStatusBtn" type="button">Clear</button>
+                              </div>
+
+
                             </div>
-                          </div>
-
-                          <div class="col col-1  ">
-                            <button id="statusSearchBtn">Search</button>
-                          </div>
-                          <div class="col col-1  ">
-                            <button id="clearStatusBtn" type="button">Clear</button>
-                          </div>
-
-
-                        </div>
 
                             <div id="R183192529660627764_content" class="a-IRR-content ">
                               <div id="R183192529660627764_dialog_js" class="a-IRR-dialogBody" style="display:none;">
@@ -199,7 +203,7 @@
                                       class="a-Button a-IRR-button a-IRR-button--controls"><span
                                         class="a-Icon a-Collapsible-icon icon-down-arrow"
                                         aria-hidden="true"></span></button></span>
-                                </div> 
+                                </div>
                                 <div class="a-IRR-reportSummaryContainer" id="R183192529660627764_control_panel_summary"
                                   style="display:none;">
                                   <ul class="a-IRR-reportSummary">
@@ -249,22 +253,22 @@
                                 id="R183192529660627764_data_panel" class="a-IRR-reportView">
                                 <div class="a-IRR-tableContainer">
                                   <table id="pressReleaseTable" class="display" style="width:100%">
-                        <thead>
-                          <tr>
-                            <!-- <th>Actions</th> -->
-                            <th>Request Number</th>
-                            <th>Issue Type</th>
-                            <th>Status</th>
-                            <th>Short Description</th>
-                            <th>Work Notes</th>
-                            <th>Created On</th>
-                            <th>Requested By</th>
-                            <th>Requested District</th>    
-                            <th>Requested Group</th>
-                          </tr>
-                        </thead>
-                        <tbody></tbody>
-                      </table>
+                                    <thead>
+                                      <tr>
+                                        <!-- <th>Actions</th> -->
+                                        <th>Request Number</th>
+                                        <th>Issue Type</th>
+                                        <th>Status</th>
+                                        <th>Short Description</th>
+                                        <th>Work Notes</th>
+                                        <th>Created On</th>
+                                        <th>Requested By</th>
+                                        <th>Requested District</th>
+                                        <th>Requested Group</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                  </table>
                                 </div>
                                 <div role="region" aria-label="Pagination&#x20;of&#x20;All&#x20;Request"
                                   class="a-IRR-paginationWrap a-IRR-paginationWrap--bottom">
@@ -421,9 +425,9 @@
 
       const payload = {
         action: "function_call",
-        function_name: "hdo_service_request_fn",  
+        function_name: "hdo_service_request_fn",
         params: {
-          status: null,
+          status: 'Reopen',
           userid: userId,
           // userid: "EDM0416",
         }

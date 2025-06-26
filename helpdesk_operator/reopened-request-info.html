@@ -451,24 +451,31 @@
                           </div>
                         </div>
                       </div>
-                     
+                      <div class="row">
+                        <div class="col-6">
+                          <button id="exitBtn" class="exitbtn">Exit</button>
+                        </div>
+                        <div class="row">
+                          <div class="col-6"></div> <!-- Empty left space (optional) -->
+
+                          <div id="statusActionDiv" class="col-6 d-flex justify-content-end gap-2"
+                            style="display: none;">
+                            <button id="sendBackButton" class="exitbtn btn btn-sm" type="button" style="display: none;"
+                              data-redirect="inprogress-request.html">Send Back</button>
+                            <button id="reassignButton" class="reassign btn btn-sm" type="button" style="display: none;"
+                              data-redirect="reassigned-request.html">Reassign</button>
+                            <button id="inprogressButton" class="reOpenbtn btn btn-sm" type="button"
+                              style="display: none;" data-redirect="inprogress-request.html">In Progress</button>
+                            <button id="resolvedBtn" class="resolvedbtn btn btn-success btn-sm" type="button"
+                              style="display: none;" data-redirect="resolved-request.html">Resolved</button>
+                          </div>
+                        </div>
+                      </div>
 
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div class="row">
-                        <div class="col-6">
-                          <button id="exitBtn" class="exitbtn">Exit</button>
-                        </div>
-                        <div class="col-6 text-end">
-                          <button id="closeRequestButton" class="exitbtn">Send Back</button>
-                          <button id="closeRequestButton" class="reassign">Reassign</button>
-                          <button id="closeRequestButton" class="reOpenbtn">In Progress</button>
-                          <button id="reOpenBtn" class="resolvedbtn" type="button">Resolved</button>
-                        </div>
-                      </div>
             </div>
           </main>
           <footer class="t-Footer" id="t_Footer" role="contentinfo">
@@ -702,7 +709,7 @@
         feedbackModal.show();
       });
 
-      if (decodedStatus == 'New') {
+      if (decodedStatus == 'Reopen') {
         document.getElementById('statusActionDiv').style.display = 'block';
         document.getElementById('sendBackButton').style.display = 'block';
         document.getElementById('reassignButton').style.display = 'block';
