@@ -57,12 +57,12 @@ const menuItems = [
                 folder: "",
                 roles: ["helpdesk_operator", "call-center-operator"]
             },
-            {
-                label: "Helpdesk Instruction Reassigned Report",
-                file: "request-reassign.html",
-                folder: "",
-                roles: ["helpdesk_operator", "call-center-operator"]
-            }
+            // {
+            //     label: "Helpdesk Instruction Reassigned Report",
+            //     file: "request-reassign.html",
+            //     folder: "",
+            //     roles: ["helpdesk_operator", "call-center-operator"]
+            // }
 
         ]
     },
