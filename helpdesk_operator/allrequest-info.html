@@ -715,6 +715,11 @@
         document.getElementById('reassignButton').style.display = 'block';
         document.getElementById('inprogressButton').style.display = 'block';
         document.getElementById('resolvedBtn').style.display = 'block';
+      } else if (decodedStatus == 'In-Progress') {
+        document.getElementById('statusActionDiv').style.display = 'block';
+        document.getElementById('sendBackButton').style.display = 'block';
+        document.getElementById('reassignButton').style.display = 'block';
+        document.getElementById('resolvedBtn').style.display = 'block';
       }
       $('#submitFeedbackBtn').on('click', function (event) {
         event.preventDefault();

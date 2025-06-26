@@ -210,13 +210,11 @@
                               </div>
                               <div class="t-Form-inputContainer col col-3">
                                 <div class="t-Form-itemWrapper"><input type="hidden" id="P16_REQUESTED_DISTRICT"
-                                    name="P16_REQUESTED_DISTRICT" value="Chengalpattu"><input type="hidden"
-                                    data-for="P16_REQUESTED_DISTRICT"
+                                    name="P16_REQUESTED_DISTRICT"><input type="hidden" data-for="P16_REQUESTED_DISTRICT"
                                     value="P9lPU_uUTNVRcNIXYJFnSuuPQYmjApTtSKR7adtDcNg5xB4z_mUyRke3isZAbOUh-E5S3mA_UiiNeR5WkKypeg"><span
                                     id="P16_REQUESTED_DISTRICT_DISPLAY" class="display_only&#x20;apex-item-display-only"
-                                    data-escape="true">Chengalpattu</span></div><span
-                                  id="P16_REQUESTED_DISTRICT_error_placeholder" class="a-Form-error"
-                                  data-template-id="8676686131964195_ET"></span>
+                                    data-escape="true"></span></div><span id="P16_REQUESTED_DISTRICT_error_placeholder"
+                                  class="a-Form-error" data-template-id="8676686131964195_ET"></span>
                               </div>
                             </div>
                           </div>
@@ -449,51 +447,58 @@
                               type="hidden" name="P16_HELPDESK_LASTUPDATE" id="P16_HELPDESK_LASTUPDATE" value=""><input
                               type="hidden" name="P16_HELPDESK_CHARSET" id="P16_HELPDESK_CHARSET" value="">
                           </div>
+                          <h2 class="t-Region-title" id="R39925691585166740_heading" data-apex-heading>
+                            Attachment</h2>
+                          <div id="attachmentSection" style="display: none; margin-top: 15px;">
+                            <label><strong>Attachment:</strong> <span id="attachmentFileName"></span></label><br />
+                            <button id="P16_ATTACHMENT_VIEW">View Attachment</button>
+                          </div>
+
                         </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <button id="exitBtn" class="exitbtn">Exit</button>
                       </div>
                       <div class="row">
-                        <div class="col-6">
-                          <button id="exitBtn" class="exitbtn">Exit</button>
-                        </div>
-                        <div class="row">
-                          <div class="col-6"></div> <!-- Empty left space (optional) -->
+                        <div class="col-6"></div> <!-- Empty left space (optional) -->
 
-                          <div id="statusActionDiv" class="col-6 d-flex justify-content-end gap-2"
-                            style="display: none;">
-                            <button id="sendBackButton" class="exitbtn btn btn-sm" type="button" style="display: none;"
-                              data-redirect="inprogress-request.html">Send Back</button>
-                            <button id="reassignButton" class="reassign btn btn-sm" type="button" style="display: none;"
-                              data-redirect="reassigned-request.html">Reassign</button>
-                            <button id="inprogressButton" class="reOpenbtn btn btn-sm" type="button"
-                              style="display: none;" data-redirect="inprogress-request.html">In Progress</button>
-                            <button id="resolvedBtn" class="resolvedbtn btn btn-success btn-sm" type="button"
-                              style="display: none;" data-redirect="resolved-request.html">Resolved</button>
-                          </div>
+                        <div id="statusActionDiv" class="col-6 d-flex justify-content-end gap-2" style="display: none;">
+                          <button id="sendBackButton" class="exitbtn btn btn-sm" type="button" style="display: none;"
+                            data-redirect="inprogress-request.html">Send Back</button>
+                          <button id="reassignButton" class="reassign btn btn-sm" type="button" style="display: none;"
+                            data-redirect="reassigned-request.html">Reassign</button>
+                          <button id="inprogressButton" class="reOpenbtn btn btn-sm" type="button"
+                            style="display: none;" data-redirect="inprogress-request.html">In Progress</button>
+                          <button id="resolvedBtn" class="resolvedbtn btn btn-success btn-sm" type="button"
+                            style="display: none;" data-redirect="resolved-request.html">Resolved</button>
                         </div>
                       </div>
-
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
-          </main>
-          <footer class="t-Footer" id="t_Footer" role="contentinfo">
-            <div class="t-Footer-body">
-              <div class="t-Footer-content"></div>
-              <div class="t-Footer-apex">
-                <div class="t-Footer-version"> </div>
-                <div class="t-Footer-customize"></div>
-
-              </div>
-            </div>
-            <div class="t-Footer-top">
-              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
-                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
-            </div>
-          </footer>
         </div>
+        </main>
+        <footer class="t-Footer" id="t_Footer" role="contentinfo">
+          <div class="t-Footer-body">
+            <div class="t-Footer-content"></div>
+            <div class="t-Footer-apex">
+              <div class="t-Footer-version"> </div>
+              <div class="t-Footer-customize"></div>
+
+            </div>
+          </div>
+          <div class="t-Footer-top">
+            <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+              aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+          </div>
+        </footer>
       </div>
+    </div>
     </div>
     <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
       value="&#x5B;&#x7B;&#x22;r&#x22;&#x3A;&#x22;40997159128161338&#x22;,&#x22;c&#x22;&#x3A;&#x22;BlyWUMlYuPNVfiba1SiLtytPvE2oEEXpAfqaN5XuFjuuEU7yVVdTj5q0MLIafdraAvF-WuLYJ-m0Rm2umLYAXQ&#x22;&#x7D;&#x5D;">
@@ -655,6 +660,8 @@
               $('#P16_REQUESTED_GROUP').val(decrypted.requested_group);
               $('#P16_CONTACT_TYPE').val(decrypted.contact_type);
               $('#P16_ASSIGNED_TO').val(decrypted.assigned_to);
+              $('#P16_REQUESTED_DISTRICT_DISPLAY').text(decrypted.requested_district);
+
               $('#P16_CURRENT_OWNER').val(userName);
 
               const fileBase64 = decrypted.helpdesk_upload;
@@ -969,7 +976,7 @@
         //   window.location.href = "re-opened-request.html";
         // }, 10000)
         window.location.href = 'closed-request.html';
-      }); 
+      });
     })
 
 
