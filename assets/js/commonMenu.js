@@ -7,7 +7,7 @@ console.log("userRole", userRole)
 const menuItems = [
     { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", "call-center-operator"] },
     {
-        label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"],
+        label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", "General Helpdesk Operator"],
         subMenu: [
             {
                 label: "All Requests with Reassign Options",
@@ -17,8 +17,8 @@ const menuItems = [
             }
         ]
     },
-    { label: "New Requests", file: "new-request.html", folder: "", icon: "fa fa-plus-circle", roles: ["edistrict_manager", "helpdesk_operator"] },
-    { label: "In Progress Requests", file: "inprogress-request.html", folder: "", icon: "fa fa-spinner", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
+    { label: "New Requests", file: "new-request.html", folder: "", icon: "fa fa-plus-circle", roles: ["edistrict_manager", "helpdesk_operator", "general helpdesk operator"] },
+    { label: "In Progress Requests", file: "inprogress-request.html", folder: "", icon: "fa fa-spinner", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", ""] },
     // { label: "On-Hold Requests", file: "onhold-request.html", folder: "", icon: "fa fa-pause-circle", roles: ["helpdesk", "helpdesk_operator"] },
     { label: "Resolved Requests", file: "resolved-request.html", folder: "", icon: "fa fa-check-circle", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
     { label: "Closed Requests", file: "closed-request.html", folder: "", icon: "fa fa-times-circle", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator"] },
@@ -80,15 +80,22 @@ function normalizeRole(role) {
 
     if (lowerRole.includes("helpdesk_operator6")) {
         return "call-center-operator";
-    } else if (lowerRole.includes("helpdesk_operator")) {
+    }
+    if (
+        lowerRole.includes("helpdesk_operator") ||
+        lowerRole.includes("general helpdesk operator")
+    ) {
         return "helpdesk_operator";
-    } else if (lowerRole.includes("edistrict manager")) {
+    }
+    if (lowerRole.includes("edistrict manager")) {
         return "edistrict_manager";
     }
     return null;
 }
 
+
 function renderDynamicMenu(containerId) {
+    debugger
     const ul = document.getElementById(containerId);
     if (!ul) return;
 
