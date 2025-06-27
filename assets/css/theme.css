@@ -2,6 +2,12 @@
   width: 100% !important;
 }
 
+.overflow-class {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
 .modal {
   display: none;
   position: fixed;

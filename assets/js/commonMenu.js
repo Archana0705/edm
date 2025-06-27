@@ -43,6 +43,7 @@ const menuItems = [
                 label: "Helpdesk Instruction Open Report ",
                 file: "helpdeskopen.html",
                 folder: "",
+
                 roles: ["helpdesk_operator", "call-center-operator"]
             },
             {
