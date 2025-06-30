@@ -462,13 +462,14 @@
 
       $('#statusSearchBtn').on('click', function () {
         event.preventDefault();
+        debugger
         const selectedStatus = $('#P19_STATUS').val().trim();
 
 
         if (dataTableRef) {
           dataTableRef
-            .column(4) // Request Status
-            .search('^' + selectedStatus + '$', true, false) // exact match, case-sensitive
+            .column(3)
+            .search('^' + selectedStatus + '$', true, false)
             .draw();
         } else {
           console.warn('Table not initialized yet');
@@ -479,7 +480,7 @@
         event.preventDefault();
         $('#P19_STATUS').val('');
         dataTableRef
-          .column(4)
+          .column(3)
           .search('')
           .draw();
       });
