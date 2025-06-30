@@ -294,5 +294,37 @@ document.addEventListener('click', async function (e) {
         $('#popup-overlay').fadeIn();
         $('.t-Header').css('z-index', '0');
     }
+
+    document.addEventListener('click', async function (e) {
+        if (e.target && e.target.id === 'myProfileLink') {
+            e.preventDefault();
+
+            if (!document.getElementById('profile-overlay')) {
+                try {
+                    const response = await fetch('../assets/MyProfile/MyProfile.html');
+                    const html = await response.text();
+                    document.body.insertAdjacentHTML('beforeend', html);
+
+                    // First load encrypt_decrypt.js
+                    const encryptScript = document.createElement('script');
+                    encryptScript.src = '../assets/js/encrypt_decrypt.js';
+
+                    encryptScript.onload = () => {
+                        // After it’s loaded, load myProfile.js
+                        const profileScript = document.createElement('script');
+                        profileScript.src = '../assets/js/myProfile.js';
+                        document.body.appendChild(profileScript);
+                    };
+
+                    document.body.appendChild(encryptScript);
+                } catch (err) {
+                    console.error('Error loading my profile popup:', err);
+                }
+            }
+
+            $('#profile-overlay').fadeIn();
+            $('.t-Header').css('z-index', '0');
+        }
+    });
 });
 
