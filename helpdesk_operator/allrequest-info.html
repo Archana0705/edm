@@ -370,10 +370,12 @@
                                   To</label>
                               </div>
                               <div class="t-Form-inputContainer col col-3">
-                                <div class="t-Form-itemWrapper"><input type="text" id="P16_ASSIGNED_TO"
-                                    name="P16_ASSIGNED_TO" class="text_field&#x20;apex-item-text" value="Mohan Raj"
-                                    size="30" data-enter-submit="false" data-is-page-item-type="true" /></div><span
-                                  id="P16_ASSIGNED_TO_error_placeholder" class="a-Form-error"
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P16_ASSIGNED_TO" name="P16_ASSIGNED_TO"
+                                    class="select_field apex-item-select">
+                                    <option value="">-- Select User --</option>
+                                  </select>
+                                </div><span id="P16_ASSIGNED_TO_error_placeholder" class="a-Form-error"
                                   data-template-id="8676686131964195_ET"></span>
                               </div>
                             </div>
@@ -582,7 +584,7 @@
     import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
     $(document).ready(function () {
       debugger
-
+      let assignedToValue;
       var userId = localStorage.getItem('userId');
       var userName = localStorage.getItem('userName');
 
@@ -656,7 +658,7 @@
               $('#P16_CONTACT_TYPE').val(decrypted.contact_type);
               $('#P16_ASSIGNED_TO').val(decrypted.assigned_to);
               $('#P16_CURRENT_OWNER').val(userName);
-
+              assignedToValue = decrypted.assigned_to;
               const fileBase64 = decrypted.helpdesk_upload;
               const fileName = "pdf file";
 
@@ -703,6 +705,44 @@
           });
         }
       });
+
+      // Step 1: Fetch dropdown data from assign_to_fn()
+      const assignToApiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      const assignPayload = {
+        action: "function_call",
+        function_name: "assign_to_fn",
+        params: {}
+      };
+
+      $.ajax({
+        url: assignToApiUrl,
+        type: 'POST',
+        headers: {
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
+        },
+        data: {
+          data: encryptData(assignPayload)
+        },
+        success: function (assignResponse) {
+          const decryptedList = decryptData(assignResponse.data); // decrypt if encrypted
+          const $select = $('#P16_ASSIGNED_TO');
+          $select.empty().append('<option value="">-- Select User --</option>');
+
+          decryptedList.forEach(user => {
+            const value = user.p_designation;
+            const text = user.p_name;
+
+            const selected = value === assignedToValue ? 'selected' : '';
+            $select.append(`<option value="${value}" ${selected}>${text}</option>`);
+          });
+        },
+        error: function () {
+          showErrorToast("Failed to load Assigned To dropdown.");
+        }
+      });
+
       $('#closeRequestButton').on('click', function (event) {
         event.preventDefault();
         const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
@@ -923,7 +963,6 @@
       //     }
       //   });
       // });
-
       function handleStatusUpdate(buttonId, functionName) {
         $(`#${buttonId}`).on('click', function (event) {
           const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
@@ -935,13 +974,26 @@
             return;
           }
 
+          const params = {
+            p_ADDITIONAL_INFORMATION: additionalInfo,
+            request_number: decodedDetails,
+            updated_by: userId
+          };
+
+          // Add assigned_to only for the reassign function
+          if (functionName === 'upt_edm_service_request_reasgn_fn') {
+            const assignedTo = $('#P16_ASSIGNED_TO').val(); // replace with actual field ID
+            if (!assignedTo) {
+              showErrorToast("Please select the user to reassign.");
+              return;
+            }
+            params.assigned_to = assignedTo;
+          }
+
           const updatePayload = {
             action: "function_call",
             function_name: functionName,
-            params: {
-              p_ADDITIONAL_INFORMATION: additionalInfo,
-              request_number: decodedDetails
-            }
+            params: params
           };
 
           $.ajax({
@@ -951,7 +1003,7 @@
             success: function (response) {
               showSuccessToast("Status changed Successfully");
               setTimeout(() => {
-                window.location.href = redirectUrl;
+                window.location.href = "allrequest.html";
               }, 1000);
             },
             error: function () {
@@ -961,7 +1013,6 @@
         });
       }
 
-      // Call this for each button
       handleStatusUpdate('inprogressButton', 'upt_edm_service_request_inprog_fn');
       handleStatusUpdate('sendBackButton', 'upt_edm_service_request_sndbck_fn');
       handleStatusUpdate('reassignButton', 'upt_edm_service_request_reasgn_fn');

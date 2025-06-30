@@ -79,12 +79,11 @@ function normalizeRole(role) {
     if (!role) return null;
     const lowerRole = role.toLowerCase();
 
-    if (lowerRole.includes("helpdesk_operator6")) {
+    if (lowerRole.includes("general helpdesk operator")) {
         return "call-center-operator";
     }
     if (
-        lowerRole.includes("helpdesk_operator") ||
-        lowerRole.includes("general helpdesk operator")
+        lowerRole.includes("helpdesk_operator")
     ) {
         return "helpdesk_operator";
     }

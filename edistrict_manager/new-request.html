@@ -891,7 +891,10 @@
           dataType: 'json',
           success: function (response) {
             showSuccessToast("Submitted successfully.");
-            location.reload();
+            setTimeout(() => {
+              location.reload();
+            }, 1000);
+            // location.reload();
 
           },
           error(xhr, status, error) {
