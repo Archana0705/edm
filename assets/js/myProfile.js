@@ -26,7 +26,7 @@ $(document).ready(function () {
         const decrypted = CryptoJS.AES.decrypt({ ciphertext: ciphertext }, key, {
             iv: iv,
             mode: CryptoJS.mode.CBC,
-            padding: CryptoJS.pad.Pkcs7,
+            padding: CryptoJSc.pad.Pkcs7,
         });
         return JSON.parse(decrypted.toString(CryptoJS.enc.Utf8));
     }
