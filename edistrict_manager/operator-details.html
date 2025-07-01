@@ -85,38 +85,7 @@
                           <div id="R74218392229849618_full_view" class="a-IRR-fullView">
                             <div id="R74218392229849618_actions_menu"></div>
                             <div id="R74218392229849618_column_search_drop" class="a-IRR-colSearch"></div>
-                            <div id="R74218392229849618_toolbar" class="a-IRR-toolbar">
-                              <div role="search" aria-label="Search&#x20;bar&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_toolbar_controls" class="a-IRR-controls">
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--search">
-                                  <div class="a-IRR-search"><input type="hidden"
-                                      id="R74218392229849618_column_search_current_column" />
-                                    <div class="a-IRR-colSelector"><button id="R74218392229849618_column_search_root"
-                                        data-menu="R74218392229849618_column_search_drop"
-                                        class="a-Button a-IRR-button a-IRR-button--colSearch a-Button--withIcon a-Button--noLabel"
-                                        title="Select&#x20;columns&#x20;to&#x20;search"
-                                        aria-label="Select&#x20;columns&#x20;to&#x20;search" type="button"><span
-                                          class="a-Icon icon-search" aria-hidden="true"></span><span
-                                          class="a-Icon icon-menu-drop-down" aria-hidden="true"></span></button></div>
-                                    <div class="a-IRR-searchFieldContainer"><input class="a-IRR-search-field"
-                                        id="R74218392229849618_search_field" title="Search Report" type="search"
-                                        size="30" maxlength="4000" value="" /></div>
-                                    <div class="a-IRR-searchButtonContainer"><button
-                                        id="R74218392229849618_search_button"
-                                        class="a-Button a-IRR-button a-IRR-button--search"
-                                        type="button"><span>Go</span></button></div>
-                                  </div>
-                                </div>
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--views"></div>
-                                <div class="a-IRR-controlGroup a-IRR-controlGroup--options"><input type="hidden"
-                                    id="R74218392229849618_row_select" value="50" />
-                                  <div class="a-IRR-actions"><button id="R74218392229849618_actions_button"
-                                      class="a-Button a-IRR-button a-IRR-button--actions" type="button"
-                                      data-menu="R74218392229849618_actions_menu">Actions<span aria-hidden="true"
-                                        class="a-Icon icon-menu-drop-down"></span></button></div>
-                                </div>
-                              </div>
-                            </div>
+
                             <div id="R74218392229849618_content" class="a-IRR-content ">
                               <div id="R74218392229849618_dialog_js" class="a-IRR-dialogBody" style="display:none;">
                               </div><input type="hidden" id="R74218392229849618_worksheet_id"
@@ -126,13 +95,19 @@
                               <input type="hidden" id="R74218392229849618_view_mode" value="REPORT" />
                               <style nonce="lLH-NN40dONNcFC0JpTw-Q" id="R74218392229849618_worksheet_css">
                               </style>
-                              <div role="region" aria-label="Chart&#x20;view&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_chart" class="a-IRR-chartView"></div>
-                              <div role="region"
-                                aria-label="Group&#x20;by&#x20;view&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_group_by" class="a-IRR-groupByView"></div>
-                              <div role="region" aria-label="Pivot&#x20;view&#x20;of&#x20;Operators&#x20;Details"
-                                id="R74218392229849618_pivot" class="a-IRR-pivotView"></div>
+                              <!-- Container to align right -->
+                              <div style="display: flex; justify-content: flex-end; padding: 10px;">
+                                <input type="text" id="customSearchBox" placeholder="🔍 Search by name..." style="
+      padding: 8px 14px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: border 0.3s ease;
+      width: 250px;
+    " onfocus="this.style.border='1px solid #007bff';" onblur="this.style.border='1px solid #ccc';" />
+                              </div>
+
                               <div role="region" aria-label="Data&#x20;view&#x20;of&#x20;Operators&#x20;Details"
                                 id="R74218392229849618_data_panel" class="a-IRR-reportView">
                                 <div class="a-IRR-tableContainer">
@@ -295,25 +270,32 @@
 
 
   <script type="module">
-    import { encryptData } from '../assets/js/encrypt_decrypt.js';
-
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
     let dataTableRef;
-
-    $(document).ready(function () {
+    $('#customSearchBox').on('keyup', function () {
+      dataTableRef.search(this.value).draw();
+    });
+    function initializeOperatorTable() {
       const userId = localStorage.getItem('userId');
       const p_district = localStorage.getItem('userDistrict');
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      if ($.fn.DataTable.isDataTable('#pressReleaseTable')) {
+        $('#pressReleaseTable').DataTable().clear().destroy();
+        $('#pressReleaseTable').empty();
+      }
 
       dataTableRef = $('#pressReleaseTable').DataTable({
         serverSide: true,
         processing: true,
         searching: false,
         ordering: false,
-        pageLength: 10,
+        pageLength: 15,
         ajax: function (data, callback) {
           const offset = data.start;
           const limit = data.length;
-          const selectedStatus = $('#P19_STATUS').val().trim();
+          const searchValue = data.search.value?.trim() || " ";
+          // const selectedStatus = $('#P19_STATUS').val().trim();
 
           const payload = {
             action: "function_call",
@@ -324,26 +306,39 @@
             },
             limit: limit,
             offset: offset,
-            search: selectedStatus,
-            search_key: "name" // Adjust to your actual searchable column
+            search: searchValue,
+            search_key: "name"
           };
 
           $.ajax({
             url: apiUrl,
             method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(encryptData(payload)),
+            data: { data: encryptData(payload) },
             success: function (response) {
-              const decrypted = decryptData(response); // Assume this returns a usable object
-              const dataList = decrypted.data || [];
-              const totalRecords = decrypted.total || 0;
-
+              const decrypted = decryptData(response.data);
+              const totalRecords = response.pagination.total
+              console.log(decrypted, "decryptData")
               callback({
                 recordsTotal: totalRecords,
                 recordsFiltered: totalRecords,
-                data: dataList.map(item => {
+                data: decrypted.map(item => {
+                  const applicationinfo = {
+                    esevai_id: item.esevai_id,
+                    centre_address: item.centre_address,
+                    agency_code: item.agency_code,
+                    district_name: item.district_name,
+                    taluk_name: item.taluk_name,
+                    name: item.name,
+                    mobileno: item.mobileno,
+                    email: item.email,
+                  };
+                  const encodedDetails = btoa(JSON.stringify(applicationinfo));
+
+                  const esevaIdLink = item.esevai_id
+                    ? `<a href="operator-detail-info.html?details=${encodedDetails}">${item.esevai_id}</a>`
+                    : 'N/A';
                   return [
-                    item.esevai_id || 'N/A',
+                    item.esevai_id,
                     item.centre_address || 'N/A',
                     item.district_name || 'N/A',
                     item.taluk_name || 'N/A',
@@ -369,20 +364,23 @@
           { title: "Email" }
         ]
       });
+    }
+    $(document).ready(function () {
+      initializeOperatorTable();
 
-      // 🔍 Filter by status (search)
       $('#statusSearchBtn').on('click', function (event) {
         event.preventDefault();
         if (dataTableRef) {
-          dataTableRef.ajax.reload();
+          dataTableRef.ajax.reload(); // ✅ don't reinitialize!
         }
       });
 
-      // ❌ Clear status filter
       $('#clearStatusBtn').on('click', function (event) {
         event.preventDefault();
         $('#P19_STATUS').val('');
-        dataTableRef.ajax.reload();
+        if (dataTableRef) {
+          dataTableRef.ajax.reload(); // ✅ still don't reinitialize!
+        }
       });
     });
 
