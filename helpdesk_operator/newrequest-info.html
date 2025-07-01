@@ -337,10 +337,12 @@
                                   To</label>
                               </div>
                               <div class="t-Form-inputContainer col col-3">
-                                <div class="t-Form-itemWrapper"><input type="text" id="P16_ASSIGNED_TO"
-                                    name="P16_ASSIGNED_TO" class="text_field&#x20;apex-item-text" value="Mohan Raj"
-                                    size="30" data-enter-submit="false" data-is-page-item-type="true" /></div><span
-                                  id="P16_ASSIGNED_TO_error_placeholder" class="a-Form-error"
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P16_ASSIGNED_TO" name="P16_ASSIGNED_TO"
+                                    class="select_field apex-item-select">
+                                    <option value="">-- Select User --</option>
+                                  </select>
+                                </div><span id="P16_ASSIGNED_TO_error_placeholder" class="a-Form-error"
                                   data-template-id="8676686131964195_ET"></span>
                               </div>
                             </div>
@@ -524,18 +526,21 @@
                           </div>
                         </div>
                       </div>
-                      
+
                       <div class="row">
-                        <div class="col-6">
-                          <button id="exitBtn" class="exitbtn">Exit</button>
+                        <div class="col-6"></div> <!-- Empty left space (optional) -->
+
+                        <div id="statusActionDiv" class="col-6 d-flex justify-content-end gap-2" style="display: none;">
+                          <button id="sendBackButton" class="exitbtn btn btn-sm" type="button" style="display: none;"
+                            data-redirect="inprogress-request.html">Send Back</button>
+                          <button id="reassignButton" class="reassign btn btn-sm" type="button" style="display: none;"
+                            data-redirect="reassigned-request.html">Reassign</button>
+                          <button id="inprogressButton" class="reOpenbtn btn btn-sm" type="button"
+                            style="display: none;" data-redirect="inprogress-request.html">In Progress</button>
+                          <button id="resolvedBtn" class="resolvedbtn btn btn-success btn-sm" type="button"
+                            style="display: none;" data-redirect="resolved-request.html">Resolved</button>
                         </div>
-                        <div class="col-6 text-end">
-                          <button id="closeRequestButton" class="exitbtn">Send Back</button>
-                          <button id="closeRequestButton" class="reassign">Reassign</button>
-                          <button id="closeRequestButton" class="reOpenbtn">In Progress</button>
-                          <button id="reOpenBtn" class="resolvedbtn" type="button">Resolved</button>
-                        </div>
-                      </div>    
+                      </div>
 
                     </div>
                   </div>
@@ -560,7 +565,7 @@
         </div>
       </div>
     </div>
- </form>
+  </form>
 
   <!-- jQuery -->
   <script src="../assets/js/jquery-3.6.0.min.js"></script>
@@ -607,7 +612,7 @@
     import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
     $(document).ready(function () {
       debugger
-
+      let assignedToValue;
       var userId = localStorage.getItem('userId');
       const langSwitch = 'en';
       const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
@@ -678,7 +683,7 @@
               $('#P16_REQUESTED_GROUP').val(decrypted.requested_group);
               $('#P16_CONTACT_TYPE').val(decrypted.contact_type);
               $('#P16_ASSIGNED_TO').val(decrypted.assigned_to);
-
+              assignedToValue = decrypted.assigned_to;
               const fileBase64 = decrypted.helpdesk_upload;
               const fileName = "pdf file";
 
@@ -726,50 +731,112 @@
         }
       });
 
-      if (decodedStatus == 'Resolved') {
-        document.getElementById('statusActionDiv').style.display = 'block';
+      // Step 1: Fetch dropdown data from assign_to_fn()
+      const assignToApiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
 
+      const assignPayload = {
+        action: "function_call",
+        function_name: "assign_to_fn",
+        params: {}
+      };
+
+      $.ajax({
+        url: assignToApiUrl,
+        type: 'POST',
+        headers: {
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
+        },
+        data: {
+          data: encryptData(assignPayload)
+        },
+        success: function (assignResponse) {
+          const decryptedList = decryptData(assignResponse.data); // decrypt if encrypted
+          const $select = $('#P16_ASSIGNED_TO');
+          $select.empty().append('<option value="">-- Select User --</option>');
+
+          decryptedList.forEach(user => {
+            const value = user.p_designation;
+            const text = user.p_name;
+
+            const selected = value === assignedToValue ? 'selected' : '';
+            $select.append(`<option value="${value}" ${selected}>${text}</option>`);
+          });
+        },
+        error: function () {
+          showErrorToast("Failed to load Assigned To dropdown.");
+        }
+      });
+
+
+      if (decodedStatus == 'New') {
+        document.getElementById('statusActionDiv').style.display = 'block';
+        document.getElementById('sendBackButton').style.display = 'block';
+        document.getElementById('reassignButton').style.display = 'block';
+        document.getElementById('inprogressButton').style.display = 'block';
+        document.getElementById('resolvedBtn').style.display = 'block';
       }
+
       $('#closeRequestButton').on('click', function (event) {
         event.preventDefault();
         const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
         feedbackModal.show();
       });
 
-      $('#submitFeedbackBtn').on('click', function (event) {
-        const rating = $('#rating').val();
-        const comments = $('#comments').val();
+      function handleStatusUpdate(buttonId, functionName) {
+        $(`#${buttonId}`).on('click', function (event) {
+          const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+          const additionalInfo = $('#P16_ADDITIONAL_INFORMATION').val();
+          const redirectUrl = $(this).data('redirect');
 
-        if (!rating || !comments.trim()) {
-          alert("Please provide both rating and comments.");
-          return;
-        }
-
-        const updatePayload = {
-          action: "update",
-          table: "EDM_SERVICE_REQUEST_T",
-          primary_key: "decodedDetails",
-          decodedDetails: decodedDetails,
-          request_status: 'Closed'
-
-        };
-        $.ajax({
-          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
-          type: 'POST',
-          data: { data: encryptData(updatePayload) },
-          success: function (response) {
-            showSuccessToast("Updated Successfully");
-            setTimeout(() => window.location.href = "../admin-zonal-officers-district-report.html", 1000);
-          },
-          error: function (error) {
-            showErrorToast("An error occurred during submission of data.");
+          if (!additionalInfo) {
+            showErrorToast("Please add the Work notes");
+            return;
           }
+
+          const params = {
+            p_ADDITIONAL_INFORMATION: additionalInfo,
+            request_number: decodedDetails,
+            updated_by: userId
+          };
+
+          // Add assigned_to only for the reassign function
+          if (functionName === 'upt_edm_service_request_reasgn_fn') {
+            const assignedTo = $('#P16_ASSIGNED_TO').val(); // replace with actual field ID
+            if (!assignedTo) {
+              showErrorToast("Please select the user to reassign.");
+              return;
+            }
+            params.assigned_to = assignedTo;
+          }
+
+          const updatePayload = {
+            action: "function_call",
+            function_name: functionName,
+            params: params
+          };
+
+          $.ajax({
+            url: apiUrl,
+            type: 'POST',
+            data: { data: encryptData(updatePayload) },
+            success: function (response) {
+              showSuccessToast("Status changed Successfully");
+              setTimeout(() => {
+                window.location.href = "newrequest.html";
+              }, 1000);
+            },
+            error: function () {
+              showErrorToast("An error occurred during request status update.");
+            }
+          });
         });
-        console.log("Rating:", rating);
-        console.log("Comments:", comments);
-        const feedbackModal = bootstrap.Modal.getInstance(document.getElementById('feedbackModal'));
-        feedbackModal.hide();
-      })
+      }
+
+      handleStatusUpdate('inprogressButton', 'upt_edm_service_request_inprog_fn');
+      handleStatusUpdate('sendBackButton', 'upt_edm_service_request_sndbck_fn');
+      handleStatusUpdate('reassignButton', 'upt_edm_service_request_reasgn_fn');
+      handleStatusUpdate('resolvedBtn', 'upt_edm_service_request_resolv_fn');
 
       $('#exitBtn').on('click', function (event) {
         event.preventDefault();
