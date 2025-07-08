@@ -13,10 +13,13 @@
   <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -104,10 +107,60 @@
                 </div>
                 <div class="t-Login-buttons" data-aos="fade-up" data-aos-duration="800"><button
                     class="t-Button t-Button--hot btns&#x20;&#x20;t-Button--success" type="button"><span
-                      class="t-Button-label">Sign In</span></button><button
-                    class="t-Button t-Button--hot btns&#x20;&#x20;t-Button--primary&#x20;t-Button--link" type="button"
-                    id="B19450819038438704"><span data-bs-toggle="modal" data-bs-target=".forgetModal"
-                      class="t-Button-label">Forget Password</span></button></div>
+                      class="t-Button-label">Sign In</span></button>
+                  <!-- Button to open modal -->
+                  <button class="t-Button t-Button--hot t-Button--primary t-Button--link" type="button"
+                    onclick="openForgetPasswordModal()">
+                    Forget Password
+                  </button>
+
+                  <!-- Modal -->
+                  <div id="forgetPasswordModal"
+                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1050; background-color: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center;">
+                    <div
+                      style="background: white; border-radius: 10px; width: 400px; padding: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
+                      <h5 style="margin-bottom: 20px;">Forgot Password</h5>
+
+                      <!-- Mobile -->
+                      <div style="margin-bottom: 10px;">
+                        <label>Mobile Number</label>
+                        <input id="fp_mobile" type="text" maxlength="10"
+                          style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                      </div>
+
+                      <!-- Email -->
+                      <div style="margin-bottom: 10px;">
+                        <label>Email</label>
+                        <input id="fp_email" type="email"
+                          style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                      </div>
+
+                      <!-- New Password -->
+                      <div style="margin-bottom: 10px;">
+                        <label>New Password</label>
+                        <input id="fp_new_password" type="password"
+                          style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                      </div>
+
+                      <!-- Confirm Password -->
+                      <div style="margin-bottom: 20px;">
+                        <label>Confirm Password</label>
+                        <input id="fp_confirm_password" type="password"
+                          style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                      </div>
+
+                      <!-- Buttons -->
+                      <div style="text-align: right;">
+                        <button onclick="closeForgetPasswordModal()"
+                          style="margin-right: 10px; padding: 8px 12px; border: none; background-color: #6c757d; color: white; border-radius: 5px;">Cancel</button>
+                        <button onclick="submitForgetPassword()"
+                          style="padding: 8px 12px; border: none; background-color: #28a745; color: white; border-radius: 5px;">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
                 <div class="t-Login-links"></div>
                 <div class="t-Login-subRegions"></div>
               </div>
@@ -361,6 +414,7 @@
   <script src="../assets/js/chartBundle.min.js"></script> -->
   <script src="../assets/js/global.js"></script>
   <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -415,7 +469,19 @@
     }
   });
 </script> -->
+<script>
+  function openForgetPasswordModal() {
+    document.getElementById('forgetPasswordModal').style.display = 'flex';
+  }
+
+  function closeForgetPasswordModal() {
+    document.getElementById('forgetPasswordModal').style.display = 'none';
+  }
+</script>
+
 <script type="module">
+  import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+
   import { initializeUserSession } from './assets/js/auth.js';
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -478,6 +544,69 @@
         signInButton.innerHTML = 'Sign In';
       }
     });
+    window.submitForgetPassword = function () {
+      var userId = localStorage.getItem('userId');
+      const mobile = document.getElementById('fp_mobile').value.trim();
+      const email = document.getElementById('fp_email').value.trim();
+      const newPassword = document.getElementById('fp_new_password').value.trim();
+      const confirmPassword = document.getElementById('fp_confirm_password').value.trim();
+
+      if (!/^\d{10}$/.test(mobile)) {
+        alert("Enter a valid 10-digit mobile number");
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Enter a valid email");
+        return;
+      }
+
+      if (newPassword.length < 6) {
+        alert("Password must be at least 6 characters");
+        return;
+      }
+
+      if (newPassword !== confirmPassword) {
+        alert("Passwords do not match");
+        return;
+      }
+
+      const payload = {
+        action: "function_call",
+        function_name: "change_password_fn",
+        params: {
+          p_mobile: mobile,
+          p_email: email,
+          p_confirm_password: confirmPassword,
+          p_user_id: userId
+        }
+      };
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      $.ajax({
+        url: apiUrl,
+        method: "POST",
+        headers: {
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
+        },
+        data: {
+          data: encryptData(payload)
+        },
+        success: function () {
+          alert("Password Changed Successfully");
+          setTimeout(() => $('#popup-overlay').fadeOut(), 1000);
+          $('.t-Header').css('z-index', '800');
+        },
+        error: function () {
+          alert('Error occurred during password change');
+        }
+      });
+      closeForgetPasswordModal();
+    };
+
+
+
   });
 </script>
 

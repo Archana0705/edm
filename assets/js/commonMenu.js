@@ -94,6 +94,83 @@ function normalizeRole(role) {
 }
 
 
+// function renderDynamicMenu(containerId) {
+//     debugger
+//     const ul = document.getElementById(containerId);
+//     if (!ul) return;
+
+//     const rawUserRole = localStorage.getItem('userRole');
+//     const userRole = normalizeRole(rawUserRole);
+
+//     const pathParts = window.location.pathname.split('/');
+//     const currentFile = pathParts.pop();
+//     const currentFolder = pathParts.pop();
+
+//     const pageSpecificMenuRestrictions = {
+//         "edm-diary.html": {
+//             allowedRoles: ["edistrict_manager"],
+//             allowedLabels: ["Home"]
+//         },
+//     };
+
+//     let filteredMenu = menuItems.filter(item => item.roles.includes(userRole));
+
+//     if (pageSpecificMenuRestrictions[currentFile]) {
+//         const restriction = pageSpecificMenuRestrictions[currentFile];
+//         if (restriction.allowedRoles.includes(userRole)) {
+//             filteredMenu = filteredMenu.filter(item =>
+//                 restriction.allowedLabels.includes(item.label)
+//             );
+//         }
+//     }
+
+//     filteredMenu.forEach(item => {
+//         const li = document.createElement("li");
+//         li.classList.add("main-menu-item");
+
+//         const a = document.createElement("a");
+//         a.href = (item.folder === currentFolder || item.folder === "") ? item.file : `../${item.folder}/${item.file}`;
+//         a.innerHTML = `<span class="${item.icon}" style="margin-right: 10px;"></span>${item.label}`;
+//         li.appendChild(a);
+
+//         // Handle submenu
+//         if (item.subMenu && Array.isArray(item.subMenu)) {
+//             const subItems = item.subMenu.filter(sub => sub.roles.includes(userRole));
+//             if (subItems.length > 0) {
+//                 // Add toggle button
+//                 const toggleBtn = document.createElement("span");
+//                 toggleBtn.innerHTML = "&#9660;"; // ▼ down arrow
+//                 toggleBtn.classList.add("submenu-toggle");
+//                 li.appendChild(toggleBtn);
+
+//                 // Create submenu
+//                 const subUl = document.createElement("ul");
+//                 subUl.classList.add("submenu");
+
+//                 subItems.forEach(sub => {
+//                     const subLi = document.createElement("li");
+//                     const subA = document.createElement("a");
+//                     subA.href = (sub.folder === currentFolder || sub.folder === "") ? sub.file : `../${sub.folder}/${sub.file}`;
+//                     subA.textContent = sub.label;
+//                     subLi.appendChild(subA);
+//                     subUl.appendChild(subLi);
+//                 });
+
+//                 li.appendChild(subUl);
+
+//                 // Add event listener to toggle visibility
+//                 toggleBtn.addEventListener("click", (e) => {
+//                     e.preventDefault();
+//                     subUl.classList.toggle("submenu-visible");
+//                     toggleBtn.classList.toggle("rotated");
+//                 });
+//             }
+//         }
+
+//         ul.appendChild(li);
+//     });
+// }
+
 function renderDynamicMenu(containerId) {
     debugger
     const ul = document.getElementById(containerId);
@@ -128,49 +205,93 @@ function renderDynamicMenu(containerId) {
         const li = document.createElement("li");
         li.classList.add("main-menu-item");
 
+        // Base styles
+        li.style.padding = "10px";
+        // li.style.borderBottom = "1px solid #ccc";
+        li.style.cursor = "pointer";
+
+        const itemHref = (item.folder === currentFolder || item.folder === "") ? item.file : `../${item.folder}/${item.file}`;
+
         const a = document.createElement("a");
-        a.href = (item.folder === currentFolder || item.folder === "") ? item.file : `../${item.folder}/${item.file}`;
+        a.href = itemHref;
         a.innerHTML = `<span class="${item.icon}" style="margin-right: 10px;"></span>${item.label}`;
+        a.style.textDecoration = "none";
+        a.style.color = "#333";
+
+        // Highlight if current page
+        if (item.file === currentFile) {
+            li.classList.add("active");
+            li.style.backgroundColor = "#2083b2";
+            a.style.color = "#fff";
+            a.style.fontWeight = "bold";
+        }
+
         li.appendChild(a);
 
         // Handle submenu
         if (item.subMenu && Array.isArray(item.subMenu)) {
             const subItems = item.subMenu.filter(sub => sub.roles.includes(userRole));
             if (subItems.length > 0) {
-                // Add toggle button
                 const toggleBtn = document.createElement("span");
-                toggleBtn.innerHTML = "&#9660;"; // ▼ down arrow
+                toggleBtn.innerHTML = "&#9660;";
                 toggleBtn.classList.add("submenu-toggle");
+                toggleBtn.style.marginLeft = "10px";
+                toggleBtn.style.cursor = "pointer";
                 li.appendChild(toggleBtn);
 
-                // Create submenu
                 const subUl = document.createElement("ul");
                 subUl.classList.add("submenu");
+                subUl.style.marginTop = "10px";
+                subUl.style.marginLeft = "20px";
+                subUl.style.paddingLeft = "10px";
+                subUl.style.borderLeft = "2px solid #ccc";
+                subUl.style.display = "none"; // initially hidden
+
+                let submenuActive = false;
 
                 subItems.forEach(sub => {
                     const subLi = document.createElement("li");
                     const subA = document.createElement("a");
                     subA.href = (sub.folder === currentFolder || sub.folder === "") ? sub.file : `../${sub.folder}/${sub.file}`;
                     subA.textContent = sub.label;
+                    subA.style.textDecoration = "none";
+                    subA.style.display = "block";
+                    subA.style.marginBottom = "8px";
+                    subA.style.color = "#555";
+
+                    if (sub.file === currentFile) {
+                        li.classList.add("active");
+                        li.style.backgroundColor = "#33208c";
+                        a.style.color = "#fff";
+                        a.style.fontWeight = "bold";
+                        subA.style.color = "#33208c";
+                        subA.style.fontWeight = "bold";
+                        submenuActive = true;
+                    }
+
                     subLi.appendChild(subA);
                     subUl.appendChild(subLi);
                 });
 
-                li.appendChild(subUl);
+                if (submenuActive) {
+                    subUl.style.display = "block";
+                    toggleBtn.style.transform = "rotate(180deg)";
+                }
 
-                // Add event listener to toggle visibility
                 toggleBtn.addEventListener("click", (e) => {
                     e.preventDefault();
-                    subUl.classList.toggle("submenu-visible");
-                    toggleBtn.classList.toggle("rotated");
+                    const isVisible = subUl.style.display === "block";
+                    subUl.style.display = isVisible ? "none" : "block";
+                    toggleBtn.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
                 });
+
+                li.appendChild(subUl);
             }
         }
 
         ul.appendChild(li);
     });
 }
-
 
 
 renderDynamicMenu("commonMenuContainer");
