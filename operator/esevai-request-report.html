@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html class="no-js  page-8 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Service Request</title>
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #t_Body_nav {
+      width: 100% !important;
+    }
+  </style>
+</head>
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form>
+    <header class="t-Header" id="t_Header" role="banner">
+      <div class="t-Header-branding">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=113837303316044" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=113837303316044" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+          <P class="t-Header-logo-link">TNEGA</P>
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div id="globalHeader"></div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav"></div>
+    </header>
+    <div class="t-Body">
+      <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+        <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
+          id="t_TreeNav" data-id="8_tree" aria-label="Main Navigation">
+          <ul id="commonMenuContainer"></ul>
+        </div>
+      </div>
+
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"></div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent">
+              <div class="container-fluid">
+                <div class="container mt-4 " style="background-color: #fcfcfc;">
+                  <!-- Tabs -->
+                  <ul class="nav nav-tabs" id="instructionTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active open_tab_class" id="open-tab" data-bs-toggle="tab"
+                        data-bs-target="#open" type="button" role="tab" aria-controls="open" aria-selected="true">eSevai
+                        Operator Change Request Report</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link approved_req_class" id="closed-tab" data-bs-toggle="tab"
+                        data-bs-target="#closed" type="button" role="tab" aria-controls="closed"
+                        aria-selected="false">Approved Request
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link reject_req_class" id="closed-tab" data-bs-toggle="tab"
+                        data-bs-target="#closed" type="button" role="tab" aria-controls="closed"
+                        aria-selected="false">Reject Request</button>
+                    </li>
+                  </ul>
+
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="instructionTabsContent">
+                    <!-- Open Tab -->
+                    <div class="tab-pane fade show active" id="open" role="tabpanel" aria-labelledby="open-tab">
+                      <div class="table-responsive mt-3">
+                        <table id="pressReleaseTable" class="display" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>SI No</th>
+                              <th>Created Date</th>
+                              <th>District</th>
+                              <th>Esevai Id</th>
+                              <th>Current Operator Name</th>
+                              <th>Current Operator Mobile Number</th>
+                              <th>Current Mail Id</th>
+                              <th>Reason for Operator Change</th>
+                              <th>New Operator Name</th>
+                              <th>New Operator Aadhar Number</th>
+                              <th>New Operator Phone Number</th>
+                              <th>New Mail Id</th>
+                              <th>Photo Attachment</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <!-- Approved Tab -->
+                    <div class="tab-pane fade" id="closed" role="tabpanel" aria-labelledby="closed-tab">
+                      <div class="table-responsive mt-3">
+                        <table id="approvedTab" class="display" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>Action</th>
+                              <th>SI No</th>
+                              <th>Created Date</th>
+                              <th>District</th>
+                              <th>Esevai Id</th>
+                              <th>Current Operator Name</th>
+                              <th>Current Operator Mobile Number</th>
+                              <th>Current Mail Id</th>
+                              <th>Reason for Operator Change</th>
+                              <th>New Operator Name</th>
+                              <th>New Operator Aadhar Number</th>
+                              <th>New Operator Phone Number</th>
+                              <th>New Mail Id</th>
+                              <th>Photo Attachment</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <!-- Reject Tab -->
+                    <div class="tab-pane fade" id="closed" role="tabpanel" aria-labelledby="closed-tab">
+                      <div class="table-responsive mt-3">
+                        <table id="rejectTab" class="display" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>Action</th>
+                              <th>SI No</th>
+                              <th>Created Date</th>
+                              <th>District</th>
+                              <th>Esevai Id</th>
+                              <th>Current Operator Name</th>
+                              <th>Current Operator Mobile Number</th>
+                              <th>Current Mail Id</th>
+                              <th>Reason for Operator Change</th>
+                              <th>New Operator Name</th>
+                              <th>New Operator Aadhar Number</th>
+                              <th>New Operator Phone Number</th>
+                              <th>New Mail Id</th>
+                              <th>Photo Attachment</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="t-Body-contentInner"></div>
+          </main>
+          <footer class="t-Footer" id="t_Footer" role="contentinfo">
+            <div class="t-Footer-body">
+              <div class="t-Footer-content"></div>
+              <div class="t-Footer-apex">
+                <div class="t-Footer-version"> </div>
+                <div class="t-Footer-customize"></div>
+              </div>
+            </div>
+            <div class="t-Footer-top">
+              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div>
+    <input type="hidden" id="pPageFormRegionChecksums"
+      value="&#x5B;&#x7B;&#x22;r&#x22;&#x3A;&#x22;26395036630353245&#x22;,&#x22;c&#x22;&#x3A;&#x22;jc_drQuLCSD7OQ4SoCYvCDg3gmi0saNrAxNVcaIYhK4kUGzGXRSZCbnUHYKvKKFM7nh4lScFeBIQYcexfPhtFQ&#x22;&#x7D;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="UDhfUkVRVUVTVF9OVU1CRVI6UDhfUkVRX1NUQVRVUzpQOF9SRVFVRVNUX0NSRUFU.,RUQ6UDhfUkVRVUVTVEVEX0JZOlA4X1JFUVVFU1RFRF9ESVNUUklDVDpQOF9SRVFV.,RVNURURfR1JPVVA6UDhfUFJJT1JJVFk6UDhfSEVMUERFU0tfVVBMT0FEXzE&#x2F;cSJ1ArMm-nut7TI5BBAN_quH7ZUrg5XWSLGTs8zRd4SWBs1gsgGQlWWzHjlL5L5AOt4RfMahv0kmF1CsWpyLUQ" />
+  </form>
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+
+  <script src="../assets/js/toastUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+
+
+
+  <!-- <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script> -->
+  <!-- <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script> -->
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
+  <script>
+    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+      $('#pressReleaseTable').DataTable().columns.adjust().draw();
+    });
+
+    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+      apex.region("R60382631052657851").refresh();
+    });
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
+
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+  </script>
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+
+  <script type="module">
+    import { encryptData } from '../assets/js/encrypt_decrypt.js';
+
+    let dataTableRef;
+
+    $(document).ready(function () {
+      const userId = localStorage.getItem('userId');
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+
+      const payload = {
+        action: "function_call",
+        function_name: "edm_esevai_operator_change_request_edmall_fn",
+        params: {
+          status: null,
+          userid: userId,
+        }
+      };
+
+      // const sampleAttachment = {
+      //   file_name: "sample.pdf",
+      //   mime_type: "application/pdf",
+      //   photo_attachment:
+      //     "JVBERi0xLjUKJeLjz9MKMSAwIG9iago8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFI+PgplbmRvYmoKMiAwIG9iago8PC9UeXBlL1BhZ2VzL0tpZHNbMyAwIFJdL0NvdW50IDE+PgplbmRvYmoKMyAwIG9iago8PC9UeXBlL1BhZ2UvUGFyZW50IDIgMCBSL01lZGlhQm94WzAgMCA1OTUuMjggODQxLjg5XS9Db250ZW50cyA0IDAgUi9SZXNvdXJjZXM8PC9Gb250PDwvRjEgNSAwIFI+Pj4+PgplbmRvYmoKNCAwIG9iago8PC9MZW5ndGggNTE+PnN0cmVhbQpCBiAwIFRECi9GMSAxMiBUZgowIDUwIFRECi9IZWxsbyBXb3JsZCEKRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL05hbWUvRjEvQmFzZUZvbnQvSGVsdmV0aWNhL0VuY29kaW5nL1dpbkFuc2lFbmNvZGluZz4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTAgMDAwMDAgbiAKMDAwMDAwMDA5NiAwMDAwMCBuIAowMDAwMDAwMjQ1IDAwMDAwIG4gCjAwMDAwMDAzMzUgMDAwMDAgbiAKMDAwMDAwMDQxMCAwMDAwMCBuIAp0cmFpbGVyCjw8L1Jvb3QgMSAwIFIvU2l6ZSA2Pj4Kc3RhcnR4cmVmCjUyNgolJUVPRgo="
+      // };
+
+      // Load table
+      function getRelativeTime(createdDateStr) {
+        const createdDate = new Date(createdDateStr);
+        const now = new Date();
+        const diffTime = now - createdDate;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const diffWeeks = Math.floor(diffDays / 7);
+        const diffMonths = Math.floor(diffDays / 30);
+
+        if (diffMonths >= 1) {
+          return `${diffMonths} month${diffMonths > 1 ? 's' : ''} ago`;
+        } else if (diffWeeks >= 1) {
+          return `${diffWeeks} week${diffWeeks > 1 ? 's' : ''} ago`;
+        } else {
+          return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+        }
+      }
+
+      console.log(getRelativeTime("2024-12-04")); // Output: "6 months ago" (as of June 2025)
+      const createDownloadLink = (content, mimeType, filename) => {
+        if (!content) return "N/A";
+
+        try {
+          const base64Pattern = /^[A-Za-z0-9+/=]+$/;
+          if (base64Pattern.test(content.replace(/\s/g, ""))) {
+            const blob = new Blob([new Uint8Array(atob(content).split("").map(c => c.charCodeAt(0)))], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            return `<a href="${url}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
+          }
+
+          return `<a href="${content}" target="_blank" class="btn btn-sm btn-link">Download</a>`;
+        } catch (error) {
+          console.error("Error creating download link:", error);
+          return "Invalid content";
+        }
+      };
+      loadDataToTable({
+        tableId: 'pressReleaseTable',
+        apiUrl,
+        httpMethod: 'POST',
+        payload: encryptData(payload),
+        rowBuilder: (item) => {
+          // const attachment = sampleAttachment; // Attach sample to every row
+
+          return `
+        <tr>
+          <td class="u-tC">${item.sl_no || 'N/A'}</td>
+          <td class="u-tC">${getRelativeTime(item.created_date || 'N/A')}</td>
+          <td class="u-tC">${item.district || 'N/A'}</td>
+          <td class="u-tC">${item.esevai_id || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_mobile_number || 'N/A'}</td>
+          <td class="u-tC">${item.current_mail_id || 'N/A'}</td>
+          <td class="u-tC">${item.reason_for_operator_change || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_aadhar_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_phone_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
+          <td>${createDownloadLink(item.photo_attachment, item.mime_type, item.file_name)}</td>
+          <td class="u-tC">${item.status || 'N/A'}</td>
+        </tr>
+        `;
+        },
+        onTableInit: function (dtRef) {
+          dataTableRef = dtRef;
+        }
+      });
+
+
+      // ✅ Approved Tab Click
+      $(document).on('click', '.approved_req_class', function () {
+        const approvedPayload = {
+          action: "function_call",
+          function_name: "edm_esevai_operator_change_request_adm_all_trg",
+          params: {
+            status: 'C',
+            userid: userId,
+          }
+        };
+
+        loadDataToTable({
+          tableId: 'approvedTab',
+          apiUrl,
+          httpMethod: 'POST',
+          payload: encryptData(approvedPayload),
+          rowBuilder: (item) => {
+            debugger
+            const applicationinfo = {
+              district: item.district,
+              esevai_id: item.esevai_id,
+              current_operator_name: item.current_operator_name,
+              current_mail_id: item.current_mail_id,
+              current_operator_mobile_number: item.current_operator_mobile_number,
+              reason_for_operator_change: item.reason_for_operator_change,
+              new_operator_name: item.new_operator_name,
+              new_operator_aadhar_number: item.new_operator_aadhar_number,
+              new_operator_phone_number: item.new_operator_phone_number,
+              new_mail_id: item.new_mail_id
+            };
+
+            const encodedDetails = btoa(JSON.stringify(applicationinfo));
+            const encodedStatus = btoa(item.request_status || '');
+            return `
+          <tr>
+            <td class="u-tL">
+              <a data-id="${item.esevai_id}" id="open-modal-btn"
+                 href="esevai-request-report-info.html?details=${encodedDetails}&status=${btoa(item.request_status)}">
+              <i class="bi bi-pencil-square"></i>
+              <i>
+              </a>
+            </td>
+            <td class="u-tC">${item.sl_no || 'N/A'}</td>
+          <td class="u-tC">${getRelativeTime(item.created_date || 'N/A')}</td>
+          <td class="u-tC">${item.district || 'N/A'}</td>
+          <td class="u-tC">${item.esevai_id || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_mobile_number || 'N/A'}</td>
+          <td class="u-tC">${item.current_mail_id || 'N/A'}</td>
+          <td class="u-tC">${item.reason_for_operator_change || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_aadhar_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_phone_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
+          <td class="u-tC">
+            <a href="#" class="view-file-link"
+               data-base64="${item.photo_attachment}"
+               data-mime="${item.mime_type}"
+               data-filename="${item.file_name}">
+               View File
+            </a>
+          </td>
+        </tr>
+          </tr>
+          `;
+          },
+          onTableInit: function (dtRef) {
+            dataTableRef = dtRef;
+          }
+        });
+
+        $('#closed-tab').removeClass('approved_req_class');
+      });
+
+      // ✅ Reject Tab Click
+      $(document).on('click', '.reject_req_class', function () {
+        const approvedPayload = {
+          action: "function_call",
+          function_name: "edm_esevai_operator_change_request_adm_all_trg",
+          params: {
+            status: 'N',
+            userid: userId,
+          }
+        };
+
+        loadDataToTable({
+          tableId: 'rejectTab',
+          apiUrl,
+          httpMethod: 'POST',
+          payload: encryptData(approvedPayload),
+          rowBuilder: (item) => {
+            debugger
+            const applicationinfo = {
+              district: item.district,
+              esevai_id: item.esevai_id,
+              current_operator_name: item.current_operator_name,
+              current_mail_id: item.current_mail_id,
+              current_operator_mobile_number: item.current_operator_mobile_number,
+              reason_for_operator_change: item.reason_for_operator_change,
+              new_operator_name: item.new_operator_name,
+              new_operator_aadhar_number: item.new_operator_aadhar_number,
+              new_operator_phone_number: item.new_operator_phone_number,
+              new_mail_id: item.new_mail_id
+            };
+
+            const encodedDetails = btoa(JSON.stringify(applicationinfo));
+            const encodedStatus = btoa(item.request_status || '');
+            return `
+          <tr>
+            <td class="u-tL">
+              <a data-id="${item.esevai_id}" id="open-modal-btn"
+                 href="esevai-request-report-info.html?details=${encodedDetails}&status=${btoa(item.request_status)}">
+              <i class="bi bi-pencil-square"></i>
+              <i>
+              </a>
+            </td>
+            <td class="u-tC">${item.sl_no || 'N/A'}</td>
+          <td class="u-tC">${getRelativeTime(item.created_date || 'N/A')}</td>
+          <td class="u-tC">${item.district || 'N/A'}</td>
+          <td class="u-tC">${item.esevai_id || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.current_operator_mobile_number || 'N/A'}</td>
+          <td class="u-tC">${item.current_mail_id || 'N/A'}</td>
+          <td class="u-tC">${item.reason_for_operator_change || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_name || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_aadhar_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_operator_phone_number || 'N/A'}</td>
+          <td class="u-tC">${item.new_mail_id || 'N/A'}</td>
+          <td class="u-tC">
+            <a href="#" class="view-file-link"
+               data-base64="${item.photo_attachment}"
+               data-mime="${item.mime_type}"
+               data-filename="${item.file_name}">
+               View File
+            </a>
+          </td>
+        </tr>
+          </tr>
+          `;
+          },
+          onTableInit: function (dtRef) {
+            dataTableRef = dtRef;
+          }
+        });
+
+        $('#closed-tab').removeClass('reject_req_class');
+      });
+
+
+
+      document.addEventListener('click', function (e) {
+        if (e.target && e.target.classList.contains('view-file-link')) {
+          e.preventDefault();
+
+          const base64 = e.target.getAttribute('data-base64');
+          const mimeType = e.target.getAttribute('data-mime') || 'application/octet-stream';
+          const fileName = e.target.getAttribute('data-filename') || 'file';
+
+          const blob = base64ToBlob(base64, mimeType);
+          const blobUrl = URL.createObjectURL(blob);
+
+          const win = window.open(blobUrl, '_blank');
+          if (!win) {
+            alert('Pop-up blocked! Please allow pop-ups for this site.');
+          }
+
+          setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
+        }
+      });
+
+      function base64ToBlob(base64, mimeType) {
+        const byteCharacters = atob(base64);
+        const byteArrays = [];
+
+        for (let i = 0; i < byteCharacters.length; i += 512) {
+          const slice = byteCharacters.slice(i, i + 512);
+          const byteNumbers = new Array(slice.length);
+          for (let j = 0; j < slice.length; j++) {
+            byteNumbers[j] = slice.charCodeAt(j);
+          }
+          byteArrays.push(new Uint8Array(byteNumbers));
+        }
+
+        return new Blob(byteArrays, { type: mimeType });
+      }
+
+    });
+
+  </script>
+
+</body>
+
+</html>

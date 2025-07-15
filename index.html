@@ -26,7 +26,39 @@
   <meta http-equiv="Expires" content="-1" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #popup-overlay {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
 
+    #changePasswordModal {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+
+    #operatorChoiceSection {
+      display: block;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+    }
+  </style>
 </head>
 
 <!-- Hello -->
@@ -47,18 +79,19 @@
         <div class="container container-fluid">
           <div class="row pad big-title">
             <div class="col col-12 apex-col-auto col-start col-end">
-              <h1 data-aos="fade-right" data-aos-duration="600"><span class="edistrict">Welcome! </span>to eDistrict
-                Manager Portal</h1>
+              <h1 data-aos="fade-right" data-aos-duration="600"><span class="edistrict">Welcome! </span>to eSevai
+                Helpdesk Portal</h1>
             </div>
           </div>
-          <div class="row pad">
-            <div class="col col-6 apex-col-auto col-start">
+          <div class="row" style="display: flex; align-items: center; gap: 40px;">
+            <div class="col col-5" style="display: flex">
               <img data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400" src="assets/img/edm-illustration.svg"
-                id="edm-illustration">
+                id="edm-illustration" style="max-width: 100%; height: auto;" />
             </div>
-            <div class="col col-6 apex-col-auto col-end">
-              <div class="t-Login-region t-Form--stretchInputs t-Form--labelsAbove " id="R8796712810964397"
-                role="region" aria-labelledby="R8796712810964397_heading">
+
+            <div class="col col-6 apex-col-auto col-end" id="loginContainer" style="display: none; margin-top: 50px;">
+              <div class="t-Login-region t-Form--stretchInputs t-Form--labelsAbove" id="R8796712810964397" role="region"
+                aria-labelledby="R8796712810964397_heading">
                 <div class="t-Login-header text-middle">
                   <!--  --><img class="login-logo" data-aos="flip-down" data-aos-duration="1200"
                     src="assets/img//logo.svg">
@@ -113,7 +146,12 @@
                     onclick="openForgetPasswordModal()">
                     Forget Password
                   </button>
-
+                  <button class="btn btn-primary btn-sm" type="button" onclick="backToRoleSelection()" style="
+                      margin-left: 121px;
+                      background: #278701;
+                  ">
+                    Back to Role Selection
+                  </button>
                   <!-- Modal -->
                   <div id="forgetPasswordModal"
                     style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1050; background-color: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center;">
@@ -158,17 +196,78 @@
                       </div>
                     </div>
                   </div>
-
-
                 </div>
                 <div class="t-Login-links"></div>
                 <div class="t-Login-subRegions"></div>
               </div>
             </div>
+
+            <div id="roleSelection" class="col col-6"
+              style="display: flex; flex-direction: column; align-items: flex-start;">
+              <h3 style="margin-bottom: 20px;">Select User</h3>
+              <select id="roleDropdown" onchange="handleRoleSelection()"
+                style="width: 300px; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;">
+                <option value="">-- Select User --</option>
+                <option value="edistrict_manager">eDistrict Manager</option>
+                <option value="helpdesk_operator">TNeGA Operator Team</option>
+                <option value="callcenter_operator">Call Center Operator</option>
+                <option value="operator">Operator</option>
+              </select>
+            </div>
           </div>
+          <!-- Operator ID Prompt -->
+          <!-- <div id="operatorIdSection" style="display: none; text-align: center; margin-top: -240px;">
+            <h4>Enter your Operator ID</h4>
+            <input id="operatorIdInput" type="text" placeholder="Enter Operator ID or Mobile Number"
+              style="padding: 10px; width: 300px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            <br /><br />
+            <button class="btn btn-primary btn-sm" type="button" onclick="validateOperatorId()"
+              style="background: #2987b4; margin-right: 10px;">
+              Next
+            </button>
+          </div> -->
+          <!-- Mobile Number Section -->
+          <div id="mobNumSection" style="display: none; text-align: center; margin-top: -260px;">
+            <h6>Enter your Mobile Number</h6>
+            <input id="mobileNumberInput" type="text" placeholder="Enter Mobile Number"
+              style="padding: 10px; width: 300px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            <br /><br />
+            <button class="btn btn-secondary btn-sm" type="button" onclick="backToRoleSelection()"
+              style="margin-right: 10px; background: #6c757d;">
+              Back to User Selection
+            </button>
+            <button class="btn btn-success btn-sm" onclick="showOperatorChoiceSection()" style="background: #278701;">
+              Send OTP
+            </button>
+          </div>
+          <!-- OTP Section -->
+          <div id="otpSection" style="display: none; text-align: center; margin-top: -240px;">
+            <h4>Enter OTP</h4>
+            <input id="otpInput" type="text" placeholder="Enter OTP sent to mobile"
+              style="padding: 10px; width: 300px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            <br /><br />
+            <button onclick="backToMobileEntry()"
+              style="margin-right: 10px; background: #6c757d; color: white; padding: 8px 12px; border: none; border-radius: 5px;">Back</button>
+            <button onclick="verifyOTP()"
+              style="background: #278701; color: white; padding: 8px 12px; border: none; border-radius: 5px;">Verify
+              OTP</button>
+          </div>
+
+          <!-- Choice Section -->
+          <div id="operatorChoiceSection" style="display: none; text-align: center; margin-top: -240px;">
+            <h4>What would you like to do?</h4>
+            <button onclick="showChangePasswordUI()"
+              style="padding: 8px 16px; margin-right: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px;">Change
+              Password</button>
+            <button onclick="showLoginForm()"
+              style="padding: 8px 16px; background-color: #17a2b8; color: white; border: none; border-radius: 5px;">Continue
+              to Login</button>
+          </div>
+
         </div>
-      </main>
-      <footer class="t-Login-containerFooter"></footer>
+    </div>
+    </main>
+    <footer class="t-Login-containerFooter"></footer>
     </div>
     <input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
     <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
@@ -378,7 +477,7 @@
   </script> -->
 
   <!-- jQuery -->
-  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
 
   <!-- DataTables -->
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
@@ -391,8 +490,8 @@
   <script src="assets/js/item.Colorpicker.min.js"></script>
   <script src="assets/js/jetCommonBundle.min.js"></script>
   <script src="assets/js/chartBundle.min.js"></script>
-
-  <script src="assets/js/toastUtil.js"></script>
+  <!-- 
+  <script src="assets/js/toastUtil.js"></script> -->
   <script src="assets/js/dataTableUtil.js"></script>
   <script src="assets/js/crypto-js.min.js"></script>
   <script src="assets/js/theme42.min.js"></script>
@@ -412,9 +511,11 @@
   <script src="../assets/js/item.Colorpicker.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script> -->
-  <script src="assets/js/global.js"></script>
+  <script src="./assets/js/global.js"></script>
   <script src="assets/js/encrypt_decrypt.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/toastUtil.js"></script>
+
   <script>
     $(document).ready(function () {
       console.log('jQuery loaded?', typeof jQuery !== 'undefined');
@@ -475,7 +576,35 @@
   }
 
   function closeForgetPasswordModal() {
-    document.getElementById('forgetPasswordModal').style.display = 'none';
+    const overlay = document.getElementById('popup-overlay');
+
+    if (overlay) {
+      $('#popup-overlay').fadeOut(() => {
+        const operatorChoice = document.getElementById("operatorChoiceSection");
+        if (operatorChoice) {
+          operatorChoice.style.display = "block";
+        }
+      });
+    } else {
+      // fallback
+      const operatorChoice = document.getElementById("operatorChoiceSection");
+      if (operatorChoice) {
+        operatorChoice.style.display = "block";
+      }
+    }
+  }
+
+  function showMobileNumberInput() {
+    // document.getElementById("operatorIdSection").style.display = "none";
+    document.getElementById("mobNumSection").style.display = "block";
+  }
+
+  function backToRoleSelection() {
+    document.getElementById("loginContainer").style.display = "none";
+    document.getElementById("roleSelection").style.display = "block";
+    // document.getElementById("operatorIdSection").style.display = "none";
+    document.getElementById("mobNumSection").style.display = "none";
+    document.getElementById("operatorChoiceSection").style.display = "none";
   }
 </script>
 
@@ -484,7 +613,9 @@
 
   import { initializeUserSession } from './assets/js/auth.js';
 
+
   document.addEventListener('DOMContentLoaded', () => {
+
     const signInButton = document.querySelector('.t-Button--success');
     const debugConsole = document.getElementById('debug-console'); // Add this <div>
 
@@ -504,11 +635,11 @@
       localStorage.setItem('userMob', userMobNumber)
       // Validation
       if (!mobnumber || mobnumber.length !== 10 || isNaN(mobnumber)) {
-        alert("Please enter a valid 10-digit mobile number.");
+        showErrorToast("Please enter a valid 10-digit mobile number.");
         return;
       }
       if (!password) {
-        alert("Please enter your password.");
+        showErrorToast("Please enter your password.");
         return;
       }
 
@@ -538,7 +669,7 @@
         window.location.href = `${folder}/dashboard.html`;
       } catch (error) {
         console.error("Login Error:", error);
-        alert("Login failed. Check console for details.");
+        showErrorToast("Login failed. Check console for details.");
       } finally {
         signInButton.disabled = false;
         signInButton.innerHTML = 'Sign In';
@@ -552,22 +683,22 @@
       const confirmPassword = document.getElementById('fp_confirm_password').value.trim();
 
       if (!/^\d{10}$/.test(mobile)) {
-        alert("Enter a valid 10-digit mobile number");
+        showErrorToast("Enter a valid 10-digit mobile number");
         return;
       }
 
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert("Enter a valid email");
+        showErrorToast("Enter a valid email");
         return;
       }
 
       if (newPassword.length < 6) {
-        alert("Password must be at least 6 characters");
+        showErrorToast("Password must be at least 6 characters");
         return;
       }
 
       if (newPassword !== confirmPassword) {
-        alert("Passwords do not match");
+        showErrorToast("Passwords do not match");
         return;
       }
 
@@ -594,18 +725,298 @@
           data: encryptData(payload)
         },
         success: function () {
-          alert("Password Changed Successfully");
+          showErrorToast("Password Changed Successfully");
+          closeForgetPasswordModal();
+
+          // Reset UI
+          document.getElementById("loginContainer").style.display = "block";
+          document.getElementById("roleSelection").style.display = "none";
+          // document.getElementById("operatorIdSection").style.display = "none";
+          document.getElementById("mobNumSection").style.display = "none";
+          // document.getElementById("operatorChoiceSection").style.display = "none";
+
+          // Optional: Clear fields
+          document.getElementById('fp_mobile').value = '';
+          document.getElementById('fp_email').value = '';
+          document.getElementById('fp_new_password').value = '';
+          document.getElementById('fp_confirm_password').value = '';
+
           setTimeout(() => $('#popup-overlay').fadeOut(), 1000);
           $('.t-Header').css('z-index', '800');
         },
         error: function () {
-          alert('Error occurred during password change');
+          showErrorToast('Error occurred during password change');
         }
       });
       closeForgetPasswordModal();
     };
 
+    window.handleRoleSelection = async function () {
+      const role = document.getElementById("roleDropdown").value;
+      if (!role) return;
 
+      localStorage.setItem("userRole", role);
+      console.log("Selected Role:", role);
+
+      if (role === "operator") {
+        document.getElementById("roleSelection").style.display = "none";
+        // document.getElementById("operatorIdSection").style.display = "block";
+        document.getElementById("mobNumSection").style.display = "block";
+      } else {
+        document.getElementById("roleSelection").style.display = "none";
+        document.getElementById("loginContainer").style.display = "block";
+      }
+    };
+
+    window.validateOperatorId = async function () {
+      const operatorId = document.getElementById("operatorIdInput").value.trim();
+
+      if (!operatorId) {
+        showErrorToast("Please enter a valid Operator ID or mobile number.");
+        return;
+      }
+
+      const payload = {
+        action: "function_call",
+        function_name: "Operator_login_ck_fn",
+        params: {
+          p_operator_id: operatorId
+        }
+      };
+
+      try {
+        const response = await $.ajax({
+          url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+          method: "POST",
+          headers: {
+            'X-APP-Key': "edm",
+            'X-APP-Name': "edm"
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+        });
+
+        const decrypted = decryptData(response?.data || '');
+
+        if (Array.isArray(decrypted) && decrypted[0]?.operator_login_ck_fn === true) {
+          localStorage.setItem("operatorId", operatorId);
+
+          // Show next choice UI
+          // document.getElementById("operatorIdSection").style.display = "none";
+          document.getElementById("operatorChoiceSection").style.display = "block";
+        } else {
+          showErrorToast("Invalid Operator ID. Please try again.");
+        }
+
+      } catch (error) {
+        console.error("Operator ID validation error:", error);
+        showErrorToast("An error occurred while validating Operator ID.");
+      }
+      document.getElementById("operatorChoiceSection").style.display = "none";
+      // document.getElementById("operatorIdSection").style.display = "none";
+      document.getElementById("mobNumSection").style.display = "block";
+    };
+
+    window.showOperatorChoiceSection = function () {
+      const mobileNumber = document.getElementById("mobileNumberInput").value.trim();
+      if (!mobileNumber || mobileNumber.length !== 10 || isNaN(mobileNumber)) {
+        showErrorToast("Please enter a valid 10-digit mobile number.");
+        return;
+      }
+
+      localStorage.setItem("operatorMobile", mobileNumber);
+
+      const sampleOTP = "123456"; // Mock OTP for testing
+      showSuccessToast("OTP sent to " + mobileNumber); // Simulated OTP popup
+
+      // Show OTP input UI
+      document.getElementById("mobNumSection").style.display = "none";
+      document.getElementById("otpSection").style.display = "block";
+      // document.getElementById('loginContainer').style.display = "block";
+
+    };
+
+    // window.verifyOTP = function () {
+    //   const enteredOTP = document.getElementById("otpInput").value.trim();
+    //   const expectedOTP = "123456";
+
+    //   if (enteredOTP === expectedOTP) {
+    //     showSuccessToast("OTP verified successfully!");
+    //     document.getElementById("otpSection").style.display = "none";
+    //     document.getElementById("operatorChoiceSection").style.display = "none";
+    //     window.location.href = ``;
+    //   } else {
+    //     showErrorToast("Incorrect OTP. Please try again.");
+    //   }
+    // };
+
+    window.verifyOTP = function () {
+      debugger;
+      const enteredOTP = document.getElementById("otpInput").value.trim();
+      const mobile = document.getElementById("mobileNumberInput").value;
+      const operatorLoginPayload = {
+        action: "function_call",
+        function_name: "get_user_auth_operator_fun",
+        params: {
+          p_mobile: mobile,
+        }
+      };
+      const OTPPayload = {
+        action: "function_call",
+        function_name: "otp_verification_fn",
+        params: {
+          p_mobile: mobile,
+          p_otp: enteredOTP
+        }
+      }
+      // Call the OTP verification API
+      $.ajax({
+        url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+        method: "POST",
+        data: { data: encryptData(OTPPayload) },
+        dataType: 'json',
+        success: function (otpResponse) {
+          if (otpResponse.success) {
+            const decryptedData = decryptData(otpResponse.data);
+
+            if (decryptedData[0].otp_verification_fn == true) {
+              $.ajax({
+                url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+                method: "POST",
+                data: { data: encryptData(operatorLoginPayload) },
+                dataType: 'json',
+                success: function (loginResponse) {
+                  if (loginResponse.success) {
+                    showSuccessToast("Login successful!");
+                    const operatorData = decryptData(loginResponse.data);
+                    localStorage.setItem("userRole", operatorData[0].designation);
+                    localStorage.setItem("userName", operatorData[0].name);
+                    window.location.href = "operator/dashboard.html";
+                  } else {
+                    showErrorToast("Login failed: " + loginResponse.message);
+                  }
+                },
+                error: function () {
+                  showErrorToast("Login API error. Please try again.");
+                }
+              });
+
+            } else {
+              showErrorToast("You Entered Wrong mobile number. Please contact EDM"); // ✅ Show error for false value
+            }
+          } else {
+            showErrorToast("Incorrect OTP. Please try again.");
+          }
+        },
+        error: function () {
+          showErrorToast("OTP verification failed. Please try again.");
+        }
+
+      });
+    };
+
+
+    window.backToMobileEntry = function () {
+      document.getElementById("otpSection").style.display = "none";
+      document.getElementById("mobNumSection").style.display = "block";
+    };
+
+    // window.showChangePasswordUI = async function () {
+    //   document.getElementById("operatorChoiceSection").style.display = "none";
+
+    //   if (!document.getElementById('popup-overlay')) {
+    //     try {
+    //       const popupResponse = await fetch('assets/ChangePassword/ChangePassword.html');
+    //       if (!popupResponse.ok) throw new Error('Popup HTML not found');
+
+    //       const popupHtml = await popupResponse.text();
+    //       document.body.insertAdjacentHTML('beforeend', popupHtml);
+    //       console.log('ChangePassword popup HTML inserted');
+
+    //       const script = document.createElement('script');
+    //       script.src = '../assets/js/changePassword.js';
+    //       script.onload = () => console.log('changePassword.js script loaded');
+    //       document.body.appendChild(script);
+    //       $('#popup-overlay').fadeIn();
+    //       document.getElementById("operatorChoiceSection").style.display = "block";
+
+    //     } catch (error) {
+    //       console.error('Error loading change password popup:', error);
+    //     }
+    //   }
+    // };
+
+    // window.showChangePasswordUI = async function () {
+    //   // Always hide other sections
+    //   document.getElementById("operatorChoiceSection").style.display = "none";
+
+    //   const overlay = document.getElementById('popup-overlay');
+
+    //   if (overlay) {
+    //     $('#popup-overlay').fadeIn(); // Re-show if already present
+    //     return;
+    //   }
+
+    //   try {
+    //     const popupResponse = await fetch('assets/ChangePassword/ChangePassword.html');
+    //     if (!popupResponse.ok) throw new Error('Popup HTML not found');
+
+    //     const popupHtml = await popupResponse.text();
+    //     document.body.insertAdjacentHTML('beforeend', popupHtml);
+    //     console.log('ChangePassword popup HTML inserted');
+
+    //     const script = document.createElement('script');
+    //     script.src = '../assets/js/changePassword.js';
+    //     script.onload = () => console.log('changePassword.js script loaded');
+    //     document.body.appendChild(script);
+
+    //     $('#popup-overlay').fadeIn();
+    //     document.getElementById("operatorChoiceSection").style.display = "block";
+    //   } catch (error) {
+    //     console.error('Error loading change password popup:', error);
+    //   }
+    // };
+
+
+    window.showChangePasswordUI = async function () {
+      // const operatorChoice = document.getElementById("operatorChoiceSection");
+      // if (operatorChoice) {
+      //   operatorChoice.style.display = "none";
+      // }
+
+      const overlay = document.getElementById('popup-overlay');
+
+      if (overlay) {
+        $('#popup-overlay').fadeIn();
+        return;
+      }
+
+      try {
+        const popupResponse = await fetch('assets/ChangePassword/ChangePassword.html');
+        if (!popupResponse.ok) throw new Error('Popup HTML not found');
+
+        const popupHtml = await popupResponse.text();
+        document.body.insertAdjacentHTML('beforeend', popupHtml);
+        console.log('ChangePassword popup HTML inserted');
+
+        const script = document.createElement('script');
+        script.src = '../assets/js/changePassword.js';
+        script.onload = () => console.log('changePassword.js script loaded');
+        document.body.appendChild(script);
+
+        $('#popup-overlay').fadeIn();
+
+      } catch (error) {
+        console.error('Error loading change password popup:', error);
+      }
+    };
+
+    window.showLoginForm = function () {
+      document.getElementById("operatorChoiceSection").style.display = "none";
+      document.getElementById("loginContainer").style.display = "block";
+    };
 
   });
 </script>

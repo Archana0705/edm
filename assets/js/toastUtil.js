@@ -33,7 +33,7 @@ window.showErrorToast = function (message) {
 };
 
 window.loadToastLayout = function (callback) {
-    fetch('../assets/partials/toastLayout.html')
+    fetch('./assets/partials/toastLayout.html')
         .then(response => response.text())
         .then(html => {
             const div = document.createElement('div');

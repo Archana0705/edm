@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html class="no-js  page-89 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Ticket Received Form</title>
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #t_Body_nav {
+      width: 100% !important;
+    }
+  </style>
+</head>
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form role="none">
+    <header class="t-Header" id="t_Header" role="banner">
+
+      <div class="t-Header-branding">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+          <P class="t-Header-logo-link">TNEGA</P>
+
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div id="globalHeader"></div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav"></div>
+    </header>
+    <div class="t-Body">
+      <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+        <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
+          id="t_TreeNav" data-id="89_tree" aria-label="Main Navigation">
+          <ul id="commonMenuContainer"></ul>
+        </div>
+      </div>
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"></div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent"></div>
+            <div class="t-Body-contentInner">
+              <div class="container">
+                <div class="row ">
+                  <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                  <div class="col col-10  ">
+                    <div id="R94647301833475455" class=""><input type="hidden" name="P89_REQUEST_NUMBER"
+                        id="P89_REQUEST_NUMBER" value="HDINS&#x2F;2025-01-22&#x2F;1163"><input type="hidden"
+                        name="P89_REQUEST_CREATED_DTTM" id="P89_REQUEST_CREATED_DTTM" value="22-01-2025 02:56 PM"><input
+                        type="hidden" name="P89_REQUESTED_BY" id="P89_REQUESTED_BY"
+                        value="General Helpdesk Operator"><input type="hidden" name="P89_ASSIGNED_TO"
+                        id="P89_ASSIGNED_TO" value="eDistrict Manager 1"><input type="hidden" name="P89_EDM_ID"
+                        id="P89_EDM_ID" value="EDM0366">
+                      <div class="container">
+                        <div class="row ">
+                          <div class="col col-6 apex-col-auto col-start">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                              id="P89_INSTRUCTION_TYPE_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P89_INSTRUCTION_TYPE" id="P89_INSTRUCTION_TYPE_LABEL"
+                                  class="t-Form-label">Instruction Type</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-4">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P89_INSTRUCTION_TYPE"
+                                    name="P89_INSTRUCTION_TYPE" value="Others"><input type="hidden"
+                                    data-for="P89_INSTRUCTION_TYPE"
+                                    value="SsT6cR7txhc30-fK194HblHZt9YwsQI48xTHegsrKx2qAgU4i2t1WeNULKEGgQwMS7IoQA30NByXr8Y-_2Rmcg"><span
+                                    id="P89_INSTRUCTION_TYPE_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true">Others</span></div><span
+                                  id="P89_INSTRUCTION_TYPE_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div><input type="hidden" name="P89_PRIORITY" id="P89_PRIORITY" value="">
+                          </div>
+                          <div class="col col-6 apex-col-auto col-end">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                              id="P89_SHORT_DESCRIPTION_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P89_SHORT_DESCRIPTION" id="P89_SHORT_DESCRIPTION_LABEL"
+                                  class="t-Form-label">Short Description</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-4">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P89_SHORT_DESCRIPTION"
+                                    name="P89_SHORT_DESCRIPTION" value="TEMPORARY LOCKED ID."><input type="hidden"
+                                    data-for="P89_SHORT_DESCRIPTION"
+                                    value="QiDkIoxhumv_H1JWzQL_uhUd6G99kanRGfVQz4d8_5tPOgidQKxXKvB6marGtgWHL6HfE9fhistlgUybyJp9aQ"><span
+                                    id="P89_SHORT_DESCRIPTION_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true">TEMPORARY LOCKED ID.</span></div><span
+                                  id="P89_SHORT_DESCRIPTION_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-6 apex-col-auto col-start">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                              id="P89_FULL_DESCRIPTION_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P89_FULL_DESCRIPTION" id="P89_FULL_DESCRIPTION_LABEL"
+                                  class="t-Form-label">Full Description</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-4">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P89_FULL_DESCRIPTION"
+                                    name="P89_FULL_DESCRIPTION" value="pudugaimohan@gmail.com
+Sujitha Siva
+9443309164
+Temporary Locked
+
+Dear Sir,
+My operator id(TNEFACPT0605-01) is locked due to 0 transaction, but i was unable to do any transaction all the time,in the portal and through CSCportal, CSC portal also linked to some other&#x27;s account and unable to make transaction,all the menus are not accessible ,i have recharged and tried but it was not working,Called helpdesk, they said some technical issue is going on,will confirm once its resolved.can you pls make the account accessible,unable to take the screenshot since its locked.
+
+Thanks,"><input type="hidden" data-for="P89_FULL_DESCRIPTION"
+                                    value="VwnLgf78EhBssR46mVASUZK4ftwTgU5_w3tfWvFw4PcV6XAyx6xs2KwN9XirRhw3yxNzpdKy-wF3hRqBJz-xEg"><span
+                                    id="P89_FULL_DESCRIPTION_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true">pudugaimohan@gmail.com<br />Sujitha
+                                    Siva<br />9443309164<br />Temporary Locked<br /><br />Dear Sir,<br />My operator
+                                    id(TNEFACPT0605-01) is locked due to 0 transaction, but i was unable to do any
+                                    transaction all the time,in the portal and through CSCportal, CSC portal also linked
+                                    to some other&#x27;s account and unable to make transaction,all the menus are not
+                                    accessible ,i have recharged and tried but it was not working,Called helpdesk, they
+                                    said some technical issue is going on,will confirm once its resolved.can you pls
+                                    make the account accessible,unable to take the screenshot since its
+                                    locked.<br /><br />Thanks,</span></div><span
+                                  id="P89_FULL_DESCRIPTION_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-6 apex-col-auto col-end">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                              id="P89_DISTRICT_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P89_DISTRICT" id="P89_DISTRICT_LABEL" class="t-Form-label">District</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-4">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P89_DISTRICT"
+                                    name="P89_DISTRICT" value="Chengalpattu"><input type="hidden"
+                                    data-for="P89_DISTRICT"
+                                    value="1-Mpg7oMeNRk9Ek03s_nuMq8VA44z8AsSpC9Z7TrttFUDqJgl9-Tih5J6w29zwYK8PXMEUefo3lcQ0KhFI2E8w"><span
+                                    id="P89_DISTRICT_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true">Chengalpattu</span></div><span
+                                  id="P89_DISTRICT_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-6 apex-col-auto col-start">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--display-only"
+                              id="P89_EDM_NOTES_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P89_EDM_NOTES" id="P89_EDM_NOTES_LABEL" class="t-Form-label">Helpdesk
+                                  Notes</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-4">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P89_EDM_NOTES"
+                                    name="P89_EDM_NOTES" value=""><input type="hidden" data-for="P89_EDM_NOTES"
+                                    value="KtT87Pku1MCR_ZOpmpiJWWAAIIZMlo1xsLsn_ifEZrVe_lzn960m9XJ2GslqH-9fuZi_t1QU9fdgV5NgNNrQkw"><span
+                                    id="P89_EDM_NOTES_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true"></span></div><span id="P89_EDM_NOTES_error_placeholder"
+                                  class="a-Form-error" data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-6 apex-col-auto col-end">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--textarea"
+                              id="P89_EDM_NOTES_1_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P89_EDM_NOTES_1" id="P89_EDM_NOTES_1_LABEL" class="t-Form-label">Edm
+                                  Notes</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-4">
+                                <div class="t-Form-itemWrapper">
+                                  <div class="apex-item-group apex-item-group--textarea"><textarea
+                                      name="P89_EDM_NOTES_1" rows="5" cols="30" maxlength="1000" id="P89_EDM_NOTES_1"
+                                      class="textarea&#x20;apex-item-textarea"
+                                      data-resizable="true">NIL Transaction 2023  - user requested to activate the  zero transaction IDs, Kindly check and share the inspection report.</textarea>
+                                  </div>
+                                </div><span id="P89_EDM_NOTES_1_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div><input type="hidden" name="P89_STATUS" id="P89_STATUS" value="Y"><input type="hidden"
+                              name="P89_CREATED_BY" id="P89_CREATED_BY" value="EDM0801"><input type="hidden"
+                              name="P89_CREATED_DTTM" id="P89_CREATED_DTTM" value="1&#x2F;22&#x2F;2025"><input
+                              type="hidden" name="P89_UPDATED_BY" id="P89_UPDATED_BY" value="EDM0182"><input
+                              type="hidden" name="P89_UPDATED_DTTM" id="P89_UPDATED_DTTM"
+                              value="3&#x2F;5&#x2F;2025"><input type="hidden" name="P89_REQUEST_STATUS"
+                              id="P89_REQUEST_STATUS" value="Assisned to Edm">
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-12 apex-col-auto col-start col-end">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--file"
+                              id="P89_EDM_UPLOAD_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P89_EDM_UPLOAD" id="P89_EDM_UPLOAD_LABEL" class="t-Form-label">Edm
+                                  Attachment</label>
+                              </div>
+
+                              <div class="t-Form-inputContainer col col-6" id="P7_UPLOAD_DROPZONE">
+                                <div class="t-Form-itemWrapper">
+                                  <!-- <label for="P7_UPLOAD_DROPZONE_input">Upload File (PDF/JPG/JPEG, Max 2MB):</label> -->
+                                  <input type="file" id="P7_UPLOAD_DROPZONE_input" accept=".pdf,.jpg,.jpeg" multiple />
+                                  <span id="P7_UPLOAD_DROPZONE_input_error_placeholder" class="a-Form-error"></span>
+                                </div>
+
+                                <div id="edm_file_preview_container" class="mt-2"></div>
+
+                              </div>
+                            </div><input type="hidden" name="P89_EDM_FILE_NAME" id="P89_EDM_FILE_NAME" value=""><input
+                              type="hidden" name="P89_EDM_MIME_TYPE" id="P89_EDM_MIME_TYPE" value=""><input
+                              type="hidden" name="P89_EDM_LAST_UPDATE" id="P89_EDM_LAST_UPDATE" value=""><input
+                              type="hidden" name="P89_EDM_CHARSET" id="P89_EDM_CHARSET" value=""><input type="hidden"
+                              name="P89_PRODUCT_RATING" id="P89_PRODUCT_RATING" value=""><input type="hidden"
+                              name="P89_SHORT" id="P89_SHORT" value=""><input type="hidden" name="P89_EDM_SEC_COMMENTS"
+                              id="P89_EDM_SEC_COMMENTS" value=""><input type="hidden" name="P89_ASSIGN_TO_1"
+                              id="P89_ASSIGN_TO_1" value="eDistrict Manager 1">
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                          <div class="col col-2  "><button
+                              class="t-Button t-Button--icon js-ignoreChange t-Button--large t-Button--warning t-Button--iconLeft t-Button--hot"
+                              type="button" id="cancelBtn"><span
+                                class="t-Icon t-Icon--left fa fa-ban fa-anim-flash">Cancel</span></button>
+                          </div>
+                          <div class="col col-6  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                          <div class="col col-2  ">
+                            <button id="applyBtn"
+                              class="t-Button t-Button--icon t-Button--large t-Button--success t-Button--iconLeft t-Button--hot">Apply
+                              Changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer class="t-Footer" id="t_Footer" role="contentinfo">
+            <div class="t-Footer-body">
+              <div class="t-Footer-content"></div>
+              <div class="t-Footer-apex">
+                <div class="t-Footer-version"> </div>
+                <div class="t-Footer-customize"></div>
+
+              </div>
+            </div>
+            <div class="t-Footer-top">
+              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
+      value="&#x5B;&#x7B;&#x22;r&#x22;&#x3A;&#x22;94647301833475455&#x22;,&#x22;c&#x22;&#x3A;&#x22;kDbk6PWzJ0VR5q90iF5zRoTriFqDx4U3fB5ZqPDc8NATN-3nkSDSWDv-RKsR6a0TiIgJVPe1oWKf8vrSPr5NnQ&#x22;&#x7D;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="UDg5X0lOU1RSVUNUSU9OX1RZUEU6UDg5X1NIT1JUX0RFU0NSSVBUSU9OOlA4OV9G.,VUxMX0RFU0NSSVBUSU9OOlA4OV9ESVNUUklDVDpQODlfRURNX05PVEVT&#x2F;7WxlrbHEfrhVp28f9gQyFyzxfFilbxStQeLajy1u5gHL3wLm_8L0Xno7Icnvx3lCQX1aJtuMjlHpZT_4-6Zl1Q" />
+  </form>
+
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/toastUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
+  <script src="../assets/js/singleFileUpload.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
+
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+  </script>
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+  <script type="module">
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+    import { processFile, checkFile, renderFileList } from '../assets/js/singleFileUpload.js';
+
+    $(document).ready(function () {
+      debugger
+
+      var userId = localStorage.getItem('userId');
+      const langSwitch = 'en';
+      const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      let details = '';
+      let status = '';
+      const urlParams = new URLSearchParams(window.location.search);
+      const encodedDetails = urlParams.get('details');
+      const encodedStatus = urlParams.get('status');
+      const decodedDetails = atob(encodedDetails);
+      const decodedStatus = atob(encodedStatus);
+
+      console.log(decodedStatus, "decoded status");
+
+      // $('#P8_REQUEST_NUMBER_DISPLAY').val(decodedDetails); 
+      $('#P16_REQUEST_NUMBER_DISPLAY').text(decodedDetails);
+
+      const payload = {
+        action: "function_call",
+        function_name: "hd_edm_service_assaign_form_fn",
+        params: {
+          p_request_no: decodedDetails
+        }
+      };
+
+      //check
+      // const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+      let edmAttachmentBase64 = "";
+      let edmFileName = "";
+      let edmMimeType = "";
+      let uploadedFile = null;
+
+
+
+      $.ajax({
+        url: apiUrl,
+        method: "POST",
+        headers: {
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
+        },
+        data: {
+          data: encryptData(payload)
+        },
+        dataType: 'json',
+        cache: false,
+        success: function (response) {
+          console.log("Raw API response:", response); // Log raw response
+
+          try {
+            if (response && response.data) {
+              console.log("Encrypted data received:", response.data);
+              var decryptedResponse = decryptData(response.data);
+              console.log(response);
+
+              if (!Array.isArray(decryptedResponse) || decryptedResponse.length === 0) {
+                throw new Error("Invalid decrypted data format");
+              }
+
+              const decrypted = decryptedResponse[0];
+              console.log("Decrypted user data:", decrypted);
+
+
+              $('#P89_INSTRUCTION_TYPE_DISPLAY').text(decrypted.instruction_type);
+              $('#P89_FULL_DESCRIPTION_DISPLAY').text(decrypted.full_description);
+              $('#P89_EDM_NOTES_1').text(decrypted.edm_notes);
+              $('#P89_SHORT_DESCRIPTION_DISPLAY').text(decrypted.short_description);
+              $('#P89_DISTRICT_DISPLAY').text(decrypted.district);
+              // if (decrypted.attachment && decrypted.mime_type && decrypted.file_name) {
+              //   const base64Data = decrypted.attachment;
+              //   const mimeType = decrypted.mime_type;
+              //   const fileName = decrypted.file_name;
+              //   const fileSrc = `data:${mimeType};base64,${base64Data}`;
+              //   const fileLink = `<a href="${fileSrc}" target="_blank" rel="noopener" download="${fileName}">${fileName}</a>`;
+
+              //   $('#edm_file_preview_container').html(fileLink);
+              // }
+
+              if (decrypted.attachment && decrypted.mime_type && decrypted.file_name) {
+                edmAttachmentBase64 = decrypted.attachment;
+                edmMimeType = decrypted.mime_type;
+                edmFileName = decrypted.file_name;
+
+                const fileSrc = `data:${edmMimeType};base64,${edmAttachmentBase64}`;
+                const fileLink = `<a href="${fileSrc}" target="_blank" rel="noopener" download="${edmFileName}">${edmFileName}</a>`;
+                $('#edm_file_preview_container').html(fileLink);
+              }
+
+            } else {
+              console.error("Invalid response structure - missing data field");
+            }
+          } catch (error) {
+            console.error("Error processing response:", error);
+          }
+        },
+        error: function (xhr, status, error) {
+          console.error("API call failed:", {
+            status: xhr.status,
+            statusText: xhr.statusText,
+            responseText: xhr.responseText,
+            error: error
+          });
+        }
+      });
+
+      $('#P7_UPLOAD_DROPZONE_input').on('change', function (e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            const base64Content = event.target.result.split(',')[1];
+            uploadedFile = {
+              fileBase64: base64Content,
+              filename: file.name,
+              fileType: file.type
+            };
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      $('#applyBtn').on('click', async function (event) {
+        event.preventDefault();
+
+        let finalAttachment = edmAttachmentBase64;
+        let finalMimeType = edmMimeType;
+        let finalFileName = edmFileName;
+
+        // Only check for new file if user selected one
+        const fileInput = document.getElementById('P7_UPLOAD_DROPZONE_input');
+        if (fileInput && fileInput.files.length > 0) {
+          const file = fileInput.files[0];
+
+          const base64 = await readFileAsBase64(file);
+          finalAttachment = base64;
+          finalMimeType = file.type;
+          finalFileName = file.name;
+        }
+
+        const edm_notes = $('#P89_EDM_NOTES_1').val();
+
+        const updatePayload = {
+          action: "update",
+          table: "HD_EDM_SERVICE_ASSAIGN_TB",
+          primary_key: "REQUEST_NUMBER",
+          REQUEST_NUMBER: decodedDetails,
+          EDM_NOTES: edm_notes,
+          edm_upload: finalAttachment,
+          attach_mimetype: finalFileName,
+          attach_filename: finalMimeType
+        };
+
+        console.log("Sending:", updatePayload);
+
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+          type: 'POST',
+          data: { data: encryptData(updatePayload) },
+          success: function () {
+            showSuccessToast("Changes applied successfully.");
+          },
+          error: function () {
+            showErrorToast("Update failed.");
+          }
+        });
+      });
+
+      function readFileAsBase64(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const base64 = reader.result.split(',')[1];
+            resolve(base64);
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+
+      $('#submitFeedbackBtn').on('click', function (event) {
+        event.preventDefault();
+
+        const rating = $('#rating').val();
+        const comments = $('#comments').val();
+
+        if (!rating || !comments.trim()) {
+          alert("Please provide both rating and comments.");
+          return;
+        }
+
+        const updatePayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          request_status: 'Closed'
+        };
+
+        const feedbackPayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_COMMENTS_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          rating: rating,
+          comments: comments.trim()
+        };
+
+        // First API call
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+          type: 'POST',
+          data: { data: encryptData(updatePayload) },
+          success: function (response) {
+            // Second API call
+            $.ajax({
+              url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+              type: 'POST',
+              data: { data: encryptData(feedbackPayload) },
+              success: function (feedbackResponse) {
+                showSuccessToast("Feedback submitted and request closed successfully.");
+                setTimeout(() => {
+                  window.location.href = "closed-request.html";
+                }, 1000);
+              },
+              error: function (error) {
+                showErrorToast("Request closed, but feedback submission failed.");
+              }
+            });
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during request status update.");
+          }
+        });
+
+        console.log("Rating:", rating);
+        console.log("Comments:", comments);
+
+        const feedbackModal = bootstrap.Modal.getInstance(document.getElementById('feedbackModal'));
+        feedbackModal.hide();
+      });
+
+
+      $('#reOpenBtn').on('click', function (event) {
+
+        const updatePayload = {
+          action: "update",
+          table: "EDM_SERVICE_REQUEST_T",
+          primary_key: "request_number",
+          request_number: decodedDetails,
+          request_status: 'Reopen'
+        };
+
+
+        // First API call: update status
+        $.ajax({
+          url: 'https://tngis.tnega.org/lcap_api/edm/v1/commonApi',
+          type: 'POST',
+          data: { data: encryptData(updatePayload) },
+          success: function (response) {
+
+            showSuccessToast("ReOpened successfully.");
+            setTimeout(() => {
+              window.location.href = "re-opened-request.html";
+            }, 10000)
+
+          },
+          error: function (error) {
+            showErrorToast("An error occurred during request status update.");
+          }
+        });
+      });
+
+      $('#cancelBtn').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        // setTimeout(() => {
+        //   window.location.href = "re-opened-request.html";
+        // }, 10000)
+        window.location.href = 'helpdesk-report.html';
+      });
+    })
+
+
+
+  </script>
+
+
+</body>
+
+</html>

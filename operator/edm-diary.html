@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html class="no-js  page-1 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <title>E - District Manager Portal</title>
+    <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+    <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        #t_Body_nav {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body
+    class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
+    id="t_PageBody">
+    <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+    <form>
+        <header class="t-Header" id="t_Header" role="banner">
+
+            <div class="t-Header-branding">
+                <div class="t-Header-controls">
+                    <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree"
+                        aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl"
+                        type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+                </div>
+                <div class="t-Header-logo">
+                    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+                    <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=116639350395160" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+                    <P class="t-Header-logo-link">TNEGA</P>
+
+                </div>
+                <div class="t-Header-navBar">
+                    <div class="t-Header-navBar--start"></div>
+                    <div id="globalHeader"></div>
+                    <div class="t-Header-navBar--end"></div>
+                </div>
+            </div>
+            <div class="t-Header-nav"></div>
+        </header>
+        <div class="t-Body">
+            <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+                <div class="a-TreeView t-TreeNav js-defaultCollapsed t-TreeNav--styleA js-navCollapsed--hidden"
+                    id="t_TreeNav" data-id="77_tree" aria-label="Main Navigation">
+                    <ul id="commonMenuContainer"></ul>
+                </div>
+            </div>
+            <div class="t-Body-main">
+                <div class="t-Body-title" id="t_Body_title"></div>
+                <div class="t-Body-content" id="t_Body_content">
+                    <main id="main" class="t-Body-mainContent">
+                        <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+                            class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+                            data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+                        <div class="t-Body-fullContent"></div>
+                        <div class="t-Body-contentInner">
+                            <div class="container">
+                                <div class="row ">
+                                    <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                                    <div class="col col-10  ">
+                                        <div class="t-Region t-Region--removeHeader js-removeLandmark t-Region--scrollBody"
+                                            id="R18821557568346906" role="region" aria-label="Notification">
+                                            <div class="t-Region-header">
+                                                <div class="t-Region-headerItems t-Region-headerItems--title">
+                                                    <span class="t-Region-headerIcon"><span class="t-Icon "
+                                                            aria-hidden="true"></span></span>
+                                                    <h2 class="t-Region-title" id="R18821557568346906_heading"
+                                                        data-apex-heading>Notification</h2>
+                                                </div>
+                                                <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
+                                                        class="js-maximizeButtonContainer"></span></div>
+                                            </div>
+                                            <div class="t-Region-bodyWrap">
+                                                <div class="t-Region-buttons t-Region-buttons--top">
+                                                    <div class="t-Region-buttons-left"></div>
+                                                    <div class="t-Region-buttons-right"></div>
+                                                </div>
+                                                <div class="t-Region-body bg-white-cls">
+                                                    <div class="t-Region-orderBy"></div>
+                                                    <html>
+
+                                                    <head>
+                                                        <title>HTML marquee Tag</title>
+                                                    </head>
+
+                                                    <body>
+                                                        <marquee onmouseover="this.stop()" onmouseleave="this.start()">
+                                                            <h4 class="note_color">Note : At least 10 inspections need
+                                                                to be completed in a week.</h4>
+                                                        </marquee>
+                                                    </body>
+
+                                                    </html>
+
+                                                </div>
+                                                <div class="t-Region-buttons t-Region-buttons--bottom">
+                                                    <div class="t-Region-buttons-left"></div>
+                                                    <div class="t-Region-buttons-right"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                                    <div class="col col-10  ">
+                                        <div class="t-Region t-Region--scrollBody" id="R15051746631936616" role="region"
+                                            aria-label="Time&#x20;Sheet&#x20;Entry&#x20;Form">
+                                            <div class="t-Region-header">
+                                                <div class="t-Region-headerItems t-Region-headerItems--title">
+                                                    <span class="t-Region-headerIcon"><span class="t-Icon "
+                                                            aria-hidden="true"></span></span>
+                                                    <h2 class="t-Region-title" id="R15051746631936616_heading"
+                                                        data-apex-heading>Time Sheet Entry
+                                                        Form</h2>
+                                                </div>
+                                                <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
+                                                        class="js-maximizeButtonContainer"></span></div>
+                                            </div>
+                                            <div class="t-Region-bodyWrap">
+                                                <div class="t-Region-buttons t-Region-buttons--top">
+                                                    <div class="t-Region-buttons-left"></div>
+                                                    <div class="t-Region-buttons-right"></div>
+                                                </div>
+                                                <div class="t-Region-body">
+                                                    <div class="t-Region-orderBy"></div>
+                                                    <input type="hidden" name="P77_TS_NO" id="P77_TS_NO" value=""><input
+                                                        type="hidden" name="P77_TS_EDM_ID" id="P77_TS_EDM_ID" value="">
+                                                    <div class="container">
+                                                        <div class="row ">
+                                                            <div class="col col-2  col-start"><span
+                                                                    class="apex-grid-nbsp">&nbsp;</span></div>
+                                                            <div class="col col-3 apex-col-auto ">
+                                                                <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--date-picker-apex apex-item-wrapper--date-picker-apex-popup"
+                                                                    id="P77_TS_DATE_CONTAINER">
+                                                                    <div class="t-Form-labelContainer">
+                                                                        <label for="P77_TS_DATE" id="P77_TS_DATE_LABEL"
+                                                                            class="t-Form-label">Date</label>
+                                                                    </div>
+                                                                    <div class="t-Form-inputContainer">
+                                                                        <div class="t-Form-itemWrapper"> <input
+                                                                                type="date" id="P53_COURT_FILE_DATE"
+                                                                                name="P53_COURT_FILE_DATE" required />
+                                                                        </div><span id="P77_TS_DATE_error_placeholder"
+                                                                            class="a-Form-error"
+                                                                            data-template-id="8676716703964195_ET"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-3 apex-col-auto ">
+                                                                <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--select-list"
+                                                                    id="P77_TS_ACTIVITY_    CONTAINER">
+                                                                    <div class="t-Form-labelContainer">
+                                                                        <label for="P77_TS_ACTIVITY"
+                                                                            id="P77_TS_ACTIVITY_LABEL"
+                                                                            class="t-Form-label">Task</label>
+                                                                    </div>
+                                                                    <div class="t-Form-inputContainer">
+                                                                        <div class="t-Form-itemWrapper"><select
+                                                                                id="P77_TS_ACTIVITY"
+                                                                                name="P77_TS_ACTIVITY" required
+                                                                                class="selectlist&#x20;apex-item-select"
+                                                                                data-native-menu="false" size="1">
+                                                                                <option value="" selected="selected">
+                                                                                    Select Activity</option>
+                                                                                <option value="E-office">E-office
+                                                                                </option>
+                                                                                <option value="Field&#x20;Visit">Field
+                                                                                    Visit</option>
+                                                                                <option value="Inspection">Inspection
+                                                                                </option>
+                                                                                <option value="Meeting">Meeting</option>
+                                                                                <option value="Others">Others</option>
+                                                                                <option value="Reporting">Reporting
+                                                                                </option>
+                                                                            </select></div><span
+                                                                            id="P77_TS_ACTIVITY_error_placeholder"
+                                                                            class="a-Form-error"
+                                                                            data-template-id="8676716703964195_ET"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-1 apex-col-auto ">
+                                                                <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--select-list"
+                                                                    id="P77_TS_HRS_CONTAINER">
+                                                                    <div class="t-Form-labelContainer">
+                                                                        <label for="P77_TS_HRS" id="P77_TS_HRS_LABEL"
+                                                                            class="t-Form-label">Time Spend
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="t-Form-inputContainer">
+                                                                        <div class="t-Form-itemWrapper"><select
+                                                                                id="P77_TS_HRS" name="P77_TS_HRS"
+                                                                                class="selectlist&#x20;apex-item-select"
+                                                                                data-native-menu="false" size="1">
+                                                                                <option value="" selected="selected">Hrs
+                                                                                </option>
+                                                                                <option value="00">00</option>
+                                                                                <option value="01">01</option>
+                                                                                <option value="02">02</option>
+                                                                                <option value="03">03</option>
+                                                                                <option value="04">04</option>
+                                                                                <option value="05">05</option>
+                                                                                <option value="06">06</option>
+                                                                                <option value="07">07</option>
+                                                                                <option value="08">08</option>
+                                                                                <option value="09">09</option>
+                                                                                <option value="10">10</option>
+                                                                                <option value="11">11</option>
+                                                                                <option value="12">12</option>
+                                                                            </select></div><span
+                                                                            id="P77_TS_HRS_error_placeholder"
+                                                                            class="a-Form-error"
+                                                                            data-template-id="8676716703964195_ET"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-3 apex-col-auto col-end">
+                                                                <div class="t-Form-fieldContainer t-Form-fieldContainer--stacked  apex-item-wrapper apex-item-wrapper--select-list"
+                                                                    id="P77_TS_MINS_CONTAINER">
+                                                                    <div class="t-Form-labelContainer">
+                                                                        <label for="P77_TS_MINS" id="P77_TS_MINS_LABEL"
+                                                                            class="t-Form-label"></label>
+                                                                    </div>
+                                                                    <div class="t-Form-inputContainer">
+                                                                        <div class="t-Form-itemWrapper"><select
+                                                                                id="P77_TS_MINS" name="P77_TS_MINS"
+                                                                                class="selectlist&#x20;apex-item-select"
+                                                                                data-native-menu="false" size="1">
+                                                                                <option value="" selected="selected">
+                                                                                    Mins</option>
+                                                                                <option value="00">00</option>
+                                                                                <option value="05">05</option>
+                                                                                <option value="10">10</option>
+                                                                                <option value="15">15</option>
+                                                                                <option value="20">20</option>
+                                                                                <option value="25">25</option>
+                                                                                <option value="30">30</option>
+                                                                                <option value="35">35</option>
+                                                                                <option value="40">40</option>
+                                                                                <option value="45">45</option>
+                                                                                <option value="50">50</option>
+                                                                                <option value="55">55</option>
+                                                                            </select></div><span
+                                                                            id="P77_TS_MINS_error_placeholder"
+                                                                            class="a-Form-error"
+                                                                            data-template-id="8676716703964195_ET"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row ">
+                                                            <div class="col col-6 apex-col-auto col-start">
+                                                                <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--textarea"
+                                                                    id="P77_TS_NOTES_CONTAINER">
+                                                                    <div class="t-Form-labelContainer col col-2">
+                                                                        <label for="P77_TS_NOTES"
+                                                                            id="P77_TS_NOTES_LABEL"
+                                                                            class="t-Form-label">Description
+                                                                            Notes</label>
+                                                                    </div>
+                                                                    <div class="t-Form-inputContainer col col-4">
+                                                                        <div class="t-Form-itemWrapper">
+                                                                            <div
+                                                                                class="apex-item-group apex-item-group--textarea">
+                                                                                <textarea name="P77_TS_NOTES" rows="5"
+                                                                                    cols="60" maxlength="4000"
+                                                                                    id="P77_TS_NOTES" required
+                                                                                    class="textarea&#x20;apex-item-textarea"
+                                                                                    data-resizable="true"></textarea>
+                                                                            </div>
+                                                                        </div><span id="P77_TS_NOTES_error_placeholder"
+                                                                            class="a-Form-error"
+                                                                            data-template-id="8676686131964195_ET"></span>
+                                                                    </div>
+                                                                </div><input type="hidden" name="P77_TS_STATUS"
+                                                                    id="P77_TS_STATUS" value=""><input type="hidden"
+                                                                    name="P77_TS_CREATED_DATE" id="P77_TS_CREATED_DATE"
+                                                                    value=""><input type="hidden"
+                                                                    name="P77_TS_CREATED_BY" id="P77_TS_CREATED_BY"
+                                                                    value=""><input type="hidden"
+                                                                    name="P77_TS_UPDATE_DATE" id="P77_TS_UPDATE_DATE"
+                                                                    value=""><input type="hidden"
+                                                                    name="P77_TS_UPDATED_BY" id="P77_TS_UPDATED_BY"
+                                                                    value=""><input type="hidden"
+                                                                    name="P77_TS_CURRENT_USER" id="P77_TS_CURRENT_USER"
+                                                                    value=""><input type="hidden" name="P77_TS_ID"
+                                                                    id="P77_TS_ID" value=""><input type="hidden"
+                                                                    name="P77_S_ID" id="P77_S_ID" value="">
+                                                            </div>
+                                                            <div class="col col-6 apex-col-auto col-end">
+                                                                <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--text-field"
+                                                                    id="P77_TOTAL_WORKING_HRS_CONTAINER">
+                                                                    <div class="t-Form-labelContainer col col-2">
+                                                                        <label for="P77_TOTAL_WORKING_HRS"
+                                                                            id="P77_TOTAL_WORKING_HRS_LABEL"
+                                                                            class="t-Form-label">Total Working
+                                                                            Hrs</label>
+                                                                    </div>
+                                                                    <div class="t-Form-inputContainer col col-4">
+                                                                        <div class="t-Form-itemWrapper"><input
+                                                                                type="text" id="P77_TOTAL_WORKING_HRS"
+                                                                                name="P77_TOTAL_WORKING_HRS"
+                                                                                class="text_field&#x20;apex-item-text"
+                                                                                value="" size="30" maxlength="500"
+                                                                                data-enter-submit="false"
+                                                                                data-is-page-item-type="true" /></div>
+                                                                        <span
+                                                                            id="P77_TOTAL_WORKING_HRS_error_placeholder"
+                                                                            class="a-Form-error"
+                                                                            data-template-id="8676686131964195_ET"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="inspectionDetails" style="display: none;">
+                                                            <div class="row ">
+                                                                <div class="col col-4 apex-col-auto col-start col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P92_PHOTO_ATTACHMENT_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P92_PHOTO_ATTACHMENT"
+                                                                                id="P92_PHOTO_ATTACHMENT_LABEL"
+                                                                                class="t-Form-label">Inspection
+                                                                                Report</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="P7_UPLOAD_DROPZONE">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="P7_UPLOAD_DROPZONE_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="P7_UPLOAD_DROPZONE_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col col-4 apex-col-auto col-start col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P92_PHOTO_ATTACHMENT_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P92_PHOTO_ATTACHMENT"
+                                                                                id="P92_PHOTO_ATTACHMENT_LABEL"
+                                                                                class="t-Form-label">Rate Card Image
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="P7_UPLOAD_DROPZONE">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="P7_RATE_CARD_IMAGE"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="P7_RATE_CARD_IMAGE_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row ">
+                                                                <div class="col col-4 apex-col-auto col-start">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P77_IMAGE_ATTACHMENT2_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P77_IMAGE_ATTACHMENT2"
+                                                                                id="P77_IMAGE_ATTACHMENT2_LABEL"
+                                                                                class="t-Form-label">Inspection Image
+                                                                                1</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="INSPECTION_INPUT1">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="INSPECTION_INPUT1_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="INSPECTION_INPUT1_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col col-4 apex-col-auto ">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P77_IMAGE_ATTACHMENT3_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P77_IMAGE_ATTACHMENT3"
+                                                                                id="P77_IMAGE_ATTACHMENT3_LABEL"
+                                                                                class="t-Form-label">Inspection Image
+                                                                                2</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="INSPECTION_INPUT2">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="INSPECTION_INPUT2_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="INSPECTION_INPUT2_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col col-4 apex-col-auto col-end">
+                                                                    <div class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--file"
+                                                                        id="P77_IMAGE_ATTACHMENT4_CONTAINER">
+                                                                        <div class="t-Form-labelContainer col col-2">
+                                                                            <label for="P77_IMAGE_ATTACHMENT4"
+                                                                                id="P77_IMAGE_ATTACHMENT4_LABEL"
+                                                                                class="t-Form-label">Inspection Image
+                                                                                3</label>
+                                                                        </div>
+                                                                        <div class="t-Form-inputContainer col col-6"
+                                                                            id="INSPECTION_INPUT3">
+                                                                            <div class="t-Form-itemWrapper">
+                                                                                <!-- <label
+                                                                                    for="P7_UPLOAD_DROPZONE_input">Upload
+                                                                                    File (PDF/JPG/JPEG, Max
+                                                                                    2MB):</label> -->
+                                                                                <input type="file"
+                                                                                    id="INSPECTION_INPUT3_input"
+                                                                                    accept=".pdf,.jpg,.jpeg" multiple />
+                                                                                <span
+                                                                                    id="INSPECTION_INPUT3_input_error_placeholder"
+                                                                                    class="a-Form-error"
+                                                                                    style="color:red; display:block; margin-top:5px;"></span>
+                                                                            </div>
+
+                                                                            <div id="filePreviewList"
+                                                                                style="margin-top: 10px;"></div>
+
+                                                                        </div>
+                                                                    </div><input type="hidden" name="P77_FILE_NAME4"
+                                                                        id="P77_FILE_NAME4" value=""><input
+                                                                        type="hidden" data-for="P77_FILE_NAME4"
+                                                                        value="vAgI_UKYhGeFld0vPlB9dofA7FPQW5Gh8J4vp6tcBkdCYUnUwSw5vaTe7_qRxxLeprHo10olI57iHjXzDWIY5Q"><input
+                                                                        type="hidden" name="P77_MIME_TYPE4"
+                                                                        id="P77_MIME_TYPE4" value=""><input
+                                                                        type="hidden" data-for="P77_MIME_TYPE4"
+                                                                        value="k9nyq1QbdFDZFJW7N5yu_jFbToCG9XdlFte2RP_BmkU8090x3uRK1cln91voU00caeqY_JoYZ1vVu3q2fCOY6w">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mb-5 p-2">
+                                                    <div class="col-6">
+                                                        <button id="cancelBtn" class="exitbtn">Exit</button>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <button id="submitBtn" class="resolvedbtn">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row overflow-class">
+                                    <div class="col col-10  ">
+                                        <div id="DOWNLOAD-BLOB" role="region" aria-label="Report" class="t-IRR-region ">
+                                            <div class="t-Region-orderBy"></div>
+
+                                            <h5 class="mt-4">Submitted Time Sheet Entries</h5>
+                                            <table id="submittedTable" class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Activity</th>
+                                                        <th>Notes</th>
+                                                        <th>Hours</th>
+                                                        <th>Minutes</th>
+                                                        <th>Total Working Hours</th>
+                                                        <th>From Time</th>
+                                                        <th>To Time</th>
+                                                        <th>Inspection Report</th>
+                                                        <th>Inspection Image 1</th>
+                                                        <th>Inspection Image 2</th>
+                                                        <th>Inspection Image 3</th>
+                                                        <th>Inspection Image 4</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Entries will be appended here -->
+                                                </tbody>
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col col-4  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                                    <div class="col col-8 apex-col-auto col-end">
+                                        <div class="t-Form-fieldContainer t-Form-fieldContainer--floatingLabel  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--text-field"
+                                            id="P77_INSPECTION_COUNT_CONTAINER">
+                                            <div class="t-Form-labelContainer">
+                                                <label for="P77_INSPECTION_COUNT" id="P77_INSPECTION_COUNT_LABEL"
+                                                    class="t-Form-label"></label>
+                                            </div>
+                                            <div class="t-Form-inputContainer">
+                                                <div class="t-Form-itemWrapper"><input type="text"
+                                                        id="P77_INSPECTION_COUNT" name="P77_INSPECTION_COUNT"
+                                                        class="text_field&#x20;apex-item-text"
+                                                        value="In this week you have completed 0 Inspections." size="30"
+                                                        data-enter-submit="false" data-is-page-item-type="true" /></div>
+                                                <span id="P77_INSPECTION_COUNT_error_placeholder" class="a-Form-error"
+                                                    data-template-id="8676899378964195_ET"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <footer class="t-Footer" id="t_Footer" role="contentinfo">
+                        <div class="t-Footer-body">
+                            <div class="t-Footer-content"></div>
+                            <div class="t-Footer-apex">
+                                <div class="t-Footer-version"> </div>
+                                <div class="t-Footer-customize"></div>
+
+                            </div>
+                        </div>
+                        <div class="t-Footer-top">
+                            <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                                aria-label="Start of page"><span class="a-Icon icon-up-chevron"
+                                    aria-hidden="true"></span></a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden"
+            id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+        <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+            value="UDFfVElNRV9NU0c6UDFfREFURTpQMV9QQUdFX05P&#x2F;wUxneKWEXXPeYbXpDHumC3HCknl3jwPHXSGb8EGCOYBFGTSafYx4LIyrDXVbB_q1iSfxSniodBm4aS0jsno7fA" />
+    </form>
+
+
+    <!-- jQuery -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/widget.treeView.min.js"></script>
+    <script type="module" src="../assets/js/commonMenu.js"></script>
+    <script src="../assets/js/widget.interactiveReport.min.js"></script>
+    <script src="../assets/js/widget.iconList.min.js"></script>
+    <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+    <script src="../assets/js/widget.stickyWidget.min.js"></script>
+    <script src="../assets/js/item.Colorpicker.min.js"></script>
+    <script src="../assets/js/jetCommonBundle.min.js"></script>
+    <script src="../assets/js/chartBundle.min.js"></script>
+    <script src="../assets/js/toastUtil.js"></script>
+    <script type="module" src="../assets/js/dataTableUtil.js"></script>
+    <script src="../assets/js/crypto-js.min.js"></script>
+    <script src="../assets/js/theme42.min.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/encrypt_decrypt.js"></script>
+    <script src="../assets/js/singleFileUpload.js"></script>
+    <script src="../assets/js/globalHeader.js"></script>
+    <script src="../assets/js/validateField.js"></script>
+    <script src="../assets/vendor/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../assets/js/downloadLink.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+            console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+            $('#pressReleaseTable').DataTable();
+        });
+    </script>
+
+    <script>
+        console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+    </script>
+    <script>
+        $('#t_Button_navControl').on('click', function () {
+            $('#t_Body_nav').toggle();
+        });
+
+    </script>
+
+    <script type="module">
+        import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+        import { processFile, checkFile, renderFileList } from '../assets/js/singleFileUpload.js';
+        import { validateField, validateEmptyFields } from '../assets/js/validateField.js'
+
+        var userId = localStorage.getItem('userId');
+        const langSwitch = 'en';
+        const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+        const secretKey = 'V7gN4dY8pT2xB3kRz';
+        let details = '';
+        let status = '';
+        $('#P77_TOTAL_WORKING_HRS_CONTAINER').hide();
+        function generateAttachmentLinks(row) {
+
+            let html = '';
+            let hasAttachment = false;
+
+            for (let i = 1; i <= 4; i++) {
+                const content = row[`image_attachment${i}`];
+                const mime = row[`mime_type${i}`];
+                const fileName = row[`file_name${i}`];
+
+                if (content && content !== 'null') {
+                    const link = window.createDownloadLink(content, mime, fileName);
+                    html += `<div>Attachment ${i}: ${link}</div>`;
+                    hasAttachment = true;
+                }
+            }
+
+            if (row.inspection_report && row.inspection_report !== 'null') {
+                const link = window.createDownloadLink(row.inspection_report, row.mime_type5, row.file_name5);
+                html += `<div>Inspection Report: ${link}</div>`;
+                hasAttachment = true;
+            }
+
+            // If nothing found
+            if (!hasAttachment) {
+                html = 'N/A';
+            }
+
+            return html;
+        }
+
+        $('#P53_COURT_FILE_DATE').on('change', function () {
+            debugger
+            const selectedDate = $(this).val()?.trim();
+            const userId = localStorage.getItem('userId');
+
+            // Clear table before loading new data
+            $('#submittedTable tbody').empty();
+
+            if (!selectedDate) {
+                // No date selected, do not make API call
+                return;
+            }
+
+            const payload = {
+                action: "function_call",
+                function_name: "time_sheet_details_edmall_fn",
+                params: {
+                    p_edm_id: userId,
+                    p_date: selectedDate
+                }
+            };
+
+            $.ajax({
+                url: apiUrl,
+                method: "POST",
+                headers: {
+                    'X-APP-Key': 'edm',
+                    'X-APP-Name': 'edm'
+                },
+                data: {
+                    data: encryptData(payload)
+                },
+                success: function (response) {
+                    // Assume response.result is an array of objects
+                    const data = decryptData(response.data);
+                    $('#P77_TOTAL_WORKING_HRS_CONTAINER').hide();
+                    $('#P77_TOTAL_WORKING_HRS').val('');
+                    if (data.length === 0) {
+                        $('#submittedTable tbody').append(`<tr><td colspan="9" style="text-align:center">No data found</td></tr>`);
+                        return;
+                    }
+
+                    data.forEach(row => {
+
+                        const attachmentLinks = generateAttachmentLinks(row);
+                        if (row.total_working_hrs && row.total_working_hrs.trim() !== '') {
+                            $('#P77_TOTAL_WORKING_HRS_CONTAINER').show();
+                            $('#P77_TOTAL_WORKING_HRS').val(row.total_working_hrs);
+                        } else {
+                            $('#P77_TOTAL_WORKING_HRS_CONTAINER').hide();
+                            $('#P77_TOTAL_WORKING_HRS').val('');
+                        }
+
+                        const newRow = `
+                    <tr>
+                        <td>${row.ts_date || ''}</td>
+                        <td>${row.ts_activity || ''}</td>
+                        <td>${row.ts_notes || ''}</td>
+                        <td>${row.ts_hrs || ''}</td>
+                        <td>${row.ts_mins || ''}</td>
+                        <td>${row.total_working_hrs || ''}</td>
+                        <td>${row.ts_hrs || ''}</td>
+                        <td>${row.ts_mins || ''}</td>
+                        <td>${attachmentLinks}</td>
+                    </tr>
+                `;
+                        $('#submittedTable tbody').append(newRow);
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error("Fetch failed:", {
+                        status: xhr.status,
+                        responseText: xhr.responseText,
+                        error
+                    });
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            debugger
+
+            var userId = localStorage.getItem('userId');
+            const langSwitch = 'en';
+            const apiUrl = "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction";
+            const secretKey = 'V7gN4dY8pT2xB3kRz';
+            let details = '';
+            let status = '';
+            const urlParams = new URLSearchParams(window.location.search);
+            const encodedDetails = urlParams.get('details');
+            const encodedStatus = urlParams.get('status');
+            const decodedDetails = atob(encodedDetails);
+            const decodedStatus = atob(encodedStatus);
+            console.log(decodedStatus, "decoded status");
+
+            console.log(decodedDetails, "decoded req number");
+            document.getElementById('P77_TS_ACTIVITY').addEventListener('change', function () {
+
+                const selectedValue = this.value;
+                const targetElement = document.getElementById('inspectionDetails');
+
+                if (selectedValue === "Inspection") {
+                    $('#inspectionDetails').show();
+
+                } else {
+                    $('#inspectionDetails').hide();
+                }
+            });
+
+
+            $('#submitBtn').on('click', async function (event) {
+                event.preventDefault();
+                debugger;
+
+                const userId = localStorage.getItem('userId');
+                const tsEdmId = userId;
+                const tsDate = $('#P53_COURT_FILE_DATE').val()?.trim();
+                const activity = $('#P77_TS_ACTIVITY').val()?.trim();
+                const tsHrs = $('#P77_TS_HRS').val()?.trim();
+                const tsMins = $('#P77_TS_MINS').val()?.trim();
+                const tsNotes = $('#P77_TS_NOTES').val()?.trim();
+                const totalWorkingHrs = $('#P77_TOTAL_WORKING_HRS').val()?.trim();
+                const fromTime = $('#P77_TS_HRS').val()?.trim();
+                const toTime = $('#P77_TS_MINS').val()?.trim();
+                const tsId = $('#P77_TS_ID').val()?.trim() || '';
+                const currentUser = localStorage.getItem('userMob');
+
+                let errorMessages = [];
+                if (!tsEdmId) errorMessages.push("EDM ID is required.");
+                if (!tsDate) errorMessages.push("Date is required.");
+                if (!activity) errorMessages.push("Activity is required.");
+                if (!tsHrs || isNaN(tsHrs)) errorMessages.push("Valid Hours are required.");
+                if (!tsMins || isNaN(tsMins)) errorMessages.push("Valid Minutes are required.");
+                if (!tsNotes) errorMessages.push("Notes are required.");
+                if (!fromTime) errorMessages.push("From Time is required.");
+                if (!toTime) errorMessages.push("To Time is required.");
+
+                if (errorMessages.length > 0) {
+                    alert("Please correct the following errors:\n\n" + errorMessages.join("\n"));
+                    return;
+                }
+
+                const imageAttachments = Array(4).fill(null);
+                const fileNames = Array(4).fill(null);
+                const mimeTypes = Array(4).fill(null);
+
+                let inspectionReport = null;
+                let inspectionFileName = null;
+                let inspectionMimeType = null;
+
+                if (activity === "Inspection") {
+                    const fileSelectors = [
+                        '#P7_UPLOAD_DROPZONE_input',
+                        '#P7_RATE_CARD_IMAGE',
+                        '#INSPECTION_INPUT1_input',
+                        '#INSPECTION_INPUT2_input',
+                        '#INSPECTION_INPUT3_input'
+                    ];
+
+                    for (const selector of fileSelectors) {
+                        const files = await processFile(selector);
+                        if (files && files.length > 0) {
+                            const file = files[0];
+
+                            if (selector === '#P7_UPLOAD_DROPZONE_input') {
+                                inspectionReport = file.fileBase64;
+                                inspectionFileName = file.filename;
+                                inspectionMimeType = file.fileType;
+                            } else {
+                                for (let i = 0; i < 4; i++) {
+                                    if (!imageAttachments[i]) {
+                                        imageAttachments[i] = file.fileBase64;
+                                        fileNames[i] = file.filename;
+                                        mimeTypes[i] = file.fileType;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    const hasAttachment = imageAttachments.some(f => f && f.length > 50) || (inspectionReport && inspectionReport.length > 50);
+                    if (!hasAttachment) {
+                        alert("Please upload at least one file for Inspection activity.");
+                        return;
+                    }
+                }
+
+                const params = {};
+                params.p_ts_edm_id = tsEdmId;
+                params.p_ts_date = tsDate;
+                params.p_ts_activity = activity;
+                params.p_ts_notes = tsNotes;
+                params.p_ts_hrs = tsHrs;
+                params.p_ts_mins = tsMins;
+                params.p_user_id = userId;
+                params.p_ts_current_user = currentUser;
+                params.p_ts_id = tsId;
+                params.p_total_working_hrs = totalWorkingHrs;
+                params.p_from_time = fromTime;
+                params.p_to_time = toTime;
+                params.p_image_attachment1 = imageAttachments[0];
+                params.p_file_name1 = fileNames[0];
+                params.p_mime_type1 = mimeTypes[0];
+                params.p_image_attachment2 = imageAttachments[1];
+                params.p_file_name2 = fileNames[1];
+                params.p_mime_type2 = mimeTypes[1];
+                params.p_image_attachment3 = imageAttachments[2];
+                params.p_file_name3 = fileNames[2];
+                params.p_mime_type3 = mimeTypes[2];
+                params.p_image_attachment4 = imageAttachments[3];
+                params.p_file_name4 = fileNames[3];
+                params.p_mime_type4 = mimeTypes[3];
+                params.p_inspection_report = inspectionReport;
+                params.p_file_name5 = inspectionFileName;
+                params.p_mime_type5 = inspectionMimeType;
+
+                const payload = {
+                    action: "function_call",
+                    function_name: "ins_time_sheet_details_fn",
+                    params: params
+                };
+
+
+                console.log("Final Payload:", payload);
+
+                $.ajax({
+                    url: apiUrl,
+                    method: "POST",
+                    headers: {
+                        'X-APP-Key': "edm",
+                        'X-APP-Name': "edm"
+                    },
+                    data: {
+                        data: encryptData(payload)
+                    },
+                    success: function (response) {
+                        alert("Inserted successfully");
+
+                        let attachmentLinks = '';
+                        for (let i = 0; i < 4; i++) {
+                            if (imageAttachments[i]) {
+                                const link = window.createDownloadLink(imageAttachments[i], mimeTypes[i], fileNames[i]);
+                                attachmentLinks += `<div>Attachment ${i + 1}: ${link}</div>`;
+                            }
+                        }
+
+                        if (inspectionReport) {
+                            const link = window.createDownloadLink(inspectionReport, inspectionMimeType, inspectionFileName);
+                            attachmentLinks += `<div>Inspection Report: ${link}</div>`;
+                        }
+
+                        const newRow = `
+                <tr>
+                    <td>${tsDate}</td>
+                    <td>${activity}</td>
+                    <td>${tsNotes}</td>
+                    <td>${tsHrs}</td>
+                    <td>${tsMins}</td>
+                    <td>${totalWorkingHrs}</td>
+                    <td>${fromTime}</td>
+                    <td>${toTime}</td>
+                    <td>${attachmentLinks}</td>
+                </tr>
+            `;
+                        $('#submittedTable tbody').append(newRow);
+
+                        // Clear inputs
+                        $('#P77_TS_ACTIVITY').val('');
+                        $('#P77_TS_HRS').val('');
+                        $('#P77_TS_MINS').val('');
+                        $('#P77_TS_NOTES').val('');
+                        $('#P77_TOTAL_WORKING_HRS').val('');
+                        $('#P77_FROM_TIME').val('');
+                        $('#P77_TO_TIME').val('');
+                        $('#P53_COURT_FILE_DATE').val('');
+                        $('#P7_UPLOAD_DROPZONE_input').val('');
+                        $('#P7_RATE_CARD_IMAGE').val('');
+                        $('#INSPECTION_INPUT1_input').val('');
+                        $('#INSPECTION_INPUT2_input').val('');
+                        $('#INSPECTION_INPUT3_input').val('');
+                    },
+
+                    error: function (xhr, status, error) {
+                        console.error("API call failed:", {
+                            status: xhr.status,
+                            statusText: xhr.statusText,
+                            responseText: xhr.responseText,
+                            error: error
+                        });
+                    }
+                });
+            });
+
+        })
+    </script>
+
+</body>
+
+</html>

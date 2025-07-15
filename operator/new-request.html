@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html class="no-js  page-7 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Service Request</title>
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/commonMenu.css" type="text/css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #t_Body_nav {
+      width: 100% !important;
+    }
+
+    select {
+      width: 100% !important;
+    }
+  </style>
+</head>
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form>
+    <header class="t-Header" id="t_Header" role="banner">
+      <div class="t-Header-branding">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+          <P class="t-Header-logo-link">TNEGA</P>
+
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div id="globalHeader"></div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav"></div>
+    </header>
+    <div class="t-Body">
+      <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+        <div class="a-TreeView t-TreeNav js-addActions js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic"
+          id="t_TreeNav" data-id="7_tree" aria-label="Main Navigation">
+          <ul id="commonMenuContainer"></ul>
+        </div>
+      </div>
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"></div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent"></div>
+            <div class="t-Body-contentInner">
+              <div class="container">
+                <div class="row ">
+                  <div class="col col-12 apex-col-auto col-start col-end">
+                    <div id="R13099627714928773" class="t-Form--leftLabels">
+                      <div class="container">
+                        <div class="row ">
+                          <div class="col col-4  col-start">
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2"
+                              id="P7_LOCATION_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_LOCATION" id="P7_LOCATION_LABEL" class="t-Form-label">Taluk </label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-2">
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P7_LOCATION" name="P7_LOCATION" class="selectlist ">
+                                    <option value="" class="placeholder">--Select Taluk--</option>
+                                  </select>
+
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P7_LOCATION_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676937166964195_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-3  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                          <div class="col col-5 apex-col-auto col-end">
+                            <div
+                              class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                              id="P7_REQUEST_CREATED_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_REQUEST_CREATED" id="P7_REQUEST_CREATED_LABEL"
+                                  class="t-Form-label">Requested Created</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-3">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P7_REQUEST_CREATED"
+                                    name="P7_REQUEST_CREATED" value="04-05-2025 11:04 PM"><input type="hidden"
+                                    data-for="P7_REQUEST_CREATED"
+                                    value="sEtl44hyAMjPy8WA8Heqhaj3ygR1Zt838uC1pY7-RYEObauksNZbRaew2kwiBKYYw3DYAVg1AKUTcIpezHHrZw"><span
+                                    id="P7_REQUEST_CREATED_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true">04-05-2025 11:04 PM</span></div><span
+                                  id="P7_REQUEST_CREATED_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-5  col-start">
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2"
+                              id="P7_OPERATOR_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_OPERATOR" id="P7_OPERATOR_LABEL" class="t-Form-label">Operator </label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-3">
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P7_OPERATOR" name="P7_OPERATOR" class="selectlist ">
+                                    <option value="" class="placeholder">--Select Operator--</option>
+                                  </select>
+
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P7_OPERATOR_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676937166964195_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-2  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                          <div class="col col-5 apex-col-auto col-end">
+                            <div
+                              class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                              id="P7_REQUESTED_BY_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_REQUESTED_BY" id="P7_REQUESTED_BY_LABEL" class="t-Form-label">Requested
+                                  By</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-3">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P7_REQUESTED_BY"
+                                    name="P7_REQUESTED_BY" value="Bakiyalakshmi V"><input type="hidden"
+                                    data-for="P7_REQUESTED_BY"
+                                    value="sIiaCAkw3OrlfoIuLOWNxyrhtuO_9Kmm178YBmGtqV0R-oUGYDuoa3FWic7Dgm22cgPw_rQqpZrV_D88fVgWJw"><span
+                                    id="P7_REQUESTED_BY_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true">Bakiyalakshmi V</span></div><span
+                                  id="P7_REQUESTED_BY_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div><input type="hidden" name="P7_OPERATOR_MOBILE" id="P7_OPERATOR_MOBILE" value=""><input
+                              type="hidden" data-for="P7_OPERATOR_MOBILE"
+                              value="_OMN3QcNVJaHxQLzOnWO2QGXbTeD5AlgO9quIdP8V7O3ZSgfiIm7XhCu-tdcTJzJV1WZ0VKOXpNUdk3QmDyERQ">
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-5  col-start">
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2"
+                              id="P7_ISSUE_TYPE_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_ISSUE_TYPE" id="P7_ISSUE_TYPE_LABEL" class="t-Form-label">Issue Type
+                                </label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-3">
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P7_ISSUE_TYPE" name="P7_ISSUE_TYPE" class="selectlist ">
+                                    <option value="" class="placeholder">--Select Issue Type--</option>
+                                  </select>
+
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P7_ISSUE_TYPE_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676937166964195_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-2  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                          <div class="col col-5 apex-col-auto col-end">
+                            <div
+                              class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                              id="P7_REQUESTED_DISTRICT_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_REQUESTED_DISTRICT" id="P7_REQUESTED_DISTRICT_LABEL"
+                                  class="t-Form-label">Requested District</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-3">
+                                <div class="t-Form-itemWrapper"><input type="hidden" id="P7_REQUESTED_DISTRICT"
+                                    name="P7_REQUESTED_DISTRICT" value="Chengalpattu"><input type="hidden"
+                                    data-for="P7_REQUESTED_DISTRICT"
+                                    value="eJJRTgaX1_Hdk6_yOAYJYcCWsXMTju4ZUXW82jWLXsArCOfM3BV_oq_HtmuoxsFShtOrgMxE994j3xXiRpzw3Q"><span
+                                    id="P7_REQUESTED_DISTRICT_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                    data-escape="true">Chengalpattu</span></div><span
+                                  id="P7_REQUESTED_DISTRICT_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-5  col-start">
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2"
+                              id="P7_SHORT_DESCRIPTION_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_SHORT_DESCRIPTION" id="P7_SHORT_DESCRIPTION_LABEL"
+                                  class="t-Form-label">Sub-category </label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-3">
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P7_SHORT_DESCRIPTION" name="P7_SHORT_DESCRIPTION" class="selectlist ">
+                                    <option value="" class="placeholder">--Select Sub Category--</option>
+                                  </select>
+
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P7_SHORT_DESCRIPTION_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676937166964195_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-2  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                          <div class="col col-5 apex-col-auto col-end">
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2"
+                              id="P7_REQUESTED_GROUP_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_REQUESTED_GROUP" id="P7_REQUESTED_GROUP_LABEL"
+                                  class="t-Form-label">Requested Group </label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-3">
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P7_REQUESTED_GROUP" name="P7_REQUESTED_GROUP" class="selectlist ">
+                                    <option value="" class="placeholder">--Select Requested Group--</option>
+                                    <option value="From EDM" selected="selected">From EDM</option>
+                                    <option value="From Operator">From Operator</option>
+                                    <option value="From Department">From Department</option>
+                                    <option value="From Citizen">From Citizen</option>
+                                  </select>
+
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P7_REQUESTED_GROUP_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676937166964195_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-6  col-start">
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper plugin-be.ctb.select2"
+                              id="P7_IMPACTED_APPLICATION_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_IMPACTED_APPLICATION" id="P7_IMPACTED_APPLICATION_LABEL"
+                                  class="t-Form-label">Impacted Services </label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-4">
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P7_IMPACTED_APPLICATION" name="P7_IMPACTED_APPLICATION"
+                                    class="selectlist ">
+                                    <option value="" class="placeholder">--Select Impacted Services--</option>
+                                  </select>
+
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P7_IMPACTED_APPLICATION_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676937166964195_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+
+                              </div>
+                            </div><input type="hidden" name="P7_REQUEST_NUMBER" id="P7_REQUEST_NUMBER" value=""><input
+                              type="hidden" data-for="P7_REQUEST_NUMBER"
+                              value="9J-Ei34yKijNJnJqG6iptb8gEk0j2XohNttg1V8ptSihkdbUmNkJQq9x8R2itFV6pZgj_wSzXcauaH6eUvWhHw">
+                          </div>
+                          <div class="col col-1  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                          <div class="col col-4  ">
+                            <div
+                              class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-initial-value plugin-be.ctb.select2"
+                              id="P7_CONTACT_TYPE_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_CONTACT_TYPE" id="P7_CONTACT_TYPE_LABEL" class="t-Form-label">Contact
+                                  Type</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-2">
+                                <div class="t-Form-itemWrapper">
+                                  <select id="P7_CONTACT_TYPE" name="P7_CONTACT_TYPE" class="selectlist ">
+                                    <option value="" class="placeholder">--Select Contact Type--</option>
+                                    <option value="Phone" selected="selected">Phone</option>
+                                    <option value="Email">Email</option>
+                                    <option value="In&#x20;Person">In Person</option>
+                                  </select>
+                                </div><span id="P7_CONTACT_TYPE_error_placeholder" class="a-Form-error"
+                                  data-template-id="8676686131964195_ET"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col col-7  col-start">
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper apex-item-wrapper--textarea"
+                              id="P7_SHORT_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_SHORT" id="P7_SHORT_LABEL" class="t-Form-label">Short Description
+                                </label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-5">
+                                <div class="t-Form-itemWrapper">
+                                  <div class="apex-item-group apex-item-group--textarea"><textarea name="P7_SHORT"
+                                      rows=".5" cols="70" maxlength="50" id="P7_SHORT"
+                                      class="textarea&#x20;apex-item-textarea" data-counter="true"
+                                      data-max-char="50"></textarea>
+                                    <div id="P7_SHORT_CHAR_COUNT" style="display:none;"
+                                      class="apex-item-textarea-counter"><span id="P7_SHORT_CHAR_COUNTER"
+                                        class="apex-item-textarea-counter--length">0</span> of <span
+                                        class="apex-item-textarea-counter--size">50</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P7_SHORT_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676937166964195_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-4  ">
+                            <div
+                              class="t-Form-fieldContainer rel-col t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--file"
+                              id="P7_UPLOAD_CONTAINER">
+                              <div class="t-Form-labelContainer col col-2">
+                                <label for="P7_UPLOAD" id="P7_UPLOAD_LABEL" class="t-Form-label">Attachment</label>
+                              </div>
+                              <div class="t-Form-inputContainer col col-2">
+                                <div class="t-Form-itemWrapper">
+                                  <a-file-upload id="P7_UPLOAD_DROPZONE" name="P7_UPLOAD_DROPZONE" upload-type="FILE"
+                                    display-style="NATIVE" size="30" download-link="true">
+                                    <input type="file" id="P7_UPLOAD_DROPZONE_input"
+                                      aria-labelledby="P7_UPLOAD_DROPZONE_LABEL" multiple accept=".pdf, .jpg, .jpeg" />
+                                    <div class="a-FileDrop&#x20;a-FileDrop--native"></div>
+                                  </a-file-upload>
+                                </div>
+                                <span id="P7_UPLOAD_DROPZONE_error_placeholder" class="a-Form-error"
+                                  data-template-id="333363771109036567_ET"></span>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div id="uploadedFileList" class="mt-2"></div>
+
+                          <div class="row ">
+                            <div class="col col-7  col-start">
+                              <div
+                                class="t-Form-fieldContainer is-required rel-col  apex-item-wrapper apex-item-wrapper--textarea"
+                                id="P7_FULL_DESCRIPTION_CONTAINER">
+                                <div class="t-Form-labelContainer col col-2">
+                                  <label for="P7_FULL_DESCRIPTION" id="P7_FULL_DESCRIPTION_LABEL"
+                                    class="t-Form-label">Full Description </label>
+                                </div>
+                                <div class="t-Form-inputContainer col col-5">
+                                  <div class="t-Form-itemWrapper">
+                                    <div class="apex-item-group apex-item-group--textarea"><textarea
+                                        name="P7_FULL_DESCRIPTION" rows="5" cols="70" maxlength="5000"
+                                        id="P7_FULL_DESCRIPTION" class="textarea&#x20;apex-item-textarea"
+                                        data-counter="true" data-max-char="5000"></textarea>
+                                      <div id="P7_FULL_DESCRIPTION_CHAR_COUNT" style="display:none;"
+                                        class="apex-item-textarea-counter"><span id="P7_FULL_DESCRIPTION_CHAR_COUNTER"
+                                          class="apex-item-textarea-counter--length">0</span> of <span
+                                          class="apex-item-textarea-counter--size">5000</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="t-Form-itemAssistance">
+                                    <span id="P7_FULL_DESCRIPTION_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676937166964195_ET"></span>
+                                    <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-2  "><span class="apex-grid-nbsp">&nbsp;</span></div>
+                            <!-- <div class="col col-3 apex-col-auto col-end">
+                              <div
+                                class="t-Form-fieldContainer rel-col  apex-item-wrapper apex-item-wrapper--has-placeholder apex-item-wrapper--text-field"
+                                id="P7_FILENAME_CONTAINER">
+                                <div class="t-Form-labelContainer col col-0">
+                                  <label for="P7_FILENAME" id="P7_FILENAME_LABEL" class="t-Form-label">File Name</label>
+                                </div>
+                                <div class="t-Form-inputContainer col col-3">
+                                  <div class="t-Form-itemWrapper"><input type="text" id="P7_FILENAME" name="P7_FILENAME"
+                                      placeholder="FileName" class="text_field&#x20;apex-item-text" value="" size="30"
+                                      data-enter-submit="false" data-is-page-item-type="true" /></div><span
+                                    id="P7_FILENAME_error_placeholder" class="a-Form-error"
+                                    data-template-id="8676686131964195_ET"></span>
+                                </div>
+                              </div><input type="hidden" name="P7_ASSIGNMENT_GROUP" id="P7_ASSIGNMENT_GROUP" value="">
+                            </div> -->
+                          </div>
+                          <div class="row ">
+                            <div class="col col-7  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                            <div class="col col-5 apex-col-auto col-end">
+                              <div
+                                class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noUI t-Region--scrollBody"
+                                id="attachment" role="banner" aria-label="New">
+                                <div class="t-Region-header">
+                                  <div class="t-Region-headerItems t-Region-headerItems--title">
+                                    <span class="t-Region-headerIcon"><span class="t-Icon "
+                                        aria-hidden="true"></span></span>
+                                    <h2 class="t-Region-title" id="attachment_heading" data-apex-heading>New</h2>
+                                  </div>
+                                  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span
+                                      class="js-maximizeButtonContainer"></span></div>
+                                </div>
+                                <div class="t-Region-bodyWrap">
+                                  <div class="t-Region-buttons t-Region-buttons--top">
+                                    <div class="t-Region-buttons-left"></div>
+                                    <div class="t-Region-buttons-right"></div>
+                                  </div>
+                                  <div class="t-Region-body">
+                                    <div class="t-Region-orderBy"></div>
+                                    <div id="report_37316341060994133_catch"><span class="nodatafound"></span>
+                                    </div>
+
+                                  </div>
+                                  <div class="t-Region-buttons t-Region-buttons--bottom">
+                                    <div class="t-Region-buttons-left"></div>
+                                    <div class="t-Region-buttons-right"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <input type="hidden" name="P7_ASSIGNED_TO" id="P7_ASSIGNED_TO" value=""><input
+                                type="hidden" data-for="P7_ASSIGNED_TO"
+                                value="430JRz-bpu1jw6_usAIh5t5GfLuVVzypGkxuiXelekOiXklPzSh0mfMqdwsQtzopi0gotFOnR27Sy6W4M655WQ"><input
+                                type="hidden" name="P7_ADDITIONAL_INFORMATION" id="P7_ADDITIONAL_INFORMATION"
+                                value=""><input type="hidden" data-for="P7_ADDITIONAL_INFORMATION"
+                                value="az9hMz1ASn-uwIvOSRpPGt0sFrV3W6IptbElooWWaKo-Yng1Cq4q_RRQh3OTS4VWrbCujzXHE2vu9rzSHmN6AA"><input
+                                type="hidden" name="P7_FILE_NAME" id="P7_FILE_NAME" value=""><input type="hidden"
+                                name="P7_ATTACH_ID" id="P7_ATTACH_ID" value=""><input type="hidden" name="P7_NEW"
+                                id="P7_NEW" value="0"><input type="hidden" name="P7_HELPDESK_NOTES"
+                                id="P7_HELPDESK_NOTES" value=""><input type="hidden" name="P7_HISTORY" id="P7_HISTORY"
+                                value=""><input type="hidden" name="P7_ATTACH_CHARSET" id="P7_ATTACH_CHARSET"
+                                value=""><input type="hidden" name="P7_STATUS" id="P7_STATUS" value=""><input
+                                type="hidden" name="P7_CREATED_BY" id="P7_CREATED_BY" value=""><input type="hidden"
+                                name="P7_CREATED_DATE" id="P7_CREATED_DATE" value=""><input type="hidden"
+                                name="P7_UPDATED_BY" id="P7_UPDATED_BY" value=""><input type="hidden"
+                                name="P7_UPDATED_DATE" id="P7_UPDATED_DATE" value=""><input type="hidden"
+                                name="P7_REQUEST_STATUS" id="P7_REQUEST_STATUS" value=""><input type="hidden"
+                                name="P7_PRODUCT_RATING" id="P7_PRODUCT_RATING" value="file">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col col-12 apex-col-auto col-start col-end">
+                      <div class="t-ButtonRegion t-Form--floatLeft " id="buttons" role="region" aria-label="Buttons">
+                        <div class="t-ButtonRegion-wrap">
+                          <div class="t-ButtonRegion-col t-ButtonRegion-col--left">
+                            <div class="t-ButtonRegion-buttons"></div>
+                          </div>
+
+                          <div class="t-ButtonRegion-col t-ButtonRegion-col--right">
+                            <div class="t-ButtonRegion-buttons"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-5 p-2">
+                <div class="col-6">
+                  <button id="exitBtn" class="exitbtn">Exit</button>
+                </div>
+                <div id="statusActionDiv" class="col-6 text-end">
+                  <button id="submitBtn" class="resolvedbtn">Submit</button>
+                </div>
+              </div>
+          </main>
+          <footer class="t-Footer" id="t_Footer" role="contentinfo">
+            <div class="t-Footer-body">
+              <div class="t-Footer-content"></div>
+              <div class="t-Footer-apex">
+                <div class="t-Footer-version"> </div>
+                <div class="t-Footer-customize"></div>
+
+              </div>
+            </div>
+            <div class="t-Footer-top">
+              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
+      value="&#x5B;&#x5D;">
+  </form>
+
+
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DataTables -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+
+  <script src="../assets/js/toastUtil.js"></script>
+  <script type="module" src="../assets/js/dataTableUtil.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+
+
+
+  <!-- <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/commonMenu.js"></script> -->
+  <!-- <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script> -->
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/file.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      console.log('jQuery loaded?', typeof jQuery !== 'undefined');
+      console.log('DataTable loaded?', typeof $.fn.DataTable !== 'undefined'); // should be true
+
+      $('#pressReleaseTable').DataTable();
+    });
+  </script>
+  <script>
+    console.log("✅ DataTables loaded?", typeof $.fn.DataTable); 
+  </script>
+  <script>
+    $('#t_Button_navControl').on('click', function () {
+      $('#t_Body_nav').toggle();
+    });
+
+  </script>
+
+  <script type="module">
+    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+    import { processFile, checkFile, renderFileList } from '../assets/js/file.js';
+    let dataTableRef;
+
+    $(document).ready(function () {
+      let uploadFile = null;
+      let uploadPayload = null;
+      const apiUrl = 'https://tngis.tnega.org/lcap_api/edm/v1/commonfunction';
+      const userId = localStorage.getItem('userId');
+      const secretKey = 'V7gN4dY8pT2xB3kRz';
+      const district = localStorage.getItem('userDistrict');
+      const username = localStorage.getItem('userName');
+      const mobnumber = localStorage.getItem('userMob');
+      $('#P7_REQUESTED_DISTRICT_DISPLAY').text(district);
+      $('#P7_REQUESTED_BY_DISPLAY').text(username);
+      const payload = {
+        action: "function_call",
+        function_name: "Taluk_edm_fn",
+        params: {
+          district: district,
+          userid: mobnumber
+        }
+      };
+
+      $.ajax({
+        url: apiUrl,
+        method: 'POST',
+        headers: {
+          'X-APP-Key': 'edm',
+          'X-APP-Name': 'edm'
+        },
+        data: {
+          data: encryptData(payload)
+        },
+        dataType: 'json',
+        success(response) {
+          const decrypted = decryptData(response.data);
+          console.log("Decrypted Taluk Data:", decrypted);
+
+          // Populate the dropdown
+          const $dropdown = $('#P7_LOCATION');
+          $dropdown.empty().append('<option value="" class="placeholder">--Select Taluk--</option>');
+
+          decrypted.forEach(item => {
+            $dropdown.append(`<option value="${item.taluk_name}">${item.taluk_name}</option>`);
+          });
+        },
+        error(xhr, status, error) {
+          console.error("Taluk API Error:", error);
+          alert("Failed to load Taluk data.");
+        }
+      });
+
+      $('#P7_LOCATION').on('change', function () {
+        const selectedTaluk = $(this).val();
+        console.log("Selected Taluk:", selectedTaluk);
+
+        const operatorPayload = {
+          action: "function_call",
+          function_name: "operator_id_fn", // ✅ Confirm this matches your backend
+          params: {
+            taluk: selectedTaluk || ''
+          }
+        };
+
+        $.ajax({
+          url: apiUrl,
+          method: 'POST',
+          headers: {
+            'X-APP-Key': 'edm',
+            'X-APP-Name': 'edm'
+          },
+          data: {
+            data: encryptData(operatorPayload)
+          },
+          dataType: 'json',
+          success(response) {
+            const decrypted = decryptData(response.data);
+            console.log("Decrypted Operator Data:", decrypted);
+
+            const $dropdown = $('#P7_OPERATOR');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Operator--</option>');
+
+            decrypted.forEach(item => {
+              $dropdown.append(`<option value="${item.esevai_id}">${item.esevai_id_name}</option>`);
+            });
+          },
+          error(xhr, status, error) {
+            console.error("Operator API Error:", error);
+            alert("Failed to load operator data.");
+          }
+        });
+      });
+
+      $('#P7_OPERATOR').on('change', function () {
+        const selectedOperator = $(this).val();
+        console.log("Selected Operator:", selectedOperator);
+
+        const issueTypePayload = {
+          action: "function_call",
+          function_name: "issue_type_fn",
+          params: {
+
+          }
+        };
+
+        $.ajax({
+          url: apiUrl,
+          method: 'POST',
+          headers: {
+            'X-APP-Key': 'edm',
+            'X-APP-Name': 'edm'
+          },
+          data: {
+            data: encryptData(issueTypePayload)
+          },
+          dataType: 'json',
+          success(response) {
+            const decrypted = decryptData(response.data);
+            console.log("Decrypted Issue Type Data:", decrypted);
+
+            const $dropdown = $('#P7_ISSUE_TYPE');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Issue Type--</option>');
+
+            decrypted.forEach(item => {
+              $dropdown.append(`<option value="${item.issue_type_desc}">${item.issue_type_desc}</option>`);
+            });
+          },
+          error(xhr, status, error) {
+            console.error("Issue Type API Error:", error);
+            alert("Failed to load issue types.");
+          }
+        });
+      });
+
+      $('#P7_ISSUE_TYPE').on('change', function () {
+        const issueType = $(this).val();
+        console.log("Selected Operator:", issueType);
+
+        const subCategoryPayload = {
+          action: "function_call",
+          function_name: "issue_subtype_desc_fn",
+          params: {
+            issueType: issueType
+          }
+        };
+
+        $.ajax({
+          url: apiUrl,
+          method: 'POST',
+          headers: {
+            'X-APP-Key': 'edm',
+            'X-APP-Name': 'edm'
+          },
+          data: {
+            data: encryptData(subCategoryPayload)
+          },
+          dataType: 'json',
+          success(response) {
+            const decrypted = decryptData(response.data);
+            console.log("Decrypted Issue Type Data:", decrypted);
+
+            const $dropdown = $('#P7_SHORT_DESCRIPTION');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Issue Type--</option>');
+
+            decrypted.forEach(item => {
+              $dropdown.append(`<option value="${item.issue_subtype}">${item.issue_subtype}</option>`);
+            });
+          },
+          error(xhr, status, error) {
+            console.error("Issue Type API Error:", error);
+            alert("Failed to load issue types.");
+          }
+        });
+      });
+
+      $('#P7_SHORT_DESCRIPTION').on('change', function () {
+        const subCategory = $(this).val();
+        console.log("subCategory:", subCategory);
+
+        const subCategoryPayload = {
+          action: "function_call",
+          function_name: "impacted_apk_fn",
+          params: {
+
+          }
+        };
+
+        $.ajax({
+          url: apiUrl,
+          method: 'POST',
+          headers: {
+            'X-APP-Key': 'edm',
+            'X-APP-Name': 'edm'
+          },
+          data: {
+            data: encryptData(subCategoryPayload)
+          },
+          dataType: 'json',
+          success(response) {
+            const decrypted = decryptData(response.data);
+            console.log("Decrypted Issue Type Data:", decrypted);
+
+            const $dropdown = $('#P7_IMPACTED_APPLICATION');
+            $dropdown.empty().append('<option value="" class="placeholder">--Select Issue Type--</option>');
+
+            decrypted.forEach(item => {
+              $dropdown.append(`<option value="${item.service_name}">${item.service_name}</option>`);
+            });
+          },
+          error(xhr, status, error) {
+            console.error("Issue Type API Error:", error);
+            alert("Failed to load issue types.");
+          }
+        });
+      });
+
+
+
+      $('#submitBtn').on('click', async function (event) {
+        debugger
+        event.preventDefault();
+
+
+        if (checkFile('#P7_UPLOAD_DROPZONE_input')) {
+          const uploadedFiles = await processFile('#P7_UPLOAD_DROPZONE_input');
+          renderFileList(uploadedFiles);
+
+          uploadPayload = uploadedFiles.map(file => ({
+            p_upload: file.fileBase64,
+            p_attach_filename: file.filename,
+            p_attach_mimetype: file.mimetype,
+          }));
+        }
+        function getFormattedDateTime() {
+          return new Date().toISOString(); // Format: YYYY-MM-DDTHH:mm:ss.sssZ
+        }
+
+        var taluk = $('#P7_LOCATION').val();
+        var operator = $('#P7_OPERATOR').val();
+        var issue_type = $('#P7_ISSUE_TYPE').val();
+        var sub_category = $('#P7_SHORT_DESCRIPTION').val();
+        var impacted_applications = $('#P7_IMPACTED_APPLICATION').val();
+        var short_des = $('#P7_SHORT').val();
+        var full_des = $('#P7_FULL_DESCRIPTION').val();
+        var contact_type = $('#P7_CONTACT_TYPE').val();
+        var requestedgroup = $('#P7_REQUESTED_GROUP').val();
+        const timestamp = getFormattedDateTime();
+        const payload = {
+          action: "function_call",
+          function_name: "insert_edm_service_request_fn",
+          params: {
+            p_operator: operator,
+            p_location: taluk,
+            p_issue_type: issue_type,
+            p_impacted_application: impacted_applications,
+            p_priority: "priority",
+            p_short_description: sub_category,
+            p_full_description: full_des,
+            p_additional_information: short_des,
+            p_helpdesk_notes: '',
+            p_history: '',
+            p_upload: uploadPayload[0].p_upload,
+            p_attach_mimetype: uploadPayload[0].p_attach_mimetype,
+            p_attach_filename: uploadPayload[0].p_attach_filename,
+            p_request_created: timestamp,
+            p_requested_by: username,
+            p_requested_district: district,
+            p_requested_group: requestedgroup,
+            p_contact_type: contact_type,
+            p_assignment_group: '',
+            p_product_rating: '',
+            p_short: short_des,
+            p_created_by: userId,
+
+          }
+        }
+
+        console.log(payload);
+        $.ajax({
+          url: apiUrl,
+          method: 'POST',
+          headers: {
+            'X-APP-Key': 'edm',
+            'X-APP-Name': 'edm'
+          },
+          data: {
+            data: encryptData(payload)
+          },
+          dataType: 'json',
+          success: function (response) {
+            showSuccessToast("Submitted successfully.");
+            setTimeout(() => {
+              location.reload();
+            }, 1000);
+            // location.reload();
+
+          },
+          error(xhr, status, error) {
+            console.error("Issue Type API Error:", error);
+            alert("Failed to load issue types.");
+          }
+        });
+
+      });
+
+      $('#exitBtn').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log("Exit button clicked");
+        window.location.href = 'allrequest.html';
+      });
+    });
+
+  </script>
+</body>
+
+</html>

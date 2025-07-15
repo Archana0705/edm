@@ -5,9 +5,9 @@ const userRole = localStorage.getItem('userRole');
 console.log("userRole", userRole)
 
 const menuItems = [
-    { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", "call-center-operator"] },
+    { label: "Home", file: "dashboard.html", folder: "", icon: "fa fa-tachometer", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", "call-center-operator", "operator"] },
     {
-        label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", "General Helpdesk Operator"],
+        label: "All Requests", file: "allrequest.html", folder: "", icon: "fa fa-tasks", roles: ["edistrict_manager", "helpdesk", "helpdesk_operator", "General Helpdesk Operator", "operator"],
         subMenu: [
             {
                 label: "All Requests with Reassign Options",
@@ -90,6 +90,7 @@ function normalizeRole(role) {
     if (lowerRole.includes("edistrict manager")) {
         return "edistrict_manager";
     }
+    if (lowerRole.includes("operators")) return "operator";
     return null;
 }
 
@@ -261,10 +262,10 @@ function renderDynamicMenu(containerId) {
 
                     if (sub.file === currentFile) {
                         li.classList.add("active");
-                        li.style.backgroundColor = "#33208c";
+                        li.style.backgroundColor = "#2083b2";
                         a.style.color = "#fff";
                         a.style.fontWeight = "bold";
-                        subA.style.color = "#33208c";
+                        subA.style.color = "#fff";
                         subA.style.fontWeight = "bold";
                         submenuActive = true;
                     }

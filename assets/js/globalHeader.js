@@ -166,31 +166,31 @@
 //     }
 // });
 
-console.log('✅ globalHeader.js loaded');
+console.log('globalHeader.js loaded');
 
 document.addEventListener('DOMContentLoaded', async function () {
-    console.log('✅ DOMContentLoaded triggered');
+    console.log('DOMContentLoaded triggered');
 
     try {
         const response = await fetch('../assets/partials/globalHeader.html');
-        console.log('✅ Fetching globalHeader.html – Status:', response.status);
+        console.log('Fetching globalHeader.html – Status:', response.status);
 
         if (!response.ok) throw new Error('Header file not found');
 
         const html = await response.text();
-        console.log('✅ Header HTML fetched successfully');
+        console.log('Header HTML fetched successfully');
 
         const container = document.getElementById('globalHeader');
         if (container) {
             container.innerHTML = html;
-            console.log('✅ Header injected into #globalHeader');
+            console.log('Header injected into #globalHeader');
 
             // Set username
             const username = localStorage.getItem('userName') || 'User';
             const usernameElement = document.getElementById('dynamicUsername');
             if (usernameElement) {
                 usernameElement.textContent = username;
-                console.log('✅ Username set:', username);
+                console.log('Username set:', username);
             }
 
             // Set last login
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const lastLoginElement = document.getElementById('lastLoggedIn');
             if (lastLogin && lastLoginElement) {
                 lastLoginElement.textContent = lastLogin;
-                console.log('✅ Last login set:', lastLogin);
+                console.log('Last login set:', lastLogin);
             }
 
             // Sign out
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             if (signOutBtn) {
                 signOutBtn.addEventListener('click', function (e) {
                     e.preventDefault();
-                    console.log('🔓 Sign out clicked');
+                    console.log('Sign out clicked');
                     localStorage.clear();
                     window.location.href = '/index.html';
                 });
@@ -215,38 +215,38 @@ document.addEventListener('DOMContentLoaded', async function () {
             const role = (localStorage.getItem('userRole') || '').toLowerCase();
             const currentPage = window.location.pathname.toLowerCase();
 
-            console.log('🔍 userRole:', role);
-            console.log('📄 currentPage:', currentPage);
+            console.log('userRole:', role);
+            console.log('currentPage:', currentPage);
 
-            if (
-                role.includes('general helpdesk operator') &&
-                currentPage.includes('dashboard') // Adjust this to match your actual dashboard page URL
-            ) {
-                console.log('🔐 On Dashboard and role matched, triggering Change Password popup');
+            // if (
+            //     role.includes('general helpdesk operator') &&
+            //     currentPage.includes('dashboard') // Adjust this to match your actual dashboard page URL
+            // ) {
+            //     console.log('On Dashboard and role matched, triggering Change Password popup');
 
-                if (!document.getElementById('popup-overlay')) {
-                    const popupResponse = await fetch('../assets/ChangePassword/ChangePassword.html');
-                    if (!popupResponse.ok) throw new Error('Popup HTML not found');
+            //     if (!document.getElementById('popup-overlay')) {
+            //         const popupResponse = await fetch('../assets/ChangePassword/ChangePassword.html');
+            //         if (!popupResponse.ok) throw new Error('Popup HTML not found');
 
-                    const popupHtml = await popupResponse.text();
-                    document.body.insertAdjacentHTML('beforeend', popupHtml);
-                    console.log('✅ ChangePassword popup HTML inserted');
+            //         const popupHtml = await popupResponse.text();
+            //         document.body.insertAdjacentHTML('beforeend', popupHtml);
+            //         console.log('ChangePassword popup HTML inserted');
 
-                    const script = document.createElement('script');
-                    script.src = '../assets/js/changePassword.js';
-                    script.onload = () => console.log('✅ changePassword.js script loaded');
-                    document.body.appendChild(script);
+            //         const script = document.createElement('script');
+            //         script.src = '../assets/js/changePassword.js';
+            //         script.onload = () => console.log('changePassword.js script loaded');
+            //         document.body.appendChild(script);
 
-                    $('#popup-overlay').fadeIn();
-                    $('.t-Header').css('z-index', '0');
-                }
-            }
+            //         $('#popup-overlay').fadeIn();
+            //         $('.t-Header').css('z-index', '0');
+            //     }
+            // }
 
         } else {
-            console.warn('⚠️ #globalHeader element not found in DOM');
+            console.warn('#globalHeader element not found in DOM');
         }
     } catch (error) {
-        console.error('❌ Error during globalHeader init:', error);
+        console.error('Error during globalHeader init:', error);
     }
 });
 
@@ -260,10 +260,10 @@ document.addEventListener('click', function (event) {
     if (toggleBtn.contains(event.target)) {
         const isVisible = menu.style.display === 'block';
         menu.style.display = isVisible ? 'none' : 'block';
-        console.log(`🔽 Menu toggled: ${isVisible ? 'hide' : 'show'}`);
+        console.log(`Menu toggled: ${isVisible ? 'hide' : 'show'}`);
     } else if (!menu.contains(event.target)) {
         menu.style.display = 'none';
-        console.log('🔽 Menu hidden (outside click)');
+        console.log('Menu hidden (outside click)');
     }
 });
 
@@ -280,14 +280,14 @@ document.addEventListener('click', async function (e) {
 
                 const html = await response.text();
                 document.body.insertAdjacentHTML('beforeend', html);
-                console.log('✅ Manual ChangePassword popup inserted');
+                console.log('Manual ChangePassword popup inserted');
 
                 const script = document.createElement('script');
                 script.src = '../assets/js/changePassword.js';
-                script.onload = () => console.log('✅ changePassword.js loaded (manual)');
+                script.onload = () => console.log('changePassword.js loaded (manual)');
                 document.body.appendChild(script);
             } catch (err) {
-                console.error('❌ Error loading manual Change Password popup:', err);
+                console.error('Error loading manual Change Password popup:', err);
             }
         }
 

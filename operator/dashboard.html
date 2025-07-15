@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html class="no-js  page-1 app-E-DISTRICT-MANAGER-APPLICATION" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>E - District Manager Portal</title>
+  <link rel="stylesheet" href="../assets/css/oj-redwood-notag-min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Theme-Standard.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/font-apex.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/Core-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/custom.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+  <link rel="apple-touch-icon" href="../assets/img/app-icon-192.png">
+  <link rel="icon" href="../assets/img/app-icon-32.png">
+  <link rel="stylesheet" href="../assets/css/icon.css">
+
+  <style type="text/css">
+    @font-face {
+      font-family: 'FontApex';
+      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
+        url('../font/apex-5-icon-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+        url('../fonts/Font-APEX-Small.woff') format('woff'),
+        url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+        url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .t-fht-thead {
+      display: none !important;
+    }
+
+    .a-IRR-table thead {
+      visibility: visible !important;
+      position: static !important;
+    }
+
+    .a-IRR-table tbody th {
+      position: static !important;
+    }
+
+    /* Disable APEX's fixed/sticky header */
+    .a-IRR-tableContainer .a-IRR-table tbody th {
+      position: static !important;
+      top: auto !important;
+      z-index: 0 !important;
+    }
+
+    /* Ensure whole table scrolls together */
+    .a-IRR-tableContainer {
+      overflow-x: auto !important;
+      overflow-y: auto !important;
+      max-height: 500px;
+      /* Adjust height as needed */
+    }
+
+    .a-IRR-table {
+      table-layout: auto !important;
+      width: max-content !important;
+      display: table !important;
+      white-space: nowrap !important;
+    }
+  </style>
+  <style>
+    .t-fht-thead.js-stickyTableHeader {
+      display: none !important;
+    }
+
+    .a-IRR-table thead {
+      position: static !important;
+      visibility: visible !important;
+    }
+  </style>
+
+
+  <style nonce="-FfiJlVjxcJ0HaMyagpvKQ">
+    .t-Region-body {
+      /* display:none; */
+      background-color: #C7E3F8;
+    }
+
+    #P1_INSPECTION_COUNT,
+    #P0_INSPECTION_COUNT {
+      font-size: 20px;
+      color: #177DAE;
+      background-color: #C7E3F8;
+    }
+
+    #profile_img {
+      margin-left: -300px !important;
+    }
+
+    #change_password {
+      margin-top: 60px;
+    }
+
+    #popup {
+
+      background-image: URL('r/edmdev/1111/files/static/v1087/alert.jpg') !important;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .note_color {
+      color: rgba(255, 0, 0, 0.596);
+    }
+
+    .apex-item-display-only {
+      font-weight: bolder;
+      font-size: 17.5px;
+      color: #3d8064;
+      margin-top: 150px;
+      margin-left: 50px;
+    }
+
+    .has-media--background {
+      max-width: 100px;
+      border-radius: 50%;
+      margin-left: -10px;
+
+    }
+
+    .a-CardView-media--square .a-CardView-mediaImg,
+    .a-CardView-media--square iframe,
+    .a-CardView-media--widescreen .a-CardView-mediaImg,
+    .a-CardView-media--widescreen iframe {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .a-CardView-items--float .a-CardView-item {
+      float: left;
+      min-width: 160px;
+      margin-top: 0px;
+      position: absolute;
+      margin-top: -45px;
+      margin-left: 100px;
+    }
+
+    /*.a-CardView-items--float .a-CardView-item:hover {
+transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) 
+}*/
+    .a-StarRating-stars {
+      position: absolute;
+      margin-top: 160px;
+      margin-left: 100px;
+      border-radius: 2px;
+      flex-basis: auto;
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding: var(--a-starrating-stars-padding-y, 4px) var(--a-starrating-stars-padding-x, 4px);
+    }
+
+    .a-StarRating-stars-fg .a-StarRating-star {
+      color: #d09b4c;
+    }
+
+    a-StarRating-star fa fa-star {
+
+      color: #b1b8b8;
+    }
+
+    /*#edm-logo {
+    width: 109px;
+    margin-left: -100px;
+    margin-right: 0px;
+}*/
+    #t_Body_title {
+      display: flex;
+      padding: 0.5% 15%;
+      justify-content: space-between;
+      height: 125px;
+    }
+
+    .apex_disabled {
+
+      opacity: 100% !important;
+
+    }
+
+    .app-links {
+      font-size: 13px;
+      padding: 3px 3px;
+      background-color: rgb(219, 219, 219);
+      border-radius: 20px;
+      margin: 5px 10px;
+      /* width: 80%; */
+      transition: all 0.1s ease-in-out;
+    }
+  </style>
+
+  <link rel="apple-touch-icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-192.png" />
+  <link rel="icon" href="r/edmdev/1111/files/static/v1087/icons/app-icon-32.png" />
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="r/edmdev/1111/files/static/v1087/apexcharts.min.js"></script>
+</head>
+
+<body
+  class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita-copy-1"
+  id="t_PageBody">
+  <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+  <form role="none" action="wwv_flow.accept?p_context=e-district-manager-application/home/114230090361743" method="post"
+    name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate autocomplete="off">
+    <input type="hidden" name="p_flow_id" value="1111" id="pFlowId" /><input type="hidden" name="p_flow_step_id"
+      value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="114230090361743"
+      id="pInstance" /><input type="hidden" name="p_page_submission_id"
+      value="MTk3MzQ3MzgwNzM3MDIwOTk3NDc4OTUxMTExMTA5NjY3MzY3NTk5&#x2F;vDnTd-xAC_KVu-3AlwtG1oaEWg8yDoTrdMJ16mcr-mGVeNzAmilaTnNUG21MAPrqlEivXiiOnQ8qKpzQYSa6LQ"
+      id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden"
+      name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden"
+      value="e-district-manager-application&#x2F;home&#x2F;114230090361743" id="pContext" /><input type="hidden"
+      value="197347380737020997478951111109667367599" id="pSalt" />
+    <header class="t-Header" id="t_Header" role="banner">
+
+      <div class="t-Header-branding">
+        <div class="t-Header-controls">
+          <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation"
+            title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon"
+              aria-hidden="true"></span></button>
+        </div>
+        <div class="t-Header-logo">
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link"><span class="apex-logo-text">e-District Manager Portal</span></a>-->
+          <!-- <a href="&#x2F;ords&#x2F;r&#x2F;edmdev&#x2F;e-district-manager-application&#x2F;home?session=114230090361743" class="t-Header-logo-link">Toll Free Support : +91 9042370430</a>-->
+          <P class="t-Header-logo-link">TNEGA</P>
+
+        </div>
+        <div class="t-Header-navBar">
+          <div class="t-Header-navBar--start"></div>
+          <div id="globalHeader"></div>
+          <div class="t-Header-navBar--end"></div>
+        </div>
+      </div>
+      <div class="t-Header-nav"></div>
+    </header>
+    <div class="t-Body">
+
+      <div class="t-Body-main">
+        <div class="t-Body-title" id="t_Body_title"><input type="hidden" name="P1_EDM_DAIRY_TARGET_PAGE_NO"
+            id="P1_EDM_DAIRY_TARGET_PAGE_NO" value="77"><input type="hidden" name="P1_SERVICE_REQUEST_PAGE_NO"
+            id="P1_SERVICE_REQUEST_PAGE_NO" value="19"><input type="hidden" name="P1_OPEN_POPUP" id="P1_OPEN_POPUP"
+            value="0"><input type="hidden" name="P1_DISTRICT" id="P1_DISTRICT" value="Chengalpattu"><input type="hidden"
+            name="P1_TIME_MSG" id="P1_TIME_MSG" value="Good Evening"><input type="hidden" data-for="P1_TIME_MSG"
+            value="7Dp742mAzvojp3bwImnPZXnmXDWYz9PqOarmG3ooDT4wZpcqDgO9BWGgid3MD_3hQATZYWDtrkjQgv2NEluiLg"><input
+            type="hidden" name="P1_DATE" id="P1_DATE" value="04&#x2F;05&#x2F;2025"><input type="hidden"
+            data-for="P1_DATE"
+            value="zWXEijIg82FJhkls6CqxeGBIwAhY649uxxloJlPPLTvVuKvMTDmfvP_kqLu3pB5XWzlDrw5_97pLczRooL92eA"><input
+            type="hidden" name="P1_PAGE_NO" id="P1_PAGE_NO" value=""><input type="hidden" data-for="P1_PAGE_NO"
+            value="uSUDUtRoRX4WS8Qz5j0RnQ4vqJAkoHm3-jVgSuyIduHoSbEFD-4PSoLn0WvIvL8U0qgEV3UdB9vf6p3qxXJk5w"><input
+            type="hidden" name="P1_PASSWORD" id="P1_PASSWORD" value="Edm1@123"><input type="hidden" name="P1_PASSWORD_1"
+            id="P1_PASSWORD_1" value="0">
+          <html>
+          <div class="edm-row">
+            <div>
+              <img src="../assets/img/gov_logo.png" id="edm-logo" data-aos="flip-left" data-aos-duration="800"
+                data-aos-delay="100">
+            </div>
+
+            <div id="logoname">
+              <img src=" ../assets/img/gov.PNG" style='margin-left:300px'>
+
+              <!--<h1 content="width=device-width, initial-scale=1.0"><center>Government of Tamil Nadu </center></h1>
+    </n>
+     <h1 content="width=device-width, initial-scale=1.0"><center>e-District Manager Portal</center></h1>-->
+            </div>
+
+            <div>
+              <img src="../assets/img/logo_new.jpeg" id="gov-logo" data-aos="flip-left" data-aos-duration="800"
+                data-aos-delay="100">
+            </div>
+            <!-- <div>
+    <div id = "user"  data-aos="fade-right" data-aos-duration="800" data-aos-delay="200" style = "font-size:15px;color:#8d8924;margin-top:30px">
+        Bakiyalakshmi V , Good Evening</div>
+    <div  id ="distirct" data-aos="flip-right" data-aos-duration="800" data-aos-delay="500" style = "font-size:15px;color:#8d8924">District : Chengalpattu
+        </br>Date : 04&#x2F;05&#x2F;2025
+    </div>
+    </div>-->
+
+          </div>
+          <div>
+            <div id="pro-pic" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="800" class="text-middle">
+            </div>
+            <div class="rate">
+              <!--  <input  type="radio" id="star5" name="rate" value="5" />
+    <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="300" for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="400" for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="500" for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label data-aos="zoom-out" data-aos-duration="800" data-aos-delay="600" for="star1" title="text">1 star</label> -->
+            </div>
+          </div>
+
+          </html>
+          <div class="t-CardsRegion u-colors" id="profile_img" role="region" aria-label="New">
+            <div class="t-Region-orderBy">
+              <div
+                class="t-Form-fieldContainer t-Form-fieldContainer--floatingLabel apex_disabled  t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--star-rating"
+                id="P1_NEW_CONTAINER">
+                <div class="t-Form-labelContainer">
+                  <label for="P1_NEW" id="P1_NEW_LABEL" class="t-Form-label"></label>
+                </div>
+                <div class="t-Form-inputContainer">
+                  <div class="t-Form-itemWrapper">
+                    <div id="P1_NEW" class="a-StarRating apex-item-starrating"><input type="text" inputmode=none
+                        aria-labelledby="P1_NEW_LABEL" id="P1_NEW_INPUT" value="" name="P1_NEW" /></div>
+                  </div><span id="P1_NEW_error_placeholder" class="a-Form-error"
+                    data-template-id="8676899378964195_ET"></span>
+                </div>
+              </div>
+            </div>
+            <div id="profile_img_Cards" class="a-TMV--cards">
+              <ul class="a-CardView-items a-CardView-items--float is-placeholder" aria-hidden="true">
+                <li class="a-CardView-item">
+                  <div class="a-CardView has-media has-media--background has-media--square has-media--cover">
+                    <div class="a-CardView-media a-CardView-media--background"></div>
+                  </div>
+                </li>
+                <li class="a-CardView-item">
+                  <div class="a-CardView has-media has-media--background has-media--square has-media--cover">
+                    <div class="a-CardView-media a-CardView-media--background"></div>
+                  </div>
+                </li>
+                <li class="a-CardView-item">
+                  <div class="a-CardView has-media has-media--background has-media--square has-media--cover">
+                    <div class="a-CardView-media a-CardView-media--background"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <script nonce="-FfiJlVjxcJ0HaMyagpvKQ">
+              var gCard8825038167996114data = {
+                "values": [
+                  [
+                    "EDM0366"
+                    , null
+                    , null
+                    , "N"
+                    , "N"
+                    , "N"
+                  ]
+                ]
+                , "firstRow": 1
+                , "moreData": false
+              }
+                ;
+            </script>
+
+
+          </div>
+        </div>
+        <div class="t-Body-content" id="t_Body_content">
+          <main id="main" class="t-Body-mainContent">
+            <span id="APEX_SUCCESS_MESSAGE" data-template-id="13879136713391167_S"
+              class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+              data-template-id="13879136713391167_E" class="apex-page-error u-hidden"></span>
+            <div class="t-Body-fullContent">
+              <div class="container">
+                <div class="row minpad">
+                  <div class="col col-10 apex-col-auto col-start">
+                    <div class="container">
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b1"><span
+                              class="t-Button-label">Service Reqest</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b2"><span
+                              class="t-Button-label">My Queue</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button class="t-Button hidden-btns"
+                            type="button" id="b3"><span class="t-Button-label">Reference
+                              Documents</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b4"><span
+                              class="t-Button-label">EDM Diary</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button class="t-Button hidden-btns"
+                            type="button" id="b5"><span class="t-Button-label">Training</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button class="t-Button hidden-btns"
+                            type="button" id="b6"><span class="t-Button-label">Reports
+                              Dashboards</span></button></div>
+                      </div>
+                      <div class="row ">
+                        <div class="col col-12 apex-col-auto col-start col-end"><button
+                            class="t-Button js-ignoreChange&#x20;hidden-btns" type="button" id="b7"><span
+                              class="t-Button-label">Contacts</span></button></div>
+                      </div>
+                    </div><!--<h3 data-aos="fade-right">Today's status</h3>-->
+                    <!-- <div class="status-bar">
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Service Request</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>My Queue</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Reference Documents</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>EDM Diary</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Training</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Reports & Dashboards</h4>
+                      </div>
+                      <div class="status-btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+                        <span class="fa fa fa-file-edit" aria-hidden="true"></span>
+                        <h4>Contacts</h4>
+                      </div>
+
+                    </div> -->
+                    <div id="status-bar-container"></div>
+                  </div>
+                  <div class="col col-2 app-link-container col-end">
+                    <h2>My application links</h2>
+                    <br>
+                    <a class="app-links" href="https://tnedistrict.tn.gov.in/eda/" target="_blank">e-District</a>
+                    <a class="app-links" href="https://www.tnesevai.tn.gov.in/" target="_blank">e-Sevai</a>
+                    <a class="app-links" href="https://tamilnilam.tn.gov.in/Revenue/login.html" target="_blank">Tamil
+                      Nilam</a>
+                    <a class="app-links" href="https://eservices.tn.gov.in/eservicesnew/home.html"
+                      target="_blank">e-Services</a>
+                    <a class="app-links" href="https://tndistricts.nic.in/" target="_blank">Tamilnadu District</a>
+                    <a class="app-links" href="https://www.tn.gov.in/" target="_blank">Tamilnadu Goverment</a>
+                    <a class="app-links" href="https://edistricts.tn.gov.in/revenue/login.jsp" target="_blank">TN
+                      Edistrict Portal(NIC)</a>
+                    <a class="app-links" href="https://tnsocialwelfare.tn.gov.in/en" target="_blank">Social Welfare
+                      Poratl</a>
+                    <a class="app-links" href="https://eoffice1.tn.gov.in/" target="_blank">E-office</a>
+                    <a class="app-links"
+                      href="https://g96405932c5aa3a-edmportaldev.adb.ap-hyderabad-1.oraclecloudapps.com/ords/r/tpadev/tpa/login?"
+                      target="_blank">Third Party Audit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="t-Body-contentInner"></div>
+          </main>
+          <footer class="t-Footer" id="t_Footer" role="contentinfo">
+            <div class="t-Footer-body">
+              <div class="t-Footer-content"></div>
+              <div class="t-Footer-apex">
+                <div class="t-Footer-version"> </div>
+                <div class="t-Footer-customize"></div>
+
+              </div>
+            </div>
+            <div class="t-Footer-top">
+              <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page"
+                aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums"
+      value="&#x5B;&#x5D;">
+    <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected"
+      value="UDFfVElNRV9NU0c6UDFfREFURTpQMV9QQUdFX05P&#x2F;wUxneKWEXXPeYbXpDHumC3HCknl3jwPHXSGb8EGCOYBFGTSafYx4LIyrDXVbB_q1iSfxSniodBm4aS0jsno7fA" />
+  </form>
+  <script src="../assets/js/encrypt_decrypt.js"></script>
+  <script src="../assets/js/crypto-js.min.js"></script>
+  <script type="module" src="../assets/js/statusbar.js"></script>
+  <script src="../assets/js/desktop_all.min.js"></script>
+  <script src="../assets/js/theme42.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/chart.js"></script>
+  <script src="../assets/js/add.min.js"></script>
+  <script src="../assets/js/widget.treeView.min.js"></script>
+  <script src="../assets/js/widget.interactiveReport.min.js"></script>
+  <script src="../assets/js/widget.iconList.min.js"></script>
+  <script src="../assets/js/widget.stickyTableHeader.min.js"></script>
+  <script src="../assets/js/widget.stickyWidget.min.js"></script>
+  <script src="../assets/js/item.Colorpicker.min.js"></script>
+  <script src="../assets/js/require.js"></script>
+  <script src="../assets/js/requirejs.jetConfig.min.js"></script>
+  <script src="../assets/js/jetCommonBundle.min.js"></script>
+  <script src="../assets/js/chartBundle.min.js"></script>
+  <script src="../assets/js/globalHeader.js"></script>
+
+
+  <script nonce="-FfiJlVjxcJ0HaMyagpvKQ">
+    apex.session.initTimeouts(180, { "idle_time_ms": 3595000, "life_time_ms": 24955000, "max_idle_time_ms": 3600000 }, '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome', '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fhome');
+    apex.jQuery(function () {
+      apex.page.init(this, function () {
+        try {
+          (function () { apex.widget.starRating("P1_NEW", { "readOnly": false, "isRequired": false, "showClearButton": false, "numStars": 5, "clearToolip": "Clear Rating", "iconClass": "fa-star", "iconTooltip": "#VALUE#", "activeColor": "", "inactiveColor": "", "showValue": false, "readOnlyDisplay": "STARS" }); })();
+          (function () { apex.util.defineTemplates([{ "name": "APEX_CARDS_BEFORE", "template": "\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A", "args": [{ "name": "CARD_LAYOUT", "escape": "ATTR" }, { "name": "COMPONENT_CLASSES", "escape": "ATTR" }] }, { "name": "APEX_CARDS_CARD_8825038167996114", "template": "\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--background has-media--square has-media--cover{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=\u0022#MEDIA#\u0022 alt=\u0022\u0022 loading=\u0022lazy\u0022 \u002F\u003E\u003C\u002Fdiv\u003E\u000A{endif\u002F}\u000A\u003C\u002Fdiv\u003E\u000A\u003C\u002Fli\u003E\u000A", "args": [{ "name": "CARD_CLASSES", "escape": "ATTR" }, { "name": "MEDIA_POSITION", "escape": "ATTR" }, { "name": "MEDIA_APPEARANCE", "escape": "ATTR" }, { "name": "MEDIA_SIZING", "escape": "ATTR" }, { "name": "MEDIA_CLASSES", "escape": "ATTR" }, { "name": "MEDIA", "escape": "ATTR" }] }, { "name": "APEX_CARDS_AFTER", "template": "\u003C\u002Ful\u003E" }]); apex.widget.templateReportRegionInit({ "regionId": "8825038167996114", "regionStaticId": "profile_img", "regionType": "Cards", "ajaxIdentifier": "UkVHSU9OIFRZUEV-fjg4MjUwMzgxNjc5OTYxMTQ\u002F8XgiJ65oRGE2eG5cTSnQyNMJ5aQwc1_e-WjHYIE0uShIOhBplqJ1ZC3_5QOZiyGbF_ycYjTfTEht2nmQyQ2-Ng", "modelName": "profile_img", "modelOptions": { "regionId": 8825038167996114, "paginationType": "progressive", "pageSize": 100, "identityField": "USER_ID" }, "pagination": { "scroll": true, "showRange": false, "firstAndLastButtons": false, "hideSinglePage": true }, "footer": false, "hideEmptyFooter": true, "hasSize": false, "beforeTemplate": "{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--float\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}", "recordTemplate": "{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--background\u000AMEDIA_APPEARANCE:=a-CardView-media--square\u000AMEDIA_SIZING:=a-CardView-media--cover\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PHOTO_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_8825038167996114\u002F}", "afterTemplate": "{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}", "columns": [{ "USER_ID": { "index": 0 }, "PHOTO": { "index": 1 }, "APEX$PHOTO_BLOB": { "index": 2 }, "APEX$BUTTON_ACTION_EXISTS": { "index": 3 }, "APEX$FULL_ACTION_EXISTS": { "index": 4 }, "APEX$ACTION_EXISTS": { "index": 5 } }] }, gCard8825038167996114data); })();
+        } catch (e) { apex.debug.error(e) };
+        apex.item.waitForDelayLoadItems().done(function () {
+          try {
+            (function () {
+              apex.da.initDaEventList();
+              apex.da.init();
+            })();
+            apex.theme42.initializePage.noSideCol();
+
+            apex.page.warnOnUnsavedChanges();
+          } finally {
+            apex.event.trigger(apex.gPageContext$, 'apexreadyend');
+          };
+        });
+      });
+    }); apex.pwa.init({ serviceWorkerPath: '\u002Fords\u002Fr\u002Fedmdev\u002Fe-district-manager-application\u002Fsw.js?v=24.2.0-39529515031887\u0026lang=en' });
+  </script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
