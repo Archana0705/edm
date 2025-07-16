@@ -139,10 +139,16 @@
                               </div>
                               <div class="t-Form-inputContainer col col-3">
                                 <div class="t-Form-itemWrapper">
-                                  <select id="P7_OPERATOR" name="P7_OPERATOR" class="selectlist ">
-                                    <option value="" class="placeholder">--Select Operator--</option>
-                                  </select>
-
+                                  <div class="t-Form-inputContainer col col-3">
+                                    <div class="t-Form-itemWrapper"><input type="hidden" id="P7_OPERATOR_ID"
+                                        name="P7_OPERATOR_ID" value="Bakiyalakshmi V"><input type="hidden"
+                                        data-for="P7_OPERATOR_ID"
+                                        value="sIiaCAkw3OrlfoIuLOWNxyrhtuO_9Kmm178YBmGtqV0R-oUGYDuoa3FWic7Dgm22cgPw_rQqpZrV_D88fVgWJw"><span
+                                        id="P7_OPERATOR_ID_DISPLAY" class="display_only&#x20;apex-item-display-only"
+                                        data-escape="true">Bakiyalakshmi V</span></div><span
+                                      id="P7_OPERATOR_ID_error_placeholder" class="a-Form-error"
+                                      data-template-id="8676686131964195_ET"></span>
+                                  </div>
                                 </div>
                                 <div class="t-Form-itemAssistance">
                                   <span id="P7_OPERATOR_error_placeholder" class="a-Form-error"
@@ -612,8 +618,10 @@
       const district = localStorage.getItem('userDistrict');
       const username = localStorage.getItem('userName');
       const mobnumber = localStorage.getItem('userMob');
+      const operatorId = localStorage.getItem('operatorId');
       $('#P7_REQUESTED_DISTRICT_DISPLAY').text(district);
       $('#P7_REQUESTED_BY_DISPLAY').text(username);
+      $('#P7_OPERATOR_ID_DISPLAY').text(operatorId);
       const payload = {
         action: "function_call",
         function_name: "Taluk_edm_fn",
@@ -658,7 +666,7 @@
 
         const operatorPayload = {
           action: "function_call",
-          function_name: "operator_id_fn", // ✅ Confirm this matches your backend
+          function_name: "operator_id_fn",
           params: {
             taluk: selectedTaluk || ''
           }

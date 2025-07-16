@@ -893,6 +893,8 @@
                     const operatorData = decryptData(loginResponse.data);
                     localStorage.setItem("userRole", operatorData[0].designation);
                     localStorage.setItem("userName", operatorData[0].name);
+                    localStorage.setItem("userId", operatorData[0].user_id);
+                    localStorage.setItem("operatorId", operatorData[0].operator_id);
                     window.location.href = "operator/dashboard.html";
                   } else {
                     showErrorToast("Login failed: " + loginResponse.message);
