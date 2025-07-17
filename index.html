@@ -212,6 +212,7 @@
                 <option value="helpdesk_operator">TNeGA Operator Team</option>
                 <option value="callcenter_operator">Call Center Operator</option>
                 <option value="operator">Operator</option>
+                <option value="citizen">Citizen</option>
               </select>
             </div>
           </div>
@@ -751,6 +752,30 @@
       closeForgetPasswordModal();
     };
 
+    // window.handleRoleSelection = async function () {
+    //   const role = document.getElementById("roleDropdown").value;
+    //   if (!role) return;
+
+    //   localStorage.setItem("userRole", role);
+    //   console.log("Selected Role:", role);
+
+    //   if (role === "operator") {
+    //     document.getElementById("roleSelection").style.display = "none";
+    //     // document.getElementById("operatorIdSection").style.display = "block";
+    //     document.getElementById("mobNumSection").style.display = "block";
+    //   } else {
+    //     document.getElementById("roleSelection").style.display = "none";
+    //     document.getElementById("loginContainer").style.display = "block";
+    //   }
+
+    //   if (role === "citizen") {
+    //     // Redirect to citizen dashboard
+    //     window.location.href = "citizen-complaints/citizen-complaints.html";
+    //   } else if (role === "operator") {
+    //     // Show operator ID input
+    //     document.getElementById("mobNumSection").style.display = "block";
+    //   }
+    // };
     window.handleRoleSelection = async function () {
       const role = document.getElementById("roleDropdown").value;
       if (!role) return;
@@ -758,15 +783,21 @@
       localStorage.setItem("userRole", role);
       console.log("Selected Role:", role);
 
-      if (role === "operator") {
-        document.getElementById("roleSelection").style.display = "none";
-        // document.getElementById("operatorIdSection").style.display = "block";
+      // Hide role selection section
+      document.getElementById("roleSelection").style.display = "none";
+
+      if (role === "citizen") {
+        // Redirect to citizen dashboard
+        window.location.href = "citizen-complaints/citizen-complaints.html";
+      } else if (role === "operator") {
+        // Show mobile number or operator ID section
         document.getElementById("mobNumSection").style.display = "block";
       } else {
-        document.getElementById("roleSelection").style.display = "none";
+        // Show login form for other roles
         document.getElementById("loginContainer").style.display = "block";
       }
     };
+
 
     window.validateOperatorId = async function () {
       const operatorId = document.getElementById("operatorIdInput").value.trim();

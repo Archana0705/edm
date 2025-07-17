@@ -725,6 +725,12 @@
                     data: encryptData(payload)
                 },
                 success: function (response) {
+                    if (response.success === 0) {
+                        console.error("Backend error message:", response.message);
+                        console.warn("Payload date used:", selectedDate);
+                        showErrorToast("Failed to load time sheet details. Please check your selected date.");
+                        return;
+                    }
                     // Assume response.result is an array of objects
                     const data = decryptData(response.data);
                     $('#P77_TOTAL_WORKING_HRS_CONTAINER').hide();
@@ -762,6 +768,7 @@
                     });
                 },
                 error: function (xhr, status, error) {
+                    showErrorToast("Failed to load time sheet details. Please try again later.");
                     console.error("Fetch failed:", {
                         status: xhr.status,
                         responseText: xhr.responseText,
