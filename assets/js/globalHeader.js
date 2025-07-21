@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     e.preventDefault();
                     console.log('Sign out clicked');
                     localStorage.clear();
-                    window.location.href = '/index.html';
+                    window.location.href = "/edm_portal/index.html";
                 });
             }
 

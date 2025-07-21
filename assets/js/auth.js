@@ -1,37 +1,5 @@
-// function initializeUserSession() {
-//     debugger
-//     const secretKey = 'V7gN4dY8pT2xB3kRz';
-//     const sampleUser = {
-//         user_id: 101,
-//         name: "John Doe",
-//         role: "edistrict_manager"
-//     };
-
-//     const encrypted = CryptoJS.AES.encrypt(JSON.stringify(sampleUser), secretKey).toString();
-//     localStorage.setItem('userDetails', encrypted);
-
-//     const bytes = CryptoJS.AES.decrypt(encrypted, secretKey);
-//     const decrypted = bytes.toString(CryptoJS.enc.Utf8);
-//     const user = JSON.parse(decrypted);
-
-//     window.userSession = {
-//         userId: user.user_id,
-//         name: user.name,
-//         role: user.role
-//     };
-
-//     const userNameElement = document.querySelector('.t-Button-label');
-//     if (userNameElement) userNameElement.textContent = user.name;
-// }
-
-// // window.initializeUserSession = initializeUserSession;
-// export { initializeUserSession };
-
-import { encryptData, decryptData } from './encrypt_decrypt.js';
-
-export async function initializeUserSession(mobnumber, password) {
+async function initializeUserSession(mobnumber, password) {
     return new Promise((resolve, reject) => {
-        console.log("mobile number", mobnumber);
         const payload = {
             action: "function_call",
             function_name: "get_user_authentication_fun",
@@ -51,14 +19,14 @@ export async function initializeUserSession(mobnumber, password) {
                 'X-APP-Name': "edm"
             },
             data: {
-                data: encryptData(payload)
+                data: window.encryptData(payload)
             },
             dataType: 'json',
             cache: false,
             success: function (response) {
                 try {
                     if (response && response.data) {
-                        var decryptedResponse = decryptData(response.data);
+                        var decryptedResponse = window.decryptData(response.data);
 
                         if (!Array.isArray(decryptedResponse) || decryptedResponse.length === 0) {
                             throw new Error("Invalid decrypted data format");
@@ -102,3 +70,5 @@ export async function initializeUserSession(mobnumber, password) {
     });
 }
 
+// Make it globally accessible
+window.initializeUserSession = initializeUserSession;

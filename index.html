@@ -428,7 +428,7 @@
   <script src="../assets/js/aos.js"></script>
 
   <script src="../assets/js/crypto-js.min.js"></script>
-  <script type="module" src="../assets/js/commonMenu.js"></script>
+  <script    src="../assets/js/commonMenu.js"></script>
   <script src="../assets/js/widget.treeView.min.js"></script>
   <script src="../assets/js/widget.interactiveReport.min.js"></script>
   <script src="../assets/js/widget.iconList.min.js"></script>
@@ -483,7 +483,7 @@
   <!-- DataTables -->
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="assets/js/widget.treeView.min.js"></script>
-  <script type="module" src="assets/js/commonMenu.js"></script>
+  <script src="assets/js/commonMenu.js"></script>
   <script src="assets/js/widget.interactiveReport.min.js"></script>
   <script src="assets/js/widget.iconList.min.js"></script>
   <script src="assets/js/widget.stickyTableHeader.min.js"></script>
@@ -503,7 +503,7 @@
   <script src="../assets/js/theme42.min.js"></script>
   <script src="../assets/js/aos.js"></script>
   <script src="../assets/js/crypto-js.min.js"></script>
-  <script type="module" src="../assets/js/commonMenu.js"></script> -->
+  <script    src="../assets/js/commonMenu.js"></script> -->
   <!-- <script src="../assets/js/widget.treeView.min.js"></script>
   <script src="../assets/js/widget.interactiveReport.min.js"></script>
   <script src="../assets/js/widget.iconList.min.js"></script>
@@ -512,10 +512,12 @@
   <script src="../assets/js/item.Colorpicker.min.js"></script>
   <script src="../assets/js/jetCommonBundle.min.js"></script>
   <script src="../assets/js/chartBundle.min.js"></script> -->
-  <script src="./assets/js/global.js"></script>
+  <script src="assets/js/crypto-js.min.js"></script>
+  <script src="assets/js/global.js"></script>
   <script src="assets/js/encrypt_decrypt.js"></script>
+  <script src="assets/js/auth.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/toastUtil.js"></script>
+  <script src="assets/js/toastUtil.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -536,7 +538,7 @@
 
 </body>
 
-<!-- <script type="module">
+<!-- <script   >
   import { initializeUserSession } from './assets/js/auth.js';
   document.addEventListener('DOMContentLoaded', function () {
     debugger
@@ -607,12 +609,216 @@
     document.getElementById("mobNumSection").style.display = "none";
     document.getElementById("operatorChoiceSection").style.display = "none";
   }
+
+  window.handleRoleSelection = async function () {
+    const role = document.getElementById("roleDropdown").value;
+    if (!role) return;
+
+    localStorage.setItem("userRole", role);
+    console.log("Selected Role:", role);
+
+    // Hide role selection section
+    document.getElementById("roleSelection").style.display = "none";
+
+    if (role === "citizen") {
+      // Redirect to citizen dashboard
+      window.location.href = "citizen-complaints/citizen-complaints.html";
+    } else if (role === "operator") {
+      // Show mobile number or operator ID section
+      document.getElementById("mobNumSection").style.display = "block";
+    } else {
+      // Show login form for other roles
+      document.getElementById("loginContainer").style.display = "block";
+    }
+  };
+
+
+  window.validateOperatorId = async function () {
+    const operatorId = document.getElementById("operatorIdInput").value.trim();
+
+    if (!operatorId) {
+      showErrorToast("Please enter a valid Operator ID or mobile number.");
+      return;
+    }
+
+    const payload = {
+      action: "function_call",
+      function_name: "Operator_login_ck_fn",
+      params: {
+        p_operator_id: operatorId
+      }
+    };
+
+    try {
+      const response = await $.ajax({
+        url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+        method: "POST",
+        headers: {
+          'X-APP-Key': "edm",
+          'X-APP-Name': "edm"
+        },
+        data: {
+          data: encryptData(payload)
+        },
+        dataType: 'json',
+      });
+
+      const decrypted = decryptData(response?.data || '');
+
+      if (Array.isArray(decrypted) && decrypted[0]?.operator_login_ck_fn === true) {
+        localStorage.setItem("operatorId", operatorId);
+
+        // Show next choice UI
+        // document.getElementById("operatorIdSection").style.display = "none";
+        document.getElementById("operatorChoiceSection").style.display = "block";
+      } else {
+        showErrorToast("Invalid Operator ID. Please try again.");
+      }
+
+    } catch (error) {
+      console.error("Operator ID validation error:", error);
+      showErrorToast("An error occurred while validating Operator ID.");
+    }
+    document.getElementById("operatorChoiceSection").style.display = "none";
+    // document.getElementById("operatorIdSection").style.display = "none";
+    document.getElementById("mobNumSection").style.display = "block";
+  };
+
+  window.showOperatorChoiceSection = function () {
+    const mobileNumber = document.getElementById("mobileNumberInput").value.trim();
+    if (!mobileNumber || mobileNumber.length !== 10 || isNaN(mobileNumber)) {
+      showErrorToast("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    localStorage.setItem("operatorMobile", mobileNumber);
+
+    const sampleOTP = "123456"; // Mock OTP for testing
+    showSuccessToast("OTP sent to " + mobileNumber); // Simulated OTP popup
+
+    // Show OTP input UI
+    document.getElementById("mobNumSection").style.display = "none";
+    document.getElementById("otpSection").style.display = "block";
+    // document.getElementById('loginContainer').style.display = "block";
+
+  };
+
+  window.verifyOTP = function () {
+    debugger;
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    const mobile = document.getElementById("mobileNumberInput").value;
+    const operatorLoginPayload = {
+      action: "function_call",
+      function_name: "get_user_auth_operator_fun",
+      params: {
+        p_mobile: mobile,
+      }
+    };
+    const OTPPayload = {
+      action: "function_call",
+      function_name: "otp_verification_fn",
+      params: {
+        p_mobile: mobile,
+        p_otp: enteredOTP
+      }
+    }
+    // Call the OTP verification API
+    $.ajax({
+      url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+      method: "POST",
+      data: { data: encryptData(OTPPayload) },
+      dataType: 'json',
+      success: function (otpResponse) {
+        if (otpResponse.success) {
+          const decryptedData = decryptData(otpResponse.data);
+
+          if (decryptedData[0].otp_verification_fn == true) {
+            $.ajax({
+              url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
+              method: "POST",
+              data: { data: encryptData(operatorLoginPayload) },
+              dataType: 'json',
+              success: function (loginResponse) {
+                if (loginResponse.success) {
+                  showSuccessToast("Login successful!");
+                  const operatorData = decryptData(loginResponse.data);
+                  localStorage.setItem("userRole", operatorData[0].designation);
+                  localStorage.setItem("userName", operatorData[0].name);
+                  localStorage.setItem("userId", operatorData[0].user_id);
+                  localStorage.setItem("operatorId", operatorData[0].operator_id);
+                  window.location.href = "operator/dashboard.html";
+                } else {
+                  showErrorToast("Login failed: " + loginResponse.message);
+                }
+              },
+              error: function () {
+                showErrorToast("Login API error. Please try again.");
+              }
+            });
+
+          } else {
+            showErrorToast("You Entered Wrong mobile number. Please contact EDM"); // ✅ Show error for false value
+          }
+        } else {
+          showErrorToast("Incorrect OTP. Please try again.");
+        }
+      },
+      error: function () {
+        showErrorToast("OTP verification failed. Please try again.");
+      }
+
+    });
+  };
+
+  window.backToMobileEntry = function () {
+    document.getElementById("otpSection").style.display = "none";
+    document.getElementById("mobNumSection").style.display = "block";
+  };
+
+  window.showChangePasswordUI = async function () {
+    // const operatorChoice = document.getElementById("operatorChoiceSection");
+    // if (operatorChoice) {
+    //   operatorChoice.style.display = "none";
+    // }
+
+    const overlay = document.getElementById('popup-overlay');
+
+    if (overlay) {
+      $('#popup-overlay').fadeIn();
+      return;
+    }
+
+    try {
+      const popupResponse = await fetch('assets/ChangePassword/ChangePassword.html');
+      if (!popupResponse.ok) throw new Error('Popup HTML not found');
+
+      const popupHtml = await popupResponse.text();
+      document.body.insertAdjacentHTML('beforeend', popupHtml);
+      console.log('ChangePassword popup HTML inserted');
+
+      const script = document.createElement('script');
+      script.src = '../assets/js/changePassword.js';
+      script.onload = () => console.log('changePassword.js script loaded');
+      document.body.appendChild(script);
+
+      $('#popup-overlay').fadeIn();
+
+    } catch (error) {
+      console.error('Error loading change password popup:', error);
+    }
+  };
+
+  window.showLoginForm = function () {
+    document.getElementById("operatorChoiceSection").style.display = "none";
+    document.getElementById("loginContainer").style.display = "block";
+  };
+
 </script>
 
-<script type="module">
-  import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+<script>
+  // import { encryptData, decryptData } from './assets/js/encrypt_decrypt.js';
 
-  import { initializeUserSession } from './assets/js/auth.js';
+  // import { initializeUserSession } from './assets/js/auth.js';
 
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -750,305 +956,6 @@
         }
       });
       closeForgetPasswordModal();
-    };
-
-    // window.handleRoleSelection = async function () {
-    //   const role = document.getElementById("roleDropdown").value;
-    //   if (!role) return;
-
-    //   localStorage.setItem("userRole", role);
-    //   console.log("Selected Role:", role);
-
-    //   if (role === "operator") {
-    //     document.getElementById("roleSelection").style.display = "none";
-    //     // document.getElementById("operatorIdSection").style.display = "block";
-    //     document.getElementById("mobNumSection").style.display = "block";
-    //   } else {
-    //     document.getElementById("roleSelection").style.display = "none";
-    //     document.getElementById("loginContainer").style.display = "block";
-    //   }
-
-    //   if (role === "citizen") {
-    //     // Redirect to citizen dashboard
-    //     window.location.href = "citizen-complaints/citizen-complaints.html";
-    //   } else if (role === "operator") {
-    //     // Show operator ID input
-    //     document.getElementById("mobNumSection").style.display = "block";
-    //   }
-    // };
-    window.handleRoleSelection = async function () {
-      const role = document.getElementById("roleDropdown").value;
-      if (!role) return;
-
-      localStorage.setItem("userRole", role);
-      console.log("Selected Role:", role);
-
-      // Hide role selection section
-      document.getElementById("roleSelection").style.display = "none";
-
-      if (role === "citizen") {
-        // Redirect to citizen dashboard
-        window.location.href = "citizen-complaints/citizen-complaints.html";
-      } else if (role === "operator") {
-        // Show mobile number or operator ID section
-        document.getElementById("mobNumSection").style.display = "block";
-      } else {
-        // Show login form for other roles
-        document.getElementById("loginContainer").style.display = "block";
-      }
-    };
-
-
-    window.validateOperatorId = async function () {
-      const operatorId = document.getElementById("operatorIdInput").value.trim();
-
-      if (!operatorId) {
-        showErrorToast("Please enter a valid Operator ID or mobile number.");
-        return;
-      }
-
-      const payload = {
-        action: "function_call",
-        function_name: "Operator_login_ck_fn",
-        params: {
-          p_operator_id: operatorId
-        }
-      };
-
-      try {
-        const response = await $.ajax({
-          url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
-          method: "POST",
-          headers: {
-            'X-APP-Key': "edm",
-            'X-APP-Name': "edm"
-          },
-          data: {
-            data: encryptData(payload)
-          },
-          dataType: 'json',
-        });
-
-        const decrypted = decryptData(response?.data || '');
-
-        if (Array.isArray(decrypted) && decrypted[0]?.operator_login_ck_fn === true) {
-          localStorage.setItem("operatorId", operatorId);
-
-          // Show next choice UI
-          // document.getElementById("operatorIdSection").style.display = "none";
-          document.getElementById("operatorChoiceSection").style.display = "block";
-        } else {
-          showErrorToast("Invalid Operator ID. Please try again.");
-        }
-
-      } catch (error) {
-        console.error("Operator ID validation error:", error);
-        showErrorToast("An error occurred while validating Operator ID.");
-      }
-      document.getElementById("operatorChoiceSection").style.display = "none";
-      // document.getElementById("operatorIdSection").style.display = "none";
-      document.getElementById("mobNumSection").style.display = "block";
-    };
-
-    window.showOperatorChoiceSection = function () {
-      const mobileNumber = document.getElementById("mobileNumberInput").value.trim();
-      if (!mobileNumber || mobileNumber.length !== 10 || isNaN(mobileNumber)) {
-        showErrorToast("Please enter a valid 10-digit mobile number.");
-        return;
-      }
-
-      localStorage.setItem("operatorMobile", mobileNumber);
-
-      const sampleOTP = "123456"; // Mock OTP for testing
-      showSuccessToast("OTP sent to " + mobileNumber); // Simulated OTP popup
-
-      // Show OTP input UI
-      document.getElementById("mobNumSection").style.display = "none";
-      document.getElementById("otpSection").style.display = "block";
-      // document.getElementById('loginContainer').style.display = "block";
-
-    };
-
-    // window.verifyOTP = function () {
-    //   const enteredOTP = document.getElementById("otpInput").value.trim();
-    //   const expectedOTP = "123456";
-
-    //   if (enteredOTP === expectedOTP) {
-    //     showSuccessToast("OTP verified successfully!");
-    //     document.getElementById("otpSection").style.display = "none";
-    //     document.getElementById("operatorChoiceSection").style.display = "none";
-    //     window.location.href = ``;
-    //   } else {
-    //     showErrorToast("Incorrect OTP. Please try again.");
-    //   }
-    // };
-
-    window.verifyOTP = function () {
-      debugger;
-      const enteredOTP = document.getElementById("otpInput").value.trim();
-      const mobile = document.getElementById("mobileNumberInput").value;
-      const operatorLoginPayload = {
-        action: "function_call",
-        function_name: "get_user_auth_operator_fun",
-        params: {
-          p_mobile: mobile,
-        }
-      };
-      const OTPPayload = {
-        action: "function_call",
-        function_name: "otp_verification_fn",
-        params: {
-          p_mobile: mobile,
-          p_otp: enteredOTP
-        }
-      }
-      // Call the OTP verification API
-      $.ajax({
-        url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
-        method: "POST",
-        data: { data: encryptData(OTPPayload) },
-        dataType: 'json',
-        success: function (otpResponse) {
-          if (otpResponse.success) {
-            const decryptedData = decryptData(otpResponse.data);
-
-            if (decryptedData[0].otp_verification_fn == true) {
-              $.ajax({
-                url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
-                method: "POST",
-                data: { data: encryptData(operatorLoginPayload) },
-                dataType: 'json',
-                success: function (loginResponse) {
-                  if (loginResponse.success) {
-                    showSuccessToast("Login successful!");
-                    const operatorData = decryptData(loginResponse.data);
-                    localStorage.setItem("userRole", operatorData[0].designation);
-                    localStorage.setItem("userName", operatorData[0].name);
-                    localStorage.setItem("userId", operatorData[0].user_id);
-                    localStorage.setItem("operatorId", operatorData[0].operator_id);
-                    window.location.href = "operator/dashboard.html";
-                  } else {
-                    showErrorToast("Login failed: " + loginResponse.message);
-                  }
-                },
-                error: function () {
-                  showErrorToast("Login API error. Please try again.");
-                }
-              });
-
-            } else {
-              showErrorToast("You Entered Wrong mobile number. Please contact EDM"); // ✅ Show error for false value
-            }
-          } else {
-            showErrorToast("Incorrect OTP. Please try again.");
-          }
-        },
-        error: function () {
-          showErrorToast("OTP verification failed. Please try again.");
-        }
-
-      });
-    };
-
-
-    window.backToMobileEntry = function () {
-      document.getElementById("otpSection").style.display = "none";
-      document.getElementById("mobNumSection").style.display = "block";
-    };
-
-    // window.showChangePasswordUI = async function () {
-    //   document.getElementById("operatorChoiceSection").style.display = "none";
-
-    //   if (!document.getElementById('popup-overlay')) {
-    //     try {
-    //       const popupResponse = await fetch('assets/ChangePassword/ChangePassword.html');
-    //       if (!popupResponse.ok) throw new Error('Popup HTML not found');
-
-    //       const popupHtml = await popupResponse.text();
-    //       document.body.insertAdjacentHTML('beforeend', popupHtml);
-    //       console.log('ChangePassword popup HTML inserted');
-
-    //       const script = document.createElement('script');
-    //       script.src = '../assets/js/changePassword.js';
-    //       script.onload = () => console.log('changePassword.js script loaded');
-    //       document.body.appendChild(script);
-    //       $('#popup-overlay').fadeIn();
-    //       document.getElementById("operatorChoiceSection").style.display = "block";
-
-    //     } catch (error) {
-    //       console.error('Error loading change password popup:', error);
-    //     }
-    //   }
-    // };
-
-    // window.showChangePasswordUI = async function () {
-    //   // Always hide other sections
-    //   document.getElementById("operatorChoiceSection").style.display = "none";
-
-    //   const overlay = document.getElementById('popup-overlay');
-
-    //   if (overlay) {
-    //     $('#popup-overlay').fadeIn(); // Re-show if already present
-    //     return;
-    //   }
-
-    //   try {
-    //     const popupResponse = await fetch('assets/ChangePassword/ChangePassword.html');
-    //     if (!popupResponse.ok) throw new Error('Popup HTML not found');
-
-    //     const popupHtml = await popupResponse.text();
-    //     document.body.insertAdjacentHTML('beforeend', popupHtml);
-    //     console.log('ChangePassword popup HTML inserted');
-
-    //     const script = document.createElement('script');
-    //     script.src = '../assets/js/changePassword.js';
-    //     script.onload = () => console.log('changePassword.js script loaded');
-    //     document.body.appendChild(script);
-
-    //     $('#popup-overlay').fadeIn();
-    //     document.getElementById("operatorChoiceSection").style.display = "block";
-    //   } catch (error) {
-    //     console.error('Error loading change password popup:', error);
-    //   }
-    // };
-
-
-    window.showChangePasswordUI = async function () {
-      // const operatorChoice = document.getElementById("operatorChoiceSection");
-      // if (operatorChoice) {
-      //   operatorChoice.style.display = "none";
-      // }
-
-      const overlay = document.getElementById('popup-overlay');
-
-      if (overlay) {
-        $('#popup-overlay').fadeIn();
-        return;
-      }
-
-      try {
-        const popupResponse = await fetch('assets/ChangePassword/ChangePassword.html');
-        if (!popupResponse.ok) throw new Error('Popup HTML not found');
-
-        const popupHtml = await popupResponse.text();
-        document.body.insertAdjacentHTML('beforeend', popupHtml);
-        console.log('ChangePassword popup HTML inserted');
-
-        const script = document.createElement('script');
-        script.src = '../assets/js/changePassword.js';
-        script.onload = () => console.log('changePassword.js script loaded');
-        document.body.appendChild(script);
-
-        $('#popup-overlay').fadeIn();
-
-      } catch (error) {
-        console.error('Error loading change password popup:', error);
-      }
-    };
-
-    window.showLoginForm = function () {
-      document.getElementById("operatorChoiceSection").style.display = "none";
-      document.getElementById("loginContainer").style.display = "block";
     };
 
   });
