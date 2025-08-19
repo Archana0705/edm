@@ -537,6 +537,26 @@
       value="&#x5B;&#x5D;">
   </form>
 
+  <!-- Confirmation Modal -->
+  <div class="modal fade" id="redirectConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Redirect Confirmation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          You are being redirected to the Application Status Check portal. Do you want to continue?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cancelRedirect" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="confirmRedirect">Yes, Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <!-- jQuery -->
   <script src="../assets/js/jquery-3.6.0.min.js"></script>
@@ -599,8 +619,8 @@
   </script>
 
   <script>
-    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
-    import { processFile, checkFile, renderFileList } from '../assets/js/file.js';
+    //  
+    // import { processFile, checkFile, renderFileList } from '../assets/js/file.js';
     let dataTableRef;
 
     $(document).ready(function () {
@@ -699,7 +719,7 @@
 
         const issueTypePayload = {
           action: "function_call",
-          function_name: "issue_type_fn",
+          function_name: "edm_issue_type_fn",
           params: {
 
           }
@@ -740,7 +760,7 @@
 
         const subCategoryPayload = {
           action: "function_call",
-          function_name: "issue_subtype_desc_fn",
+          function_name: "edm_issue_subtype_desc_fn",
           params: {
             issueType: issueType
           }
@@ -776,8 +796,20 @@
       });
 
       $('#P7_SHORT_DESCRIPTION').on('change', function () {
+        const issueType = $('#P7_ISSUE_TYPE').val();
         const subCategory = $(this).val();
         console.log("subCategory:", subCategory);
+
+        if (issueType === "Application Related Issue" && subCategory === "Application Status Check") {
+          const modal = new bootstrap.Modal(document.getElementById('redirectConfirmModal'));
+          modal.show();
+
+          $('#confirmRedirect').off('click').on('click', function () {
+            window.location.href = "https://tnedistrict.tn.gov.in/tneda/home.xhtml";
+          });
+
+          return;
+        }
 
         const subCategoryPayload = {
           action: "function_call",

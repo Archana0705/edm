@@ -722,7 +722,7 @@
         p_otp: enteredOTP
       }
     }
-    // Call the OTP verification API
+
     $.ajax({
       url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
       method: "POST",
@@ -731,8 +731,8 @@
       success: function (otpResponse) {
         if (otpResponse.success) {
           const decryptedData = decryptData(otpResponse.data);
-
-          if (decryptedData[0].otp_verification_fn == true) {
+          localStorage.setItem("operatorDistrict", decryptedData[0].district);
+          if (decryptedData[0].status == true) {
             $.ajax({
               url: "https://tngis.tnega.org/lcap_api/edm/v1/commonfunction",
               method: "POST",
@@ -746,7 +746,7 @@
                   localStorage.setItem("userName", operatorData[0].name);
                   localStorage.setItem("userId", operatorData[0].user_id);
                   localStorage.setItem("operatorId", operatorData[0].operator_id);
-                  window.location.href = "operator/dashboard.html";
+                  window.location.href = "operator/allrequest.html";
                 } else {
                   showErrorToast("Login failed: " + loginResponse.message);
                 }

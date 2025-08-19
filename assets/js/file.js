@@ -98,8 +98,7 @@ function processFile(selector) {
         const processedFiles = [];
 
         if (files.length === 0) {
-            showErrorToast('Please upload at least one file.');
-            resolve([]); // Still resolve, with empty array
+            resolve([]);
             return;
         }
 
@@ -154,5 +153,9 @@ function renderFileList(files) {
     container.append(list);
 }
 
-export { processFile, checkFile, renderFileList }
+// export { processFile, checkFile, renderFileList }
 
+
+window.processFile = processFile;
+window.checkFile = checkFile;
+window.renderFileList = renderFileList;

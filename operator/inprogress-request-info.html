@@ -95,9 +95,8 @@
                                     data-for="P16_REQUEST_NUMBER"
                                     value="hEikdnCgrT9agR2zYcsx_wEv2sD8cLdg-vnEil8q3HfYm8rhGopJGF6a2bKAO0amJr4DSw7BiVQdfjenvGH-9Q"><span
                                     id="P16_REQUEST_NUMBER_DISPLAY" class="display_only&#x20;apex-item-display-only"
-                                    data-escape="true">EDM&#x2F;2024-06-03&#x2F;0286</span></div><span
-                                  id="P16_REQUEST_NUMBER_error_placeholder" class="a-Form-error"
-                                  data-template-id="8676686131964195_ET"></span>
+                                    data-escape="true"></span></div><span id="P16_REQUEST_NUMBER_error_placeholder"
+                                  class="a-Form-error" data-template-id="8676686131964195_ET"></span>
                               </div>
                             </div>
                           </div>
@@ -594,7 +593,7 @@
   </script>
 
   <script>
-    import { encryptData, decryptData } from '../assets/js/encrypt_decrypt.js';
+
     $(document).ready(function () {
       debugger
 
@@ -669,36 +668,34 @@
               $('#P16_CONTACT_TYPE').val(decrypted.contact_type);
               $('#P16_ASSIGNED_TO').val(decrypted.assigned_to);
 
-              const fileBase64 = decrypted.helpdesk_upload;
-              const fileName = "pdf file";
+              const fileBase64Raw = decrypted.upload;
+              const fileName = decrypted.attach_filename;
+              const mimeType = decrypted.attach_mimetype;
 
-              const mimeType = decrypted.helpdesk_mimetype;
+              if (fileBase64Raw && fileName && mimeType) {
+                const base64 = fileBase64Raw.includes(',')
+                  ? fileBase64Raw.split(',')[1]
+                  : fileBase64Raw;
 
-              if (fileBase64 && fileName && mimeType) {
-
-                const byteCharacters = atob(fileBase64);
-                const byteNumbers = new Array(byteCharacters.length);
-                for (let i = 0; i < byteCharacters.length; i++) {
-                  byteNumbers[i] = byteCharacters.charCodeAt(i);
-                }
-                const byteArray = new Uint8Array(byteNumbers);
-                const fileBlob = new Blob([byteArray], { type: mimeType });
-
-                // Create a Blob URL
+                const byteChars = atob(base64);
+                const bytes = new Uint8Array(byteChars.length);
+                for (let i = 0; i < byteChars.length; i++) bytes[i] = byteChars.charCodeAt(i);
+                const fileBlob = new Blob([bytes], { type: mimeType });
                 const fileUrl = URL.createObjectURL(fileBlob);
 
-                // Update file name label
                 $('#attachmentFileName').text(fileName);
                 $('#attachmentSection').show();
+
                 $('#P16_ATTACHMENT_VIEW').off('click').on('click', function () {
                   window.open(fileUrl, '_blank');
+                });
+
+                $(window).on('beforeunload pagehide', function () {
+                  URL.revokeObjectURL(fileUrl);
                 });
               } else {
                 $('#attachmentSection').hide();
               }
-
-
-
             } else {
               console.error("Invalid response structure - missing data field");
             }
