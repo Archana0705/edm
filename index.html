@@ -617,17 +617,13 @@
     localStorage.setItem("userRole", role);
     console.log("Selected Role:", role);
 
-    // Hide role selection section
     document.getElementById("roleSelection").style.display = "none";
 
     if (role === "citizen") {
-      // Redirect to citizen dashboard
-      window.location.href = "citizen-complaints/citizen-complaints.html";
+      window.location.href = "/citizen-complaints/citizen-complaints_old.html";
     } else if (role === "operator") {
-      // Show mobile number or operator ID section
       document.getElementById("mobNumSection").style.display = "block";
     } else {
-      // Show login form for other roles
       document.getElementById("loginContainer").style.display = "block";
     }
   };
